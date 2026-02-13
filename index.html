@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aparna Kapur — Real Estate | Oakwyn Realty Vancouver</title>
+  <meta name="description" content="Aparna Kapur — dedicated real estate advisor with Oakwyn Realty, serving buyers, sellers, and investors across Greater Vancouver with personalized, client-first service.">
+  <meta name="keywords" content="Vancouver real estate, Oakwyn Realty, Aparna Kapur, real estate agent Vancouver, homes for sale Vancouver, Kitsilano, Mount Pleasant, Downtown Vancouver">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===================================
+       CUSTOM PROPERTIES
+    =================================== */
+    :root {
+      --cream: #FAFAF7;
+      --cream-dark: #F2F1EC;
+      --charcoal: #1a1a1a;
+      --charcoal-light: #2d2d2d;
+      --gold: #AD8C4A;
+      --gold-hover: #C4A76C;
+      --gold-subtle: rgba(173, 140, 74, 0.12);
+      --grey: #6D6E71;
+      --grey-light: #E8E8E6;
+      --grey-medium: #9A9A9A;
+      --white: #FFFFFF;
+
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body: 'DM Sans', 'Helvetica Neue', Arial, sans-serif;
+
+      --max-width: 1200px;
+      --section-pad: clamp(80px, 10vw, 140px);
+      --side-pad: clamp(24px, 5vw, 60px);
+
+      --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===================================
+       RESET & BASE
+    =================================== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 400;
+      color: var(--charcoal);
+      background-color: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Subtle grain overlay — editorial print feel */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 256px 256px;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===================================
+       TYPOGRAPHY SYSTEM
+    =================================== */
+    h1, h2, h3, h4 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .heading-display {
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      line-height: 1.08;
+    }
+
+    .heading-section {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      letter-spacing: -0.005em;
+    }
+
+    .heading-card {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .label {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-block;
+    }
+
+    .body-text {
+      font-size: 1.02rem;
+      line-height: 1.75;
+      color: var(--grey);
+    }
+
+    /* ===================================
+       SECTION DIVIDER
+    =================================== */
+    .section-divider {
+      width: 48px;
+      height: 1px;
+      background-color: var(--gold);
+      margin: 20px 0;
+      border: none;
+      display: block;
+    }
+
+    .section-divider--center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===================================
+       SCROLL ANIMATIONS
+    =================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.12s; }
+    .reveal-delay-2 { transition-delay: 0.24s; }
+    .reveal-delay-3 { transition-delay: 0.36s; }
+    .reveal-delay-4 { transition-delay: 0.44s; }
+
+    /* ===================================
+       NAVIGATION
+    =================================== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: rgba(250, 250, 247, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--grey-light);
+      transition: box-shadow 0.4s var(--ease-smooth);
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 1px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav__logo {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      transition: color 0.3s;
+    }
+
+    .nav__logo:hover { color: var(--gold); }
+
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav__link {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey);
+      position: relative;
+      transition: color 0.3s var(--ease-smooth);
+    }
+
+    .nav__link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--gold);
+      transition: width 0.35s var(--ease-smooth);
+    }
+
+    .nav__link:hover { color: var(--charcoal); }
+    .nav__link:hover::after { width: 100%; }
+
+    .nav__mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+
+    .nav__mobile-toggle span {
+      width: 22px;
+      height: 1.5px;
+      background: var(--charcoal);
+      transition: all 0.3s var(--ease-smooth);
+      display: block;
+    }
+
+    /* ===================================
+       HERO
+    =================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      background-color: var(--cream);
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 60px var(--side-pad);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 72px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero__content { padding-right: 12px; }
+    .hero__label { margin-bottom: 28px; }
+
+    .hero__headline {
+      margin-bottom: 28px;
+      color: var(--charcoal);
+    }
+
+    .hero__tagline {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: var(--grey);
+      margin-bottom: 44px;
+      max-width: 460px;
+    }
+
+    .hero__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 17px 40px;
+      border: 1px solid var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.45s var(--ease-smooth);
+    }
+
+    .hero__cta:hover {
+      background-color: var(--charcoal);
+      color: var(--cream);
+    }
+
+    .hero__cta svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .hero__cta:hover svg { transform: translateX(4px); }
+
+    .hero__portrait {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .hero__portrait-placeholder {
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(145deg, #D4C5A9 0%, #B8A882 25%, #9ABEAA 50%, #8BA5A0 75%, #C4B896 100%);
+      position: relative;
+    }
+
+    .hero__portrait-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.3) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 80%, rgba(26,26,26,0.12) 0%, transparent 50%);
+    }
+
+    .hero__portrait-placeholder::after {
+      content: 'Professional Portrait';
+      position: absolute;
+      bottom: 28px;
+      left: 28px;
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      background: rgba(26,26,26,0.28);
+      padding: 8px 16px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero__portrait::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      border: 1px solid rgba(173, 140, 74, 0.25);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    /* ===================================
+       ABOUT
+    =================================== */
+    .about {
+      padding: var(--section-pad) 0;
+      background-color: var(--cream);
+    }
+
+    .about__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about__image {
+      aspect-ratio: 4 / 5;
+      background: linear-gradient(165deg, #E8E4DA 0%, #D1CBBC 40%, #BFB8A8 100%);
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about__image::after {
+      content: 'Photo';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    .about__text { margin-bottom: 18px; }
+    .about__headline { margin-bottom: 8px; }
+
+    .about__stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--grey-light);
+    }
+
+    .about__stat-number {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .about__stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    /* ===================================
+       SERVICES
+    =================================== */
+    .services {
+      padding: var(--section-pad) 0;
+      background-color: var(--cream-dark);
+    }
+
+    .services__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    .services__header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .services__header .heading-section { margin-bottom: 12px; }
+
+    .services__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 48px 36px;
+      border-radius: 2px;
+      border: 1px solid transparent;
+      transition: all 0.45s var(--ease-smooth);
+      position: relative;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.45s var(--ease-smooth);
+    }
+
+    .service-card:hover {
+      border-color: var(--grey-light);
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.04);
+    }
+
+    .service-card:hover::before { transform: scaleX(1); }
+
+    .service-card__icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 28px;
+    }
+
+    .service-card__icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--gold);
+      stroke-width: 1;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card__title { margin-bottom: 14px; }
+
+    .service-card__text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--grey);
+    }
+
+    .service-card__features {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .service-card__features li {
+      font-size: 0.88rem;
+      color: var(--grey);
+      padding: 6px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .service-card__features li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 1px;
+      background-color: var(--gold);
+    }
+
+    /* ===================================
+       NEIGHBORHOODS
+    =================================== */
+    .neighborhoods {
+      padding: var(--section-pad) 0;
+      background-color: var(--cream);
+    }
+
+    .neighborhoods__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    .neighborhoods__header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .neighborhoods__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .neighborhood-card {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      border-radius: 2px;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+    }
+
+    .neighborhood-card__bg {
+      position: absolute;
+      inset: 0;
+      transition: transform 0.7s var(--ease-smooth);
+    }
+
+    .neighborhood-card:hover .neighborhood-card__bg { transform: scale(1.06); }
+
+    .neighborhood-card--downtown .neighborhood-card__bg {
+      background: linear-gradient(160deg, #7B8FA0 0%, #4F6478 30%, #34495E 60%, #1C2A3A 100%);
+    }
+    .neighborhood-card--kits .neighborhood-card__bg {
+      background: linear-gradient(160deg, #8AAE9B 0%, #5E8E6F 30%, #3E7554 60%, #2B5E40 100%);
+    }
+    .neighborhood-card--mountpleasant .neighborhood-card__bg {
+      background: linear-gradient(160deg, #C0A97E 0%, #A08B66 30%, #7D6B4E 60%, #5C4F3C 100%);
+    }
+    .neighborhood-card--eastvan .neighborhood-card__bg {
+      background: linear-gradient(160deg, #8E7EA0 0%, #6D5D82 30%, #514468 60%, #3A2F52 100%);
+    }
+
+    .neighborhood-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(26,26,26,0.72) 0%, rgba(26,26,26,0.08) 50%, transparent 100%);
+      transition: background 0.5s var(--ease-smooth);
+    }
+
+    .neighborhood-card:hover .neighborhood-card__overlay {
+      background: linear-gradient(0deg, rgba(26,26,26,0.82) 0%, rgba(26,26,26,0.18) 50%, rgba(26,26,26,0.04) 100%);
+    }
+
+    .neighborhood-card__content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 28px 22px;
+      z-index: 2;
+    }
+
+    .neighborhood-card__name {
+      font-family: var(--font-display);
+      font-size: 1.45rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .neighborhood-card__explore {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-hover);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.35s var(--ease-smooth);
+    }
+
+    .neighborhood-card:hover .neighborhood-card__explore {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .neighborhood-card__explore svg {
+      width: 14px;
+      height: 14px;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .neighborhood-card:hover .neighborhood-card__explore svg {
+      transform: translateX(4px);
+    }
+
+    /* ===================================
+       WHY CHOOSE ME
+    =================================== */
+    .why {
+      padding: var(--section-pad) 0;
+      background-color: var(--charcoal);
+      color: var(--white);
+    }
+
+    .why__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    .why__header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .why__header .heading-section { color: var(--white); }
+    .why__header .body-text { color: var(--grey-medium); }
+
+    .why__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+
+    .why__item {
+      padding: 0 28px;
+      text-align: center;
+      position: relative;
+    }
+
+    .why__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);
+      opacity: 0.25;
+    }
+
+    .why__item-number {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+
+    .why__item-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+
+    .why__item-text {
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: var(--grey-medium);
+    }
+
+    /* ===================================
+       TESTIMONIALS
+    =================================== */
+    .testimonials {
+      padding: var(--section-pad) 0;
+      background-color: var(--cream);
+    }
+
+    .testimonials__inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+      text-align: center;
+    }
+
+    .testimonials__quote-mark {
+      font-family: var(--font-display);
+      font-size: 6rem;
+      line-height: 0.5;
+      color: var(--gold);
+      opacity: 0.35;
+      margin-bottom: 28px;
+      display: block;
+    }
+
+    .testimonials__quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+    }
+
+    .testimonials__author {
+      font-size: 0.88rem;
+      color: var(--grey);
+      margin-bottom: 4px;
+    }
+
+    .testimonials__author-detail {
+      font-size: 0.72rem;
+      color: var(--grey-medium);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .testimonials__note {
+      margin-top: 60px;
+      padding: 28px 32px;
+      background: var(--cream-dark);
+      border-radius: 2px;
+      font-size: 0.92rem;
+      color: var(--grey);
+      font-style: italic;
+      border-left: 2px solid var(--gold);
+      text-align: left;
+    }
+
+    /* ===================================
+       CONTACT
+    =================================== */
+    .contact {
+      padding: var(--section-pad) 0;
+      background-color: var(--cream-dark);
+    }
+
+    .contact__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact__info { padding-top: 8px; }
+    .contact__headline { margin-bottom: 8px; }
+    .contact__subtext { margin-bottom: 40px; }
+
+    .contact__details { list-style: none; }
+
+    .contact__detail {
+      display: flex;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--grey-light);
+      align-items: flex-start;
+    }
+
+    .contact__detail:first-child { border-top: 1px solid var(--grey-light); }
+
+    .contact__detail-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    .contact__detail-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--gold);
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .contact__detail-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 3px;
+    }
+
+    .contact__detail-value {
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      line-height: 1.55;
+    }
+
+    .contact__detail-value a {
+      transition: color 0.3s var(--ease-smooth);
+    }
+
+    .contact__detail-value a:hover { color: var(--gold); }
+
+    .contact__form {
+      background: var(--white);
+      padding: 48px;
+      border-radius: 2px;
+    }
+
+    .form__group { margin-bottom: 28px; }
+
+    .form__label {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 8px;
+    }
+
+    .form__input,
+    .form__textarea {
+      width: 100%;
+      padding: 14px 0;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--grey-light);
+      outline: none;
+      transition: border-color 0.35s var(--ease-smooth);
+    }
+
+    .form__input:focus,
+    .form__textarea:focus { border-bottom-color: var(--gold); }
+
+    .form__input::placeholder,
+    .form__textarea::placeholder { color: var(--grey-medium); }
+
+    .form__textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .form__submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 17px 44px;
+      background-color: var(--charcoal);
+      color: var(--white);
+      border: 1px solid var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.45s var(--ease-smooth);
+      margin-top: 4px;
+    }
+
+    .form__submit:hover {
+      background-color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .form__submit svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s var(--ease-smooth);
+    }
+
+    .form__submit:hover svg { transform: translateX(4px); }
+
+    /* ===================================
+       FOOTER
+    =================================== */
+    .footer {
+      background-color: var(--charcoal);
+      color: var(--white);
+      padding: 80px 0 40px;
+    }
+
+    .footer__inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    .footer__main {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr 0.9fr;
+      gap: 60px;
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .footer__brand {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer__oakwyn-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer__oakwyn-ring { width: 42px; height: 42px; }
+
+    .footer__oakwyn-text {
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .footer__oakwyn-text strong { font-weight: 600; }
+    .footer__oakwyn-text span { font-weight: 300; opacity: 0.65; }
+
+    .footer__brand-text {
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--grey-medium);
+    }
+
+    .footer__nav-title {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .footer__nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer__nav-link {
+      font-size: 0.85rem;
+      color: var(--grey-medium);
+      transition: color 0.3s var(--ease-smooth);
+    }
+
+    .footer__nav-link:hover { color: var(--gold-hover); }
+
+    .footer__social {
+      display: flex;
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .footer__social-link {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-smooth);
+    }
+
+    .footer__social-link:hover {
+      border-color: var(--gold);
+      background-color: rgba(173, 140, 74, 0.08);
+    }
+
+    .footer__social-link svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--grey-medium);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s var(--ease-smooth);
+    }
+
+    .footer__social-link:hover svg { stroke: var(--gold-hover); }
+
+    .footer__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer__copyright {
+      font-size: 0.72rem;
+      color: var(--grey);
+    }
+
+    .footer__legal {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .footer__legal a {
+      font-size: 0.72rem;
+      color: var(--grey);
+      transition: color 0.3s var(--ease-smooth);
+    }
+
+    .footer__legal a:hover { color: var(--gold-hover); }
+
+    /* ===================================
+       RESPONSIVE
+    =================================== */
+    @media (max-width: 1024px) {
+      .hero__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .hero__content {
+        padding-right: 0;
+        text-align: center;
+      }
+
+      .hero__tagline {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero__cta { margin: 0 auto; }
+
+      .hero__portrait {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .about__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .about__image {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .services__grid {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .neighborhoods__grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 48px 28px;
+      }
+
+      .why__item:not(:last-child)::after { display: none; }
+
+      .contact__inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .footer__main {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--cream);
+        flex-direction: column;
+        padding: 28px var(--side-pad) 32px;
+        gap: 18px;
+        border-bottom: 1px solid var(--grey-light);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.04);
+      }
+
+      .nav__links.active { display: flex; }
+      .nav__mobile-toggle { display: flex; }
+
+      .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+
+      .about__stats {
+        gap: 28px;
+        flex-wrap: wrap;
+      }
+
+      .neighborhoods__grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .why__grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .form__row { grid-template-columns: 1fr; }
+      .contact__form { padding: 32px 24px; }
+
+      .footer__bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .footer__legal {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Aparna Kapur</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#neighborhoods" class="nav__link">Neighborhoods</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <div class="hero__content">
+        <span class="label hero__label reveal">Oakwyn Realty &mdash; Vancouver</span>
+        <h1 class="heading-display hero__headline reveal reveal-delay-1">Your Home<br>Journey Starts<br>Here</h1>
+        <p class="hero__tagline reveal reveal-delay-2">Personalized real estate guidance rooted in dedication, market insight, and an unwavering commitment to your goals. Serving buyers, sellers, and investors across Greater Vancouver.</p>
+        <a href="#contact" class="hero__cta reveal reveal-delay-3">
+          Get in Touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero__portrait reveal reveal-delay-2">
+        <div class="hero__portrait-placeholder"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about__inner">
+      <div class="about__image reveal"></div>
+      <div class="about__content">
+        <span class="label reveal">Get to Know</span>
+        <hr class="section-divider reveal reveal-delay-1">
+        <h2 class="heading-section about__headline reveal reveal-delay-1">About Aparna</h2>
+        <p class="body-text about__text reveal reveal-delay-2">Real estate is more than transactions &mdash; it's about finding where life happens next. I bring fresh energy, genuine care, and a client-first philosophy to every relationship I build.</p>
+        <p class="body-text about__text reveal reveal-delay-2">With a background in strategic analysis and negotiation, I approach each opportunity with the precision and diligence your investment deserves. Whether you're purchasing your first home, selling a cherished property, or expanding your portfolio, I'm here to guide you with honesty and clarity at every step.</p>
+        <p class="body-text about__text reveal reveal-delay-3">As a proud member of Oakwyn Realty, I'm supported by one of Vancouver's most innovative and collaborative brokerages &mdash; giving you access to cutting-edge marketing, deep market intelligence, and a network built on integrity.</p>
+        <div class="about__stats reveal reveal-delay-3">
+          <div>
+            <div class="about__stat-number">100%</div>
+            <div class="about__stat-label">Client Focused</div>
+          </div>
+          <div>
+            <div class="about__stat-number">24/7</div>
+            <div class="about__stat-label">Availability</div>
+          </div>
+          <div>
+            <div class="about__stat-number">GVA</div>
+            <div class="about__stat-label">Coverage Area</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services__inner">
+      <div class="services__header">
+        <span class="label reveal">How I Help</span>
+        <hr class="section-divider section-divider--center reveal reveal-delay-1">
+        <h2 class="heading-section reveal reveal-delay-1">Tailored Services</h2>
+        <p class="body-text reveal reveal-delay-2" style="max-width: 540px; margin: 14px auto 0;">Every client's journey is unique. Here's how I can support yours.</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M24 4L4 20h4v20h12V28h8v12h12V20h4L24 4z"/>
+            </svg>
+          </div>
+          <h3 class="heading-card service-card__title">For Buyers</h3>
+          <p class="service-card__text">Navigate the Vancouver market with confidence and a dedicated advocate in your corner.</p>
+          <ul class="service-card__features">
+            <li>First-time buyer guidance</li>
+            <li>Comprehensive market analysis</li>
+            <li>Strategic negotiation</li>
+            <li>Due diligence support</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48">
+              <rect x="6" y="6" width="36" height="36" rx="2"/>
+              <path d="M6 18h36M18 18v24"/>
+              <circle cx="30" cy="30" r="6"/>
+            </svg>
+          </div>
+          <h3 class="heading-card service-card__title">For Sellers</h3>
+          <p class="service-card__text">Maximize your property's potential with strategic pricing and modern marketing that delivers results.</p>
+          <ul class="service-card__features">
+            <li>Strategic pricing analysis</li>
+            <li>Professional photography &amp; staging</li>
+            <li>Digital-first marketing</li>
+            <li>Maximum exposure strategy</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48">
+              <path d="M8 40V20M18 40V14M28 40V24M38 40V8"/>
+              <circle cx="8" cy="20" r="2.5"/>
+              <circle cx="18" cy="14" r="2.5"/>
+              <circle cx="28" cy="24" r="2.5"/>
+              <circle cx="38" cy="8" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="heading-card service-card__title">For Investors</h3>
+          <p class="service-card__text">Data-driven insights and market timing to help you build and optimize your real estate portfolio.</p>
+          <ul class="service-card__features">
+            <li>Portfolio analysis</li>
+            <li>ROI optimization</li>
+            <li>Market timing insights</li>
+            <li>Rental yield assessment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORHOODS -->
+  <section class="neighborhoods" id="neighborhoods">
+    <div class="neighborhoods__inner">
+      <div class="neighborhoods__header">
+        <span class="label reveal">Local Expertise</span>
+        <hr class="section-divider section-divider--center reveal reveal-delay-1">
+        <h2 class="heading-section reveal reveal-delay-1">Neighborhoods I Know</h2>
+        <p class="body-text reveal reveal-delay-2" style="max-width: 540px; margin: 14px auto 0;">Deep knowledge of Vancouver's most sought-after communities.</p>
+      </div>
+
+      <div class="neighborhoods__grid">
+        <a class="neighborhood-card neighborhood-card--downtown reveal" href="#contact">
+          <div class="neighborhood-card__bg"></div>
+          <div class="neighborhood-card__overlay"></div>
+          <div class="neighborhood-card__content">
+            <h3 class="neighborhood-card__name">Downtown Vancouver</h3>
+            <span class="neighborhood-card__explore">
+              Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="neighborhood-card neighborhood-card--kits reveal reveal-delay-1" href="#contact">
+          <div class="neighborhood-card__bg"></div>
+          <div class="neighborhood-card__overlay"></div>
+          <div class="neighborhood-card__content">
+            <h3 class="neighborhood-card__name">Kitsilano</h3>
+            <span class="neighborhood-card__explore">
+              Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="neighborhood-card neighborhood-card--mountpleasant reveal reveal-delay-2" href="#contact">
+          <div class="neighborhood-card__bg"></div>
+          <div class="neighborhood-card__overlay"></div>
+          <div class="neighborhood-card__content">
+            <h3 class="neighborhood-card__name">Mount Pleasant</h3>
+            <span class="neighborhood-card__explore">
+              Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <a class="neighborhood-card neighborhood-card--eastvan reveal reveal-delay-3" href="#contact">
+          <div class="neighborhood-card__bg"></div>
+          <div class="neighborhood-card__overlay"></div>
+          <div class="neighborhood-card__content">
+            <h3 class="neighborhood-card__name">East Vancouver</h3>
+            <span class="neighborhood-card__explore">
+              Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE ME -->
+  <section class="why" id="why">
+    <div class="why__inner">
+      <div class="why__header">
+        <span class="label reveal" style="color: var(--gold-hover);">The Difference</span>
+        <hr class="section-divider section-divider--center reveal reveal-delay-1" style="opacity: 0.4;">
+        <h2 class="heading-section reveal reveal-delay-1">Why Work With Me</h2>
+      </div>
+
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <div class="why__item-number">01</div>
+          <h3 class="why__item-title">Dedicated Attention</h3>
+          <p class="why__item-text">You won't be one of fifty clients. I keep my roster intentionally focused so every client gets the time, energy, and attention they deserve.</p>
+        </div>
+        <div class="why__item reveal reveal-delay-1">
+          <div class="why__item-number">02</div>
+          <h3 class="why__item-title">Market Expertise</h3>
+          <p class="why__item-text">Deep knowledge of Vancouver's neighborhoods, pricing trends, and market dynamics &mdash; the insight you need to make confident decisions.</p>
+        </div>
+        <div class="why__item reveal reveal-delay-2">
+          <div class="why__item-number">03</div>
+          <h3 class="why__item-title">Modern Marketing</h3>
+          <p class="why__item-text">A digital-first approach combining professional photography, targeted campaigns, and strategic online presence to maximize visibility.</p>
+        </div>
+        <div class="why__item reveal reveal-delay-3">
+          <div class="why__item-number">04</div>
+          <h3 class="why__item-title">Honest Guidance</h3>
+          <p class="why__item-text">Transparent, straightforward advice with zero pressure. My role is to empower your decisions, not push you toward mine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials__inner">
+      <span class="label reveal">Kind Words</span>
+      <hr class="section-divider section-divider--center reveal reveal-delay-1">
+
+      <div class="reveal reveal-delay-2">
+        <span class="testimonials__quote-mark">&ldquo;</span>
+        <p class="testimonials__quote">Aparna made what could have been an overwhelming process feel seamless and even enjoyable. Her attention to detail and genuine care for our needs gave us complete confidence throughout our home search.</p>
+        <p class="testimonials__author">&mdash; Sarah &amp; Michael T.</p>
+        <p class="testimonials__author-detail">First-Time Homebuyers, Kitsilano</p>
+      </div>
+
+      <div class="testimonials__note reveal reveal-delay-3">
+        More client stories coming soon. I'm building relationships one home at a time &mdash; and every story matters.
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__info">
+        <span class="label reveal">Let's Connect</span>
+        <hr class="section-divider reveal reveal-delay-1">
+        <h2 class="heading-section contact__headline reveal reveal-delay-1">Start a Conversation</h2>
+        <p class="body-text contact__subtext reveal reveal-delay-2">Whether you're beginning to explore your options or ready to take the next step, I'd love to hear from you.</p>
+
+        <ul class="contact__details reveal reveal-delay-2">
+          <li class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">Phone</div>
+              <div class="contact__detail-value"><a href="tel:+16041234567">604.123.4567</a></div>
+            </div>
+          </li>
+          <li class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4l-10 8L2 4"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">Email</div>
+              <div class="contact__detail-value"><a href="mailto:aparna@oakwyn.com">aparna@oakwyn.com</a></div>
+            </div>
+          </li>
+          <li class="contact__detail">
+            <div class="contact__detail-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact__detail-label">Office</div>
+              <div class="contact__detail-value">Oakwyn Realty Downtown<br>4th Floor &ndash; 1286 Homer Street<br>Vancouver, BC V6B 2Y5</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form reveal reveal-delay-1" onsubmit="event.preventDefault(); this.querySelector('.form__submit').textContent = 'Message Sent!'; this.querySelector('.form__submit').style.backgroundColor = 'var(--gold)'; this.querySelector('.form__submit').style.borderColor = 'var(--gold)';">
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="name">Full Name</label>
+            <input class="form__input" type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">Phone</label>
+            <input class="form__input" type="tel" id="phone" placeholder="Your phone number">
+          </div>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" id="email" placeholder="Your email address" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message">Message</label>
+          <textarea class="form__textarea" id="message" placeholder="Tell me about what you're looking for..." required></textarea>
+        </div>
+        <button type="submit" class="form__submit">
+          Send Message
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <div class="footer__oakwyn-logo">
+            <svg class="footer__oakwyn-ring" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="18" fill="none" stroke="#AD8C4A" stroke-width="13"/>
+            </svg>
+            <div class="footer__oakwyn-text">
+              <strong>OAKWYN</strong> <span>REALTY</span>
+            </div>
+          </div>
+          <p class="footer__brand-text">Aparna Kapur &mdash; Real Estate Advisor<br>Proudly affiliated with Oakwyn Realty,<br>Vancouver's collaborative brokerage.</p>
+        </div>
+
+        <div>
+          <h4 class="footer__nav-title">Quick Links</h4>
+          <ul class="footer__nav-links">
+            <li><a href="#about" class="footer__nav-link">About</a></li>
+            <li><a href="#services" class="footer__nav-link">Services</a></li>
+            <li><a href="#neighborhoods" class="footer__nav-link">Neighborhoods</a></li>
+            <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__nav-title">Connect</h4>
+          <ul class="footer__nav-links">
+            <li><a href="tel:+16041234567" class="footer__nav-link">604.123.4567</a></li>
+            <li><a href="mailto:aparna@oakwyn.com" class="footer__nav-link">aparna@oakwyn.com</a></li>
+          </ul>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Aparna Kapur. All rights reserved.</p>
+        <ul class="footer__legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal via Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Nav scroll shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+  </script>
+</body>
+</html>
