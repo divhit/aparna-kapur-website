@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aparnakapur.com
+
+# Sitemaps
+Sitemap: https://aparnakapur.com/sitemap.xml
