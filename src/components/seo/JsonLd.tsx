@@ -19,7 +19,7 @@ export function RealEstateAgentSchema() {
         "@type": "RealEstateAgent",
         name: "Aparna Kapur",
         url: "https://aparnakapur.com",
-        telephone: "+1-604-555-1234",
+        telephone: "+1-604-612-7694",
         email: "aparna@aparnakapur.com",
         image: "https://aparnakapur.com/og-image.png",
         description:
@@ -161,7 +161,7 @@ export function LocalBusinessSchema() {
         "@type": "RealEstateAgent",
         name: "Aparna Kapur - Oakwyn Realty",
         url: "https://aparnakapur.com",
-        telephone: "+1-604-555-1234",
+        telephone: "+1-604-612-7694",
         email: "aparna@aparnakapur.com",
         address: {
           "@type": "PostalAddress",

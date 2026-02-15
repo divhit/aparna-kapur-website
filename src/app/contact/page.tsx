@@ -53,7 +53,7 @@ export default function ContactPage() {
 
               <div className="space-y-5">
                 <a
-                  href="tel:+16045551234"
+                  href="tel:+16046127694"
                   className="flex items-center gap-4 p-5 rounded-xl bg-warm-50 hover:bg-teal-50 transition-colors"
                 >
                   <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center shrink-0">
@@ -63,7 +63,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-warm-900">Phone</p>
-                    <p className="text-sm text-warm-600">604-555-1234</p>
+                    <p className="text-sm text-warm-600">604-612-7694</p>
                   </div>
                 </a>
 

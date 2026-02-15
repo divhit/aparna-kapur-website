@@ -467,7 +467,7 @@ export default function HomePage() {
               </p>
               <div className="space-y-4 mb-8">
                 <a
-                  href="tel:+16045551234"
+                  href="tel:+16046127694"
                   className="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
@@ -477,7 +477,7 @@ export default function HomePage() {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-warm-800">Call or Text</p>
-                    <p className="text-sm text-warm-500">604-555-1234</p>
+                    <p className="text-sm text-warm-500">604-612-7694</p>
                   </div>
                 </a>
                 <a
