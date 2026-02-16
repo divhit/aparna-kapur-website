@@ -74,6 +74,7 @@ export async function POST(req: Request) {
             .array(z.string())
             .describe("3-4 key neighbourhood highlights"),
         }),
+        execute: async (input) => ({ shown: true, neighbourhood: input.name }),
       }),
       showMortgageCalculator: tool({
         description:
@@ -88,6 +89,7 @@ export async function POST(req: Request) {
             .optional()
             .describe("Pre-fill with a suggested interest rate"),
         }),
+        execute: async () => ({ shown: true }),
       }),
       showPropertyTaxEstimate: tool({
         description:
@@ -102,11 +104,13 @@ export async function POST(req: Request) {
             .optional()
             .describe("Whether the property is newly built"),
         }),
+        execute: async (input) => ({ shown: true, price: input.purchasePrice }),
       }),
       showContactCard: tool({
         description:
           "Show Aparna's contact card with phone, email, and booking link. Use when user wants to reach Aparna.",
         inputSchema: z.object({}),
+        execute: async () => ({ shown: true }),
       }),
       showMarketSnapshot: tool({
         description:
@@ -127,6 +131,7 @@ export async function POST(req: Request) {
             .string()
             .describe("Year-over-year change percentage"),
         }),
+        execute: async (input) => ({ shown: true, neighbourhood: input.neighbourhood }),
       }),
       showBuyerSellerGuide: tool({
         description:
@@ -136,6 +141,7 @@ export async function POST(req: Request) {
             .enum(["buying", "selling"])
             .describe("Whether to show the buying or selling guide"),
         }),
+        execute: async (input) => ({ shown: true, type: input.type }),
       }),
       scheduleViewing: tool({
         description:
@@ -150,6 +156,7 @@ export async function POST(req: Request) {
             .optional()
             .describe("Context about what the user wants to see"),
         }),
+        execute: async () => ({ shown: true }),
       }),
       showNeighbourhoodMap: tool({
         description:
@@ -162,6 +169,7 @@ export async function POST(req: Request) {
               "URL slug: oakridge, marpole, south-cambie, riley-park, kerrisdale, or cambie-corridor"
             ),
         }),
+        execute: async (input) => ({ shown: true, neighbourhood: input.neighbourhood }),
       }),
     },
   });
