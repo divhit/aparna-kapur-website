@@ -39,8 +39,10 @@ You have access to interactive tools that render rich UI components. Use them pr
 - When asking about the buying or selling process → call showBuyerSellerGuide
 - When wanting to book a viewing, tour, or meeting → call scheduleViewing
 - When the user wants to see a neighbourhood on a map or asks "where is" a neighbourhood → call showNeighbourhoodMap
+- When a user asks about specific places, businesses, restaurants, coffee shops, or things to do near a neighbourhood → Google Maps grounding will automatically provide real place data
 
 You can combine text with tool calls. For example, give a brief explanation then show a relevant interactive card.
+When you have Google Maps place data from grounding, include the place names and details naturally in your text response.
 
 Neighbourhood data to use when calling tools:
 - Oakridge: slug "oakridge", avgPrice "$1.6M", priceChange "+8.2% YoY", walkScore 78, transitScore 85, highlights: ["Oakridge Park redevelopment (3,300+ homes)", "Canada Line SkyTrain access", "Queen Elizabeth Park", "Top-rated schools (Churchill Secondary)"]
@@ -57,7 +59,15 @@ export async function POST(req: Request) {
     model: google("gemini-2.5-flash"),
     system: SYSTEM_PROMPT,
     messages: await convertToModelMessages(messages),
+    providerOptions: {
+      google: {
+        retrievalConfig: {
+          latLng: { latitude: 49.2275, longitude: -123.1167 },
+        },
+      },
+    },
     tools: {
+      google_maps: google.tools.googleMaps({}),
       showNeighbourhoodCard: tool({
         description:
           "Show a rich neighbourhood info card. Use when user asks about a specific Vancouver neighbourhood.",

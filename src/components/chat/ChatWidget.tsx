@@ -123,6 +123,10 @@ export default function ChatWidget() {
           </div>
         );
 
+      case "tool-google_maps":
+        // Provider-managed tool — results are embedded in text response
+        return null;
+
       default:
         return null;
     }
