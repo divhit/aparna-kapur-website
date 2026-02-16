@@ -57,8 +57,4 @@ export const navigation: NavItem[] = [
       { label: "Moving to Vancouver", href: "/resources/moving-to-vancouver" },
     ],
   },
-  {
-    label: "Contact",
-    href: "/contact",
-  },
 ];
