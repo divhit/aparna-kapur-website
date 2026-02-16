@@ -2,11 +2,15 @@ import {
   streamText,
   UIMessage,
   convertToModelMessages,
+  createUIMessageStream,
+  createUIMessageStreamResponse,
   tool,
   stepCountIs,
 } from "ai";
 import { google } from "@ai-sdk/google";
 import { z } from "zod";
+import { pipeJsonRender } from "@json-render/core";
+import { realestateCatalog } from "@/lib/render/catalog";
 
 export const maxDuration = 30;
 
@@ -57,6 +61,38 @@ You have access to interactive tools that render rich UI components. Use them pr
 - When a user asks about specific places, restaurants, cafes, parks, gyms, or things to do near a neighbourhood → call searchNearbyPlaces with the query and neighbourhood name
 
 After calling a tool, you may add a brief follow-up text to complement the interactive card. Keep follow-up text to 1-2 sentences.
+
+RICH UI SPECS:
+In addition to tools, you can generate rich visual layouts using a spec code fence. This is great for:
+- Comparing multiple neighbourhoods side by side
+- Showing structured data like market comparisons, score breakdowns, or process timelines
+- Creating visual summaries with metrics, tables, callouts, and accordions
+- Answering complex questions that benefit from structured visual layout
+
+To output a rich UI, write a \`\`\`spec code fence containing JSONL (one JSON operation per line). The spec uses a flat element map with unique IDs.
+
+WORKFLOW:
+1. First write a brief text summary (1-2 sentences).
+2. Then output the \`\`\`spec fence with the visual layout.
+
+${realestateCatalog.prompt({
+  mode: "chat",
+  customRules: [
+    "Keep layouts compact — this renders inside a small chat widget.",
+    "Use Grid with columns='2' or columns='3' for side-by-side metrics.",
+    "Use Metric for key numbers (prices, scores, percentages).",
+    "Use Card to group related content with a teal header.",
+    "Use Callout for tips and important notes (type: tip, info, warning, important).",
+    "Use Timeline for step-by-step processes.",
+    "Use Table for comparing 3+ neighbourhoods.",
+    "Use Accordion for FAQ-style content.",
+    "Use Progress for walk/transit scores.",
+    "NEVER use viewport height classes.",
+    "Keep text brief — this is a chat, not a blog post.",
+  ],
+})}
+
+Use spec output for richer responses when it adds value (comparisons, structured data, multi-metric displays). For simple answers, just use plain text. For tool-specific actions (mortgage calc, maps, scheduling), still use the dedicated tools.
 
 Neighbourhood data to use when calling tools:
 - Oakridge: slug "oakridge", avgPrice "$1.6M", priceChange "+8.2% YoY", walkScore 78, transitScore 85, highlights: ["Oakridge Park redevelopment (3,300+ homes)", "Canada Line SkyTrain access", "Queen Elizabeth Park", "Top-rated schools (Churchill Secondary)"]
@@ -357,5 +393,11 @@ export async function POST(req: Request) {
     },
   });
 
-  return result.toUIMessageStreamResponse();
+  const stream = createUIMessageStream({
+    execute: async ({ writer }) => {
+      writer.merge(pipeJsonRender(result.toUIMessageStream()));
+    },
+  });
+
+  return createUIMessageStreamResponse({ stream });
 }

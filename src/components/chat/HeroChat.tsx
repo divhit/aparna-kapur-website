@@ -3,6 +3,9 @@
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
 import type { UIMessage } from "ai";
+import { SPEC_DATA_PART_TYPE } from "@json-render/core";
+import { useJsonRenderMessage } from "@json-render/react";
+import { ChatRenderer } from "@/lib/render/renderer";
 import NeighbourhoodCard from "./tools/NeighbourhoodCard";
 import MiniMortgageCalc from "./tools/MiniMortgageCalc";
 import PropertyTaxBreakdown from "./tools/PropertyTaxBreakdown";
@@ -45,6 +48,50 @@ function saveMessages(messages: UIMessage[]) {
   } catch {
     // Storage full or unavailable
   }
+}
+
+function HeroAssistantMessage({
+  message,
+  renderPart,
+}: {
+  message: UIMessage;
+  renderPart: (part: UIMessage["parts"][number], i: number) => React.ReactNode;
+}) {
+  const { spec, hasSpec } = useJsonRenderMessage(message.parts);
+  let specRendered = false;
+
+  return (
+    <div className="flex justify-start">
+      <div className="max-w-[95%] space-y-1">
+        {message.parts.map((part, i) => {
+          if (part.type === "text" && part.text) {
+            return (
+              <div
+                key={i}
+                className="px-4 py-2.5 rounded-2xl rounded-bl-md bg-white/15 text-white text-sm leading-relaxed"
+              >
+                {part.text}
+              </div>
+            );
+          }
+          if (part.type === SPEC_DATA_PART_TYPE && hasSpec && !specRendered) {
+            specRendered = true;
+            return (
+              <div key={i} className="w-full my-1">
+                <ChatRenderer spec={spec} />
+              </div>
+            );
+          }
+          return renderPart(part, i);
+        })}
+        {hasSpec && !specRendered && (
+          <div className="w-full my-1">
+            <ChatRenderer spec={spec} />
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export default function HeroChat() {
@@ -281,23 +328,7 @@ export default function HeroChat() {
                   </div>
                 </div>
               ) : (
-                <div className="flex justify-start">
-                  <div className="max-w-[95%] space-y-1">
-                    {message.parts.map((part, i) => {
-                      if (part.type === "text" && part.text) {
-                        return (
-                          <div
-                            key={i}
-                            className="px-4 py-2.5 rounded-2xl rounded-bl-md bg-white/15 text-white text-sm leading-relaxed"
-                          >
-                            {part.text}
-                          </div>
-                        );
-                      }
-                      return renderPart(part, i);
-                    })}
-                  </div>
-                </div>
+                <HeroAssistantMessage message={message} renderPart={renderPart} />
               )}
             </div>
           ))}
