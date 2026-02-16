@@ -62,7 +62,7 @@ export default function HomePage() {
               "url('https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-teal-950/60 via-teal-950/50 to-teal-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-teal-950/40 to-teal-950/80" />
         </div>
         <div className="relative text-center px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
