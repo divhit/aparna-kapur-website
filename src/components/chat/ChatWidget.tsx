@@ -7,22 +7,19 @@ import type { UIMessage } from "ai";
 import { SPEC_DATA_PART_TYPE } from "@json-render/core";
 import { useJsonRenderMessage } from "@json-render/react";
 import { ChatRenderer } from "@/lib/render/renderer";
-import NeighbourhoodCard from "./tools/NeighbourhoodCard";
 import MiniMortgageCalc from "./tools/MiniMortgageCalc";
 import PropertyTaxBreakdown from "./tools/PropertyTaxBreakdown";
 import ContactCard from "./tools/ContactCard";
-import MarketSnapshot from "./tools/MarketSnapshot";
-import BuyerSellerGuide from "./tools/BuyerSellerGuide";
 import ScheduleViewing from "./tools/ScheduleViewing";
 import NeighbourhoodMapCard from "./tools/NeighbourhoodMapCard";
 import PlacesResultCard from "./tools/PlacesResultCard";
 import PlacesSearchCard from "./tools/PlacesSearchCard";
 
 const QUICK_QUESTIONS = [
+  "I'm looking to buy in Vancouver",
   "Tell me about Oakridge",
-  "How do I buy my first home in BC?",
-  "What's the Property Transfer Tax on a $750K home?",
-  "What would my mortgage payments be?",
+  "Compare neighbourhoods for me",
+  "What can I afford?",
 ];
 
 const STORAGE_KEY = "aparna-chat-messages";
@@ -138,16 +135,6 @@ export default function ChatWidget() {
           </span>
         ) : null;
 
-      case "tool-showNeighbourhoodCard":
-        if (part.state === "input-available" || part.state === "output-available") {
-          return <NeighbourhoodCard key={i} {...(part.input as Parameters<typeof NeighbourhoodCard>[0])} />;
-        }
-        return (
-          <div key={i} className="text-xs text-warm-400 italic">
-            Loading neighbourhood info...
-          </div>
-        );
-
       case "tool-showMortgageCalculator":
         if (part.state === "input-available" || part.state === "output-available") {
           return <MiniMortgageCalc key={i} {...(part.input as Parameters<typeof MiniMortgageCalc>[0])} />;
@@ -173,26 +160,6 @@ export default function ChatWidget() {
           return <ContactCard key={i} />;
         }
         return null;
-
-      case "tool-showMarketSnapshot":
-        if (part.state === "input-available" || part.state === "output-available") {
-          return <MarketSnapshot key={i} {...(part.input as Parameters<typeof MarketSnapshot>[0])} />;
-        }
-        return (
-          <div key={i} className="text-xs text-warm-400 italic">
-            Loading market data...
-          </div>
-        );
-
-      case "tool-showBuyerSellerGuide":
-        if (part.state === "input-available" || part.state === "output-available") {
-          return <BuyerSellerGuide key={i} {...(part.input as Parameters<typeof BuyerSellerGuide>[0])} />;
-        }
-        return (
-          <div key={i} className="text-xs text-warm-400 italic">
-            Loading guide...
-          </div>
-        );
 
       case "tool-scheduleViewing":
         if (part.state === "input-available" || part.state === "output-available") {
