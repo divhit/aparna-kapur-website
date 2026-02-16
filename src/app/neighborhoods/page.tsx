@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
+import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
 
 export const metadata: Metadata = {
   title: "Vancouver Neighborhoods Guide | Oakridge, Marpole, Cambie & More",
@@ -137,6 +138,18 @@ export default function NeighborhoodsPage() {
           </div>
         </section>
       )}
+
+      {/* Interactive Map */}
+      <section className="py-12 bg-warm-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            eyebrow="Interactive Map"
+            title="Find Your Neighbourhood"
+            description="Click any neighbourhood on the map to see key stats and access the full guide."
+          />
+          <AllNeighbourhoodsMap />
+        </div>
+      </section>
 
       {/* Other Neighborhoods */}
       <section className="py-10 pb-20">

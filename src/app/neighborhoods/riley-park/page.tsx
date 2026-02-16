@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "Riley Park Vancouver Real Estate Guide 2026 | Homes, Market Data & Lifestyle",
@@ -45,6 +47,8 @@ const faqs = [
       "Riley Park has excellent transit connectivity. Multiple bus routes serve the neighborhood, including routes along Main Street, King Edward Avenue, and Broadway. The King Edward SkyTrain station (Canada Line) is within walking or short cycling distance for many residents, and the Broadway-City Hall station provides Expo Line access. The upcoming Broadway Subway extension further improves connectivity to the west side and UBC.",
   },
 ];
+
+const rileyParkData = NEIGHBOURHOODS["riley-park"];
 
 export default function RileyParkPage() {
   return (
@@ -119,6 +123,7 @@ export default function RileyParkPage() {
                 </p>
                 <ul className="space-y-2 text-sm">
                   {[
+                    ["map", "Explore Map"],
                     ["overview", "Overview"],
                     ["living", "Living in Riley Park"],
                     ["real-estate", "Real Estate Market"],
@@ -166,6 +171,23 @@ export default function RileyParkPage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore Riley Park
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks in and around Riley Park.
+                </p>
+                <NeighbourhoodMap
+                  center={rileyParkData.center}
+                  zoom={rileyParkData.zoom}
+                  pois={rileyParkData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

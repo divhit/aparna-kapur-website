@@ -1,23 +1,34 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { useChat } from "@ai-sdk/react";
+import NeighbourhoodCard from "./tools/NeighbourhoodCard";
+import MiniMortgageCalc from "./tools/MiniMortgageCalc";
+import PropertyTaxBreakdown from "./tools/PropertyTaxBreakdown";
+import ContactCard from "./tools/ContactCard";
+import MarketSnapshot from "./tools/MarketSnapshot";
+import BuyerSellerGuide from "./tools/BuyerSellerGuide";
+import ScheduleViewing from "./tools/ScheduleViewing";
+import NeighbourhoodMapCard from "./tools/NeighbourhoodMapCard";
 
-type Message = {
-  role: "user" | "assistant";
-  content: string;
-};
+const QUICK_QUESTIONS = [
+  "Tell me about Oakridge",
+  "How do I buy my first home in BC?",
+  "What's the Property Transfer Tax on a $750K home?",
+  "What would my mortgage payments be?",
+];
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
-  const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const { messages, sendMessage, status, stop } = useChat();
+
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, status]);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -25,41 +36,95 @@ export default function ChatWidget() {
     }
   }, [isOpen]);
 
-  const sendMessage = async () => {
-    const text = input.trim();
-    if (!text || loading) return;
+  const isLoading = status === "submitted" || status === "streaming";
 
-    const userMessage: Message = { role: "user", content: text };
-    setMessages((prev) => [...prev, userMessage]);
-    setInput("");
-    setLoading(true);
+  const renderPart = (part: (typeof messages)[number]["parts"][number], i: number) => {
+    switch (part.type) {
+      case "text":
+        return part.text ? (
+          <span key={i} className="whitespace-pre-wrap">
+            {part.text}
+          </span>
+        ) : null;
 
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: text,
-          history: messages,
-        }),
-      });
+      case "tool-showNeighbourhoodCard":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <NeighbourhoodCard key={i} {...(part.input as Parameters<typeof NeighbourhoodCard>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading neighbourhood info...
+          </div>
+        );
 
-      const data = await res.json();
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: data.reply || "Sorry, I couldn't process that." },
-      ]);
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content:
-            "I'm having trouble connecting. Please try again or contact Aparna directly at aparna@aparnakapur.com.",
-        },
-      ]);
-    } finally {
-      setLoading(false);
+      case "tool-showMortgageCalculator":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <MiniMortgageCalc key={i} {...(part.input as Parameters<typeof MiniMortgageCalc>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading calculator...
+          </div>
+        );
+
+      case "tool-showPropertyTaxEstimate":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <PropertyTaxBreakdown key={i} {...(part.input as Parameters<typeof PropertyTaxBreakdown>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Calculating tax...
+          </div>
+        );
+
+      case "tool-showContactCard":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <ContactCard key={i} />;
+        }
+        return null;
+
+      case "tool-showMarketSnapshot":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <MarketSnapshot key={i} {...(part.input as Parameters<typeof MarketSnapshot>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading market data...
+          </div>
+        );
+
+      case "tool-showBuyerSellerGuide":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <BuyerSellerGuide key={i} {...(part.input as Parameters<typeof BuyerSellerGuide>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading guide...
+          </div>
+        );
+
+      case "tool-scheduleViewing":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <ScheduleViewing key={i} {...(part.input as Parameters<typeof ScheduleViewing>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading form...
+          </div>
+        );
+
+      case "tool-showNeighbourhoodMap":
+        if (part.state === "input-available" || part.state === "output-available") {
+          return <NeighbourhoodMapCard key={i} {...(part.input as Parameters<typeof NeighbourhoodMapCard>[0])} />;
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Loading map...
+          </div>
+        );
+
+      default:
+        return null;
     }
   };
 
@@ -72,11 +137,26 @@ export default function ChatWidget() {
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >
         {isOpen ? (
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         ) : (
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -89,67 +169,46 @@ export default function ChatWidget() {
 
       {/* Chat window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-[360px] max-h-[500px] bg-white rounded-2xl shadow-2xl border border-warm-200 flex flex-col overflow-hidden">
+        <div className="fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] max-h-[520px] bg-white rounded-2xl shadow-2xl border border-warm-200 flex flex-col overflow-hidden">
           {/* Header */}
           <div className="bg-teal-800 px-5 py-4 text-white shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-teal-600 flex items-center justify-center text-sm font-serif font-semibold">
                 AK
               </div>
-              <div>
+              <div className="flex-1 min-w-0">
                 <p className="font-medium text-sm">Aparna&apos;s Assistant</p>
-                <p className="text-xs text-teal-200">Ask me about Vancouver real estate</p>
+                <p className="text-xs text-teal-200">
+                  {status === "streaming"
+                    ? "Typing..."
+                    : "Ask me about Vancouver real estate"}
+                </p>
               </div>
+              {isLoading && (
+                <button
+                  onClick={stop}
+                  className="text-xs text-teal-300 hover:text-white transition-colors px-2 py-1 rounded border border-teal-600 hover:border-teal-400"
+                >
+                  Stop
+                </button>
+              )}
             </div>
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-3 min-h-[200px] max-h-[340px]">
+          <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-[200px] max-h-[360px]">
             {messages.length === 0 && (
-              <div className="text-center py-8">
+              <div className="text-center py-6">
                 <p className="text-sm text-warm-500 mb-4">
-                  Hi! I can help you with questions about Vancouver real estate, neighbourhoods, buying, or selling.
+                  Hi! Ask me anything about Vancouver real estate &mdash;
+                  neighbourhoods, buying, selling, mortgages, and more.
                 </p>
                 <div className="space-y-2">
-                  {[
-                    "Tell me about Oakridge",
-                    "How do I buy my first home in BC?",
-                    "What's the Property Transfer Tax?",
-                  ].map((q) => (
+                  {QUICK_QUESTIONS.map((q) => (
                     <button
                       key={q}
                       onClick={() => {
-                        setInput(q);
-                        setTimeout(() => {
-                          const fakeEvent = { preventDefault: () => {} } as React.FormEvent;
-                          void fakeEvent;
-                          setInput("");
-                          const userMsg: Message = { role: "user", content: q };
-                          setMessages([userMsg]);
-                          setLoading(true);
-                          fetch("/api/chat", {
-                            method: "POST",
-                            headers: { "Content-Type": "application/json" },
-                            body: JSON.stringify({ message: q, history: [] }),
-                          })
-                            .then((r) => r.json())
-                            .then((data) => {
-                              setMessages((prev) => [
-                                ...prev,
-                                { role: "assistant", content: data.reply },
-                              ]);
-                            })
-                            .catch(() => {
-                              setMessages((prev) => [
-                                ...prev,
-                                {
-                                  role: "assistant",
-                                  content: "Sorry, I couldn't connect. Please try again.",
-                                },
-                              ]);
-                            })
-                            .finally(() => setLoading(false));
-                        }, 0);
+                        sendMessage({ text: q });
                       }}
                       className="block w-full text-left text-xs px-3 py-2 rounded-lg bg-teal-50 text-teal-700 hover:bg-teal-100 transition-colors"
                     >
@@ -160,24 +219,43 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {messages.map((msg, i) => (
-              <div
-                key={i}
-                className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-              >
-                <div
-                  className={`max-w-[80%] px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                    msg.role === "user"
-                      ? "bg-teal-700 text-white rounded-br-md"
-                      : "bg-warm-100 text-warm-900 rounded-bl-md"
-                  }`}
-                >
-                  {msg.content}
-                </div>
+            {messages.map((message) => (
+              <div key={message.id}>
+                {message.role === "user" ? (
+                  <div className="flex justify-end">
+                    <div className="max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-md bg-teal-700 text-white text-sm leading-relaxed">
+                      {message.parts
+                        .filter((p) => p.type === "text")
+                        .map((p, i) =>
+                          p.type === "text" ? (
+                            <span key={i}>{p.text}</span>
+                          ) : null
+                        )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex justify-start">
+                    <div className="max-w-[95%] space-y-1">
+                      {message.parts.map((part, i) => {
+                        if (part.type === "text" && part.text) {
+                          return (
+                            <div
+                              key={i}
+                              className="px-4 py-2.5 rounded-2xl rounded-bl-md bg-warm-100 text-warm-900 text-sm leading-relaxed"
+                            >
+                              {part.text}
+                            </div>
+                          );
+                        }
+                        return renderPart(part, i);
+                      })}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
 
-            {loading && (
+            {status === "submitted" && (
               <div className="flex justify-start">
                 <div className="bg-warm-100 px-4 py-3 rounded-2xl rounded-bl-md">
                   <div className="flex gap-1.5">
@@ -197,7 +275,9 @@ export default function ChatWidget() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                sendMessage();
+                if (!input.trim() || isLoading) return;
+                sendMessage({ text: input });
+                setInput("");
               }}
               className="flex gap-2"
             >
@@ -208,14 +288,19 @@ export default function ChatWidget() {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask about Vancouver real estate..."
                 className="flex-1 px-4 py-2.5 text-sm border border-warm-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500"
-                disabled={loading}
+                disabled={isLoading}
               />
               <button
                 type="submit"
-                disabled={loading || !input.trim()}
+                disabled={isLoading || !input.trim()}
                 className="px-4 py-2.5 bg-teal-700 text-white rounded-xl hover:bg-teal-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"

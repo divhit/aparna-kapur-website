@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "Marpole Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -45,6 +47,8 @@ const faqs = [
       "Marpole has excellent transit access via the Marine Drive SkyTrain station on the Canada Line. Downtown Vancouver is about 20 minutes by SkyTrain, and Vancouver International Airport (YVR) is just two stops away — roughly 7 minutes. Major bus routes run along Granville Street, Marine Drive, and Cambie Street. Drivers benefit from direct access to the Arthur Laing Bridge (to YVR), the Oak Street Bridge (to Richmond), and Granville Street heading north.",
   },
 ];
+
+const marpoleData = NEIGHBOURHOODS["marpole"];
 
 export default function MarpolePage() {
   return (
@@ -119,6 +123,7 @@ export default function MarpolePage() {
                 <ul className="space-y-2 text-sm">
                   {[
                     ["overview", "Overview"],
+                    ["map", "Explore Map"],
                     ["living", "Living in Marpole"],
                     ["real-estate", "Real Estate Market"],
                     ["transit", "Getting Around"],
@@ -164,6 +169,23 @@ export default function MarpolePage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore Marpole
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks in and around Marpole.
+                </p>
+                <NeighbourhoodMap
+                  center={marpoleData.center}
+                  zoom={marpoleData.zoom}
+                  pois={marpoleData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

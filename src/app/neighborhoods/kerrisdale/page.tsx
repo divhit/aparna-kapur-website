@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "Kerrisdale Vancouver Real Estate Guide 2026 | Luxury Homes & Market Data",
@@ -46,6 +48,8 @@ const faqs = [
       "Kerrisdale is well-connected by bus transit, with major routes running along 41st Avenue and Dunbar/Boulevard connecting to downtown, UBC, and the Oakridge-41st SkyTrain station. The Arbutus Greenway provides an excellent cycling and walking corridor. Driving access is convenient via West Boulevard, Arbutus Street, and 41st Avenue. UBC is approximately 10 minutes by car, and downtown Vancouver is about 20 minutes.",
   },
 ];
+
+const kerrisdaleData = NEIGHBOURHOODS["kerrisdale"];
 
 export default function KerrisdalePage() {
   return (
@@ -121,6 +125,7 @@ export default function KerrisdalePage() {
                 <ul className="space-y-2 text-sm">
                   {[
                     ["overview", "Overview"],
+                    ["map", "Explore Map"],
                     ["living", "Living in Kerrisdale"],
                     ["real-estate", "Real Estate Market"],
                     ["transit", "Getting Around"],
@@ -167,6 +172,23 @@ export default function KerrisdalePage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore Kerrisdale
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks in and around Kerrisdale.
+                </p>
+                <NeighbourhoodMap
+                  center={kerrisdaleData.center}
+                  zoom={kerrisdaleData.zoom}
+                  pois={kerrisdaleData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

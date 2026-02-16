@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "South Cambie Vancouver Real Estate Guide 2026 | Homes, Townhomes & Market Insights",
@@ -45,6 +47,8 @@ const faqs = [
       "South Cambie has outstanding transit access. Two Canada Line SkyTrain stations serve the neighborhood: King Edward Station and Oakridge-41st Avenue Station. Downtown Vancouver is just 12 to 15 minutes by SkyTrain, and Vancouver International Airport (YVR) is about 20 minutes. Major bus routes run along Cambie Street, King Edward Avenue, and 41st Avenue, connecting to UBC and the rest of the city.",
   },
 ];
+
+const southCambieData = NEIGHBOURHOODS["south-cambie"];
 
 export default function SouthCambiePage() {
   return (
@@ -118,6 +122,7 @@ export default function SouthCambiePage() {
                 </p>
                 <ul className="space-y-2 text-sm">
                   {[
+                    ["map", "Explore Map"],
                     ["overview", "Overview"],
                     ["living", "Living in South Cambie"],
                     ["real-estate", "Real Estate Market"],
@@ -165,6 +170,23 @@ export default function SouthCambiePage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore South Cambie
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks in and around South Cambie.
+                </p>
+                <NeighbourhoodMap
+                  center={southCambieData.center}
+                  zoom={southCambieData.zoom}
+                  pois={southCambieData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

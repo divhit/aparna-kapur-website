@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "Cambie Corridor Vancouver Real Estate Guide 2026 | Condos, Townhomes & Market Insights",
@@ -46,6 +48,8 @@ const faqs = [
       "The Cambie Corridor is excellent for first-time buyers, particularly those looking at condos and townhomes. The high volume of new construction means a strong supply of modern, move-in-ready units, many with competitive pre-sale pricing. The excellent transit access reduces the need for a car, lowering overall living costs. Buyers can find well-priced entry points at the southern end near Marine Drive and Langara-49th stations.",
   },
 ];
+
+const cambieData = NEIGHBOURHOODS["cambie-corridor"];
 
 export default function CambieCorridorPage() {
   return (
@@ -119,6 +123,7 @@ export default function CambieCorridorPage() {
                 </p>
                 <ul className="space-y-2 text-sm">
                   {[
+                    ["map", "Explore Map"],
                     ["overview", "Overview"],
                     ["corridor-plan", "The Cambie Corridor Plan"],
                     ["real-estate", "Real Estate Market"],
@@ -166,6 +171,23 @@ export default function CambieCorridorPage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore Cambie Corridor
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks along the Cambie Corridor.
+                </p>
+                <NeighbourhoodMap
+                  center={cambieData.center}
+                  zoom={cambieData.zoom}
+                  pois={cambieData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

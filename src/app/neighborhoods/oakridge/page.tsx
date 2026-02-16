@@ -3,6 +3,8 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import PropertyAlertSignup from "@/components/neighborhoods/PropertyAlertSignup";
+import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -45,6 +47,8 @@ const faqs = [
       "Oakridge has excellent transit access with two Canada Line SkyTrain stations: Oakridge-41st Avenue and Langara-49th Avenue. Downtown Vancouver is just 15 minutes by SkyTrain, and Vancouver International Airport (YVR) is about 20 minutes. Multiple bus routes serve the neighborhood, and cycling infrastructure continues to improve.",
   },
 ];
+
+const oakridgeData = NEIGHBOURHOODS["oakridge"];
 
 export default function OakridgePage() {
   return (
@@ -119,6 +123,7 @@ export default function OakridgePage() {
                 <ul className="space-y-2 text-sm">
                   {[
                     ["overview", "Overview"],
+                    ["map", "Explore Map"],
                     ["redevelopment", "The Transformation"],
                     ["living", "Living in Oakridge"],
                     ["real-estate", "Real Estate Market"],
@@ -180,6 +185,23 @@ export default function OakridgePage() {
                 <p className="text-warm-600 leading-relaxed">
                   Oakridge is also one of Vancouver&apos;s most culturally diverse neighborhoods. It is home to a significant Jewish community with specialty shops, synagogues, and schools, as well as a substantial Chinese community. This cultural richness contributes to the neighborhood&apos;s vibrant character, diverse dining scene, and strong sense of community.
                 </p>
+              </section>
+
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Explore Oakridge
+                </h2>
+                <p className="text-warm-600 leading-relaxed mb-6">
+                  Discover transit stations, schools, parks, and key landmarks in and around Oakridge.
+                </p>
+                <NeighbourhoodMap
+                  center={oakridgeData.center}
+                  zoom={oakridgeData.zoom}
+                  pois={oakridgeData.pointsOfInterest}
+                  height="450px"
+                  showLegend
+                />
               </section>
 
               {/* The Transformation */}
