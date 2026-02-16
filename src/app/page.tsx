@@ -44,13 +44,6 @@ const neighborhoods = [
   },
 ];
 
-const stats = [
-  { value: "$6.3B", label: "Oakwyn Sales Volume", sublabel: "2023" },
-  { value: "900+", label: "Oakwyn Agents", sublabel: "Across BC" },
-  { value: "#1", label: "Fastest Growing", sublabel: "Vancouver Brokerage" },
-  { value: "100%", label: "Client Focused", sublabel: "Your Goals First" },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -156,6 +149,61 @@ export default function HomePage() {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3b: Numbers Tell a Story */}
+      <section className="py-20 bg-warm-50">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <p className="text-teal-600 text-xs uppercase tracking-[0.3em] font-semibold mb-3">
+            Numbers
+          </p>
+          <h2 className="font-serif text-4xl md:text-5xl text-teal-950 italic leading-tight mb-16">
+            Tell a Story
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$6B</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                Oakridge Park<br />Redevelopment
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">3,300+</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                New Homes<br />Coming to Oakridge
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">9 Acres</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                Public Park<br />&amp; Green Space
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$6.3B</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                Oakwyn Realty<br />Sales Volume
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">#1</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                Fastest Growing<br />Vancouver Brokerage
+              </p>
+            </div>
+            <div>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">900+</p>
+              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                Oakwyn Agents<br />Across BC
+              </p>
+            </div>
+          </div>
+          <div className="mt-14">
+            <Button href="/neighborhoods/oakridge" variant="outline">
+              Learn More
+            </Button>
           </div>
         </div>
       </section>
@@ -307,29 +355,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 7: Social Proof / Credentials */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="Backed by the Best"
-            title="The Strength of Oakwyn Realty Behind Every Transaction"
-            description="As a member of Vancouver's top-performing brokerage, you get the resources of a powerhouse team with the personal attention of a dedicated agent."
-          />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="font-serif text-4xl md:text-5xl text-teal-700 mb-2">
-                  {stat.value}
-                </p>
-                <p className="text-sm font-medium text-warm-800">{stat.label}</p>
-                <p className="text-xs text-warm-500 mt-1">{stat.sublabel}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8: Contact */}
+      {/* SECTION 7: Contact */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
