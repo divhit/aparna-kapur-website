@@ -1,8 +1,23 @@
-import { streamText, UIMessage, convertToModelMessages, tool } from "ai";
+import {
+  streamText,
+  UIMessage,
+  convertToModelMessages,
+  tool,
+  stepCountIs,
+} from "ai";
 import { google } from "@ai-sdk/google";
 import { z } from "zod";
 
 export const maxDuration = 30;
+
+const NEIGHBOURHOOD_COORDS: Record<string, { lat: number; lng: number }> = {
+  Oakridge: { lat: 49.2275, lng: -123.1167 },
+  Marpole: { lat: 49.21, lng: -123.13 },
+  "South Cambie": { lat: 49.245, lng: -123.115 },
+  "Riley Park": { lat: 49.242, lng: -123.1 },
+  Kerrisdale: { lat: 49.233, lng: -123.157 },
+  "Cambie Corridor": { lat: 49.238, lng: -123.115 },
+};
 
 const SYSTEM_PROMPT = `You are Aparna Kapur's virtual assistant on her real estate website. You help visitors with questions about:
 
@@ -31,7 +46,7 @@ Guidelines:
 - Use Canadian English spelling (e.g., neighbourhood, colour)
 
 You have access to interactive tools that render rich UI components. Use them proactively:
-- When a user asks about a neighbourhood → call showNeighbourhoodCard with relevant data, then add a brief text explanation
+- When a user asks about a neighbourhood → call showNeighbourhoodCard with the relevant data
 - When discussing affordability or mortgages → call showMortgageCalculator
 - When discussing PTT or closing costs → call showPropertyTaxEstimate with the price
 - When the user wants to contact Aparna or asks how to reach her → call showContactCard
@@ -39,10 +54,9 @@ You have access to interactive tools that render rich UI components. Use them pr
 - When asking about the buying or selling process → call showBuyerSellerGuide
 - When wanting to book a viewing, tour, or meeting → call scheduleViewing
 - When the user wants to see a neighbourhood on a map or asks "where is" a neighbourhood → call showNeighbourhoodMap
-- When a user asks about specific places, businesses, restaurants, coffee shops, or things to do near a neighbourhood → Google Maps grounding will automatically provide real place data
+- When a user asks about specific places, restaurants, cafes, parks, gyms, or things to do near a neighbourhood → call searchNearbyPlaces with the query and neighbourhood name
 
-You can combine text with tool calls. For example, give a brief explanation then show a relevant interactive card.
-When you have Google Maps place data from grounding, include the place names and details naturally in your text response.
+After calling a tool, you may add a brief follow-up text to complement the interactive card. Keep follow-up text to 1-2 sentences.
 
 Neighbourhood data to use when calling tools:
 - Oakridge: slug "oakridge", avgPrice "$1.6M", priceChange "+8.2% YoY", walkScore 78, transitScore 85, highlights: ["Oakridge Park redevelopment (3,300+ homes)", "Canada Line SkyTrain access", "Queen Elizabeth Park", "Top-rated schools (Churchill Secondary)"]
@@ -56,25 +70,20 @@ export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
 
   const result = streamText({
-    model: google("gemini-2.5-flash"),
+    model: google("gemini-3-flash-preview"),
     system: SYSTEM_PROMPT,
     messages: await convertToModelMessages(messages),
-    providerOptions: {
-      google: {
-        retrievalConfig: {
-          latLng: { latitude: 49.2275, longitude: -123.1167 },
-        },
-      },
-    },
+    stopWhen: stepCountIs(3),
     tools: {
-      google_maps: google.tools.googleMaps({}),
       showNeighbourhoodCard: tool({
         description:
           "Show a rich neighbourhood info card. Use when user asks about a specific Vancouver neighbourhood.",
         inputSchema: z.object({
           name: z.string().describe("Neighbourhood name"),
           slug: z.string().describe("URL slug for the neighbourhood page"),
-          avgPrice: z.string().describe("Average property price, e.g. '$1.6M'"),
+          avgPrice: z
+            .string()
+            .describe("Average property price, e.g. '$1.6M'"),
           priceChange: z
             .string()
             .describe("Year-over-year price change, e.g. '+8.2% YoY'"),
@@ -84,7 +93,10 @@ export async function POST(req: Request) {
             .array(z.string())
             .describe("3-4 key neighbourhood highlights"),
         }),
-        execute: async (input) => ({ shown: true, neighbourhood: input.name }),
+        execute: async (input) => ({
+          shown: true,
+          neighbourhood: input.name,
+        }),
       }),
       showMortgageCalculator: tool({
         description:
@@ -114,7 +126,10 @@ export async function POST(req: Request) {
             .optional()
             .describe("Whether the property is newly built"),
         }),
-        execute: async (input) => ({ shown: true, price: input.purchasePrice }),
+        execute: async (input) => ({
+          shown: true,
+          price: input.purchasePrice,
+        }),
       }),
       showContactCard: tool({
         description:
@@ -141,7 +156,10 @@ export async function POST(req: Request) {
             .string()
             .describe("Year-over-year change percentage"),
         }),
-        execute: async (input) => ({ shown: true, neighbourhood: input.neighbourhood }),
+        execute: async (input) => ({
+          shown: true,
+          neighbourhood: input.neighbourhood,
+        }),
       }),
       showBuyerSellerGuide: tool({
         description:
@@ -179,7 +197,162 @@ export async function POST(req: Request) {
               "URL slug: oakridge, marpole, south-cambie, riley-park, kerrisdale, or cambie-corridor"
             ),
         }),
-        execute: async (input) => ({ shown: true, neighbourhood: input.neighbourhood }),
+        execute: async (input) => ({
+          shown: true,
+          neighbourhood: input.neighbourhood,
+        }),
+      }),
+      searchNearbyPlaces: tool({
+        description:
+          "Search for real nearby places (restaurants, cafes, gyms, parks, shops, etc.) using Google Maps data. Use when user asks about specific types of businesses or places near a neighbourhood.",
+        inputSchema: z.object({
+          query: z
+            .string()
+            .describe(
+              "Search query, e.g. 'Italian restaurants', 'coffee shops', 'yoga studios'"
+            ),
+          neighbourhood: z
+            .string()
+            .describe("Neighbourhood name, e.g. 'Oakridge'"),
+        }),
+        execute: async ({ query, neighbourhood }) => {
+          const coords = NEIGHBOURHOOD_COORDS[neighbourhood] || {
+            lat: 49.2275,
+            lng: -123.1167,
+          };
+
+          try {
+            const apiKey = process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+            // Use Gemini 2.5 Flash with Maps grounding (Gemini 3 doesn't support Maps grounding)
+            const res = await fetch(
+              `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  contents: [
+                    {
+                      role: "user",
+                      parts: [
+                        {
+                          text: `Find the top 5 ${query} specifically in or very near the ${neighbourhood} neighbourhood of Vancouver, BC (near latitude ${coords.lat}, longitude ${coords.lng}). Only include places that are actually in or immediately adjacent to ${neighbourhood}. For each place provide: name, a one-sentence description, and rating (number 1-5 or null). Format as a JSON array: [{"name":"...","description":"...","rating":4.5,"type":"${query}"}]`,
+                        },
+                      ],
+                    },
+                  ],
+                  tools: [{ googleMaps: {} }],
+                  toolConfig: {
+                    retrievalConfig: {
+                      latLng: {
+                        latitude: coords.lat,
+                        longitude: coords.lng,
+                      },
+                    },
+                  },
+                }),
+              }
+            );
+
+            const data = await res.json();
+            const candidate = data?.candidates?.[0];
+            const textContent =
+              candidate?.content?.parts
+                ?.map((p: { text?: string }) => p.text)
+                .join("") || "";
+            const groundingChunks =
+              candidate?.groundingMetadata?.groundingChunks || [];
+
+            // Extract place data from grounding chunks (real Google Maps data)
+            const mapsPlaces = groundingChunks
+              .filter((chunk: { maps?: unknown }) => chunk.maps)
+              .slice(0, 6)
+              .map(
+                (chunk: {
+                  maps: { title: string; uri: string; placeId?: string };
+                }) => ({
+                  name: chunk.maps.title,
+                  mapsUrl: chunk.maps.uri,
+                  placeId: chunk.maps.placeId || null,
+                })
+              );
+
+            // Try to extract descriptions from the text response
+            let enrichedPlaces = mapsPlaces;
+            try {
+              const jsonMatch = textContent.match(/\[[\s\S]*?\]/);
+              if (jsonMatch) {
+                const parsed = JSON.parse(jsonMatch[0]);
+                enrichedPlaces = mapsPlaces.map(
+                  (
+                    place: {
+                      name: string;
+                      mapsUrl: string;
+                      placeId: string | null;
+                    },
+                    idx: number
+                  ) => {
+                    // Match by name similarity
+                    const match =
+                      parsed.find(
+                        (p: { name: string }) =>
+                          p.name
+                            .toLowerCase()
+                            .includes(
+                              place.name.toLowerCase().split(" ")[0]
+                            ) ||
+                          place.name
+                            .toLowerCase()
+                            .includes(p.name.toLowerCase().split(" ")[0])
+                      ) || parsed[idx];
+                    return {
+                      ...place,
+                      description: match?.description || null,
+                      rating: match?.rating || null,
+                      type: match?.type || query,
+                    };
+                  }
+                );
+              }
+            } catch {
+              // Keep places without enrichment
+            }
+
+            return {
+              shown: true,
+              query,
+              neighbourhood,
+              lat: coords.lat,
+              lng: coords.lng,
+              places:
+                enrichedPlaces.length > 0
+                  ? enrichedPlaces
+                  : [
+                      {
+                        name: `Search "${query}" in ${neighbourhood}`,
+                        mapsUrl: `https://www.google.com/maps/search/${encodeURIComponent(query + " " + neighbourhood + " Vancouver BC")}`,
+                        description: `View ${query} near ${neighbourhood} on Google Maps`,
+                        type: query,
+                      },
+                    ],
+            };
+          } catch {
+            return {
+              shown: true,
+              query,
+              neighbourhood,
+              lat: coords.lat,
+              lng: coords.lng,
+              places: [
+                {
+                  name: `Search "${query}" in ${neighbourhood}`,
+                  mapsUrl: `https://www.google.com/maps/search/${encodeURIComponent(query + " " + neighbourhood + " Vancouver BC")}`,
+                  description: `View ${query} near ${neighbourhood} on Google Maps`,
+                  type: query,
+                },
+              ],
+            };
+          }
+        },
       }),
     },
   });

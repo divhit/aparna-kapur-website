@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useChat } from "@ai-sdk/react";
+import type { UIMessage } from "ai";
 import NeighbourhoodCard from "./tools/NeighbourhoodCard";
 import MiniMortgageCalc from "./tools/MiniMortgageCalc";
 import PropertyTaxBreakdown from "./tools/PropertyTaxBreakdown";
@@ -10,6 +11,8 @@ import MarketSnapshot from "./tools/MarketSnapshot";
 import BuyerSellerGuide from "./tools/BuyerSellerGuide";
 import ScheduleViewing from "./tools/ScheduleViewing";
 import NeighbourhoodMapCard from "./tools/NeighbourhoodMapCard";
+import PlacesResultCard from "./tools/PlacesResultCard";
+import PlacesSearchCard from "./tools/PlacesSearchCard";
 
 const QUICK_QUESTIONS = [
   "Tell me about Oakridge",
@@ -18,13 +21,49 @@ const QUICK_QUESTIONS = [
   "What would my mortgage payments be?",
 ];
 
+const STORAGE_KEY = "aparna-chat-messages";
+
+function loadMessages(): UIMessage[] {
+  if (typeof window === "undefined") return [];
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveMessages(messages: UIMessage[]) {
+  try {
+    // Only save text + tool input parts (outputs may be too large)
+    const slim = messages.map((m) => ({
+      ...m,
+      parts: m.parts.filter(
+        (p) => p.type === "text" || (p.type.startsWith("tool-") && ("input" in p))
+      ),
+    }));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(slim));
+  } catch {
+    // Storage full or unavailable
+  }
+}
+
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const { messages, sendMessage, status, stop } = useChat();
+  const { messages, sendMessage, status, stop } = useChat({
+    messages: loadMessages(),
+  });
+
+  // Persist messages to localStorage when they change
+  useEffect(() => {
+    if (messages.length > 0) {
+      saveMessages(messages);
+    }
+  }, [messages]);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -123,9 +162,33 @@ export default function ChatWidget() {
           </div>
         );
 
-      case "tool-google_maps":
-        // Provider-managed tool — results are embedded in text response
-        return null;
+      case "tool-searchNearbyPlaces":
+        if (part.state === "output-available") {
+          const output = (part as { output?: { query: string; neighbourhood: string; lat?: number; lng?: number; places: Parameters<typeof PlacesResultCard>[0]["places"]; error?: string } }).output;
+          if (output) {
+            // Use Google Places UI Kit if API key is available
+            if (process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY && output.lat && output.lng) {
+              return <PlacesSearchCard key={i} query={output.query} neighbourhood={output.neighbourhood} lat={output.lat} lng={output.lng} />;
+            }
+            return <PlacesResultCard key={i} query={output.query} neighbourhood={output.neighbourhood} places={output.places} error={output.error} />;
+          }
+        }
+        if (part.state === "input-available") {
+          return (
+            <div key={i} className="text-xs text-warm-400 italic flex items-center gap-1.5">
+              <svg className="w-3 h-3 animate-spin" fill="none" viewBox="0 0 24 24">
+                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+              </svg>
+              Searching Google Maps...
+            </div>
+          );
+        }
+        return (
+          <div key={i} className="text-xs text-warm-400 italic">
+            Searching nearby places...
+          </div>
+        );
 
       default:
         return null;
@@ -188,14 +251,28 @@ export default function ChatWidget() {
                     : "Ask me about Vancouver real estate"}
                 </p>
               </div>
-              {isLoading && (
-                <button
-                  onClick={stop}
-                  className="text-xs text-teal-300 hover:text-white transition-colors px-2 py-1 rounded border border-teal-600 hover:border-teal-400"
-                >
-                  Stop
-                </button>
-              )}
+              <div className="flex items-center gap-1.5">
+                {isLoading && (
+                  <button
+                    onClick={stop}
+                    className="text-xs text-teal-300 hover:text-white transition-colors px-2 py-1 rounded border border-teal-600 hover:border-teal-400"
+                  >
+                    Stop
+                  </button>
+                )}
+                {messages.length > 0 && !isLoading && (
+                  <button
+                    onClick={() => {
+                      localStorage.removeItem(STORAGE_KEY);
+                      window.location.reload();
+                    }}
+                    className="text-xs text-teal-300 hover:text-white transition-colors px-2 py-1 rounded border border-teal-600 hover:border-teal-400"
+                    title="Start new conversation"
+                  >
+                    New
+                  </button>
+                )}
+              </div>
             </div>
           </div>
 
