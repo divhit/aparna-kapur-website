@@ -31,9 +31,10 @@ export default function NeighbourhoodMapCard({ neighbourhood, slug }: Props) {
         <NeighbourhoodMap
           center={data.center}
           zoom={data.zoom}
-          pois={data.fallbackPOIs}
+          pois={[]}
+          boundaryName={data.name}
           height="220px"
-          showLegend
+          showLegend={false}
         />
       </div>
       <div className="px-4 pb-3">

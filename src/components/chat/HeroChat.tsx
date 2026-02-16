@@ -192,8 +192,8 @@ export default function HeroChat() {
   };
 
   return (
-    <div className={`w-full mx-auto lg:mx-0 transition-all duration-500 ease-in-out ${hasMessages ? "max-w-2xl" : "max-w-lg"}`}>
-      <div className={`bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out ${hasMessages ? "h-[600px]" : "h-[440px]"}`}>
+    <div className="w-full max-w-3xl mx-auto">
+      <div className={`bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out ${hasMessages ? "h-[550px]" : "h-[340px]"}`}>
         {/* Header */}
         <div className="px-5 py-3.5 border-b border-white/10 shrink-0">
           <div className="flex items-center justify-between">

@@ -53,8 +53,8 @@ const stats = [
 export default function HomePage() {
   return (
     <>
-      {/* SECTION 1: Hero with integrated AI chat */}
-      <section className="relative min-h-[85vh] flex items-start lg:items-center">
+      {/* SECTION 1: Full-screen Hero */}
+      <section className="relative h-screen flex items-center justify-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -62,59 +62,64 @@ export default function HomePage() {
               "url('https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-950/95 via-teal-950/85 to-teal-950/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-teal-950/60 via-teal-950/50 to-teal-950/80" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left: Hero text + CTAs */}
-            <div>
-              <p className="text-teal-300 text-sm uppercase tracking-[0.2em] font-medium mb-4">
-                Oakridge &amp; Greater Vancouver
-              </p>
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-                Your Real Estate
-                <span className="block text-teal-300">Journey Starts Here</span>
-              </h1>
-              <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
-                Whether you&apos;re buying your first home or selling to start a new
-                chapter, I&apos;ll guide you every step of the way with local expertise
-                and genuine care.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/buying" size="lg" variant="primary">
-                  I&apos;m Looking to Buy
-                </Button>
-                <Button href="/selling" size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  I&apos;m Looking to Sell
-                </Button>
-              </div>
-              <div className="mt-8">
-                <Link
-                  href="/selling/home-valuation"
-                  className="inline-flex items-center text-sm text-white/60 hover:text-white transition-colors group"
-                >
-                  <span>Curious about your home&apos;s value?</span>
-                  <svg className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Embedded AI chat */}
-            <div className="hidden lg:block">
-              <HeroChat />
-            </div>
+        <div className="relative text-center px-6 max-w-4xl mx-auto">
+          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
+            Vancouver Real Estate
+            <span className="block text-teal-300 mt-2">With Aparna Kapur</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
+            Oakridge &amp; Greater Vancouver specialist. Local expertise, genuine care, every step of the way.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/buying"
+              className="px-8 py-4 bg-white text-teal-900 rounded-xl text-lg font-semibold hover:bg-teal-50 transition-colors shadow-lg"
+            >
+              Find Your Home
+            </Link>
+            <Link
+              href="/selling"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              Sell Your Home
+            </Link>
+            <Link
+              href="/selling/home-valuation"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
+            >
+              Home Valuation
+            </Link>
           </div>
-
-          {/* Mobile: Chat below hero on small screens */}
-          <div className="lg:hidden mt-12">
-            <HeroChat />
-          </div>
+        </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
-      {/* SECTION 2: Oakridge Spotlight */}
+      {/* SECTION 2: AI Chat Assistant */}
+      <section className="py-16 bg-teal-950">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-8">
+            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+              AI-Powered Assistant
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-3">
+              Ask Me Anything
+            </h2>
+            <p className="text-white/60 text-lg">
+              Neighbourhoods, mortgages, buying, selling &mdash; get instant answers.
+            </p>
+          </div>
+          <HeroChat />
+        </div>
+      </section>
+
+      {/* SECTION 3: Oakridge Spotlight */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -182,7 +187,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3: Buyer/Seller/Valuation Cards */}
+      {/* SECTION 4: Buyer/Seller/Valuation Cards */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
