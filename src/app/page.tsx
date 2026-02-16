@@ -111,91 +111,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3: Oakridge Spotlight — Cinematic */}
-      <section className="relative py-32 overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop&q=80"
-          alt="Oakridge Vancouver aerial view"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/70 to-teal-950/30" />
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="max-w-lg">
-            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-              Featured Neighbourhood
-            </p>
-            <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-4">
-              Oakridge
-            </h2>
-            <p className="text-white/80 text-lg leading-relaxed mb-8">
-              Vancouver&apos;s most exciting transformation. The $6B Oakridge Park
-              redevelopment is bringing world-class living to the heart of the city.
-            </p>
-            <div className="flex gap-10 mb-10">
-              <div>
-                <span className="font-serif text-3xl text-white">3,300+</span>
-                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">New Homes</p>
-              </div>
-              <div>
-                <span className="font-serif text-3xl text-white">9 Acres</span>
-                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">Public Park</p>
-              </div>
-              <div>
-                <span className="font-serif text-3xl text-white">15 min</span>
-                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">To Downtown</p>
-              </div>
-            </div>
-            <Button href="/neighborhoods/oakridge" variant="primary" className="bg-white text-teal-900 hover:bg-teal-50">
-              Explore Oakridge
-              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Featured Neighborhoods */}
-      <section className="py-20 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="Explore Neighborhoods"
-            title="Find Your Perfect Vancouver Neighborhood"
-            description="Every neighborhood has its own personality. Explore detailed guides to find the one that fits your lifestyle."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {neighborhoods.map((hood) => (
-              <Link
-                key={hood.slug}
-                href={`/neighborhoods/${hood.slug}`}
-                className="group relative rounded-2xl overflow-hidden h-72 shadow-sm hover:shadow-xl transition-all duration-300"
-              >
-                <img
-                  src={hood.image}
-                  alt={`${hood.name} Vancouver neighborhood`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-serif text-xl text-white mb-1 group-hover:text-teal-200 transition-colors">
-                    {hood.name}
-                  </h3>
-                  <p className="text-sm text-white/70 leading-relaxed">
-                    {hood.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Button href="/neighborhoods" variant="outline">
-              View All Neighborhoods
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: About Preview */}
+      {/* SECTION 3: About Preview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -243,6 +159,92 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* SECTION 4: Featured Neighborhoods */}
+      <section className="py-20 bg-warm-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeading
+            eyebrow="Explore Neighborhoods"
+            title="Find Your Perfect Vancouver Neighborhood"
+            description="Every neighborhood has its own personality. Explore detailed guides to find the one that fits your lifestyle."
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {neighborhoods.map((hood) => (
+              <Link
+                key={hood.slug}
+                href={`/neighborhoods/${hood.slug}`}
+                className="group relative rounded-2xl overflow-hidden h-72 shadow-sm hover:shadow-xl transition-all duration-300"
+              >
+                <img
+                  src={hood.image}
+                  alt={`${hood.name} Vancouver neighborhood`}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 className="font-serif text-xl text-white mb-1 group-hover:text-teal-200 transition-colors">
+                    {hood.name}
+                  </h3>
+                  <p className="text-sm text-white/70 leading-relaxed">
+                    {hood.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Button href="/neighborhoods" variant="outline">
+              View All Neighborhoods
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: Oakridge Spotlight — Magazine Cover */}
+      <Link
+        href="/neighborhoods/oakridge"
+        className="group relative block h-[85vh] overflow-hidden cursor-pointer"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop&q=80"
+          alt="Oakridge Vancouver aerial view"
+          className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[1200ms]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/60 to-transparent" />
+        <div className="relative h-full flex flex-col justify-end max-w-7xl mx-auto px-6 pb-16">
+          <p className="text-teal-300 text-xs uppercase tracking-[0.3em] font-semibold mb-4">
+            Featured Neighbourhood
+          </p>
+          <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-6">
+            Oakridge
+          </h2>
+          <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
+            Vancouver&apos;s most exciting transformation. The $6B Oakridge Park
+            redevelopment is bringing world-class living to the heart of the city.
+          </p>
+          <div className="flex gap-10 mb-8">
+            <div>
+              <span className="font-serif text-3xl md:text-4xl text-white">3,300+</span>
+              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">New Homes</p>
+            </div>
+            <div>
+              <span className="font-serif text-3xl md:text-4xl text-white">9 Acres</span>
+              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">Public Park</p>
+            </div>
+            <div>
+              <span className="font-serif text-3xl md:text-4xl text-white">15 min</span>
+              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">To Downtown</p>
+            </div>
+          </div>
+          <span className="inline-flex items-center text-white text-sm font-medium uppercase tracking-wider group-hover:text-teal-300 transition-colors">
+            Explore the Oakridge Guide
+            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </span>
+        </div>
+      </Link>
 
       {/* SECTION 6: Resources Preview */}
       <section className="py-20 bg-teal-950">

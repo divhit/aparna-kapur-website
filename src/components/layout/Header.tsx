@@ -147,44 +147,14 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // On homepage: transparent when at top, solid white when scrolled
-  // On other pages: always solid white
-  const transparent = isHomepage && !scrolled;
+  // Transparent on all pages when at top, solid white when scrolled
+  const transparent = !scrolled;
 
   return (
     <>
-      {/* Top bar — hidden on homepage */}
-      {!isHomepage && (
-        <div className="bg-teal-900 text-white/90 text-xs py-2 hidden md:block">
-          <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <div className="flex items-center gap-6">
-              <a href="tel:+16046127694" className="hover:text-white transition-colors flex items-center gap-1.5">
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                604-612-7694
-              </a>
-              <a href="mailto:aparna@aparnakapur.com" className="hover:text-white transition-colors flex items-center gap-1.5">
-                <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                aparna@aparnakapur.com
-              </a>
-            </div>
-            <div className="flex items-center gap-1 text-warm-300">
-              <span>Oakwyn Realty Ltd.</span>
-              <span className="mx-1">|</span>
-              <span>Vancouver, BC</span>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Main header — centered logo with nav on both sides */}
       <header
-        className={`${
-          isHomepage ? "fixed" : "sticky"
-        } top-0 left-0 right-0 z-40 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           transparent
             ? "bg-transparent"
             : "bg-white shadow-md"
