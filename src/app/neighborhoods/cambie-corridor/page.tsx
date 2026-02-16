@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Cambie Corridor Vancouver Real Estate Guide 2026 | Condos, Townhomes & Market Insights",
@@ -51,7 +52,9 @@ const faqs = [
 
 const cambieData = NEIGHBOURHOODS["cambie-corridor"];
 
-export default function CambieCorridorPage() {
+export default async function CambieCorridorPage() {
+  const pois = await fetchNeighbourhoodPOIs(cambieData.center);
+
   return (
     <>
       {/* Hero */}
@@ -182,7 +185,8 @@ export default function CambieCorridorPage() {
                 <NeighbourhoodMap
                   center={cambieData.center}
                   zoom={cambieData.zoom}
-                  pois={cambieData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : cambieData.fallbackPOIs}
+                  boundaryName="Cambie Corridor"
                   height="450px"
                   showLegend
                 />

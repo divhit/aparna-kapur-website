@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Riley Park Vancouver Real Estate Guide 2026 | Homes, Market Data & Lifestyle",
@@ -50,7 +51,9 @@ const faqs = [
 
 const rileyParkData = NEIGHBOURHOODS["riley-park"];
 
-export default function RileyParkPage() {
+export default async function RileyParkPage() {
+  const pois = await fetchNeighbourhoodPOIs(rileyParkData.center);
+
   return (
     <>
       {/* Hero */}
@@ -182,7 +185,8 @@ export default function RileyParkPage() {
                 <NeighbourhoodMap
                   center={rileyParkData.center}
                   zoom={rileyParkData.zoom}
-                  pois={rileyParkData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : rileyParkData.fallbackPOIs}
+                  boundaryName="Riley Park"
                   height="450px"
                   showLegend
                 />

@@ -9,6 +9,7 @@ import {
   useMap,
 } from "@vis.gl/react-google-maps";
 import type { PointOfInterest } from "@/lib/neighborhoods";
+import NeighbourhoodBoundaries from "./NeighbourhoodBoundaries";
 
 type Props = {
   center: { lat: number; lng: number };
@@ -17,6 +18,8 @@ type Props = {
   className?: string;
   height?: string;
   showLegend?: boolean;
+  /** Show this neighbourhood's boundary polygon on the map */
+  boundaryName?: string;
 };
 
 const POI_COLORS: Record<PointOfInterest["type"], string> = {
@@ -101,6 +104,7 @@ export default function NeighbourhoodMap({
   className = "",
   height = "400px",
   showLegend = true,
+  boundaryName,
 }: Props) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
@@ -155,6 +159,7 @@ export default function NeighbourhoodMap({
             streetViewControl={false}
             fullscreenControl
           >
+            {boundaryName && <NeighbourhoodBoundaries filterTo={boundaryName} />}
             <MapMarkers pois={pois} />
           </Map>
         </div>

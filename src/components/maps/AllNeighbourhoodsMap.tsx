@@ -8,6 +8,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import { getAllNeighbourhoods, type NeighbourhoodData } from "@/lib/neighborhoods";
+import NeighbourhoodBoundaries from "./NeighbourhoodBoundaries";
 
 function NeighbourhoodMarkers() {
   const neighbourhoods = getAllNeighbourhoods();
@@ -86,10 +87,10 @@ export default function AllNeighbourhoodsMap() {
 
   return (
     <APIProvider apiKey={apiKey}>
-      <div className="rounded-xl overflow-hidden border border-warm-200 shadow-sm h-[400px]">
+      <div className="rounded-xl overflow-hidden border border-warm-200 shadow-sm h-[500px]">
         <Map
-          defaultCenter={{ lat: 49.2330, lng: -123.1200 }}
-          defaultZoom={13}
+          defaultCenter={{ lat: 49.2530, lng: -123.1200 }}
+          defaultZoom={12}
           mapId="all-neighbourhoods-map"
           gestureHandling="cooperative"
           disableDefaultUI={false}
@@ -98,6 +99,7 @@ export default function AllNeighbourhoodsMap() {
           streetViewControl={false}
           fullscreenControl
         >
+          <NeighbourhoodBoundaries />
           <NeighbourhoodMarkers />
         </Map>
       </div>

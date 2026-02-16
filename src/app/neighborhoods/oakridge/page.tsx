@@ -5,6 +5,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import PropertyAlertSignup from "@/components/neighborhoods/PropertyAlertSignup";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -50,7 +51,9 @@ const faqs = [
 
 const oakridgeData = NEIGHBOURHOODS["oakridge"];
 
-export default function OakridgePage() {
+export default async function OakridgePage() {
+  const pois = await fetchNeighbourhoodPOIs(oakridgeData.center);
+
   return (
     <>
       {/* Hero */}
@@ -198,7 +201,8 @@ export default function OakridgePage() {
                 <NeighbourhoodMap
                   center={oakridgeData.center}
                   zoom={oakridgeData.zoom}
-                  pois={oakridgeData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : oakridgeData.fallbackPOIs}
+                  boundaryName="Oakridge"
                   height="450px"
                   showLegend
                 />

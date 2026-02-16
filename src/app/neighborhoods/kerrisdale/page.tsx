@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Kerrisdale Vancouver Real Estate Guide 2026 | Luxury Homes & Market Data",
@@ -51,7 +52,9 @@ const faqs = [
 
 const kerrisdaleData = NEIGHBOURHOODS["kerrisdale"];
 
-export default function KerrisdalePage() {
+export default async function KerrisdalePage() {
+  const pois = await fetchNeighbourhoodPOIs(kerrisdaleData.center);
+
   return (
     <>
       {/* Hero */}
@@ -183,7 +186,8 @@ export default function KerrisdalePage() {
                 <NeighbourhoodMap
                   center={kerrisdaleData.center}
                   zoom={kerrisdaleData.zoom}
-                  pois={kerrisdaleData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : kerrisdaleData.fallbackPOIs}
+                  boundaryName="Kerrisdale"
                   height="450px"
                   showLegend
                 />

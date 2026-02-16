@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Marpole Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -50,7 +51,9 @@ const faqs = [
 
 const marpoleData = NEIGHBOURHOODS["marpole"];
 
-export default function MarpolePage() {
+export default async function MarpolePage() {
+  const pois = await fetchNeighbourhoodPOIs(marpoleData.center);
+
   return (
     <>
       {/* Hero */}
@@ -180,7 +183,8 @@ export default function MarpolePage() {
                 <NeighbourhoodMap
                   center={marpoleData.center}
                   zoom={marpoleData.zoom}
-                  pois={marpoleData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : marpoleData.fallbackPOIs}
+                  boundaryName="Marpole"
                   height="450px"
                   showLegend
                 />

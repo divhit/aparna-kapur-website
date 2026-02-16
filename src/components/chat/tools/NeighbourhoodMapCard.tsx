@@ -31,7 +31,7 @@ export default function NeighbourhoodMapCard({ neighbourhood, slug }: Props) {
         <NeighbourhoodMap
           center={data.center}
           zoom={data.zoom}
-          pois={data.pointsOfInterest}
+          pois={data.fallbackPOIs}
           height="220px"
           showLegend
         />

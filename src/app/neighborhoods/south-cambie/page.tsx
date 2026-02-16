@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "South Cambie Vancouver Real Estate Guide 2026 | Homes, Townhomes & Market Insights",
@@ -50,7 +51,9 @@ const faqs = [
 
 const southCambieData = NEIGHBOURHOODS["south-cambie"];
 
-export default function SouthCambiePage() {
+export default async function SouthCambiePage() {
+  const pois = await fetchNeighbourhoodPOIs(southCambieData.center);
+
   return (
     <>
       {/* Hero */}
@@ -181,7 +184,8 @@ export default function SouthCambiePage() {
                 <NeighbourhoodMap
                   center={southCambieData.center}
                   zoom={southCambieData.zoom}
-                  pois={southCambieData.pointsOfInterest}
+                  pois={pois.length > 0 ? pois : southCambieData.fallbackPOIs}
+                  boundaryName="South Cambie"
                   height="450px"
                   showLegend
                 />
