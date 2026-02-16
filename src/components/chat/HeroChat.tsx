@@ -49,12 +49,14 @@ function saveMessages(messages: UIMessage[]) {
 
 export default function HeroChat() {
   const [input, setInput] = useState("");
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const { messages, sendMessage, status, stop } = useChat({
     messages: loadMessages(),
   });
+
+  const hasMessages = messages.length > 0;
 
   // Persist messages to localStorage when they change
   useEffect(() => {
@@ -63,8 +65,11 @@ export default function HeroChat() {
     }
   }, [messages]);
 
+  // Scroll only within the chat container, not the page
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
+    }
   }, [messages, status]);
 
   const isLoading = status === "submitted" || status === "streaming";
@@ -187,8 +192,8 @@ export default function HeroChat() {
   };
 
   return (
-    <div className="w-full max-w-lg mx-auto lg:mx-0">
-      <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex flex-col overflow-hidden h-[440px]">
+    <div className={`w-full mx-auto lg:mx-0 transition-all duration-500 ease-in-out ${hasMessages ? "max-w-2xl" : "max-w-lg"}`}>
+      <div className={`bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl flex flex-col overflow-hidden transition-all duration-500 ease-in-out ${hasMessages ? "h-[600px]" : "h-[440px]"}`}>
         {/* Header */}
         <div className="px-5 py-3.5 border-b border-white/10 shrink-0">
           <div className="flex items-center justify-between">
@@ -239,7 +244,7 @@ export default function HeroChat() {
         </div>
 
         {/* Messages */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-3 scrollbar-thin scrollbar-thumb-white/10">
+        <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3 scrollbar-thin scrollbar-thumb-white/10">
           {messages.length === 0 && (
             <div className="flex flex-col items-center justify-center h-full py-4">
               <p className="text-sm text-white/60 mb-5 text-center px-4">
@@ -309,7 +314,6 @@ export default function HeroChat() {
             </div>
           )}
 
-          <div ref={messagesEndRef} />
         </div>
 
         {/* Input */}

@@ -54,7 +54,7 @@ export default function HomePage() {
   return (
     <>
       {/* SECTION 1: Hero with integrated AI chat */}
-      <section className="relative min-h-[85vh] flex items-center">
+      <section className="relative min-h-[85vh] flex items-start lg:items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -65,7 +65,7 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/95 via-teal-950/85 to-teal-950/70" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-24 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             {/* Left: Hero text + CTAs */}
             <div>
               <p className="text-teal-300 text-sm uppercase tracking-[0.2em] font-medium mb-4">
