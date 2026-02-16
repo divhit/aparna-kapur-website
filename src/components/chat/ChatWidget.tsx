@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useChat } from "@ai-sdk/react";
 import type { UIMessage } from "ai";
 import NeighbourhoodCard from "./tools/NeighbourhoodCard";
@@ -49,10 +50,14 @@ function saveMessages(messages: UIMessage[]) {
 }
 
 export default function ChatWidget() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Hide floating widget on homepage (HeroChat is used there instead)
+  const isHomepage = pathname === "/";
 
   const { messages, sendMessage, status, stop } = useChat({
     messages: loadMessages(),
@@ -194,6 +199,8 @@ export default function ChatWidget() {
         return null;
     }
   };
+
+  if (isHomepage) return null;
 
   return (
     <>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/forms/ContactForm";
+import HeroChat from "@/components/chat/HeroChat";
 
 const neighborhoods = [
   {
@@ -52,7 +53,7 @@ const stats = [
 export default function HomePage() {
   return (
     <>
-      {/* SECTION 1: Hero */}
+      {/* SECTION 1: Hero with integrated AI chat */}
       <section className="relative min-h-[85vh] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -61,41 +62,54 @@ export default function HomePage() {
               "url('https://images.unsplash.com/photo-1609825488888-3a766db05542?w=1920&h=1080&fit=crop')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/70 to-teal-950/40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-teal-950/95 via-teal-950/85 to-teal-950/70" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-6 py-24">
-          <div className="max-w-2xl">
-            <p className="text-teal-300 text-sm uppercase tracking-[0.2em] font-medium mb-4">
-              Oakridge &amp; Greater Vancouver
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Your Real Estate
-              <span className="block text-teal-300">Journey Starts Here</span>
-            </h1>
-            <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
-              Whether you&apos;re buying your first home or selling to start a new
-              chapter, I&apos;ll guide you every step of the way with local expertise
-              and genuine care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/buying" size="lg" variant="primary">
-                I&apos;m Looking to Buy
-              </Button>
-              <Button href="/selling" size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                I&apos;m Looking to Sell
-              </Button>
+        <div className="relative max-w-7xl mx-auto px-6 py-16 lg:py-24 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left: Hero text + CTAs */}
+            <div>
+              <p className="text-teal-300 text-sm uppercase tracking-[0.2em] font-medium mb-4">
+                Oakridge &amp; Greater Vancouver
+              </p>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                Your Real Estate
+                <span className="block text-teal-300">Journey Starts Here</span>
+              </h1>
+              <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                Whether you&apos;re buying your first home or selling to start a new
+                chapter, I&apos;ll guide you every step of the way with local expertise
+                and genuine care.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href="/buying" size="lg" variant="primary">
+                  I&apos;m Looking to Buy
+                </Button>
+                <Button href="/selling" size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  I&apos;m Looking to Sell
+                </Button>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/selling/home-valuation"
+                  className="inline-flex items-center text-sm text-white/60 hover:text-white transition-colors group"
+                >
+                  <span>Curious about your home&apos;s value?</span>
+                  <svg className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-            <div className="mt-8">
-              <Link
-                href="/selling/home-valuation"
-                className="inline-flex items-center text-sm text-white/60 hover:text-white transition-colors group"
-              >
-                <span>Curious about your home&apos;s value?</span>
-                <svg className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+
+            {/* Right: Embedded AI chat */}
+            <div className="hidden lg:block">
+              <HeroChat />
             </div>
+          </div>
+
+          {/* Mobile: Chat below hero on small screens */}
+          <div className="lg:hidden mt-12">
+            <HeroChat />
           </div>
         </div>
       </section>
@@ -324,7 +338,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=750&fit=crop"
+                  src="/images/about/aparna-kapur.jpg"
                   alt="Aparna Kapur - Vancouver Realtor"
                   className="w-full h-full object-cover"
                 />

@@ -33,7 +33,7 @@ export default function AboutPage() {
             <div className="lg:sticky lg:top-28">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=800&fit=crop"
+                  src="/images/about/aparna-kapur.jpg"
                   alt="Aparna Kapur - Vancouver Realtor with Oakwyn Realty"
                   className="w-full h-full object-cover"
                 />
