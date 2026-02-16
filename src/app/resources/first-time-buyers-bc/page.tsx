@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/forms/ContactForm";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "First-Time Home Buyer Programs in BC | Complete Guide 2026",
@@ -93,20 +94,7 @@ const programs = [
 export default function FirstTimeBuyersBCPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Complete Guide
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            First-Time Home Buyer Programs in BC
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Take advantage of these federal and provincial programs designed to
-            help you buy your first home in British Columbia.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Complete Guide" title="First-Time Home Buyer Programs in BC" description="Take advantage of these federal and provincial programs designed to help you buy your first home in British Columbia." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

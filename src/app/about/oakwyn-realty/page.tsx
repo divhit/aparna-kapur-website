@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Oakwyn Realty | About My Brokerage | Aparna Kapur",
@@ -11,20 +12,7 @@ export const metadata: Metadata = {
 export default function OakwynRealtyPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            My Brokerage
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Oakwyn Realty
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Vancouver&apos;s most innovative and fastest-growing real estate
-            brokerage. Here&apos;s why it matters for you.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="My Brokerage" title="Oakwyn Realty" description="Vancouver's most innovative and fastest-growing real estate brokerage. Here's why it matters for you." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

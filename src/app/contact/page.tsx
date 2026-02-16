@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/forms/ContactForm";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Contact Aparna Kapur | Vancouver Real Estate",
@@ -19,21 +20,11 @@ export default function ContactPage() {
         ]}
       />
 
-      {/* Hero */}
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Get in Touch
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Let&apos;s Start a Conversation
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Whether you&apos;re ready to buy, sell, or just have questions about the
-            Vancouver real estate market &mdash; I&apos;d love to hear from you.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="Get in Touch"
+        title="Let's Start a Conversation"
+        description="Whether you're ready to buy, sell, or just have questions about the Vancouver real estate market — I'd love to hear from you."
+      />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

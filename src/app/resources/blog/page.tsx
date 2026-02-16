@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Blog | Tips, Insights & Market Updates",
@@ -11,20 +12,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Blog
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Vancouver Real Estate Insights
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Tips, market analysis, and neighbourhood guides to help you navigate
-            the Vancouver real estate market with confidence.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Blog" title="Vancouver Real Estate Insights" description="Tips, market analysis, and neighbourhood guides to help you navigate the Vancouver real estate market with confidence." />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

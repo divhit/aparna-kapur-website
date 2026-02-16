@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/forms/ContactForm";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Home Staging Tips for Vancouver Sellers | Sell Faster & For More",
@@ -86,20 +87,7 @@ const stagingSteps = [
 export default function StagingTipsPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Seller Resource
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Home Staging Tips That Sell
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Proven strategies to help your Vancouver home make the best
-            impression and attract top-dollar offers.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Seller Resource" title="Home Staging Tips That Sell" description="Proven strategies to help your Vancouver home make the best impression and attract top-dollar offers." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

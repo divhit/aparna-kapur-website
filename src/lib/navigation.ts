@@ -4,7 +4,8 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-export const navigation: NavItem[] = [
+// Left side of centered navbar: About, Buying, Selling
+export const navLeft: NavItem[] = [
   {
     label: "About",
     href: "/about",
@@ -33,6 +34,10 @@ export const navigation: NavItem[] = [
       { label: "Staging Tips", href: "/selling/staging-tips" },
     ],
   },
+];
+
+// Right side of centered navbar: Neighborhoods, Resources
+export const navRight: NavItem[] = [
   {
     label: "Neighborhoods",
     href: "/neighborhoods",
@@ -58,3 +63,6 @@ export const navigation: NavItem[] = [
     ],
   },
 ];
+
+// Combined for mobile menu
+export const navigation: NavItem[] = [...navLeft, ...navRight];

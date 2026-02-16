@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { sellingGuideSteps } from "@/lib/guide-data";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Sell Your Vancouver Home | Seller's Guide & Valuation",
@@ -12,31 +13,12 @@ export const metadata: Metadata = {
 export default function SellingPage() {
   return (
     <>
-      <section className="relative py-24 bg-teal-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-2xl">
-            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-              For Sellers
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">
-              Sell Your Home With Confidence
-            </h1>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              Get the best value for your home with strategic pricing, expert
-              marketing, and skilled negotiation. I&apos;ll guide you from listing
-              to closing with clarity and care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/selling/home-valuation" size="lg" variant="secondary">
-                What&apos;s My Home Worth?
-              </Button>
-              <Button href="/selling/guide" size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                Read the Seller&apos;s Guide
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="For Sellers"
+        title="Sell Your Home With Confidence"
+        description="Get the best value for your home with strategic pricing, expert marketing, and skilled negotiation. I'll guide you from listing to closing with clarity and care."
+        align="left"
+      />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

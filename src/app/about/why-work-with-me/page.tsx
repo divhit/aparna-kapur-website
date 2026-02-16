@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Why Work With Aparna Kapur | Vancouver Realtor",
@@ -74,20 +75,7 @@ const differentiators = [
 export default function WhyWorkWithMePage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Your Advantage
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Why Work With Me
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Choosing a realtor is one of the most important decisions in your real
-            estate journey. Here&apos;s why clients choose me.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Your Advantage" title="Why Work With Me" description="Choosing a realtor is one of the most important decisions in your real estate journey. Here's why clients choose me." />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

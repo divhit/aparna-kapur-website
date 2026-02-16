@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Resources | Guides, Tools & Market Reports",
@@ -92,20 +93,11 @@ const guides = [
 export default function ResourcesPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Resources & Tools
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Your Vancouver Real Estate Toolkit
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Free guides, calculators, and market insights to help you make
-            informed real estate decisions in Vancouver.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="Resources & Tools"
+        title="Your Vancouver Real Estate Toolkit"
+        description="Free guides, calculators, and market insights to help you make informed real estate decisions in Vancouver."
+      />
 
       {/* Tools Section */}
       <section className="py-20">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "About Aparna Kapur | Vancouver Realtor",
@@ -10,21 +11,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            About Me
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Meet Aparna Kapur
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Your dedicated partner in Vancouver real estate, specializing in
-            Oakridge and surrounding neighborhoods.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="About Me"
+        title="Meet Aparna Kapur"
+        description="Your dedicated partner in Vancouver real estate, specializing in Oakridge and surrounding neighborhoods."
+      />
 
       {/* Main Content */}
       <section className="py-20">

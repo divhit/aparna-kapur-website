@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import PageBanner from "@/components/hero/PageBanner";
 
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-CA", {
@@ -62,20 +63,7 @@ export default function MortgageCalculatorPage() {
 
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Free Tool
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Mortgage Calculator
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Estimate your monthly mortgage payments and see how different
-            scenarios affect your budget for a Vancouver home purchase.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Free Tool" title="Mortgage Calculator" description="Estimate your monthly mortgage payments and see how different scenarios affect your budget for a Vancouver home purchase." />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

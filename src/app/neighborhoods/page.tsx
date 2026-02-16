@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Vancouver Neighborhoods Guide | Oakridge, Marpole, Cambie & More",
@@ -72,20 +73,11 @@ export default function NeighborhoodsPage() {
 
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Neighborhood Guides
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Explore Vancouver&apos;s Best Neighborhoods
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Every neighborhood has its own personality. Explore my detailed guides
-            to find the one that fits your lifestyle, budget, and priorities.
-          </p>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="Neighbourhood Guides"
+        title="Explore Vancouver's Best Neighbourhoods"
+        description="Every neighbourhood has its own personality. Explore my detailed guides to find the one that fits your lifestyle, budget, and priorities."
+      />
 
       {/* Featured: Oakridge */}
       {featured && (

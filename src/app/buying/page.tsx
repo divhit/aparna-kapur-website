@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { buyingGuideSteps } from "@/lib/guide-data";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Buy a Home in Vancouver | Buyer's Guide & Resources",
@@ -12,31 +13,12 @@ export const metadata: Metadata = {
 export default function BuyingPage() {
   return (
     <>
-      <section className="relative py-24 bg-teal-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-2xl">
-            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-              For Buyers
-            </p>
-            <h1 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-6">
-              Your Home Buying Journey Starts Here
-            </h1>
-            <p className="text-white/70 text-lg leading-relaxed mb-8">
-              Buying a home in Vancouver doesn&apos;t have to be overwhelming. I&apos;ll
-              guide you through every step with local expertise, market data, and
-              genuine care for your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button href="/buying/guide" size="lg" variant="primary">
-                Read the 6-Step Guide
-              </Button>
-              <Button href="/contact" size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                Let&apos;s Talk About Your Goals
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        eyebrow="For Buyers"
+        title="Your Home Buying Journey Starts Here"
+        description="Buying a home in Vancouver doesn't have to be overwhelming. I'll guide you through every step with local expertise, market data, and genuine care for your goals."
+        align="left"
+      />
 
       {/* 6-Step Overview */}
       <section className="py-20">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Testimonials & Reviews | Aparna Kapur, Oakwyn Realty",
@@ -11,20 +12,7 @@ export const metadata: Metadata = {
 export default function TestimonialsPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Client Stories
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            What My Clients Say
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            I&apos;m building my practice one happy client at a time. Here&apos;s
-            what people are saying.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Client Stories" title="What My Clients Say" description="I'm building my practice one happy client at a time. Here's what people are saying." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

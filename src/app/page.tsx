@@ -55,9 +55,8 @@ export default function HomePage() {
   return (
     <>
       {/* SECTION 1: Full-screen Hero with Slideshow */}
-      <section className="relative h-screen flex items-center justify-center">
-        <HeroSlideshow />
-        <div className="relative text-center px-6 max-w-4xl mx-auto">
+      <HeroSlideshow height="full">
+        <div className="text-center px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
             Vancouver Real Estate
             <span className="block text-teal-300 mt-2">With Aparna Kapur</span>
@@ -92,7 +91,7 @@ export default function HomePage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>
-      </section>
+      </HeroSlideshow>
 
       {/* SECTION 2: AI Chat Assistant */}
       <section className="py-16 bg-teal-950">
@@ -112,179 +111,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3: Oakridge Spotlight */}
-      <section className="py-20 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
-                Neighborhood Spotlight
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
-                Oakridge is Transforming Into Vancouver&apos;s Most Exciting Neighborhood
-              </h2>
-              <p className="text-warm-600 leading-relaxed mb-6">
-                With the $6 billion Oakridge Park redevelopment bringing 3,300+ new homes,
-                a 9-acre public park, and world-class retail to the heart of Vancouver, Oakridge
-                is the most exciting real estate opportunity in the city. Two SkyTrain stations,
-                top-rated schools, and Queen Elizabeth Park make this neighborhood unmatched.
-              </p>
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div>
-                  <p className="font-serif text-2xl text-teal-700">3,300+</p>
-                  <p className="text-xs text-warm-500 mt-1">New Homes Coming</p>
-                </div>
-                <div>
-                  <p className="font-serif text-2xl text-teal-700">9 Acres</p>
-                  <p className="text-xs text-warm-500 mt-1">New Public Park</p>
-                </div>
-                <div>
-                  <p className="font-serif text-2xl text-teal-700">15 min</p>
-                  <p className="text-xs text-warm-500 mt-1">To Downtown</p>
-                </div>
+      {/* SECTION 3: Oakridge Spotlight — Cinematic */}
+      <section className="relative py-32 overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop&q=80"
+          alt="Oakridge Vancouver aerial view"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/70 to-teal-950/30" />
+        <div className="relative max-w-7xl mx-auto px-6">
+          <div className="max-w-lg">
+            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
+              Featured Neighbourhood
+            </p>
+            <h2 className="font-serif text-4xl md:text-5xl text-white leading-tight mb-4">
+              Oakridge
+            </h2>
+            <p className="text-white/80 text-lg leading-relaxed mb-8">
+              Vancouver&apos;s most exciting transformation. The $6B Oakridge Park
+              redevelopment is bringing world-class living to the heart of the city.
+            </p>
+            <div className="flex gap-10 mb-10">
+              <div>
+                <span className="font-serif text-3xl text-white">3,300+</span>
+                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">New Homes</p>
               </div>
-              <Button href="/neighborhoods/oakridge" variant="primary">
-                Explore the Oakridge Guide
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Button>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <img
-                  src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&h=500&fit=crop"
-                  alt="Queen Elizabeth Park Vancouver"
-                  className="rounded-2xl w-full h-64 object-cover"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=300&fit=crop"
-                  alt="Vancouver SkyTrain transit"
-                  className="rounded-2xl w-full h-48 object-cover"
-                />
+              <div>
+                <span className="font-serif text-3xl text-white">9 Acres</span>
+                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">Public Park</p>
               </div>
-              <div className="space-y-4 pt-8">
-                <img
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=400&h=300&fit=crop"
-                  alt="Oakridge Vancouver homes"
-                  className="rounded-2xl w-full h-48 object-cover"
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=400&h=500&fit=crop"
-                  alt="Vancouver parks and nature"
-                  className="rounded-2xl w-full h-64 object-cover"
-                />
+              <div>
+                <span className="font-serif text-3xl text-white">15 min</span>
+                <p className="text-xs text-white/60 mt-1 uppercase tracking-wider">To Downtown</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: Buyer/Seller/Valuation Cards */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="How Can I Help?"
-            title="Whether You're Buying or Selling, I'm Here to Guide You"
-            description="Real estate doesn't have to be overwhelming. Let me simplify the process and help you make the best decision for your future."
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Buying Card */}
-            <Link
-              href="/buying"
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-warm-100"
-            >
-              <div className="h-56 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
-                  alt="Buying a home in Vancouver"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-serif text-xl text-teal-950 mb-2">Buying a Home</h3>
-                <p className="text-sm text-warm-600 leading-relaxed mb-4">
-                  From first-time buyers to seasoned investors, I&apos;ll help you find the
-                  perfect property in Vancouver&apos;s best neighborhoods.
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-teal-700 group-hover:text-teal-800">
-                  Start Your Buyer Journey
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
-
-            {/* Selling Card */}
-            <Link
-              href="/selling"
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-warm-100"
-            >
-              <div className="h-56 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&h=400&fit=crop"
-                  alt="Selling your home in Vancouver"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                </div>
-                <h3 className="font-serif text-xl text-teal-950 mb-2">Selling Your Home</h3>
-                <p className="text-sm text-warm-600 leading-relaxed mb-4">
-                  Get the best value for your home with strategic pricing, professional
-                  staging advice, and expert negotiation.
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-teal-700 group-hover:text-teal-800">
-                  Start Your Seller Journey
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
-
-            {/* Home Valuation Card */}
-            <Link
-              href="/selling/home-valuation"
-              className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-warm-100"
-            >
-              <div className="h-56 overflow-hidden bg-gradient-to-br from-teal-600 to-teal-800 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <svg className="w-16 h-16 mx-auto mb-3 opacity-80" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                  <p className="text-sm font-medium opacity-80">Free Estimate</p>
-                </div>
-              </div>
-              <div className="p-8">
-                <div className="w-12 h-12 rounded-xl bg-gold-50 flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="font-serif text-xl text-teal-950 mb-2">What&apos;s My Home Worth?</h3>
-                <p className="text-sm text-warm-600 leading-relaxed mb-4">
-                  Get a free, no-obligation market analysis of your property based on
-                  current Vancouver market data and comparable sales.
-                </p>
-                <span className="inline-flex items-center text-sm font-medium text-teal-700 group-hover:text-teal-800">
-                  Get Your Free Valuation
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
+            <Button href="/neighborhoods/oakridge" variant="primary" className="bg-white text-teal-900 hover:bg-teal-50">
+              Explore Oakridge
+              <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Button>
           </div>
         </div>
       </section>

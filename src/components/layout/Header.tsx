@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { navigation, NavItem } from "@/lib/navigation";
+import { navigation, navLeft, navRight, NavItem } from "@/lib/navigation";
 
 function DesktopDropdown({
   item,
@@ -180,7 +180,7 @@ export default function Header() {
         </div>
       )}
 
-      {/* Main header */}
+      {/* Main header — centered logo with nav on both sides */}
       <header
         className={`${
           isHomepage ? "fixed" : "sticky"
@@ -191,8 +191,64 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+          {/* Desktop: 3-column centered layout */}
+          <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center h-20">
+            {/* Left nav: About, Buying, Selling */}
+            <nav className="flex items-center justify-end gap-1">
+              {navLeft.map((item) => (
+                <DesktopDropdown
+                  key={item.label}
+                  item={item}
+                  transparent={transparent}
+                />
+              ))}
+            </nav>
+
+            {/* Center: Logo */}
+            <Link href="/" className="flex flex-col items-center mx-8">
+              <span
+                className={`font-serif text-2xl leading-tight tracking-tight transition-colors duration-300 ${
+                  transparent ? "text-white" : "text-teal-900"
+                }`}
+              >
+                Aparna Kapur
+              </span>
+              <span
+                className={`text-[10px] uppercase tracking-[0.25em] font-medium transition-colors duration-300 ${
+                  transparent ? "text-white/70" : "text-warm-500"
+                }`}
+              >
+                Oakwyn Realty
+              </span>
+            </Link>
+
+            {/* Right nav: Neighborhoods, Resources + Let's Talk CTA */}
+            <nav className="flex items-center justify-start gap-1">
+              {navRight.map((item) => (
+                <DesktopDropdown
+                  key={item.label}
+                  item={item}
+                  transparent={transparent}
+                />
+              ))}
+              <a
+                href="tel:+16046127694"
+                className={`ml-3 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
+                  transparent
+                    ? "border border-white/40 text-white hover:bg-white/10"
+                    : "bg-teal-700 text-white hover:bg-teal-800"
+                }`}
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Let&apos;s Talk
+              </a>
+            </nav>
+          </div>
+
+          {/* Mobile: logo left + hamburger right */}
+          <div className="flex items-center justify-between h-20 lg:hidden">
             <Link href="/" className="flex flex-col">
               <span
                 className={`font-serif text-2xl leading-tight tracking-tight transition-colors duration-300 ${
@@ -206,50 +262,22 @@ export default function Header() {
                   transparent ? "text-white/70" : "text-warm-500"
                 }`}
               >
-                Real Estate | Oakwyn Realty
+                Oakwyn Realty
               </span>
             </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
-              {navigation.map((item) => (
-                <DesktopDropdown
-                  key={item.label}
-                  item={item}
-                  transparent={transparent}
-                />
-              ))}
-            </nav>
-
-            {/* CTA + Mobile Toggle */}
-            <div className="flex items-center gap-3">
-              <a
-                href="tel:+16046127694"
-                className={`hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  transparent
-                    ? "border border-white/40 text-white hover:bg-white/10"
-                    : "bg-teal-700 text-white hover:bg-teal-800"
-                }`}
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Let&apos;s Talk
-              </a>
-              <button
-                onClick={() => setMobileMenuOpen(true)}
-                className={`lg:hidden p-2 transition-colors ${
-                  transparent
-                    ? "text-white hover:text-white/80"
-                    : "text-warm-700 hover:text-teal-700"
-                }`}
-                aria-label="Open menu"
-              >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-            </div>
+            <button
+              onClick={() => setMobileMenuOpen(true)}
+              className={`p-2 transition-colors ${
+                transparent
+                  ? "text-white hover:text-white/80"
+                  : "text-warm-700 hover:text-teal-700"
+              }`}
+              aria-label="Open menu"
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/forms/ContactForm";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Moving to Vancouver Guide | Relocation Tips & Neighborhood Advice",
@@ -11,20 +12,7 @@ export const metadata: Metadata = {
 export default function MovingToVancouverPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Relocation Guide
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            Moving to Vancouver
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Everything you need to know about relocating to one of the
-            world&apos;s most livable cities.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Relocation Guide" title="Moving to Vancouver" description="Everything you need to know about relocating to one of the world's most livable cities." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

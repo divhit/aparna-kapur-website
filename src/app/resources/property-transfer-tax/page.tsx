@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "@/components/forms/ContactForm";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "BC Property Transfer Tax Guide | Calculator & Exemptions",
@@ -11,21 +12,7 @@ export const metadata: Metadata = {
 export default function PropertyTransferTaxPage() {
   return (
     <>
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Resource Guide
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            BC Property Transfer Tax
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Everything you need to know about British Columbia&apos;s Property
-            Transfer Tax, including rates, exemptions, and how to calculate your
-            tax liability.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Resource Guide" title="BC Property Transfer Tax" description="Everything you need to know about British Columbia's Property Transfer Tax, including rates, exemptions, and how to calculate your tax liability." />
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">

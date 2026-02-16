@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import HomeValuationForm from "@/components/forms/HomeValuationForm";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
   title: "Free Home Valuation | What's Your Vancouver Home Worth?",
@@ -19,20 +20,7 @@ export default function HomeValuationPage() {
         ]}
       />
 
-      <section className="bg-teal-950 py-20">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-gold-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-            Free Service
-          </p>
-          <h1 className="font-serif text-4xl md:text-5xl text-white mb-4">
-            What&apos;s Your Home Worth?
-          </h1>
-          <p className="text-white/70 max-w-xl mx-auto">
-            Get a free, no-obligation Comparative Market Analysis based on current
-            Vancouver market data and recent comparable sales in your neighbourhood.
-          </p>
-        </div>
-      </section>
+      <PageBanner eyebrow="Free Service" title="What's Your Home Worth?" description="Get a free, no-obligation Comparative Market Analysis based on current Vancouver market data and recent comparable sales in your neighbourhood." />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
