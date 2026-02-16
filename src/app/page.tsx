@@ -3,43 +3,44 @@ import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContactForm from "@/components/forms/ContactForm";
 import HeroChat from "@/components/chat/HeroChat";
+import HeroSlideshow from "@/components/hero/HeroSlideshow";
 
 const neighborhoods = [
   {
     name: "Oakridge",
     slug: "oakridge",
     description: "Vancouver's most exciting transformation - 3,300+ new homes, world-class amenities",
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1635491273811-0304feccda69?w=600&h=400&fit=crop",
   },
   {
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1698296346495-1c68b62b091f?w=600&h=400&fit=crop",
   },
   {
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1623125456909-ae1b8f37bd5f?w=600&h=400&fit=crop",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
     description: "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1639157025971-a573a1833505?w=600&h=400&fit=crop",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
     description: "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1706150098804-5e246a7a4c32?w=600&h=400&fit=crop",
   },
   {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1700793479724-42bd5500d928?w=600&h=400&fit=crop",
   },
 ];
 
@@ -53,17 +54,9 @@ const stats = [
 export default function HomePage() {
   return (
     <>
-      {/* SECTION 1: Full-screen Hero */}
+      {/* SECTION 1: Full-screen Hero with Slideshow */}
       <section className="relative h-screen flex items-center justify-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1559511260-66a654ae982a?w=1920&h=1080&fit=crop')",
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-teal-950/30 to-teal-950/70" />
-        </div>
+        <HeroSlideshow />
         <div className="relative text-center px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
             Vancouver Real Estate
