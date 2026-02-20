@@ -248,7 +248,7 @@ export default function StagingTipsPage() {
                 Get a Free Home Valuation
               </Link>
               <Link
-                href="/selling/guide/preparing-to-sell"
+                href="/selling/guide/preparing-your-home"
                 className="inline-flex items-center justify-center px-6 py-3 border border-teal-200 text-teal-700 font-semibold rounded-lg hover:bg-teal-50 transition-colors text-sm"
               >
                 Read the Seller&apos;s Guide

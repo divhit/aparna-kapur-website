@@ -41,7 +41,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
               Buying
             </Link>
             <span>/</span>
-            <Link href="/buying/guide/deciding-to-buy" className="hover:text-teal-200 transition-colors">
+            <Link href="/buying/guide/the-big-decision" className="hover:text-teal-200 transition-colors">
               Guide
             </Link>
             <span>/</span>

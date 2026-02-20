@@ -193,7 +193,7 @@ export default function FirstTimeBuyersBCPage() {
               </svg>
             </Link>
             <Link
-              href="/buying/guide/deciding-to-buy"
+              href="/buying/guide/the-big-decision"
               className="inline-flex items-center text-sm font-medium text-teal-700 hover:text-teal-800 transition-colors"
             >
               Read the Buyer&apos;s Guide

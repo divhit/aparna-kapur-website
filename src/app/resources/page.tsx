@@ -64,7 +64,7 @@ const guides = [
     title: "Buyer's Guide",
     description:
       "A comprehensive 6-step guide to buying a home in Vancouver, from deciding to buy to closing day.",
-    href: "/buying/guide/deciding-to-buy",
+    href: "/buying/guide/the-big-decision",
     tag: "Buyers",
   },
   {
