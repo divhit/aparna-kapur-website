@@ -43,7 +43,7 @@ export default function HeroSlideshow({
     return () => clearInterval(timer);
   }, [advance]);
 
-  const heightClass = height === "full" ? "h-screen" : "h-[40vh]";
+  const heightClass = height === "full" ? "h-screen" : "min-h-[50vh] md:h-[40vh]";
 
   return (
     <div className={`relative ${heightClass} overflow-hidden`}>

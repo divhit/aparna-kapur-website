@@ -33,7 +33,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-teal-950 py-12">
+      <section className="bg-teal-950 pt-24 md:pt-28 pb-10 md:pb-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
             <Link href="/selling" className="hover:text-teal-200 transition-colors">Selling</Link>
@@ -68,6 +68,24 @@ export default async function SellingGuideStepPage({ params }: Props) {
                 }`}
                 title={s.shortTitle}
               />
+            ))}
+          </div>
+          {/* Mobile step navigation */}
+          <div className="flex gap-2 mt-3 overflow-x-auto pb-1 lg:hidden -mx-1 px-1">
+            {sellingGuideSteps.map((s) => (
+              <Link
+                key={s.slug}
+                href={`/selling/guide/${s.slug}`}
+                className={`shrink-0 text-xs px-3 py-1.5 rounded-full transition-colors ${
+                  s.slug === step.slug
+                    ? "bg-teal-600 text-white font-medium"
+                    : s.step < step.step
+                    ? "bg-teal-100 text-teal-700"
+                    : "bg-warm-100 text-warm-500"
+                }`}
+              >
+                {s.shortTitle}
+              </Link>
             ))}
           </div>
         </div>
@@ -203,7 +221,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
                   )}
                 </div>
 
-                <div className="mt-16 bg-warm-50 rounded-2xl p-8">
+                <div className="mt-12 md:mt-16 bg-warm-50 rounded-2xl p-6 md:p-8">
                   <h3 className="font-serif text-xl text-teal-950 mb-2">Have Questions About This Step?</h3>
                   <p className="text-sm text-warm-500 mb-6">I&apos;m here to help. Send me a message and I&apos;ll get back to you within 24 hours.</p>
                   <ContactForm compact />

@@ -16,7 +16,7 @@ export default function PageBanner({
   return (
     <HeroSlideshow height="banner">
       <div
-        className={`w-full max-w-7xl mx-auto px-6 pt-16 ${
+        className={`w-full max-w-7xl mx-auto px-6 pt-24 md:pt-16 ${
           align === "center" ? "text-center" : "text-left"
         }`}
       >

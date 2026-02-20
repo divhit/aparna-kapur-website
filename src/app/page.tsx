@@ -271,17 +271,17 @@ export default function HomePage() {
             Vancouver&apos;s most exciting transformation. The $6B Oakridge Park
             redevelopment is bringing world-class living to the heart of the city.
           </p>
-          <div className="flex gap-10 mb-8">
+          <div className="flex flex-wrap gap-6 sm:gap-10 mb-8">
             <div>
-              <span className="font-serif text-3xl md:text-4xl text-white">3,300+</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">3,300+</span>
               <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">New Homes</p>
             </div>
             <div>
-              <span className="font-serif text-3xl md:text-4xl text-white">9 Acres</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">9 Acres</span>
               <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">Public Park</p>
             </div>
             <div>
-              <span className="font-serif text-3xl md:text-4xl text-white">15 min</span>
+              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">15 min</span>
               <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">To Downtown</p>
             </div>
           </div>

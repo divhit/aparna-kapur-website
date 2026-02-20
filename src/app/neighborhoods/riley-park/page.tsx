@@ -57,7 +57,7 @@ export default async function RileyParkPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-24">
+      <section className="relative pt-28 pb-16 md:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
