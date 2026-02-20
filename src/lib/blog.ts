@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: "Neighbourhoods",
     readTime: "8 min read",
     image:
-      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/34066293/pexels-photo-34066293.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     content: `## The Biggest Development in Vancouver's History
 
 The Oakridge Park redevelopment is unlike anything Vancouver has seen before. What was once a conventional shopping mall at 41st and Cambie is being transformed into a 28-acre mixed-use community that will fundamentally reshape this corner of the city.
@@ -103,7 +103,7 @@ Whether you're looking to buy near Oakridge Park or wondering what your current 
     category: "Buying",
     readTime: "10 min read",
     image:
-      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/6349262/pexels-photo-6349262.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     content: `## Buying Your First Home in BC: Every Program That Can Help
 
 Purchasing your first home in British Columbia is a significant milestone — and an expensive one. The good news? There are more programs than ever to help first-time buyers get into the market. Here's a comprehensive guide to every program available in 2026.
@@ -225,7 +225,7 @@ Ready to start your home-buying journey? Let's talk about your situation and cre
     category: "Neighbourhoods",
     readTime: "7 min read",
     image:
-      "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/1471295/pexels-photo-1471295.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     content: `## Finding Your Family's Perfect Vancouver Neighbourhood
 
 Choosing where to raise your family in Vancouver is one of the most important decisions you'll make. Beyond just the home itself, the neighbourhood shapes your daily life — school quality, park access, community feel, safety, and convenience all matter.

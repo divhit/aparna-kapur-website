@@ -4,20 +4,20 @@ import { useState, useEffect, useCallback, type ReactNode } from "react";
 
 const SLIDES = [
   {
-    id: "photo-1655097777728-b9b56af9ff7e",
-    alt: "Aerial view of Vancouver's Cambie Corridor with North Shore mountains",
+    id: "11455843",
+    alt: "Lions Gate Bridge spanning the harbor with lush forest and North Shore mountains",
   },
   {
-    id: "photo-1680494454968-c4fbb5291231",
-    alt: "Vancouver skyline at sunset with Granville Bridge and mountains",
+    id: "2416606",
+    alt: "Tranquil sunset over Vancouver's waters with boats and mountains",
   },
   {
-    id: "photo-1672073235822-0518dc92106d",
-    alt: "Vancouver downtown in winter with snowy North Shore mountains",
+    id: "8997731",
+    alt: "Aerial view of Lighthouse Park on rocky shoreline surrounded by forest in West Vancouver",
   },
   {
-    id: "photo-1711852975328-55804925131b",
-    alt: "Vancouver towers at golden hour with mountains behind",
+    id: "30996166",
+    alt: "Misty mountain landscape with island and trees in West Vancouver",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function HeroSlideshow({
           key={slide.id}
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-[2000ms] ease-in-out"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/${slide.id}?w=1920&h=1080&fit=crop&q=80')`,
+            backgroundImage: `url('https://images.pexels.com/photos/${slide.id}/pexels-photo-${slide.id}.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')`,
             opacity: i === current ? 1 : 0,
           }}
           role="img"

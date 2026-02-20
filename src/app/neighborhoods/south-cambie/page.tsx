@@ -61,7 +61,7 @@ export default async function SouthCambiePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=1920&h=800&fit=crop')",
+            backgroundImage: "url('https://images.pexels.com/photos/5109341/pexels-photo-5109341.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />

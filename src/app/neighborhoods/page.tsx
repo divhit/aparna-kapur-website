@@ -17,7 +17,7 @@ const neighborhoods = [
     tagline: "Vancouver's Most Exciting Transformation",
     description: "Home to the $6B Oakridge Park redevelopment, two SkyTrain stations, Queen Elizabeth Park, and top-rated schools. Oakridge is the most dynamic neighborhood in Vancouver right now.",
     stats: { avgPrice: "$1.6M", transit: "2 SkyTrain Stations", newHomes: "3,300+ Coming" },
-    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/19358760/pexels-photo-19358760.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ const neighborhoods = [
     tagline: "Historic Charm Meets Modern Living",
     description: "One of Vancouver's oldest communities, Marpole offers family-friendly living with great schools, green space, and easy access to YVR and Richmond.",
     stats: { avgPrice: "$1.4M", transit: "Marine Drive Station", newHomes: "Growing" },
-    image: "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
   {
@@ -35,7 +35,7 @@ const neighborhoods = [
     tagline: "Where Families Put Down Roots",
     description: "Anchored by Queen Elizabeth Park and Langara College, South Cambie is a family-oriented neighborhood with excellent schools and the Cambie corridor running through its heart.",
     stats: { avgPrice: "$1.8M", transit: "Canada Line Access", newHomes: "Moderate" },
-    image: "https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/5109341/pexels-photo-5109341.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
   {
@@ -44,7 +44,7 @@ const neighborhoods = [
     tagline: "Creative Energy & Community Spirit",
     description: "A vibrant community known for its arts scene, craft breweries on Main Street, and strong neighborhood identity. Great for those who want urban energy with residential calm.",
     stats: { avgPrice: "$1.5M", transit: "Bus Routes", newHomes: "Moderate" },
-    image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/18058418/pexels-photo-18058418.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
   {
@@ -53,7 +53,7 @@ const neighborhoods = [
     tagline: "Upscale Village Living",
     description: "An established, upscale neighborhood with boutique shopping, elegant heritage homes, and top private schools. Perfect for those seeking refined suburban living.",
     stats: { avgPrice: "$3.2M", transit: "Bus Routes", newHomes: "Limited" },
-    image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/33310374/pexels-photo-33310374.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
   {
@@ -62,7 +62,7 @@ const neighborhoods = [
     tagline: "Transit-Oriented Growth",
     description: "Vancouver's most dynamic development corridor, following the Canada Line from downtown to Marine Drive. New condos, townhomes, and mixed-use developments are transforming this area.",
     stats: { avgPrice: "$1.3M", transit: "Multiple Stations", newHomes: "High Growth" },
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=500&fit=crop",
+    image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
 ];

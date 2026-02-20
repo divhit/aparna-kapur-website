@@ -10,37 +10,37 @@ const neighborhoods = [
     name: "Oakridge",
     slug: "oakridge",
     description: "Vancouver's most exciting transformation - 3,300+ new homes, world-class amenities",
-    image: "https://images.unsplash.com/photo-1635491273811-0304feccda69?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/19358760/pexels-photo-19358760.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.unsplash.com/photo-1698296346495-1c68b62b091f?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "https://images.unsplash.com/photo-1623125456909-ae1b8f37bd5f?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/5109341/pexels-photo-5109341.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
     description: "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "https://images.unsplash.com/photo-1639157025971-a573a1833505?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/18058418/pexels-photo-18058418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
     description: "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "https://images.unsplash.com/photo-1706150098804-5e246a7a4c32?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/33310374/pexels-photo-33310374.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
-    image: "https://images.unsplash.com/photo-1700793479724-42bd5500d928?w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -254,8 +254,8 @@ export default function HomePage() {
         className="group relative block h-[85vh] overflow-hidden cursor-pointer"
       >
         <img
-          src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&h=1080&fit=crop&q=80"
-          alt="Oakridge Vancouver aerial view"
+          src="https://images.pexels.com/photos/30294477/pexels-photo-30294477.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
+          alt="Aerial view of Stanley Park Seawall with lush greenery and calm waters"
           className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[1200ms]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
