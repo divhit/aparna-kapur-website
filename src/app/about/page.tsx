@@ -14,7 +14,7 @@ export default function AboutPage() {
       <PageBanner
         eyebrow="About Me"
         title="Meet Aparna Kapur"
-        description="Your dedicated partner in Vancouver real estate, specializing in Oakridge and surrounding neighborhoods."
+        description="Vancouver realtor with Oakwyn Realty, specializing in Oakridge and the south side."
       />
 
       {/* Main Content */}
@@ -34,57 +34,54 @@ export default function AboutPage() {
             <div className="space-y-8">
               <div>
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Real Estate With a Personal Touch
+                  Why I Do This
                 </h2>
                 <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
                   <p>
-                    I got into real estate because I believe everyone deserves a trusted
-                    guide during one of the biggest decisions of their life. Buying or
-                    selling a home isn&apos;t just a transaction &mdash; it&apos;s a life milestone, and
-                    I treat it with the care and attention it deserves.
+                    I got into real estate because I saw too many people getting poor advice on the
+                    biggest purchase of their lives. A home is not a commodity &mdash; it is where your
+                    family lives, where your kids grow up. The agent you choose should understand that.
                   </p>
                   <p>
-                    I specialize in Oakridge and the surrounding Vancouver neighborhoods
-                    because I genuinely love this part of the city. The transformation
-                    happening here, with the Oakridge Park redevelopment bringing 3,300+
-                    new homes and a 9-acre public park, is unlike anything Vancouver has
-                    seen. I stay on top of every development, every market shift, and every
-                    opportunity so my clients don&apos;t have to.
+                    I focus on Oakridge and Vancouver&apos;s south side because this is where I live and work.
+                    The Oakridge Park redevelopment, the rezoning along Cambie, the new transit connections
+                    &mdash; I track all of it because my clients need to know how these changes affect their
+                    property values and their daily lives.
                   </p>
                   <p>
-                    When you work with me, you get the full resources of Oakwyn Realty &mdash;
-                    Vancouver&apos;s fastest-growing brokerage with $6.3 billion in sales &mdash;
-                    combined with the personal attention that only comes from working with
-                    someone who truly cares about your outcome.
+                    I work with Oakwyn Realty because they are the top brokerage in Vancouver &mdash;
+                    $6.3 billion in sales, 900+ agents across BC. That gives me access to market data,
+                    off-market listings, and a professional network that directly benefits my clients.
+                    But you will only ever deal with me.
                   </p>
                 </div>
               </div>
 
               <div className="bg-teal-50 rounded-2xl p-8">
                 <h3 className="font-serif text-xl text-teal-900 mb-4">
-                  What I Bring to the Table
+                  What You Get Working With Me
                 </h3>
                 <div className="space-y-4">
                   {[
                     {
-                      title: "Deep Local Knowledge",
-                      desc: "I know Oakridge and surrounding neighborhoods inside out — every street, every school, every development.",
+                      title: "One Agent, Start to Finish",
+                      desc: "No hand-offs. No junior associates showing up to your viewings. Just me, the entire time.",
                     },
                     {
-                      title: "Full Oakwyn Backing",
-                      desc: "Access to Vancouver's top brokerage resources, network, and market intelligence.",
+                      title: "I Know the Neighbourhoods",
+                      desc: "I walk these streets every week. I know which blocks are getting rezoned and which buildings have issues.",
                     },
                     {
-                      title: "Personal Attention",
-                      desc: "You get my full, undivided focus. No hand-offs, no junior associates — just me.",
+                      title: "Oakwyn Realty Behind Me",
+                      desc: "Vancouver's top brokerage — $6.3B in sales, market data, off-market listings, and a network of 900+ agents.",
                     },
                     {
-                      title: "Data-Driven Approach",
-                      desc: "Every recommendation is backed by market data, comparable analysis, and strategic thinking.",
+                      title: "I Will Tell You the Truth",
+                      desc: "If a property is overpriced or a listing strategy is wrong, I will say so. You deserve straight answers.",
                     },
                     {
-                      title: "Fresh Energy",
-                      desc: "I bring the hunger and dedication of someone building their reputation on every single client's success.",
+                      title: "I Answer My Phone",
+                      desc: "Text me, call me — I get back to you the same day. That responsiveness is how deals get done in this market.",
                     },
                   ].map((item) => (
                     <div key={item.title} className="flex gap-3">

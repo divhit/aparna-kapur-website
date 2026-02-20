@@ -51,11 +51,10 @@ export default function HomePage() {
       <HeroSlideshow height="full">
         <div className="text-center px-6 max-w-4xl mx-auto">
           <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
-            Vancouver Real Estate
-            <span className="block text-teal-300 mt-2">With Aparna Kapur</span>
+            Aparna Kapur
           </h1>
           <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
-            Oakridge &amp; Greater Vancouver specialist. Local expertise, genuine care, every step of the way.
+            I know Oakridge and Vancouver&apos;s south side inside out. If you&apos;re buying or selling here, let&apos;s talk.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -126,19 +125,20 @@ export default function HomePage() {
                 About Me
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
-                Hi, I&apos;m Aparna Kapur
+                Hi, I&apos;m Aparna
               </h2>
               <p className="text-warm-600 leading-relaxed mb-4">
-                I believe in real estate that puts you first. Whether you&apos;re a first-time
-                buyer navigating Vancouver&apos;s market or a seller looking to maximize your
-                home&apos;s value, I bring fresh energy, deep local knowledge, and the full
-                backing of Oakwyn Realty &mdash; Vancouver&apos;s fastest-growing brokerage.
+                I live and work on Vancouver&apos;s south side. Oakridge, Marpole, South Cambie, Kerrisdale &mdash;
+                I walk these neighbourhoods every week. I know which streets flood with traffic at 5pm,
+                which blocks are getting rezoned, and which buildings have the best strata management.
+                That kind of knowledge only comes from being here.
               </p>
               <p className="text-warm-600 leading-relaxed mb-6">
-                I specialize in Oakridge and the surrounding neighborhoods because I know them
-                inside out &mdash; every street, every development, every coffee shop. When you work
-                with me, you get my full, undivided attention and a data-driven approach to
-                help you make the most confident decision of your life.
+                When you work with me, you get one person &mdash; not a team, not a junior associate.
+                I pick up the phone, I show up to every inspection, and I will tell you straight if a
+                property is not worth your money. I am with Oakwyn Realty because they are the best
+                brokerage in Vancouver, and that gives my clients access to market intelligence and a
+                network that makes a real difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/about" variant="primary">
@@ -212,9 +212,9 @@ export default function HomePage() {
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            eyebrow="Explore Neighborhoods"
-            title="Find Your Perfect Vancouver Neighborhood"
-            description="Every neighborhood has its own personality. Explore detailed guides to find the one that fits your lifestyle."
+            eyebrow="Neighbourhoods"
+            title="I Know These Streets"
+            description="I have walked every block of these neighbourhoods. Here is what you should know before buying or selling in each one."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {neighborhoods.map((hood) => (
@@ -299,8 +299,8 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Resources"
-            title="Tools & Guides to Help You Succeed"
-            description="Knowledge is power in real estate. Access free guides, market data, and tools to make informed decisions."
+            title="Do Your Homework"
+            description="I put these together so you can go into your first conversation with me already knowing the basics. The real strategy starts when we talk."
             light
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -364,12 +364,12 @@ export default function HomePage() {
                 Get in Touch
               </p>
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
-                Let&apos;s Start a Conversation
+                Let&apos;s Talk
               </h2>
               <p className="text-warm-600 leading-relaxed mb-8">
-                Whether you have questions about the market, want to explore neighborhoods,
-                or are ready to take the next step &mdash; I&apos;m here to help. No pressure, no
-                sales pitch, just honest guidance.
+                Thinking about buying or selling? Even if you are a year away, I am happy to
+                have a conversation about what the market looks like in your neighbourhood.
+                No pitch &mdash; just an honest assessment of where things stand.
               </p>
               <div className="space-y-4 mb-8">
                 <a

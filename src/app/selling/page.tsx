@@ -15,8 +15,8 @@ export default function SellingPage() {
     <>
       <PageBanner
         eyebrow="For Sellers"
-        title="Sell Your Home With Confidence"
-        description="Get the best value for your home with strategic pricing, expert marketing, and skilled negotiation. I'll guide you from listing to closing with clarity and care."
+        title="Selling Your Vancouver Home"
+        description="Selling well comes down to pricing, preparation, and negotiation. I have put together my process so you can see how I work — then let&apos;s talk about your property."
         align="left"
       />
 

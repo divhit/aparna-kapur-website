@@ -95,8 +95,8 @@ export default function ResourcesPage() {
     <>
       <PageBanner
         eyebrow="Resources & Tools"
-        title="Your Vancouver Real Estate Toolkit"
-        description="Free guides, calculators, and market insights to help you make informed real estate decisions in Vancouver."
+        title="Guides, Tools &amp; Market Data"
+        description="I put these together so you can do your homework before we talk. The basics are here — the strategy for your specific situation starts with a call."
       />
 
       {/* Tools Section */}
@@ -104,8 +104,8 @@ export default function ResourcesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Interactive Tools"
-            title="Calculators & Data"
-            description="Use these tools to plan your next real estate move with confidence."
+            title="Calculators &amp; Data"
+            description="Run the numbers yourself. When you are ready to get serious, I will walk you through what they actually mean for your situation."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {tools.map((tool) => (
@@ -139,9 +139,9 @@ export default function ResourcesPage() {
       <section className="py-10 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            eyebrow="Guides & Education"
-            title="Learn Before You Leap"
-            description="In-depth guides written specifically for the Vancouver real estate market."
+            eyebrow="Guides"
+            title="Know What You Are Getting Into"
+            description="I wrote these for the Vancouver market specifically. They cover the basics — your specific questions are what our first call is for."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((guide) => (
