@@ -38,24 +38,41 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 items-start">
             {/* Left side: Steps navigation */}
             <div className="lg:sticky lg:top-28">
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-8 italic font-bold">
                 Buyer&apos;s Guide
               </h2>
-              <nav className="space-y-1">
+              <nav className="space-y-2">
                 {buyingGuideSteps.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/buying/guide/${s.slug}`}
-                    className={`block px-4 py-3 rounded-lg text-sm transition-colors ${
+                    className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors ${
                       s.slug === step.slug
-                        ? "bg-teal-50 text-teal-900 font-medium"
-                        : "text-warm-600 hover:bg-warm-50 hover:text-teal-700"
+                        ? "bg-teal-50"
+                        : "hover:bg-warm-50"
                     }`}
                   >
-                    {s.shortTitle}
+                    <div
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-serif text-lg font-semibold shrink-0 ${
+                        s.slug === step.slug
+                          ? "bg-teal-600 text-white"
+                          : "bg-teal-50 text-teal-700"
+                      }`}
+                    >
+                      {s.step}
+                    </div>
+                    <span
+                      className={`text-sm transition-colors ${
+                        s.slug === step.slug
+                          ? "text-teal-900 font-medium"
+                          : "text-warm-600"
+                      }`}
+                    >
+                      {s.shortTitle}
+                    </span>
                   </Link>
                 ))}
               </nav>
