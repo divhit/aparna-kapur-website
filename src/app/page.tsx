@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
-import ContactForm from "@/components/forms/ContactForm";
 import HeroChat from "@/components/chat/HeroChat";
+import GetInTouch from "@/components/sections/GetInTouch";
 import HeroSlideshow from "@/components/hero/HeroSlideshow";
 
 const neighborhoods = [
@@ -358,62 +358,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 7: Contact */}
-      <section className="py-20 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
-                Get in Touch
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
-                Let&apos;s Talk
-              </h2>
-              <p className="text-warm-600 leading-relaxed mb-8">
-                Thinking about buying or selling? Even if you are a year away, I am happy to
-                have a conversation about what the market looks like in your neighbourhood.
-                No pitch &mdash; just an honest assessment of where things stand.
-              </p>
-              <div className="space-y-4 mb-8">
-                <a
-                  href="tel:+16046127694"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-warm-800">Call or Text</p>
-                    <p className="text-sm text-warm-500">604-612-7694</p>
-                  </div>
-                </a>
-                <a
-                  href="mailto:aparna@aparnakapur.com"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-warm-800">Email Me</p>
-                    <p className="text-sm text-warm-500">aparna@aparnakapur.com</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl shadow-sm p-8 border border-warm-100">
-              <h3 className="font-serif text-xl text-teal-950 mb-6">
-                Send Me a Message
-              </h3>
-              <ContactForm />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* SECTION 7: Get In Touch */}
+      <GetInTouch />
     </>
   );
 }

@@ -61,7 +61,7 @@ export default function WhyWorkWithMePage() {
             <div className="space-y-8">
               <div>
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Why I Do This
+                  Why Work With Me
                 </h2>
                 <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
                   <p>
