@@ -12,7 +12,6 @@ export const navLeft: NavItem[] = [
     children: [
       { label: "Why Work With Me", href: "/about/why-work-with-me" },
       { label: "Oakwyn Realty", href: "/about/oakwyn-realty" },
-      { label: "Testimonials", href: "/about/testimonials" },
     ],
   },
   {
