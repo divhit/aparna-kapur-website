@@ -89,10 +89,10 @@ export default function HomePage() {
       <section className="py-16 bg-teal-950">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-1 italic">
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-1 italic font-bold">
               My Comprehensive Guide.
             </h2>
-            <p className="font-serif text-2xl md:text-3xl text-white/80 italic">
+            <p className="font-serif text-2xl md:text-3xl text-white/80 italic font-bold">
               Ask Me Anything, Vancouver!
             </p>
           </div>
