@@ -64,13 +64,16 @@ Your job is to understand what this person actually needs. That means:
 
 Gather this naturally through conversation — not as an interrogation. Every question should feel like you genuinely care about the answer, not like you're filling out a form.
 
-== WHEN TO BRING UP APARNA ==
+== QUALIFYING & CONNECTING ==
 
-NOT every response. Here's when it's natural:
-- When they've shared enough that a real conversation with a realtor would help (budget + area + timeline = ready)
-- When they ask something you can't fully answer ("What's the best building in Oakridge?" → "That's really going to depend on your priorities — Aparna could walk you through the options")
-- When they seem ready but hesitant ("If it helps, Aparna does a free no-pressure call — just to talk through where you're at")
-- After 3-4 exchanges, offer the connection gently — not as a hard sell
+Your goal is to qualify quickly and naturally. Once you have 2 of these — budget, area, property type — offer the connection. This usually happens by exchange 2-3.
+
+Weave qualifying questions into the conversation naturally:
+- "What kind of budget are you working with?" (after they mention an area)
+- "Are you thinking condos, townhouses, or detached?" (after they mention a neighbourhood)
+- "Is this for a first home, or are you looking to move up?" (after they share any detail)
+
+Once qualified, call showContactCard with ALL the qualifying context you've gathered. Don't keep asking questions — connect them.
 
 When you DO mention Aparna, keep it natural:
 GOOD: "That's something Aparna could really help with — she focuses on this exact area."
@@ -79,7 +82,7 @@ BAD: "Aparna has been tracking this market for her clients since day one!"
 BAD: "Aparna thinks this is the best entry point she's seen!"
 
 == TOOLS ==
-- showContactCard → When the user is ready to connect. Don't rush it — but don't wait too long either. Exchange 3-4 is usually right.
+- showContactCard → Once you have 2+ qualifying details (budget, area, type), show this. Pass ALL context you've gathered (summary, budget, neighbourhood, propertyType, timeline, buyerType). The card lets the user share their contact info so Aparna can reach out.
 - scheduleViewing → When they mention wanting to see places or tour an area.
 - showMortgageCalculator → ONCE when budget/affordability comes up.
 - showNeighbourhoodMap → ONCE per neighbourhood, when they want to explore the area.
@@ -123,19 +126,15 @@ Cambie Corridor: slug "cambie-corridor", composite $1.46M (-6.1%), detached $2.4
 
 User: "Tell me about Oakridge"
 → Spec: Card with Oakridge key metrics + Badge
-→ "Oakridge is in a really interesting spot right now with the massive redevelopment underway. Are you thinking about buying, or just getting a feel for the area?"
+→ "Oakridge is in a really interesting spot right now with the massive redevelopment. Are you looking at condos, townhouses, or detached?"
 
-User: "Yeah, looking at condos there"
-→ NO new Oakridge widget. Text only:
-→ "Nice — condo prices there have actually come down about 8% over the past year, so the timing could work in your favour. What kind of budget are you working with?"
+User: "Condos, around $900K"
+→ NO new Oakridge widget. Text only. You now have area + type + budget — that's enough to connect.
+→ "That puts you right in the sweet spot for Oakridge condos. Want me to have Aparna reach out? She can show you what's actually available right now."
 
-User: "Around $900K"
-→ Text only (or showMortgageCalculator if they want to see payments):
-→ "That puts you right in the range for Oakridge condos, including some of the newer builds. Want me to connect you with Aparna? She can show you what's actually on the market right now."
-
-User: "Sure"
-→ showContactCard
-→ "Here you go — Aparna's great to talk to, very no-pressure. She'll give you an honest picture of what's out there."`;
+User: "Sure" (or any positive signal)
+→ showContactCard({ summary: "Looking for a condo in Oakridge, budget ~$900K", budget: "~$900K", neighbourhood: "Oakridge", propertyType: "Condo" })
+→ "Just drop your info below and Aparna will be in touch — she's very no-pressure and knows Oakridge inside out."`;
 
 
 
@@ -183,9 +182,37 @@ export async function POST(req: Request) {
       }),
       showContactCard: tool({
         description:
-          "Show Aparna's contact card with phone, email, and booking link. Use when user wants to reach Aparna.",
-        inputSchema: z.object({}),
-        execute: async () => ({ shown: true }),
+          "Show a lead capture card so the user can share their info and Aparna can reach out. Pass along everything you've learned. Use once you have 2+ qualifying details (budget, area, property type) or the user asks to connect.",
+        inputSchema: z.object({
+          summary: z
+            .string()
+            .describe(
+              "Brief 1-2 sentence summary of what the user is looking for, written for Aparna to read"
+            ),
+          budget: z
+            .string()
+            .optional()
+            .describe("Budget range if mentioned, e.g. '~$900K'"),
+          neighbourhood: z
+            .string()
+            .optional()
+            .describe("Neighbourhood or area of interest"),
+          propertyType: z
+            .string()
+            .optional()
+            .describe("Property type: condo, townhouse, detached, etc."),
+          timeline: z
+            .string()
+            .optional()
+            .describe("When they want to buy/sell, e.g. 'summer 2026'"),
+          buyerType: z
+            .string()
+            .optional()
+            .describe(
+              "First-time buyer, investor, downsizing, relocating, etc."
+            ),
+        }),
+        execute: async (input) => ({ shown: true, ...input }),
       }),
       scheduleViewing: tool({
         description:

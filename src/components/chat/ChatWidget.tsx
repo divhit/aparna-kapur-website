@@ -162,7 +162,7 @@ export default function ChatWidget() {
 
       case "tool-showContactCard":
         if (part.state === "input-available" || part.state === "output-available") {
-          return <ContactCard key={i} />;
+          return <ContactCard key={i} {...(part.input as Parameters<typeof ContactCard>[0])} />;
         }
         return null;
 
