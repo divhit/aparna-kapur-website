@@ -108,11 +108,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-warm-100">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
                   alt="Aparna Kapur and Cooper - Vancouver Realtor"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-teal-700 text-white rounded-2xl p-6 shadow-xl hidden md:block">
