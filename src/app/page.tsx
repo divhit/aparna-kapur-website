@@ -61,19 +61,19 @@ export default function HomePage() {
               href="/buying"
               className="px-8 py-4 bg-white text-teal-900 rounded-xl text-lg font-semibold hover:bg-teal-50 transition-colors shadow-lg"
             >
-              Find Your Home
+              Buy
             </Link>
             <Link
               href="/selling"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Sell Your Home
+              Sell
             </Link>
             <Link
               href="/selling/home-valuation"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Home Valuation
+              Value Your Home
             </Link>
           </div>
         </div>
@@ -89,9 +89,6 @@ export default function HomePage() {
       <section className="py-16 bg-teal-950">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-8">
-            <p className="text-teal-300 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
-              AI-Powered Assistant
-            </p>
             <h2 className="font-serif text-3xl md:text-4xl text-white mb-3">
               Ask Me Anything
             </h2>
