@@ -244,7 +244,7 @@ Oakridge is my top pick for families in 2026, and not just because it's my speci
 
 **Family perks:** New community centre coming (with pool, ice rink, childcare), direct Canada Line access, diverse dining options, and strong multicultural community.
 
-**Price range:** Condos from $650K-$1.2M; Townhomes $1.2M-$2M; Detached homes $2.5M+
+**Price range:** GVR benchmarks (Jan 2026) — Condos $998K; Townhomes $1.64M; Detached $3.36M
 
 ## 2. Riley Park / Little Mountain
 
@@ -258,7 +258,7 @@ Riley Park offers a charming, established neighbourhood feel with excellent park
 
 **Family perks:** Main Street shopping and dining nearby, community gardens, Hillcrest Community Centre with pool, and easy access to Queen Elizabeth Park.
 
-**Price range:** Condos from $550K-$900K; Townhomes $1M-$1.6M; Detached homes $2M+
+**Price range:** GVR benchmarks (Jan 2026) — Condos $639K; Townhomes $1.04M; Detached $1.70M (Vancouver East)
 
 ## 3. Kerrisdale
 
@@ -272,7 +272,7 @@ Kerrisdale has long been one of Vancouver's premier family neighbourhoods. The t
 
 **Family perks:** Charming village shopping on 41st Avenue, community centre, ice rink, swimming pool, and a strong neighbourhood association.
 
-**Price range:** Condos from $700K-$1.2M; Townhomes $1.5M-$2.5M; Detached homes $3M+
+**Price range:** GVR benchmarks (Jan 2026) — Condos $974K; Townhomes $1.66M; Detached $2.98M
 
 ## 4. South Cambie
 
@@ -286,7 +286,7 @@ South Cambie runs along the Cambie Corridor — one of Vancouver's most transit-
 
 **Family perks:** Cambie Village shopping, direct Canada Line access at King Edward and Oakridge stations, growing restaurant scene, and proximity to major centres.
 
-**Price range:** Condos from $600K-$1M; Townhomes $1.2M-$2M; Detached homes $2.5M+
+**Price range:** GVR benchmarks (Jan 2026) — Condos $1.02M; Townhomes $1.56M; Detached $4.16M
 
 ## 5. Marpole
 
@@ -300,7 +300,7 @@ Marpole offers some of the best value in Vancouver's westside. With improving am
 
 **Family perks:** Most affordable westside neighbourhood, YVR access, growing dining scene on Granville Street, community centre, and strong multicultural character.
 
-**Price range:** Condos from $450K-$800K; Townhomes $900K-$1.4M; Detached homes $1.8M+
+**Price range:** GVR benchmarks (Jan 2026) — Condos $684K; Townhomes $1.58M; Detached $2.13M
 
 ## How to Choose the Right Neighbourhood
 

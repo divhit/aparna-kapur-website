@@ -73,8 +73,8 @@ export const realestateCatalog = defineCatalog(schema, {
         "Single metric display with label, value, and optional trend. Use for prices, scores, percentages.",
       example: {
         label: "Avg Price",
-        value: "$1.6M",
-        detail: "+8.2% YoY",
+        value: "$1.49M",
+        detail: "-2.8% YoY",
         trend: "up",
       },
     },
@@ -101,8 +101,8 @@ export const realestateCatalog = defineCatalog(schema, {
       description: "Data table for comparisons and listings",
       example: {
         data: [
-          { neighbourhood: "Oakridge", price: "$1.6M", walk: 78 },
-          { neighbourhood: "Kerrisdale", price: "$2.1M", walk: 85 },
+          { neighbourhood: "Oakridge", price: "$1.49M", walk: 78 },
+          { neighbourhood: "Kerrisdale", price: "$1.90M", walk: 85 },
         ],
         columns: [
           { key: "neighbourhood", label: "Neighbourhood" },
