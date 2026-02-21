@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How much does a home cost along the Cambie Corridor?",
     answer:
-      "The average price along the Cambie Corridor is approximately $1.3M, though this varies significantly by property type and location. Condos typically range from $450K to $1.1M, townhomes from $900K to $1.6M, and the limited detached homes from $2M to $4M+. Properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
+      "The GVR MLS® HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor — properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
   },
   {
     question: "What is the Cambie Corridor Plan?",
@@ -91,8 +91,8 @@ export default async function CambieCorridorPage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">~$1.3M</p>
-              <p className="text-xs text-warm-500 mt-1">Average Price</p>
+              <p className="font-serif text-2xl text-teal-700">$1.46M</p>
+              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>
               <p className="font-serif text-2xl text-teal-700">5</p>
@@ -252,9 +252,9 @@ export default async function CambieCorridorPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$450K - $1.1M", desc: "The most common property type along the corridor. New construction near SkyTrain stations offers modern amenities, open layouts, and strong rental potential. Ideal for first-time buyers and investors." },
-                    { type: "Townhomes", range: "$900K - $1.6M", desc: "Increasingly popular family-friendly option. Many new townhome projects offer 3-bedroom layouts with private outdoor space, a rarity in Vancouver's urban core." },
-                    { type: "Detached Homes", range: "$2.0M - $4.0M+", desc: "A diminishing but still present option, mostly on side streets away from the main corridor. Many carry development potential as the Corridor Plan allows for rezoning." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. GVR benchmark: $1.01M. New construction near SkyTrain stations offers modern amenities, open layouts, and strong rental potential." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. GVR benchmark: $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
+                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "A diminishing but still present option, mostly on side streets away from the main corridor. GVR benchmark: $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -266,7 +266,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The average price across the corridor sits around $1.3M, though entry points for condos start significantly lower. Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options while still providing excellent SkyTrain access.
+                  The GVR MLS® HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options while still providing excellent SkyTrain access.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

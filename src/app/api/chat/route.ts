@@ -97,13 +97,13 @@ Vancouver West benchmarks: Detached $2.956M (-12.2% YoY), Townhouse $1.397M (-5.
 Vancouver East benchmarks: Detached $1.698M (-8.1% YoY), Townhouse $1.037M (-7.9% YoY), Condo $639K (-8.3% YoY).
 Always cite "Greater Vancouver REALTORS® (GVR)" when sharing price data. Note prices are MLS® HPI benchmarks from Jan 2026.
 
-NEIGHBOURHOOD DATA (all Vancouver Westside):
-- Oakridge: slug "oakridge", detached ~$2.8M, condo ~$750K, walk 78, transit 85. Key: Oakridge Park redevelopment (3,300+ homes), Canada Line, Queen Elizabeth Park, Churchill Secondary. Vibe: "Modern & High-Growth"
-- Marpole: slug "marpole", detached ~$2.2M, condo ~$650K, walk 72, transit 78. Key: Most affordable westside, Fraser River, Granville dining, YVR access. Vibe: "Affordable & Connected"
-- South Cambie: slug "south-cambie", detached ~$2.9M, condo ~$780K, walk 80, transit 82. Key: Cambie Village, Canada Line, Douglas Park, heritage homes. Vibe: "Heritage & Transit"
-- Riley Park: slug "riley-park", detached ~$2.4M, condo ~$700K, walk 82, transit 75. Key: Nat Bailey Stadium, Hillcrest Centre, Main Street, community feel. Vibe: "Arts & Community"
-- Kerrisdale: slug "kerrisdale", detached ~$3.5M, condo ~$850K, walk 85, transit 72. Key: 41st Avenue village, tree-lined streets, top schools, Arbutus Greenway. Vibe: "Classic & Established"
-- Cambie Corridor: slug "cambie-corridor", detached ~$2.6M, condo ~$720K, walk 81, transit 88. Key: Highest transit, rapid development, multiple Canada Line stations, new supply. Vibe: "Transit & New Build"
+NEIGHBOURHOOD DATA (GVR MLS® HPI benchmarks, January 2026):
+- Oakridge: slug "oakridge", composite benchmark $1.49M (-2.8% YoY), detached $3.36M (-3.4% YoY), townhouse $1.64M (flat), condo $998K (-8.0% YoY), walk 78, transit 85. Key: Oakridge Park redevelopment (3,300+ homes), Canada Line, Queen Elizabeth Park, Churchill Secondary. Vibe: "Modern & High-Growth"
+- Marpole: slug "marpole", composite benchmark $1.14M (-6.3% YoY), detached $2.13M (-6.5% YoY), townhouse $1.58M (-0.9% YoY), condo $684K (-9.1% YoY), walk 72, transit 78. Key: Most affordable westside, Fraser River, Granville dining, YVR access. Vibe: "Affordable & Connected"
+- South Cambie: slug "south-cambie", composite benchmark $1.44M (-9.5% YoY), detached $4.16M (-7.8% YoY), townhouse $1.56M (+0.7% YoY), condo $1.02M (-8.6% YoY), walk 80, transit 82. Key: Cambie Village, Canada Line, Douglas Park, heritage homes. Vibe: "Heritage & Transit"
+- Riley Park: slug "riley-park", uses Vancouver East benchmarks — detached $1.70M (-8.1% YoY), townhouse $1.04M (-7.9% YoY), condo $639K (-8.3% YoY), walk 82, transit 75. Key: Nat Bailey Stadium, Hillcrest Centre, Main Street, community feel. Vibe: "Arts & Community"
+- Kerrisdale: slug "kerrisdale", composite benchmark $1.90M (-19.2% YoY), detached $2.98M (-17.9% YoY), townhouse $1.66M (-0.1% YoY), condo $974K (-15.8% YoY), walk 85, transit 72. Key: 41st Avenue village, tree-lined streets, top schools, Arbutus Greenway. Vibe: "Classic & Established"
+- Cambie Corridor: slug "cambie-corridor", uses Cambie sub-area — composite $1.46M (-6.1% YoY), detached $2.43M (-12.8% YoY), townhouse $1.75M (-0.8% YoY), condo $1.01M (-6.8% YoY), walk 81, transit 88. Key: Highest transit, rapid development, multiple Canada Line stations, new supply. Vibe: "Transit & New Build"
 
 EXAMPLE FLOW:
 User: "Tell me about Oakridge"

@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How much do homes cost in South Cambie?",
     answer:
-      "South Cambie offers a range of housing options. Condominiums typically range from $550K to $1.1M, townhomes from $1.1M to $1.8M, and detached heritage or newer homes from $2.0M to $4.0M+. The average home price across all property types sits around $1.8M, though this varies significantly depending on property type, lot size, and proximity to SkyTrain stations.",
+      "South Cambie offers a range of housing options. The GVR MLS® HPI benchmark prices as of January 2026 are: condos at $1.02M, townhomes at $1.56M, and detached homes at $4.16M. The composite benchmark across all property types is $1.44M, though prices vary significantly depending on property type, lot size, and proximity to SkyTrain stations.",
   },
   {
     question: "What is the Cambie Corridor plan and how does it affect South Cambie?",
@@ -90,8 +90,8 @@ export default async function SouthCambiePage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.8M</p>
-              <p className="text-xs text-warm-500 mt-1">Average Home Price</p>
+              <p className="font-serif text-2xl text-teal-700">$1.44M</p>
+              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>
               <p className="font-serif text-2xl text-teal-700">130 acres</p>
@@ -237,9 +237,9 @@ export default async function SouthCambiePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$550K - $1.1M", desc: "Modern units in newer developments near SkyTrain stations along the Cambie Corridor. Attractive to first-time buyers and investors seeking transit-oriented properties." },
-                    { type: "Townhomes", range: "$1.1M - $1.8M", desc: "Multi-level homes in well-designed complexes, many built as part of the Cambie Corridor Plan. Increasingly popular with young families who want more space without a detached-home price tag." },
-                    { type: "Detached Homes", range: "$2.0M - $4.0M+", desc: "Heritage character homes and newer builds on generous lots. Many original homes offer renovation potential or laneway house opportunities on the larger parcels." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units in newer developments near SkyTrain stations along the Cambie Corridor. GVR benchmark: $1.02M. Attractive to first-time buyers and investors seeking transit-oriented properties." },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Multi-level homes in well-designed complexes, many built as part of the Cambie Corridor Plan. GVR benchmark: $1.56M. Increasingly popular with young families." },
+                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage character homes and newer builds on generous lots. GVR benchmark: $4.16M. Many original homes offer renovation potential or laneway house opportunities." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -251,7 +251,7 @@ export default async function SouthCambiePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The average home price in South Cambie is approximately $1.8M across all property types. The neighborhood has seen consistent appreciation driven by the Canada Line, the Cambie Corridor Plan&apos;s controlled densification, and the enduring appeal of Queen Elizabeth Park. Properties near the King Edward and Oakridge-41st stations tend to command a premium due to the convenience of rapid transit access.
+                  The GVR MLS® HPI composite benchmark for South Cambie is $1.44M as of January 2026 (-9.5% year-over-year), with detached homes benchmarked at $4.16M. The neighborhood has seen consistent long-term appreciation driven by the Canada Line, the Cambie Corridor Plan&apos;s controlled densification, and the enduring appeal of Queen Elizabeth Park.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

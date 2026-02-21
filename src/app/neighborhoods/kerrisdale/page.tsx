@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How much does a home cost in Kerrisdale Vancouver?",
     answer:
-      "Kerrisdale is among Vancouver's most expensive neighborhoods. Detached homes typically range from $2.8M to $5M+, with exceptional heritage estates and larger lots commanding higher prices. Condominiums and apartments, primarily along 41st Avenue and Boulevard, range from $500K to $1.2M. Townhomes, which are less common, generally fall between $1.2M and $2M. The average detached home price is approximately $3.2M.",
+      "Kerrisdale is among Vancouver's most prestigious neighborhoods. The GVR MLS® HPI benchmark prices as of January 2026 are: detached homes at $2.98M, condos at $974K, and townhomes at $1.66M. The composite benchmark across all property types is $1.90M. Exceptional heritage estates and larger lots can command significantly higher prices.",
   },
   {
     question: "What schools are near Kerrisdale?",
@@ -92,8 +92,8 @@ export default async function KerrisdalePage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$3.2M</p>
-              <p className="text-xs text-warm-500 mt-1">Avg. Home Price</p>
+              <p className="font-serif text-2xl text-teal-700">$1.90M</p>
+              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>
               <p className="font-serif text-2xl text-teal-700">Top 5</p>
@@ -239,9 +239,9 @@ export default async function KerrisdalePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Detached Homes", range: "$2.8M - $5M+", desc: "The heart of Kerrisdale real estate. Primarily heritage and character homes on generous lots. Tudor, Georgian, and craftsman styles predominate. Larger estates and newer luxury builds can exceed $6M." },
-                    { type: "Condominiums", range: "$500K - $1.2M", desc: "Concentrated along 41st Avenue and West Boulevard. Popular with downsizers, retirees, and professionals who want the Kerrisdale lifestyle at a more accessible price point." },
-                    { type: "Townhomes", range: "$1.2M - $2M", desc: "Less common but increasingly sought after. Multi-level homes offering a middle ground between condos and detached properties, appealing to young families and professionals." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "The heart of Kerrisdale real estate. Primarily heritage and character homes on generous lots. GVR benchmark: $2.98M. Tudor, Georgian, and craftsman styles predominate." },
+                    { type: "Condominiums", range: "$600K - $1.3M", desc: "Concentrated along 41st Avenue and West Boulevard. GVR benchmark: $974K. Popular with downsizers, retirees, and professionals who want the Kerrisdale lifestyle at a more accessible price point." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common but increasingly sought after. GVR benchmark: $1.66M. Multi-level homes offering a middle ground between condos and detached properties." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -253,7 +253,7 @@ export default async function KerrisdalePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The average detached home price in Kerrisdale is approximately $3.2M, making it one of Vancouver&apos;s top five most expensive neighborhoods for single-family homes. Despite the premium, Kerrisdale properties have historically demonstrated strong value retention due to the neighborhood&apos;s established reputation, excellent schools, and the scarcity of available lots.
+                  The GVR MLS® HPI composite benchmark for Kerrisdale is $1.90M as of January 2026, with the detached home benchmark at $2.98M. Despite the premium, Kerrisdale properties have historically demonstrated strong value retention due to the neighborhood&apos;s established reputation, excellent schools, and the scarcity of available lots.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

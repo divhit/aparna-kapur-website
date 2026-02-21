@@ -25,12 +25,12 @@ const faqs = [
   {
     question: "Is Marpole a good neighborhood to buy in?",
     answer:
-      "Marpole is one of the best value propositions on Vancouver's west side. With a median home price around $1.4M — well below neighboring Oakridge or Kerrisdale — it offers strong fundamentals including Canada Line SkyTrain access at Marine Drive, proximity to YVR, and a major community plan bringing new density and amenities. For buyers looking for long-term appreciation in a family-friendly setting, Marpole is a compelling choice.",
+      "Marpole is one of the best value propositions on Vancouver's west side. With a GVR benchmark price of $1.14M — well below neighboring Oakridge ($1.49M) or Kerrisdale ($1.90M) — it offers strong fundamentals including Canada Line SkyTrain access at Marine Drive, proximity to YVR, and a major community plan bringing new density and amenities. For buyers looking for long-term appreciation in a family-friendly setting, Marpole is a compelling choice.",
   },
   {
     question: "How much does a home cost in Marpole?",
     answer:
-      "Marpole offers a range of housing options. Condos typically start in the low $400Ks to $700K range, townhomes from $900K to $1.4M, and detached homes from $1.5M to $3M+. The median list price across all property types is approximately $1.4M, making it one of Vancouver's more accessible west-side neighborhoods.",
+      "Marpole offers a range of housing options. The GVR MLS® HPI benchmark prices as of January 2026 are: condos at $684K, townhomes at $1.58M, and detached homes at $2.13M. The composite benchmark across all property types is $1.14M, making it one of Vancouver's more accessible west-side neighborhoods.",
   },
   {
     question: "What is the Marpole Community Plan?",
@@ -90,8 +90,8 @@ export default async function MarpolePage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.4M</p>
-              <p className="text-xs text-warm-500 mt-1">Median Price</p>
+              <p className="font-serif text-2xl text-teal-700">$1.14M</p>
+              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>
               <p className="font-serif text-2xl text-teal-700">1870s</p>
@@ -202,7 +202,7 @@ export default async function MarpolePage() {
                   Today, Marpole is a neighborhood in transition. Its tree-lined residential streets are filled with a mix of charming post-war bungalows, character homes from the early 20th century, and an increasing number of modern condominiums and townhome developments. The Marpole Community Plan is guiding thoughtful densification along major corridors while preserving the quiet, family-oriented character of interior streets that residents love.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  What draws many buyers to Marpole is its remarkable value relative to surrounding areas. With a median home price of approximately $1.4M &mdash; well below Oakridge, Kerrisdale, or South Cambie &mdash; Marpole offers an entry point into Vancouver&apos;s west side that is increasingly rare. Add in the Marine Drive SkyTrain station, proximity to YVR, and a growing community of shops and restaurants, and it&apos;s easy to see why Marpole is gaining attention from savvy buyers and investors alike.
+                  What draws many buyers to Marpole is its remarkable value relative to surrounding areas. With a GVR benchmark price of $1.14M &mdash; well below Oakridge ($1.49M), Kerrisdale ($1.90M), or South Cambie ($1.44M) &mdash; Marpole offers an entry point into Vancouver&apos;s west side that is increasingly rare. Add in the Marine Drive SkyTrain station, proximity to YVR, and a growing community of shops and restaurants, and it&apos;s easy to see why Marpole is gaining attention from savvy buyers and investors alike.
                 </p>
               </section>
 
@@ -236,9 +236,9 @@ export default async function MarpolePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$400K - $750K", desc: "Modern units in newer low-rise and mid-rise buildings, many within walking distance of the Marine Drive SkyTrain station. Popular with first-time buyers, young professionals, and investors." },
-                    { type: "Townhomes", range: "$900K - $1.4M", desc: "Multi-level homes in newer developments along Cambie and Granville corridors. Increasingly popular with growing families seeking more space than a condo without the price tag of a detached home." },
-                    { type: "Detached Homes", range: "$1.5M - $3.0M+", desc: "Single-family homes ranging from original character bungalows with renovation potential to newer custom builds. Lot sizes are often generous compared to other west-side neighborhoods." },
+                    { type: "Condominiums", range: "$450K - $850K", desc: "Modern units in newer low-rise and mid-rise buildings, many within walking distance of the Marine Drive SkyTrain station. GVR benchmark: $684K. Popular with first-time buyers, young professionals, and investors." },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Multi-level homes in newer developments along Cambie and Granville corridors. GVR benchmark: $1.58M. Increasingly popular with growing families seeking more space." },
+                    { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: "Single-family homes ranging from original character bungalows with renovation potential to newer custom builds. GVR benchmark: $2.13M. Lot sizes are often generous compared to other west-side neighborhoods." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -250,7 +250,7 @@ export default async function MarpolePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The overall median list price in Marpole is approximately $1.4M, which represents strong value compared to adjacent neighborhoods like Oakridge ($1.6M) or Kerrisdale ($3.2M). This price differential, combined with Marpole&apos;s improving amenities and transit access, has made it one of the more watched neighborhoods among real estate investors.
+                  The GVR MLS® HPI composite benchmark for Marpole is $1.14M as of January 2026 (-6.3% year-over-year), which represents strong value compared to adjacent neighborhoods like Oakridge ($1.49M) or Kerrisdale ($1.90M). This price differential, combined with Marpole&apos;s improving amenities and transit access, has made it one of the more watched neighborhoods among real estate investors.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

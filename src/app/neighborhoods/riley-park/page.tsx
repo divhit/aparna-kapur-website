@@ -25,12 +25,12 @@ const faqs = [
   {
     question: "Is Riley Park a good neighborhood to buy in?",
     answer:
-      "Riley Park is one of Vancouver's most desirable neighborhoods for buyers who value character, community, and walkability. The Main Street corridor provides vibrant urban amenities, while the residential streets maintain a quieter, tree-lined charm. Strong demand for character homes, excellent transit access, and a thriving local economy make Riley Park a solid long-term investment. Average home prices sit around $1.5M, with strong appreciation driven by limited supply and high buyer interest.",
+      "Riley Park is one of Vancouver's most desirable neighborhoods for buyers who value character, community, and walkability. The Main Street corridor provides vibrant urban amenities, while the residential streets maintain a quieter, tree-lined charm. Strong demand for character homes, excellent transit access, and a thriving local economy make Riley Park a solid long-term investment. The Vancouver East detached benchmark is $1.70M (January 2026), with strong appreciation driven by limited supply and high buyer interest.",
   },
   {
     question: "How much does a home cost in Riley Park?",
     answer:
-      "Riley Park offers a range of housing options. Condos and apartments typically range from $450K to $850K, duplexes and townhomes from $1.0M to $1.6M, and detached character homes from $1.5M to $2.8M+. The average home price across all property types is approximately $1.5M, though heritage character homes in prime locations can command a premium.",
+      "Riley Park offers a range of housing options. Based on Vancouver East GVR MLS® HPI benchmarks (January 2026): condos at $639K, townhomes at $1.04M, and detached homes at $1.70M. Heritage character homes in prime Main Street locations can command a significant premium above the benchmark.",
   },
   {
     question: "What is Main Street like in Riley Park?",
@@ -91,8 +91,8 @@ export default async function RileyParkPage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.5M</p>
-              <p className="text-xs text-warm-500 mt-1">Average Home Price</p>
+              <p className="font-serif text-2xl text-teal-700">$1.70M</p>
+              <p className="text-xs text-warm-500 mt-1">Van East Detached</p>
             </div>
             <div>
               <p className="font-serif text-2xl text-teal-700">10+</p>
@@ -238,9 +238,9 @@ export default async function RileyParkPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Character Homes", range: "$1.5M - $2.8M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Many offer renovation potential or laneway suite opportunities. These are the properties that define Riley Park's streetscape." },
-                    { type: "Duplexes & Townhomes", range: "$1.0M - $1.6M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. An increasingly popular option for families who want more space than a condo without the price of a full detached home." },
-                    { type: "Condos & Apartments", range: "$450K - $850K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Popular with first-time buyers and young professionals attracted to the walkable lifestyle." },
+                    { type: "Character Homes", range: "$1.4M - $2.5M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Van East detached benchmark: $1.70M. Many offer renovation potential or laneway suite opportunities." },
+                    { type: "Duplexes & Townhomes", range: "$850K - $1.4M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. Van East townhome benchmark: $1.04M. Popular with families who want more space than a condo." },
+                    { type: "Condos & Apartments", range: "$450K - $800K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Van East condo benchmark: $639K. Popular with first-time buyers and young professionals." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -252,7 +252,7 @@ export default async function RileyParkPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The average home price in Riley Park sits around $1.5M across all property types, though character detached homes can exceed $2.5M in premium locations. Demand consistently outpaces supply, particularly for well-maintained heritage homes with original details intact. Properties close to Main Street command a premium for their walkability and proximity to amenities.
+                  The Vancouver East detached home benchmark is $1.70M as of January 2026 (-8.1% year-over-year), though character homes in premium Riley Park locations can exceed $2.5M. Demand consistently outpaces supply, particularly for well-maintained heritage homes with original details intact. Properties close to Main Street command a premium for their walkability and proximity to amenities.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

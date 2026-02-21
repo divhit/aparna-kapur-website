@@ -153,56 +153,65 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3b: Numbers Tell a Story */}
+      {/* SECTION 3b: January 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <p className="text-teal-600 text-xs uppercase tracking-[0.3em] font-semibold mb-3">
-            Numbers
+            January 2026
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-teal-950 italic leading-tight mb-16">
-            Tell a Story
+            Metro Vancouver Market
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$6B</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$1.1M</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Oakridge Park<br />Redevelopment
+                Composite<br />Benchmark Price
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">Lowest since mid-2021</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">3,300+</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-12.2%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                New Homes<br />Coming to Oakridge
+                Van West Detached<br />Year-Over-Year
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">~$410K off peak pricing</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">9 Acres</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">12,628</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Public Park<br />&amp; Green Space
+                Active<br />Listings
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">38% above 10-yr average</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$6.3B</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">+25.5%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Oakwyn Realty<br />Sales Volume
+                10-Year Composite<br />Appreciation
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">Long-term holders winning</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">#1</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-7.3%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Fastest Growing<br />Vancouver Brokerage
+                New Listings vs.<br />January 2025
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">No flood of supply</p>
             </div>
             <div>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">900+</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-5.4%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Oakwyn Agents<br />Across BC
+                Townhouse<br />Benchmark YoY
               </p>
+              <p className="text-[10px] text-warm-400 italic mt-1">Entry-level holding up</p>
             </div>
           </div>
-          <div className="mt-14">
-            <Button href="/neighborhoods/oakridge" variant="outline">
-              Learn More
+          <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
+            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull; January 2026
+          </p>
+          <div className="mt-8">
+            <Button href="/resources/market-reports" variant="outline">
+              View Market Reports
             </Button>
           </div>
         </div>
