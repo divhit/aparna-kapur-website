@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { buyingGuideSteps } from "@/lib/guide-data";
 import ContactForm from "@/components/forms/ContactForm";
 import Button from "@/components/ui/Button";
+import PageBanner from "@/components/hero/PageBanner";
 
 type Props = {
   params: Promise<{ step: string }>;
@@ -33,28 +34,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
   return (
     <>
-      <section className="bg-teal-950 pt-24 md:pt-28 pb-10 md:pb-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
-            <Link href="/buying" className="hover:text-teal-200 transition-colors">Buying</Link>
-            <span>/</span>
-            <Link href="/buying/guide/the-big-decision" className="hover:text-teal-200 transition-colors">Guide</Link>
-            <span>/</span>
-            <span className="text-teal-200">Step {step.step}</span>
-          </div>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-10 h-10 rounded-full bg-teal-700 text-teal-100 flex items-center justify-center font-serif text-lg font-semibold">
-              {step.step}
-            </span>
-            <span className="text-xs uppercase tracking-widest text-teal-400 font-semibold">
-              Step {step.step} of 6
-            </span>
-          </div>
-          <h1 className="font-serif text-3xl md:text-4xl text-white leading-tight">
-            {step.title}
-          </h1>
-        </div>
-      </section>
+      <PageBanner title="Buyer's Guide" />
 
       <div className="bg-warm-50 border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-3">
@@ -113,18 +93,10 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                       className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
                         s.slug === step.slug
                           ? "bg-teal-600 text-white"
-                          : s.step < step.step
-                          ? "bg-teal-100 text-teal-700"
-                          : "bg-warm-100 text-warm-500"
+                          : "bg-teal-50 text-teal-700"
                       }`}
                     >
-                      {s.step < step.step ? (
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
-                      ) : (
-                        s.step
-                      )}
+                      {s.step}
                     </span>
                     {s.shortTitle}
                   </Link>
@@ -134,6 +106,9 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
             <div className="lg:col-span-3">
               <div className="max-w-2xl">
+                <h2 className="font-serif text-2xl text-teal-950 mb-6">
+                  {step.title}
+                </h2>
                 <div className="prose prose-warm max-w-none">
                   {step.content.map((block, i) => {
                     const parts = block.split("\n\n");
