@@ -44,62 +44,25 @@ export default async function BuyingGuideStepPage({ params }: Props) {
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-8 italic font-bold">
                 Buyer&apos;s Guide
               </h2>
-              <div className="space-y-6">
+              <nav className="space-y-1">
                 {buyingGuideSteps.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/buying/guide/${s.slug}`}
-                    className="flex gap-4 group"
+                    className={`block px-4 py-3 rounded-lg text-sm transition-colors ${
+                      s.slug === step.slug
+                        ? "bg-teal-50 text-teal-900 font-medium"
+                        : "text-warm-600 hover:bg-warm-50 hover:text-teal-700"
+                    }`}
                   >
-                    <div
-                      className={`w-10 h-10 rounded-full flex items-center justify-center font-serif text-lg font-semibold shrink-0 transition-colors ${
-                        s.slug === step.slug
-                          ? "bg-teal-600 text-white"
-                          : s.step < step.step
-                          ? "bg-teal-100 text-teal-700"
-                          : "bg-teal-50 text-teal-700"
-                      }`}
-                    >
-                      {s.step < step.step ? (
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                        </svg>
-                      ) : (
-                        s.step
-                      )}
-                    </div>
-                    <div>
-                      <h3
-                        className={`font-medium mb-1 transition-colors ${
-                          s.slug === step.slug
-                            ? "text-teal-950"
-                            : "text-warm-600 group-hover:text-teal-700"
-                        }`}
-                      >
-                        {s.shortTitle}
-                      </h3>
-                      <p className="text-sm text-warm-500 leading-relaxed">
-                        {s.description}
-                      </p>
-                    </div>
+                    {s.shortTitle}
                   </Link>
                 ))}
-              </div>
+              </nav>
             </div>
 
             {/* Right side: Step content */}
             <div>
-              <div className="flex items-center gap-3 mb-6">
-                <span className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-serif text-lg font-semibold">
-                  {step.step}
-                </span>
-                <span className="text-xs uppercase tracking-widest text-warm-400 font-semibold">
-                  Step {step.step} of {buyingGuideSteps.length}
-                </span>
-              </div>
-              <h2 className="font-serif text-2xl md:text-3xl text-teal-950 mb-8">
-                {step.title}
-              </h2>
 
               {/* Content Sections */}
               <div className="space-y-4 text-warm-600 leading-relaxed">
@@ -110,7 +73,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                       return (
                         <h3
                           key={`${i}-${j}`}
-                          className="font-serif text-xl text-teal-950 mt-8 mb-3 first:mt-0"
+                          className="text-lg font-semibold text-teal-950 mt-8 mb-3 first:mt-0"
                         >
                           {part.replace("## ", "")}
                         </h3>
@@ -217,7 +180,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
               {/* Contact Form */}
               <div className="mt-12 md:mt-16 bg-warm-50 rounded-2xl p-6 md:p-8">
-                <h3 className="font-serif text-xl text-teal-950 mb-2">
+                <h3 className="text-lg font-semibold text-teal-950 mb-2">
                   Have Questions About This Step?
                 </h3>
                 <p className="text-sm text-warm-500 mb-6">
