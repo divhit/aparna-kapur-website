@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Button from "@/components/ui/Button";
 import PageBanner from "@/components/hero/PageBanner";
+import GetInTouch from "@/components/sections/GetInTouch";
 
 export const metadata: Metadata = {
   title: "Why Work With Aparna Kapur | Vancouver Realtor",
@@ -18,20 +18,12 @@ const highlights = [
     desc: "No hand-offs to junior associates. No getting lost in a mega-team. When you work with me, you work directly with me \u2014 from first conversation to closing day and beyond.",
   },
   {
-    title: "Oakwyn Realty Behind Me",
-    desc: "Vancouver\u2019s fastest-growing brokerage \u2014 $6.3 billion in sales, 900+ agents, and the resources of a powerhouse behind every transaction. But you will only ever deal with me.",
-  },
-  {
     title: "I Will Tell You the Truth",
     desc: "If a property is overpriced or a listing strategy is wrong, I will say so. You deserve straight answers, not someone telling you what you want to hear.",
   },
   {
     title: "Data-Driven Decisions",
     desc: "I don\u2019t guess \u2014 I analyze. Every pricing recommendation, every offer strategy, and every market opinion is backed by current data, comparable sales, and strategic analysis.",
-  },
-  {
-    title: "Fresh Energy & Dedication",
-    desc: "I bring the hunger and dedication of someone building their reputation on every single client\u2019s success. My career is built on your satisfaction \u2014 and I never take that for granted.",
   },
   {
     title: "Technology-Forward",
@@ -110,71 +102,12 @@ export default function WhyWorkWithMePage() {
                   ))}
                 </div>
               </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/contact" variant="primary" size="lg">
-                  Get in Touch
-                </Button>
-                <Button href="/buying/guide" variant="outline" size="lg">
-                  Read the Buyer&apos;s Guide
-                </Button>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Oakwyn Stats Band */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
-              Powered By
-            </p>
-            <h2 className="font-serif text-3xl text-teal-950">
-              The Strength of Oakwyn Realty
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <p className="font-serif text-4xl text-teal-700">$6.3B</p>
-              <p className="text-sm text-warm-600 mt-1">Sales Volume (2023)</p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-teal-700">900+</p>
-              <p className="text-sm text-warm-600 mt-1">Agents Across BC</p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-teal-700">#1</p>
-              <p className="text-sm text-warm-600 mt-1">Fastest Growing Brokerage</p>
-            </div>
-            <div>
-              <p className="font-serif text-4xl text-teal-700">10</p>
-              <p className="text-sm text-warm-600 mt-1">Offices in BC</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl text-teal-950 mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-warm-600 mb-8">
-            Let&apos;s have a no-pressure conversation about your real estate goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" variant="primary" size="lg">
-              Let&apos;s Talk
-            </Button>
-            <Button href="/buying/guide" variant="outline" size="lg">
-              Read the Buyer&apos;s Guide
-            </Button>
-          </div>
-        </div>
-      </section>
+      <GetInTouch />
     </>
   );
 }
