@@ -212,9 +212,9 @@ export default function HeroChat() {
 
   return (
     <div className="w-full max-w-3xl mx-auto">
-      <div className={`flex flex-col overflow-hidden transition-all duration-500 ease-in-out ${hasMessages ? "h-[550px]" : "h-[340px]"}`}>
+      <div className={`flex flex-col overflow-hidden transition-all duration-500 ease-in-out bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl ${hasMessages ? "h-[550px]" : "h-[340px]"}`}>
         {/* Header */}
-        <div className="px-5 py-3.5 shrink-0">
+        <div className="px-5 py-3.5 border-b border-white/10 shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               {/* Sparkle / AI icon */}
@@ -328,7 +328,7 @@ export default function HeroChat() {
         </div>
 
         {/* Input */}
-        <div className="p-3 shrink-0">
+        <div className="p-3 border-t border-white/10 shrink-0">
           <form
             onSubmit={(e) => {
               e.preventDefault();
