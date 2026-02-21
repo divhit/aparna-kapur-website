@@ -57,37 +57,42 @@ function AssistantMessage({
   renderPart: (part: UIMessage["parts"][number], i: number) => React.ReactNode;
 }) {
   const { spec, hasSpec } = useJsonRenderMessage(message.parts);
-  let specRendered = false;
+
+  // Separate parts into tools/specs (rendered first) and text (rendered last)
+  const toolParts: { part: UIMessage["parts"][number]; index: number }[] = [];
+  const textParts: { part: UIMessage["parts"][number]; index: number }[] = [];
+  let specIndex = -1;
+
+  message.parts.forEach((part, i) => {
+    if (part.type === "text" && part.text) {
+      textParts.push({ part, index: i });
+    } else if (part.type === SPEC_DATA_PART_TYPE) {
+      if (specIndex === -1) specIndex = i;
+    } else {
+      toolParts.push({ part, index: i });
+    }
+  });
 
   return (
     <div className="flex justify-start">
       <div className="max-w-[95%] space-y-1">
-        {message.parts.map((part, i) => {
-          if (part.type === "text" && part.text) {
-            return (
-              <div
-                key={i}
-                className="px-4 py-2.5 rounded-2xl rounded-bl-md bg-warm-100 text-warm-900 text-sm leading-relaxed"
-              >
-                {part.text}
-              </div>
-            );
-          }
-          if (part.type === SPEC_DATA_PART_TYPE && hasSpec && !specRendered) {
-            specRendered = true;
-            return (
-              <div key={i} className="w-full my-1">
-                <ChatRenderer spec={spec} />
-              </div>
-            );
-          }
-          return renderPart(part, i);
-        })}
-        {hasSpec && !specRendered && (
-          <div className="w-full my-1">
+        {/* 1. Spec/widget visuals first */}
+        {hasSpec && (
+          <div key={specIndex >= 0 ? specIndex : "spec"} className="w-full my-1">
             <ChatRenderer spec={spec} />
           </div>
         )}
+        {/* 2. Tool results (calculators, maps, etc.) */}
+        {toolParts.map(({ part, index }) => renderPart(part, index))}
+        {/* 3. Text last — so the question is always at the bottom */}
+        {textParts.map(({ part, index }) => (
+          <div
+            key={index}
+            className="px-4 py-2.5 rounded-2xl rounded-bl-md bg-warm-100 text-warm-900 text-sm leading-relaxed"
+          >
+            {(part as { text: string }).text}
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -321,27 +326,35 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {messages.map((message) => (
-              <div key={message.id}>
-                {message.role === "user" ? (
-                  <div className="flex justify-end">
-                    <div className="max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-md bg-teal-700 text-white text-sm leading-relaxed">
-                      {message.parts
-                        .filter((p) => p.type === "text")
-                        .map((p, i) =>
-                          p.type === "text" ? (
-                            <span key={i}>{p.text}</span>
-                          ) : null
-                        )}
-                    </div>
-                  </div>
-                ) : (
-                  <AssistantMessage message={message} renderPart={renderPart} />
-                )}
-              </div>
-            ))}
+            {messages.map((message, msgIdx) => {
+              // Hide the last assistant message while still loading — show dots instead
+              const isLastMessage = msgIdx === messages.length - 1;
+              if (isLastMessage && message.role === "assistant" && isLoading) {
+                return null;
+              }
 
-            {status === "submitted" && (
+              return (
+                <div key={message.id}>
+                  {message.role === "user" ? (
+                    <div className="flex justify-end">
+                      <div className="max-w-[80%] px-4 py-2.5 rounded-2xl rounded-br-md bg-teal-700 text-white text-sm leading-relaxed">
+                        {message.parts
+                          .filter((p) => p.type === "text")
+                          .map((p, i) =>
+                            p.type === "text" ? (
+                              <span key={i}>{p.text}</span>
+                            ) : null
+                          )}
+                      </div>
+                    </div>
+                  ) : (
+                    <AssistantMessage message={message} renderPart={renderPart} />
+                  )}
+                </div>
+              );
+            })}
+
+            {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-warm-100 px-4 py-3 rounded-2xl rounded-bl-md">
                   <div className="flex gap-1.5">
