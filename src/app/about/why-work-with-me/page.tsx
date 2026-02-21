@@ -5,97 +5,121 @@ import PageBanner from "@/components/hero/PageBanner";
 export const metadata: Metadata = {
   title: "Why Work With Aparna Kapur | Vancouver Realtor",
   description:
-    "Discover why Aparna Kapur is the right choice for your Vancouver real estate journey. Backed by Oakwyn Realty, powered by local expertise.",
+    "Meet Aparna Kapur and discover why she's the right choice for your Vancouver real estate journey. Backed by Oakwyn Realty, powered by local expertise.",
 };
 
-const differentiators = [
+const highlights = [
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
     title: "True Local Expertise",
-    description:
-      "I live and breathe Oakridge and Vancouver's south side. I know every street, every development timeline, every coffee shop. When you ask me about a neighborhood, you get real answers — not generic marketing.",
+    desc: "I live and breathe Oakridge and Vancouver\u2019s south side. I know every street, every development timeline, every coffee shop. When you ask me about a neighbourhood, you get real answers \u2014 not generic marketing.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-    title: "Oakwyn Realty Backing",
-    description:
-      "You get the personal touch of a dedicated agent backed by Vancouver's fastest-growing brokerage. $6.3 billion in sales, 900+ agents, and the resources of a powerhouse behind every transaction.",
+    title: "One Agent, Start to Finish",
+    desc: "No hand-offs to junior associates. No getting lost in a mega-team. When you work with me, you work directly with me \u2014 from first conversation to closing day and beyond.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-      </svg>
-    ),
-    title: "Your Full, Undivided Attention",
-    description:
-      "No hand-offs to junior associates. No getting lost in a mega-team. When you work with me, you work directly with me — from first conversation to closing day and beyond.",
+    title: "Oakwyn Realty Behind Me",
+    desc: "Vancouver\u2019s fastest-growing brokerage \u2014 $6.3 billion in sales, 900+ agents, and the resources of a powerhouse behind every transaction. But you will only ever deal with me.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
+    title: "I Will Tell You the Truth",
+    desc: "If a property is overpriced or a listing strategy is wrong, I will say so. You deserve straight answers, not someone telling you what you want to hear.",
+  },
+  {
     title: "Data-Driven Decisions",
-    description:
-      "I don't guess — I analyze. Every pricing recommendation, every offer strategy, and every market opinion is backed by current data, comparable sales, and strategic market analysis.",
+    desc: "I don\u2019t guess \u2014 I analyze. Every pricing recommendation, every offer strategy, and every market opinion is backed by current data, comparable sales, and strategic analysis.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
     title: "Fresh Energy & Dedication",
-    description:
-      "I bring the hunger and dedication of someone building their reputation on every single client's success. My career is built on your satisfaction — and I never take that for granted.",
+    desc: "I bring the hunger and dedication of someone building their reputation on every single client\u2019s success. My career is built on your satisfaction \u2014 and I never take that for granted.",
   },
   {
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
     title: "Technology-Forward",
-    description:
-      "From professional photography and virtual tours to digital marketing and real-time market alerts, I use the latest tools to give you an edge in today's competitive market.",
+    desc: "From professional photography and virtual tours to digital marketing and real-time market alerts, I use the latest tools to give you an edge in today\u2019s competitive market.",
+  },
+  {
+    title: "I Answer My Phone",
+    desc: "Text me, call me \u2014 I get back to you the same day. That responsiveness is how deals get done in this market.",
   },
 ];
 
 export default function WhyWorkWithMePage() {
   return (
     <>
-      <PageBanner eyebrow="Your Advantage" title="Why Work With Me" description="Choosing a realtor is one of the most important decisions in your real estate journey. Here's why clients choose me." />
+      <PageBanner
+        eyebrow="About Me"
+        title="Why Work With Me"
+        description="Vancouver realtor with Oakwyn Realty, specializing in Oakridge and the south side."
+      />
 
+      {/* Main Content */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {differentiators.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-8 border border-warm-100 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center mb-5">
-                  {item.icon}
-                </div>
-                <h3 className="font-serif text-lg text-teal-950 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-warm-600 leading-relaxed">
-                  {item.description}
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="lg:sticky lg:top-28">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
+                <img
+                  src="/images/about/aparna-kapur.jpg"
+                  alt="Aparna Kapur and Cooper - Vancouver Realtor with Oakwyn Realty"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+            </div>
+
+            <div className="space-y-8">
+              <div>
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Why I Do This
+                </h2>
+                <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
+                  <p>
+                    I got into real estate because I saw too many people getting poor advice on the
+                    biggest purchase of their lives. A home is not a commodity &mdash; it is where your
+                    family lives, where your kids grow up. The agent you choose should understand that.
+                  </p>
+                  <p>
+                    I focus on Oakridge and Vancouver&apos;s south side because this is where I live and work.
+                    The Oakridge Park redevelopment, the rezoning along Cambie, the new transit connections
+                    &mdash; I track all of it because my clients need to know how these changes affect their
+                    property values and their daily lives.
+                  </p>
+                  <p>
+                    I work with Oakwyn Realty because they are the top brokerage in Vancouver &mdash;
+                    $6.3 billion in sales, 900+ agents across BC. That gives me access to market data,
+                    off-market listings, and a professional network that directly benefits my clients.
+                    But you will only ever deal with me.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-teal-50 rounded-2xl p-8">
+                <h3 className="font-serif text-xl text-teal-900 mb-4">
+                  What You Get Working With Me
+                </h3>
+                <div className="space-y-4">
+                  {highlights.map((item) => (
+                    <div key={item.title} className="flex gap-3">
+                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <div>
+                        <p className="text-sm font-semibold text-teal-900">{item.title}</p>
+                        <p className="text-sm text-teal-700/80">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button href="/contact" variant="primary" size="lg">
+                  Get in Touch
+                </Button>
+                <Button href="/buying/guide" variant="outline" size="lg">
+                  Read the Buyer&apos;s Guide
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

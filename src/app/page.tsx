@@ -138,10 +138,7 @@ export default function HomePage() {
                 network that makes a real difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/about" variant="primary">
-                  Learn More About Me
-                </Button>
-                <Button href="/about/why-work-with-me" variant="ghost">
+                <Button href="/about/why-work-with-me" variant="primary">
                   Why Work With Me
                 </Button>
               </div>
