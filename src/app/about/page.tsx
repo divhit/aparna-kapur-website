@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="lg:sticky lg:top-28">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
+              <div className="aspect-square rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
                   alt="Aparna Kapur and Cooper - Vancouver Realtor with Oakwyn Realty"
