@@ -25,8 +25,8 @@ export default function AboutPage() {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
-                  alt="Aparna Kapur - Vancouver Realtor with Oakwyn Realty"
-                  className="w-full h-full object-cover"
+                  alt="Aparna Kapur and Cooper - Vancouver Realtor with Oakwyn Realty"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
