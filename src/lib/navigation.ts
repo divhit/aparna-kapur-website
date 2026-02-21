@@ -10,7 +10,6 @@ export const navLeft: NavItem[] = [
     label: "About",
     href: "/about",
     children: [
-      { label: "Meet Aparna", href: "/about" },
       { label: "Why Work With Me", href: "/about/why-work-with-me" },
       { label: "Oakwyn Realty", href: "/about/oakwyn-realty" },
       { label: "Testimonials", href: "/about/testimonials" },

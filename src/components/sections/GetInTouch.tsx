@@ -48,7 +48,7 @@ export default function GetInTouch() {
       ref={sectionRef}
       className="py-24 bg-teal-950 overflow-hidden"
     >
-      <div className="max-w-2xl mx-auto px-6 text-center">
+      <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Animated heading */}
         <div className="overflow-hidden mb-2">
           <p
@@ -95,7 +95,7 @@ export default function GetInTouch() {
               <p className="text-white/60">Aparna will be in touch soon.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto items-center justify-center">
               <input
                 type="text"
                 placeholder="Your name"
