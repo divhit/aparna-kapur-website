@@ -89,11 +89,11 @@ export default function HomePage() {
       <section className="py-16 bg-teal-950">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-3 italic">
-              My Comprehensive Guide, Ask Me Anything, Vancouver!
+            <h2 className="font-serif text-3xl md:text-4xl text-white mb-1 italic">
+              My Comprehensive Guide.
             </h2>
-            <p className="text-white/60 text-lg">
-              Neighbourhoods, mortgages, buying, selling &mdash; get instant answers.
+            <p className="font-serif text-2xl md:text-3xl text-white/80 italic">
+              Ask Me Anything, Vancouver!
             </p>
           </div>
           <HeroChat />

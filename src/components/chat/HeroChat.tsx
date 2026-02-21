@@ -266,9 +266,6 @@ export default function HeroChat() {
         <div ref={scrollContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3 scrollbar-thin scrollbar-thumb-white/10">
           {messages.length === 0 && (
             <div className="flex flex-col items-center justify-center h-full py-4">
-              <p className="text-sm text-white/60 mb-5 text-center px-4">
-                Neighbourhoods, buying, selling, mortgages &mdash; I can help with it all.
-              </p>
               <div className="grid grid-cols-2 gap-2 w-full px-2">
                 {QUICK_QUESTIONS.map((q) => (
                   <button
