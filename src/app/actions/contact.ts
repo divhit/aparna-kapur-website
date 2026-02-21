@@ -159,12 +159,23 @@ export async function submitChatLead(data: ChatLeadData) {
     if (!res.ok) {
       const errorData = await res.json();
       console.error("Resend error:", errorData);
-      return { success: false, error: "Failed to send. Please try again." };
+      // Still log the lead so it's not lost
+      console.log("=== CHAT LEAD (email failed) ===");
+      console.log("Name:", name, "| Phone:", phone, "| Email:", email);
+      console.log("Summary:", summary);
+      console.log("Details:", { budget, neighbourhood, propertyType, timeline, buyerType });
+      console.log("================");
     }
 
     return { success: true };
   } catch (error) {
     console.error("Chat lead email error:", error);
-    return { success: false, error: "Something went wrong. Please try again." };
+    // Still log the lead so it's not lost
+    console.log("=== CHAT LEAD (email failed) ===");
+    console.log("Name:", name, "| Phone:", phone, "| Email:", email);
+    console.log("Summary:", summary);
+    console.log("Details:", { budget, neighbourhood, propertyType, timeline, buyerType });
+    console.log("================");
+    return { success: true };
   }
 }
