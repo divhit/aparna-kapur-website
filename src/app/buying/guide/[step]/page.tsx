@@ -41,9 +41,6 @@ export default async function BuyingGuideStepPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 items-start">
             {/* Left side: Steps navigation */}
             <div className="lg:sticky lg:top-28">
-              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-8 italic font-bold">
-                Buyer&apos;s Guide
-              </h2>
               <nav className="space-y-2">
                 {buyingGuideSteps.map((s) => (
                   <Link
@@ -80,6 +77,9 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
             {/* Right side: Step content */}
             <div>
+              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-8 italic font-bold">
+                Buyer&apos;s Guide
+              </h2>
 
               {/* Content Sections */}
               <div className="space-y-4 text-warm-600 leading-relaxed">
