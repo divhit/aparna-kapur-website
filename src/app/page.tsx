@@ -53,7 +53,9 @@ export default function HomePage() {
             Aparna Kapur
           </h1>
           <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
-            I know Oakridge and Vancouver&apos;s south side inside out. If you&apos;re buying or selling here, let&apos;s talk.
+            I know Oakridge and Vancouver&apos;s south side inside out.
+            <br />
+            If you&apos;re buying or selling here, let&apos;s talk.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -72,7 +74,7 @@ export default function HomePage() {
               href="/selling/home-valuation"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              VALUE YOUR HOME
+              VALUATION
             </Link>
           </div>
         </div>
@@ -117,7 +119,7 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
+              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6 italic font-bold">
                 Hi, I&apos;m Aparna
               </h2>
               <p className="text-warm-600 leading-relaxed mb-4">
@@ -146,7 +148,7 @@ export default function HomePage() {
       {/* SECTION 3b: January 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-4xl md:text-5xl text-teal-950 italic font-bold leading-tight mb-16">
+          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
             January 2026, Vancouver
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
@@ -200,34 +202,34 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 4: Featured Neighborhoods */}
-      <section className="py-20 bg-warm-50">
+      <section className="pt-6 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold">
               Neighbourhoods, I Know These Streets
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-            {neighborhoods.map((hood) => (
-              <Link
-                key={hood.slug}
-                href={`/neighborhoods/${hood.slug}`}
-                className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
-              >
-                <img
-                  src={hood.image}
-                  alt={`${hood.name} Vancouver neighborhood`}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
-                    {hood.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
-          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
+          {neighborhoods.map((hood) => (
+            <Link
+              key={hood.slug}
+              href={`/neighborhoods/${hood.slug}`}
+              className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
+            >
+              <img
+                src={hood.image}
+                alt={`${hood.name} Vancouver neighborhood`}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
+                  {hood.name}
+                </h3>
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -239,7 +241,7 @@ export default function HomePage() {
         <img
           src="https://images.pexels.com/photos/30294477/pexels-photo-30294477.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Aerial view of Stanley Park Seawall with lush greenery and calm waters"
-          className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-[1200ms]"
+          className="absolute inset-0 w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-950/60 to-transparent" />
@@ -248,22 +250,10 @@ export default function HomePage() {
             Oakridge
           </h2>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
-            Vancouver&apos;s most exciting transformation. Bringing world-class living to the heart of the city.
+            Vancouver&apos;s most exciting transformation.
+            <br />
+            Bringing world-class living to the heart of the city.
           </p>
-          <div className="flex flex-wrap gap-6 sm:gap-10 mb-8">
-            <div>
-              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">3,300+</span>
-              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">New Homes</p>
-            </div>
-            <div>
-              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">9 Acres</span>
-              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">Public Park</p>
-            </div>
-            <div>
-              <span className="font-serif text-2xl sm:text-3xl md:text-4xl text-white">15 min</span>
-              <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">To Downtown</p>
-            </div>
-          </div>
           <span className="inline-flex items-center text-white text-sm font-medium uppercase tracking-wider group-hover:text-teal-300 transition-colors">
             Explore the Oakridge Guide
             <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">

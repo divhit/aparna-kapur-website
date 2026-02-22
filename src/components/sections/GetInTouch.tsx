@@ -46,31 +46,22 @@ export default function GetInTouch() {
   return (
     <section
       ref={sectionRef}
-      className="py-24 bg-teal-950 overflow-hidden"
+      className="py-14 bg-teal-950 overflow-hidden"
     >
       <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Animated heading */}
-        <div className="overflow-hidden mb-2">
-          <p
-            className={`text-xs uppercase tracking-[0.25em] text-teal-400 font-semibold transition-all duration-700 ease-out ${
-              visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
-            }`}
-          >
-            Get in Touch
-          </p>
-        </div>
-        <div className="overflow-hidden mb-4">
+        <div className="overflow-hidden mb-3">
           <h2
-            className={`font-serif text-3xl md:text-4xl text-white italic font-bold transition-all duration-700 ease-out delay-150 ${
+            className={`font-serif text-3xl md:text-4xl text-white italic font-bold transition-all duration-700 ease-out ${
               visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
           >
             Let&apos;s Talk
           </h2>
         </div>
-        <div className="overflow-hidden mb-10">
+        <div className="overflow-hidden mb-8">
           <p
-            className={`text-white/60 text-lg transition-all duration-700 ease-out delay-300 ${
+            className={`text-white/60 text-lg transition-all duration-700 ease-out delay-150 ${
               visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
           >
@@ -80,7 +71,7 @@ export default function GetInTouch() {
 
         {/* Form */}
         <div
-          className={`transition-all duration-700 ease-out delay-500 ${
+          className={`transition-all duration-700 ease-out delay-300 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
@@ -125,7 +116,7 @@ export default function GetInTouch() {
 
         {/* Direct contact links */}
         <div
-          className={`mt-8 flex items-center justify-center gap-6 text-sm transition-all duration-700 ease-out delay-700 ${
+          className={`mt-6 flex items-center justify-center gap-6 text-sm transition-all duration-700 ease-out delay-500 ${
             visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
