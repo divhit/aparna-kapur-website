@@ -122,11 +122,13 @@ export default function HomeValuationForm() {
           />
         </svg>
         <h3 className="font-serif text-2xl text-teal-900 mb-2">
-          Thank You!
+          Your Valuation Snapshot Is On Its Way!
         </h3>
         <p className="text-warm-600 text-sm max-w-sm mx-auto">
-          Aparna will personally reach out to you within 48 hours to discuss
-          your home&apos;s value. Talk soon!
+          Check your inbox &mdash; you&apos;ll receive a quick snapshot of your
+          home&apos;s estimated value shortly. For the full Comparative Market
+          Analysis with detailed comparables and pricing strategy, I&apos;ll be
+          in touch within 48 hours to walk you through everything.
         </p>
       </div>
     );
@@ -353,8 +355,7 @@ export default function HomeValuationForm() {
       {step === 4 && (
         <div className="space-y-5">
           <p className="text-sm text-warm-600">
-            Almost done! Aparna will reach out to you personally to discuss
-            your home&apos;s value.
+            Last step! Enter your details to receive your valuation snapshot.
           </p>
           <input
             type="text"

@@ -43,13 +43,13 @@ export default function HomeValuationPage() {
                   },
                   {
                     step: "3",
-                    title: "I'll Reach Out to You",
-                    desc: "Within 48 hours, Aparna will personally call or meet with you to walk through your home's value and discuss your options.",
+                    title: "Receive Your Valuation Snapshot",
+                    desc: "You'll get a quick snapshot of your home's estimated value straight to your inbox — so you have something useful right away.",
                   },
                   {
                     step: "4",
-                    title: "Get Your Personalized CMA",
-                    desc: "You'll receive a detailed Comparative Market Analysis in person, with time to ask questions. No pressure, no obligation.",
+                    title: "Get the Full CMA",
+                    desc: "Within 48 hours, I'll reach out to walk you through the complete Comparative Market Analysis with detailed comparables and pricing strategy.",
                   },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
