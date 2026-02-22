@@ -82,6 +82,19 @@ const stagingSteps = [
       "Ensure outdoor lighting works for evening showings",
     ],
   },
+  {
+    title: "Vancouver-Specific Staging",
+    description:
+      "Vancouver buyers have unique expectations. Stage for the local market to maximize your home's appeal in this competitive city.",
+    tips: [
+      "Embrace natural light — open blinds and curtains. Vancouver buyers crave light, especially in the rainy months.",
+      "Highlight outdoor spaces — even small patios and balconies should be staged with weather-resistant furniture.",
+      "If you have a view — mountains, water, or city — make sure nothing blocks it. Rearrange furniture if needed.",
+      "Address moisture concerns — dehumidify, fix any condensation issues, and ensure no musty smells.",
+      "For condos, make the entrance and common areas spotless. Lobby impressions matter.",
+      "Stage for the Vancouver buyer: clean lines, natural materials, and a West Coast contemporary feel.",
+    ],
+  },
 ];
 
 export default function StagingTipsPage() {
@@ -93,7 +106,7 @@ export default function StagingTipsPage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Why Staging Matters */}
           <div className="bg-teal-50 rounded-2xl p-8 border border-teal-100 mb-12">
-            <h2 className="font-serif text-2xl text-teal-950 mb-4">
+            <h2 className="font-serif text-2xl text-teal-950 mb-4 italic font-bold">
               Why Staging Matters in Vancouver
             </h2>
             <p className="text-sm text-teal-800/80 leading-relaxed mb-6">
@@ -140,7 +153,7 @@ export default function StagingTipsPage() {
                     {index + 1}
                   </span>
                   <div>
-                    <h2 className="font-serif text-xl text-teal-950">
+                    <h2 className="font-serif text-xl text-teal-950 italic font-bold">
                       {step.title}
                     </h2>
                     <p className="text-sm text-warm-600 leading-relaxed mt-1">
@@ -173,43 +186,6 @@ export default function StagingTipsPage() {
                 </ul>
               </div>
             ))}
-          </div>
-
-          {/* Vancouver-Specific Tips */}
-          <div className="mt-12 bg-warm-50 rounded-2xl p-8 border border-warm-100">
-            <h2 className="font-serif text-xl text-teal-950 mb-4">
-              Vancouver-Specific Staging Tips
-            </h2>
-            <ul className="space-y-3">
-              {[
-                "Embrace natural light — open blinds and curtains. Vancouver buyers crave light, especially in the rainy months.",
-                "Highlight outdoor spaces — even small patios and balconies should be staged with weather-resistant furniture.",
-                "If you have a view — mountains, water, or city — make sure nothing blocks it. Rearrange furniture if needed.",
-                "Address moisture concerns — dehumidify, fix any condensation issues, and ensure no musty smells.",
-                "For condos, make the entrance and common areas spotless. Lobby impressions matter.",
-                "Stage for the Vancouver buyer: clean lines, natural materials, and a West Coast contemporary feel.",
-              ].map((tip, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-3 text-sm text-warm-700"
-                >
-                  <svg
-                    className="w-4 h-4 text-gold-500 shrink-0 mt-0.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {tip}
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div className="mt-12 bg-teal-50 rounded-2xl p-6 border border-teal-100">

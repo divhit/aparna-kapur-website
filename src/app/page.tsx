@@ -58,22 +58,22 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/buying"
+              href="/buying/guide/the-big-decision"
               className="px-8 py-4 bg-white text-teal-900 rounded-xl text-lg font-semibold hover:bg-teal-50 transition-colors shadow-lg"
             >
-              Buy
+              BUYING
             </Link>
             <Link
-              href="/selling"
+              href="/selling/guide/deciding-to-sell"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Sell
+              SELLING
             </Link>
             <Link
               href="/selling/home-valuation"
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/30 rounded-xl text-lg font-semibold hover:bg-white/20 transition-colors"
             >
-              Value Your Home
+              VALUE YOUR HOME
             </Link>
           </div>
         </div>

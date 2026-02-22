@@ -90,7 +90,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
                     }`}
                   >
                     <span
-                      className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-semibold ${
+                      className={`w-10 h-10 rounded-full flex items-center justify-center font-serif text-lg font-semibold shrink-0 ${
                         s.slug === step.slug
                           ? "bg-teal-600 text-white"
                           : "bg-teal-50 text-teal-700"
@@ -106,7 +106,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
 
             <div className="lg:col-span-3">
               <div className="max-w-2xl">
-                <h2 className="font-serif text-2xl text-teal-950 mb-6">
+                <h2 className="font-serif text-2xl text-teal-950 mb-6 italic font-bold">
                   {step.title}
                 </h2>
                 <div className="prose prose-warm max-w-none">
@@ -115,7 +115,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
                     return parts.map((part, j) => {
                       if (part.startsWith("## ")) {
                         return (
-                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-10 mb-4 first:mt-0">
+                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-10 mb-4 first:mt-0 italic font-bold">
                             {part.replace("## ", "")}
                           </h2>
                         );
@@ -182,15 +182,9 @@ export default async function SellingGuideStepPage({ params }: Props) {
                     </Link>
                   ) : <div />}
                   {nextStep ? (
-                    <Link href={`/selling/guide/${nextStep.slug}`} className="flex items-center gap-2 text-sm text-teal-700 font-medium hover:text-teal-800 transition-colors">
-                      <span className="text-right">
-                        <span className="block text-xs text-warm-400">Next Step</span>
-                        {nextStep.shortTitle}
-                      </span>
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
+                    <Button href={`/selling/guide/${nextStep.slug}`} variant="primary">
+                      Next: {nextStep.shortTitle}
+                    </Button>
                   ) : (
                     <Button href="/contact" variant="primary">Ready? Let&apos;s Talk</Button>
                   )}
