@@ -157,15 +157,9 @@ export default async function SellingGuideStepPage({ params }: Props) {
 
                 <div className="mt-12 flex items-center justify-between gap-4 pt-8 border-t border-warm-100">
                   {prevStep ? (
-                    <Link href={`/selling/guide/${prevStep.slug}`} className="flex items-center gap-2 text-sm text-warm-600 hover:text-teal-700 transition-colors">
-                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                      </svg>
-                      <span>
-                        <span className="block text-xs text-warm-400">Previous</span>
-                        {prevStep.shortTitle}
-                      </span>
-                    </Link>
+                    <Button href={`/selling/guide/${prevStep.slug}`} variant="outline">
+                      Previous
+                    </Button>
                   ) : <div />}
                   {nextStep ? (
                     <Button href={`/selling/guide/${nextStep.slug}`} variant="primary">
