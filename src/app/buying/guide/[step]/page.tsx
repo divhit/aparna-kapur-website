@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { buyingGuideSteps } from "@/lib/guide-data";
-import ContactForm from "@/components/forms/ContactForm";
 import Button from "@/components/ui/Button";
 import PageBanner from "@/components/hero/PageBanner";
 
@@ -106,7 +105,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
             <div className="lg:col-span-3">
               <div className="max-w-2xl">
-                <h2 className="font-serif text-2xl text-teal-950 mb-6 italic font-bold">
+                <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-6 italic font-bold">
                   {step.title}
                 </h2>
                 <div className="prose prose-warm max-w-none">
@@ -115,7 +114,7 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                     return parts.map((part, j) => {
                       if (part.startsWith("## ")) {
                         return (
-                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-10 mb-4 first:mt-0 italic font-bold">
+                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-10 mb-4 first:mt-0">
                             {part.replace("## ", "")}
                           </h2>
                         );
@@ -155,20 +154,6 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                   })}
                 </div>
 
-                <div className="mt-10 bg-teal-50 rounded-2xl p-6 border border-teal-100">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-white font-serif text-sm font-semibold">AK</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-teal-900 mb-2">Aparna&apos;s Insight</p>
-                      <p className="text-sm text-teal-800/80 leading-relaxed italic">
-                        &ldquo;{step.insight}&rdquo;
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="mt-12 flex items-center justify-between gap-4 pt-8 border-t border-warm-100">
                   {prevStep ? (
                     <Link href={`/buying/guide/${prevStep.slug}`} className="flex items-center gap-2 text-sm text-warm-600 hover:text-teal-700 transition-colors">
@@ -183,18 +168,13 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                   ) : <div />}
                   {nextStep ? (
                     <Button href={`/buying/guide/${nextStep.slug}`} variant="primary">
-                      Next: {nextStep.shortTitle}
+                      Next
                     </Button>
                   ) : (
                     <Button href="/contact" variant="primary">Ready? Let&apos;s Talk</Button>
                   )}
                 </div>
 
-                <div className="mt-12 md:mt-16 bg-warm-50 rounded-2xl p-6 md:p-8">
-                  <h3 className="font-serif text-xl text-teal-950 mb-2">Have Questions About This Step?</h3>
-                  <p className="text-sm text-warm-500 mb-6">I&apos;m here to help. Send me a message and I&apos;ll get back to you within 24 hours.</p>
-                  <ContactForm compact />
-                </div>
               </div>
             </div>
           </div>

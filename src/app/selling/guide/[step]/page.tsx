@@ -155,20 +155,6 @@ export default async function SellingGuideStepPage({ params }: Props) {
                   })}
                 </div>
 
-                <div className="mt-10 bg-teal-50 rounded-2xl p-6 border border-teal-100">
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center shrink-0 mt-0.5">
-                      <span className="text-white font-serif text-sm font-semibold">AK</span>
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-teal-900 mb-2">Aparna&apos;s Insight</p>
-                      <p className="text-sm text-teal-800/80 leading-relaxed italic">
-                        &ldquo;{step.insight}&rdquo;
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="mt-12 flex items-center justify-between gap-4 pt-8 border-t border-warm-100">
                   {prevStep ? (
                     <Link href={`/selling/guide/${prevStep.slug}`} className="flex items-center gap-2 text-sm text-warm-600 hover:text-teal-700 transition-colors">
