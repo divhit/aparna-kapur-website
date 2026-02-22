@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import ContactForm from "@/components/forms/ContactForm";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
@@ -144,10 +142,7 @@ export default function StagingTipsPage() {
           {/* Staging Steps */}
           <div className="space-y-10">
             {stagingSteps.map((step, index) => (
-              <div
-                key={step.title}
-                className="bg-white rounded-2xl p-8 shadow-sm border border-warm-100"
-              >
+              <div key={step.title}>
                 <div className="flex items-start gap-4 mb-4">
                   <span className="w-10 h-10 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center font-serif text-lg font-semibold shrink-0">
                     {index + 1}
@@ -186,61 +181,6 @@ export default function StagingTipsPage() {
                 </ul>
               </div>
             ))}
-          </div>
-
-          <div className="mt-12 bg-teal-50 rounded-2xl p-6 border border-teal-100">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center shrink-0 mt-0.5">
-                <span className="text-white font-serif text-sm font-semibold">
-                  AK
-                </span>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-teal-900 mb-2">
-                  My Staging Approach
-                </p>
-                <p className="text-sm text-teal-800/80 leading-relaxed italic">
-                  &ldquo;For every listing, I provide a personalized staging
-                  consultation — even if you&apos;re doing the staging yourself.
-                  I&apos;ll walk through your home room by room and give you
-                  specific, actionable recommendations. For properties that
-                  benefit from professional staging, I work with Vancouver&apos;s
-                  top staging companies and can coordinate everything for
-                  you.&rdquo;
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-sm text-warm-500 mb-4">
-              Ready to prepare your home for sale?
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/selling/home-valuation"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gold-500 text-teal-950 font-semibold rounded-lg hover:bg-gold-400 transition-colors text-sm"
-              >
-                Get a Free Home Valuation
-              </Link>
-              <Link
-                href="/selling/guide/preparing-your-home"
-                className="inline-flex items-center justify-center px-6 py-3 border border-teal-200 text-teal-700 font-semibold rounded-lg hover:bg-teal-50 transition-colors text-sm"
-              >
-                Read the Seller&apos;s Guide
-              </Link>
-            </div>
-          </div>
-
-          <div className="mt-16 bg-warm-50 rounded-2xl p-8">
-            <h3 className="font-serif text-xl text-teal-950 mb-2">
-              Want a Personalized Staging Plan?
-            </h3>
-            <p className="text-sm text-warm-500 mb-6">
-              Let&apos;s discuss how to present your home in the best possible
-              light.
-            </p>
-            <ContactForm compact />
           </div>
         </div>
       </section>
