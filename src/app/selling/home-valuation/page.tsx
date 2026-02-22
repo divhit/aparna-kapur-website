@@ -43,13 +43,13 @@ export default function HomeValuationPage() {
                   },
                   {
                     step: "3",
-                    title: "Receive Your CMA Report",
-                    desc: "Within 48 hours, you'll receive a detailed Comparative Market Analysis with a recommended price range for your home.",
+                    title: "I'll Reach Out to You",
+                    desc: "Within 48 hours, Aparna will personally call or meet with you to walk through your home's value and discuss your options.",
                   },
                   {
                     step: "4",
-                    title: "Let's Discuss (Optional)",
-                    desc: "If you'd like, we can meet to walk through the report and discuss your options. No pressure, no obligation.",
+                    title: "Get Your Personalized CMA",
+                    desc: "You'll receive a detailed Comparative Market Analysis in person, with time to ask questions. No pressure, no obligation.",
                   },
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">

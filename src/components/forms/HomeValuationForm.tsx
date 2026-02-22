@@ -122,11 +122,11 @@ export default function HomeValuationForm() {
           />
         </svg>
         <h3 className="font-serif text-2xl text-teal-900 mb-2">
-          Valuation Request Received!
+          Thank You!
         </h3>
         <p className="text-warm-600 text-sm max-w-sm mx-auto">
-          I&apos;ll prepare your Comparative Market Analysis and send it within
-          48 hours. Thank you!
+          Aparna will personally reach out to you within 48 hours to discuss
+          your home&apos;s value. Talk soon!
         </p>
       </div>
     );
@@ -208,48 +208,46 @@ export default function HomeValuationForm() {
       {/* Step 2: Property Specs */}
       {step === 2 && (
         <div className="space-y-5">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-warm-800 mb-2">
-                Bedrooms
-              </label>
-              <div className="flex gap-2">
-                {["1", "2", "3", "4", "5+"].map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    onClick={() => update("bedrooms", n)}
-                    className={`flex-1 py-3 rounded-lg border text-sm transition-colors ${
-                      formData.bedrooms === n
-                        ? "border-teal-600 bg-teal-50 text-teal-800 font-medium"
-                        : "border-warm-200 text-warm-700 hover:border-teal-300"
-                    }`}
-                  >
-                    {n}
-                  </button>
-                ))}
-              </div>
+          <div>
+            <label className="block text-sm font-semibold text-warm-900 mb-3">
+              How many bedrooms?
+            </label>
+            <div className="flex gap-2">
+              {["1", "2", "3", "4", "5+"].map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => update("bedrooms", n)}
+                  className={`flex-1 py-3.5 rounded-lg border text-sm transition-colors ${
+                    formData.bedrooms === n
+                      ? "border-teal-600 bg-teal-50 text-teal-800 font-medium"
+                      : "border-warm-200 text-warm-700 hover:border-teal-300"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
             </div>
-            <div>
-              <label className="block text-sm font-medium text-warm-800 mb-2">
-                Bathrooms
-              </label>
-              <div className="flex gap-2">
-                {["1", "2", "3", "4+"].map((n) => (
-                  <button
-                    key={n}
-                    type="button"
-                    onClick={() => update("bathrooms", n)}
-                    className={`flex-1 py-3 rounded-lg border text-sm transition-colors ${
-                      formData.bathrooms === n
-                        ? "border-teal-600 bg-teal-50 text-teal-800 font-medium"
-                        : "border-warm-200 text-warm-700 hover:border-teal-300"
-                    }`}
-                  >
-                    {n}
-                  </button>
-                ))}
-              </div>
+          </div>
+          <div>
+            <label className="block text-sm font-semibold text-warm-900 mb-3">
+              How many bathrooms?
+            </label>
+            <div className="flex gap-2">
+              {["1", "2", "3", "4+"].map((n) => (
+                <button
+                  key={n}
+                  type="button"
+                  onClick={() => update("bathrooms", n)}
+                  className={`flex-1 py-3.5 rounded-lg border text-sm transition-colors ${
+                    formData.bathrooms === n
+                      ? "border-teal-600 bg-teal-50 text-teal-800 font-medium"
+                      : "border-warm-200 text-warm-700 hover:border-teal-300"
+                  }`}
+                >
+                  {n}
+                </button>
+              ))}
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
@@ -355,8 +353,8 @@ export default function HomeValuationForm() {
       {step === 4 && (
         <div className="space-y-5">
           <p className="text-sm text-warm-600">
-            Almost done! I&apos;ll use this to send your personalized CMA
-            report.
+            Almost done! Aparna will reach out to you personally to discuss
+            your home&apos;s value.
           </p>
           <input
             type="text"
