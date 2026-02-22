@@ -56,10 +56,6 @@ export default function Footer() {
                 Real Estate | Oakwyn Realty
               </span>
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-xs">
-              Your trusted real estate partner in Oakridge and Greater Vancouver.
-              Helping buyers and sellers make confident decisions.
-            </p>
             <div className="space-y-2 text-sm">
               <a
                 href="tel:+16046127694"

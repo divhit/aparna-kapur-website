@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
 import HeroChat from "@/components/chat/HeroChat";
 import GetInTouch from "@/components/sections/GetInTouch";
 import HeroSlideshow from "@/components/hero/HeroSlideshow";
@@ -118,9 +117,6 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
-                About Me
-              </p>
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6">
                 Hi, I&apos;m Aparna
               </h2>
@@ -150,11 +146,8 @@ export default function HomePage() {
       {/* SECTION 3b: January 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <p className="text-teal-600 text-xs uppercase tracking-[0.3em] font-semibold mb-3">
-            January 2026
-          </p>
-          <h2 className="font-serif text-4xl md:text-5xl text-teal-950 italic leading-tight mb-16">
-            Metro Vancouver Market
+          <h2 className="font-serif text-4xl md:text-5xl text-teal-950 italic font-bold leading-tight mb-16">
+            January 2026, Vancouver
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
@@ -203,50 +196,37 @@ export default function HomePage() {
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
             Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull; January 2026
           </p>
-          <div className="mt-8">
-            <Button href="/resources/market-reports" variant="outline">
-              View Market Reports
-            </Button>
-          </div>
         </div>
       </section>
 
       {/* SECTION 4: Featured Neighborhoods */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="Neighbourhoods"
-            title="I Know These Streets"
-            description="I have walked every block of these neighbourhoods. Here is what you should know before buying or selling in each one."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold">
+              Neighbourhoods, I Know These Streets
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
             {neighborhoods.map((hood) => (
               <Link
                 key={hood.slug}
                 href={`/neighborhoods/${hood.slug}`}
-                className="group relative rounded-2xl overflow-hidden h-72 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
               >
                 <img
                   src={hood.image}
                   alt={`${hood.name} Vancouver neighborhood`}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="font-serif text-xl text-white mb-1 group-hover:text-teal-200 transition-colors">
+                  <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
                     {hood.name}
                   </h3>
-                  <p className="text-sm text-white/70 leading-relaxed">
-                    {hood.description}
-                  </p>
                 </div>
               </Link>
             ))}
-          </div>
-          <div className="text-center mt-10">
-            <Button href="/neighborhoods" variant="outline">
-              View All Neighborhoods
-            </Button>
           </div>
         </div>
       </section>
@@ -264,15 +244,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-950/60 to-transparent" />
         <div className="relative h-full flex flex-col justify-end max-w-7xl mx-auto px-6 pb-16">
-          <p className="text-teal-300 text-xs uppercase tracking-[0.3em] font-semibold mb-4">
-            Featured Neighbourhood
-          </p>
           <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-6">
             Oakridge
           </h2>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
-            Vancouver&apos;s most exciting transformation. The $6B Oakridge Park
-            redevelopment is bringing world-class living to the heart of the city.
+            Vancouver&apos;s most exciting transformation. Bringing world-class living to the heart of the city.
           </p>
           <div className="flex flex-wrap gap-6 sm:gap-10 mb-8">
             <div>
@@ -297,68 +273,7 @@ export default function HomePage() {
         </div>
       </Link>
 
-      {/* SECTION 6: Resources Preview */}
-      <section className="py-20 bg-teal-950">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="Resources"
-            title="Do Your Homework"
-            description="I put these together so you can go into your first conversation with me already knowing the basics. The real strategy starts when we talk."
-            light
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link
-              href="/resources/market-reports"
-              className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-lg text-white mb-2">Market Reports</h3>
-              <p className="text-sm text-white/60 leading-relaxed">
-                Stay informed with monthly Vancouver real estate market analysis and trends.
-              </p>
-            </Link>
-            <Link
-              href="/buying/guide"
-              className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-lg text-white mb-2">Buyer&apos;s Guide</h3>
-              <p className="text-sm text-white/60 leading-relaxed">
-                A complete 6-step guide to buying a home in Vancouver, from pre-approval to moving day.
-              </p>
-            </Link>
-            <Link
-              href="/resources/mortgage-calculator"
-              className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:bg-white/10 transition-all"
-            >
-              <div className="w-12 h-12 rounded-xl bg-teal-500/20 flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h3 className="font-serif text-lg text-white mb-2">Mortgage Calculator</h3>
-              <p className="text-sm text-white/60 leading-relaxed">
-                Estimate your monthly payments and understand what you can afford in Vancouver.
-              </p>
-            </Link>
-          </div>
-          <div className="text-center mt-10">
-            <Button href="/resources" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-              View All Resources
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: Get In Touch */}
+      {/* SECTION 6: Get In Touch */}
       <GetInTouch />
     </>
   );

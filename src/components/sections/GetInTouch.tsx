@@ -61,7 +61,7 @@ export default function GetInTouch() {
         </div>
         <div className="overflow-hidden mb-4">
           <h2
-            className={`font-serif text-4xl md:text-5xl text-white transition-all duration-700 ease-out delay-150 ${
+            className={`font-serif text-3xl md:text-4xl text-white italic font-bold transition-all duration-700 ease-out delay-150 ${
               visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
           >
