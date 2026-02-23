@@ -9,31 +9,31 @@ const neighborhoods = [
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "https://images.pexels.com/photos/5769939/pexels-photo-5769939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/11758239/pexels-photo-11758239.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
     description: "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "https://images.pexels.com/photos/32870642/pexels-photo-32870642.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/226424/pexels-photo-226424.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
     description: "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "https://images.pexels.com/photos/28861363/pexels-photo-28861363.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/5846801/pexels-photo-5846801.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
-    image: "https://images.pexels.com/photos/14364286/pexels-photo-14364286.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/11455843/pexels-photo-11455843.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.pexels.com/photos/261088/pexels-photo-261088.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/10095228/pexels-photo-10095228.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -201,14 +201,22 @@ export default function HomePage() {
       {/* SECTION 4: Featured Neighborhoods */}
       <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-          {/* Heading cell */}
-          <div className="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800 h-72 flex flex-col justify-end p-6">
-            <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold leading-tight">
-              Neighbourhoods
-            </h2>
-            <p className="font-serif text-xl md:text-2xl text-white/60 italic font-bold">
-              I know these streets
-            </p>
+          {/* Heading cell — image with teal gradient overlay */}
+          <div className="relative h-72 overflow-hidden">
+            <img
+              src="https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+              alt="Vancouver greenery"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-teal-950/90 via-teal-950/70 to-teal-950/40" />
+            <div className="relative h-full flex flex-col justify-end p-6">
+              <h2 className="font-serif text-3xl md:text-4xl text-white italic font-bold leading-tight">
+                Neighbourhoods
+              </h2>
+              <p className="font-serif text-xl md:text-2xl text-white/70 italic font-bold">
+                I know these streets
+              </p>
+            </div>
           </div>
           {/* Neighbourhood image links */}
           {neighborhoods.map((hood) => (
