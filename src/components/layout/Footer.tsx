@@ -42,9 +42,9 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-teal-950 text-white/80">
+    <footer className="bg-teal-900 text-white/80">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
@@ -56,6 +56,12 @@ export default function Footer() {
                 Real Estate | Oakwyn Realty
               </span>
             </Link>
+
+            <img
+              src="/images/logos/oakwyn-realty-white.png"
+              alt="Oakwyn Realty"
+              className="h-10 opacity-50 mb-4"
+            />
             <div className="space-y-2 text-sm">
               <a
                 href="tel:+16046127694"
@@ -88,10 +94,10 @@ export default function Footer() {
           {/* Link columns */}
           {Object.values(footerLinks).map((section) => (
             <div key={section.title}>
-              <h3 className="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-4">
+              <h3 className="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-2">
                 {section.title}
               </h3>
-              <ul className="space-y-2.5">
+              <ul className="space-y-1.5">
                 {section.links.map((link) => (
                   <li key={link.href}>
                     <Link

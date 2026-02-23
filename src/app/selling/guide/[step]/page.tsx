@@ -115,7 +115,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
                     return parts.map((part, j) => {
                       if (part.startsWith("## ")) {
                         return (
-                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-10 mb-4 first:mt-0">
+                          <h2 key={`${i}-${j}`} className="font-serif text-2xl text-teal-950 mt-6 mb-3 first:mt-0">
                             {part.replace("## ", "")}
                           </h2>
                         );
@@ -128,7 +128,7 @@ export default async function SellingGuideStepPage({ params }: Props) {
                               const match = item.match(/\*\*(.+?)\*\*(.+)/);
                               if (match) {
                                 return (
-                                  <li key={k} className="text-warm-600 text-sm leading-relaxed pl-4 border-l-2 border-teal-100">
+                                  <li key={k} className="text-warm-600 text-sm leading-relaxed pl-4">
                                     <strong className="text-warm-800">{match[1]}</strong>{match[2]}
                                   </li>
                                 );

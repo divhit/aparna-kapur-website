@@ -6,12 +6,6 @@ import HeroSlideshow from "@/components/hero/HeroSlideshow";
 
 const neighborhoods = [
   {
-    name: "Oakridge",
-    slug: "oakridge",
-    description: "Vancouver's most exciting transformation - 3,300+ new homes, world-class amenities",
-    image: "https://images.pexels.com/photos/19358760/pexels-photo-19358760.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-  },
-  {
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
@@ -90,10 +84,10 @@ export default function HomePage() {
       <section className="py-16 bg-teal-950">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-white mb-1 italic font-bold">
+            <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold">
               My Comprehensive Guide.
             </h2>
-            <p className="font-serif text-2xl md:text-3xl text-white/80 italic font-bold">
+            <p className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold">
               Ask Me Anything, Vancouver!
             </p>
           </div>
@@ -135,11 +129,16 @@ export default function HomePage() {
                 brokerage in Vancouver, and that gives my clients access to market intelligence and a
                 network that makes a real difference.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Button href="/about/why-work-with-me" variant="primary">
                   Why Work With Me
                 </Button>
               </div>
+              <img
+                src="/images/logos/oakwyn-realty.png"
+                alt="Oakwyn Realty"
+                className="h-16 opacity-60"
+              />
             </div>
           </div>
         </div>
@@ -202,20 +201,13 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 4: Featured Neighborhoods */}
-      <section className="pt-6 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold">
-              Neighbourhoods, I Know These Streets
-            </h2>
-          </div>
-        </div>
+      <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-          {neighborhoods.map((hood) => (
+          {neighborhoods.map((hood, i) => (
             <Link
               key={hood.slug}
               href={`/neighborhoods/${hood.slug}`}
-              className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
+              className={`group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300${i === 0 ? " order-first" : ""}`}
             >
               <img
                 src={hood.image}
@@ -223,6 +215,16 @@ export default function HomePage() {
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              {i === 0 && (
+                <div className="absolute top-0 left-0 right-0 p-6">
+                  <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold leading-tight">
+                    Neighbourhoods
+                  </h2>
+                  <p className="font-serif text-xl md:text-2xl text-white/60 italic font-bold">
+                    I know these streets
+                  </p>
+                </div>
+              )}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
                   {hood.name}

@@ -65,6 +65,12 @@ export default function OakwynRealtyPage() {
                   ))}
                 </div>
               </div>
+
+              <img
+                src="/images/logos/oakwyn-realty.png"
+                alt="Oakwyn Realty"
+                className="h-20 mt-8 opacity-60"
+              />
             </div>
           </div>
         </div>
