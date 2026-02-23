@@ -6,12 +6,6 @@ import HeroSlideshow from "@/components/hero/HeroSlideshow";
 
 const neighborhoods = [
   {
-    name: "Marpole",
-    slug: "marpole",
-    description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-  },
-  {
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
@@ -34,6 +28,12 @@ const neighborhoods = [
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
     image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+  },
+  {
+    name: "Marpole",
+    slug: "marpole",
+    description: "A family-friendly community with historic charm and easy airport access",
+    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -107,9 +107,12 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-teal-700 text-white rounded-2xl p-6 shadow-xl hidden md:block">
-                <p className="font-serif text-lg">Oakwyn Realty</p>
-                <p className="text-sm text-teal-200">Vancouver&apos;s Top Brokerage</p>
+              <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl hidden md:block">
+                <img
+                  src="/images/logos/oakwyn-realty.png"
+                  alt="Oakwyn Realty"
+                  className="h-14"
+                />
               </div>
             </div>
             <div>
@@ -129,16 +132,11 @@ export default function HomePage() {
                 brokerage in Vancouver, and that gives my clients access to market intelligence and a
                 network that makes a real difference.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/about/why-work-with-me" variant="primary">
                   Why Work With Me
                 </Button>
               </div>
-              <img
-                src="/images/logos/oakwyn-realty.png"
-                alt="Oakwyn Realty"
-                className="h-16 opacity-60"
-              />
             </div>
           </div>
         </div>
@@ -203,11 +201,21 @@ export default function HomePage() {
       {/* SECTION 4: Featured Neighborhoods */}
       <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-          {neighborhoods.map((hood, i) => (
+          {/* Heading cell */}
+          <div className="bg-teal-950 h-72 flex flex-col justify-end p-6">
+            <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold leading-tight">
+              Neighbourhoods
+            </h2>
+            <p className="font-serif text-xl md:text-2xl text-white/60 italic font-bold">
+              I know these streets
+            </p>
+          </div>
+          {/* Neighbourhood image links */}
+          {neighborhoods.map((hood) => (
             <Link
               key={hood.slug}
               href={`/neighborhoods/${hood.slug}`}
-              className={`group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300${i === 0 ? " order-first" : ""}`}
+              className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
             >
               <img
                 src={hood.image}
@@ -215,16 +223,6 @@ export default function HomePage() {
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              {i === 0 && (
-                <div className="absolute top-0 left-0 right-0 p-6">
-                  <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold leading-tight">
-                    Neighbourhoods
-                  </h2>
-                  <p className="font-serif text-xl md:text-2xl text-white/60 italic font-bold">
-                    I know these streets
-                  </p>
-                </div>
-              )}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
                   {hood.name}

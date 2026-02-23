@@ -48,20 +48,21 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10">
           {/* Brand column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-block mb-4">
-              <span className="font-serif text-2xl text-white leading-tight">
-                Aparna Kapur
-              </span>
-              <span className="block text-[10px] uppercase tracking-[0.25em] text-teal-300 font-medium mt-0.5">
-                Real Estate | Oakwyn Realty
-              </span>
+            <Link href="/" className="inline-flex items-center gap-4 mb-4">
+              <img
+                src="/images/logos/oakwyn-realty-white.png"
+                alt="Oakwyn Realty"
+                className="h-12 opacity-60"
+              />
+              <div>
+                <span className="font-serif text-2xl text-white leading-tight block">
+                  Aparna Kapur
+                </span>
+                <span className="block text-[10px] uppercase tracking-[0.25em] text-teal-300 font-medium mt-0.5">
+                  Real Estate | Oakwyn Realty
+                </span>
+              </div>
             </Link>
-
-            <img
-              src="/images/logos/oakwyn-realty-white.png"
-              alt="Oakwyn Realty"
-              className="h-10 opacity-50 mb-4"
-            />
             <div className="space-y-2 text-sm">
               <a
                 href="tel:+16046127694"
