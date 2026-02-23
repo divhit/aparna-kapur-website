@@ -9,31 +9,31 @@ const neighborhoods = [
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "https://images.pexels.com/photos/5109341/pexels-photo-5109341.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/5769939/pexels-photo-5769939.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
     description: "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "https://images.pexels.com/photos/18058418/pexels-photo-18058418.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/32870642/pexels-photo-32870642.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
     description: "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "https://images.pexels.com/photos/33310374/pexels-photo-33310374.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/28861363/pexels-photo-28861363.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
-    image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/14364286/pexels-photo-14364286.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
   {
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/261088/pexels-photo-261088.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -107,11 +107,11 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl hidden md:block">
+              <div className="absolute -bottom-4 -right-4 bg-teal-900 rounded-2xl p-5 shadow-xl hidden md:block">
                 <img
-                  src="/images/logos/oakwyn-realty.png"
+                  src="/images/logos/oakwyn-realty-white.png"
                   alt="Oakwyn Realty"
-                  className="h-14"
+                  className="h-12"
                 />
               </div>
             </div>
@@ -202,7 +202,7 @@ export default function HomePage() {
       <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {/* Heading cell */}
-          <div className="bg-teal-950 h-72 flex flex-col justify-end p-6">
+          <div className="bg-gradient-to-br from-teal-950 via-teal-900 to-teal-800 h-72 flex flex-col justify-end p-6">
             <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold leading-tight">
               Neighbourhoods
             </h2>
