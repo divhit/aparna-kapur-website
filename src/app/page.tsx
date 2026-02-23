@@ -33,7 +33,7 @@ const neighborhoods = [
     name: "Marpole",
     slug: "marpole",
     description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.pexels.com/photos/10095228/pexels-photo-10095228.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -71,12 +71,6 @@ export default function HomePage() {
               VALUATION
             </Link>
           </div>
-        </div>
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-          </svg>
         </div>
       </HeroSlideshow>
 
