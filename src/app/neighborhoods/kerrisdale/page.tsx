@@ -257,7 +257,7 @@ export default async function KerrisdalePage() {
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    Kerrisdale&apos;s market benefits from a combination of factors that support long-term appreciation: proximity to UBC, top-ranked private schools, the Arbutus Greenway development, and limited new detached-home supply. For buyers seeking a stable, prestige west-side address with strong fundamentals, Kerrisdale remains one of Vancouver&apos;s most reliable neighborhoods.
+                    Kerrisdale benefits from a combination of factors that support long-term appreciation: proximity to UBC, top-ranked private schools, the Arbutus Greenway development, and limited new detached-home supply. For buyers seeking a stable, prestige west-side address with strong fundamentals, Kerrisdale is one of Vancouver&apos;s most reliable neighborhoods.
                   </p>
                 </div>
               </section>
@@ -392,10 +392,10 @@ export default async function KerrisdalePage() {
                   For dining, Kerrisdale offers everything from cozy neighbourhood cafes and upscale Japanese restaurants to classic European bakeries and modern West Coast cuisine. The neighborhood&apos;s East Asian and European cultural influences are beautifully reflected in its food scene.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Notable destinations include Thomas Haas, Beaucoup Bakery, a range of excellent sushi restaurants, and several well-loved cafes that serve as neighborhood gathering spots. Along West Boulevard, additional shops and eateries extend the village atmosphere south.
+                  Notable destinations include Thomas Haas, Beaucoup Bakery, a range of excellent sushi restaurants, and several well-loved cafes. Along West Boulevard, additional shops and eateries extend the village atmosphere south.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For everyday grocery needs, Kerrisdale is home to quality supermarkets, specialty food shops, and organic grocers. The neighborhood&apos;s self-contained nature means most residents rarely need to leave for shopping or dining.
+                  For grocery needs, Kerrisdale is home to quality supermarkets, specialty food shops, and organic grocers. The neighborhood&apos;s self-contained nature means most residents rarely need to leave for shopping or dining.
                 </p>
               </section>
 
