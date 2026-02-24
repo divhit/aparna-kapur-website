@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useEffect } from "react";
 import {
   APIProvider,
   Map,
@@ -42,6 +42,14 @@ const POI_LABELS: Record<PointOfInterest["type"], string> = {
 
 function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
   const [selected, setSelected] = useState<PointOfInterest | null>(null);
+  const map = useMap();
+
+  // Close the InfoWindow when clicking on the map background
+  useEffect(() => {
+    if (!map) return;
+    const listener = map.addListener("click", () => setSelected(null));
+    return () => listener.remove();
+  }, [map]);
 
   return (
     <>
@@ -49,7 +57,7 @@ function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
         <AdvancedMarker
           key={`${poi.name}-${i}`}
           position={{ lat: poi.lat, lng: poi.lng }}
-          onClick={() => setSelected(poi)}
+          onClick={() => setSelected(selected?.name === poi.name ? null : poi)}
         >
           <div
             className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg border-2 border-white cursor-pointer hover:scale-110 transition-transform"
@@ -76,9 +84,20 @@ function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
           onCloseClick={() => setSelected(null)}
         >
           <div className="p-1 max-w-[200px]">
-            <p className="font-semibold text-sm text-gray-900">
-              {selected.name}
-            </p>
+            <div className="flex items-start justify-between gap-2">
+              <p className="font-semibold text-sm text-gray-900">
+                {selected.name}
+              </p>
+              <button
+                onClick={() => setSelected(null)}
+                className="shrink-0 w-5 h-5 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
+                aria-label="Close"
+              >
+                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
             {selected.description && (
               <p className="text-xs text-gray-600 mt-1">
                 {selected.description}
