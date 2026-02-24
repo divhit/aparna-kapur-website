@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import ContactForm from "@/components/forms/ContactForm";
+import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Cambie Corridor Vancouver Real Estate Guide 2026 | Condos, Townhomes & Market Insights",
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How much does a home cost along the Cambie Corridor?",
     answer:
-      "The GVR MLS® HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor — properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
+      "The GVR MLS\u00AE HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor \u2014 properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
   },
   {
     question: "What is the Cambie Corridor Plan?",
@@ -126,8 +126,8 @@ export default async function CambieCorridorPage() {
                 </p>
                 <ul className="space-y-2 text-sm">
                   {[
-                    ["map", "Explore Map"],
                     ["overview", "Overview"],
+                    ["map", "Explore Map"],
                     ["corridor-plan", "The Cambie Corridor Plan"],
                     ["real-estate", "Real Estate Market"],
                     ["transit", "Getting Around"],
@@ -174,24 +174,6 @@ export default async function CambieCorridorPage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
-              {/* Interactive Map */}
-              <section id="map" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Explore Cambie Corridor
-                </h2>
-                <p className="text-warm-600 leading-relaxed mb-6">
-                  Discover transit stations, schools, parks, and key landmarks along the Cambie Corridor.
-                </p>
-                <NeighbourhoodMap
-                  center={cambieData.center}
-                  zoom={cambieData.zoom}
-                  pois={pois.length > 0 ? pois : cambieData.fallbackPOIs}
-                  boundaryName="Cambie Corridor"
-                  height="450px"
-                  showLegend
-                />
-              </section>
-
               {/* Overview */}
               <section id="overview" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
@@ -208,6 +190,21 @@ export default async function CambieCorridorPage() {
                 </p>
               </section>
 
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6 italic font-bold">
+                  Explore Cambie Corridor
+                </h2>
+                <NeighbourhoodMap
+                  center={cambieData.center}
+                  zoom={cambieData.zoom}
+                  pois={pois.length > 0 ? pois : cambieData.fallbackPOIs}
+                  boundaryName="Cambie Corridor"
+                  height="450px"
+                  showLegend
+                />
+              </section>
+
               {/* The Cambie Corridor Plan */}
               <section id="corridor-plan" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
@@ -216,7 +213,7 @@ export default async function CambieCorridorPage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">City of Vancouver Master Plan</p>
                   <p className="text-sm text-gold-700">
-                    The Cambie Corridor Plan is one of the most ambitious urban planning initiatives in Vancouver&apos;s history. Adopted in phases from 2011 to 2018, it establishes a framework for thoughtful densification along the entire Canada Line route, creating complete communities around every SkyTrain station.
+                    The Cambie Corridor Plan is one of the most ambitious urban planning initiatives in Vancouver&apos;s history. Adopted in phases from 2011 to 2018, it establishes a framework for creating complete communities around every SkyTrain station along the Canada Line.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
@@ -248,7 +245,7 @@ export default async function CambieCorridorPage() {
                   Cambie Corridor Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor real estate market is dominated by condominiums and townhomes, reflecting the transit-oriented density the area is designed for. While detached homes still exist, they are increasingly being replaced by multi-family developments as the Corridor Plan unfolds.
+                  The Cambie Corridor real estate market is dominated by condominiums and townhomes, reflecting the transit-oriented density the area is designed for. Though detached homes still exist, they are increasingly being replaced by multi-family developments as the Corridor Plan unfolds.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -257,7 +254,7 @@ export default async function CambieCorridorPage() {
                     { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "A diminishing but still present option, mostly on side streets away from the main corridor. GVR benchmark: $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex items-baseline justify-between mb-1">
+                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
                         <h4 className="font-medium text-teal-950">{item.type}</h4>
                         <span className="font-serif text-teal-700">{item.range}</span>
                       </div>
@@ -266,7 +263,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The GVR MLS® HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options while still providing excellent SkyTrain access.
+                  The GVR MLS&reg; HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options while still providing excellent SkyTrain access.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
@@ -282,7 +279,7 @@ export default async function CambieCorridorPage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Transit is the Cambie Corridor&apos;s defining advantage. The Canada Line SkyTrain is the backbone of the entire corridor, making car-optional living a genuine reality:
+                  Transit is the Cambie Corridor&apos;s defining advantage. The Canada Line SkyTrain runs beneath the entire corridor, making car-optional living a genuine reality for residents:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -315,15 +312,15 @@ export default async function CambieCorridorPage() {
                 <p className="text-warm-600 leading-relaxed mb-4">
                   The Cambie Corridor stretches past some of Vancouver&apos;s finest parks and green spaces. No matter which section you live in, quality recreation is within walking distance:
                 </p>
-                <div className="space-y-4 mb-6">
+                <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
                     { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park sits adjacent to the corridor near 33rd Avenue. Stunning city and mountain views from the hilltop, the Bloedel Conservatory, rose gardens, pitch-and-putt golf, and walking trails through beautifully landscaped grounds." },
                     { name: "Douglas Park", desc: "A well-loved community park near King Edward station with playing fields, tennis courts, a playground, outdoor pool, and a community centre offering programs for all ages. A true neighborhood gathering place." },
                     { name: "Hillcrest Community Centre & Park", desc: "One of Vancouver's premier recreation facilities, built for the 2010 Olympics. Indoor pool, ice rink, gymnasium, and extensive playing fields. Located near the Oakridge-41st section of the corridor." },
                     { name: "Langara Golf Course", desc: "An 18-hole public golf course near Langara-49th station with perimeter walking trails. A remarkable green space asset for residents of the southern corridor." },
                     { name: "Pocket Parks & Greenways", desc: "The Cambie Corridor Plan requires developers to contribute to new parks and green spaces. New pocket parks and improved streetscaping are being added with each development phase, steadily increasing the corridor's green space." },
-                  ].map((park) => (
-                    <div key={park.name} className="bg-warm-50 rounded-xl p-5">
+                  ].map((park, i, arr) => (
+                    <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
                       <p className="text-sm text-warm-600">{park.desc}</p>
                     </div>
@@ -339,45 +336,49 @@ export default async function CambieCorridorPage() {
                 <p className="text-warm-600 leading-relaxed mb-6">
                   Because the Cambie Corridor spans multiple neighborhoods, families have access to a wide range of schools depending on their section of the corridor:
                 </p>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Public Elementary Schools</h3>
-                  {[
-                    { name: "Van Horne Elementary", type: "K-7 Public", detail: "Serving the central corridor near Oakridge-41st. Strong academic programs and a diverse student body." },
-                    { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another well-regarded option in the Oakridge catchment area." },
-                    { name: "Douglas Park Community School", type: "K-7 Public", detail: "Serving the northern corridor near King Edward station. Community-focused with strong parent involvement." },
-                    { name: "Sir Richard McBride Elementary", type: "K-7 Public", detail: "Serving the southern corridor near Marine Drive." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Public Elementary Schools</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Van Horne Elementary", type: "K-7 Public", detail: "Serving the central corridor near Oakridge-41st. Strong academic programs and a diverse student body." },
+                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another well-regarded option in the Oakridge catchment area." },
+                      { name: "Douglas Park Community School", type: "K-7 Public", detail: "Serving the northern corridor near King Edward station. Community-focused with strong parent involvement." },
+                      { name: "Sir Richard McBride Elementary", type: "K-7 Public", detail: "Serving the southern corridor near Marine Drive." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Secondary &amp; Post-Secondary</h3>
-                  {[
-                    { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "A large, well-respected secondary school serving the central corridor with strong academics and athletics." },
-                    { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "Another excellent option for families in the Oakridge-41st section of the corridor." },
-                    { name: "John Oliver Secondary", type: "8-12 Public", detail: "Serving the southern corridor near the Marine Drive end." },
-                    { name: "Langara College", type: "Post-Secondary", detail: "Located directly on the corridor at 49th and Cambie, serving over 23,000 students with university transfer, career, and continuing education programs." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Secondary &amp; Post-Secondary</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "A large, well-respected secondary school serving the central corridor with strong academics and athletics." },
+                      { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "Another excellent option for families in the Oakridge-41st section of the corridor." },
+                      { name: "John Oliver Secondary", type: "8-12 Public", detail: "Serving the southern corridor near the Marine Drive end." },
+                      { name: "Langara College", type: "Post-Secondary", detail: "Located directly on the corridor at 49th and Cambie, serving over 23,000 students with university transfer, career, and continuing education programs." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
 
@@ -405,47 +406,15 @@ export default async function CambieCorridorPage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="bg-warm-50 rounded-xl p-6">
-                      <h3 className="font-medium text-teal-950 mb-2">{faq.question}</h3>
-                      <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* CTA */}
-              <section className="bg-teal-950 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="font-serif text-2xl text-white mb-4">
-                      Thinking About the Cambie Corridor?
-                    </h2>
-                    <p className="text-white/70 text-sm leading-relaxed mb-6">
-                      Whether you&apos;re looking at pre-sales, resale condos, townhomes, or
-                      investment properties along the Canada Line &mdash; I&apos;d love to help you
-                      find the right fit. Let&apos;s start with a no-pressure conversation about
-                      your goals.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button href="/contact" variant="primary">
-                        Get in Touch
-                      </Button>
-                      <Button href="/buying/guide" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                        Read the Buyer&apos;s Guide
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <ContactForm compact light />
-                  </div>
-                </div>
+                <FAQAccordion faqs={faqs} />
               </section>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Get In Touch CTA */}
+      <GetInTouch />
 
       {/* JSON-LD FAQ Schema */}
       <script
