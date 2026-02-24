@@ -11,6 +11,134 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "resale-vs-presale-vancouver-condos-2026",
+    title: "Resale vs. Presale: The 2026 Vancouver Condo Market",
+    excerpt:
+      "Until recently, choosing between a presale and a resale condo was a genuinely difficult decision. In 2026, the calculus has shifted \u2014 but not entirely in one direction.",
+    date: "February 2026",
+    category: "Buying",
+    readTime: "7 min read",
+    image:
+      "https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    content: `## The Decision Has Changed
+
+Until recently, for a buyer choosing between a presale and a resale condo in Vancouver, the decision was genuinely difficult. Both options had strong arguments in their favour, and the right choice depended heavily on timing and personal circumstances.
+
+Not anymore. In 2026, the landscape has shifted meaningfully.
+
+Earlier, the potential for price appreciation, lower upfront costs, and a body-free period backed by BC's 2-5-10 home warranty made presale condos the obvious choice for many buyers. Developers offered attractive deposit structures, the market was rising, and locking in a price today for delivery in two or three years often meant built-in equity by completion.
+
+## Why Resale Condos Are Winning in 2026
+
+The 2026 Vancouver condo market tells a different story. For many potential buyers, resale condos are the clear winner right now.
+
+We are in what is arguably a firm buyer's market. Inventory is up, prices have softened, and competition has eased. What this means in practice is significant: **it may be possible to find an equivalent \u2014 though obviously older \u2014 apartment at a significantly lower price than what a developer is currently asking for a comparable presale unit.**
+
+The math is straightforward. When a resale condo in the same neighbourhood, with the same square footage and a similar layout, is listed for $150,000 to $200,000 less than a presale unit that will not be ready for two to three years, the resale option becomes very compelling.
+
+Added to the price advantage are two other concerns that weigh on presale buyers:
+
+- **Project delays** \u2014 Completion timelines in Vancouver have been notoriously unreliable. A two-year presale can easily become a three- or four-year wait, during which your deposit is locked up and your life plans are on hold.
+- **Mortgage rate uncertainty** \u2014 When you buy presale, you are committing to a purchase without knowing what mortgage rate you will qualify for at completion. In a volatile rate environment, this is a real risk.
+
+With a resale condo, you know exactly what you are getting, exactly when you are getting it, and exactly what your mortgage will cost. That certainty has real value.
+
+## When Presale Still Makes Sense
+
+Despite the clear advantages of resale in this market, presale condos continue to have distinct advantages depending on the circumstances of the individual buyer.
+
+**When you have income but not a full down payment:**
+
+Sometimes a buyer has the income to support a mortgage but has not yet saved a full 20% down payment. Presale condos come to the rescue here. The option to pay a staggered 15% to 20% deposit over one to two years \u2014 rather than all at once \u2014 gives these buyers a realistic path to homeownership. You are essentially using the construction period as your savings timeline.
+
+**When you want to target high-growth areas:**
+
+Presale buyers can also focus on areas with significant upside potential, particularly in Vancouver's rezoning corridors. The Cambie Corridor, the Broadway Plan area, and other densification zones are seeing new projects that position buyers in the path of neighbourhood improvement and rising values.
+
+## The Assignment Sale Opportunity
+
+A good time to consider the presale market \u2014 without buying directly from a developer \u2014 is to look for **assignment sales**.
+
+An assignment sale happens when the original presale buyer wants to sell their contract before the building completes. In 2026, this is becoming increasingly common: some original buyers who purchased at the peak and are now facing mortgage rates they did not expect are looking to exit their contracts. In some cases, they are willing to sell at near the cost they originally paid, just to walk away cleanly.
+
+**This may be the best way to get a presale unit at a discount.** You get a brand-new home, often at a price that reflects the softer market rather than the developer's original pricing. The key is knowing where to find these opportunities and how to evaluate whether the assignment terms make financial sense.
+
+## The Bottom Line
+
+In 2026, the default answer for most condo buyers in Vancouver is resale. The pricing advantage is real, the certainty is valuable, and the selection is strong.
+
+But presale is not dead \u2014 it is situational. If your financial circumstances favour a staggered deposit, if you are targeting a specific growth area, or if you can find the right assignment sale, presale can still be the smarter move.
+
+The key is to run the numbers on your specific situation, not to follow a general rule. That is exactly what I do for my clients. If you are weighing resale versus presale, let us sit down and look at what actually makes sense for you.`,
+  },
+  {
+    slug: "is-oakridge-vancouvers-new-downtown",
+    title: "Is Oakridge Vancouver's New Downtown?",
+    excerpt:
+      "In 2011, Oakridge was officially designated a municipal town centre \u2014 the first of its kind in Metro Vancouver. With Oakridge Park opening in 2026, that vision is finally becoming reality.",
+    date: "February 2026",
+    category: "Neighbourhoods",
+    readTime: "6 min read",
+    image:
+      "https://images.pexels.com/photos/2096578/pexels-photo-2096578.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    content: `## A Municipal Town Centre Is Born
+
+In July 2011, the Oakridge commercial area \u2014 home to the Oakridge Centre mall since 1959 \u2014 was officially designated as a **municipal town centre** by the City of Vancouver. It was the first of its kind in Metro Vancouver, placing it in a category similar to Brentwood Town Centre in Burnaby or City Centre in Surrey.
+
+This was not just a symbolic gesture. The designation flagged Oakridge to serve as a primary focal point for residential development, commercial activity, and transit infrastructure on Vancouver's south side.
+
+## The Zoning Shift That Changed Everything
+
+The year 2014 saw the area rezoned to allow high-rise towers and the development of major civic amenities. This was the moment that effectively transformed Oakridge from a suburban shopping mall neighbourhood into what many have called **Vancouver's second downtown.**
+
+The rezoning enabled:
+
+- **Residential towers** up to 44 storeys
+- **Over 3,300 new homes** including condos, townhomes, and rental apartments
+- **A large community centre** with a 50-metre swimming pool, ice rink, and fitness centre
+- **A branch library**
+- **A 9-acre public rooftop park** \u2014 larger than two football fields
+- **560,000 square feet of retail space** with globally branded luxury outlets
+
+The scale of the vision was unprecedented for any single site outside of downtown Vancouver.
+
+## 2026: The Vision Becomes Real
+
+Oakridge Park is scheduled to begin opening this year, in 2026. After years of construction that has tested the patience of everyone living in the area, the first residents are moving in, retail spaces are being fitted out, and the rooftop park is taking shape.
+
+Along with the new globally branded luxury retail outlets, the community amenities, and the direct connection to the Oakridge\u201341st Avenue Canada Line station, Oakridge Park is set to rival the downtown Vancouver area as a destination for living, shopping, and recreation.
+
+## Downtown Light: A Secondary Urban Centre
+
+However, the characterisation of Oakridge as Vancouver's "new downtown" comes with an important qualifier. It is more accurately described as a **downtown-light** \u2014 a secondary urban centre designed to take pressure off the main downtown core.
+
+Vancouver needs this. The city's population continues to grow, the downtown peninsula has physical constraints, and the demand for urban amenities, housing, and commercial space exceeds what a single centre can provide. Oakridge, sitting in the geographic centre of the city and directly on the Canada Line, is ideally positioned to absorb some of that demand.
+
+The new development is expected to shift the population density of Vancouver meaningfully in and around this area, creating a genuine urban node that functions independently from downtown while remaining connected to it by a 15-minute SkyTrain ride.
+
+## The Reality for Current Residents
+
+The new downtown feel, however, is likely to take several years to fully materialise. Until then, residents around the area will continue living alongside and dealing with the construction work that has defined the neighbourhood since 2019.
+
+This is worth acknowledging honestly. If you are buying in Oakridge today, you are buying into a vision that is partially complete. The inconvenience of ongoing construction is real. But the trajectory is clear, and for patient buyers, the opportunity is significant.
+
+**The homes being purchased today will be surrounded by a fully realised urban centre within the next two to three years.** The community centre, the park, the retail, the restaurants \u2014 all of it is coming. And the pricing today still reflects the construction disruption, which means there is value to be captured for those willing to see through the short-term noise.
+
+## What This Means for Buyers and Sellers
+
+**For buyers:** Oakridge represents one of the most compelling long-term bets in Vancouver real estate. You are not just buying a home \u2014 you are buying into a neighbourhood that is being purpose-built as an urban centre. The amenities, transit access, and density will support property values for decades.
+
+**For sellers:** If you own property near Oakridge, your asset is likely worth more than you think \u2014 and it will be worth more as each phase of Oakridge Park completes. The question is timing: sell now and capture the current premium, or hold and ride the appreciation as the development fully opens.
+
+**For investors:** Rental demand in the Oakridge area is exceptionally strong and will only grow as the community centre, park, and retail come online. Transit-oriented, amenity-rich locations are exactly where Vancouver's rental market is heading.
+
+## The Bottom Line
+
+Is Oakridge Vancouver's new downtown? Not quite \u2014 but it is becoming Vancouver's most important secondary urban centre. For anyone buying, selling, or investing on Vancouver's south side, Oakridge is the single most important development to understand.
+
+I live and work in this area. I watch the construction progress every week. If you want an honest, ground-level assessment of what Oakridge means for your real estate plans, I am here to help.`,
+  },
+  {
     slug: "oakridge-park-redevelopment-2026",
     title: "Oakridge Park Redevelopment: Everything You Need to Know in 2026",
     excerpt:
