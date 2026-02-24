@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import ContactForm from "@/components/forms/ContactForm";
+import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Kerrisdale Vancouver Real Estate Guide 2026 | Luxury Homes & Market Data",
@@ -215,17 +215,16 @@ export default async function KerrisdalePage() {
                   Living in Kerrisdale
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Living in Kerrisdale means enjoying the best of Vancouver&apos;s west side without the frenetic energy of more urban neighborhoods. The streets are wide, tree-lined, and remarkably quiet &mdash; the kind of neighborhood where you know your neighbors by name and children walk to school through canopied sidewalks.
+                  The streets are wide, tree-lined, and remarkably quiet. You will know your neighbors by name and children will walk to school through canopied sidewalks.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The architectural character of Kerrisdale is one of its most striking features. You will find beautifully maintained Tudor-style homes, stately Georgian residences, classic craftsman bungalows, and distinguished mid-century estates. Many of these homes sit on some of Vancouver&apos;s largest residential lots, with mature gardens, established landscaping, and the kind of curb appeal that newer developments simply cannot replicate.
+                  One finds beautifully maintained Tudor-style homes, stately Georgian residences, some classic craftsman bungalows as well as distinguished mid-century estates. Many homes sit on some of Vancouver&apos;s largest residential lots, with mature gardens, established landscaping and the kind of curb appeal that newer developments simply cannot replicate.
                 </p>
-                <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Kerrisdale</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Morning starts with an espresso at one of the cozy cafes along 41st Avenue. A stroll through Kerrisdale Park with the dog before dropping the children at Crofton House or Kerrisdale Elementary. Afternoon errands in the village &mdash; picking up fresh pastries from Thomas Haas, browsing the shelves at the local bookstore, stopping in at a boutique clothing shop. An after-school activity at Kerrisdale Community Centre, followed by dinner at one of the neighborhood&apos;s excellent restaurants. Weekend mornings might include a family hike through Pacific Spirit Park, just minutes away, or a bike ride along the Arbutus Greenway.
+                  A day in Kerrisdale can start with a morning espresso at one of the cozy cafes along 41st Avenue. A stroll through Kerrisdale Park with the dog before dropping the children at Crofton House or Kerrisdale Elementary. Afternoon errands can look like picking up fresh pastries from Thomas Haas, browsing the shelves at the local bookstore or stopping in at a boutique clothing shop. An after-school activity at Kerrisdale Community Centre, followed by dinner at one of the neighborhood&apos;s excellent restaurants. Weekend mornings might include a family hike through Pacific Spirit Park, just minutes away, or a bike ride along the Arbutus Greenway.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  This is the Kerrisdale lifestyle &mdash; unhurried and gracious, with everything you need within walking distance, and the natural beauty of Vancouver&apos;s west side at your doorstep.
+                  Kerrisdale is unhurried and gracious, with everything you need within walking distance, and the natural beauty of Vancouver&apos;s west side at your doorstep.
                 </p>
               </section>
 
@@ -235,16 +234,16 @@ export default async function KerrisdalePage() {
                   Kerrisdale Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Kerrisdale is one of Vancouver&apos;s most coveted and expensive residential neighborhoods. The real estate market here is defined by limited supply, strong demand, and a housing stock that ranges from luxury heritage estates to modern condominiums:
+                  Kerrisdale is one of Vancouver&apos;s most coveted and expensive residential neighborhoods, defined by limited supply, strong demand, and a range from luxury heritage estates to modern condominiums:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "The heart of Kerrisdale real estate. Primarily heritage and character homes on generous lots. GVR benchmark: $2.98M. Tudor, Georgian, and craftsman styles predominate." },
-                    { type: "Condominiums", range: "$600K - $1.3M", desc: "Concentrated along 41st Avenue and West Boulevard. GVR benchmark: $974K. Popular with downsizers, retirees, and professionals who want the Kerrisdale lifestyle at a more accessible price point." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common but increasingly sought after. GVR benchmark: $1.66M. Multi-level homes offering a middle ground between condos and detached properties." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Primarily heritage and character homes on generous lots. Benchmark price is $2.98M. Tudor, Georgian, and craftsman styles predominate." },
+                    { type: "Condominiums", range: "$600K - $1.3M", desc: "You will find these concentrated along 41st Avenue and West Boulevard. Benchmark price is $974K. Popular with retirees, and professionals who want a Kerrisdale life at a more accessible price point." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common here but increasingly sought after. Benchmark price is $1.66M." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex items-baseline justify-between mb-1">
+                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
                         <h4 className="font-medium text-teal-950">{item.type}</h4>
                         <span className="font-serif text-teal-700">{item.range}</span>
                       </div>
@@ -253,12 +252,12 @@ export default async function KerrisdalePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The GVR MLS® HPI composite benchmark for Kerrisdale is $1.90M as of January 2026, with the detached home benchmark at $2.98M. Despite the premium, Kerrisdale properties have historically demonstrated strong value retention due to the neighborhood&apos;s established reputation, excellent schools, and the scarcity of available lots.
+                  Despite the premium, Kerrisdale properties have historically demonstrated strong value retention due to the neighborhood&apos;s established reputation, excellent schools, and the scarcity of available lots.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    Kerrisdale&apos;s real estate market benefits from a combination of factors that support long-term appreciation: proximity to UBC, top-ranked private schools, the Arbutus Greenway development, and limited new detached-home supply. For buyers seeking a stable, prestige west-side address with strong fundamentals, Kerrisdale remains one of Vancouver&apos;s most reliable neighborhoods.
+                    Kerrisdale&apos;s market benefits from a combination of factors that support long-term appreciation: proximity to UBC, top-ranked private schools, the Arbutus Greenway development, and limited new detached-home supply. For buyers seeking a stable, prestige west-side address with strong fundamentals, Kerrisdale remains one of Vancouver&apos;s most reliable neighborhoods.
                   </p>
                 </div>
               </section>
@@ -299,24 +298,24 @@ export default async function KerrisdalePage() {
                   Parks &amp; Recreation
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Kerrisdale residents enjoy an abundance of green space, from neighborhood parks to one of Vancouver&apos;s largest urban forests:
+                  Kerrisdale residents enjoy an abundance of green space:
                 </p>
-                <div className="space-y-4 mb-6">
+                <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
                     { name: "Kerrisdale Park", desc: "The neighborhood's central green space, featuring playgrounds, tennis courts, sports fields, and a seasonal outdoor pool. Located adjacent to the Kerrisdale Community Centre, it serves as the recreational hub for families throughout the year." },
                     { name: "Elm Park", desc: "A quiet, leafy neighborhood park with a playground, open green space, and towering elm trees. A favorite for families with young children and morning dog walkers." },
                     { name: "Quilchena Park", desc: "A larger park on the northern edge of Kerrisdale with expansive playing fields, a running track, and a playground. Home to local soccer and field hockey leagues, it offers open space that is increasingly rare on the west side." },
                     { name: "Pacific Spirit Regional Park", desc: "Just minutes from Kerrisdale, this 763-hectare urban forest offers over 73 kilometers of trails for hiking, running, cycling, and horseback riding. It is one of the largest urban parks in North America and a defining feature of west-side living." },
                     { name: "Arbutus Greenway", desc: "A linear park and active transportation corridor running along the former Arbutus rail line. Perfect for walking, jogging, and cycling, it connects Kerrisdale to other neighborhoods and provides a scenic urban trail experience." },
-                  ].map((park) => (
-                    <div key={park.name} className="bg-warm-50 rounded-xl p-5">
+                  ].map((park, i, arr) => (
+                    <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
                       <p className="text-sm text-warm-600">{park.desc}</p>
                     </div>
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The Kerrisdale Community Centre is a hub for activities across all ages, offering fitness classes, arts programs, swimming lessons, seniors&apos; activities, and seasonal events. It is one of the most active community centres on Vancouver&apos;s west side and plays a central role in neighborhood life.
+                  The Kerrisdale Community Centre is a hub for activities across all ages. It is equipped with a swimming pool which is a big plus point for kids and seniors since not all community centres have pools. It also is one of the most active community centres on Vancouver&apos;s west side and plays a central role in neighborhood life.
                 </p>
               </section>
 
@@ -326,48 +325,52 @@ export default async function KerrisdalePage() {
                   Schools &amp; Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Education is one of Kerrisdale&apos;s strongest draws. The neighborhood and its immediate surroundings are home to some of Vancouver&apos;s best public and private schools:
+                  Education is one of Kerrisdale&apos;s strongest draws. The neighborhood and its immediate surroundings are home to some of Vancouver&apos;s best public and private schools. Moreover there are many great after school activities that are concentrated here which makes it very easy to hop from one to another with multiple kids in tow!
                 </p>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Public Schools</h3>
-                  {[
-                    { name: "Kerrisdale Elementary", type: "K-7 Public", detail: "The neighborhood's beloved elementary school with strong academics, an active parent community, and a welcoming environment that families consistently rate highly." },
-                    { name: "Kerrisdale Annex", type: "K-3 Public", detail: "A smaller primary annex offering an intimate learning environment for younger students within the Kerrisdale catchment." },
-                    { name: "Point Grey Secondary", type: "8-12 Public", detail: "One of Vancouver's top-performing public high schools, known for strong academics, athletics, and arts programs. The French Immersion program is particularly well-regarded." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Kerrisdale Elementary", type: "K-7 Public", detail: "The neighborhood's beloved elementary school with strong academics and an active parent community." },
+                      { name: "Kerrisdale Annex", type: "K-3 Public", detail: "A smaller primary annex offering an intimate learning environment for younger students." },
+                      { name: "Point Grey Secondary", type: "8-12 Public", detail: "One of Vancouver's top-performing public high schools, known for strong academics, athletics, and arts programs. The French Immersion program is particularly well-regarded." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Private Schools</h3>
-                  {[
-                    { name: "Crofton House School", type: "JK-12 Private (Girls)", detail: "One of Vancouver's most prestigious all-girls schools, located in Kerrisdale. Crofton House is consistently ranked among the top independent schools in British Columbia with a strong emphasis on academics, leadership, and community service." },
-                    { name: "St. George's School", type: "1-12 Private (Boys)", detail: "A premier all-boys school located nearby in the Dunbar area. Known for academic excellence, competitive athletics, and a strong alumni network. Proximity to Kerrisdale makes it a top choice for neighborhood families." },
-                    { name: "Vancouver College", type: "K-12 Private", detail: "A well-established Catholic school offering a faith-based education within easy reach of Kerrisdale families." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Private Schools</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Crofton House School", type: "JK-12 Private (Girls)", detail: "One of Vancouver's most prestigious all-girls schools, located in Kerrisdale. Consistently ranked among the top independent schools in British Columbia." },
+                      { name: "St. George's School", type: "1-12 Private (Boys)", detail: "A premier all-boys school located nearby in the Dunbar area. Known for academic excellence, competitive athletics, and a strong alumni network." },
+                      { name: "Vancouver College", type: "K-12 Private", detail: "A well-established Catholic school offering excellent academic and athletic development within easy reach of Kerrisdale." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The proximity to the University of British Columbia (UBC) also adds educational value to the neighborhood, with families benefiting from university events, libraries, cultural programs, and the general academic atmosphere that permeates the west side of Vancouver.
+                  The proximity to the University of British Columbia (UBC) also adds educational value to the neighborhood, with families benefiting from university events, libraries, cultural programs, and the general academic atmosphere that influences this west side neighbourhood.
                 </p>
               </section>
 
@@ -379,20 +382,20 @@ export default async function KerrisdalePage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">Kerrisdale Village</p>
                   <p className="text-sm text-gold-700">
-                    The heart of Kerrisdale&apos;s commercial life, stretching along 41st Avenue between Larch and Yew Streets. Over 100 shops, restaurants, and services create one of Vancouver&apos;s most walkable and charming village shopping experiences.
+                    The heart of Kerrisdale&apos;s commercial life, stretching along 41st Avenue between Larch and Yew Streets. Over 100 shops and restaurants create one of Vancouver&apos;s most walkable and charming village shopping experiences.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Kerrisdale Village is what makes this neighborhood truly special for day-to-day living. The shopping district has resisted the homogenization that has affected many Vancouver commercial areas, retaining a mix of independent boutiques, specialty stores, and locally owned businesses that give it genuine character.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  For dining, Kerrisdale offers everything from cozy neighbourhood cafes and upscale Japanese restaurants to classic European bakeries and modern West Coast cuisine. The neighborhood&apos;s East Asian and European cultural influences are beautifully reflected in its food scene &mdash; you can enjoy authentic dim sum, artisan French pastries, and farm-to-table Pacific Northwest fare all within a few blocks.
+                  For dining, Kerrisdale offers everything from cozy neighbourhood cafes and upscale Japanese restaurants to classic European bakeries and modern West Coast cuisine. The neighborhood&apos;s East Asian and European cultural influences are beautifully reflected in its food scene.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Notable destinations include Thomas Haas (world-renowned chocolates and pastries), Beaucoup Bakery, a range of excellent sushi restaurants, and several well-loved cafes that serve as neighborhood gathering spots. Along West Boulevard, additional shops and eateries extend the village atmosphere south.
+                  Notable destinations include Thomas Haas, Beaucoup Bakery, a range of excellent sushi restaurants, and several well-loved cafes that serve as neighborhood gathering spots. Along West Boulevard, additional shops and eateries extend the village atmosphere south.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For everyday grocery needs, Kerrisdale is home to quality supermarkets, specialty food shops, and organic grocers. The neighborhood&apos;s self-contained nature means most residents rarely need to leave for shopping or dining &mdash; everything is within a pleasant walk.
+                  For everyday grocery needs, Kerrisdale is home to quality supermarkets, specialty food shops, and organic grocers. The neighborhood&apos;s self-contained nature means most residents rarely need to leave for shopping or dining.
                 </p>
               </section>
 
@@ -401,47 +404,15 @@ export default async function KerrisdalePage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="bg-warm-50 rounded-xl p-6">
-                      <h3 className="font-medium text-teal-950 mb-2">{faq.question}</h3>
-                      <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* CTA */}
-              <section className="bg-teal-950 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="font-serif text-2xl text-white mb-4">
-                      Thinking About Kerrisdale?
-                    </h2>
-                    <p className="text-white/70 text-sm leading-relaxed mb-6">
-                      Whether you&apos;re looking to buy a heritage home, sell your current
-                      property, or simply explore what Kerrisdale has to offer &mdash;
-                      I&apos;d love to help. Let&apos;s start with a no-pressure conversation
-                      about your goals.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button href="/contact" variant="primary">
-                        Get in Touch
-                      </Button>
-                      <Button href="/buying/guide" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                        Read the Buyer&apos;s Guide
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <ContactForm compact light />
-                  </div>
-                </div>
+                <FAQAccordion faqs={faqs} />
               </section>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Get In Touch CTA */}
+      <GetInTouch />
 
       {/* JSON-LD FAQ Schema */}
       <script
