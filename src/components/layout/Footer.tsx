@@ -7,7 +7,7 @@ const footerLinks = {
       { label: "Buyer's Guide", href: "/buying/guide" },
       { label: "Search Homes", href: "/buying/search" },
       { label: "Featured Listings", href: "/buying/featured-listings" },
-      { label: "First-Time Buyers", href: "/resources/first-time-buyers-bc" },
+      { label: "Real Estate Plan", href: "/resources/real-estate-plan" },
     ],
   },
   selling: {
@@ -34,8 +34,8 @@ const footerLinks = {
     links: [
       { label: "Blog", href: "/resources/blog" },
       { label: "Market Reports", href: "/resources/market-reports" },
+      { label: "Real Estate Plan", href: "/resources/real-estate-plan" },
       { label: "Mortgage Calculator", href: "/resources/mortgage-calculator" },
-      { label: "Moving to Vancouver", href: "/resources/moving-to-vancouver" },
     ],
   },
 };

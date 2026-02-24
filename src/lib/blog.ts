@@ -19,7 +19,7 @@ export const blogPosts: BlogPost[] = [
     category: "Neighbourhoods",
     readTime: "8 min read",
     image:
-      "https://images.pexels.com/photos/34066293/pexels-photo-34066293.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+      "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
     content: `## The Biggest Development in Vancouver's History
 
 The Oakridge Park redevelopment is unlike anything Vancouver has seen before. What was once a conventional shopping mall at 41st and Cambie is being transformed into a 28-acre mixed-use community that will fundamentally reshape this corner of the city.

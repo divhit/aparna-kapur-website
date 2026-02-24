@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
 import PageBanner from "@/components/hero/PageBanner";
+import GetInTouch from "@/components/sections/GetInTouch";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Blog | Tips, Insights & Market Updates",
@@ -71,24 +72,10 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <div className="mt-16 text-center bg-warm-50 rounded-2xl p-8">
-            <h2 className="font-serif text-2xl text-teal-950 mb-3">
-              More Content Coming Soon
-            </h2>
-            <p className="text-sm text-warm-600 mb-6 max-w-lg mx-auto">
-              I&apos;m regularly publishing new articles about the Vancouver
-              real estate market, neighbourhood guides, and practical tips for
-              buyers and sellers.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center px-6 py-3 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors text-sm"
-            >
-              Get Notified About New Posts
-            </Link>
-          </div>
         </div>
       </section>
+
+      <GetInTouch />
     </>
   );
 }
