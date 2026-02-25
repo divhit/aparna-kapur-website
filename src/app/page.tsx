@@ -3,6 +3,7 @@ import Button from "@/components/ui/Button";
 import HeroChat from "@/components/chat/HeroChat";
 import GetInTouch from "@/components/sections/GetInTouch";
 import HeroSlideshow from "@/components/hero/HeroSlideshow";
+import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
 
 const neighborhoods = [
   {
@@ -232,6 +233,21 @@ export default function HomePage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* SECTION 4b: Interactive Neighbourhood Map */}
+      <section className="py-20 bg-warm-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight">
+              Explore the Neighbourhoods
+            </h2>
+            <p className="text-warm-600 mt-3 max-w-xl mx-auto">
+              Click any neighbourhood to see prices, trends, and my full guide.
+            </p>
+          </div>
+          <AllNeighbourhoodsMap />
         </div>
       </section>
 
