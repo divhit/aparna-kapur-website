@@ -161,21 +161,18 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6">
-          {/* Desktop: 3-column centered layout */}
-          <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center h-20">
-            {/* Left nav: About, Buying, Selling */}
-            <nav className="flex items-center justify-center gap-1">
-              {navLeft.map((item) => (
-                <DesktopDropdown
-                  key={item.label}
-                  item={item}
-                  transparent={transparent}
-                />
-              ))}
-            </nav>
+          {/* Desktop: single row, evenly spaced */}
+          <div className="hidden lg:flex items-center justify-between h-20">
+            {navLeft.map((item) => (
+              <DesktopDropdown
+                key={item.label}
+                item={item}
+                transparent={transparent}
+              />
+            ))}
 
             {/* Center: Logo */}
-            <Link href="/" className="flex flex-col items-center mx-8">
+            <Link href="/" className="flex flex-col items-center">
               <span
                 className={`font-serif text-2xl leading-tight tracking-tight transition-colors duration-300 ${
                   transparent ? "text-white" : "text-teal-900"
@@ -192,26 +189,23 @@ export default function Header() {
               </span>
             </Link>
 
-            {/* Right nav: Neighborhoods, Resources, Contact */}
-            <nav className="flex items-center justify-center gap-1">
-              {navRight.map((item) => (
-                <DesktopDropdown
-                  key={item.label}
-                  item={item}
-                  transparent={transparent}
-                />
-              ))}
-              <Link
-                href="/contact"
-                className={`px-5 py-2 text-sm font-semibold transition-colors tracking-[0.15em] uppercase ${
-                  transparent
-                    ? "text-white/90 hover:text-white"
-                    : "text-warm-800 hover:text-teal-700"
-                }`}
-              >
-                Contact
-              </Link>
-            </nav>
+            {navRight.map((item) => (
+              <DesktopDropdown
+                key={item.label}
+                item={item}
+                transparent={transparent}
+              />
+            ))}
+            <Link
+              href="/contact"
+              className={`px-5 py-2 text-sm font-semibold transition-colors tracking-[0.15em] uppercase ${
+                transparent
+                  ? "text-white/90 hover:text-white"
+                  : "text-warm-800 hover:text-teal-700"
+              }`}
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Mobile: logo left + hamburger right */}
