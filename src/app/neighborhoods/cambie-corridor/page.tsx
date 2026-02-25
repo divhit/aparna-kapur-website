@@ -279,7 +279,7 @@ export default async function CambieCorridorPage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Transit is the Cambie Corridor&apos;s defining advantage. The Canada Line SkyTrain is the backbone of the entire corridor, making car-optional living a genuine reality:
+                  Transit is the Cambie Corridor&apos;s defining advantage.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
