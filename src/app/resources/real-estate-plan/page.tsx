@@ -180,39 +180,42 @@ export default function RealEstatePlanPage() {
 
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Roadmap intro */}
-          <h2 className="font-serif text-2xl md:text-3xl text-teal-950 mb-6">
-            Roadmap
+          {/* Intro */}
+          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-6">
+            Real Estate Plan
           </h2>
           <p className="text-warm-600 leading-relaxed mb-4">
             I like to start by listening. I like to learn about where you are today and what you&apos;re working toward to see how property fits into the bigger picture of your life. I like to bring structure and insight to decisions whether they be for first-time purchases to multi-property portfolios or for a plan to safeguard an easy retirement
           </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
+          <p className="text-warm-600 leading-relaxed mb-12">
             Once I understand your situation, I can dig into the numbers. The result should be a clear, actionable roadmap that connects today&apos;s decisions to your long-term financial picture.
           </p>
 
-          <h3 className="font-semibold text-teal-950 mb-4">
-            What This Looks Like in Practice
-          </h3>
-          <ul className="space-y-2.5 mb-16 text-warm-600 leading-relaxed">
-            {[
-              "A strategy for acquiring, holding, and eventually transferring real estate across generations",
-              "A rigorous financial analysis grounded in actual market data",
-              "Work on tax optimization: principal residence exemption, CCA deductions, corporate structuring, and property transfer strategies for the next generation",
-              "A clear plan for when it\u2019s time to move to downsize, upsize, or relocate",
-              "Estate and succession planning that keeps you in control",
-              "Ongoing performance tracking so you always know where your portfolio stands",
-              "Proactively turning today\u2019s property choices into tomorrow\u2019s financial advantage. Always think ahead",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-
           {/* Accordion sections */}
           <RealEstatePlanAccordion sections={sections} />
+
+          {/* What This Looks Like in Practice — below accordion */}
+          <div className="mt-12 pt-8 border-t border-warm-200">
+            <h3 className="font-semibold text-teal-950 mb-4">
+              What This Looks Like in Practice
+            </h3>
+            <ul className="space-y-2.5 text-warm-600 leading-relaxed">
+              {[
+                "A strategy for acquiring, holding, and eventually transferring real estate across generations",
+                "A rigorous financial analysis grounded in actual market data",
+                "Work on tax optimization: principal residence exemption, CCA deductions, corporate structuring, and property transfer strategies for the next generation",
+                "A clear plan for when it\u2019s time to move to downsize, upsize, or relocate",
+                "Estate and succession planning that keeps you in control",
+                "Ongoing performance tracking so you always know where your portfolio stands",
+                "Proactively turning today\u2019s property choices into tomorrow\u2019s financial advantage. Always think ahead",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Disclaimer */}
           <div className="mt-16 pt-8 border-t border-warm-100">
