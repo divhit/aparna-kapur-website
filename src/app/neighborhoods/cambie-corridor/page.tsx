@@ -120,54 +120,48 @@ export default async function CambieCorridorPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block">
-              <nav className="sticky top-28">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-4">
+              <nav className="sticky top-28 space-y-1">
+                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                   On This Page
                 </p>
-                <ul className="space-y-2 text-sm">
-                  {[
-                    ["overview", "Overview"],
-                    ["map", "Explore Map"],
-                    ["corridor-plan", "The Cambie Corridor Plan"],
-                    ["real-estate", "Real Estate Market"],
-                    ["transit", "Getting Around"],
-                    ["parks", "Parks & Recreation"],
-                    ["schools", "Schools & Education"],
-                    ["shopping", "Shopping & Dining"],
-                    ["faq", "FAQ"],
-                  ].map(([id, label]) => (
-                    <li key={id}>
-                      <a
-                        href={`#${id}`}
-                        className="text-warm-500 hover:text-teal-700 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-8 pt-6 border-t border-warm-100">
-                  <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
+                {[
+                  ["overview", "Overview"],
+                  ["map", "Explore Map"],
+                  ["corridor-plan", "The Cambie Corridor Plan"],
+                  ["real-estate", "Real Estate Market"],
+                  ["transit", "Getting Around"],
+                  ["parks", "Parks & Recreation"],
+                  ["schools", "Schools & Education"],
+                  ["shopping", "Shopping & Dining"],
+                  ["faq", "FAQ"],
+                ].map(([id, label]) => (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 hover:text-teal-700 transition-colors"
+                  >
+                    {label}
+                  </a>
+                ))}
+                <div className="mt-8 pt-6 border-t border-warm-100 space-y-1">
+                  <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                     Nearby Areas
                   </p>
-                  <ul className="space-y-2 text-sm">
-                    {[
-                      ["Oakridge", "oakridge"],
-                      ["South Cambie", "south-cambie"],
-                      ["Riley Park", "riley-park"],
-                      ["Marpole", "marpole"],
-                      ["Kerrisdale", "kerrisdale"],
-                    ].map(([name, slug]) => (
-                      <li key={slug}>
-                        <Link
-                          href={`/neighborhoods/${slug}`}
-                          className="text-warm-500 hover:text-teal-700 transition-colors"
-                        >
-                          {name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                  {[
+                    ["Oakridge", "oakridge"],
+                    ["South Cambie", "south-cambie"],
+                    ["Riley Park", "riley-park"],
+                    ["Marpole", "marpole"],
+                    ["Kerrisdale", "kerrisdale"],
+                  ].map(([name, slug]) => (
+                    <Link
+                      key={slug}
+                      href={`/neighborhoods/${slug}`}
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 hover:text-teal-700 transition-colors"
+                    >
+                      {name}
+                    </Link>
+                  ))}
                 </div>
               </nav>
             </aside>
@@ -388,16 +382,19 @@ export default async function CambieCorridorPage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor offers distinct shopping and dining experiences depending on where you are along its length. The northern section around Cambie Village (between Broadway and 19th Avenue) is a beloved Vancouver destination in its own right, with locally owned boutiques, bakeries, coffee shops, restaurants, and specialty stores lining Cambie Street in a charming, walkable setting.
+                  Cambie Corridor offers distinct shopping and dining experiences depending on where you are along its length.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Further south, the Oakridge Park redevelopment (completing in phases from 2026) is set to transform the 41st Avenue node into a premier retail and dining destination with over 500,000 square feet of retail, including the highly anticipated Time Out Market food hall. This will be a game-changer for the central corridor&apos;s lifestyle appeal.
+                  The northern section around Cambie Village (between Broadway and 19th Avenue) has locally owned boutiques, bakeries, coffee shops, restaurants, and specialty stores lining Cambie Street in a charming, walkable setting.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  At the southern end, Marine Gateway is already a thriving mixed-use hub with a cinema, grocery stores, restaurants, and everyday services, all connected directly to the Marine Drive SkyTrain station. It demonstrates what the rest of the corridor is evolving toward: a complete community where everything you need is within a short walk or SkyTrain ride.
+                  Further south, the Oakridge Park redevelopment is set to transform the 41st Avenue node into a premier retail and dining destination with over 500,000 square feet of retail.
+                </p>
+                <p className="text-warm-600 leading-relaxed mb-4">
+                  At its southern end, Marine Gateway is already a thriving mixed-use hub with a cinema, grocery stores, restaurants, and everyday services that are connected directly to the Marine Drive SkyTrain station.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Along the way, 41st Avenue and 49th Avenue provide additional retail strips with a diverse mix of Asian restaurants, specialty grocers, cafes, and services that reflect the cultural richness of the surrounding neighborhoods.
+                  Along the way, 41st Avenue and 49th Avenue provide additional retail strips with a diverse mix of Asian restaurants, specialty grocers and services that reflect the cultural richness of this neighborhood.
                 </p>
               </section>
 
