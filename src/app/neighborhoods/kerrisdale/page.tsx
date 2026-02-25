@@ -85,7 +85,7 @@ export default async function KerrisdalePage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             <div className="hidden lg:block" />
             <div className="lg:col-span-3">
-              <div className="grid grid-cols-3 gap-6 text-center max-w-3xl">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl">
                 <div>
                   <p className="font-serif text-2xl text-teal-700">Top 5</p>
                   <p className="text-xs text-warm-500 mt-1">Private Schools</p>
@@ -180,9 +180,6 @@ export default async function KerrisdalePage() {
 
               {/* Interactive Map */}
               <section className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6 italic font-bold">
-                  Explore Kerrisdale
-                </h2>
                 <NeighbourhoodMap
                   center={kerrisdaleData.center}
                   zoom={kerrisdaleData.zoom}
