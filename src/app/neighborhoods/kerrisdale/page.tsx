@@ -115,13 +115,14 @@ export default async function KerrisdalePage() {
                   On This Page
                 </p>
                 {[
-                  ["living", "Living in Kerrisdale", "1"],
-                  ["real-estate", "Real Estate Market", "2"],
-                  ["transit", "Getting Around", "3"],
-                  ["parks", "Parks", "4"],
-                  ["schools", "Education", "5"],
-                  ["shopping", "Shopping & Dining", "6"],
-                  ["faq", "FAQ", "7"],
+                  ["map", "Map", "1"],
+                  ["living", "Living in Kerrisdale", "2"],
+                  ["real-estate", "Real Estate Market", "3"],
+                  ["transit", "Getting Around", "4"],
+                  ["parks", "Parks", "5"],
+                  ["schools", "Education", "6"],
+                  ["shopping", "Shopping & Dining", "7"],
+                  ["faq", "FAQ", "8"],
                 ].map(([id, label, step]) => (
                   <a
                     key={id}
@@ -164,9 +165,6 @@ export default async function KerrisdalePage() {
             <div className="lg:col-span-3 max-w-3xl">
               {/* Overview */}
               <section className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Overview
-                </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Kerrisdale is an upscale, established residential neighborhood in southwest Vancouver, bounded roughly by West 33rd Avenue to the north, West 49th Avenue to the south, Granville Street to the east, and Blenheim Street to the west. One of the city&apos;s oldest and most prestigious neighborhoods, Kerrisdale has maintained its refined character for over a century while evolving into a vibrant community that appeals to families, professionals, and retirees alike.
                 </p>
@@ -179,7 +177,7 @@ export default async function KerrisdalePage() {
               </section>
 
               {/* Interactive Map */}
-              <section className="mb-16">
+              <section id="map" className="mb-16">
                 <NeighbourhoodMap
                   center={kerrisdaleData.center}
                   zoom={kerrisdaleData.zoom}
