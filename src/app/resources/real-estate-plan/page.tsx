@@ -1,183 +1,224 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import GetInTouch from "@/components/sections/GetInTouch";
 import PageBanner from "@/components/hero/PageBanner";
+import RealEstatePlanAccordion from "./RealEstatePlanAccordion";
 
 export const metadata: Metadata = {
-  title: "Your Real Estate Plan | Aparna Kapur, Vancouver Realtor",
+  title: "Real Estate Plan | Aparna Kapur, Vancouver Realtor",
   description:
-    "A clear, personalized plan for your real estate goals. Whether you're buying your first home, selling, or building an investment portfolio, let's create a strategy that works for you.",
+    "A clear, actionable roadmap that connects today\u2019s real estate decisions to your long-term financial picture. Investment strategy, portfolio health, senior transitions, legacy planning, and estate administration in BC.",
 };
+
+const sections = [
+  {
+    title: "What Can a Real Estate Plan Do For You and Your Family?",
+    content: (
+      <>
+        <ul className="space-y-3">
+          {[
+            "Tailors a strategy to build, preserve, and pass on real estate wealth.",
+            "Provides a smart, strategic approach to investment property ownership.",
+            "Helps increase cash flow, build equity, and grow your net worth.",
+            "Minimizes or eliminates capital gains taxes, enabling generational wealth transfer.",
+            "Offers peace of mind with a transition plan when your current home no longer fits your lifestyle.",
+            "Creates a compassionate roadmap for legacy and inheritance planning\u2014while you\u2019re still an active part of the process.",
+            "Clarifies the performance and long-term value of your real estate assets.",
+            "Unlocks the future benefits of today\u2019s property decisions.",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
+  },
+  {
+    title: "Portfolio Health Check",
+    content: (
+      <>
+        <p>
+          Markets shift, costs creep up, and what looked like a strong performer five years ago may be quietly underdelivering. You must stress-test your properties.
+        </p>
+        <p>
+          Do a <strong>Property Performance Assessment</strong> that runs the numbers that matter: cap rate, cash-on-cash return, and gross rent multiplier. Benchmark your property against current market conditions. For example if a Vancouver condo shows a 1.5% cap rate you can flag it as a potential drag on your portfolio, while a purpose-built rental generating 4.5% can get recognized as a strong earner.
+        </p>
+        <p>
+          Also account for BC-specific carrying costs that eat into returns: municipal property taxes, strata levies, insurance increases, and the Speculation and Vacancy Tax in designated regions. The result should be a no-nonsense snapshot of what each property is actually earning and one should take concrete steps to improve those numbers.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Investment Strategy",
+    content: (
+      <>
+        <p>
+          A pre-sale condo in Surrey requires a fundamentally different analysis than a triplex in New Westminster or a vacation rental on the Sunshine Coast.
+        </p>
+        <h3 className="font-semibold text-teal-950 !mt-6">
+          Get Clear on What You&apos;re Solving For
+        </h3>
+        <p>
+          The most important question isn&apos;t &ldquo;what should I buy?&rdquo;&mdash;it&apos;s &ldquo;what do I need this investment to do for me?&rdquo; Long-term capital growth, reliable monthly income, or a hedge against inflation each point toward different property types, neighbourhoods, and financing approaches.
+        </p>
+        <h3 className="font-semibold text-teal-950 !mt-6">
+          Understand Why Real Estate Outperforms
+        </h3>
+        <ul className="space-y-3">
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+            <span><strong>Long-Term Growth:</strong> BC housing has consistently appreciated over 20+ year horizons, often outpacing equities and fixed income on a risk-adjusted basis.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+            <span><strong>Favourable Tax Treatment:</strong> Canada&apos;s 50% capital gains inclusion rate means you keep more of your upside than in many other asset classes. Mortgage interest, property management fees, repairs, and capital cost allowance (CCA) are all deductible against rental income.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+            <span><strong>Built-In Leverage:</strong> Canadian lenders typically require 20% down on investment properties, meaning you control 100% of the asset&apos;s appreciation with a fraction of the capital. Few other investments offer this kind of leverage.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+            <span><strong>Recurring Income:</strong> A well-structured rental property produces monthly cash flow that can fund further acquisitions, offset carrying costs, or supplement household income.</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+            <span><strong>Flexibility:</strong> Unlike stocks or bonds, property can serve double duty&mdash;live in it now, rent it later, or convert a principal residence to an investment hold as circumstances change.</span>
+          </li>
+        </ul>
+        <p>
+          I can bring market research, financial models, and local expertise to an investment conversation&mdash;so your decisions are backed by data.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Senior Moves",
+    content: (
+      <>
+        <p>
+          The transition when the family home; the place where memories were made start to work against the person living in it. Stairs become risky, maintenance becomes a burden, and isolation sets in. For families facing this reality, the logistics of a move can feel heavy.
+        </p>
+        <p>
+          I can help with these transitions with patience, an abundance of support and keen attention to detail. That means coordinating a downsize to a single-level townhome in the same neighbourhood, identifying assisted living options that meet specific care needs, or simply managing the timeline so nothing falls through the cracks. My focus is on reducing the weight of the process.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Legacy & Succession Planning",
+    content: (
+      <>
+        <p>
+          There is a general misconception in Canada is that adding a child to title or holding property in joint tenancy is enough to handle succession. These approaches may avoid probate fees, but they can trigger unintended tax consequences and they do little to prevent family conflict when priorities diverge.
+        </p>
+        <p>
+          Inheriting property can often create friction between siblings with different financial needs. In the absence of a clear plan disagreements about selling, renting, renovating, or holding can fracture relationships.
+        </p>
+        <p>
+          Let me help you get ahead of these issues. Canada has some sophisticated alternatives. If these are properly structured the strategies let you shift wealth to the next generation in a controlled, tax-efficient way.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Estate Administration in BC",
+    content: (
+      <>
+        <p>
+          If you&apos;ve been named executor of an estate in British Columbia, you&apos;re taking on a role with real legal obligations and personal weight. The process includes applying for a Grant of Probate under the Wills, Estates and Succession Act (WESA), court filings, tax reporting, and careful asset management.
+        </p>
+        <h3 className="font-semibold text-teal-950 !mt-6">
+          Executor Checklist for BC
+        </h3>
+        <ul className="space-y-3">
+          {[
+            "Prioritize your own wellbeing and that of immediate family",
+            "Assemble a professional team: estate lawyer, CPA, financial planner, insurance specialist",
+            "Locate the original will, death certificate, and supporting documentation",
+            "File for a Grant of Probate with BC Supreme Court (fees run approximately 1.4% on estate value above $50,000)",
+            "Issue formal notice to all beneficiaries (WESA requires a 21-day waiting period before distribution)",
+            "Inventory and safeguard all assets\u2014real property, financial accounts, personal effects",
+            "Commission a date-of-death appraisal for each property. This is required for capital gains calculations on the final return.",
+            "Prepare and file the deceased\u2019s final T1 tax return; request a CRA Clearance Certificate before releasing any assets",
+            "Notify CPP, OAS, employer pension administrators, and any provincial benefit programs",
+            "Determine whether any Property Transfer Tax applies to transfers of real estate from the estate",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <span className="w-4 h-4 border border-warm-300 rounded-sm mt-1 shrink-0" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="!mt-6">
+          <strong>When there&apos;s no will:</strong> BC&apos;s intestacy provisions under WESA dictate how assets are divided&mdash;and the process requires a court-appointed administrator rather than a named executor.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: "Our Professional Network",
+    content: (
+      <>
+        <p>
+          A property sale might require a renovation contractor, a cross-border tax specialist, a notary public, or a moving company that handles seniors with care.
+        </p>
+        <p>
+          Whatever the challenge, I&apos;ll point you to someone who can help and who holds themselves to the same standard I do.
+        </p>
+      </>
+    ),
+  },
+];
 
 export default function RealEstatePlanPage() {
   return (
     <>
-      <PageBanner
-        eyebrow="Your Strategy"
-        title="Your Real Estate Plan"
-        description="A clear, personalized approach to your real estate goals, whether you're buying, selling, or investing in Vancouver."
-      />
+      <PageBanner title="Real Estate Plan" />
 
       <section className="py-20">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Intro */}
-          <p className="text-warm-600 leading-relaxed mb-4">
-            Real estate is one of the biggest financial decisions you will make. Yet most people go into it without a plan. They start browsing listings, get overwhelmed, and either rush into something or freeze entirely.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-12">
-            I believe in starting with a plan. A simple, honest conversation about where you are, where you want to be, and how real estate fits into the picture. No jargon, no pressure, just clarity.
-          </p>
-
-          {/* What Can a Real Estate Plan Do */}
-          <h2 className="font-serif text-2xl text-teal-950 mb-6">
-            What Can a Real Estate Plan Do for You?
+          {/* Roadmap intro */}
+          <h2 className="font-serif text-2xl md:text-3xl text-teal-950 mb-6">
+            Roadmap
           </h2>
-          <div className="space-y-3 mb-12">
+          <p className="text-warm-600 leading-relaxed mb-4">
+            I like to start by listening. I like to learn about where you are today and what you&apos;re working toward to see how property fits into the bigger picture of your life. I like to bring structure and insight to decisions whether they be for first-time purchases to multi-property portfolios or for a plan to safeguard an easy retirement
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Once I understand your situation, I can dig into the numbers. The result should be a clear, actionable roadmap that connects today&apos;s decisions to your long-term financial picture.
+          </p>
+
+          <h3 className="font-semibold text-teal-950 mb-4">
+            What This Looks Like in Practice
+          </h3>
+          <ul className="space-y-2.5 mb-16 text-warm-600 leading-relaxed">
             {[
-              "Clarify whether now is the right time for you to buy, sell, or hold",
-              "Identify the neighbourhoods and property types that match your lifestyle and budget",
-              "Understand the true cost of ownership beyond just the purchase price",
-              "Build a realistic timeline from first steps to keys in hand",
-              "Maximize the programs and incentives available to you",
-              "Align your real estate decisions with your broader financial goals",
-              "Avoid the most common and costly mistakes buyers and sellers make",
-              "Give you confidence that you are making an informed decision",
+              "A strategy for acquiring, holding, and eventually transferring real estate across generations",
+              "A rigorous financial analysis grounded in actual market data",
+              "Work on tax optimization: principal residence exemption, CCA deductions, corporate structuring, and property transfer strategies for the next generation",
+              "A clear plan for when it\u2019s time to move to downsize, upsize, or relocate",
+              "Estate and succession planning that keeps you in control",
+              "Ongoing performance tracking so you always know where your portfolio stands",
+              "Proactively turning today\u2019s property choices into tomorrow\u2019s financial advantage. Always think ahead",
             ].map((item) => (
-              <div key={item} className="flex items-start gap-3">
-                <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <p className="text-warm-600 text-sm leading-relaxed">{item}</p>
-              </div>
+              <li key={item} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
+                <span>{item}</span>
+              </li>
             ))}
-          </div>
+          </ul>
 
-          {/* For Buyers */}
-          <div className="border-t border-warm-100 pt-12 mb-12">
-            <h2 className="font-serif text-2xl text-teal-950 mb-4">
-              For Buyers
-            </h2>
-            <p className="text-warm-600 leading-relaxed mb-4">
-              Buying a home in Vancouver is unlike buying anywhere else. The market moves fast, the prices are high, and the rules keep changing. A plan helps you stay grounded.
-            </p>
-            <p className="text-warm-600 leading-relaxed mb-4">
-              Together, we will work through the essentials:
-            </p>
-            <ul className="space-y-2 mb-6">
-              {[
-                "Your budget: what you can comfortably afford, not just what you qualify for",
-                "Your must-haves versus your nice-to-haves",
-                "Which neighbourhoods make sense for your commute, schools, and lifestyle",
-                "New construction vs. resale: the real trade-offs",
-                "How to structure your offer to compete without overpaying",
-                "The inspection, financing, and closing process, step by step",
-              ].map((item) => (
-                <li key={item} className="text-sm text-warm-600 leading-relaxed pl-4 border-l-2 border-teal-200">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-warm-600 leading-relaxed">
-              If you are a first-time buyer, I will also walk you through every program and incentive available to you: the FHSA, HBP, PTT exemptions, and more. Most buyers leave money on the table simply because they do not know what is available.
-            </p>
-          </div>
+          {/* Accordion sections */}
+          <RealEstatePlanAccordion sections={sections} />
 
-          {/* For Sellers */}
-          <div className="border-t border-warm-100 pt-12 mb-12">
-            <h2 className="font-serif text-2xl text-teal-950 mb-4">
-              For Sellers
-            </h2>
-            <p className="text-warm-600 leading-relaxed mb-4">
-              Selling well is about more than putting a sign on the lawn. It is about timing, pricing, presentation, and strategy. A plan helps you extract the most value from your property.
+          {/* Disclaimer */}
+          <div className="mt-16 pt-8 border-t border-warm-100">
+            <p className="text-[11px] text-warm-400 leading-relaxed">
+              The information provided on this website is for general informational and educational purposes only and does not constitute legal, tax, financial, or investment advice. While we strive to keep content accurate and current, tax legislation, regulations, and market conditions in British Columbia and Canada are subject to change without notice. Readers should not act on any information presented here without first consulting qualified professionals, including a licensed accountant (CPA), estate lawyer, or financial planner, as appropriate to their individual circumstances. Aparna Kapur assumes no liability for any decisions made based on the content of this website.
             </p>
-            <ul className="space-y-2 mb-6">
-              {[
-                "Accurate pricing based on real comparables, not guesswork",
-                "Pre-sale preparation: what to fix, what to leave, and what buyers actually care about",
-                "Staging and photography that showcase your home at its best",
-                "A marketing strategy that reaches serious, qualified buyers",
-                "Offer management: how to evaluate multiple offers and negotiate from strength",
-                "Closing coordination, including your next move if you're buying simultaneously",
-              ].map((item) => (
-                <li key={item} className="text-sm text-warm-600 leading-relaxed pl-4 border-l-2 border-teal-200">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-warm-600 leading-relaxed">
-              I will give you a clear Comparative Market Analysis and an honest assessment of what your home is worth today. Not inflated to win your listing. Accurate, so we price it right and sell it well.
-            </p>
-          </div>
-
-          {/* For Investors */}
-          <div className="border-t border-warm-100 pt-12 mb-12">
-            <h2 className="font-serif text-2xl text-teal-950 mb-4">
-              For Investors
-            </h2>
-            <p className="text-warm-600 leading-relaxed mb-4">
-              Vancouver real estate has been one of the strongest long-term investments in Canada. But not every property is a good investment, and the rules around rental properties, foreign ownership, and tax obligations continue to evolve.
-            </p>
-            <ul className="space-y-2 mb-6">
-              {[
-                "Identify properties with strong rental yield and appreciation potential",
-                "Understand the numbers: cap rates, cash flow, and realistic returns",
-                "Navigate Vancouver's rental regulations and landlord obligations",
-                "Pre-sale vs. resale investment: which strategy suits your timeline",
-                "Tax implications, including the speculation tax and capital gains considerations",
-                "Portfolio diversification: when to add, hold, or sell",
-              ].map((item) => (
-                <li key={item} className="text-sm text-warm-600 leading-relaxed pl-4 border-l-2 border-teal-200">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="text-warm-600 leading-relaxed">
-              I work with a network of mortgage brokers, accountants, and property managers who specialize in investment properties. Together, we can build a plan that makes financial sense.
-            </p>
-          </div>
-
-          {/* How It Works */}
-          <div className="border-t border-warm-100 pt-12 mb-12">
-            <h2 className="font-serif text-2xl text-teal-950 mb-6">
-              How It Works
-            </h2>
-            <div className="space-y-6">
-              {[
-                { step: "1", title: "We Talk", desc: "A no-pressure conversation, in person, on the phone, or over coffee. I listen to your goals, your concerns, and your timeline." },
-                { step: "2", title: "I Do the Research", desc: "I pull the data, analyze the market, and identify the options that make sense for your specific situation." },
-                { step: "3", title: "You Get a Clear Plan", desc: "A straightforward recommendation with numbers, timelines, and next steps. No fluff, no sales pitch. Just honest guidance." },
-                { step: "4", title: "We Execute Together", desc: "When you are ready to move, I handle the details from start to finish. One person, one point of contact, full accountability." },
-              ].map((item) => (
-                <div key={item.step} className="flex gap-4">
-                  <div className="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center shrink-0">
-                    <span className="font-serif text-lg text-teal-700 font-semibold">{item.step}</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-teal-950 mb-1">{item.title}</p>
-                    <p className="text-sm text-warm-600 leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CTA */}
-          <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center shrink-0 mt-0.5">
-                <span className="text-white font-serif text-sm font-semibold">
-                  AK
-                </span>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-teal-900 mb-2">
-                  Ready to Start?
-                </p>
-                <p className="text-sm text-teal-800/80 leading-relaxed italic">
-                  &ldquo;Every good real estate decision starts with a conversation. Tell me what you are thinking about, whether buying, selling, investing, or just exploring, and I will give you an honest assessment of where you stand and what your options are. No cost, no commitment.&rdquo;
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
