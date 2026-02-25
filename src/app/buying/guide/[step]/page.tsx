@@ -1,3 +1,4 @@
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -111,6 +112,22 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                 <div className="prose prose-warm max-w-none">
                   {step.content.map((block, i) => {
                     const parts = block.split("\n\n");
+
+                    function renderInline(text: string) {
+                      const segments: React.ReactNode[] = [];
+                      const regex = /\*\*(.+?)\*\*|\*(.+?)\*/g;
+                      let last = 0;
+                      let m;
+                      while ((m = regex.exec(text)) !== null) {
+                        if (m.index > last) segments.push(text.slice(last, m.index));
+                        if (m[1]) segments.push(<strong key={m.index} className="text-warm-800">{m[1]}</strong>);
+                        else if (m[2]) segments.push(<em key={m.index}>{m[2]}</em>);
+                        last = m.index + m[0].length;
+                      }
+                      if (last < text.length) segments.push(text.slice(last));
+                      return segments;
+                    }
+
                     return parts.map((part, j) => {
                       if (part.startsWith("## ")) {
                         return (
@@ -119,21 +136,15 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                           </h2>
                         );
                       }
-                      if (part.startsWith("- **")) {
+                      if (part.startsWith("- ")) {
                         const items = part.split("\n").filter((l) => l.startsWith("- "));
                         return (
                           <ul key={`${i}-${j}`} className="space-y-2 my-4">
-                            {items.map((item, k) => {
-                              const match = item.match(/\*\*(.+?)\*\*(.+)/);
-                              if (match) {
-                                return (
-                                  <li key={k} className="text-warm-600 text-sm leading-relaxed pl-4">
-                                    <strong className="text-warm-800">{match[1]}</strong>{match[2]}
-                                  </li>
-                                );
-                              }
-                              return <li key={k} className="text-warm-600 text-sm leading-relaxed">{item.replace("- ", "")}</li>;
-                            })}
+                            {items.map((item, k) => (
+                              <li key={k} className="text-warm-600 text-sm leading-relaxed pl-4">
+                                {renderInline(item.replace(/^- /, ""))}
+                              </li>
+                            ))}
                           </ul>
                         );
                       }
@@ -143,13 +154,13 @@ export default async function BuyingGuideStepPage({ params }: Props) {
                           <ol key={`${i}-${j}`} className="space-y-2 my-4 list-decimal list-inside">
                             {items.map((item, k) => (
                               <li key={k} className="text-warm-600 text-sm leading-relaxed">
-                                {item.replace(/^\d+\.\s*/, "").replace(/\*\*(.+?)\*\*/g, "$1")}
+                                {renderInline(item.replace(/^\d+\.\s*/, ""))}
                               </li>
                             ))}
                           </ol>
                         );
                       }
-                      return <p key={`${i}-${j}`} className="text-warm-600 text-sm leading-relaxed my-4">{part}</p>;
+                      return <p key={`${i}-${j}`} className="text-warm-600 text-sm leading-relaxed my-4">{renderInline(part)}</p>;
                     });
                   })}
                 </div>

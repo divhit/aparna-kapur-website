@@ -16,7 +16,7 @@ const stagingSteps = [
       "Pack away family photos and personal memorabilia",
       "Clear kitchen counters of all small appliances",
       "Remove excess furniture to make rooms feel larger",
-      "Organize closets — buyers will look inside",
+      "Organize closets; buyers will look inside",
       "Rent a storage unit for items you don't need during showings",
     ],
   },
@@ -26,7 +26,7 @@ const stagingSteps = [
       "A spotless home signals to buyers that the property has been well-maintained. Hire professional cleaners for the best results.",
     tips: [
       "Professional carpet and hardwood floor cleaning",
-      "Clean windows inside and out — natural light sells",
+      "Clean windows inside and out; natural light sells",
       "Power wash exterior, driveway, and walkways",
       "Clean grout in bathrooms and kitchen",
       "Don't forget light fixtures, baseboards, and vents",
@@ -35,7 +35,7 @@ const stagingSteps = [
   {
     title: "Make Strategic Repairs",
     description:
-      "Fix the small things that create a negative impression. You don't need a full renovation — focus on what buyers notice first.",
+      "Fix the small things that create a negative impression. You don't need a full renovation; focus on what buyers notice first.",
     tips: [
       "Fix leaky faucets and running toilets",
       "Repair any holes or marks on walls",
@@ -85,10 +85,10 @@ const stagingSteps = [
     description:
       "Vancouver buyers have unique expectations. Stage for the local market to maximize your home's appeal in this competitive city.",
     tips: [
-      "Embrace natural light — open blinds and curtains. Vancouver buyers crave light, especially in the rainy months.",
-      "Highlight outdoor spaces — even small patios and balconies should be staged with weather-resistant furniture.",
-      "If you have a view — mountains, water, or city — make sure nothing blocks it. Rearrange furniture if needed.",
-      "Address moisture concerns — dehumidify, fix any condensation issues, and ensure no musty smells.",
+      "Embrace natural light: open blinds and curtains. Vancouver buyers crave light, especially in the rainy months.",
+      "Highlight outdoor spaces: even small patios and balconies should be staged with weather-resistant furniture.",
+      "If you have a view (mountains, water, or city), make sure nothing blocks it. Rearrange furniture if needed.",
+      "Address moisture concerns: dehumidify, fix any condensation issues, and ensure no musty smells.",
       "For condos, make the entrance and common areas spotless. Lobby impressions matter.",
       "Stage for the Vancouver buyer: clean lines, natural materials, and a West Coast contemporary feel.",
     ],

@@ -254,14 +254,14 @@ export default async function OakridgePage() {
                   Oakridge offers a rare combination in Vancouver: the tranquility of a residential neighborhood with the convenience of urban amenities. Most of the neighborhood&apos;s residential streets are quiet and tree-lined, with a mix of mid-century homes, newer builds, and an increasing number of condominium developments.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Residents love Oakridge for its walkability, its proximity to some of Vancouver&apos;s best parks (Queen Elizabeth Park is just a block away), and its excellent transit access. The two Canada Line stations make commuting effortless &mdash; you can be downtown in 15 minutes or at YVR airport in 20.
+                  Residents love Oakridge for its walkability, its proximity to some of Vancouver&apos;s best parks (Queen Elizabeth Park is just a block away), and its excellent transit access. The two Canada Line stations make commuting effortless; you can be downtown in 15 minutes or at YVR airport in 20.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Oakridge</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Morning coffee at a local cafe on Cambie Street. A walk or jog around the Langara Golf Course trails. Drop the kids at Van Horne Elementary, then hop on the SkyTrain to downtown for work. After school activities at the community center. Dinner at one of the many restaurants along 41st Avenue, or a home-cooked meal with ingredients from the Asian grocery stores that reflect the neighborhood&apos;s diversity. Weekend visits to Queen Elizabeth Park&apos;s Bloedel Conservatory or the VanDusen Botanical Garden nearby.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  This is the Oakridge lifestyle &mdash; suburban peace with urban convenience, cultural richness, and a community that&apos;s being revitalized without losing its soul.
+                  This is the Oakridge lifestyle: suburban peace with urban convenience, cultural richness, and a community that&apos;s being revitalized without losing its soul.
                 </p>
               </section>
 
@@ -342,7 +342,7 @@ export default async function OakridgePage() {
                     { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park, just one block from Oakridge. Stunning city views, the Bloedel Conservatory, rose gardens, and seasonal gardens. A true gem for daily walks or weekend picnics." },
                     { name: "Langara Golf Course", desc: "An 18-hole public golf course with perimeter walking, jogging, and dog-walking trails that loop the entire course. Perfect for morning runs or evening strolls." },
                     { name: "Columbia Park & Tisdall Park", desc: "Neighborhood parks with playgrounds, sports fields, and community gathering spaces within easy walking distance." },
-                    { name: "Oakridge Park (Coming 2026)", desc: "The crown jewel — a 9-acre public park as part of the Oakridge Park redevelopment. Will include playgrounds, playing fields, a woodland area, community garden, concert stages, yoga platforms, and a running loop." },
+                    { name: "Oakridge Park (Coming 2026)", desc: "The crown jewel: a 9-acre public park as part of the Oakridge Park redevelopment. Will include playgrounds, playing fields, a woodland area, community garden, concert stages, yoga platforms, and a running loop." },
                   ].map((park) => (
                     <div key={park.name} className="bg-warm-50 rounded-xl p-5">
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -409,7 +409,7 @@ export default async function OakridgePage() {
                   Oakridge&apos;s dining and shopping scene reflects its cultural diversity. Along 41st Avenue and Cambie Street, you&apos;ll find a mix of Asian restaurants, Jewish delis, trendy cafes, and international cuisine. The neighborhood&apos;s food scene is one of Vancouver&apos;s best-kept secrets.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Oakridge Park redevelopment will dramatically expand shopping and dining options with over 500,000 square feet of retail space, including the highly anticipated Time Out Market &mdash; a curated food hall featuring Vancouver&apos;s best chefs and restaurants.
+                  The Oakridge Park redevelopment will dramatically expand shopping and dining options with over 500,000 square feet of retail space, including the highly anticipated Time Out Market, a curated food hall featuring Vancouver&apos;s best chefs and restaurants.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   For everyday needs, the Cambie Village shopping district is nearby, and Main Street&apos;s eclectic boutiques and restaurants are just a short drive or bus ride east.
@@ -474,7 +474,7 @@ export default async function OakridgePage() {
                     </h2>
                     <p className="text-white/70 text-sm leading-relaxed mb-6">
                       Whether you&apos;re looking to buy, sell, or just want to learn more
-                      about Oakridge real estate &mdash; I&apos;d love to help. Let&apos;s start with
+                      about Oakridge real estate, I&apos;d love to help. Let&apos;s start with
                       a no-pressure conversation about your goals.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">

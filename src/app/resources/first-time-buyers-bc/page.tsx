@@ -172,7 +172,7 @@ export default function FirstTimeBuyersBCPage() {
                   &ldquo;Start your FHSA as early as possible, even if you
                   won&apos;t buy for a few years. The tax deduction alone makes
                   it worthwhile. And don&apos;t overlook the newly built home
-                  PTT exemption — with all the new development in Oakridge and
+                  PTT exemption; with all the new development in Oakridge and
                   the Cambie Corridor, this can save you thousands.&rdquo;
                 </p>
               </div>

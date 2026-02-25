@@ -16,7 +16,7 @@ export default function SellingPage() {
       <PageBanner
         eyebrow="For Sellers"
         title="Selling Your Vancouver Home"
-        description="Selling well comes down to pricing, preparation, and negotiation. I have put together my process so you can see how I work — then let&apos;s talk about your property."
+        description="Selling well comes down to pricing, preparation, and negotiation. I have put together my process so you can see how I work. Then let&apos;s talk about your property."
         align="left"
       />
 

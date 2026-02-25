@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const highlights = [
   {
     title: "True Local Expertise",
-    desc: "I live and breathe Oakridge and Vancouver\u2019s south side. I know every street, every development timeline, every coffee shop. When you ask me about a neighbourhood, you get real answers \u2014 not generic marketing.",
+    desc: "I live and breathe Oakridge and Vancouver\u2019s south side. I know every street, every development timeline, every coffee shop. When you ask me about a neighbourhood, you get real answers, not generic marketing.",
   },
   {
     title: "One Agent, Start to Finish",
-    desc: "No hand-offs to junior associates. No getting lost in a mega-team. When you work with me, you work directly with me \u2014 from first conversation to closing day and beyond.",
+    desc: "No hand-offs to junior associates. No getting lost in a mega-team. When you work with me, you work directly with me, from first conversation to closing day and beyond.",
   },
   {
     title: "I Will Tell You the Truth",
@@ -23,7 +23,7 @@ const highlights = [
   },
   {
     title: "Data-Driven Decisions",
-    desc: "I don\u2019t guess \u2014 I analyze. Every pricing recommendation, every offer strategy, and every market opinion is backed by current data, comparable sales, and strategic analysis.",
+    desc: "I don\u2019t guess; I analyze. Every pricing recommendation, every offer strategy, and every market opinion is backed by current data, comparable sales, and strategic analysis.",
   },
   {
     title: "Technology-Forward",
@@ -31,7 +31,7 @@ const highlights = [
   },
   {
     title: "I Answer My Phone",
-    desc: "Text me, call me \u2014 I get back to you the same day. That responsiveness is how deals get done in this market.",
+    desc: "Text me, call me. I get back to you the same day. That responsiveness is how deals get done in this market.",
   },
 ];
 
@@ -66,17 +66,17 @@ export default function WhyWorkWithMePage() {
                 <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
                   <p>
                     I got into real estate because I saw too many people getting poor advice on the
-                    biggest purchase of their lives. A home is not a commodity &mdash; it is where your
+                    biggest purchase of their lives. A home is not a commodity; it is where your
                     family lives, where your kids grow up. The agent you choose should understand that.
                   </p>
                   <p>
                     I focus on Oakridge and Vancouver&apos;s south side because this is where I live and work.
-                    The Oakridge Park redevelopment, the rezoning along Cambie, the new transit connections
-                    &mdash; I track all of it because my clients need to know how these changes affect their
+                    The Oakridge Park redevelopment, the rezoning along Cambie, the new transit connections:
+                    I track all of it because my clients need to know how these changes affect their
                     property values and their daily lives.
                   </p>
                   <p>
-                    I work with Oakwyn Realty because they are the top brokerage in Vancouver &mdash;
+                    I work with Oakwyn Realty because they are the top brokerage in Vancouver:
                     $6.3 billion in sales, 900+ agents across BC. That gives me access to market data,
                     off-market listings, and a professional network that directly benefits my clients.
                     But you will only ever deal with me.

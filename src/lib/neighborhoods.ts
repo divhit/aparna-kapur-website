@@ -46,9 +46,9 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     ],
     bounds: { north: 49.2375, south: 49.2175, east: -123.1000, west: -123.1350 },
     fallbackPOIs: [
-      { name: "Oakridge-41st Avenue Station", type: "transit", lat: 49.2293, lng: -123.1167, description: "Canada Line SkyTrain — 15 min to Downtown" },
+      { name: "Oakridge-41st Avenue Station", type: "transit", lat: 49.2293, lng: -123.1167, description: "Canada Line SkyTrain, 15 min to Downtown" },
       { name: "Langara-49th Avenue Station", type: "transit", lat: 49.2262, lng: -123.1108, description: "Canada Line SkyTrain" },
-      { name: "Oakridge Park Redevelopment", type: "landmark", lat: 49.2275, lng: -123.1167, description: "$6B mixed-use development — 3,300+ new homes, 9-acre park" },
+      { name: "Oakridge Park Redevelopment", type: "landmark", lat: 49.2275, lng: -123.1167, description: "$6B mixed-use development with 3,300+ new homes and a 9-acre park" },
     ],
   },
   marpole: {
@@ -69,7 +69,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     ],
     bounds: { north: 49.2200, south: 49.2000, east: -123.1100, west: -123.1500 },
     fallbackPOIs: [
-      { name: "Marine Drive Station", type: "transit", lat: 49.2098, lng: -123.1200, description: "Canada Line SkyTrain — connects to YVR & Downtown" },
+      { name: "Marine Drive Station", type: "transit", lat: 49.2098, lng: -123.1200, description: "Canada Line SkyTrain, connects to YVR & Downtown" },
       { name: "Fraser River Park", type: "park", lat: 49.2020, lng: -123.1270, description: "Waterfront trails with river views" },
       { name: "Marpole Community Centre", type: "landmark", lat: 49.2098, lng: -123.1316, description: "Community programs, fitness, and events" },
     ],
@@ -115,7 +115,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     ],
     bounds: { north: 49.2520, south: 49.2320, east: -123.0850, west: -123.1150 },
     fallbackPOIs: [
-      { name: "Nat Bailey Stadium", type: "landmark", lat: 49.2425, lng: -123.1015, description: "Historic baseball stadium — Home of the Vancouver Canadians" },
+      { name: "Nat Bailey Stadium", type: "landmark", lat: 49.2425, lng: -123.1015, description: "Historic baseball stadium, home of the Vancouver Canadians" },
       { name: "Hillcrest Community Centre", type: "landmark", lat: 49.2435, lng: -123.1050, description: "Aquatic centre, ice rink, and fitness facilities" },
       { name: "Riley Park", type: "park", lat: 49.2440, lng: -123.0960, description: "The neighbourhood's namesake park with sports fields" },
     ],

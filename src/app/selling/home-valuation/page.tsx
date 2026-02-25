@@ -34,7 +34,7 @@ export default function HomeValuationPage() {
                   {
                     step: "1",
                     title: "Share Your Details",
-                    desc: "Tell me about your property — type, size, features, and neighbourhood. The more details, the more accurate my analysis.",
+                    desc: "Tell me about your property: type, size, features, and neighbourhood. The more details, the more accurate my analysis.",
                   },
                   {
                     step: "2",

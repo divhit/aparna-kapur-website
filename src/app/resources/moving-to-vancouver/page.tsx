@@ -164,21 +164,21 @@ export default function MovingToVancouverPage() {
             </p>
             <ul className="space-y-2 mb-8">
               <li className="text-sm text-warm-600 pl-4 border-l-2 border-teal-100">
-                <strong className="text-warm-800">SkyTrain</strong> — Fast,
+                <strong className="text-warm-800">SkyTrain</strong>: Fast,
                 reliable rapid transit with 3 lines. The Canada Line connects
                 downtown to Richmond and YVR in 25 minutes.
               </li>
               <li className="text-sm text-warm-600 pl-4 border-l-2 border-teal-100">
-                <strong className="text-warm-800">Bus Network</strong> —
+                <strong className="text-warm-800">Bus Network</strong>:
                 Extensive bus routes cover the entire metro area. Use a Compass
                 Card for seamless transfers.
               </li>
               <li className="text-sm text-warm-600 pl-4 border-l-2 border-teal-100">
-                <strong className="text-warm-800">Cycling</strong> — Growing
+                <strong className="text-warm-800">Cycling</strong>: Growing
                 network of protected bike lanes. Very popular for commuting.
               </li>
               <li className="text-sm text-warm-600 pl-4 border-l-2 border-teal-100">
-                <strong className="text-warm-800">Driving</strong> — Traffic can
+                <strong className="text-warm-800">Driving</strong>: Traffic can
                 be heavy during peak hours. Street parking is limited in popular
                 areas. Many newer buildings have limited parking stalls.
               </li>
@@ -231,12 +231,12 @@ export default function MovingToVancouverPage() {
             <div className="space-y-3 mb-8">
               {[
                 "Get a Compass Card for public transit as soon as you arrive",
-                "Open a Canadian bank account — major banks have newcomer programs",
+                "Open a Canadian bank account; major banks have newcomer programs",
                 "Apply for a BC Services Card (health insurance) within 3 months",
                 "Get a BC driver's license (you can use your existing license for 90 days)",
-                "Register with a family doctor early — there's a shortage in Vancouver",
-                "Explore your neighborhood on foot — Vancouver is very walkable",
-                "Invest in a good rain jacket — umbrellas aren't enough for Vancouver rain",
+                "Register with a family doctor early; there's a shortage in Vancouver",
+                "Explore your neighborhood on foot; Vancouver is very walkable",
+                "Invest in a good rain jacket; umbrellas aren't enough for Vancouver rain",
                 "Join community centre programs to meet neighbors",
               ].map((tip, i) => (
                 <div

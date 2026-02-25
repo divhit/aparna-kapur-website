@@ -125,7 +125,7 @@ export default function HomeValuationForm() {
           Your Valuation Snapshot Is On Its Way!
         </h3>
         <p className="text-warm-600 text-sm max-w-sm mx-auto">
-          Check your inbox &mdash; you&apos;ll receive a quick snapshot of your
+          Check your inbox. You&apos;ll receive a quick snapshot of your
           home&apos;s estimated value shortly. For the full Comparative Market
           Analysis with detailed comparables and pricing strategy, I&apos;ll be
           in touch within 48 hours to walk you through everything.

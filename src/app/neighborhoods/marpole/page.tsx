@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "Is Marpole a good neighborhood to buy in?",
     answer:
-      "Marpole is one of the best value propositions on Vancouver's west side. With a GVR benchmark price of $1.14M — well below neighboring Oakridge ($1.49M) or Kerrisdale ($1.90M) — it offers strong fundamentals including Canada Line SkyTrain access at Marine Drive, proximity to YVR, and a major community plan bringing new density and amenities. For buyers looking for long-term appreciation in a family-friendly setting, Marpole is a compelling choice.",
+      "Marpole is one of the best value propositions on Vancouver's west side. With a GVR benchmark price of $1.14M, well below neighboring Oakridge ($1.49M) or Kerrisdale ($1.90M), it offers strong fundamentals including Canada Line SkyTrain access at Marine Drive, proximity to YVR, and a major community plan bringing new density and amenities. For buyers looking for long-term appreciation in a family-friendly setting, Marpole is a compelling choice.",
   },
   {
     question: "How much does a home cost in Marpole?",
@@ -35,7 +35,7 @@ const faqs = [
   {
     question: "What is the Marpole Community Plan?",
     answer:
-      "The Marpole Community Plan, adopted by Vancouver City Council, guides growth and development in the neighborhood through 2040. It allows for increased density along Cambie Street, Granville Street, and SW Marine Drive while preserving the character of interior residential streets. The plan envisions new housing, improved parks, better pedestrian and cycling connections, and enhanced commercial areas — all while respecting Marpole's historic identity.",
+      "The Marpole Community Plan, adopted by Vancouver City Council, guides growth and development in the neighborhood through 2040. It allows for increased density along Cambie Street, Granville Street, and SW Marine Drive while preserving the character of interior residential streets. The plan envisions new housing, improved parks, better pedestrian and cycling connections, and enhanced commercial areas, all while respecting Marpole's historic identity.",
   },
   {
     question: "What schools are in the Marpole area?",
@@ -45,7 +45,7 @@ const faqs = [
   {
     question: "How do I get around from Marpole?",
     answer:
-      "Marpole has excellent transit access via the Marine Drive SkyTrain station on the Canada Line. Downtown Vancouver is about 20 minutes by SkyTrain, and Vancouver International Airport (YVR) is just two stops away — roughly 7 minutes. Major bus routes run along Granville Street, Marine Drive, and Cambie Street. Drivers benefit from direct access to the Arthur Laing Bridge (to YVR), the Oak Street Bridge (to Richmond), and Granville Street heading north.",
+      "Marpole has excellent transit access via the Marine Drive SkyTrain station on the Canada Line. Downtown Vancouver is about 20 minutes by SkyTrain, and Vancouver International Airport (YVR) is just two stops away, roughly 7 minutes. Major bus routes run along Granville Street, Marine Drive, and Cambie Street. Drivers benefit from direct access to the Arthur Laing Bridge (to YVR), the Oak Street Bridge (to Richmond), and Granville Street heading north.",
   },
 ];
 
@@ -196,13 +196,13 @@ export default async function MarpolePage() {
                   Overview
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Marpole is one of Vancouver&apos;s oldest and most storied neighborhoods, with roots stretching back to the 1870s when it served as a hub for fishing and lumber operations along the Fraser River. Located at the southern tip of Vancouver &mdash; bordered by West 57th Avenue to the north, the Fraser River to the south, Oak Street to the east, and the western edge near Celtic Avenue &mdash; Marpole occupies a strategic position between the city core and the communities of Richmond and the Vancouver International Airport.
+                  Marpole is one of Vancouver&apos;s oldest and most storied neighborhoods, with roots stretching back to the 1870s when it served as a hub for fishing and lumber operations along the Fraser River. Located at the southern tip of Vancouver, bordered by West 57th Avenue to the north, the Fraser River to the south, Oak Street to the east, and the western edge near Celtic Avenue, Marpole occupies a strategic position between the city core and the communities of Richmond and the Vancouver International Airport.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Today, Marpole is a neighborhood in transition. Its tree-lined residential streets are filled with a mix of charming post-war bungalows, character homes from the early 20th century, and an increasing number of modern condominiums and townhome developments. The Marpole Community Plan is guiding thoughtful densification along major corridors while preserving the quiet, family-oriented character of interior streets that residents love.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  What draws many buyers to Marpole is its remarkable value relative to surrounding areas. With a GVR benchmark price of $1.14M &mdash; well below Oakridge ($1.49M), Kerrisdale ($1.90M), or South Cambie ($1.44M) &mdash; Marpole offers an entry point into Vancouver&apos;s west side that is increasingly rare. Add in the Marine Drive SkyTrain station, proximity to YVR, and a growing community of shops and restaurants, and it&apos;s easy to see why Marpole is gaining attention from savvy buyers and investors alike.
+                  What draws many buyers to Marpole is its remarkable value relative to surrounding areas. With a GVR benchmark price of $1.14M, well below Oakridge ($1.49M), Kerrisdale ($1.90M), or South Cambie ($1.44M), Marpole offers an entry point into Vancouver&apos;s west side that is increasingly rare. Add in the Marine Drive SkyTrain station, proximity to YVR, and a growing community of shops and restaurants, and it&apos;s easy to see why Marpole is gaining attention from savvy buyers and investors alike.
                 </p>
               </section>
 
@@ -219,7 +219,7 @@ export default async function MarpolePage() {
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Marpole</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Start your morning with a coffee and fresh pastry from one of the bakeries on Granville Street. Walk the kids to David Lloyd George Elementary, then hop on the Canada Line at Marine Drive &mdash; you&apos;ll be at your downtown office in 20 minutes flat. After work, pick up groceries at one of the neighborhood&apos;s excellent Asian supermarkets or the local farmers&apos; market. On weekends, take the family to the Fraser River Trail for a bike ride, explore the playgrounds at Marpole Park, or drive ten minutes to Richmond for dim sum at some of the best Chinese restaurants in North America.
+                  Start your morning with a coffee and fresh pastry from one of the bakeries on Granville Street. Walk the kids to David Lloyd George Elementary, then hop on the Canada Line at Marine Drive. You&apos;ll be at your downtown office in 20 minutes flat. After work, pick up groceries at one of the neighborhood&apos;s excellent Asian supermarkets or the local farmers&apos; market. On weekends, take the family to the Fraser River Trail for a bike ride, explore the playgrounds at Marpole Park, or drive ten minutes to Richmond for dim sum at some of the best Chinese restaurants in North America.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   Marpole is also a gateway neighborhood. Its southern location means you&apos;re closer to YVR than almost anywhere else in Vancouver, making it ideal for frequent travelers. Richmond&apos;s world-class shopping and dining are minutes away via the Oak Street Bridge or Arthur Laing Bridge. And yet, when you come home, you return to quiet, leafy streets that feel worlds away from the bustle.
@@ -289,7 +289,7 @@ export default async function MarpolePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  For frequent flyers, Marpole is hard to beat. YVR is just two SkyTrain stops &mdash; or a 10-minute drive &mdash; from the heart of the neighborhood. This proximity to the airport is a genuine lifestyle advantage that few other Vancouver neighborhoods can match, making Marpole particularly popular with professionals who travel regularly for work.
+                  For frequent flyers, Marpole is hard to beat. YVR is just two SkyTrain stops, or a 10-minute drive, from the heart of the neighborhood. This proximity to the airport is a genuine lifestyle advantage that few other Vancouver neighborhoods can match, making Marpole particularly popular with professionals who travel regularly for work.
                 </p>
               </section>
 
@@ -379,7 +379,7 @@ export default async function MarpolePage() {
                   The restaurant scene along Granville Street is particularly noteworthy. You&apos;ll find excellent Vietnamese pho houses, authentic Korean barbecue, neighborhood Italian trattorias, Japanese ramen shops, and cozy brunch spots that have become local institutions. The diversity of the food mirrors the diversity of the community, and many Marpole restaurants offer quality that rivals more well-known dining districts at friendlier prices.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Marine Drive also offers a commercial strip with grocery stores, banks, pharmacies, and everyday services. Several large Asian supermarkets in the area provide outstanding produce and specialty ingredients. For larger shopping excursions, the Richmond Centre and Aberdeen Centre malls are just across the bridge &mdash; a five-minute drive from most parts of Marpole.
+                  Marine Drive also offers a commercial strip with grocery stores, banks, pharmacies, and everyday services. Several large Asian supermarkets in the area provide outstanding produce and specialty ingredients. For larger shopping excursions, the Richmond Centre and Aberdeen Centre malls are just across the bridge, a five-minute drive from most parts of Marpole.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   As the Marpole Community Plan brings more density and foot traffic to the neighborhood, expect the commercial landscape to continue improving. New mixed-use developments along Cambie and Granville will add ground-floor retail and dining, further enhancing the neighborhood&apos;s walkability and convenience.
@@ -410,8 +410,8 @@ export default async function MarpolePage() {
                     </h2>
                     <p className="text-white/70 text-sm leading-relaxed mb-6">
                       Whether you&apos;re looking to buy your first home, upgrade to a detached
-                      property, or invest in one of Vancouver&apos;s most promising neighborhoods
-                      &mdash; I&apos;d love to help. Let&apos;s start with a no-pressure
+                      property, or invest in one of Vancouver&apos;s most promising neighborhoods,
+                      I&apos;d love to help. Let&apos;s start with a no-pressure
                       conversation about your goals.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">

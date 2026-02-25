@@ -307,7 +307,7 @@ export default function ChatWidget() {
             {messages.length === 0 && (
               <div className="text-center py-6">
                 <p className="text-sm text-warm-500 mb-4">
-                  Hi! Ask me anything about Vancouver real estate &mdash;
+                  Hi! Ask me anything about Vancouver real estate:
                   neighbourhoods, buying, selling, mortgages, and more.
                 </p>
                 <div className="space-y-2">

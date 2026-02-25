@@ -56,7 +56,7 @@ const guides = [
   {
     title: "Moving to Vancouver",
     description:
-      "Everything you need to know about relocating to Vancouver — neighborhoods, cost of living, lifestyle, and practical tips.",
+      "Everything you need to know about relocating to Vancouver: neighborhoods, cost of living, lifestyle, and practical tips.",
     href: "/resources/moving-to-vancouver",
     tag: "Relocation",
   },
@@ -84,7 +84,7 @@ const guides = [
   {
     title: "Oakridge Neighborhood Guide",
     description:
-      "The definitive guide to Oakridge — real estate, schools, transit, parks, the Oakridge Park redevelopment, and more.",
+      "The definitive guide to Oakridge: real estate, schools, transit, parks, the Oakridge Park redevelopment, and more.",
     href: "/neighborhoods/oakridge",
     tag: "Neighborhoods",
   },
@@ -96,7 +96,7 @@ export default function ResourcesPage() {
       <PageBanner
         eyebrow="Resources & Tools"
         title="Guides, Tools &amp; Market Data"
-        description="I put these together so you can do your homework before we talk. The basics are here — the strategy for your specific situation starts with a call."
+        description="I put these together so you can do your homework before we talk. The basics are here; the strategy for your specific situation starts with a call."
       />
 
       {/* Tools Section */}
@@ -141,7 +141,7 @@ export default function ResourcesPage() {
           <SectionHeading
             eyebrow="Guides"
             title="Know What You Are Getting Into"
-            description="I wrote these for the Vancouver market specifically. They cover the basics — your specific questions are what our first call is for."
+            description="I wrote these for the Vancouver market specifically. They cover the basics; your specific questions are what our first call is for."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {guides.map((guide) => (

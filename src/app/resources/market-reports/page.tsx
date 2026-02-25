@@ -74,7 +74,7 @@ export default function MarketReportsPage() {
                   &ldquo;These are general market trends. For specific
                   properties or streets, I can provide a detailed Comparative
                   Market Analysis tailored to your exact situation. Just reach
-                  out — it&apos;s free and there&apos;s no obligation.&rdquo;
+                  out. It&apos;s free and there&apos;s no obligation.&rdquo;
                 </p>
               </div>
             </div>

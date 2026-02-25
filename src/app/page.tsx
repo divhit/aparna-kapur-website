@@ -101,11 +101,11 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-teal-900 rounded-2xl p-5 shadow-xl hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-teal-900 rounded-2xl p-6 shadow-xl hidden md:block">
                 <img
                   src="/images/logos/oakwyn-realty-white.png"
                   alt="Oakwyn Realty"
-                  className="h-12"
+                  className="h-20"
                 />
               </div>
             </div>
@@ -114,13 +114,13 @@ export default function HomePage() {
                 Hi, I&apos;m Aparna
               </h2>
               <p className="text-warm-600 leading-relaxed mb-4">
-                I live and work on Vancouver&apos;s south side. Oakridge, Marpole, South Cambie, Kerrisdale &mdash;
+                I live and work on Vancouver&apos;s south side. Oakridge, Marpole, South Cambie, Kerrisdale.
                 I walk these neighbourhoods every week. I know which streets flood with traffic at 5pm,
                 which blocks are getting rezoned, and which buildings have the best strata management.
                 That kind of knowledge only comes from being here.
               </p>
               <p className="text-warm-600 leading-relaxed mb-6">
-                When you work with me, you get one person &mdash; not a team, not a junior associate.
+                When you work with me, you get one person, not a team, not a junior associate.
                 I pick up the phone, I show up to every inspection, and I will tell you straight if a
                 property is not worth your money. I am with Oakwyn Realty because they are the best
                 brokerage in Vancouver, and that gives my clients access to market intelligence and a

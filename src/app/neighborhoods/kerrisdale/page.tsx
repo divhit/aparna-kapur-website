@@ -76,40 +76,29 @@ export default async function KerrisdalePage() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
             Kerrisdale, Vancouver
           </h1>
-          <p className="text-xl text-teal-200 font-medium mb-2">
-            The Complete Neighborhood Guide
-          </p>
-          <p className="text-white/70 max-w-2xl text-lg">
-            Discover Vancouver&apos;s most charming village neighborhood &mdash; where heritage
-            elegance, tree-lined streets, and boutique shopping meet world-class schools
-            and an unmatched quality of life.
-          </p>
         </div>
       </section>
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
-              <p className="font-serif text-2xl text-teal-700">$1.90M</p>
-              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">Top 5</p>
-              <p className="text-xs text-warm-500 mt-1">Private Schools</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">10 min</p>
-              <p className="text-xs text-warm-500 mt-1">To UBC</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">4+</p>
-              <p className="text-xs text-warm-500 mt-1">Major Parks</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">100+</p>
-              <p className="text-xs text-warm-500 mt-1">Village Shops</p>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <div className="hidden lg:block" />
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-3 gap-6 text-center max-w-3xl">
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">Top 5</p>
+                  <p className="text-xs text-warm-500 mt-1">Private Schools</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">10 min</p>
+                  <p className="text-xs text-warm-500 mt-1">To UBC</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">4+</p>
+                  <p className="text-xs text-warm-500 mt-1">Major Parks</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -121,32 +110,30 @@ export default async function KerrisdalePage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block">
-              <nav className="sticky top-28">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-4">
+              <nav className="sticky top-28 space-y-1">
+                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                   On This Page
                 </p>
-                <ul className="space-y-2 text-sm">
-                  {[
-                    ["overview", "Overview"],
-                    ["map", "Explore Map"],
-                    ["living", "Living in Kerrisdale"],
-                    ["real-estate", "Real Estate Market"],
-                    ["transit", "Getting Around"],
-                    ["parks", "Parks & Recreation"],
-                    ["schools", "Schools & Education"],
-                    ["shopping", "Shopping & Dining"],
-                    ["faq", "FAQ"],
-                  ].map(([id, label]) => (
-                    <li key={id}>
-                      <a
-                        href={`#${id}`}
-                        className="text-warm-500 hover:text-teal-700 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {[
+                  ["living", "Living in Kerrisdale", "1"],
+                  ["real-estate", "Real Estate Market", "2"],
+                  ["transit", "Getting Around", "3"],
+                  ["parks", "Parks", "4"],
+                  ["schools", "Education", "5"],
+                  ["shopping", "Shopping & Dining", "6"],
+                  ["faq", "FAQ", "7"],
+                ].map(([id, label, step]) => (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 transition-colors"
+                  >
+                    <span className="w-8 h-8 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center font-serif text-sm font-semibold shrink-0">
+                      {step}
+                    </span>
+                    {label}
+                  </a>
+                ))}
                 <div className="mt-8 pt-6 border-t border-warm-100">
                   <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
                     Nearby Areas
@@ -175,26 +162,8 @@ export default async function KerrisdalePage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
-              {/* Interactive Map */}
-              <section id="map" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Explore Kerrisdale
-                </h2>
-                <p className="text-warm-600 leading-relaxed mb-6">
-                  Discover transit stations, schools, parks, and key landmarks in and around Kerrisdale.
-                </p>
-                <NeighbourhoodMap
-                  center={kerrisdaleData.center}
-                  zoom={kerrisdaleData.zoom}
-                  pois={pois.length > 0 ? pois : kerrisdaleData.fallbackPOIs}
-                  boundaryName="Kerrisdale"
-                  height="450px"
-                  showLegend
-                />
-              </section>
-
               {/* Overview */}
-              <section id="overview" className="mb-16">
+              <section className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Overview
                 </h2>
@@ -207,6 +176,21 @@ export default async function KerrisdalePage() {
                 <p className="text-warm-600 leading-relaxed">
                   The neighborhood is also home to a rich cultural mix, with strong East Asian and European communities that have shaped Kerrisdale&apos;s dining scene, specialty shops, and community character. This blend of old-world elegance and multicultural vibrancy gives Kerrisdale a distinctive identity that is difficult to replicate elsewhere in Vancouver.
                 </p>
+              </section>
+
+              {/* Interactive Map */}
+              <section className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6 italic font-bold">
+                  Explore Kerrisdale
+                </h2>
+                <NeighbourhoodMap
+                  center={kerrisdaleData.center}
+                  zoom={kerrisdaleData.zoom}
+                  pois={pois.length > 0 ? pois : kerrisdaleData.fallbackPOIs}
+                  boundaryName="Kerrisdale"
+                  height="450px"
+                  showLegend
+                />
               </section>
 
               {/* Living in Kerrisdale */}
@@ -295,7 +279,7 @@ export default async function KerrisdalePage() {
               {/* Parks */}
               <section id="parks" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Parks &amp; Recreation
+                  Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Kerrisdale residents enjoy an abundance of green space:
@@ -322,7 +306,7 @@ export default async function KerrisdalePage() {
               {/* Schools */}
               <section id="schools" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Schools &amp; Education
+                  Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
                   Education is one of Kerrisdale&apos;s strongest draws. The neighborhood and its immediate surroundings are home to some of Vancouver&apos;s best public and private schools. Moreover there are many great after school activities that are concentrated here which makes it very easy to hop from one to another with multiple kids in tow!

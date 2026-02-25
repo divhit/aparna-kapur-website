@@ -16,7 +16,7 @@ export default function BuyingPage() {
       <PageBanner
         eyebrow="For Buyers"
         title="Buying a Home in Vancouver"
-        description="I wrote this guide so you know exactly what to expect at every stage. Read it, then call me — your situation is unique and the real strategy starts with a conversation."
+        description="I wrote this guide so you know exactly what to expect at every stage. Read it, then call me. Your situation is unique and the real strategy starts with a conversation."
         align="left"
       />
 

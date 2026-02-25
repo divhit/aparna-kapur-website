@@ -36,7 +36,7 @@ export default function OakwynRealtyPage() {
                   <p>
                     When I chose to build my real estate career, I was intentional
                     about the brokerage I joined. Oakwyn Realty isn&apos;t just a
-                    brokerage — it&apos;s a community of top-performing agents backed
+                    brokerage; it&apos;s a community of top-performing agents backed
                     by industry-leading technology, training, and support. Here&apos;s
                     what that means for my clients.
                   </p>
@@ -49,7 +49,7 @@ export default function OakwynRealtyPage() {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    "Cutting-edge technology — from advanced market analytics to digital transaction management, giving you an edge in today\u2019s market",
+                    "Cutting-edge technology: from advanced market analytics to digital transaction management, giving you an edge in today\u2019s market",
                     "A collaborative network of 900+ experienced agents who may already have insights on a building, neighbourhood, or a buyer for your home",
                     "Comprehensive training and mentorship that keeps me sharp and ahead of market trends",
                     "Professional photography, videography, print design, and digital marketing to present your property at the highest level",

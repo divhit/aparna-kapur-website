@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "How much does a home cost along the Cambie Corridor?",
     answer:
-      "The GVR MLS\u00AE HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor \u2014 properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
+      "The GVR MLS\u00AE HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor; properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
   },
   {
     question: "What is the Cambie Corridor Plan?",
@@ -80,7 +80,7 @@ export default async function CambieCorridorPage() {
             The Complete Neighborhood Guide
           </p>
           <p className="text-white/70 max-w-2xl text-lg">
-            Vancouver&apos;s most dynamic transit-oriented development corridor &mdash;
+            Vancouver&apos;s most dynamic transit-oriented development corridor,
             stretching along the Canada Line from downtown to Marine Drive.
           </p>
         </div>
@@ -183,7 +183,7 @@ export default async function CambieCorridorPage() {
                   The Cambie Corridor is Vancouver&apos;s most significant transit-oriented development corridor, stretching roughly 6 kilometres along Cambie Street from the edge of downtown south to the Fraser River at Marine Drive. Defined by the Canada Line SkyTrain route that runs beneath it, this corridor has become the blueprint for how Vancouver is evolving from a city of single-family homes into a more complete, connected, and livable urban environment.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Unlike a traditional neighborhood with fixed boundaries, the Cambie Corridor is better understood as a series of distinct communities connected by rapid transit. Each station area &mdash; Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive &mdash; has its own character, amenities, and real estate profile. The northern sections near Broadway are more urban and dense, with a vibrant mix of restaurants, shops, and offices. As you move south, the corridor transitions into quieter, more residential streets before arriving at the bustling mixed-use hub of Marine Gateway.
+                  Unlike a traditional neighborhood with fixed boundaries, the Cambie Corridor is better understood as a series of distinct communities connected by rapid transit. Each station area (Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive) has its own character, amenities, and real estate profile. The northern sections near Broadway are more urban and dense, with a vibrant mix of restaurants, shops, and offices. As you move south, the corridor transitions into quieter, more residential streets before arriving at the bustling mixed-use hub of Marine Gateway.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   What unites the entire corridor is transformation. Since the Canada Line opened in 2009, billions of dollars of development have reshaped block after block, bringing new condominiums, townhome complexes, rental buildings, retail, and community spaces to streets that were formerly lined with single-family houses. For homebuyers and investors, the Cambie Corridor represents one of the most compelling long-term value propositions in Metro Vancouver.
@@ -217,7 +217,7 @@ export default async function CambieCorridorPage() {
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The plan recognizes that rapid transit infrastructure is too valuable to be surrounded solely by low-density single-family housing. In its place, the City envisioned a graduated density approach: the highest towers and most intense mixed-use development within a short walk of each station, transitioning to mid-rise buildings, townhomes, and duplexes further out, and preserving existing character in areas beyond the corridor&apos;s influence.
+                  The City envisioned a graduated density approach: the highest towers and most intense mixed-use development within a short walk of each station, transitioning to mid-rise buildings, townhomes, and duplexes further out, and preserving existing character in areas beyond the corridor&apos;s influence.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">Key Station Areas</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -235,7 +235,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The plan continues to roll out, with new projects breaking ground every year. For buyers, this means an ongoing supply of new construction and pre-sale opportunities &mdash; and for existing owners, it means continued neighborhood improvement, amenity growth, and property value appreciation as each phase completes.
+                  The plan continues to roll out, with new projects breaking ground every year. For buyers, this means an ongoing supply of new construction and pre-sale opportunities. For owners, it means neighborhood improvement and amenity growth along with property value appreciation as different phases get completed.
                 </p>
               </section>
 
@@ -245,13 +245,13 @@ export default async function CambieCorridorPage() {
                   Cambie Corridor Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor real estate market is dominated by condominiums and townhomes, reflecting the transit-oriented density the area is designed for. Though detached homes still exist, they are increasingly being replaced by multi-family developments as the Corridor Plan unfolds.
+                  The Cambie Corridor real estate market is dominated by condominiums and townhomes. It reflects transit-oriented density. Though detached homes still exist, they are increasingly being replaced by multi-family developments.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. GVR benchmark: $1.01M. New construction near SkyTrain stations offers modern amenities, open layouts, and strong rental potential." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. GVR benchmark: $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
-                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "A diminishing but still present option, mostly on side streets away from the main corridor. GVR benchmark: $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. Benchmark price: $1.01M. These new constructions offer modern amenities, open layouts, with strong rental potential." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. Benchmark price: $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
+                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "Few but still present on side streets away from the main corridor. Benchmark price: $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -263,12 +263,12 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The GVR MLS&reg; HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options while still providing excellent SkyTrain access.
+                  The composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    The Cambie Corridor is one of Vancouver&apos;s strongest corridors for long-term appreciation. City-sanctioned densification, ongoing construction, and the backbone of Canada Line transit create a virtuous cycle of increasing demand, improving amenities, and rising property values. Pre-sale opportunities along the corridor offer compelling entry points for investors looking to capitalize on this trajectory.
+                    A very strong contender for long-term appreciation with city-sanctioned densification, ongoing construction. The backbone of Canada Line transit creates a cycle of increasing demand, improving amenities, and rising property values. Pre-sale opportunities along the corridor offer entry points for investors to ride this trajectory.
                   </p>
                 </div>
               </section>
@@ -279,7 +279,7 @@ export default async function CambieCorridorPage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Transit is the Cambie Corridor&apos;s defining advantage. The Canada Line SkyTrain runs beneath the entire corridor, making car-optional living a genuine reality for residents:
+                  Transit is the Cambie Corridor&apos;s defining advantage. The Canada Line SkyTrain is the backbone of the entire corridor, making car-optional living a genuine reality:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -394,7 +394,7 @@ export default async function CambieCorridorPage() {
                   Further south, the Oakridge Park redevelopment (completing in phases from 2026) is set to transform the 41st Avenue node into a premier retail and dining destination with over 500,000 square feet of retail, including the highly anticipated Time Out Market food hall. This will be a game-changer for the central corridor&apos;s lifestyle appeal.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  At the southern end, Marine Gateway is already a thriving mixed-use hub with a cinema, grocery stores, restaurants, and everyday services &mdash; all connected directly to the Marine Drive SkyTrain station. It demonstrates what the rest of the corridor is evolving toward: a complete community where everything you need is within a short walk or SkyTrain ride.
+                  At the southern end, Marine Gateway is already a thriving mixed-use hub with a cinema, grocery stores, restaurants, and everyday services, all connected directly to the Marine Drive SkyTrain station. It demonstrates what the rest of the corridor is evolving toward: a complete community where everything you need is within a short walk or SkyTrain ride.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   Along the way, 41st Avenue and 49th Avenue provide additional retail strips with a diverse mix of Asian restaurants, specialty grocers, cafes, and services that reflect the cultural richness of the surrounding neighborhoods.

@@ -198,13 +198,13 @@ export default async function RileyParkPage() {
                   Overview
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park is a vibrant residential neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved from a working-class enclave into one of the city&apos;s most sought-after neighborhoods &mdash; a place where heritage architecture, creative energy, and genuine community spirit come together.
+                  Riley Park is a vibrant residential neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved from a working-class enclave into one of the city&apos;s most sought-after neighborhoods, a place where heritage architecture, creative energy, and genuine community spirit come together.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Main Street corridor, stretching from Broadway south to 33rd Avenue, is the cultural backbone of the neighborhood. It is home to Vancouver&apos;s celebrated craft brewery district, dozens of independent boutiques and vintage shops, and some of the city&apos;s most acclaimed restaurants and cafes. This is not a neighborhood built on chain stores &mdash; Riley Park&apos;s identity comes from the small business owners, artists, and creatives who have made it their home.
+                  The Main Street corridor, stretching from Broadway south to 33rd Avenue, is the cultural backbone of the neighborhood. It is home to Vancouver&apos;s celebrated craft brewery district, dozens of independent boutiques and vintage shops, and some of the city&apos;s most acclaimed restaurants and cafes. This is not a neighborhood built on chain stores. Riley Park&apos;s identity comes from the small business owners, artists, and creatives who have made it their home.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Riley Park is also home to Nat Bailey Stadium, a beloved heritage ballpark where the Vancouver Canadians play summer baseball under the mountains &mdash; an experience that feels uniquely Vancouver. That combination of local character, walkable urbanism, and connection to nature defines what living here is all about.
+                  Riley Park is also home to Nat Bailey Stadium, a beloved heritage ballpark where the Vancouver Canadians play summer baseball under the mountains, an experience that feels uniquely Vancouver. That combination of local character, walkable urbanism, and connection to nature defines what living here is all about.
                 </p>
               </section>
 
@@ -217,14 +217,14 @@ export default async function RileyParkPage() {
                   Riley Park offers a lifestyle that balances urban vibrancy with residential calm. Step off Main Street onto any of the neighborhood&apos;s side streets and you&apos;ll find yourself on quiet, tree-lined blocks with beautifully maintained character homes, heritage Craftsman bungalows, and the occasional newer infill. Mature street trees form canopies overhead, front gardens are lovingly tended, and neighbors actually know each other.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The community is popular with young professionals, artists, and growing families who are drawn to the neighborhood&apos;s creative energy and independent spirit. There is a strong sense of neighborhood pride here &mdash; residents support local businesses, attend community events, and participate in the kinds of grassroots initiatives that make a neighborhood feel like home rather than just a place to live.
+                  The community is popular with young professionals, artists, and growing families who are drawn to the neighborhood&apos;s creative energy and independent spirit. There is a strong sense of neighborhood pride here; residents support local businesses, attend community events, and participate in the kinds of grassroots initiatives that make a neighborhood feel like home rather than just a place to live.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Riley Park</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Start with a flat white from a specialty coffee roaster on Main Street. Walk the kids to Emily Carr Elementary through streets lined with heritage homes. Cycle to work via the Ontario Street Greenway, or hop on the bus down Main. After school, let the children run at Hillcrest Community Centre while you sneak in a swim at the aquatic centre. Evening plans might mean pints at Brassneck Brewery, dinner at a farm-to-table restaurant, or a summer evening watching the Vancouver Canadians play at Nat Bailey Stadium with the mountains glowing pink behind the outfield.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Weekends bring the farmers&apos; market, browsing vintage shops on Main, or exploring Queen Elizabeth Park just a short walk to the west. This is the Riley Park rhythm &mdash; creative, connected, and grounded in community.
+                  Weekends bring the farmers&apos; market, browsing vintage shops on Main, or exploring Queen Elizabeth Park just a short walk to the west. This is the Riley Park rhythm: creative, connected, and grounded in community.
                 </p>
               </section>
 
@@ -369,7 +369,7 @@ export default async function RileyParkPage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Main Street is the lifeblood of Riley Park&apos;s shopping and dining scene, and it is unlike any other commercial corridor in Vancouver. This is a street defined by independent ownership &mdash; from the bookshops and record stores to the farm-to-table restaurants and specialty coffee roasters. If you&apos;re looking for a big box retailer, you won&apos;t find one here. That is precisely the point.
+                  Main Street is the lifeblood of Riley Park&apos;s shopping and dining scene, and it is unlike any other commercial corridor in Vancouver. This is a street defined by independent ownership, from the bookshops and record stores to the farm-to-table restaurants and specialty coffee roasters. If you&apos;re looking for a big box retailer, you won&apos;t find one here. That is precisely the point.
                 </p>
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">The Craft Brewery District</p>
@@ -378,7 +378,7 @@ export default async function RileyParkPage() {
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Beyond breweries, the dining scene spans cuisines and price points &mdash; from acclaimed restaurants and intimate wine bars to family-friendly pizzerias and authentic international kitchens. The vintage and thrift shop scene is among Vancouver&apos;s best, with curated shops offering everything from mid-century furniture to rare vinyl records and vintage clothing.
+                  Beyond breweries, the dining scene spans cuisines and price points, from acclaimed restaurants and intimate wine bars to family-friendly pizzerias and authentic international kitchens. The vintage and thrift shop scene is among Vancouver&apos;s best, with curated shops offering everything from mid-century furniture to rare vinyl records and vintage clothing.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   For everyday needs, the neighborhood has independent grocers, pharmacies, and services along Main Street and King Edward Avenue. Larger shopping options at Oakridge and along Cambie Street are just minutes away.
@@ -410,7 +410,7 @@ export default async function RileyParkPage() {
                     <p className="text-white/70 text-sm leading-relaxed mb-6">
                       Whether you&apos;re looking to buy a character home on a tree-lined
                       street, sell your Riley Park property, or simply want to learn
-                      more about the market &mdash; I&apos;d love to help. Let&apos;s start with
+                      more about the market, I&apos;d love to help. Let&apos;s start with
                       a no-pressure conversation about your goals.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">

@@ -65,7 +65,7 @@ export default function GetInTouch() {
               visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}
           >
-            Drop your name and number &mdash; I&apos;ll get back to you within 24 hours.
+            Drop your name and number. I&apos;ll get back to you within 24 hours.
           </p>
         </div>
 

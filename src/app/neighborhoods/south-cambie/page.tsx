@@ -197,10 +197,10 @@ export default async function SouthCambiePage() {
                   Overview
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie is a quiet, established neighborhood in the heart of Vancouver&apos;s westside, roughly bounded by West 16th Avenue to the north, West 41st Avenue to the south, Cambie Street to the east, and Oak Street to the west. It sits at a geographic crossroads &mdash; close enough to downtown for an easy commute, yet far enough to feel like a world apart.
+                  South Cambie is a quiet, established neighborhood in the heart of Vancouver&apos;s westside, roughly bounded by West 16th Avenue to the north, West 41st Avenue to the south, Cambie Street to the east, and Oak Street to the west. It sits at a geographic crossroads, close enough to downtown for an easy commute, yet far enough to feel like a world apart.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The neighborhood&apos;s crown jewel is Queen Elizabeth Park, Vancouver&apos;s highest point at 152 metres above sea level. The park&apos;s sweeping views of the downtown skyline, the North Shore Mountains, and the surrounding city are among the most photographed vistas in British Columbia. For many South Cambie residents, these views are part of daily life &mdash; a morning jog, an after-dinner walk, or a Saturday at the pitch and putt.
+                  The neighborhood&apos;s crown jewel is Queen Elizabeth Park, Vancouver&apos;s highest point at 152 metres above sea level. The park&apos;s sweeping views of the downtown skyline, the North Shore Mountains, and the surrounding city are among the most photographed vistas in British Columbia. For many South Cambie residents, these views are part of daily life: a morning jog, an after-dinner walk, or a Saturday at the pitch and putt.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   South Cambie has long been treasured for its tree-lined streets, heritage homes, and strong sense of community. In recent years, the Cambie Corridor development plan has brought thoughtful densification to the area, adding modern townhomes and condominiums near SkyTrain stations while preserving the residential calm that defines the neighborhood&apos;s character.
@@ -216,7 +216,7 @@ export default async function SouthCambiePage() {
                   South Cambie offers something increasingly rare in Vancouver: a genuine neighborhood feel within minutes of the city centre. The streets are wide, mature trees form a canopy overhead in summer, and neighbours still wave from their porches. It is the kind of place where families put down roots for decades.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The housing stock tells the story of the neighborhood&apos;s evolution. You will find beautifully maintained Craftsman and Tudor-style heritage homes sitting alongside newer duplexes, thoughtfully designed townhome complexes, and boutique condo developments. This mix gives South Cambie its visual character &mdash; a blend of old and new that feels organic rather than forced.
+                  The housing stock tells the story of the neighborhood&apos;s evolution. You will find beautifully maintained Craftsman and Tudor-style heritage homes sitting alongside newer duplexes, thoughtfully designed townhome complexes, and boutique condo developments. This mix gives South Cambie its visual character, a blend of old and new that feels organic rather than forced.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in South Cambie</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
@@ -233,7 +233,7 @@ export default async function SouthCambiePage() {
                   South Cambie Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie&apos;s real estate market reflects its status as one of Vancouver&apos;s most balanced neighborhoods &mdash; offering diverse housing types at a range of price points:
+                  South Cambie&apos;s real estate market reflects its status as one of Vancouver&apos;s most balanced neighborhoods, offering diverse housing types at a range of price points:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -297,7 +297,7 @@ export default async function SouthCambiePage() {
                   Parks &amp; Recreation
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie residents enjoy some of the finest green space in Vancouver. The parks here are not just amenities &mdash; they are defining features of the neighborhood:
+                  South Cambie residents enjoy some of the finest green space in Vancouver. The parks here are not just amenities; they are defining features of the neighborhood:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -368,7 +368,7 @@ export default async function SouthCambiePage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie&apos;s shopping and dining scene is anchored by Cambie Village, the stretch of Cambie Street around the King Edward intersection. Here you will find a curated mix of independent cafes, bakeries, restaurants, and everyday shops. The village atmosphere is walkable and welcoming &mdash; the kind of main street where the barista knows your order.
+                  South Cambie&apos;s shopping and dining scene is anchored by Cambie Village, the stretch of Cambie Street around the King Edward intersection. Here you will find a curated mix of independent cafes, bakeries, restaurants, and everyday shops. The village atmosphere is walkable and welcoming, the kind of main street where the barista knows your order.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   For more extensive shopping, the upcoming Oakridge Park development at 41st and Cambie will deliver over 500,000 square feet of retail and dining, including the highly anticipated Time Out Market food hall. This will put world-class shopping and cuisine within a short walk or single SkyTrain stop for South Cambie residents.
@@ -377,7 +377,7 @@ export default async function SouthCambiePage() {
                   Main Street&apos;s vibrant collection of independent boutiques, breweries, and restaurants is just a short trip east and offers a more eclectic, hip dining and shopping experience. Granville Street to the west provides additional retail options and services.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For groceries and daily errands, residents are well served by supermarkets along Cambie and 41st Avenue, as well as specialty food stores reflecting the area&apos;s diverse community. The Seasons in the Park restaurant at Queen Elizabeth Park is a local fine-dining institution with panoramic mountain and city views &mdash; perfect for special occasions without leaving the neighborhood.
+                  For groceries and daily errands, residents are well served by supermarkets along Cambie and 41st Avenue, as well as specialty food stores reflecting the area&apos;s diverse community. The Seasons in the Park restaurant at Queen Elizabeth Park is a local fine-dining institution with panoramic mountain and city views, perfect for special occasions without leaving the neighborhood.
                 </p>
               </section>
 
@@ -405,7 +405,7 @@ export default async function SouthCambiePage() {
                     </h2>
                     <p className="text-white/70 text-sm leading-relaxed mb-6">
                       Whether you&apos;re looking to buy, sell, or simply want to learn
-                      more about South Cambie real estate &mdash; I&apos;d love to help.
+                      more about South Cambie real estate, I&apos;d love to help.
                       Let&apos;s start with a no-pressure conversation about your goals.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-3">
