@@ -30,12 +30,12 @@ function NeighbourhoodMarkers() {
   );
 }
 
-export default function AllNeighbourhoodsMap() {
+export default function AllNeighbourhoodsMap({ fullWidth = false }: { fullWidth?: boolean }) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   if (!apiKey) {
     return (
-      <div className="bg-warm-100 rounded-xl flex items-center justify-center h-[400px]">
+      <div className={`bg-warm-100 flex items-center justify-center ${fullWidth ? "h-[600px]" : "rounded-xl h-[400px]"}`}>
         <div className="text-center p-6">
           <svg
             className="w-12 h-12 text-warm-400 mx-auto mb-3"
@@ -58,7 +58,7 @@ export default function AllNeighbourhoodsMap() {
 
   return (
     <APIProvider apiKey={apiKey}>
-      <div className="rounded-xl overflow-hidden border border-warm-200 shadow-sm h-[500px]">
+      <div className={fullWidth ? "overflow-hidden h-[600px]" : "rounded-xl overflow-hidden border border-warm-200 shadow-sm h-[500px]"}>
         <Map
           defaultCenter={{ lat: 49.2530, lng: -123.1200 }}
           defaultZoom={12}

@@ -236,21 +236,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 4b: Interactive Neighbourhood Map */}
-      <section className="py-20 bg-warm-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight">
-              Explore the Neighbourhoods
-            </h2>
-            <p className="text-warm-600 mt-3 max-w-xl mx-auto">
-              Click any neighbourhood to see prices, trends, and my full guide.
-            </p>
-          </div>
-          <AllNeighbourhoodsMap />
-        </div>
-      </section>
-
       {/* SECTION 5: Oakridge Spotlight — Magazine Cover */}
       <Link
         href="/neighborhoods/oakridge"
@@ -280,6 +265,21 @@ export default function HomePage() {
           </span>
         </div>
       </Link>
+
+      {/* SECTION 5b: Interactive Neighbourhood Map — full width */}
+      <section className="relative">
+        <div className="absolute top-0 left-0 right-0 bg-gradient-to-b from-black/60 to-transparent z-10 py-10 pointer-events-none">
+          <div className="text-center">
+            <h2 className="font-serif text-3xl md:text-4xl text-white italic font-bold leading-tight">
+              Explore the Neighbourhoods
+            </h2>
+            <p className="text-white/70 mt-3">
+              Click any neighbourhood to see prices, trends, and my full guide.
+            </p>
+          </div>
+        </div>
+        <AllNeighbourhoodsMap fullWidth />
+      </section>
 
       {/* SECTION 6: Get In Touch */}
       <GetInTouch />
