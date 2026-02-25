@@ -5,6 +5,7 @@ import { getBlogPost, getAllBlogSlugs, blogPosts } from "@/lib/blog";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import GetInTouch from "@/components/sections/GetInTouch";
+import PageBanner from "@/components/hero/PageBanner";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -72,44 +73,30 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      {/* Hero */}
-      <section className="bg-teal-950 py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <Link
-            href="/resources/blog"
-            className="inline-flex items-center text-teal-300 text-sm mb-6 hover:text-teal-200 transition-colors"
-          >
-            <svg
-              className="w-4 h-4 mr-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-            Back to Blog
-          </Link>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-xs uppercase tracking-widest font-semibold text-teal-300 bg-teal-800 px-2.5 py-1 rounded-full">
-              {post.category}
-            </span>
-            <span className="text-xs text-white/50">{post.readTime}</span>
-            <span className="text-xs text-white/50">{post.date}</span>
-          </div>
-          <h1 className="font-serif text-3xl md:text-4xl text-white leading-tight">
-            {post.title}
-          </h1>
-        </div>
-      </section>
+      <PageBanner title={post.title} />
 
       {/* Article */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Link
+                href="/resources/blog"
+                className="text-sm text-teal-700 hover:text-teal-900 transition-colors"
+              >
+                &larr; Blog
+              </Link>
+              <span className="text-warm-300">|</span>
+              <span className="text-xs uppercase tracking-widest font-semibold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-full">
+                {post.category}
+              </span>
+              <span className="text-xs text-warm-400">{post.readTime}</span>
+              <span className="text-xs text-warm-400">{post.date}</span>
+            </div>
+            <h1 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight italic font-bold">
+              {post.title}
+            </h1>
+          </div>
           <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-teal-950 prose-p:text-warm-700 prose-p:leading-relaxed prose-a:text-teal-700 prose-strong:text-warm-900 prose-li:text-warm-700 prose-table:text-sm">
             {post.content.split("\n\n").map((block, i) => {
               if (block.startsWith("## ")) {
