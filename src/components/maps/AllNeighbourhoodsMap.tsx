@@ -1,18 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import {
   APIProvider,
   Map,
   AdvancedMarker,
-  InfoWindow,
 } from "@vis.gl/react-google-maps";
-import { getAllNeighbourhoods, type NeighbourhoodData } from "@/lib/neighborhoods";
+import { getAllNeighbourhoods } from "@/lib/neighborhoods";
 import NeighbourhoodBoundaries from "./NeighbourhoodBoundaries";
 
 function NeighbourhoodMarkers() {
   const neighbourhoods = getAllNeighbourhoods();
-  const [selected, setSelected] = useState<NeighbourhoodData | null>(null);
 
   return (
     <>
@@ -20,41 +17,15 @@ function NeighbourhoodMarkers() {
         <AdvancedMarker
           key={hood.slug}
           position={hood.center}
-          onClick={() => setSelected(hood)}
+          onClick={() => {
+            window.location.href = `/neighborhoods/${hood.slug}`;
+          }}
         >
           <div className="bg-teal-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg border-2 border-white cursor-pointer hover:bg-teal-800 hover:scale-105 transition-all whitespace-nowrap">
             {hood.name}
           </div>
         </AdvancedMarker>
       ))}
-      {selected && (
-        <InfoWindow
-          position={selected.center}
-          onCloseClick={() => setSelected(null)}
-        >
-          <div className="p-1 max-w-[220px]">
-            <p className="font-bold text-sm text-gray-900 mb-1">
-              {selected.name}
-            </p>
-            <p className="text-xs text-gray-600 mb-2">{selected.tagline}</p>
-            <div className="flex gap-3 text-xs mb-2">
-              <div>
-                <span className="font-semibold text-teal-700">{selected.avgPrice}</span>
-                <span className="text-gray-500 ml-1">avg</span>
-              </div>
-              <div>
-                <span className="font-semibold text-green-600">{selected.priceChange}</span>
-              </div>
-            </div>
-            <a
-              href={`/neighborhoods/${selected.slug}`}
-              className="block text-center text-xs font-semibold text-teal-700 bg-teal-50 hover:bg-teal-100 rounded py-1.5 transition-colors"
-            >
-              View Full Guide
-            </a>
-          </div>
-        </InfoWindow>
-      )}
     </>
   );
 }
