@@ -213,7 +213,7 @@ export default async function CambieCorridorPage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">City of Vancouver Master Plan</p>
                   <p className="text-sm text-gold-700">
-                    The Cambie Corridor Plan is one of the most ambitious urban planning initiatives in Vancouver&apos;s history. Adopted in phases from 2011 to 2018, it establishes a framework for creating complete communities around every SkyTrain station along the Canada Line.
+                    The Cambie Corridor Plan is one of the most ambitious urban planning initiatives in Vancouver&apos;s history. Adopted in phases from 2011 to 2018, it establishes a framework for thoughtful densification along the entire Canada Line route. The idea is to create complete communities around every SkyTrain station.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
@@ -249,12 +249,12 @@ export default async function CambieCorridorPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. Benchmark price: $1.01M. These new constructions offer modern amenities, open layouts, with strong rental potential." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. Benchmark price: $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
-                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "Few but still present on side streets away from the main corridor. Benchmark price: $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. Benchmark price is $1.01M. These new constructions offer modern amenities, open layouts, and strong rental potential." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. Benchmark price is $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
+                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "Few but still present on side streets away from the main corridor. Benchmark price is $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
+                      <div className="flex items-baseline justify-between mb-1">
                         <h4 className="font-medium text-teal-950">{item.type}</h4>
                         <span className="font-serif text-teal-700">{item.range}</span>
                       </div>
@@ -268,7 +268,7 @@ export default async function CambieCorridorPage() {
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    A very strong contender for long-term appreciation with city-sanctioned densification, ongoing construction. The backbone of Canada Line transit creates a cycle of increasing demand, improving amenities, and rising property values. Pre-sale opportunities along the corridor offer entry points for investors to ride this trajectory.
+                    A very strong contender for long-term appreciation with city-sanctioned densification and ongoing construction. The backbone of Canada Line transit creates a cycle of increasing demand, improving amenities, and rising property values. Pre-sale opportunities along the corridor offer entry points for investors to ride this trajectory.
                   </p>
                 </div>
               </section>

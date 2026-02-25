@@ -164,7 +164,7 @@ export default function Header() {
           {/* Desktop: 3-column centered layout */}
           <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] items-center h-20">
             {/* Left nav: About, Buying, Selling */}
-            <nav className="flex items-center justify-end gap-1">
+            <nav className="flex items-center justify-center gap-1">
               {navLeft.map((item) => (
                 <DesktopDropdown
                   key={item.label}
@@ -192,8 +192,8 @@ export default function Header() {
               </span>
             </Link>
 
-            {/* Right nav: Neighborhoods, Resources + Let's Talk CTA */}
-            <nav className="flex items-center justify-start gap-1">
+            {/* Right nav: Neighborhoods, Resources, Contact */}
+            <nav className="flex items-center justify-center gap-1">
               {navRight.map((item) => (
                 <DesktopDropdown
                   key={item.label}
@@ -203,7 +203,7 @@ export default function Header() {
               ))}
               <Link
                 href="/contact"
-                className={`ml-3 px-5 py-2 text-sm font-semibold transition-colors tracking-[0.15em] uppercase ${
+                className={`px-5 py-2 text-sm font-semibold transition-colors tracking-[0.15em] uppercase ${
                   transparent
                     ? "text-white/90 hover:text-white"
                     : "text-warm-800 hover:text-teal-700"
