@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getBlogPost, getAllBlogSlugs, blogPosts } from "@/lib/blog";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
-import ContactForm from "@/components/forms/ContactForm";
+import GetInTouch from "@/components/sections/GetInTouch";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -206,20 +206,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-16 bg-teal-50 rounded-2xl p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="font-serif text-xl text-teal-950 mb-2">
-                  Have Questions?
-                </h3>
-                <p className="text-sm text-warm-600">
-                  I&apos;m happy to discuss any of the topics covered in this article.
-                  Reach out for a no-obligation conversation.
-                </p>
-              </div>
-              <ContactForm compact source={`Blog: ${post.title}`} />
-            </div>
-          </div>
+          <GetInTouch />
 
           {/* Related Posts */}
           {related.length > 0 && (
