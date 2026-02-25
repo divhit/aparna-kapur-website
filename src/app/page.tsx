@@ -101,7 +101,7 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-teal-900 rounded-2xl p-6 shadow-xl hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-teal-700 rounded-2xl p-6 shadow-xl hidden md:block">
                 <img
                   src="/images/logos/oakwyn-realty-white.png"
                   alt="Oakwyn Realty"
