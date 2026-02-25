@@ -183,11 +183,13 @@ export default function Header() {
               >
                 Aparna Kapur
               </span>
-              <img
-                src={transparent ? "/images/logos/oakwyn-realty-white.png" : "/images/logos/oakwyn-realty.png"}
-                alt="Oakwyn Realty"
-                className="h-4 mt-1 transition-opacity duration-300"
-              />
+              <span
+                className={`text-[10px] uppercase tracking-[0.3em] font-medium mt-1 transition-colors duration-300 ${
+                  transparent ? "text-white/70" : "text-warm-500"
+                }`}
+              >
+                Oakwyn Realty
+              </span>
             </Link>
 
             {/* Right nav: Neighborhoods, Resources + Let's Talk CTA */}
@@ -222,11 +224,13 @@ export default function Header() {
               >
                 Aparna Kapur
               </span>
-              <img
-                src={transparent ? "/images/logos/oakwyn-realty-white.png" : "/images/logos/oakwyn-realty.png"}
-                alt="Oakwyn Realty"
-                className="h-4 mt-1 transition-opacity duration-300"
-              />
+              <span
+                className={`text-[10px] uppercase tracking-[0.3em] font-medium mt-1 transition-colors duration-300 ${
+                  transparent ? "text-white/70" : "text-warm-500"
+                }`}
+              >
+                Oakwyn Realty
+              </span>
             </Link>
             <button
               onClick={() => setMobileMenuOpen(true)}
