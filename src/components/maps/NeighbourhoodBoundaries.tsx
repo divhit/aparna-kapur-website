@@ -70,7 +70,10 @@ export default function NeighbourhoodBoundaries({
     // Skip hover/click for single-neighbourhood mode
     if (filterTo) return;
 
-    const infoWindow = new google.maps.InfoWindow();
+    const infoWindow = new google.maps.InfoWindow({
+      disableAutoPan: true,
+      headerDisabled: true,
+    });
     infoWindowRef.current = infoWindow;
 
     const mouseoverListener = map.data.addListener(
