@@ -65,6 +65,15 @@ const neighborhoods = [
     image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
     featured: false,
   },
+  {
+    name: "UBC",
+    slug: "ubc",
+    tagline: "World-Class Campus & Community",
+    description: "A unique west-side community where world-class academics, stunning natural beauty, and modern village living come together on Vancouver's western tip.",
+    stats: { avgPrice: "$1.35M", transit: "99 B-Line", newHomes: "Wesbrook Village" },
+    image: "https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    featured: false,
+  },
 ];
 
 export default function NeighborhoodsPage() {

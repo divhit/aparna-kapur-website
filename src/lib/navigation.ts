@@ -46,6 +46,7 @@ export const navRight: NavItem[] = [
       { label: "Riley Park", href: "/neighborhoods/riley-park" },
       { label: "Cambie Corridor", href: "/neighborhoods/cambie-corridor" },
       { label: "Kerrisdale", href: "/neighborhoods/kerrisdale" },
+      { label: "UBC", href: "/neighborhoods/ubc" },
       { label: "View All", href: "/neighborhoods" },
     ],
   },
