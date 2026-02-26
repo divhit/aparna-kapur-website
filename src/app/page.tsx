@@ -272,14 +272,6 @@ export default function HomePage() {
 
       {/* SECTION 5b: Interactive Neighbourhood Map — full width */}
       <section>
-        <div className="px-6 py-10">
-          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight">
-            Neighbourhoods
-          </h2>
-          <p className="text-warm-600 mt-2">
-            Click any neighbourhood
-          </p>
-        </div>
         <AllNeighbourhoodsMap fullWidth />
       </section>
 

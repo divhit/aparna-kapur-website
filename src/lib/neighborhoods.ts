@@ -166,6 +166,29 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
       { name: "Cambie Heritage Boulevard", type: "landmark", lat: 49.2400, lng: -123.1150, description: "Tree-lined boulevard with heritage character" },
     ],
   },
+  ubc: {
+    name: "UBC",
+    slug: "ubc",
+    center: { lat: 49.2606, lng: -123.2460 },
+    zoom: 14,
+    tagline: "World-Class Campus & Community",
+    avgPrice: "$1.35M",
+    priceChange: "-4.2% YoY",
+    walkScore: 70,
+    transitScore: 65,
+    highlights: [
+      "University of British Columbia campus",
+      "Pacific Spirit Regional Park",
+      "Museum of Anthropology",
+      "Wreck Beach & Spanish Banks",
+    ],
+    bounds: { north: 49.2800, south: 49.2400, east: -123.2100, west: -123.2700 },
+    fallbackPOIs: [
+      { name: "UBC Bus Exchange", type: "transit", lat: 49.2685, lng: -123.2460, description: "Major transit hub connecting to downtown" },
+      { name: "Pacific Spirit Regional Park", type: "park", lat: 49.2550, lng: -123.2280, description: "763-hectare forest park with 73km of trails" },
+      { name: "Museum of Anthropology", type: "landmark", lat: 49.2697, lng: -123.2595, description: "World-renowned museum featuring Northwest Coast Indigenous art" },
+    ],
+  },
 };
 
 export function getNeighbourhood(slug: string): NeighbourhoodData | undefined {

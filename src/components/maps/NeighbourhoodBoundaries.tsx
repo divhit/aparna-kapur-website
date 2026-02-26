@@ -9,6 +9,7 @@ const SLUG_MAP: Record<string, string> = {
   "South Cambie": "south-cambie",
   "Riley Park": "riley-park",
   "Kerrisdale": "kerrisdale",
+  "UBC": "ubc",
 };
 
 const FOCUS_NAMES = new Set(Object.keys(SLUG_MAP));
