@@ -153,9 +153,6 @@ export default async function RileyParkPage() {
                   <ul className="space-y-2 text-sm">
                     {[
                       ["Oakridge", "oakridge"],
-                      ["South Cambie", "south-cambie"],
-                      ["Mount Pleasant", "mount-pleasant"],
-                      ["Kensington-Cedar Cottage", "kensington-cedar-cottage"],
                       ["Cambie Corridor", "cambie-corridor"],
                     ].map(([name, slug]) => (
                       <li key={slug}>
@@ -174,6 +171,19 @@ export default async function RileyParkPage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
+              {/* Overview */}
+              <section className="mb-16">
+                <p className="text-warm-600 leading-relaxed mb-4">
+                  Riley Park is a vibrant neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved to a trend setting neighborhood where creative energy and community spirit come together.
+                </p>
+                <p className="text-warm-600 leading-relaxed mb-4">
+                  It is home to Vancouver&apos;s celebrated craft brewery district. This is not a neighborhood built on chain stores infact its the mecca of independent boutiques with some acclaimed restaurants and cafes.
+                </p>
+                <p className="text-warm-600 leading-relaxed">
+                  Riley Park is also home to Nat Bailey Stadium, a beloved heritage ballpark where the Vancouver Canadians play summer baseball. The combination of local character, walkable urban life while having a connection to community is what living here is all about.
+                </p>
+              </section>
+
               {/* Interactive Map */}
               <section id="map" className="mb-16">
                 <NeighbourhoodMap
@@ -186,33 +196,19 @@ export default async function RileyParkPage() {
                 />
               </section>
 
-              {/* Overview */}
-              <section className="mb-16">
-                <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park is a vibrant residential neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved from a working-class enclave into one of the city&apos;s most sought-after neighborhoods, a place where heritage architecture, creative energy, and genuine community spirit come together.
-                </p>
-                <p className="text-warm-600 leading-relaxed mb-4">
-                  The Main Street corridor, stretching from Broadway south to 33rd Avenue, is the cultural backbone of the neighborhood. It is home to Vancouver&apos;s celebrated craft brewery district, dozens of independent boutiques and vintage shops, and some of the city&apos;s most acclaimed restaurants and cafes. This is not a neighborhood built on chain stores. Riley Park&apos;s identity comes from the small business owners, artists, and creatives who have made it their home.
-                </p>
-                <p className="text-warm-600 leading-relaxed">
-                  Riley Park is also home to Nat Bailey Stadium, a beloved heritage ballpark where the Vancouver Canadians play summer baseball under the mountains, an experience that feels uniquely Vancouver. That combination of local character, walkable urbanism, and connection to nature defines what living here is all about.
-                </p>
-              </section>
-
               {/* Living in Riley Park */}
               <section id="living" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Living in Riley Park
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park offers a lifestyle that balances urban vibrancy with residential calm. Step off Main Street onto any of the neighborhood&apos;s side streets and you&apos;ll find yourself on quiet, tree-lined blocks with beautifully maintained character homes, heritage Craftsman bungalows, and the occasional newer infill. Mature street trees form canopies overhead, front gardens are lovingly tended, and neighbors actually know each other.
+                  Riley Park offers a balance of urban vibrancy and residential calm. Step off Main Street onto any of the neighborhood&apos;s side streets and you&apos;ll be on quiet, tree-lined blocks with maintained character homes and the occasional newer infill. Mature street trees form canopies overhead, front gardens are lovingly tended, and neighbors know each other.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The community is popular with young professionals, artists, and growing families who are drawn to the neighborhood&apos;s creative energy and independent spirit. There is a strong sense of neighborhood pride here; residents support local businesses, attend community events, and participate in the kinds of grassroots initiatives that make a neighborhood feel like home rather than just a place to live.
+                  The community is popular with young professionals and growing families. There is a strong sense of neighborhood pride; residents support local businesses, attend community events.
                 </p>
-                <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Riley Park</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Start with a flat white from a specialty coffee roaster on Main Street. Walk the kids to Emily Carr Elementary through streets lined with heritage homes. Cycle to work via the Ontario Street Greenway, or hop on the bus down Main. After school, let the children run at Hillcrest Community Centre while you sneak in a swim at the aquatic centre. Evening plans might mean pints at Brassneck Brewery, dinner at a farm-to-table restaurant, or a summer evening watching the Vancouver Canadians play at Nat Bailey Stadium with the mountains glowing pink behind the outfield.
+                  You can start your day with a flat white from a specialty coffee roaster on Main Street. Walk the kids to Emily Carr Elementary through streets lined with heritage homes. Cycle to work via the Ontario Street Greenway, or hop on the bus down Main. After school have swim with the kids at Hillcrest Community Centre. Evening plans might mean pints at Brassneck Brewery, dinner at a farm-to-table restaurant, or a summer evening watching the Vancouver Canadians play at Nat Bailey Stadium with the mountains glowing pink behind the outfield.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   Weekends bring the farmers&apos; market, browsing vintage shops on Main, or exploring Queen Elizabeth Park just a short walk to the west. This is the Riley Park rhythm: creative, connected, and grounded in community.
