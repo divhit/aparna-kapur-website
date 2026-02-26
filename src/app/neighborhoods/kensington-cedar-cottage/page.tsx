@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Kensington-Cedar Cottage Vancouver | Trout Lake & Real Estate Guide 2026",
@@ -19,39 +18,6 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqs = [
-  {
-    question: "How much does a home cost in Kensington-Cedar Cottage?",
-    answer:
-      "The composite benchmark is around $1.15M. Detached homes range from $1.2M to $1.6M with generous lot sizes, condos from $450K to $700K, and townhomes from $800K to $1.2M. KCC offers significantly more space per dollar than west-side neighbourhoods.",
-  },
-  {
-    question: "What is Trout Lake like?",
-    answer:
-      "Trout Lake (John Hendry Park) is the neighbourhood's crown jewel. A natural freshwater lake with a small beach, surrounded by sports fields, playgrounds, a community centre, and walking paths. The Saturday Trout Lake Farmers Market from May to October is one of the city's most popular.",
-  },
-  {
-    question: "What makes Kingsway special in this neighbourhood?",
-    answer:
-      "Kingsway through KCC has become one of Vancouver's most exciting food corridors. Vietnamese pho, Chinese dim sum, Korean barbecue, Indian curries, Filipino dishes, and modern fusion, often at prices well below trendier neighbourhoods. Food lovers consider it essential exploring.",
-  },
-];
-
-const highlights = [
-  { emoji: "\u{1F3DE}\uFE0F", title: "Trout Lake", desc: "A natural freshwater lake with a beach, surrounded by one of east Vancouver's best parks. The Saturday farmers market is legendary." },
-  { emoji: "\u{1F35C}", title: "Kingsway Food Corridor", desc: "Vietnamese, Chinese, Korean, Indian, Filipino. One of the most diverse and delicious dining streets in the entire city." },
-  { emoji: "\u{1F3E1}", title: "Family-Sized Lots", desc: "Generous lot sizes with room for laneway houses and garden suites. More space per dollar than almost anywhere in Vancouver." },
-  { emoji: "\u{1F687}", title: "Joyce-Collingwood SkyTrain", desc: "Expo Line access at the eastern edge. Downtown in about 20 minutes. Significant transit-oriented development underway." },
-  { emoji: "\u{1F30D}", title: "Multicultural Heart", desc: "Chinese, Vietnamese, Filipino, South Asian, and Latin American communities create one of the most genuinely diverse neighbourhoods in the city." },
-  { emoji: "\u{1F331}", title: "Community Gardens", desc: "Block parties, garden plots, and multicultural festivals. KCC has a sense of belonging that is hard to find in more transient areas." },
-];
-
-const properties = [
-  { type: "Detached", range: "$1.2M \u2013 $1.6M", note: "Generous lots. Laneway house potential." },
-  { type: "Condos", range: "$450K \u2013 $700K", note: "Growing near Kingsway & Joyce Station." },
-  { type: "Townhomes", range: "$800K \u2013 $1.2M", note: "Popular with young families." },
-];
-
 const data = NEIGHBOURHOODS["kensington-cedar-cottage"];
 
 export default async function KensingtonCedarCottagePage() {
@@ -64,26 +30,182 @@ export default async function KensingtonCedarCottagePage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
-            <Link href="/neighborhoods" className="hover:text-teal-200 transition-colors">Neighborhoods</Link>
+            <Link
+              href="/neighborhoods"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Neighborhoods
+            </Link>
             <span>/</span>
             <span className="text-teal-200">Kensington-Cedar Cottage</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Kensington-Cedar Cottage
           </h1>
+          <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
+            Trout Lake, Kingsway eats, and real backyards &mdash; east Van
+            family life done right.
+          </p>
         </div>
       </section>
 
+      {/* Blog Body */}
+      <article className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Opening Hook */}
+          <p className="text-lg text-warm-700 leading-relaxed mb-6">
+            Locals call it KCC, and once you have spent a summer Saturday at
+            Trout Lake &mdash; kids splashing at the beach, the farmers&apos;
+            market in full swing, a pickup softball game on the diamond, fruit
+            trees heavy in every other backyard &mdash; you understand why
+            families put down roots here and never leave. Then there is
+            Kingsway, where you can eat your way through a dozen cuisines
+            without spending more than fifteen dollars a plate. This is the
+            neighbourhood that reminds you Vancouver is not all glass towers
+            and ocean views. Sometimes the best parts of a city are the places
+            where people simply live well.
+          </p>
+
+          {/* The Vibe */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Vibe
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            KCC is one of Vancouver&apos;s largest neighbourhoods, and it
+            shows in the diversity. Chinese, Vietnamese, Filipino, South
+            Asian, and Latin American communities have all shaped the
+            area&apos;s character, cuisine, and commercial life over decades.
+            The Kingsway food corridor is the result &mdash; Vietnamese pho
+            houses next to Chinese dim sum parlours next to Korean barbecue
+            spots, all of them authentic, all of them packed, none of them
+            pretending to be something they are not.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            The lots here are bigger than the west side &mdash; genuinely big,
+            with room for garden suites, laneway houses, and the kind of
+            backyard gardens where neighbours trade zucchini over the fence.
+            The fruit trees are a neighbourhood signature: plum, cherry, apple,
+            fig. Block parties happen because people actually want to spend
+            time together, not because a developer organized it. The Trout Lake
+            Farmers&apos; Market, running May through October, has become one
+            of the city&apos;s most beloved weekend rituals, and the community
+            centre hosts multicultural festivals that reflect who actually
+            lives here.
+          </p>
+
+          {/* Pull Quote */}
+          <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
+            <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
+              &ldquo;KCC is where you get a real backyard, a natural lake, the
+              best cheap eats in the city, and neighbours who bring you fruit
+              from their trees. Try getting that on the west side.&rdquo;
+            </p>
+          </blockquote>
+        </div>
+
+        {/* Map — embedded mid-article, slightly wider */}
+        <div className="max-w-4xl mx-auto px-6 my-12">
+          <NeighbourhoodMap
+            center={data.center}
+            zoom={data.zoom}
+            pois={pois.length > 0 ? pois : data.fallbackPOIs}
+            boundaryName="Kensington-Cedar Cottage"
+            height="380px"
+            showLegend
+          />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-6">
+          {/* The Real Estate Picture */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Real Estate Picture
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            The composite benchmark in KCC is around{" "}
+            <strong>$1.15M</strong>, which sounds like a lot until you
+            realize what you get: significantly more space per dollar than
+            almost anywhere else in the city. Detached homes are the
+            neighbourhood&apos;s backbone, ranging from{" "}
+            <strong>$1.2M to $1.6M</strong> with generous lot sizes that
+            often include laneway house potential. That laneway income can
+            meaningfully offset your mortgage, and I have helped multiple
+            families structure their purchase around exactly that math.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Condos are a growing segment, particularly near Kingsway and
+            Joyce-Collingwood Station, running from{" "}
+            <strong>$450K to $700K</strong>. Transit-oriented development is
+            changing the eastern edge of the neighbourhood, with new builds
+            offering modern finishes and SkyTrain access. Townhomes in the{" "}
+            <strong>$800K to $1.2M</strong> range are popular with young
+            families who want more space than a condo but are not quite ready
+            for a detached home. Compared to west-side neighbourhoods with
+            similar lot sizes, KCC remains one of the most compelling value
+            propositions in Vancouver &mdash; and the community you get in the
+            bargain is something money cannot buy elsewhere.
+          </p>
+
+          {/* Getting Around */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Getting Around
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Joyce-Collingwood Station on the Expo Line anchors the eastern
+            edge, getting you downtown in about 20 minutes. The neighbourhood
+            is larger than most, so your exact commute depends on where you
+            land. The Kingsway corridor has frequent bus service, and the
+            cycling network continues to improve with connections to the
+            central valley greenway. Walk Score: 80. KCC is more of a
+            &ldquo;walk to the lake and the market on weekends, transit to work
+            on weekdays&rdquo; kind of place. If you have kids, the
+            walkability to Trout Lake, the community centre, and local schools
+            makes daily life very manageable without a second car.
+          </p>
+
+          {/* Who Lives Here */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Who Lives Here
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Families. Full stop, this is one of the best family neighbourhoods
+            in east Vancouver. Multi-generational households with grandparents,
+            parents, and kids under one roof &mdash; the lot sizes actually
+            allow for that. Young couples buying their first home who want a
+            backyard and a garden, not just a parking stall. Food lovers who
+            consider Kingsway dining a non-negotiable lifestyle amenity.
+            Long-time residents from the Chinese, Vietnamese, and Filipino
+            communities who have built their lives around this neighbourhood
+            for decades. People who value substance, space, and a sense of
+            belonging over trendiness.
+          </p>
+
+          {/* Bottom Line */}
+          <div className="mt-10 pt-8 border-t border-warm-200">
+            <p className="text-warm-800 leading-relaxed font-medium">
+              <strong>Bottom line:</strong> Kensington-Cedar Cottage is where
+              you go when you want a real house with a real yard in a real
+              community &mdash; all within city limits. Trout Lake is the
+              anchor, Kingsway is the kitchen, and the diversity of this
+              neighbourhood makes it one of the most interesting places to
+              live in Vancouver. For families and anyone who values space and
+              authenticity over proximity to downtown, KCC delivers more per
+              dollar than anywhere else I know.
+            </p>
+          </div>
+        </div>
+      </article>
+
       {/* Quick Stats */}
-      <section className="bg-white border-b border-warm-100">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <section className="bg-warm-50 border-y border-warm-100">
+        <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <p className="font-serif text-2xl text-teal-700">$1.15M</p>
@@ -101,95 +223,23 @@ export default async function KensingtonCedarCottagePage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-lg text-warm-700 leading-relaxed mb-4">
-            Locals call it KCC, and it is the neighbourhood where east Vancouver families put down roots. Trout Lake on a summer Saturday &mdash; kids on the beach, farmers&apos; market in full swing, softball games on the diamond &mdash; is one of those Vancouver scenes that reminds you why people love this city. Add in the Kingsway food corridor, where you can eat your way through a dozen cuisines without spending more than $15 per plate, and you start to understand the appeal.
-          </p>
-          <p className="text-warm-600 leading-relaxed">
-            KCC is one of Vancouver&apos;s largest neighbourhoods, and it shows in the diversity. Chinese, Vietnamese, Filipino, South Asian, and Latin American communities have all shaped the area&apos;s character, cuisine, and commercial life. The lots are bigger than the west side, the gardens are well-tended, and the fruit trees are a signature. It is grounded, multicultural, and genuinely affordable by Vancouver standards &mdash; especially for families who want a real backyard and a strong sense of community.
-          </p>
-        </div>
-      </section>
+      <NeighbourhoodReportSignup neighbourhood="Kensington-Cedar Cottage" />
 
-      {/* Map */}
-      <section className="pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Kensington-Cedar Cottage"
-            height="380px"
-            showLegend
-          />
-        </div>
-      </section>
-
-      {/* What Makes Kensington-Cedar Cottage Special */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-8 text-center">
-            What Makes Kensington-Cedar Cottage Special
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((h) => (
-              <div key={h.title} className="bg-white rounded-xl p-5 border border-warm-100">
-                <p className="text-2xl mb-2">{h.emoji}</p>
-                <h3 className="font-medium text-teal-950 text-sm mb-1">{h.title}</h3>
-                <p className="text-sm text-warm-600">{h.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Estate at a Glance */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Real Estate at a Glance
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {properties.map((p) => (
-              <div key={p.type} className="bg-warm-50 rounded-xl p-5 text-center">
-                <p className="font-serif text-xl text-teal-700 mb-1">{p.range}</p>
-                <p className="text-sm font-medium text-teal-950">{p.type}</p>
-                <p className="text-xs text-warm-500 mt-2">{p.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Common Questions
-          </h2>
-          <FAQAccordion faqs={faqs} />
-        </div>
-      </section>
-
-      <GetInTouch />
-
-      {/* JSON-LD FAQ Schema */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
+            "@type": "Article",
+            headline:
+              "Kensington-Cedar Cottage Vancouver — Trout Lake & Real Estate Guide",
+            description:
+              "An insider guide to living in Kensington-Cedar Cottage, Vancouver. Trout Lake, Kingsway dining, and what makes KCC one of east Vancouver's best family neighbourhoods.",
+            author: {
+              "@type": "Person",
+              name: "Aparna Kapur",
+            },
           }),
         }}
       />

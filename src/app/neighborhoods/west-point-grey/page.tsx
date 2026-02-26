@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "West Point Grey Vancouver | Beach & Luxury Homes Guide 2026",
@@ -19,39 +18,6 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqs = [
-  {
-    question: "How much does a home cost in West Point Grey?",
-    answer:
-      "The composite benchmark is around $2.3M. Detached homes dominate and typically range from $2.5M to $6M+, with beachside and ocean-view properties at the top. A limited number of condos ($600K-$1.3M) and townhomes ($1.2M-$2M) offer more accessible entry points.",
-  },
-  {
-    question: "What beaches are in West Point Grey?",
-    answer:
-      "Three of Vancouver's best: Spanish Banks (massive sandy flats, kiteboarding, volleyball), Locarno Beach (quieter, great for families), and Jericho Beach (sailing centre, kayaking, home of the Folk Music Festival). Together they form one of Canada's finest stretches of urban waterfront.",
-  },
-  {
-    question: "How far is West Point Grey from UBC and downtown?",
-    answer:
-      "About 5 minutes to UBC by car or bus, and 20-25 minutes to downtown. Pacific Spirit Park is your western boundary, and the UBC campus is just beyond. Ideal for families splitting commutes between the university and the city centre.",
-  },
-];
-
-const highlights = [
-  { emoji: "\u{1F3D6}\uFE0F", title: "Three Stunning Beaches", desc: "Spanish Banks, Locarno, and Jericho — sandy shorelines, mountain panoramas, and sunset views that never get old." },
-  { emoji: "\u26F5", title: "Jericho Sailing Centre", desc: "Sailing, windsurfing, kayaking, and paddleboarding right in the neighbourhood. Kids grow up on the water here." },
-  { emoji: "\u{1F3E1}", title: "Character Homes", desc: "Craftsman bungalows, Tudor revivals, and contemporary customs on generous lots — no cookie-cutter subdivisions." },
-  { emoji: "\u{1F393}", title: "5 Min to UBC", desc: "Pacific Spirit Park is your backyard, and one of the world's top universities is right next door. Faculty families love it." },
-  { emoji: "\u{1F3EB}", title: "Lord Byng Secondary", desc: "One of BC's top-performing public high schools, plus Queen Mary Elementary and West Point Grey Academy nearby." },
-  { emoji: "\u{1F6B4}", title: "Waterfront Cycling", desc: "The seaside path connects to Kits, downtown, and Stanley Park. A scenic, car-free commute that feels like a holiday." },
-];
-
-const properties = [
-  { type: "Detached", range: "$2.5M – $6M+", note: "Dominant type. Character homes & ocean views." },
-  { type: "Condos", range: "$600K – $1.3M", note: "Limited. Low-rise near 10th Ave & Alma." },
-  { type: "Townhomes", range: "$1.2M – $2.0M", note: "Small inventory. High demand from families." },
-];
-
 const data = NEIGHBOURHOODS["west-point-grey"];
 
 export default async function WestPointGreyPage() {
@@ -64,26 +30,166 @@ export default async function WestPointGreyPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
-            <Link href="/neighborhoods" className="hover:text-teal-200 transition-colors">Neighborhoods</Link>
+            <Link
+              href="/neighborhoods"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Neighborhoods
+            </Link>
             <span>/</span>
             <span className="text-teal-200">West Point Grey</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             West Point Grey
           </h1>
+          <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
+            Three beaches, character homes on deep lots, and the kind of quiet that only old money can buy.
+          </p>
         </div>
       </section>
 
+      {/* Blog Body */}
+      <article className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Opening Hook */}
+          <p className="text-lg text-warm-700 leading-relaxed mb-6">
+            There&apos;s a stretch of Spanish Banks where the tide goes out so
+            far you can walk a quarter-mile on wet sand, the North Shore
+            mountains filling the entire horizon. I&apos;ve shown homes in West
+            Point Grey where the buyers barely looked at the kitchen — they
+            were too busy staring out the back window at that view. And honestly,
+            I understood. This is the neighbourhood where Vancouver&apos;s
+            coastline and its most established residential character meet, and
+            it&apos;s as good as it sounds.
+          </p>
+
+          {/* The Vibe */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Vibe
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            West Point Grey is old Vancouver in the best possible sense. The
+            streets are quiet, the lots are generous, and the homes range from
+            lovingly maintained 1930s craftsman bungalows to ambitious
+            contemporary builds that took two years and a brave architect. There
+            are no towers, no chain restaurants, no rush. Saturday mornings mean
+            a beach walk before the rest of the city wakes up. Kids grow up
+            sailing at the Jericho Sailing Centre and cycling the waterfront
+            path to Kits.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            The 10th Avenue corridor has a small cluster of shops and cafes, but
+            this is not a village-centric neighbourhood. People here chose it
+            for the land, the light, the proximity to UBC and Pacific Spirit
+            Park, and the three spectacular beaches along the northern edge —
+            Spanish Banks, Locarno, and Jericho. Lord Byng Secondary is one of
+            the top public high schools in BC, and the Folk Music Festival at
+            Jericho Beach Park every July is one of those events where you
+            realize half the crowd lives within walking distance.
+          </p>
+
+          {/* Pull Quote */}
+          <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
+            <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
+              &ldquo;When clients ask me where Vancouver&apos;s best families
+              settle down for good, West Point Grey is always in my first
+              three.&rdquo;
+            </p>
+          </blockquote>
+        </div>
+
+        {/* Map — embedded mid-article, slightly wider */}
+        <div className="max-w-4xl mx-auto px-6 my-12">
+          <NeighbourhoodMap
+            center={data.center}
+            zoom={data.zoom}
+            pois={pois.length > 0 ? pois : data.fallbackPOIs}
+            boundaryName="West Point Grey"
+            height="380px"
+            showLegend
+          />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-6">
+          {/* The Real Estate Picture */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Real Estate Picture
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            This is a detached-home neighbourhood through and through. The
+            composite benchmark is around <strong>$2.3M</strong>, but that
+            figure is misleading because the few condos and townhomes in the
+            area pull it down. What you&apos;re really looking at for a
+            single-family home is <strong>$2.5M to $6M+</strong>, depending on
+            lot size, condition, and whether you can see the ocean. A character
+            Tudor on a 50-foot lot off West 8th might come in around $3M. A
+            contemporary rebuild on a double lot with water views? That&apos;s
+            $5M to $6M territory, and I&apos;ve seen them go higher.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            There is a limited supply of condos near 10th and Alma, running{" "}
+            <strong>$600K to $1.3M</strong> — these are older low-rise buildings
+            that appeal to downsizers and UBC faculty who want to stay close to
+            campus. Townhomes are scarce at <strong>$1.2M to $2M</strong> and
+            extremely sought after when they appear. The market here is patient:
+            families buy, renovate, and stay for decades. Turnover is low, which
+            means inventory is always tight and well-priced homes sell quickly.
+          </p>
+
+          {/* Getting Around */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Getting Around
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            UBC is five minutes west through Pacific Spirit Park. Downtown is 20
+            to 25 minutes by car — faster outside rush hour, slower during it.
+            Several bus routes run along West 4th, West 10th, and West Broadway
+            connecting to the broader transit network. The waterfront cycling
+            path is one of the best in the city, connecting seamlessly to Kits,
+            the Burrard Bridge, and Stanley Park. Most families here have two
+            cars but use them less than they expected — once you settle into the
+            beach-and-park rhythm, the need to go anywhere else fades.
+          </p>
+
+          {/* Who Lives Here */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Who Lives Here
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            UBC professors and deans who want to walk to work through the
+            forest. Established families who want Lord Byng catchment without
+            the Shaughnessy price tag. Couples who sailed at Jericho as kids
+            and came back to raise their own children here. Executives who could
+            live anywhere and chose the quietest, most beautiful corner of
+            the west side. This is a neighbourhood of lifers — people who found
+            exactly what they were looking for and stopped searching.
+          </p>
+
+          {/* Bottom Line */}
+          <div className="mt-10 pt-8 border-t border-warm-200">
+            <p className="text-warm-800 leading-relaxed font-medium">
+              <strong>Bottom line:</strong> West Point Grey is for buyers who
+              want space, beauty, and permanence. Three of Vancouver&apos;s best
+              beaches at your feet, UBC and Pacific Spirit Park as your
+              backyard, top schools, and a community that values quiet living
+              over showing off. If you want a home your family will keep for 30
+              years, start here.
+            </p>
+          </div>
+        </div>
+      </article>
+
       {/* Quick Stats */}
-      <section className="bg-white border-b border-warm-100">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <section className="bg-warm-50 border-y border-warm-100">
+        <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <p className="font-serif text-2xl text-teal-700">$2.3M</p>
@@ -101,95 +207,23 @@ export default async function WestPointGreyPage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-lg text-warm-700 leading-relaxed mb-4">
-            West Point Grey is where Vancouver&apos;s coastline meets its most established residential character. Three spectacular beaches line the northern edge — Spanish Banks, Locarno, Jericho — and on a clear day the views stretch across English Bay to the North Shore mountains and beyond. Saturday mornings here mean a beach walk before the rest of the city wakes up.
-          </p>
-          <p className="text-warm-600 leading-relaxed">
-            The streets are quiet, the lots are generous, and the homes range from lovingly kept craftsman bungalows to ambitious contemporary builds. UBC is five minutes west through Pacific Spirit Park, Lord Byng Secondary is one of the best public high schools in BC, and the Jericho Sailing Centre means kids literally grow up on the water. It&apos;s the kind of neighbourhood where people put down roots and stay for decades — and it&apos;s easy to see why.
-          </p>
-        </div>
-      </section>
+      <NeighbourhoodReportSignup neighbourhood="West Point Grey" />
 
-      {/* Map */}
-      <section className="pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="West Point Grey"
-            height="380px"
-            showLegend
-          />
-        </div>
-      </section>
-
-      {/* What Makes West Point Grey Special */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-8 text-center">
-            What Makes West Point Grey Special
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((h) => (
-              <div key={h.title} className="bg-white rounded-xl p-5 border border-warm-100">
-                <p className="text-2xl mb-2">{h.emoji}</p>
-                <h3 className="font-medium text-teal-950 text-sm mb-1">{h.title}</h3>
-                <p className="text-sm text-warm-600">{h.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Estate at a Glance */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Real Estate at a Glance
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {properties.map((p) => (
-              <div key={p.type} className="bg-warm-50 rounded-xl p-5 text-center">
-                <p className="font-serif text-xl text-teal-700 mb-1">{p.range}</p>
-                <p className="text-sm font-medium text-teal-950">{p.type}</p>
-                <p className="text-xs text-warm-500 mt-2">{p.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Common Questions
-          </h2>
-          <FAQAccordion faqs={faqs} />
-        </div>
-      </section>
-
-      <GetInTouch />
-
-      {/* JSON-LD FAQ Schema */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
+            "@type": "Article",
+            headline:
+              "West Point Grey Vancouver — Beach & Luxury Homes Guide",
+            description:
+              "An insider guide to living in West Point Grey, Vancouver. Spanish Banks, character homes, top schools, and what makes this one of Vancouver's most coveted residential addresses.",
+            author: {
+              "@type": "Person",
+              name: "Aparna Kapur",
+            },
           }),
         }}
       />

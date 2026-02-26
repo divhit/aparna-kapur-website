@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Grandview-Woodland Vancouver | Commercial Drive & Real Estate Guide 2026",
@@ -19,39 +18,6 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqs = [
-  {
-    question: "How much does a home cost in Grandview-Woodland?",
-    answer:
-      "The composite benchmark is around $1.1M. Detached character homes range from $1.3M to $1.8M, condos from $500K to $850K, and townhomes from $900K to $1.3M. Properties near Commercial Drive and the SkyTrain station command premiums for their walkability and transit access.",
-  },
-  {
-    question: "What's Commercial Drive like?",
-    answer:
-      "The Drive is one of Vancouver's most beloved streets. Italian delis and espresso bars from the old days sit next to Ethiopian restaurants, vintage shops, and indie bookstores. No chain stores. The farmers market, Italian Day festival, and live music venues keep it lively year-round. It has a grassroots energy that feels genuinely community-driven.",
-  },
-  {
-    question: "Is Grandview-Woodland good for families?",
-    answer:
-      "Very much so. Grandview Elementary, Britannia Secondary (integrated with the community centre's pool, rink, and library), and the Britannia grounds make it excellent for kids. Grandview Park is the social hub, and the walkability means older kids can get around independently.",
-  },
-];
-
-const highlights = [
-  { emoji: "\u2615", title: "The Drive", desc: "200+ independent shops, cafes, and restaurants. Italian delis, Ethiopian kitchens, vintage stores, and zero chain retailers." },
-  { emoji: "\u{1F1EE}\u{1F1F9}", title: "Italian Heritage", desc: "Deep Italian roots dating back a century. Italian Day on The Drive is one of Vancouver's biggest street festivals, drawing 300K+ visitors." },
-  { emoji: "\u{1F687}", title: "Transit Hub", desc: "Commercial-Broadway is the busiest SkyTrain station in the system. Expo + Millennium Lines. Downtown in 10 minutes." },
-  { emoji: "\u{1F3B5}", title: "Live Music & Arts", desc: "The Cultch, Rio Theatre, and dozens of live venues. A genuine arts neighbourhood, not a marketed one." },
-  { emoji: "\u{1F333}", title: "Grandview Park", desc: "The neighbourhood's social heart on Commercial Drive. Community events, playgrounds, and the spot where everyone hangs out." },
-  { emoji: "\u{1F30E}", title: "Multicultural Soul", desc: "Italian, Ethiopian, Vietnamese, Mexican, Salvadoran. One of the most genuinely diverse and inclusive communities in Vancouver." },
-];
-
-const properties = [
-  { type: "Detached", range: "$1.3M \u2013 $1.8M", note: "Character homes & Vancouver Specials." },
-  { type: "Condos", range: "$500K \u2013 $850K", note: "Near SkyTrain. Popular with first-timers." },
-  { type: "Townhomes", range: "$900K \u2013 $1.3M", note: "Newer builds along Broadway corridor." },
-];
-
 const data = NEIGHBOURHOODS["grandview-woodland"];
 
 export default async function GrandviewWoodlandPage() {
@@ -64,26 +30,180 @@ export default async function GrandviewWoodlandPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
-            <Link href="/neighborhoods" className="hover:text-teal-200 transition-colors">Neighborhoods</Link>
+            <Link
+              href="/neighborhoods"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Neighborhoods
+            </Link>
             <span>/</span>
             <span className="text-teal-200">Grandview-Woodland</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Grandview-Woodland
           </h1>
+          <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
+            The Drive, the soul of east Van &mdash; fiercely independent since
+            forever.
+          </p>
         </div>
       </section>
 
+      {/* Blog Body */}
+      <article className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Opening Hook */}
+          <p className="text-lg text-warm-700 leading-relaxed mb-6">
+            If you want to understand what makes east Vancouver tick, I will
+            save you the research: go to Commercial Drive on a Saturday. Grab
+            an espresso at one of the Italian cafes that have been here since
+            the 1950s, watch the nonnas share the sidewalk with artists and
+            young families, browse a bookstore that has somehow survived the
+            internet age, and eat Ethiopian food for lunch at a place with no
+            sign out front but a line down the block. There are no chain
+            stores on The Drive. Not one. That is not an accident &mdash;
+            it is a statement.
+          </p>
+
+          {/* The Vibe */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Vibe
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            Grandview-Woodland is the neighbourhood that gave east Vancouver
+            its identity. The Italian roots run deep &mdash; Italian Day on
+            The Drive draws 300,000 people and is one of the biggest street
+            festivals in the country. But the neighbourhood has always been a
+            landing pad for waves of newcomers: Italian, Portuguese, Central
+            American, Ethiopian, Vietnamese. That layered cultural history is
+            what makes the food scene so extraordinary and the community so
+            genuinely multicultural.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Behind The Drive, the residential streets tell a different story.
+            Craftsman bungalows with deep front porches. Vancouver Specials
+            with their angular rooflines. Edwardian homes with mature gardens
+            and fruit trees. Grandview Park is the social hub where everyone
+            congregates, and Britannia Community Centre &mdash; with its pool,
+            ice rink, library, and secondary school all in one complex &mdash;
+            is the beating heart of the neighbourhood. The arts scene is real,
+            not marketed: The Cultch and Rio Theatre host live performance and
+            indie film, and the live music venues along The Drive keep the
+            evenings interesting.
+          </p>
+
+          {/* Pull Quote */}
+          <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
+            <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
+              &ldquo;The Drive is the street that proves you do not need
+              chains, franchises, or polish to build something people love.
+              Two hundred independent businesses and counting.&rdquo;
+            </p>
+          </blockquote>
+        </div>
+
+        {/* Map — embedded mid-article, slightly wider */}
+        <div className="max-w-4xl mx-auto px-6 my-12">
+          <NeighbourhoodMap
+            center={data.center}
+            zoom={data.zoom}
+            pois={pois.length > 0 ? pois : data.fallbackPOIs}
+            boundaryName="Grandview-Woodland"
+            height="380px"
+            showLegend
+          />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-6">
+          {/* The Real Estate Picture */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Real Estate Picture
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            Grandview-Woodland has a composite benchmark of around{" "}
+            <strong>$1.1M</strong>, reflecting a market that skews more toward
+            detached homes than many inner-city neighbourhoods. The character
+            homes are the draw &mdash; craftsman bungalows, Vancouver Specials,
+            and Edwardian houses typically range from{" "}
+            <strong>$1.3M to $1.8M</strong>. Properties on the quieter streets
+            near The Drive command premiums for walkability, while those
+            farther east toward Woodland offer slightly more space for the
+            money.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Condos near the SkyTrain station are popular with first-time
+            buyers, running from <strong>$500K to $850K</strong>.
+            Commercial-Broadway is the busiest station in the entire SkyTrain
+            system, and that transit access is a genuine selling point.
+            Townhomes along the Broadway corridor go for{" "}
+            <strong>$900K to $1.3M</strong>, with newer builds incorporating
+            transit-oriented design. I find that buyers here are less driven by
+            investment calculus and more by the fact that they genuinely love
+            The Drive and want to live within walking distance of it. That
+            kind of emotional attachment to a neighbourhood keeps values
+            stable.
+          </p>
+
+          {/* Getting Around */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Getting Around
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Commercial-Broadway is the busiest SkyTrain interchange in the
+            region, connecting the Expo and Millennium Lines. Downtown is about
+            ten minutes by train. The Drive itself is supremely walkable &mdash;
+            everything you need for daily life is within a comfortable stroll.
+            Walk Score: 90. Cycling infrastructure is solid, with routes
+            connecting to the central valley greenway and the downtown
+            peninsula. Most residents I work with use transit as their primary
+            mode and keep a car mainly for weekend trips out of the city.
+          </p>
+
+          {/* Who Lives Here */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Who Lives Here
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The Italian families who built the neighbourhood and never left.
+            Artists and musicians who need affordable space and a community
+            that values what they do. Young families drawn to Grandview
+            Elementary, Britannia, and the kind of free-range childhood where
+            kids can walk to the park and the library on their own. Newcomers
+            from around the world who find in The Drive&apos;s diversity a
+            reflection of their own experience. People who would rather buy
+            from independent shops than corporations, who care about community
+            gardens and live music and knowing the person behind the counter.
+            Grandview-Woodland self-selects for people with a certain set of
+            values, and that is precisely why it works.
+          </p>
+
+          {/* Bottom Line */}
+          <div className="mt-10 pt-8 border-t border-warm-200">
+            <p className="text-warm-800 leading-relaxed font-medium">
+              <strong>Bottom line:</strong> Grandview-Woodland is the
+              neighbourhood for people who want community over convenience,
+              character over polish, and a street like Commercial Drive that
+              you will never get tired of. Two SkyTrain lines keep you
+              connected, the character homes are some of the best in east
+              Vancouver, and the cultural richness &mdash; Italian heritage,
+              global cuisine, grassroots arts &mdash; is impossible to
+              replicate. If you want a neighbourhood with a soul, this is it.
+            </p>
+          </div>
+        </div>
+      </article>
+
       {/* Quick Stats */}
-      <section className="bg-white border-b border-warm-100">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <section className="bg-warm-50 border-y border-warm-100">
+        <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <p className="font-serif text-2xl text-teal-700">$1.1M</p>
@@ -101,95 +221,23 @@ export default async function GrandviewWoodlandPage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-lg text-warm-700 leading-relaxed mb-4">
-            If you want to understand what makes east Vancouver tick, start on Commercial Drive. &ldquo;The Drive&rdquo; is where Italian nonnas share the sidewalk with artists, young families, and newcomers from every corner of the world. There are no chain stores. The coffee is strong. The community spirit is real. Italian Day draws 300,000 people for a reason.
-          </p>
-          <p className="text-warm-600 leading-relaxed">
-            Behind The Drive, the residential streets are lined with craftsman bungalows, Vancouver Specials, and Edwardian homes with generous porches and mature gardens. Commercial-Broadway &mdash; the busiest SkyTrain station in the whole system &mdash; connects you to literally everywhere. The vibe is grassroots, multicultural, and fiercely independent. People move here for the personality and stay because it feels like an actual community, not just a postal code.
-          </p>
-        </div>
-      </section>
+      <NeighbourhoodReportSignup neighbourhood="Grandview-Woodland" />
 
-      {/* Map */}
-      <section className="pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Grandview-Woodland"
-            height="380px"
-            showLegend
-          />
-        </div>
-      </section>
-
-      {/* What Makes Grandview-Woodland Special */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-8 text-center">
-            What Makes Grandview-Woodland Special
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((h) => (
-              <div key={h.title} className="bg-white rounded-xl p-5 border border-warm-100">
-                <p className="text-2xl mb-2">{h.emoji}</p>
-                <h3 className="font-medium text-teal-950 text-sm mb-1">{h.title}</h3>
-                <p className="text-sm text-warm-600">{h.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Estate at a Glance */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Real Estate at a Glance
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {properties.map((p) => (
-              <div key={p.type} className="bg-warm-50 rounded-xl p-5 text-center">
-                <p className="font-serif text-xl text-teal-700 mb-1">{p.range}</p>
-                <p className="text-sm font-medium text-teal-950">{p.type}</p>
-                <p className="text-xs text-warm-500 mt-2">{p.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Common Questions
-          </h2>
-          <FAQAccordion faqs={faqs} />
-        </div>
-      </section>
-
-      <GetInTouch />
-
-      {/* JSON-LD FAQ Schema */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
+            "@type": "Article",
+            headline:
+              "Grandview-Woodland Vancouver — Commercial Drive & Real Estate Guide",
+            description:
+              "An insider guide to living in Grandview-Woodland, Vancouver. Commercial Drive culture, Italian heritage, and what makes The Drive one of Vancouver's most beloved streets.",
+            author: {
+              "@type": "Person",
+              name: "Aparna Kapur",
+            },
           }),
         }}
       />

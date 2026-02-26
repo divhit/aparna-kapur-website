@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Strathcona Vancouver | Heritage Homes & Real Estate Guide 2026",
@@ -19,39 +18,6 @@ export const metadata: Metadata = {
   ],
 };
 
-const faqs = [
-  {
-    question: "How much does a home cost in Strathcona?",
-    answer:
-      "The composite benchmark is around $950K. Heritage homes range from $1.0M to $1.5M, warehouse lofts and condos from $400K to $750K, and townhomes from $700K to $1.1M. For an inner-city neighbourhood this close to downtown, that represents genuine value.",
-  },
-  {
-    question: "What makes Strathcona's heritage special?",
-    answer:
-      "Strathcona is Vancouver's oldest residential neighbourhood, with homes dating to the 1890s. Victorian and Edwardian-era houses with gingerbread trim sit beside workers' cottages on tree-lined streets. Many are heritage-designated, protecting a level of architectural character that simply does not exist in newer parts of the city.",
-  },
-  {
-    question: "Is Strathcona safe for families?",
-    answer:
-      "Strathcona is a real inner-city neighbourhood with both charm and urban challenges. Families do live here and love it, drawn by the tight-knit community, Strathcona Elementary, Cottonwood Community Garden, and the walkability. It is honest and authentic rather than manicured, and that is part of its appeal.",
-  },
-];
-
-const highlights = [
-  { emoji: "\u{1F3DB}\uFE0F", title: "1890s Heritage", desc: "Vancouver's oldest residential neighbourhood. Victorian, Edwardian, and craftsman homes you will not find anywhere else in the city." },
-  { emoji: "\u{1F3A8}", title: "Artist Studios", desc: "Converted warehouses house working artists, designers, and creative entrepreneurs. Studio tours and artisan markets throughout the year." },
-  { emoji: "\u{1F962}", title: "Chinatown Next Door", desc: "One of North America's oldest Chinatowns. Dim sum, the Dr. Sun Yat-Sen Garden, herbal shops, and deep cultural history within walking distance." },
-  { emoji: "\u{1F687}", title: "5 Min to Downtown", desc: "Main Street-Science World and Stadium-Chinatown SkyTrain stations. Downtown is a bike ride or a short walk away." },
-  { emoji: "\u{1F331}", title: "Cottonwood Gardens", desc: "One of Vancouver's largest community gardens. 200+ plots where neighbours grow food, share harvests, and build real relationships." },
-  { emoji: "\u{1F30A}", title: "CRAB Park Waterfront", desc: "Burrard Inlet beach, harbour views, North Shore mountain backdrop. One of the few east-side waterfront parks." },
-];
-
-const properties = [
-  { type: "Heritage Homes", range: "$1.0M \u2013 $1.5M", note: "Victorian & Edwardian. The neighbourhood's signature." },
-  { type: "Condos & Lofts", range: "$400K \u2013 $750K", note: "Warehouse conversions popular with creatives." },
-  { type: "Townhomes", range: "$700K \u2013 $1.1M", note: "Modern builds. Ground-level near downtown." },
-];
-
 const data = NEIGHBOURHOODS["strathcona"];
 
 export default async function StrathconaPage() {
@@ -64,26 +30,173 @@ export default async function StrathconaPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
         </div>
         <div className="relative max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-sm text-teal-300/70 mb-4">
-            <Link href="/neighborhoods" className="hover:text-teal-200 transition-colors">Neighborhoods</Link>
+            <Link
+              href="/neighborhoods"
+              className="hover:text-teal-200 transition-colors"
+            >
+              Neighborhoods
+            </Link>
             <span>/</span>
             <span className="text-teal-200">Strathcona</span>
           </div>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Strathcona
           </h1>
+          <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
+            Vancouver&apos;s oldest neighbourhood &mdash; raw, real, and
+            irreplaceable.
+          </p>
         </div>
       </section>
 
+      {/* Blog Body */}
+      <article className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          {/* Opening Hook */}
+          <p className="text-lg text-warm-700 leading-relaxed mb-6">
+            I always tell people: if you want to feel Vancouver&apos;s history
+            in your bones, walk through Strathcona on a quiet afternoon. The
+            Victorian houses with their gingerbread trim, the workers&apos;
+            cottages from the 1890s, the converted warehouses where artists
+            now stretch canvases under skylights &mdash; every block has a
+            story that predates the city itself. This is not a neighbourhood
+            that was designed by a developer. It grew, it survived, it fought
+            for itself. And that is exactly what makes it magnetic.
+          </p>
+
+          {/* The Vibe */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Vibe
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            Strathcona is honest in a way that polished west-side
+            neighbourhoods are not. The community here is tight-knit and
+            fiercely protective of its character. People tend their plots at
+            Cottonwood Community Gardens &mdash; over 200 of them &mdash;
+            fight for heritage preservation at council meetings, and actually
+            know their neighbours by name. The annual studio tours let you
+            peek inside the warehouse conversions where painters, ceramicists,
+            and furniture makers do their work.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Chinatown is a five-minute walk, and the two neighbourhoods have
+            always been intertwined. Dim sum mornings, the Dr. Sun Yat-Sen
+            Classical Chinese Garden, herbal shops that have been in the same
+            family for generations &mdash; that cultural depth is part of
+            Strathcona&apos;s DNA. CRAB Park gives you Burrard Inlet
+            waterfront with harbour views and the North Shore mountains as a
+            backdrop. It is inner-city living at its most authentic &mdash;
+            with all the beauty and all the complexity that entails.
+          </p>
+
+          {/* Pull Quote */}
+          <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
+            <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
+              &ldquo;Strathcona is the only neighbourhood in Vancouver where
+              you can live in an 1890s Victorian, walk to Chinatown for dim
+              sum, and bike downtown in five minutes. Nothing else comes
+              close.&rdquo;
+            </p>
+          </blockquote>
+        </div>
+
+        {/* Map — embedded mid-article, slightly wider */}
+        <div className="max-w-4xl mx-auto px-6 my-12">
+          <NeighbourhoodMap
+            center={data.center}
+            zoom={data.zoom}
+            pois={pois.length > 0 ? pois : data.fallbackPOIs}
+            boundaryName="Strathcona"
+            height="380px"
+            showLegend
+          />
+        </div>
+
+        <div className="max-w-3xl mx-auto px-6">
+          {/* The Real Estate Picture */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            The Real Estate Picture
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-4">
+            For an inner-city neighbourhood this close to downtown, Strathcona
+            offers genuine value. The composite benchmark is around{" "}
+            <strong>$950K</strong>. The signature properties are the heritage
+            homes &mdash; beautifully restored Victorians and Edwardians
+            running from <strong>$1.0M to $1.5M</strong>. Many are
+            heritage-designated, which protects their character but also means
+            renovation rules apply. Buyers who appreciate that kind of
+            architectural detail tend to be passionate about these homes, and
+            bidding can be competitive when a good one comes up.
+          </p>
+          <p className="text-warm-600 leading-relaxed mb-6">
+            Warehouse lofts and condos are the other major category, ranging
+            from <strong>$400K to $750K</strong>. These converted industrial
+            spaces with high ceilings, exposed brick, and oversized windows
+            attract creatives and professionals who want character without the
+            maintenance of an old house. Townhomes in the{" "}
+            <strong>$700K to $1.1M</strong> range offer a middle ground &mdash;
+            modern builds with ground-level access, popular with couples
+            making their first purchase who want proximity to downtown without
+            the condo tower lifestyle.
+          </p>
+
+          {/* Getting Around */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Getting Around
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Downtown is a short bike ride or a brisk 20-minute walk. Main
+            Street-Science World and Stadium-Chinatown SkyTrain stations are
+            both within reach, connecting you to the Expo and Millennium
+            Lines. The Walk Score is 91, reflecting the flat terrain and the
+            density of services in adjacent Chinatown and along Main Street.
+            Serious cyclists love Strathcona &mdash; the Adanac Bikeway runs
+            right through the neighbourhood, and you can be at your desk
+            downtown in under ten minutes without breaking a sweat.
+          </p>
+
+          {/* Who Lives Here */}
+          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
+            Who Lives Here
+          </h2>
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Artists who need affordable studio space and do not want to
+            commute from the suburbs. Heritage lovers who would rather restore
+            an 1890s house than buy a new condo. Young professionals who work
+            downtown and want a neighbourhood with genuine grit and character.
+            Long-time residents &mdash; including Chinese-Canadian families
+            whose roots here go back generations &mdash; who anchor the
+            community. It is not for everyone, and the people who live here
+            know that. But for those who connect with its energy, Strathcona
+            creates a loyalty I rarely see in other parts of the city.
+          </p>
+
+          {/* Bottom Line */}
+          <div className="mt-10 pt-8 border-t border-warm-200">
+            <p className="text-warm-800 leading-relaxed font-medium">
+              <strong>Bottom line:</strong> Strathcona is Vancouver&apos;s most
+              historically rich neighbourhood, and it offers something no
+              amount of new development can replicate &mdash; genuine
+              character, 130 years of stories, and an inner-city location that
+              is minutes from everything. Heritage homes, artist lofts, and
+              accessible price points make it one of the most compelling buys
+              on the east side for people who value authenticity over polish.
+            </p>
+          </div>
+        </div>
+      </article>
+
       {/* Quick Stats */}
-      <section className="bg-white border-b border-warm-100">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <section className="bg-warm-50 border-y border-warm-100">
+        <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
               <p className="font-serif text-2xl text-teal-700">$950K</p>
@@ -101,95 +214,23 @@ export default async function StrathconaPage() {
         </div>
       </section>
 
-      {/* Overview */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-lg text-warm-700 leading-relaxed mb-4">
-            Strathcona is the neighbourhood where Vancouver&apos;s history lives in the houses themselves. Walk down any residential block and you will see beautifully restored Victorians with gingerbread trim, simple workers&apos; cottages from the 1890s, and converted warehouses where artists now have studios. This is the oldest residential neighbourhood in the city, and every street has stories that go back to before Vancouver was even incorporated.
-          </p>
-          <p className="text-warm-600 leading-relaxed">
-            It is raw and real in a way that polished west-side neighbourhoods are not. Chinatown is a five-minute walk, downtown is a short bike ride, and two SkyTrain stations keep you connected to everything. The community is tight-knit &mdash; people tend their plots at Cottonwood Gardens, fight for heritage preservation, and actually know their neighbours. For buyers who value substance over surface, Strathcona offers something rare: genuine character at an accessible price, steps from the city centre.
-          </p>
-        </div>
-      </section>
+      <NeighbourhoodReportSignup neighbourhood="Strathcona" />
 
-      {/* Map */}
-      <section className="pb-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Strathcona"
-            height="380px"
-            showLegend
-          />
-        </div>
-      </section>
-
-      {/* What Makes Strathcona Special */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-8 text-center">
-            What Makes Strathcona Special
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {highlights.map((h) => (
-              <div key={h.title} className="bg-white rounded-xl p-5 border border-warm-100">
-                <p className="text-2xl mb-2">{h.emoji}</p>
-                <h3 className="font-medium text-teal-950 text-sm mb-1">{h.title}</h3>
-                <p className="text-sm text-warm-600">{h.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real Estate at a Glance */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Real Estate at a Glance
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {properties.map((p) => (
-              <div key={p.type} className="bg-warm-50 rounded-xl p-5 text-center">
-                <p className="font-serif text-xl text-teal-700 mb-1">{p.range}</p>
-                <p className="text-sm font-medium text-teal-950">{p.type}</p>
-                <p className="text-xs text-warm-500 mt-2">{p.note}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-16 bg-warm-50">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-serif text-2xl text-teal-950 mb-6 text-center">
-            Common Questions
-          </h2>
-          <FAQAccordion faqs={faqs} />
-        </div>
-      </section>
-
-      <GetInTouch />
-
-      {/* JSON-LD FAQ Schema */}
+      {/* JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
+            "@type": "Article",
+            headline:
+              "Strathcona Vancouver — Heritage Homes & Real Estate Guide",
+            description:
+              "An insider guide to living in Strathcona, Vancouver. Heritage Victorian homes, artist lofts, Chinatown adjacency, and what makes Strathcona Vancouver's most historically layered neighbourhood.",
+            author: {
+              "@type": "Person",
+              name: "Aparna Kapur",
+            },
           }),
         }}
       />
