@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
-import { useMap } from "@vis.gl/react-google-maps";
+import { useEffect, useRef, useCallback, useState } from "react";
+import { useMap, AdvancedMarker } from "@vis.gl/react-google-maps";
 
 const SLUG_MAP: Record<string, string> = {
   "Oakridge": "oakridge",
@@ -63,8 +63,11 @@ export default function NeighbourhoodBoundaries({
 }: Props) {
   const map = useMap();
   const hoveredRef = useRef<string | null>(null);
-  const infoWindowRef = useRef<google.maps.InfoWindow | null>(null);
   const loadedRef = useRef(false);
+  const [hoverLabel, setHoverLabel] = useState<{
+    name: string;
+    position: { lat: number; lng: number };
+  } | null>(null);
 
   const applyStyles = useCallback(() => {
     if (!map) return;
@@ -109,12 +112,6 @@ export default function NeighbourhoodBoundaries({
     // Skip hover/click for single-neighbourhood mode
     if (filterTo) return;
 
-    const infoWindow = new google.maps.InfoWindow({
-      disableAutoPan: true,
-      headerDisabled: true,
-    });
-    infoWindowRef.current = infoWindow;
-
     const mouseoverListener = map.data.addListener(
       "mouseover",
       (e: google.maps.Data.MouseEvent) => {
@@ -122,16 +119,11 @@ export default function NeighbourhoodBoundaries({
         hoveredRef.current = name;
         applyStyles();
 
-        // Show name tooltip
         if (e.latLng) {
-          const slug = SLUG_MAP[name];
-          const isSnapshot = SNAPSHOT_NAMES.has(name);
-          const label = isSnapshot ? `Snapshot · ${name}` : name;
-          infoWindow.setContent(
-            `<div style="display:inline-block;padding:6px 12px;font-size:12px;font-weight:600;color:#fff;background:#0f766e;border-radius:9999px;border:2px solid #fff;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);white-space:nowrap;">${label}${slug ? '<div style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.7);margin-top:2px;text-align:center;">Click to explore →</div>' : ""}</div>`
-          );
-          infoWindow.setPosition(e.latLng);
-          infoWindow.open(map);
+          setHoverLabel({
+            name,
+            position: { lat: e.latLng.lat(), lng: e.latLng.lng() },
+          });
         }
       }
     );
@@ -139,7 +131,7 @@ export default function NeighbourhoodBoundaries({
     const mouseoutListener = map.data.addListener("mouseout", () => {
       hoveredRef.current = null;
       applyStyles();
-      infoWindow.close();
+      setHoverLabel(null);
     });
 
     const clickListener = map.data.addListener(
@@ -157,11 +149,29 @@ export default function NeighbourhoodBoundaries({
       google.maps.event.removeListener(mouseoverListener);
       google.maps.event.removeListener(mouseoutListener);
       google.maps.event.removeListener(clickListener);
-      infoWindow.close();
       map.data.forEach((feature) => map.data.remove(feature));
       loadedRef.current = false;
     };
   }, [map, geojsonUrl, filterTo, applyStyles]);
 
-  return null;
+  if (!hoverLabel || filterTo) return null;
+
+  const isSnapshot = SNAPSHOT_NAMES.has(hoverLabel.name);
+  const label = isSnapshot
+    ? `Snapshot \u00B7 ${hoverLabel.name}`
+    : hoverLabel.name;
+
+  return (
+    <AdvancedMarker position={hoverLabel.position}>
+      <div
+        className="bg-teal-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg border-2 border-white cursor-pointer whitespace-nowrap"
+        onClick={() => {
+          const slug = SLUG_MAP[hoverLabel.name];
+          if (slug) window.location.href = `/neighborhoods/${slug}`;
+        }}
+      >
+        {label}
+      </div>
+    </AdvancedMarker>
+  );
 }
