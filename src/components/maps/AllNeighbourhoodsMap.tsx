@@ -8,8 +8,28 @@ import {
 import { getAllNeighbourhoods } from "@/lib/neighborhoods";
 import NeighbourhoodBoundaries from "./NeighbourhoodBoundaries";
 
+const SNAPSHOT_SLUGS = new Set([
+  "kitsilano",
+  "ubc",
+  "west-point-grey",
+  "dunbar-southlands",
+  "arbutus-ridge",
+  "shaughnessy",
+  "fairview",
+  "mount-pleasant",
+  "strathcona",
+  "grandview-woodland",
+  "kensington-cedar-cottage",
+  "renfrew-collingwood",
+  "sunset",
+  "victoria-fraserview",
+  "killarney",
+]);
+
 function NeighbourhoodMarkers() {
-  const neighbourhoods = getAllNeighbourhoods();
+  const neighbourhoods = getAllNeighbourhoods().filter(
+    (h) => !SNAPSHOT_SLUGS.has(h.slug)
+  );
 
   return (
     <>

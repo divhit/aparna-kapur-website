@@ -31,6 +31,24 @@ const SLUG_MAP: Record<string, string> = {
 
 const FOCUS_NAMES = new Set(Object.keys(SLUG_MAP));
 
+const SNAPSHOT_NAMES = new Set([
+  "Kitsilano",
+  "UBC",
+  "West Point Grey",
+  "Dunbar-Southlands",
+  "Arbutus Ridge",
+  "Shaughnessy",
+  "Fairview",
+  "Mount Pleasant",
+  "Strathcona",
+  "Grandview-Woodland",
+  "Kensington-Cedar Cottage",
+  "Renfrew-Collingwood",
+  "Sunset",
+  "Victoria-Fraserview",
+  "Killarney",
+]);
+
 type Props = {
   geojsonUrl?: string;
   filterTo?: string; // Only show this single neighbourhood's boundary
@@ -104,8 +122,10 @@ export default function NeighbourhoodBoundaries({
         // Show name tooltip
         if (e.latLng) {
           const slug = SLUG_MAP[name];
+          const isSnapshot = SNAPSHOT_NAMES.has(name);
+          const label = isSnapshot ? `Snapshot · ${name}` : name;
           infoWindow.setContent(
-            `<div style="padding:4px 8px;font-size:13px;font-weight:600;color:#0f172a;">${name}${slug ? '<div style="font-size:11px;font-weight:400;color:#0d9488;margin-top:2px;">Click to explore →</div>' : ""}</div>`
+            `<div style="padding:4px 8px;font-size:13px;font-weight:600;color:#0f172a;">${label}${slug ? '<div style="font-size:11px;font-weight:400;color:#0d9488;margin-top:2px;">Click to explore →</div>' : ""}</div>`
           );
           infoWindow.setPosition(e.latLng);
           infoWindow.open(map);
