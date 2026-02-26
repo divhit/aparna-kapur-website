@@ -290,14 +290,14 @@ export default async function RileyParkPage() {
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Riley Park residents have access to excellent parks, recreation facilities, and green spaces:
                 </p>
-                <div className="space-y-4 mb-6">
+                <div className="bg-warm-50 rounded-xl p-5 mb-6 space-y-5">
                   {[
                     { name: "Riley Park", desc: "The neighborhood's namesake park features sports fields, a playground, and open green space. It is a community gathering point and the site of Nat Bailey Stadium, home to the Vancouver Canadians minor league baseball team. Summer evening games here, with the North Shore mountains as a backdrop, are a quintessential Vancouver experience." },
                     { name: "Hillcrest Community Centre & Park", desc: "A world-class recreation facility built for the 2010 Olympics. Features include a full aquatic centre with a 50-metre pool, ice rink, gymnasium, fitness centre, library branch, and extensive outdoor park space with playgrounds and playing fields. This is one of the finest community centres in the city." },
                     { name: "Queen Elizabeth Park", desc: "Vancouver's highest point and second-most visited park lies just west of Riley Park. The Bloedel Conservatory, rose gardens, arboretum, pitch-and-putt golf, and panoramic city and mountain views make this a year-round destination for residents." },
                     { name: "Douglas Park", desc: "Located at the neighborhood's northern edge, Douglas Park offers a community centre, outdoor pool, tennis courts, playgrounds, and a popular off-leash dog area. A great option for families and pet owners." },
                   ].map((park) => (
-                    <div key={park.name} className="bg-warm-50 rounded-xl p-5">
+                    <div key={park.name}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
                       <p className="text-sm text-warm-600">{park.desc}</p>
                     </div>
@@ -308,38 +308,21 @@ export default async function RileyParkPage() {
               {/* Schools & Education */}
               <section id="schools" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Schools &amp; Education
+                  Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
                   Riley Park serves families well with strong public schools at every level:
                 </p>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Elementary Schools</h3>
+                <div className="bg-warm-50 rounded-xl p-5 mb-6 space-y-4">
                   {[
                     { name: "General Wolfe Elementary", type: "K-7 Public", detail: "A well-established school serving the heart of Riley Park. Known for strong community engagement and diverse programs." },
-                    { name: "Emily Carr Elementary", type: "K-7 Public", detail: "Another excellent catchment school with a welcoming community and solid academic programs." },
+                    { name: "Emily Carr Elementary", type: "K-7 Public", detail: "Another excellent catchment school with a welcoming community." },
                     { name: "Sir William Van Horne Elementary", type: "K-7 Public", detail: "Located near the western edge of the neighborhood, serving families in the Cambie-Riley Park border area." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Secondary &amp; Post-Secondary</h3>
-                  {[
                     { name: "Sir Charles Tupper Secondary", type: "8-12 Public", detail: "The local high school for Riley Park residents. Offers French Immersion, strong arts programs, and diverse extracurricular activities." },
                     { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "An alternative catchment option just west of the neighborhood, known for strong academics and athletics." },
                     { name: "Langara College", type: "Post-Secondary", detail: "Located nearby at 49th and Cambie, offering university transfer programs, diplomas, and continuing education for over 23,000 students." },
                   ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
+                    <div key={school.name} className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
