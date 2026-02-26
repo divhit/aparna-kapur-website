@@ -11,6 +11,22 @@ const SLUG_MAP: Record<string, string> = {
   "Kerrisdale": "kerrisdale",
   "Kitsilano": "kitsilano",
   "UBC": "ubc",
+  "Arbutus Ridge": "arbutus-ridge",
+  "Dunbar-Southlands": "dunbar-southlands",
+  "Shaughnessy": "shaughnessy",
+  "West Point Grey": "west-point-grey",
+  "Downtown": "downtown",
+  "Fairview": "fairview",
+  "West End": "west-end",
+  "Mount Pleasant": "mount-pleasant",
+  "Grandview-Woodland": "grandview-woodland",
+  "Hastings-Sunrise": "hastings-sunrise",
+  "Kensington-Cedar Cottage": "kensington-cedar-cottage",
+  "Strathcona": "strathcona",
+  "Killarney": "killarney",
+  "Renfrew-Collingwood": "renfrew-collingwood",
+  "Sunset": "sunset",
+  "Victoria-Fraserview": "victoria-fraserview",
 };
 
 const FOCUS_NAMES = new Set(Object.keys(SLUG_MAP));
