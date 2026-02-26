@@ -55,11 +55,13 @@ const SNAPSHOT_NAMES = new Set([
 type Props = {
   geojsonUrl?: string;
   filterTo?: string; // Only show this single neighbourhood's boundary
+  onHover?: (name: string | null) => void;
 };
 
 export default function NeighbourhoodBoundaries({
   geojsonUrl = "/data/vancouver-neighbourhoods.geojson",
   filterTo,
+  onHover,
 }: Props) {
   const map = useMap();
   const hoveredRef = useRef<string | null>(null);
@@ -118,6 +120,7 @@ export default function NeighbourhoodBoundaries({
         const name = e.feature.getProperty("name") as string;
         hoveredRef.current = name;
         applyStyles();
+        onHover?.(name);
 
         if (e.latLng) {
           setHoverLabel({
@@ -131,6 +134,7 @@ export default function NeighbourhoodBoundaries({
     const mouseoutListener = map.data.addListener("mouseout", () => {
       hoveredRef.current = null;
       applyStyles();
+      onHover?.(null);
       setHoverLabel(null);
     });
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   APIProvider,
   Map,
@@ -29,32 +30,42 @@ const SNAPSHOT_SLUGS = new Set([
   "hastings-sunrise",
 ]);
 
-function NeighbourhoodMarkers() {
+function NeighbourhoodMarkers({ hoveredName }: { hoveredName: string | null }) {
   const neighbourhoods = getAllNeighbourhoods().filter(
     (h) => !SNAPSHOT_SLUGS.has(h.slug)
   );
 
   return (
     <>
-      {neighbourhoods.map((hood) => (
-        <AdvancedMarker
-          key={hood.slug}
-          position={hood.center}
-          onClick={() => {
-            window.location.href = `/neighborhoods/${hood.slug}`;
-          }}
-        >
-          <div className="bg-teal-700 text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg border-2 border-white cursor-pointer hover:bg-teal-800 hover:scale-105 transition-all whitespace-nowrap">
-            {hood.name}
-          </div>
-        </AdvancedMarker>
-      ))}
+      {neighbourhoods.map((hood) => {
+        const isHovered = hoveredName === hood.name;
+        return (
+          <AdvancedMarker
+            key={hood.slug}
+            position={hood.center}
+            onClick={() => {
+              window.location.href = `/neighborhoods/${hood.slug}`;
+            }}
+          >
+            <div
+              className={`text-white px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg border-2 border-white cursor-pointer transition-all whitespace-nowrap ${
+                isHovered
+                  ? "bg-teal-500 scale-110"
+                  : "bg-teal-700 hover:bg-teal-800 hover:scale-105"
+              }`}
+            >
+              {hood.name}
+            </div>
+          </AdvancedMarker>
+        );
+      })}
     </>
   );
 }
 
 export default function AllNeighbourhoodsMap({ fullWidth = false }: { fullWidth?: boolean }) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+  const [hoveredName, setHoveredName] = useState<string | null>(null);
 
   if (!apiKey) {
     return (
@@ -93,8 +104,8 @@ export default function AllNeighbourhoodsMap({ fullWidth = false }: { fullWidth?
           streetViewControl={false}
           fullscreenControl
         >
-          <NeighbourhoodBoundaries />
-          <NeighbourhoodMarkers />
+          <NeighbourhoodBoundaries onHover={setHoveredName} />
+          <NeighbourhoodMarkers hoveredName={hoveredName} />
         </Map>
       </div>
     </APIProvider>
