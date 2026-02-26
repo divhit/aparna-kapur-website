@@ -89,7 +89,7 @@ export default async function RileyParkPage() {
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             <div>
               <p className="font-serif text-2xl text-teal-700">$1.70M</p>
               <p className="text-xs text-warm-500 mt-1">Van East Detached</p>
@@ -120,32 +120,31 @@ export default async function RileyParkPage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block">
-              <nav className="sticky top-28">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-4">
+              <nav className="sticky top-28 space-y-1">
+                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                   On This Page
                 </p>
-                <ul className="space-y-2 text-sm">
-                  {[
-                    ["map", "Explore Map"],
-                    ["overview", "Overview"],
-                    ["living", "Living in Riley Park"],
-                    ["real-estate", "Real Estate Market"],
-                    ["transit", "Getting Around"],
-                    ["parks", "Parks & Recreation"],
-                    ["schools", "Schools & Education"],
-                    ["shopping", "Shopping & Dining"],
-                    ["faq", "FAQ"],
-                  ].map(([id, label]) => (
-                    <li key={id}>
-                      <a
-                        href={`#${id}`}
-                        className="text-warm-500 hover:text-teal-700 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {[
+                  ["map", "Map", "1"],
+                  ["living", "Living in Riley Park", "2"],
+                  ["real-estate", "Real Estate Market", "3"],
+                  ["transit", "Getting Around", "4"],
+                  ["parks", "Parks & Recreation", "5"],
+                  ["schools", "Schools & Education", "6"],
+                  ["shopping", "Shopping & Dining", "7"],
+                  ["faq", "FAQ", "8"],
+                ].map(([id, label, step]) => (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 transition-colors"
+                  >
+                    <span className="w-8 h-8 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center font-serif text-sm font-semibold shrink-0">
+                      {step}
+                    </span>
+                    {label}
+                  </a>
+                ))}
                 <div className="mt-8 pt-6 border-t border-warm-100">
                   <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
                     Nearby Areas
@@ -176,12 +175,6 @@ export default async function RileyParkPage() {
             <div className="lg:col-span-3 max-w-3xl">
               {/* Interactive Map */}
               <section id="map" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Explore Riley Park
-                </h2>
-                <p className="text-warm-600 leading-relaxed mb-6">
-                  Discover transit stations, schools, parks, and key landmarks in and around Riley Park.
-                </p>
                 <NeighbourhoodMap
                   center={rileyParkData.center}
                   zoom={rileyParkData.zoom}
@@ -193,10 +186,7 @@ export default async function RileyParkPage() {
               </section>
 
               {/* Overview */}
-              <section id="overview" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Overview
-                </h2>
+              <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Riley Park is a vibrant residential neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved from a working-class enclave into one of the city&apos;s most sought-after neighborhoods, a place where heritage architecture, creative energy, and genuine community spirit come together.
                 </p>
@@ -234,18 +224,18 @@ export default async function RileyParkPage() {
                   Riley Park Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park&apos;s real estate market is defined by strong demand, limited supply, and a housing stock that rewards buyers who appreciate character and charm. The neighborhood offers a diverse mix of property types:
+                  Riley Park&apos;s real estate market is defined by strong demand and a housing stock that rewards buyers who appreciate character and charm.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Character Homes", range: "$1.4M - $2.5M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Van East detached benchmark: $1.70M. Many offer renovation potential or laneway suite opportunities." },
-                    { type: "Duplexes & Townhomes", range: "$850K - $1.4M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. Van East townhome benchmark: $1.04M. Popular with families who want more space than a condo." },
-                    { type: "Condos & Apartments", range: "$450K - $800K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Van East condo benchmark: $639K. Popular with first-time buyers and young professionals." },
+                    { type: "Character Homes", range: "$1.4M - $2.5M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Van East detached benchmark: $1.70M." },
+                    { type: "Duplexes & Townhomes", range: "$850K - $1.4M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. Van East townhome benchmark: $1.04M." },
+                    { type: "Condos & Apartments", range: "$450K - $800K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Van East condo benchmark: $639K." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex items-baseline justify-between mb-1">
-                        <h4 className="font-medium text-teal-950">{item.type}</h4>
+                      <div className="flex items-baseline gap-3 mb-1">
                         <span className="font-serif text-teal-700">{item.range}</span>
+                        <h4 className="font-medium text-teal-950">{item.type}</h4>
                       </div>
                       <p className="text-sm text-warm-600">{item.desc}</p>
                     </div>
