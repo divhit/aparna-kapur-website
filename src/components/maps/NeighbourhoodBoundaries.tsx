@@ -9,6 +9,7 @@ const SLUG_MAP: Record<string, string> = {
   "South Cambie": "south-cambie",
   "Riley Park": "riley-park",
   "Kerrisdale": "kerrisdale",
+  "Kitsilano": "kitsilano",
   "UBC": "ubc",
 };
 

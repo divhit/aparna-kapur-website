@@ -66,6 +66,15 @@ const neighborhoods = [
     featured: false,
   },
   {
+    name: "Kitsilano",
+    slug: "kitsilano",
+    tagline: "Beach Living & Urban Energy",
+    description: "One of Vancouver's most desirable beach neighbourhoods, known for its outdoor lifestyle, vibrant West 4th Avenue dining scene, and proximity to both UBC and downtown.",
+    stats: { avgPrice: "$1.25M", transit: "99 B-Line & Broadway", newHomes: "Moderate" },
+    image: "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    featured: false,
+  },
+  {
     name: "UBC",
     slug: "ubc",
     tagline: "World-Class Campus & Community",
