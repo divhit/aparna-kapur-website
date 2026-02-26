@@ -5,6 +5,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Riley Park Vancouver Real Estate Guide 2026 | Homes, Market Data & Lifestyle",
@@ -258,7 +259,7 @@ export default async function RileyParkPage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Riley Park offers strong transit connectivity and is highly walkable, earning one of the best walk scores among Vancouver&apos;s residential neighborhoods:
+                  Riley Park offers strong transit connectivity and is highly walkable.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -285,7 +286,7 @@ export default async function RileyParkPage() {
               {/* Parks & Recreation */}
               <section id="parks" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Parks &amp; Recreation
+                  Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Riley Park residents have access to excellent parks, recreation facilities, and green spaces:
@@ -342,7 +343,7 @@ export default async function RileyParkPage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Main Street is the lifeblood of Riley Park&apos;s shopping and dining scene, and it is unlike any other commercial corridor in Vancouver. This is a street defined by independent ownership, from the bookshops and record stores to the farm-to-table restaurants and specialty coffee roasters. If you&apos;re looking for a big box retailer, you won&apos;t find one here. That is precisely the point.
+                  Riley Park is defined by independent ownership, from the bookshops and record stores to the farm-to-table restaurants and specialty coffee roasters. If you&apos;re looking for a big box retailer, you won&apos;t find one here. That is precisely the point.
                 </p>
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">The Craft Brewery District</p>
@@ -354,7 +355,7 @@ export default async function RileyParkPage() {
                   Beyond breweries, the dining scene spans cuisines and price points, from acclaimed restaurants and intimate wine bars to family-friendly pizzerias and authentic international kitchens. The vintage and thrift shop scene is among Vancouver&apos;s best, with curated shops offering everything from mid-century furniture to rare vinyl records and vintage clothing.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For everyday needs, the neighborhood has independent grocers, pharmacies, and services along Main Street and King Edward Avenue. Larger shopping options at Oakridge and along Cambie Street are just minutes away.
+                  For everyday needs, the neighborhood has independent grocers, pharmacies, and services along Main Street and King Edward Avenue. Larger shopping options at Oakridge just minutes away.
                 </p>
               </section>
 
@@ -363,14 +364,7 @@ export default async function RileyParkPage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="bg-warm-50 rounded-xl p-6">
-                      <h3 className="font-medium text-teal-950 mb-2">{faq.question}</h3>
-                      <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
+                <FAQAccordion faqs={faqs} />
               </section>
 
               {/* CTA */}
