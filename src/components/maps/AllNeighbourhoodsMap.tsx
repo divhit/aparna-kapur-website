@@ -60,8 +60,8 @@ export default function AllNeighbourhoodsMap({ fullWidth = false }: { fullWidth?
     <APIProvider apiKey={apiKey}>
       <div className={fullWidth ? "overflow-hidden h-[600px]" : "rounded-xl overflow-hidden border border-warm-200 shadow-sm h-[500px]"}>
         <Map
-          defaultCenter={{ lat: 49.2530, lng: -123.1200 }}
-          defaultZoom={12}
+          defaultCenter={{ lat: 49.2400, lng: -123.0900 }}
+          defaultZoom={12.5}
           mapId="all-neighbourhoods-map"
           gestureHandling="cooperative"
           disableDefaultUI={false}
