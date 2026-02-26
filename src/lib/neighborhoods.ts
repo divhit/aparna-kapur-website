@@ -77,7 +77,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
   "south-cambie": {
     name: "South Cambie",
     slug: "south-cambie",
-    center: { lat: 49.2450, lng: -123.1150 },
+    center: { lat: 49.2480, lng: -123.1150 },
     zoom: 14,
     tagline: "Where Families Put Down Roots",
     avgPrice: "$1.44M",
@@ -146,7 +146,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
   "cambie-corridor": {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
-    center: { lat: 49.2380, lng: -123.1150 },
+    center: { lat: 49.2300, lng: -123.1150 },
     zoom: 13,
     tagline: "Transit-Oriented Growth",
     avgPrice: "$1.46M",
