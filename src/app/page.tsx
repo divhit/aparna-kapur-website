@@ -28,7 +28,7 @@ const neighborhoods = [
     name: "Cambie Corridor",
     slug: "cambie-corridor",
     description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
-    image: "https://images.pexels.com/photos/11455843/pexels-photo-11455843.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/neighborhoods/cambie-corridor.webp",
   },
   {
     name: "Marpole",

@@ -62,7 +62,7 @@ const neighborhoods = [
     tagline: "Transit-Oriented Growth",
     description: "Vancouver's most dynamic development corridor, following the Canada Line from downtown to Marine Drive. New condos, townhomes, and mixed-use developments are transforming this area.",
     stats: { avgPrice: "$1.46M", transit: "Multiple Stations", newHomes: "High Growth" },
-    image: "https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/cambie-corridor.webp",
     featured: false,
   },
   {

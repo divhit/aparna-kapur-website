@@ -62,7 +62,7 @@ export default async function CambieCorridorPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/11424605/pexels-photo-11424605.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
+            backgroundImage: "url('/images/neighborhoods/cambie-corridor.webp')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
