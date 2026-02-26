@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import ContactForm from "@/components/forms/ContactForm";
+import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Marpole Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -75,39 +75,29 @@ export default async function MarpolePage() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
             Marpole, Vancouver
           </h1>
-          <p className="text-xl text-teal-200 font-medium mb-2">
-            Historic Charm Meets Modern Living
-          </p>
-          <p className="text-white/70 max-w-2xl text-lg">
-            One of Vancouver&apos;s oldest neighborhoods offering family-friendly living,
-            excellent value, and a community on the rise.
-          </p>
         </div>
       </section>
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
-              <p className="font-serif text-2xl text-teal-700">$1.14M</p>
-              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">1870s</p>
-              <p className="text-xs text-warm-500 mt-1">Established</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">20 min</p>
-              <p className="text-xs text-warm-500 mt-1">To Downtown</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">7 min</p>
-              <p className="text-xs text-warm-500 mt-1">To YVR Airport</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">1</p>
-              <p className="text-xs text-warm-500 mt-1">SkyTrain Station</p>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <div className="hidden lg:block" />
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl">
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">$1.14M</p>
+                  <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">7 min</p>
+                  <p className="text-xs text-warm-500 mt-1">To YVR Airport</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">1</p>
+                  <p className="text-xs text-warm-500 mt-1">SkyTrain Station</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -119,32 +109,31 @@ export default async function MarpolePage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block">
-              <nav className="sticky top-28">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-4">
+              <nav className="sticky top-28 space-y-1">
+                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                   On This Page
                 </p>
-                <ul className="space-y-2 text-sm">
-                  {[
-                    ["overview", "Overview"],
-                    ["map", "Explore Map"],
-                    ["living", "Living in Marpole"],
-                    ["real-estate", "Real Estate Market"],
-                    ["transit", "Getting Around"],
-                    ["parks", "Parks & Recreation"],
-                    ["schools", "Schools & Education"],
-                    ["shopping", "Shopping & Dining"],
-                    ["faq", "FAQ"],
-                  ].map(([id, label]) => (
-                    <li key={id}>
-                      <a
-                        href={`#${id}`}
-                        className="text-warm-500 hover:text-teal-700 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {[
+                  ["map", "Map", "1"],
+                  ["living", "Living in Marpole", "2"],
+                  ["real-estate", "Real Estate Market", "3"],
+                  ["transit", "Getting Around", "4"],
+                  ["parks", "Parks", "5"],
+                  ["schools", "Education", "6"],
+                  ["shopping", "Shopping & Dining", "7"],
+                  ["faq", "FAQ", "8"],
+                ].map(([id, label, step]) => (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 transition-colors"
+                  >
+                    <span className="w-8 h-8 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center font-serif text-sm font-semibold shrink-0">
+                      {step}
+                    </span>
+                    {label}
+                  </a>
+                ))}
                 <div className="mt-8 pt-6 border-t border-warm-100">
                   <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
                     Nearby Areas
@@ -172,29 +161,8 @@ export default async function MarpolePage() {
 
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
-              {/* Interactive Map */}
-              <section id="map" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Explore Marpole
-                </h2>
-                <p className="text-warm-600 leading-relaxed mb-6">
-                  Discover transit stations, schools, parks, and key landmarks in and around Marpole.
-                </p>
-                <NeighbourhoodMap
-                  center={marpoleData.center}
-                  zoom={marpoleData.zoom}
-                  pois={pois.length > 0 ? pois : marpoleData.fallbackPOIs}
-                  boundaryName="Marpole"
-                  height="450px"
-                  showLegend
-                />
-              </section>
-
               {/* Overview */}
-              <section id="overview" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Overview
-                </h2>
+              <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Marpole is one of Vancouver&apos;s oldest and most storied neighborhoods, with roots stretching back to the 1870s when it served as a hub for fishing and lumber operations along the Fraser River. Located at the southern tip of Vancouver, bordered by West 57th Avenue to the north, the Fraser River to the south, Oak Street to the east, and the western edge near Celtic Avenue, Marpole occupies a strategic position between the city core and the communities of Richmond and the Vancouver International Airport.
                 </p>
@@ -204,6 +172,18 @@ export default async function MarpolePage() {
                 <p className="text-warm-600 leading-relaxed">
                   What draws many buyers to Marpole is its remarkable value relative to surrounding areas. With a GVR benchmark price of $1.14M, well below Oakridge ($1.49M), Kerrisdale ($1.90M), or South Cambie ($1.44M), Marpole offers an entry point into Vancouver&apos;s west side that is increasingly rare. Add in the Marine Drive SkyTrain station, proximity to YVR, and a growing community of shops and restaurants, and it&apos;s easy to see why Marpole is gaining attention from savvy buyers and investors alike.
                 </p>
+              </section>
+
+              {/* Interactive Map */}
+              <section id="map" className="mb-16">
+                <NeighbourhoodMap
+                  center={marpoleData.center}
+                  zoom={marpoleData.zoom}
+                  pois={pois.length > 0 ? pois : marpoleData.fallbackPOIs}
+                  boundaryName="Marpole"
+                  height="450px"
+                  showLegend
+                />
               </section>
 
               {/* Living in Marpole */}
@@ -241,7 +221,7 @@ export default async function MarpolePage() {
                     { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: "Single-family homes ranging from original character bungalows with renovation potential to newer custom builds. GVR benchmark: $2.13M. Lot sizes are often generous compared to other west-side neighborhoods." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex items-baseline justify-between mb-1">
+                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
                         <h4 className="font-medium text-teal-950">{item.type}</h4>
                         <span className="font-serif text-teal-700">{item.range}</span>
                       </div>
@@ -293,22 +273,22 @@ export default async function MarpolePage() {
                 </p>
               </section>
 
-              {/* Parks & Recreation */}
+              {/* Parks */}
               <section id="parks" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Parks &amp; Recreation
+                  Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Marpole offers residents a generous amount of green space, from pocket parks to the expansive Fraser River waterfront:
                 </p>
-                <div className="space-y-4 mb-6">
+                <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
                     { name: "Marpole Park", desc: "The neighborhood's central gathering place, featuring sports fields, a playground, tennis courts, and a community centre that hosts programs for all ages. The park is a hub for youth sports leagues, summer camps, and community events throughout the year." },
                     { name: "Winona Park", desc: "A beautifully maintained neighborhood park with mature trees, walking paths, a children's playground, and open green space. A favorite spot for dog walkers and families with young children." },
                     { name: "Oak Park", desc: "A well-used community park with sports facilities, a wading pool, a playground, and picnic areas. Home to community gardens where residents grow vegetables and flowers." },
                     { name: "Fraser River Trail", desc: "One of Marpole's greatest natural assets. This waterfront trail stretches along the Fraser River's north arm, offering stunning views of the river, opportunities for birdwatching, cycling, and walking. It connects to the broader regional trail network and provides a peaceful escape from the city." },
-                  ].map((park) => (
-                    <div key={park.name} className="bg-warm-50 rounded-xl p-5">
+                  ].map((park, i, arr) => (
+                    <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
                       <p className="text-sm text-warm-600">{park.desc}</p>
                     </div>
@@ -319,51 +299,55 @@ export default async function MarpolePage() {
                 </p>
               </section>
 
-              {/* Schools & Education */}
+              {/* Education */}
               <section id="schools" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Schools &amp; Education
+                  Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
                   Marpole is home to well-regarded public schools and is within reach of several private and post-secondary options:
                 </p>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Public Schools</h3>
-                  {[
-                    { name: "David Lloyd George Elementary", type: "K-7 Public", detail: "A cornerstone of the Marpole community, offering strong academic programs, French Immersion, and a welcoming, diverse student body." },
-                    { name: "Sir Wilfrid Laurier Elementary", type: "K-7 Public", detail: "Known for its inclusive community and solid academic foundation. Offers a range of enrichment programs and extracurricular activities." },
-                    { name: "J.W. Sexsmith Elementary", type: "K-7 Public", detail: "Serves the eastern portion of Marpole with strong community engagement and a focus on individual student growth." },
-                    { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "The local high school, located at the Oakridge-Marpole border. Consistently ranked among Vancouver's top public secondaries, with strong academics, athletics, and arts programs." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "David Lloyd George Elementary", type: "K-7 Public", detail: "A cornerstone of the Marpole community, offering strong academic programs, French Immersion, and a welcoming, diverse student body." },
+                      { name: "Sir Wilfrid Laurier Elementary", type: "K-7 Public", detail: "Known for its inclusive community and solid academic foundation. Offers a range of enrichment programs and extracurricular activities." },
+                      { name: "J.W. Sexsmith Elementary", type: "K-7 Public", detail: "Serves the eastern portion of Marpole with strong community engagement and a focus on individual student growth." },
+                      { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "The local high school, located at the Oakridge-Marpole border. Consistently ranked among Vancouver's top public secondaries, with strong academics, athletics, and arts programs." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Post-Secondary &amp; Nearby Options</h3>
-                  {[
-                    { name: "Langara College", type: "Post-Secondary", detail: "Located just north of Marpole at 49th and Cambie, Langara serves over 23,000 students and offers university transfer programs, career training, and continuing studies." },
-                    { name: "BCIT Aerospace Campus", type: "Post-Secondary", detail: "Located near the Richmond border, BCIT's aerospace campus is easily accessible from Marpole and offers specialized technical training programs." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Post-Secondary &amp; Nearby Options</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Langara College", type: "Post-Secondary", detail: "Located just north of Marpole at 49th and Cambie, Langara serves over 23,000 students and offers university transfer programs, career training, and continuing studies." },
+                      { name: "BCIT Aerospace Campus", type: "Post-Secondary", detail: "Located near the Richmond border, BCIT's aerospace campus is easily accessible from Marpole and offers specialized technical training programs." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
 
@@ -391,47 +375,15 @@ export default async function MarpolePage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="bg-warm-50 rounded-xl p-6">
-                      <h3 className="font-medium text-teal-950 mb-2">{faq.question}</h3>
-                      <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* CTA */}
-              <section className="bg-teal-950 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="font-serif text-2xl text-white mb-4">
-                      Thinking About Marpole?
-                    </h2>
-                    <p className="text-white/70 text-sm leading-relaxed mb-6">
-                      Whether you&apos;re looking to buy your first home, upgrade to a detached
-                      property, or invest in one of Vancouver&apos;s most promising neighborhoods,
-                      I&apos;d love to help. Let&apos;s start with a no-pressure
-                      conversation about your goals.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button href="/contact" variant="primary">
-                        Get in Touch
-                      </Button>
-                      <Button href="/buying/guide" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                        Read the Buyer&apos;s Guide
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <ContactForm compact light />
-                  </div>
-                </div>
+                <FAQAccordion faqs={faqs} />
               </section>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Get In Touch CTA */}
+      <GetInTouch />
 
       {/* JSON-LD FAQ Schema */}
       <script

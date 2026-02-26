@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import ContactForm from "@/components/forms/ContactForm";
-import PropertyAlertSignup from "@/components/neighborhoods/PropertyAlertSignup";
+import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
+import FAQAccordion from "./FAQAccordion";
 
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -30,7 +29,7 @@ const faqs = [
   {
     question: "How much does a home cost in Oakridge Vancouver?",
     answer:
-      "Oakridge offers a range of housing options. The GVR MLS® HPI benchmark prices as of January 2026 are: condos at $998K, townhomes at $1.64M, and detached homes at $3.36M. The composite benchmark across all property types is $1.49M. Prices vary by unit size, condition, and proximity to SkyTrain stations and the Oakridge Park development.",
+      "Oakridge offers a range of housing options. The GVR MLS\u00ae HPI benchmark prices as of January 2026 are: condos at $998K, townhomes at $1.64M, and detached homes at $3.36M. The composite benchmark across all property types is $1.49M. Prices vary by unit size, condition, and proximity to SkyTrain stations and the Oakridge Park development.",
   },
   {
     question: "What is the Oakridge Park redevelopment?",
@@ -75,39 +74,29 @@ export default async function OakridgePage() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
             Oakridge, Vancouver
           </h1>
-          <p className="text-xl text-teal-200 font-medium mb-2">
-            The Complete Neighborhood Guide
-          </p>
-          <p className="text-white/70 max-w-2xl text-lg">
-            Everything you need to know about living in, buying in, and investing
-            in Vancouver&apos;s most exciting neighborhood.
-          </p>
         </div>
       </section>
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
-              <p className="font-serif text-2xl text-teal-700">$1.49M</p>
-              <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">3,300+</p>
-              <p className="text-xs text-warm-500 mt-1">New Homes Coming</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">15 min</p>
-              <p className="text-xs text-warm-500 mt-1">To Downtown</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">9 Acres</p>
-              <p className="text-xs text-warm-500 mt-1">New Public Park</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">2</p>
-              <p className="text-xs text-warm-500 mt-1">SkyTrain Stations</p>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <div className="hidden lg:block" />
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl">
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">$1.49M</p>
+                  <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">3,300+</p>
+                  <p className="text-xs text-warm-500 mt-1">New Homes Coming</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">2</p>
+                  <p className="text-xs text-warm-500 mt-1">SkyTrain Stations</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -119,33 +108,32 @@ export default async function OakridgePage() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Table of Contents Sidebar */}
             <aside className="hidden lg:block">
-              <nav className="sticky top-28">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-4">
+              <nav className="sticky top-28 space-y-1">
+                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3 px-3">
                   On This Page
                 </p>
-                <ul className="space-y-2 text-sm">
-                  {[
-                    ["overview", "Overview"],
-                    ["map", "Explore Map"],
-                    ["redevelopment", "The Transformation"],
-                    ["living", "Living in Oakridge"],
-                    ["real-estate", "Real Estate Market"],
-                    ["transit", "Getting Around"],
-                    ["parks", "Parks & Recreation"],
-                    ["schools", "Schools & Education"],
-                    ["shopping", "Shopping & Dining"],
-                    ["faq", "FAQ"],
-                  ].map(([id, label]) => (
-                    <li key={id}>
-                      <a
-                        href={`#${id}`}
-                        className="text-warm-500 hover:text-teal-700 transition-colors"
-                      >
-                        {label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {[
+                  ["map", "Map", "1"],
+                  ["redevelopment", "The Transformation", "2"],
+                  ["living", "Living in Oakridge", "3"],
+                  ["real-estate", "Real Estate Market", "4"],
+                  ["transit", "Getting Around", "5"],
+                  ["parks", "Parks", "6"],
+                  ["schools", "Education", "7"],
+                  ["shopping", "Shopping & Dining", "8"],
+                  ["faq", "FAQ", "9"],
+                ].map(([id, label, step]) => (
+                  <a
+                    key={id}
+                    href={`#${id}`}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-warm-600 hover:bg-warm-50 transition-colors"
+                  >
+                    <span className="w-8 h-8 rounded-full bg-teal-50 text-teal-700 flex items-center justify-center font-serif text-sm font-semibold shrink-0">
+                      {step}
+                    </span>
+                    {label}
+                  </a>
+                ))}
                 <div className="mt-8 pt-6 border-t border-warm-100">
                   <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
                     Nearby Areas
@@ -175,10 +163,7 @@ export default async function OakridgePage() {
             {/* Content */}
             <div className="lg:col-span-3 max-w-3xl">
               {/* Overview */}
-              <section id="overview" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Overview
-                </h2>
+              <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Oakridge is a south-central Vancouver neighborhood bordered by West 41st Avenue to the north, West 49th Avenue to the south, Ontario Street to the east, and Oak Street to the west. Encompassing approximately 401 hectares, it sits at the geographical heart of the city.
                 </p>
@@ -192,12 +177,6 @@ export default async function OakridgePage() {
 
               {/* Interactive Map */}
               <section id="map" className="mb-16">
-                <h2 className="font-serif text-3xl text-teal-950 mb-6">
-                  Explore Oakridge
-                </h2>
-                <p className="text-warm-600 leading-relaxed mb-6">
-                  Discover transit stations, schools, parks, and key landmarks in and around Oakridge.
-                </p>
                 <NeighbourhoodMap
                   center={oakridgeData.center}
                   zoom={oakridgeData.zoom}
@@ -280,7 +259,7 @@ export default async function OakridgePage() {
                     { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Single-family homes on established streets. GVR benchmark: $3.36M. Many mid-century homes with renovation potential or newer builds." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
-                      <div className="flex items-baseline justify-between mb-1">
+                      <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
                         <h4 className="font-medium text-teal-950">{item.type}</h4>
                         <span className="font-serif text-teal-700">{item.range}</span>
                       </div>
@@ -337,14 +316,14 @@ export default async function OakridgePage() {
                 <p className="text-warm-600 leading-relaxed mb-4">
                   Oakridge residents enjoy exceptional access to green space:
                 </p>
-                <div className="space-y-4 mb-6">
+                <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
                     { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park, just one block from Oakridge. Stunning city views, the Bloedel Conservatory, rose gardens, and seasonal gardens. A true gem for daily walks or weekend picnics." },
                     { name: "Langara Golf Course", desc: "An 18-hole public golf course with perimeter walking, jogging, and dog-walking trails that loop the entire course. Perfect for morning runs or evening strolls." },
                     { name: "Columbia Park & Tisdall Park", desc: "Neighborhood parks with playgrounds, sports fields, and community gathering spaces within easy walking distance." },
                     { name: "Oakridge Park (Coming 2026)", desc: "The crown jewel: a 9-acre public park as part of the Oakridge Park redevelopment. Will include playgrounds, playing fields, a woodland area, community garden, concert stages, yoga platforms, and a running loop." },
-                  ].map((park) => (
-                    <div key={park.name} className="bg-warm-50 rounded-xl p-5">
+                  ].map((park, i, arr) => (
+                    <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
                       <p className="text-sm text-warm-600">{park.desc}</p>
                     </div>
@@ -360,43 +339,47 @@ export default async function OakridgePage() {
                 <p className="text-warm-600 leading-relaxed mb-6">
                   Oakridge is home to well-regarded schools at every level:
                 </p>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Public Schools</h3>
-                  {[
-                    { name: "Van Horne Elementary", type: "K-7 Public", detail: "Walking distance from most Oakridge homes. Strong academic programs." },
-                    { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another excellent option serving the Oakridge catchment." },
-                    { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "The local high school, known for strong academics and extracurriculars." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "Van Horne Elementary", type: "K-7 Public", detail: "Walking distance from most Oakridge homes. Strong academic programs." },
+                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another excellent option serving the Oakridge catchment." },
+                      { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "The local high school, known for strong academics and extracurriculars." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-                <div className="space-y-3 mb-6">
-                  <h3 className="font-serif text-lg text-teal-900">Private &amp; Post-Secondary</h3>
-                  {[
-                    { name: "King David High School", type: "Private", detail: "Part of Oakridge's Jewish community, offering faith-based education." },
-                    { name: "Vancouver College", type: "Private", detail: "A well-established private school in the area." },
-                    { name: "Langara College", type: "Post-Secondary", detail: "Located at 49th and Cambie, serving over 23,000 students with diverse programs." },
-                  ].map((school) => (
-                    <div key={school.name} className="flex items-start gap-3 p-4 bg-warm-50 rounded-lg">
-                      <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                      </svg>
-                      <div>
-                        <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
-                        <p className="text-sm text-warm-600">{school.detail}</p>
+                <div className="mb-6">
+                  <h3 className="font-serif text-lg text-teal-900 mb-3">Private &amp; Post-Secondary</h3>
+                  <div className="bg-warm-50 rounded-xl p-4 space-y-3">
+                    {[
+                      { name: "King David High School", type: "Private", detail: "Part of Oakridge's Jewish community, offering faith-based education." },
+                      { name: "Vancouver College", type: "Private", detail: "A well-established private school in the area." },
+                      { name: "Langara College", type: "Post-Secondary", detail: "Located at 49th and Cambie, serving over 23,000 students with diverse programs." },
+                    ].map((school, i, arr) => (
+                      <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
+                        <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                        </svg>
+                        <div>
+                          <p className="text-sm font-medium text-teal-950">{school.name} <span className="font-normal text-warm-500">({school.type})</span></p>
+                          <p className="text-sm text-warm-600">{school.detail}</p>
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </section>
 
@@ -421,80 +404,15 @@ export default async function OakridgePage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <div className="space-y-4">
-                  {faqs.map((faq) => (
-                    <div key={faq.question} className="bg-warm-50 rounded-xl p-6">
-                      <h3 className="font-medium text-teal-950 mb-2">{faq.question}</h3>
-                      <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Property Alerts */}
-              <section className="mb-16">
-                <PropertyAlertSignup neighborhood="Oakridge" />
-              </section>
-
-              {/* Explore Nearby Neighbourhoods */}
-              <section className="mb-16">
-                <h2 className="font-serif text-2xl text-teal-950 mb-4">
-                  Explore Nearby Neighbourhoods
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                  {[
-                    { name: "Marpole", href: "/neighborhoods/marpole" },
-                    { name: "South Cambie", href: "/neighborhoods/south-cambie" },
-                    { name: "Riley Park", href: "/neighborhoods/riley-park" },
-                    { name: "Kerrisdale", href: "/neighborhoods/kerrisdale" },
-                    { name: "Cambie Corridor", href: "/neighborhoods/cambie-corridor" },
-                  ].map((n) => (
-                    <Link
-                      key={n.name}
-                      href={n.href}
-                      className="flex items-center justify-between px-4 py-3 bg-warm-50 rounded-lg hover:bg-teal-50 transition-colors group"
-                    >
-                      <span className="text-sm font-medium text-warm-800 group-hover:text-teal-800">
-                        {n.name}
-                      </span>
-                      <svg className="w-4 h-4 text-warm-400 group-hover:text-teal-600 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  ))}
-                </div>
-              </section>
-
-              {/* CTA */}
-              <section className="bg-teal-950 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="font-serif text-2xl text-white mb-4">
-                      Thinking About Oakridge?
-                    </h2>
-                    <p className="text-white/70 text-sm leading-relaxed mb-6">
-                      Whether you&apos;re looking to buy, sell, or just want to learn more
-                      about Oakridge real estate, I&apos;d love to help. Let&apos;s start with
-                      a no-pressure conversation about your goals.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button href="/contact" variant="primary">
-                        Get in Touch
-                      </Button>
-                      <Button href="/buying/guide" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                        Read the Buyer&apos;s Guide
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <ContactForm compact light />
-                  </div>
-                </div>
+                <FAQAccordion faqs={faqs} />
               </section>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Get In Touch CTA */}
+      <GetInTouch />
 
       {/* JSON-LD FAQ Schema */}
       <script

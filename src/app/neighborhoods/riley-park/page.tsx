@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
-import ContactForm from "@/components/forms/ContactForm";
+import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
@@ -76,40 +75,29 @@ export default async function RileyParkPage() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
             Riley Park, Vancouver
           </h1>
-          <p className="text-xl text-teal-200 font-medium mb-2">
-            The Complete Neighborhood Guide
-          </p>
-          <p className="text-white/70 max-w-2xl text-lg">
-            Where craft breweries meet character homes. Discover Vancouver&apos;s
-            most creative, community-driven neighborhood along the iconic Main
-            Street corridor.
-          </p>
         </div>
       </section>
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
         <div className="max-w-7xl mx-auto px-6 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            <div>
-              <p className="font-serif text-2xl text-teal-700">$1.70M</p>
-              <p className="text-xs text-warm-500 mt-1">Van East Detached</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">10+</p>
-              <p className="text-xs text-warm-500 mt-1">Craft Breweries</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">15 min</p>
-              <p className="text-xs text-warm-500 mt-1">To Downtown</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">94</p>
-              <p className="text-xs text-warm-500 mt-1">Walk Score</p>
-            </div>
-            <div>
-              <p className="font-serif text-2xl text-teal-700">1920s+</p>
-              <p className="text-xs text-warm-500 mt-1">Heritage Character</p>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            <div className="hidden lg:block" />
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-3 gap-6 max-w-2xl">
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">$1.70M</p>
+                  <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">10+</p>
+                  <p className="text-xs text-warm-500 mt-1">Craft Breweries</p>
+                </div>
+                <div>
+                  <p className="font-serif text-2xl text-teal-700">94</p>
+                  <p className="text-xs text-warm-500 mt-1">Walk Score</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -154,6 +142,8 @@ export default async function RileyParkPage() {
                     {[
                       ["Oakridge", "oakridge"],
                       ["Cambie Corridor", "cambie-corridor"],
+                      ["South Cambie", "south-cambie"],
+                      ["Kitsilano", "kitsilano"],
                     ].map(([name, slug]) => (
                       <li key={slug}>
                         <Link
@@ -363,37 +353,13 @@ export default async function RileyParkPage() {
                 <FAQAccordion faqs={faqs} />
               </section>
 
-              {/* CTA */}
-              <section className="bg-teal-950 rounded-2xl p-8 md:p-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <h2 className="font-serif text-2xl text-white mb-4">
-                      Thinking About Riley Park?
-                    </h2>
-                    <p className="text-white/70 text-sm leading-relaxed mb-6">
-                      Whether you&apos;re looking to buy a character home on a tree-lined
-                      street, sell your Riley Park property, or simply want to learn
-                      more about the market, I&apos;d love to help. Let&apos;s start with
-                      a no-pressure conversation about your goals.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Button href="/contact" variant="primary">
-                        Get in Touch
-                      </Button>
-                      <Button href="/buying/guide" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                        Read the Buyer&apos;s Guide
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-xl p-6">
-                    <ContactForm compact light />
-                  </div>
-                </div>
-              </section>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Get In Touch CTA */}
+      <GetInTouch />
 
       {/* JSON-LD FAQ Schema */}
       <script
