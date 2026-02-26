@@ -10,7 +10,7 @@ const neighborhoods = [
     name: "South Cambie",
     slug: "south-cambie",
     description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "https://images.pexels.com/photos/11758239/pexels-photo-11758239.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/neighborhoods/south-cambie.jpg",
   },
   {
     name: "Riley Park",
@@ -199,23 +199,24 @@ export default function HomePage() {
       {/* SECTION 4: Featured Neighborhoods */}
       <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
-          {/* Heading cell — image with teal gradient overlay */}
-          <div className="relative h-80 sm:h-96 overflow-hidden">
+          {/* UBC cell — links to UBC neighbourhood page */}
+          <Link
+            href="/neighborhoods/ubc"
+            className="group relative h-80 sm:h-96 overflow-hidden transition-all duration-300"
+          >
             <img
               src="https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
-              alt="Vancouver greenery"
+              alt="UBC Vancouver neighbourhood"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-teal-950/90 via-teal-950/70 to-teal-950/40" />
-            <div className="relative h-full flex flex-col justify-end p-6">
-              <h2 className="font-serif text-3xl md:text-4xl text-white italic font-bold leading-tight">
-                Neighbourhoods
-              </h2>
-              <p className="font-serif text-xl md:text-2xl text-white/70 italic font-bold">
-                I know these streets
-              </p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300" />
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
+            <div className="absolute bottom-0 left-0 right-0 p-6">
+              <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
+                UBC
+              </h3>
             </div>
-          </div>
+          </Link>
           {/* Neighbourhood image links */}
           {neighborhoods.map((hood) => (
             <Link
