@@ -94,7 +94,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
@@ -102,11 +102,11 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="mt-4 hidden md:block">
+              <div className="absolute bottom-4 left-4">
                 <img
                   src="/images/logos/oakwyn-realty.png"
                   alt="Oakwyn Realty"
-                  className="h-12"
+                  className="h-12 md:h-16 drop-shadow-lg"
                 />
               </div>
             </div>
