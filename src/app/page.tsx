@@ -200,9 +200,9 @@ export default function HomePage() {
       <section className="bg-warm-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {/* Heading cell — image with teal gradient overlay */}
-          <div className="relative h-72 overflow-hidden">
+          <div className="relative h-80 sm:h-96 overflow-hidden">
             <img
-              src="https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+              src="https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
               alt="Vancouver greenery"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -221,14 +221,14 @@ export default function HomePage() {
             <Link
               key={hood.slug}
               href={`/neighborhoods/${hood.slug}`}
-              className="group relative overflow-hidden h-72 hover:opacity-90 transition-all duration-300"
+              className="group relative overflow-hidden h-80 sm:h-96 transition-all duration-300"
             >
               <img
                 src={hood.image}
                 alt={`${hood.name} Vancouver neighborhood`}
-                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 group-hover:via-black/50 group-hover:to-black/30 transition-all duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
                   {hood.name}
