@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Renfrew-Collingwood Vancouver | Diverse Living & Real Estate Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["renfrew-collingwood"];
-
-export default async function RenfrewCollingwoodPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function RenfrewCollingwoodPage() {
   return (
     <>
       {/* Hero */}
@@ -47,6 +40,9 @@ export default async function RenfrewCollingwoodPage() {
             <span>/</span>
             <span className="text-teal-200">Renfrew-Collingwood</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Renfrew-Collingwood
           </h1>
@@ -60,7 +56,6 @@ export default async function RenfrewCollingwoodPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             I brought a client here on a Tuesday afternoon last fall. We parked
             near Joyce Station, walked half a block, and within ten minutes
@@ -72,13 +67,9 @@ export default async function RenfrewCollingwoodPage() {
             neighbourhood, and it still flies under the radar.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             There are really two neighbourhoods here, stitched together by
-            Kingsway. The north end &mdash; Renfrew &mdash; has a quieter,
+            Kingsway. The north end, Renfrew, has a quieter,
             tree-lined suburban feel. Older character homes with deep lots,
             garden sheds, the kind of streets where people leave things on the
             curb with a &ldquo;free&rdquo; sign. Then there&apos;s the magical
@@ -89,48 +80,29 @@ export default async function RenfrewCollingwoodPage() {
             makes you stop and think, &ldquo;How did I not know about this?&rdquo;
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
-            The south end &mdash; Collingwood &mdash; is a different energy
+            The south end, Collingwood, is a different energy
             entirely. Collingwood Village around Joyce Station is one of
             Vancouver&apos;s best examples of transit-oriented development done
             right: condo towers, townhomes, parks, shops, and a SkyTrain
             station all woven into a walkable community that actually works.
-            The food along Kingsway is staggering in its variety &mdash; dim
-            sum, pho, Korean BBQ, Filipino adobo, fresh naan &mdash; block
+            The food along Kingsway is staggering in its variety. Dim
+            sum, pho, Korean BBQ, Filipino adobo, fresh naan, block
             after block, all authentic, all affordable. Food writers from
             across the city make pilgrimages here, and they should.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;Three SkyTrain stations, the Kingsway food corridor, and
-              prices well below the city average &mdash; Renfrew-Collingwood is
+              prices well below the city average. Renfrew-Collingwood is
               the neighbourhood that smart buyers keep discovering.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Renfrew-Collingwood"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             The composite benchmark here sits around{" "}
             <strong>$1.05M</strong>, which is meaningfully below the Vancouver
-            average &mdash; and that gap is exactly why I keep bringing buyers
+            average, and that gap is exactly why I keep bringing buyers
             to this neighbourhood. Condos are the entry point, running{" "}
             <strong>$400K to $700K</strong> and concentrated near Joyce
             Station where rental demand is consistently strong. If you&apos;re
@@ -141,7 +113,7 @@ export default async function RenfrewCollingwoodPage() {
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
             Detached homes range from <strong>$1.2M to $1.7M</strong>, and
-            what you get for that money is remarkable &mdash; post-war homes on
+            what you get for that money is remarkable. Post-war homes on
             generous lots with serious laneway house potential. I&apos;ve had
             clients add a laneway suite and essentially create a mortgage
             helper that covers a significant chunk of their monthly payment.
@@ -151,13 +123,9 @@ export default async function RenfrewCollingwoodPage() {
             compelling as anywhere on the east side.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
-            Three Expo Line stations &mdash; Renfrew, Rupert, and
-            Joyce-Collingwood &mdash; give you a direct 20-minute ride
+            Three Expo Line stations, Renfrew, Rupert, and
+            Joyce-Collingwood, give you a direct 20-minute ride
             downtown with no transfer. That alone sets this neighbourhood apart
             from most of south Vancouver. The walk score sits at 82, and
             Kingsway provides a major bus corridor with frequent service.
@@ -167,13 +135,9 @@ export default async function RenfrewCollingwoodPage() {
             neighbourhoods in the city.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
-            More than 50 cultures, and that is not a marketing line &mdash;
-            it&apos;s the census data. Chinese, Vietnamese, Filipino, South
+            More than 50 cultures, and that is not a marketing line.
+            It&apos;s the census data. Chinese, Vietnamese, Filipino, South
             Asian, Korean families have deep roots here, some going back
             decades. New immigrants arrive and find a landing spot that feels
             familiar. Young couples priced out of East Van discover they can
@@ -182,11 +146,10 @@ export default async function RenfrewCollingwoodPage() {
             elementary schools. Collingwood Neighbourhood House runs newcomer
             support, family programs, and youth services that genuinely knit
             this community together. It&apos;s one of the few Vancouver
-            neighbourhoods where diversity is not a buzzword &mdash; it&apos;s
+            neighbourhoods where diversity is not a buzzword. It&apos;s
             just Tuesday.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Renfrew-Collingwood is where value,
@@ -230,7 +193,7 @@ export default async function RenfrewCollingwoodPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Renfrew-Collingwood Vancouver — Diverse Living & Real Estate Guide",
+              "Renfrew-Collingwood Vancouver: Diverse Living & Real Estate Guide",
             description:
               "An insider guide to living in Renfrew-Collingwood, Vancouver. Multicultural food, three SkyTrain stations, real estate prices, and what makes this the city's most dynamic east-side neighbourhood.",
             author: {

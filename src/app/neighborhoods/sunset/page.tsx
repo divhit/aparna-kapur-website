@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Sunset Vancouver | Punjabi Market & Real Estate Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["sunset"];
-
-export default async function SunsetPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function SunsetPage() {
   return (
     <>
       {/* Hero */}
@@ -47,6 +40,9 @@ export default async function SunsetPage() {
             <span>/</span>
             <span className="text-teal-200">Sunset</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Sunset
           </h1>
@@ -60,25 +56,20 @@ export default async function SunsetPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             The first time I showed a home in Sunset, my client stood in the
             backyard for a full minute without speaking. Then she said,
             &ldquo;Wait, this is still Vancouver?&rdquo; I get it. After months
             of touring 600-square-foot condos and postage-stamp patios, walking
             onto a proper lot with a mature cherry tree, a vegetable garden, and
-            room for kids to actually run around &mdash; it feels like
+            room for kids to actually run around, it feels like
             cheating. But that&apos;s Sunset. Real houses, real yards, real
             neighbourhood. No gimmick.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Sunset is unpretentious in the best possible way. The streets are
-            quiet, the gardens are immaculate &mdash; you&apos;ll see everything
+            quiet, the gardens are immaculate. You&apos;ll see everything
             from Sikh families tending their vegetable patches to Chinese
             grandparents doing tai chi in the park. The Punjabi Market on Main
             Street between 48th and 51st is one of North America&apos;s first
@@ -94,7 +85,7 @@ export default async function SunsetPage() {
             The Sunset Community Centre anchors daily routines. On weekends
             you might catch the smell of fresh naan from one house, com tam
             from the next, and Chinese noodles from across the lane. No one
-            is performing multiculturalism here &mdash; they&apos;re just
+            is performing multiculturalism here. They&apos;re just
             living it, and they&apos;ve been doing it for decades. Churchill
             Secondary draws families from across the city for its IB program
             and strong athletics, and that school alone has kept many a family
@@ -102,42 +93,23 @@ export default async function SunsetPage() {
             &ldquo;moved up.&rdquo;
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;Sunset is where you find the backyard, the mature tree,
-              and the neighbourhood that actually feels like a neighbourhood
-              &mdash; all within city limits.&rdquo;
+              and the neighbourhood that actually feels like a neighbourhood,
+              all within city limits.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Sunset"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             The composite benchmark sits around <strong>$1.3M</strong>, and
             here is what that actually means: you are buying into a
             neighbourhood that is overwhelmingly detached homes on generous
             lots. This is not condo territory. Detached homes run{" "}
             <strong>$1.4M to $1.9M</strong> for solid post-war construction on
-            lots that give you real elbow room &mdash; 33-foot frontages are
+            lots that give you real elbow room. 33-foot frontages are
             standard, and many push wider. The gardens, the garages, the
-            laneways &mdash; it is the kind of space that barely exists
+            laneways. It is the kind of space that barely exists
             elsewhere in the city at this price.
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
@@ -148,17 +120,13 @@ export default async function SunsetPage() {
             the numbers make sense: add a laneway suite, rent it for{" "}
             <strong>$1,800 to $2,500 per month</strong>, and suddenly your
             carrying costs look very different. I&apos;ve worked with families
-            who use the laneway for aging parents or adult children &mdash;
-            multigenerational living on one lot, which is how much of this
+            who use the laneway for aging parents or adult children.
+            Multigenerational living on one lot, which is how much of this
             neighbourhood has always operated. Langara-49th Station on the
             Canada Line is a short bus ride away, putting you 20 minutes from
             downtown and 15 from YVR.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Sunset is honest about what it is: a residential neighbourhood that
             works best if you have a car, though it is far from isolated.
@@ -167,15 +135,11 @@ export default async function SunsetPage() {
             Street Bridge connects you directly to Richmond and Highway 99.
             Bus routes along Main, Fraser, and 49th provide reliable east-west
             and north-south service. The walk score of 75 reflects a
-            neighbourhood built for living in, not rushing through &mdash;
-            most errands are doable on foot, but you will drive for bigger
+            neighbourhood built for living in, not rushing through.
+            Most errands are doable on foot, but you will drive for bigger
             trips.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Families who want space. Full stop. Sikh and South Asian families
             with roots in the Punjabi Market going back to the &apos;70s.
@@ -184,17 +148,16 @@ export default async function SunsetPage() {
             affordable home prices and the community feel. Young families
             who are done with renting a one-bedroom and want their kids to
             have a backyard. This is also increasingly a neighbourhood for
-            multigenerational living &mdash; grandparents in the main house,
+            multigenerational living. Grandparents in the main house,
             the next generation in the laneway, everyone sharing the garden.
             It is not trendy. It is deeply, functionally real.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> If your priority is space &mdash;
-              a real lot, a real backyard, a real neighbourhood with deep
-              cultural roots &mdash; Sunset delivers in a way that very few
+              <strong>Bottom line:</strong> If your priority is space, a
+              real lot, a real backyard, a real neighbourhood with deep
+              cultural roots, Sunset delivers in a way that very few
               Vancouver neighbourhoods can at this price point. It will never
               be Kitsilano or Yaletown. It does not want to be. That&apos;s
               the whole point.
@@ -233,7 +196,7 @@ export default async function SunsetPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Sunset Vancouver — Punjabi Market & Real Estate Guide",
+              "Sunset Vancouver: Punjabi Market & Real Estate Guide",
             description:
               "An insider guide to living in Sunset, Vancouver. Punjabi Market, spacious lots, Churchill Secondary, and why this south Vancouver neighbourhood is one of the city's best-kept secrets.",
             author: {

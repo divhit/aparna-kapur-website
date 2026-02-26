@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Killarney Vancouver | Community Centre & Real Estate Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["killarney"];
-
-export default async function KillarneyPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function KillarneyPage() {
   return (
     <>
       {/* Hero */}
@@ -47,6 +40,9 @@ export default async function KillarneyPage() {
             <span>/</span>
             <span className="text-teal-200">Killarney</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Killarney
           </h1>
@@ -60,13 +56,12 @@ export default async function KillarneyPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             I have a theory about Killarney: the community centre is the
             reason people move here, and then everything else about the
             neighbourhood is the reason they stay. Pool, ice rink, gym,
             fitness centre, wall-to-wall programming for toddlers through
-            seniors &mdash; it is widely considered one of the best recreation
+            seniors. It is widely considered one of the best recreation
             facilities in the city, and it turns a quiet southeast corner of
             Vancouver into a place with a genuine pulse. I have shown homes
             in Killarney where the family&apos;s entire weekly schedule
@@ -75,20 +70,16 @@ export default async function KillarneyPage() {
             changes a neighbourhood.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Killarney is a neighbourhood that does not try to be anything
             other than what it is: a solid, multicultural, family-oriented
             community in southeast Vancouver. The streets are wide and
             residential. Mature trees line the blocks. The lots are generous
-            by Vancouver standards &mdash; mostly 1960s and &apos;70s homes
+            by Vancouver standards, mostly 1960s and &apos;70s homes
             that have been maintained, renovated, or rebuilt over the decades.
             You will see Chinese, South Asian, Filipino, and Vietnamese
             families who have been here for generations, and the food along
-            the Kingsway corridor reflects that beautifully &mdash; pho,
+            the Kingsway corridor reflects that beautifully. Pho,
             dim sum, curries, Filipino bakeries, all priced for regulars,
             not visitors.
           </p>
@@ -96,7 +87,7 @@ export default async function KillarneyPage() {
             Killarney Secondary is one of Vancouver&apos;s largest high
             schools with over 1,800 students from more than 60 cultural
             backgrounds. Its performing arts program is renowned, drawing
-            talent from across the city &mdash; kids audition to get in, and
+            talent from across the city. Kids audition to get in, and
             the productions are genuinely impressive. Everett Crowley Park,
             shared with neighbouring Victoria-Fraserview, adds 40 hectares of
             trails and meadows with panoramic views. And then there is the
@@ -105,37 +96,18 @@ export default async function KillarneyPage() {
             Champlain Square handle the day-to-day.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;The community centre, the school, the Kingsway food scene
-              &mdash; Killarney has the bones of a neighbourhood that costs
+              &ldquo;The community centre, the school, the Kingsway food scene.
+              Killarney has the bones of a neighbourhood that costs
               twice as much, and the benchmark says $1.1M.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Killarney"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             At a composite benchmark of around <strong>$1.1M</strong>,
-            Killarney is one of Vancouver&apos;s strongest value propositions
-            &mdash; and I do not say that lightly. Condos range from{" "}
+            Killarney is one of Vancouver&apos;s strongest value propositions,
+            and I do not say that lightly. Condos range from{" "}
             <strong>$450K to $750K</strong>, mostly newer builds along the
             main corridors, and they offer a genuine entry point into a
             neighbourhood with top-tier community amenities. Townhomes run{" "}
@@ -148,22 +120,18 @@ export default async function KillarneyPage() {
             and what you get is substantial: 1960s and &apos;70s construction
             on proper lots with serious laneway house potential. I have walked
             buyers through homes here where the lot alone justifies the
-            price, and the laneway income &mdash; or the option to build one
-            for family &mdash; seals the deal. Compared to west-side
+            price, and the laneway income, or the option to build one
+            for family, seals the deal. Compared to west-side
             alternatives at twice the price, the math here is hard to argue
             with. The neighbourhood is not standing still either: active
             densification along Kingsway means more amenities and more
             housing options are coming.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             The walk score of 78 reflects a neighbourhood where you can
-            handle daily errands on foot &mdash; groceries, school drop-off,
-            the community centre &mdash; but you will want a car for bigger
+            handle daily errands on foot. Groceries, school drop-off,
+            the community centre. But you will want a car for bigger
             trips. Joyce-Collingwood SkyTrain is the closest Expo Line
             station, reachable by bus or a short drive. Kingsway provides
             frequent bus service, and Metrotown&apos;s bus exchange and future
@@ -172,10 +140,6 @@ export default async function KillarneyPage() {
             rarely need to leave the neighbourhood for essentials.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Families. That is the short answer. Families who chose this
             neighbourhood for the community centre and Killarney Secondary
@@ -191,15 +155,14 @@ export default async function KillarneyPage() {
             would envy.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Killarney is the neighbourhood I
               point value-conscious families toward when they want community
               amenities, a great school, generous lots, and a benchmark price
               that still starts with a one. The community centre alone would
-              be worth a premium. The fact that everything else &mdash; the
-              food, the parks, the school, the space &mdash; comes at $1.1M
+              be worth a premium. The fact that everything else, the
+              food, the parks, the school, the space, comes at $1.1M
               is what makes this one of the smartest buys in the city.
             </p>
           </div>
@@ -236,7 +199,7 @@ export default async function KillarneyPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Killarney Vancouver — Community Centre & Real Estate Guide",
+              "Killarney Vancouver: Community Centre & Real Estate Guide",
             description:
               "An insider guide to living in Killarney, Vancouver. Award-winning community centre, Killarney Secondary, multicultural dining, and southeast Vancouver's best neighbourhood for value-conscious buyers.",
             author: {

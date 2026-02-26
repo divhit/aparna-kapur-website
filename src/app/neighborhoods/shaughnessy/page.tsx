@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Shaughnessy Vancouver | Heritage Mansions & Estate Living Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["shaughnessy"];
-
-export default async function ShaughnessyPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function ShaughnessyPage() {
   return (
     <>
       {/* Hero */}
@@ -47,6 +40,9 @@ export default async function ShaughnessyPage() {
             <span>/</span>
             <span className="text-teal-200">Shaughnessy</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Shaughnessy
           </h1>
@@ -59,10 +55,9 @@ export default async function ShaughnessyPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             The first time I drove a client through First Shaughnessy, they
-            asked me to slow down. Not because of the speed limit — because they
+            asked me to slow down. Not because of the speed limit, because they
             couldn&apos;t believe what they were seeing. A Tudor manor with a
             slate roof and a formal rose garden. A Georgian estate with a
             circular drive and copper beech trees older than the city itself. A
@@ -71,17 +66,13 @@ export default async function ShaughnessyPage() {
             stops you mid-sentence.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
-            Shaughnessy is Vancouver&apos;s old money — the neighbourhood the
+            Shaughnessy is Vancouver&apos;s old money. The neighbourhood the
             Canadian Pacific Railway built in 1907 for the city&apos;s elite,
             and it has never really relinquished that title. The curving,
             tree-canopied boulevards were deliberately designed to discourage
             through traffic. The lots are absurdly generous by Vancouver
-            standards — some exceed 33,000 square feet. The homes are genuine
+            standards. Some exceed 33,000 square feet. The homes are genuine
             architectural masterpieces: Tudor manors, Georgian estates, Arts
             &amp; Crafts mansions with formal gardens and original carriage
             houses. Over 120 properties carry heritage designation across two
@@ -89,7 +80,7 @@ export default async function ShaughnessyPage() {
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
             There are no shops, no restaurants, no commercial streets inside
-            Shaughnessy — and that is entirely the point. This is a
+            Shaughnessy, and that is entirely the point. This is a
             neighbourhood that was designed for privacy and beauty, and it has
             maintained both for over a century. VanDusen Botanical Garden sits
             on the southern boundary with its 22 hectares of curated plantings
@@ -100,7 +91,6 @@ export default async function ShaughnessyPage() {
             to prove anything to anyone.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;I&apos;ve sold homes all over the west side, but nothing
@@ -109,32 +99,14 @@ export default async function ShaughnessyPage() {
               breath away.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Shaughnessy"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Let me be direct: this is Vancouver&apos;s most expensive
             residential neighbourhood. The benchmark is listed at{" "}
             <strong>$3.5M+</strong>, but that figure dramatically understates
             reality because there is virtually no condo or townhome inventory to
-            bring the average down. First Shaughnessy — the original CPR enclave
-            around The Crescent — is where the grandest estates sit, and they
+            bring the average down. First Shaughnessy, the original CPR enclave
+            around The Crescent, is where the grandest estates sit, and they
             sell for <strong>$8M to $25M+</strong>. These are the properties
             that make international headlines. Lots can run 15,000 to 33,000
             square feet, and the homes sitting on them are irreplaceable pieces
@@ -144,20 +116,16 @@ export default async function ShaughnessyPage() {
             Second Shaughnessy, extending south, offers substantial heritage
             homes on generous lots at <strong>$4M to $10M</strong>. Still
             Shaughnessy, still beautiful, but slightly more accessible.
-            Contemporary rebuilds on Shaughnessy-sized lots — where buyers tear
-            down a lesser home and build modern — range from{" "}
+            Contemporary rebuilds on Shaughnessy-sized lots, where buyers tear
+            down a lesser home and build modern, range from{" "}
             <strong>$5M to $12M+</strong>. The market moves slowly and quietly
             here. Many of the finest homes sell privately, never hitting MLS.
             Working with an agent who has relationships in this neighbourhood
-            isn&apos;t a nice-to-have — it&apos;s essential.
+            isn&apos;t a nice-to-have. It&apos;s essential.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
-            Shaughnessy is not a transit neighbourhood — most residents drive,
+            Shaughnessy is not a transit neighbourhood. Most residents drive,
             and the curving streets are part of what keeps it peaceful. Downtown
             is 15 to 20 minutes by car. South Granville&apos;s shops and
             restaurants are along the eastern edge, walkable from most of Second
@@ -168,23 +136,18 @@ export default async function ShaughnessyPage() {
             anyone who wants a green escape without leaving the neighbourhood.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Multi-generational Vancouver families who have called Shaughnessy
             home for decades. International buyers who recognize estate-quality
             architecture and are willing to pay for it. Business leaders and
             diplomats who want privacy and permanence. Families who prioritize
             the best private schools in the city and want a stately home to
-            match. This is a small, close-knit community — neighbours know each
+            match. This is a small, close-knit community. Neighbours know each
             other, heritage preservation is taken seriously, and the quiet
             confidence of the neighbourhood attracts people who have nothing
             left to prove.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Shaughnessy is Vancouver&apos;s
@@ -192,7 +155,7 @@ export default async function ShaughnessyPage() {
               If you want irreplaceable heritage architecture, cathedral tree
               canopies, lots measured in fractions of acres, and a level of
               privacy and beauty that simply doesn&apos;t exist elsewhere in
-              the city — this is it. It&apos;s not for everyone. It&apos;s not
+              the city, this is it. It&apos;s not for everyone. It&apos;s not
               meant to be.
             </p>
           </div>
@@ -229,7 +192,7 @@ export default async function ShaughnessyPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Shaughnessy Vancouver — Heritage Mansions & Estate Living Guide",
+              "Shaughnessy Vancouver: Heritage Mansions & Estate Living Guide",
             description:
               "An insider guide to living in Shaughnessy, Vancouver. Heritage mansions, VanDusen Botanical Garden, tree-lined boulevards, and what makes this Vancouver's most prestigious residential address.",
             author: {

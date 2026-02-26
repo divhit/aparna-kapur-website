@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "West Point Grey Vancouver | Beach & Luxury Homes Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["west-point-grey"];
-
-export default async function WestPointGreyPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function WestPointGreyPage() {
   return (
     <>
       {/* Hero */}
@@ -47,6 +40,9 @@ export default async function WestPointGreyPage() {
             <span>/</span>
             <span className="text-teal-200">West Point Grey</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             West Point Grey
           </h1>
@@ -59,22 +55,17 @@ export default async function WestPointGreyPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             There&apos;s a stretch of Spanish Banks where the tide goes out so
             far you can walk a quarter-mile on wet sand, the North Shore
             mountains filling the entire horizon. I&apos;ve shown homes in West
-            Point Grey where the buyers barely looked at the kitchen — they
+            Point Grey where the buyers barely looked at the kitchen. They
             were too busy staring out the back window at that view. And honestly,
             I understood. This is the neighbourhood where Vancouver&apos;s
             coastline and its most established residential character meet, and
             it&apos;s as good as it sounds.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             West Point Grey is old Vancouver in the best possible sense. The
             streets are quiet, the lots are generous, and the homes range from
@@ -89,14 +80,13 @@ export default async function WestPointGreyPage() {
             The 10th Avenue corridor has a small cluster of shops and cafes, but
             this is not a village-centric neighbourhood. People here chose it
             for the land, the light, the proximity to UBC and Pacific Spirit
-            Park, and the three spectacular beaches along the northern edge —
+            Park, and the three spectacular beaches along the northern edge,
             Spanish Banks, Locarno, and Jericho. Lord Byng Secondary is one of
             the top public high schools in BC, and the Folk Music Festival at
             Jericho Beach Park every July is one of those events where you
             realize half the crowd lives within walking distance.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;When clients ask me where Vancouver&apos;s best families
@@ -104,25 +94,7 @@ export default async function WestPointGreyPage() {
               three.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="West Point Grey"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             This is a detached-home neighbourhood through and through. The
             composite benchmark is around <strong>$2.3M</strong>, but that
@@ -136,7 +108,7 @@ export default async function WestPointGreyPage() {
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
             There is a limited supply of condos near 10th and Alma, running{" "}
-            <strong>$600K to $1.3M</strong> — these are older low-rise buildings
+            <strong>$600K to $1.3M</strong>. These are older low-rise buildings
             that appeal to downsizers and UBC faculty who want to stay close to
             campus. Townhomes are scarce at <strong>$1.2M to $2M</strong> and
             extremely sought after when they appear. The market here is patient:
@@ -144,36 +116,27 @@ export default async function WestPointGreyPage() {
             means inventory is always tight and well-priced homes sell quickly.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             UBC is five minutes west through Pacific Spirit Park. Downtown is 20
-            to 25 minutes by car — faster outside rush hour, slower during it.
+            to 25 minutes by car, faster outside rush hour, slower during it.
             Several bus routes run along West 4th, West 10th, and West Broadway
             connecting to the broader transit network. The waterfront cycling
             path is one of the best in the city, connecting seamlessly to Kits,
             the Burrard Bridge, and Stanley Park. Most families here have two
-            cars but use them less than they expected — once you settle into the
+            cars but use them less than they expected. Once you settle into the
             beach-and-park rhythm, the need to go anywhere else fades.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             UBC professors and deans who want to walk to work through the
             forest. Established families who want Lord Byng catchment without
             the Shaughnessy price tag. Couples who sailed at Jericho as kids
             and came back to raise their own children here. Executives who could
             live anywhere and chose the quietest, most beautiful corner of
-            the west side. This is a neighbourhood of lifers — people who found
+            the west side. This is a neighbourhood of lifers, people who found
             exactly what they were looking for and stopped searching.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> West Point Grey is for buyers who
@@ -217,7 +180,7 @@ export default async function WestPointGreyPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "West Point Grey Vancouver — Beach & Luxury Homes Guide",
+              "West Point Grey Vancouver: Beach & Luxury Homes Guide",
             description:
               "An insider guide to living in West Point Grey, Vancouver. Spanish Banks, character homes, top schools, and what makes this one of Vancouver's most coveted residential addresses.",
             author: {

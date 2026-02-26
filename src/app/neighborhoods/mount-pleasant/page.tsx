@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Mount Pleasant Vancouver | Creative Living & Real Estate Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["mount-pleasant"];
-
-export default async function MountPleasantPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function MountPleasantPage() {
   return (
     <>
       {/* Hero */}
@@ -47,11 +40,14 @@ export default async function MountPleasantPage() {
             <span>/</span>
             <span className="text-teal-200">Mount Pleasant</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Mount Pleasant
           </h1>
           <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
-            Breweries, murals, and Main Street &mdash; Vancouver&apos;s creative engine.
+            Breweries, murals, and Main Street. Vancouver&apos;s creative engine.
           </p>
         </div>
       </section>
@@ -59,7 +55,6 @@ export default async function MountPleasantPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             Here is how I describe Mount Pleasant to out-of-town buyers: imagine
             a neighbourhood that turned abandoned warehouses into the best
@@ -71,19 +66,15 @@ export default async function MountPleasantPage() {
             Vancouver gets interesting.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
-            The rhythm here starts with coffee &mdash; and I mean serious
-            coffee. 49th Parallel, Matchstick, JJ Bean&apos;s flagship &mdash;
-            more specialty roasters per block than anywhere else in the city.
+            The rhythm here starts with coffee, and I mean serious
+            coffee. 49th Parallel, Matchstick, JJ Bean&apos;s flagship. More
+            specialty roasters per block than anywhere else in the city.
             Saturday mornings it is the farmers&apos; market, then browsing
             vintage shops on Main, then settling into a brewery patio by
             mid-afternoon. The Vancouver Mural Festival has turned entire
             building facades into open-air galleries, and it is not a
-            corporate installation &mdash; it is community-driven art that
+            corporate installation. It is community-driven art that
             actually reflects who lives here.
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
@@ -98,7 +89,6 @@ export default async function MountPleasantPage() {
             restaurants that open here first before anywhere else in the city.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;Mount Pleasant is the neighbourhood that sets the trends
@@ -106,25 +96,7 @@ export default async function MountPleasantPage() {
               here first, pay attention.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Mount Pleasant"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Mount Pleasant offers genuinely good value for how central it is.
             The composite benchmark sits around <strong>$850K</strong>, which
@@ -132,14 +104,14 @@ export default async function MountPleasantPage() {
             walkability and better transit. Condos are the primary entry point,
             ranging from <strong>$550K to $1M</strong> for modern builds along
             the Main and Broadway corridors. The newer developments near the
-            brewery district and along the transit line tend to go quickly
-            &mdash; the lifestyle sells itself during showings.
+            brewery district and along the transit line tend to go quickly.
+            The lifestyle sells itself during showings.
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
             Townhomes in the <strong>$1M to $1.5M</strong> range are
             increasingly popular with young families who want more space but
             refuse to leave the neighbourhood. The real gems, though, are the
-            heritage character homes south of Broadway &mdash; Edwardian and
+            heritage character homes south of Broadway. Edwardian and
             craftsman houses with real history, running from{" "}
             <strong>$1.2M to $2.5M+</strong>. These streets are some of the
             prettiest in the city, and when one comes up for sale, it does not
@@ -148,10 +120,6 @@ export default async function MountPleasantPage() {
             continue appreciating ahead of the broader east side market.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Two SkyTrain stations bracket the neighbourhood:
             Broadway-City Hall on the Canada Line and Main Street-Science World
@@ -164,10 +132,6 @@ export default async function MountPleasantPage() {
             is genuinely optional.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Creatives, tech workers, young professionals, and small-business
             owners who care about what their neighbourhood feels like. Couples
@@ -177,11 +141,10 @@ export default async function MountPleasantPage() {
             apartment specifically so they could walk to their studio. People
             who would rather spend Saturday at an independent bookstore than a
             mall. It is a neighbourhood that attracts people with taste and
-            opinions &mdash; and the coffee shops, restaurants, and breweries
+            opinions, and the coffee shops, restaurants, and breweries
             reflect that.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Mount Pleasant is where you go when
@@ -226,7 +189,7 @@ export default async function MountPleasantPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Mount Pleasant Vancouver — Creative Living & Real Estate Guide",
+              "Mount Pleasant Vancouver: Creative Living & Real Estate Guide",
             description:
               "An insider guide to living in Mount Pleasant, Vancouver. Craft breweries, Main Street shopping, murals, and what makes Mount Pleasant one of Vancouver's most creative neighbourhoods.",
             author: {

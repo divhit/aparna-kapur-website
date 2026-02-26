@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
-import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
-import { fetchNeighbourhoodPOIs } from "@/lib/places";
 
 export const metadata: Metadata = {
   title: "Dunbar-Southlands Vancouver | Family Homes & Village Living Guide 2026",
@@ -18,11 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 
-const data = NEIGHBOURHOODS["dunbar-southlands"];
-
-export default async function DunbarSouthlandsPage() {
-  const pois = await fetchNeighbourhoodPOIs(data.center);
-
+export default function DunbarSouthlandsPage() {
   return (
     <>
       {/* Hero */}
@@ -47,11 +40,14 @@ export default async function DunbarSouthlandsPage() {
             <span>/</span>
             <span className="text-teal-200">Dunbar-Southlands</span>
           </div>
+          <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-teal-500/20 text-teal-300 rounded-full mb-3">
+            Neighbourhood Snapshot
+          </span>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
             Dunbar-Southlands
           </h1>
           <p className="mt-3 text-lg text-teal-200/70 max-w-xl">
-            Village charm, forest trails, and horse paddocks — Vancouver&apos;s best-kept family neighbourhood.
+            Village charm, forest trails, and horse paddocks. Vancouver&apos;s best-kept family neighbourhood.
           </p>
         </div>
       </section>
@@ -59,7 +55,6 @@ export default async function DunbarSouthlandsPage() {
       {/* Blog Body */}
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
-          {/* Opening Hook */}
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             A few years ago, I was walking down Dunbar Street on a Saturday
             morning with a couple relocating from Toronto. We passed the
@@ -71,13 +66,9 @@ export default async function DunbarSouthlandsPage() {
             finds you.
           </p>
 
-          {/* The Vibe */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Vibe
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Dunbar-Southlands is really two neighbourhoods in one. The northern
-            half centres on Dunbar Village — a charming high street of
+            half centres on Dunbar Village, a charming high street of
             independent shops, bakeries, and the kind of community vibe where
             the barista knows your order and your kids&apos; names. Streets are
             wide, lots are generous, mature trees form canopies over the
@@ -86,7 +77,7 @@ export default async function DunbarSouthlandsPage() {
             you&apos;ll see it really is like that.
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
-            The southern half — Southlands — is something else entirely. Cross
+            The southern half, Southlands, is something else entirely. Cross
             SW Marine Drive and you enter a world of acreage properties, horse
             stables, and a pastoral calm that feels genuinely rural. This is one
             of the only places in urban Vancouver where horseback riding is part
@@ -95,33 +86,14 @@ export default async function DunbarSouthlandsPage() {
             drive from a university, but it feels like a different province.
           </p>
 
-          {/* Pull Quote */}
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
               &ldquo;Dunbar is where families come when they want space, top
-              schools, and a village high street — without the price tag of
+              schools, and a village high street, without the price tag of
               Shaughnessy or the commute from the suburbs.&rdquo;
             </p>
           </blockquote>
-        </div>
 
-        {/* Map — embedded mid-article, slightly wider */}
-        <div className="max-w-4xl mx-auto px-6 my-12">
-          <NeighbourhoodMap
-            center={data.center}
-            zoom={data.zoom}
-            pois={pois.length > 0 ? pois : data.fallbackPOIs}
-            boundaryName="Dunbar-Southlands"
-            height="380px"
-            showLegend
-          />
-        </div>
-
-        <div className="max-w-3xl mx-auto px-6">
-          {/* The Real Estate Picture */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            The Real Estate Picture
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-4">
             Dunbar-Southlands is overwhelmingly a detached-home neighbourhood,
             and the composite benchmark reflects that at around{" "}
@@ -131,7 +103,7 @@ export default async function DunbarSouthlandsPage() {
             proximity to the village. Southlands equestrian properties on larger
             acreage push well beyond that. The homes that sell fastest are
             updated heritage places with modern kitchens and original charm
-            intact — that combination is irresistible to families.
+            intact. That combination is irresistible to families.
           </p>
           <p className="text-warm-600 leading-relaxed mb-6">
             The multi-family inventory is limited but growing. Townhomes near
@@ -139,19 +111,15 @@ export default async function DunbarSouthlandsPage() {
             sought after by young families who want the catchment and community
             without stretching for a detached home. A handful of low-rise condos
             near the village start around <strong>$700K to $1.2M</strong>. Lord
-            Byng Secondary&apos;s catchment is a genuine price driver here — I&apos;ve
+            Byng Secondary&apos;s catchment is a genuine price driver here. I&apos;ve
             seen families pay a premium just to land within those boundaries.
           </p>
 
-          {/* Getting Around */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Getting Around
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             UBC is a 10-minute drive or bus ride through Pacific Spirit Park.
             Downtown is 25 to 30 minutes depending on traffic. Bus routes run
             direct to campus and connect to Broadway for SkyTrain access. The
-            neighbourhood itself is extremely walkable around the village — you
+            neighbourhood itself is extremely walkable around the village. You
             can handle groceries, coffee, the library, and kids&apos; activities
             without touching your car. Pacific Spirit Park&apos;s 73 kilometres
             of trails are accessible on foot from most streets, and serious
@@ -159,10 +127,6 @@ export default async function DunbarSouthlandsPage() {
             beyond.
           </p>
 
-          {/* Who Lives Here */}
-          <h2 className="font-serif text-2xl text-teal-950 mt-12 mb-4">
-            Who Lives Here
-          </h2>
           <p className="text-warm-700 leading-relaxed mb-6">
             Families. Overwhelmingly, families. Couples who outgrew their Kits
             condo and want a yard and Lord Byng catchment. UBC faculty who want
@@ -175,7 +139,6 @@ export default async function DunbarSouthlandsPage() {
             people actually stay put.
           </p>
 
-          {/* Bottom Line */}
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Dunbar-Southlands is Vancouver&apos;s
@@ -219,7 +182,7 @@ export default async function DunbarSouthlandsPage() {
             "@context": "https://schema.org",
             "@type": "Article",
             headline:
-              "Dunbar-Southlands Vancouver — Family Homes & Village Living Guide",
+              "Dunbar-Southlands Vancouver: Family Homes & Village Living Guide",
             description:
               "An insider guide to living in Dunbar-Southlands, Vancouver. Family homes, Dunbar Village, Pacific Spirit Park, equestrian Southlands, and what makes this Vancouver's best-kept family secret.",
             author: {
