@@ -228,7 +228,8 @@ export default function HomePage() {
                 alt={`${hood.name} Vancouver neighborhood`}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 group-hover:via-black/50 group-hover:to-black/30 transition-all duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <h3 className="text-sm font-semibold text-white uppercase tracking-widest group-hover:text-teal-200 transition-colors">
                   {hood.name}
