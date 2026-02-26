@@ -31,7 +31,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
   oakridge: {
     name: "Oakridge",
     slug: "oakridge",
-    center: { lat: 49.2275, lng: -123.1167 },
+    center: { lat: 49.2220, lng: -123.1167 },
     zoom: 14,
     tagline: "Vancouver's Most Exciting Transformation",
     avgPrice: "$1.49M",
