@@ -86,32 +86,14 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="pt-4">
-                <p className="text-xs uppercase tracking-widest text-warm-400 font-semibold mb-3">
-                  Serving
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {["Oakridge", "Marpole", "South Cambie", "Riley Park", "Kerrisdale", "Cambie Corridor"].map((area) => (
-                    <span
-                      key={area}
-                      className="text-xs px-3 py-1.5 rounded-full bg-teal-50 text-teal-700 font-medium"
-                    >
-                      {area}
-                    </span>
-                  ))}
-                </div>
-              </div>
             </div>
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <div className="bg-white rounded-2xl shadow-sm p-8 md:p-10 border border-warm-100">
-                <h3 className="font-serif text-2xl text-teal-950 mb-2">
+                <h3 className="font-serif text-2xl text-teal-950 mb-8 italic font-bold">
                   Send Me a Message
                 </h3>
-                <p className="text-sm text-warm-500 mb-8">
-                  Fill out the form below and I&apos;ll get back to you within 24 hours.
-                </p>
                 <ContactForm />
               </div>
             </div>
