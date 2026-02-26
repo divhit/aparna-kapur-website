@@ -11,19 +11,18 @@ export const metadata: Metadata = {
 
 const sections = [
   {
-    title: "What Can a Real Estate Plan Do For You and Your Family?",
+    title: "What This Looks Like in Practice",
     content: (
       <>
         <ul className="space-y-3">
           {[
-            "Tailors a strategy to build, preserve, and pass on real estate wealth.",
-            "Provides a smart, strategic approach to investment property ownership.",
-            "Helps increase cash flow, build equity, and grow your net worth.",
-            "Minimizes or eliminates capital gains taxes, enabling generational wealth transfer.",
-            "Offers peace of mind with a transition plan when your current home no longer fits your lifestyle.",
-            "Creates a compassionate roadmap for legacy and inheritance planning\u2014while you\u2019re still an active part of the process.",
-            "Clarifies the performance and long-term value of your real estate assets.",
-            "Unlocks the future benefits of today\u2019s property decisions.",
+            "A strategy for acquiring, holding, and eventually transferring real estate across generations",
+            "A rigorous financial analysis grounded in actual market data",
+            "Work on tax optimization: principal residence exemption, CCA deductions, corporate structuring, and property transfer strategies for the next generation",
+            "A clear plan for when it\u2019s time to move to downsize, upsize, or relocate",
+            "Estate and succession planning that keeps you in control",
+            "Ongoing performance tracking so you always know where your portfolio stands",
+            "Proactively turning today\u2019s property choices into tomorrow\u2019s financial advantage. Always think ahead",
           ].map((item) => (
             <li key={item} className="flex items-start gap-3">
               <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
@@ -193,29 +192,6 @@ export default function RealEstatePlanPage() {
 
           {/* Accordion sections */}
           <RealEstatePlanAccordion sections={sections} />
-
-          {/* What This Looks Like in Practice — below accordion */}
-          <div className="mt-12 pt-8 border-t border-warm-200">
-            <h3 className="font-semibold text-teal-950 mb-4">
-              What This Looks Like in Practice
-            </h3>
-            <ul className="space-y-2.5 text-warm-600 leading-relaxed">
-              {[
-                "A strategy for acquiring, holding, and eventually transferring real estate across generations",
-                "A rigorous financial analysis grounded in actual market data",
-                "Work on tax optimization: principal residence exemption, CCA deductions, corporate structuring, and property transfer strategies for the next generation",
-                "A clear plan for when it\u2019s time to move to downsize, upsize, or relocate",
-                "Estate and succession planning that keeps you in control",
-                "Ongoing performance tracking so you always know where your portfolio stands",
-                "Proactively turning today\u2019s property choices into tomorrow\u2019s financial advantage. Always think ahead",
-              ].map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 mt-2.5 shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Disclaimer */}
           <div className="mt-16 pt-8 border-t border-warm-100">
