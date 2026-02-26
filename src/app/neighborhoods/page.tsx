@@ -44,7 +44,7 @@ const neighborhoods = [
     tagline: "Creative Energy & Community Spirit",
     description: "A vibrant community known for its arts scene, craft breweries on Main Street, and strong neighborhood identity. Great for those who want urban energy with residential calm.",
     stats: { avgPrice: "$1.70M", transit: "Bus Routes", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/18058418/pexels-photo-18058418.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/riley-park.jpg",
     featured: false,
   },
   {

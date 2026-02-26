@@ -16,7 +16,7 @@ const neighborhoods = [
     name: "Riley Park",
     slug: "riley-park",
     description: "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "https://images.pexels.com/photos/226424/pexels-photo-226424.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/neighborhoods/riley-park.jpg",
   },
   {
     name: "Kerrisdale",
