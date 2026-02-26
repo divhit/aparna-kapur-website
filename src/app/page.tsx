@@ -94,7 +94,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+            <div>
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
@@ -102,11 +102,11 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-teal-700 rounded-2xl p-6 shadow-xl hidden md:block">
+              <div className="mt-4 hidden md:block">
                 <img
-                  src="/images/logos/oakwyn-realty-white.png"
+                  src="/images/logos/oakwyn-realty.png"
                   alt="Oakwyn Realty"
-                  className="h-20"
+                  className="h-12"
                 />
               </div>
             </div>
@@ -120,10 +120,13 @@ export default function HomePage() {
                 which blocks are getting rezoned, and which buildings have the best strata management.
                 That kind of knowledge only comes from being here.
               </p>
-              <p className="text-warm-600 leading-relaxed mb-6">
+              <p className="text-warm-600 leading-relaxed mb-4">
                 When you work with me, you get one person, not a team, not a junior associate.
                 I pick up the phone, I show up to every inspection, and I will tell you straight if a
-                property is not worth your money. I am with Oakwyn Realty because they are the best
+                property is not worth your money.
+              </p>
+              <p className="text-warm-600 leading-relaxed mb-6">
+                I am with Oakwyn Realty because they are a top
                 brokerage in Vancouver, and that gives my clients access to market intelligence and a
                 network that makes a real difference.
               </p>
@@ -145,46 +148,46 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Lowest since mid-2021</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$1.1M</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Composite<br />Benchmark Price
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">Lowest since mid-2021</p>
             </div>
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">~$410K off peak pricing</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-12.2%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Van West Detached<br />Year-Over-Year
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">~$410K off peak pricing</p>
             </div>
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">38% above 10-yr average</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">12,628</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Active<br />Listings
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">38% above 10-yr average</p>
             </div>
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Long-term holders winning</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">+25.5%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 10-Year Composite<br />Appreciation
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">Long-term holders winning</p>
             </div>
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">No flood of supply</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-7.3%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 New Listings vs.<br />January 2025
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">No flood of supply</p>
             </div>
             <div>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Entry-level holding up</p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-5.4%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Townhouse<br />Benchmark YoY
               </p>
-              <p className="text-[10px] text-warm-400 italic mt-1">Entry-level holding up</p>
             </div>
           </div>
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
