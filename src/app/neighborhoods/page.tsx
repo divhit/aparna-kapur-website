@@ -53,7 +53,7 @@ const neighborhoods = [
     tagline: "Upscale Village Living",
     description: "An established, upscale neighborhood with boutique shopping, elegant heritage homes, and top private schools. Perfect for those seeking refined suburban living.",
     stats: { avgPrice: "$1.90M", transit: "Bus Routes", newHomes: "Limited" },
-    image: "https://images.pexels.com/photos/33310374/pexels-photo-33310374.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/kerrisdale.jpg",
     featured: false,
   },
   {

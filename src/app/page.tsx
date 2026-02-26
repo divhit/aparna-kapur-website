@@ -22,7 +22,7 @@ const neighborhoods = [
     name: "Kerrisdale",
     slug: "kerrisdale",
     description: "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "https://images.pexels.com/photos/5846801/pexels-photo-5846801.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/neighborhoods/kerrisdale.jpg",
   },
   {
     name: "Cambie Corridor",
