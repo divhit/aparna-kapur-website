@@ -154,12 +154,12 @@ export default function NeighbourhoodBoundaries({
     };
   }, [map, geojsonUrl, filterTo, applyStyles]);
 
-  if (!hoverLabel || filterTo) return null;
+  const isSnapshot = hoverLabel ? SNAPSHOT_NAMES.has(hoverLabel.name) : false;
 
-  const isSnapshot = SNAPSHOT_NAMES.has(hoverLabel.name);
-  const label = isSnapshot
-    ? `Snapshot \u00B7 ${hoverLabel.name}`
-    : hoverLabel.name;
+  // Only show hover pill for snapshot neighbourhoods (detailed ones already have permanent labels)
+  if (!hoverLabel || filterTo || !isSnapshot) return null;
+
+  const label = `Snapshot \u00B7 ${hoverLabel.name}`;
 
   return (
     <AdvancedMarker position={hoverLabel.position}>
