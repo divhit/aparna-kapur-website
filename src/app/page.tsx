@@ -140,58 +140,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3b: January 2026 Market Snapshot */}
+      {/* SECTION 3b: February 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
-            January 2026, Vancouver
+            February 2026, Vancouver
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Lowest since mid-2021</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$1.1M</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Continuing to soften</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$1.09M</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Composite<br />Benchmark Price
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">~$410K off peak pricing</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-12.2%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Down 0.9% from January</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-0.9%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Van West Detached<br />Year-Over-Year
+                Composite Benchmark<br />Month-Over-Month
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">38% above 10-yr average</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">12,628</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Inventory climbing</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">13,044</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Active<br />Listings
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Long-term holders winning</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">+25.5%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Significant jump YoY</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">+28.1%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                10-Year Composite<br />Appreciation
+                Active Listings<br />Year-Over-Year
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">No flood of supply</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-7.3%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Slightly fewer than last year</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-3.8%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                New Listings vs.<br />January 2025
+                New Listings vs.<br />February 2025
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Entry-level holding up</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-5.4%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">Favouring buyers</p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">10.9%</p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Townhouse<br />Benchmark YoY
+                Sales-to-Active<br />Ratio
               </p>
             </div>
           </div>
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
-            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull; January 2026
+            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull; February 2026
           </p>
         </div>
       </section>
