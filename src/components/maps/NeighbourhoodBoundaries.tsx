@@ -128,7 +128,7 @@ export default function NeighbourhoodBoundaries({
           const isSnapshot = SNAPSHOT_NAMES.has(name);
           const label = isSnapshot ? `Snapshot · ${name}` : name;
           infoWindow.setContent(
-            `<div style="padding:4px 8px;font-size:13px;font-weight:600;color:#0f172a;">${label}${slug ? '<div style="font-size:11px;font-weight:400;color:#0d9488;margin-top:2px;">Click to explore →</div>' : ""}</div>`
+            `<div style="display:inline-block;padding:6px 12px;font-size:12px;font-weight:600;color:#fff;background:#0f766e;border-radius:9999px;border:2px solid #fff;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -2px rgba(0,0,0,0.1);white-space:nowrap;">${label}${slug ? '<div style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.7);margin-top:2px;text-align:center;">Click to explore →</div>' : ""}</div>`
           );
           infoWindow.setPosition(e.latLng);
           infoWindow.open(map);
