@@ -47,6 +47,9 @@ const SNAPSHOT_NAMES = new Set([
   "Sunset",
   "Victoria-Fraserview",
   "Killarney",
+  "Downtown",
+  "West End",
+  "Hastings-Sunrise",
 ]);
 
 type Props = {

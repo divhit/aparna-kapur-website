@@ -24,6 +24,9 @@ const SNAPSHOT_SLUGS = new Set([
   "sunset",
   "victoria-fraserview",
   "killarney",
+  "downtown",
+  "west-end",
+  "hastings-sunrise",
 ]);
 
 function NeighbourhoodMarkers() {
