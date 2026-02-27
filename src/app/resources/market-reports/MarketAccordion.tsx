@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 type Stat = {
@@ -234,11 +234,30 @@ const monthlyData: MonthData[] = [
 
 export default function MarketAccordion() {
   const [openMonth, setOpenMonth] = useState<number>(0);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4" ref={headerRef}>
       {monthlyData.map((data, index) => {
         const isOpen = openMonth === index;
+        const isFirst = index === 0;
         return (
           <div
             key={`${data.month}-${data.year}`}
@@ -249,12 +268,37 @@ export default function MarketAccordion() {
               className="w-full flex items-center justify-between p-6 text-left hover:bg-warm-50/50 transition-colors"
             >
               <div>
-                <h3 className="font-serif text-xl text-teal-950">
-                  {data.month} {data.year}
-                </h3>
-                <p className="text-sm text-warm-500 mt-0.5">
-                  Vancouver Market Snapshot
-                </p>
+                {isFirst ? (
+                  <>
+                    <div className="overflow-hidden">
+                      <h3
+                        className={`font-serif text-xl text-teal-950 transition-all duration-700 ease-out ${
+                          visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+                        }`}
+                      >
+                        {data.month} {data.year}, Vancouver
+                      </h3>
+                    </div>
+                    <div className="overflow-hidden">
+                      <p
+                        className={`text-sm text-warm-500 mt-0.5 transition-all duration-700 ease-out delay-150 ${
+                          visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
+                        }`}
+                      >
+                        Market Snapshot
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <h3 className="font-serif text-xl text-teal-950">
+                      {data.month} {data.year}
+                    </h3>
+                    <p className="text-sm text-warm-500 mt-0.5">
+                      Vancouver Market Snapshot
+                    </p>
+                  </>
+                )}
               </div>
               <svg
                 className={`w-5 h-5 text-teal-600 shrink-0 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
