@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 type Stat = {
@@ -234,27 +234,16 @@ const monthlyData: MonthData[] = [
 
 export default function MarketAccordion() {
   const [openMonth, setOpenMonth] = useState<number>(0);
-  const headerRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const el = headerRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+    // Small delay so the animation is visible after hydration
+    const timer = setTimeout(() => setVisible(true), 200);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="space-y-4" ref={headerRef}>
+    <div className="space-y-4">
       {monthlyData.map((data, index) => {
         const isOpen = openMonth === index;
         const isFirst = index === 0;
