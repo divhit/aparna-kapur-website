@@ -234,7 +234,7 @@ export default function MortgageCalculatorPage() {
                         {formatCurrency(results.totalCost)}
                       </span>
                     </div>
-                    {results.cmhcPremium && results.cmhcPremium > 0 && (
+                    {results.cmhcPremium != null && results.cmhcPremium > 0 && (
                       <div className="flex justify-between pt-3 border-t border-teal-800">
                         <span className="text-gold-400 text-sm">
                           CMHC Insurance ({results.cmhcRate}%)
@@ -247,7 +247,7 @@ export default function MortgageCalculatorPage() {
                   </div>
                 </div>
 
-                {results.cmhcPremium && results.cmhcPremium > 0 && (
+                {results.cmhcPremium != null && results.cmhcPremium > 0 && (
                   <div className="bg-gold-50 rounded-xl p-5 border border-gold-200">
                     <p className="text-sm font-medium text-gold-800 mb-1">
                       Mortgage Insurance Required
