@@ -241,11 +241,14 @@ export default function NeighborhoodsPage() {
       {/* Interactive Map */}
       <section className="py-12 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading
-            eyebrow="Interactive Map"
-            title="Find Your Neighbourhood"
-            description="Click any neighbourhood on the map to see key stats and access the full guide."
-          />
+          <div className="max-w-2xl mx-auto text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-4 text-teal-950 italic font-bold">
+              Find Your Neighbourhood.
+            </h2>
+            <p className="text-base leading-relaxed text-warm-600">
+              Click any neighbourhood on the map to see key stats and access the full guide.
+            </p>
+          </div>
           <AllNeighbourhoodsMap />
         </div>
       </section>
