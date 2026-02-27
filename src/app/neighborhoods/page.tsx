@@ -18,7 +18,7 @@ const neighborhoods = [
     description: "Home to the $6B Oakridge Park redevelopment, two SkyTrain stations, Queen Elizabeth Park, and top-rated schools. Oakridge is the most dynamic neighborhood in Vancouver right now.",
     stats: { avgPrice: "$1.49M", transit: "2 SkyTrain Stations", newHomes: "3,300+ Coming" },
     image: "https://images.pexels.com/photos/19358760/pexels-photo-19358760.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
-    featured: true,
+    featured: false,
   },
   {
     name: "Marpole",
@@ -230,9 +230,6 @@ const neighborhoods = [
 ];
 
 export default function NeighborhoodsPage() {
-  const featured = neighborhoods.find((n) => n.featured);
-  const others = neighborhoods.filter((n) => !n.featured);
-
   return (
     <>
       <PageBanner
@@ -240,58 +237,6 @@ export default function NeighborhoodsPage() {
         title="Explore Vancouver's Best Neighbourhoods"
         description="Every neighbourhood has its own personality. Explore my detailed guides to find the one that fits your lifestyle, budget, and priorities."
       />
-
-      {/* Featured: Oakridge */}
-      {featured && (
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <Link
-              href={`/neighborhoods/${featured.slug}`}
-              className="group grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-warm-100"
-            >
-              <div className="h-72 lg:h-auto overflow-hidden">
-                <img
-                  src={featured.image}
-                  alt={`${featured.name} Vancouver`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <span className="inline-block text-xs uppercase tracking-widest text-gold-600 font-semibold mb-2">
-                  Featured Neighborhood
-                </span>
-                <h2 className="font-serif text-3xl text-teal-950 mb-2 group-hover:text-teal-700 transition-colors">
-                  {featured.name}
-                </h2>
-                <p className="text-sm font-medium text-teal-600 mb-4">{featured.tagline}</p>
-                <p className="text-sm text-warm-600 leading-relaxed mb-6">
-                  {featured.description}
-                </p>
-                <div className="grid grid-cols-3 gap-4 mb-6">
-                  <div>
-                    <p className="font-serif text-lg text-teal-700">{featured.stats.avgPrice}</p>
-                    <p className="text-xs text-warm-500">Benchmark</p>
-                  </div>
-                  <div>
-                    <p className="font-serif text-lg text-teal-700">{featured.stats.transit}</p>
-                    <p className="text-xs text-warm-500">Transit</p>
-                  </div>
-                  <div>
-                    <p className="font-serif text-lg text-teal-700">{featured.stats.newHomes}</p>
-                    <p className="text-xs text-warm-500">New Homes</p>
-                  </div>
-                </div>
-                <span className="inline-flex items-center text-sm font-medium text-teal-700">
-                  Read the Complete Guide
-                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </span>
-              </div>
-            </Link>
-          </div>
-        </section>
-      )}
 
       {/* Interactive Map */}
       <section className="py-12 bg-warm-50">
@@ -305,16 +250,16 @@ export default function NeighborhoodsPage() {
         </div>
       </section>
 
-      {/* Other Neighborhoods */}
+      {/* All Neighborhoods */}
       <section className="py-10 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
-            eyebrow="More Neighborhoods"
+            eyebrow="All Neighbourhoods"
             title="Explore the Area"
-            description="Each of these neighborhoods surrounds Oakridge and offers its own unique character and lifestyle."
+            description="Each neighbourhood offers its own unique character and lifestyle."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {others.map((hood) => (
+            {neighborhoods.map((hood) => (
               <Link
                 key={hood.slug}
                 href={`/neighborhoods/${hood.slug}`}
