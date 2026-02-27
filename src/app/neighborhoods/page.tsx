@@ -35,7 +35,7 @@ const neighborhoods = [
     tagline: "Where Families Put Down Roots",
     description: "Anchored by Queen Elizabeth Park and Langara College, South Cambie is a family-oriented neighborhood with excellent schools and the Cambie corridor running through its heart.",
     stats: { avgPrice: "$1.44M", transit: "Canada Line Access", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/5109341/pexels-photo-5109341.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/south-cambie.jpg",
     featured: false,
   },
   {
