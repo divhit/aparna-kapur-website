@@ -56,100 +56,66 @@ export default function FairviewPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            I have a theory about Fairview: it is the most under-appreciated
-            neighbourhood in Vancouver. Nobody writes breathless articles about
-            it. It never trends. But when I ask clients who&apos;ve lived all
-            over the city where they&apos;d actually settle long-term, Fairview
-            comes up more often than you&apos;d expect. Morning walk along the
-            False Creek seawall, pastries from Granville Island, eight minutes
-            to downtown on the Canada Line. That&apos;s just a regular
-            Tuesday here. No fanfare required.
+            Fairview is the most under-appreciated neighbourhood in Vancouver.
+            It never trends, but when clients who have lived all over the city
+            name where they would actually settle, Fairview comes up more
+            than you would expect. South Granville gives it polish with
+            gallery row, boutique fashion, and restaurants that have been
+            around for decades. Cambie Village keeps it grounded with
+            neighbourhood grocers, bakeries, and real coffee shops. Granville
+            Island is at your doorstep.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Fairview sits in the geographic sweet spot of the city. South
-            Granville&apos;s gallery row gives it polish: art dealers,
-            boutique fashion, upscale restaurants that have been around for
-            decades. Cambie Village keeps it grounded with neighbourhood
-            grocers, bakeries, and the kind of coffee shops where the barista
-            knows your order. And then there&apos;s Granville Island, literally
-            at your doorstep, which needs no introduction.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            The Broadway Plan is the big story right now. Thousands of new
-            homes along the corridor, the subway extension opening, a whole new
-            generation of mixed-use buildings rising. But step one block south
-            of Broadway and it&apos;s a different world. Tree-lined
-            residential streets, well-kept heritage homes, quiet evenings. That
-            duality is what makes Fairview work. You get the energy and
-            connectivity of a major urban corridor with the calm of an
-            established residential neighbourhood just behind it.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The Broadway Plan is the big story. Thousands of new homes along
+            the corridor, the subway extension opening, a new generation of
+            mixed-use buildings rising. But step one block south of Broadway
+            and it is a different world: tree-lined residential streets,
+            well-kept heritage homes, quiet evenings. That duality is what
+            makes Fairview work. Professionals at VGH and the Broadway
+            medical corridor, couples who have outgrown Yaletown, downsizers
+            from the west side, and families drawn to Emily Carr Elementary
+            and L&apos;Ecole Bilingue all end up here.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;Fairview is the neighbourhood where people stop looking.
-              Two SkyTrain lines, Granville Island, the seawall, VGH walking
-              distance. Once you&apos;re here, why would you
+              &ldquo;Two SkyTrain lines, Granville Island, the seawall, VGH
+              walking distance. Once you&apos;re here, why would you
               leave?&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            The composite benchmark in Fairview hovers around{" "}
-            <strong>$900K</strong>, which is remarkably reasonable given that
-            you are essentially in the centre of the city with two SkyTrain
-            lines at your feet. Condos dominate the market here, ranging from{" "}
-            <strong>$550K to $1.2M</strong> depending on age, size, and how
-            close you are to the water or the new subway stations. The Broadway
-            Plan is bringing significant new supply, purpose-built
-            rentals and strata condos alike, which is changing the
-            skyline along the corridor.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Townhomes are a growing segment, particularly transit-oriented new
-            builds in the <strong>$1.1M to $1.8M</strong> range. For buyers
-            who want something with more character, the heritage homes south
-            of Broadway start around <strong>$1.5M</strong> and can push past{" "}
-            <strong>$3M</strong> for the well-preserved ones with views. These
-            are increasingly rare as the neighbourhood densifies. Healthcare
-            professionals at VGH and the Broadway medical corridor make up a
-            significant chunk of buyers. They want to walk to work, and
-            Fairview is the only neighbourhood that lets them do it in style.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The composite benchmark hovers around <strong>$900K</strong>,
+            remarkably reasonable for the centre of the city with two
+            SkyTrain lines at your feet. Condos dominate, ranging from{" "}
+            <strong>$550K to $1.2M</strong> depending on age, size, and
+            proximity to the water or new subway stations. Townhomes are a
+            growing segment, particularly transit-oriented new builds in
+            the <strong>$1.1M to $1.8M</strong> range. Heritage homes south
+            of Broadway start around <strong>$1.5M</strong> and can push
+            past <strong>$3M</strong> for the well-preserved ones with
+            views.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            This is where Fairview truly excels. Two SkyTrain lines,
-            the Canada Line at Broadway-City Hall and Olympic Village, plus the
-            new Broadway Subway extension, make it one of the
-            best-connected neighbourhoods in the entire Metro Vancouver region.
-            The False Creek seawall is your cycling and jogging route. Walk
-            Score sits at a near-perfect 95. I regularly tell clients that if
-            they want to own one car instead of two, or ditch the car
-            altogether, Fairview is where that becomes genuinely practical.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Professionals who work downtown or in the Broadway corridor and
-            value a short, pleasant commute. Doctors and nurses at VGH who
-            want to walk to work. Couples who have outgrown Yaletown but
-            aren&apos;t ready for the suburbs. Downsizers from the west side
-            who want to stay central. Families drawn to Emily Carr Elementary
-            and L&apos;Ecole Bilingue. It&apos;s a neighbourhood of people
-            who have done their homework and decided that location,
-            convenience, and quality of life matter more than trendy
-            postcodes.
+            Two SkyTrain lines, the Canada Line at Broadway-City Hall and
+            Olympic Village plus the new Broadway Subway extension, make
+            Fairview one of the best-connected neighbourhoods in Metro
+            Vancouver. The False Creek seawall is your cycling and jogging
+            route. Walk Score: 95. If you want to own one car instead of
+            two, or ditch the car altogether, this is where that becomes
+            genuinely practical.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Fairview is Vancouver&apos;s best
-              kept secret for people who prioritize access over flash. Two
-              SkyTrain lines, Granville Island, the seawall, VGH, South
-              Granville shopping, all within walking distance. The
-              Broadway Plan is transforming the corridor, but the bones of
-              this neighbourhood are solid. If you want the most connected
-              address in the city without paying downtown prices, start here.
+              <strong>Bottom line:</strong> Fairview delivers the most
+              connected address in Vancouver without paying downtown prices.
+              The Broadway Plan is transforming the corridor, but the bones
+              of this neighbourhood, two SkyTrain lines, Granville Island,
+              the seawall, South Granville shopping, are already solid.
             </p>
           </div>
         </div>

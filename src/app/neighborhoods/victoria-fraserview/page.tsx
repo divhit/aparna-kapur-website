@@ -57,108 +57,74 @@ export default function VictoriaFraserviewPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            I was showing a property on one of the south-facing streets last
-            spring when the seller casually mentioned he&apos;d been watching
-            sunsets over the Fraser River from his kitchen window for 22 years.
-            Not from a penthouse. Not from a waterfront estate. From a regular
-            family home on a regular residential street in south Vancouver. That
-            is Victoria-Fraserview in a nutshell, a neighbourhood that
-            quietly punches well above its weight and asks surprisingly little
-            for the privilege.
+            Victoria-Fraserview quietly punches well above its weight. Regular
+            family homes on regular residential streets deliver sunset views
+            over the Fraser River that most Vancouver neighbourhoods cannot
+            match at any price. The streets are wide and quiet, the lots
+            generous with proper front yards, proper backyards, and mature
+            trees that have been here longer than most of their owners.
+            Chinese, South Asian, Filipino, and Vietnamese families have
+            planted deep roots, and the food along Victoria Drive reflects it:
+            dim sum, pho, curry, Filipino bakeries, all priced for
+            locals.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            This is not a neighbourhood that shows up in lifestyle magazines,
-            and most of its residents prefer it that way. The streets are wide
-            and quiet. The lots are generous, with proper front yards, proper
-            backyards, mature trees that have been here longer than most of
-            their owners. Families from Chinese, South Asian, Filipino, and
-            Vietnamese backgrounds have planted deep roots, and the result is a
-            community that is genuinely multicultural without anyone making a
-            fuss about it. The food along Victoria Drive is outstanding.
-            Dim sum, pho, curry, Filipino bakeries, and it&apos;s
-            priced for locals, not tourists.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Then there are the green spaces, which are frankly remarkable for
-            a city neighbourhood. Fraserview Golf Course is an 18-hole public
-            championship course with river views that would cost a fortune
-            anywhere else. Here, it doubles as a massive green lung
-            for the whole area. Everett Crowley Park covers 40 hectares of
-            trails, meadows, and reclaimed urban forest with panoramic views
-            of the city, the river, and the North Shore mountains. I have
-            taken clients to the viewpoint at Crowley Park and watched them
-            recalibrate everything they thought they knew about south
-            Vancouver.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The green spaces are remarkable for a city neighbourhood.
+            Fraserview Golf Course is an 18-hole public championship course
+            with river views that would cost a fortune anywhere else. Everett
+            Crowley Park covers 40 hectares of trails, meadows, and reclaimed
+            urban forest with panoramic views of the city, the river, and the
+            North Shore mountains. David Thompson Secondary and multiple
+            elementary schools serve the area well, and Killarney Community
+            Centre with its pool and ice rink is right next door. The
+            neighbours know each other. People wave. It is Vancouver at its
+            most genuine.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;River views, 40 hectares of urban wilderness, and a
-              public golf course, all inside city limits, all at prices
-              that make the west side look absurd.&rdquo;
+              &ldquo;River views, 40 hectares of urban wilderness, and a public
+              golf course, all at prices that make the west side look
+              absurd.&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
+          <p className="text-warm-700 leading-relaxed mb-6">
             The composite benchmark is around <strong>$1.2M</strong>, which
-            buys you significantly more space per dollar than anything on the
-            west side. This is predominantly a detached-home neighbourhood,
-            and houses run from <strong>$1.3M to $1.8M</strong> depending on
-            lot size and whether you&apos;ve got one of those coveted
-            river-view positions. Properties on higher ground in the southern
-            part of the neighbourhood command a premium, and rightly so.
-            The sunset views over the Fraser are genuinely spectacular and
-            they do not get old.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Townhomes have been arriving in newer developments, running{" "}
-            <strong>$800K to $1.1M</strong>, and they&apos;re popular with
-            young families who want the neighbourhood but don&apos;t need a
-            full house yet. Condos along Victoria Drive start at{" "}
-            <strong>$450K to $700K</strong> in select newer developments.
-            I often tell buyers that Victoria-Fraserview is one of the last
-            places in Vancouver where you can buy a detached home with a view
-            and not feel like you&apos;re making a financial sacrifice to do
-            it. David Thompson Secondary and multiple elementary schools serve
-            the area well, and Killarney Community Centre with its pool and
-            ice rink is right next door.
+            buys significantly more space per dollar than anything on the west
+            side. Detached homes run from <strong>$1.3M to $1.8M</strong>
+            depending on lot size and river-view positioning, with south-facing
+            higher-ground properties commanding a premium for their Fraser
+            River sunsets. Townhomes in newer developments run{" "}
+            <strong>$800K to $1.1M</strong>, popular with young families who
+            want the neighbourhood without a full house. Condos along Victoria
+            Drive start at <strong>$450K to $700K</strong> in select newer
+            builds. This is one of the last places in Vancouver where a
+            detached home with a view does not require a financial sacrifice.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            I will be honest: this is a neighbourhood where a car helps.
-            Joyce-Collingwood SkyTrain is a short bus ride north, giving you
-            Expo Line access downtown. Knight Street Bridge is the fast route
-            to Richmond, YVR, and Highway 99. Bus service runs along Victoria
-            Drive and 49th Avenue. The trade-off for the space and the quiet
-            is that you&apos;re not steps from a SkyTrain station, but
-            for families who spend their weekends at the golf course, hiking
-            Crowley Park, or grilling in their actual backyard, that
-            trade-off tends to feel more than fair.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Long-time residents who bought here 20 or 30 years ago and
-            cannot imagine living anywhere else. Families with school-age
-            kids who chose space over a short commute and have never
-            regretted it. Golfers who can walk to one of the Lower
-            Mainland&apos;s best public courses. Newcomers from South and
-            East Asia who find a familiar cultural landscape and affordable
-            entry into homeownership. The neighbours know each other.
-            People wave. It&apos;s the kind of place where you borrow a
-            ladder and return it with a plate of food. Vancouver at its
-            most genuine.
+            A car helps here. Joyce-Collingwood SkyTrain is a short bus ride
+            north for Expo Line access downtown. Knight Street Bridge is the
+            fast route to Richmond, YVR, and Highway 99. Bus service runs
+            along Victoria Drive and 49th Avenue. The trade-off for the space
+            and quiet is distance from rapid transit, but for families who
+            spend weekends at the golf course, hiking Crowley Park, or grilling
+            in their backyard, the trade-off is more than fair. The community
+            is long-time residents, families who chose space over a short
+            commute, golfers, and newcomers from South and East Asia who find
+            a familiar cultural landscape and affordable entry into
+            homeownership.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Victoria-Fraserview is the
-              neighbourhood that makes out-of-towners do a double take. River
+              <strong>Bottom line:</strong> Victoria-Fraserview delivers river
               views, a championship golf course, 40 hectares of urban
-              wilderness, generous lots, and you are still inside the
-              City of Vancouver. If you value space, nature, and a community
-              that feels like it actually works, this is one of the smartest
-              buys in the city.
+              wilderness, and generous lots, all inside the City of Vancouver.
+              If you value space, nature, and a community that works, this is
+              one of the smartest buys in the city.
             </p>
           </div>
         </div>

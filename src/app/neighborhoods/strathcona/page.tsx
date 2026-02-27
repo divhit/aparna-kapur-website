@@ -57,101 +57,71 @@ export default function StrathconaPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            I always tell people: if you want to feel Vancouver&apos;s history
-            in your bones, walk through Strathcona on a quiet afternoon. The
-            Victorian houses with their gingerbread trim, the workers&apos;
-            cottages from the 1890s, the converted warehouses where artists
-            now stretch canvases under skylights. Every block has a
-            story that predates the city itself. This is not a neighbourhood
-            that was designed by a developer. It grew, it survived, it fought
-            for itself. And that is exactly what makes it magnetic.
+            Strathcona is where Vancouver&apos;s history lives. Victorian
+            houses with gingerbread trim, workers&apos; cottages from the
+            1890s, converted warehouses where artists now stretch canvases
+            under skylights. Every block predates the modern city. The
+            community is tight-knit and fiercely protective: residents tend
+            over 200 plots at Cottonwood Community Gardens, fight for
+            heritage preservation at council meetings, and actually know
+            their neighbours by name. Annual studio tours open the warehouse
+            conversions where painters, ceramicists, and furniture makers
+            work.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Strathcona is honest in a way that polished west-side
-            neighbourhoods are not. The community here is tight-knit and
-            fiercely protective of its character. People tend their plots at
-            Cottonwood Community Gardens, over 200 of them, and
-            fight for heritage preservation at council meetings, and actually
-            know their neighbours by name. The annual studio tours let you
-            peek inside the warehouse conversions where painters, ceramicists,
-            and furniture makers do their work.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Chinatown is a five-minute walk, and the two neighbourhoods have
-            always been intertwined. Dim sum mornings, the Dr. Sun Yat-Sen
-            Classical Chinese Garden, herbal shops that have been in the same
-            family for generations. That cultural depth is part of
-            Strathcona&apos;s DNA. CRAB Park gives you Burrard Inlet
-            waterfront with harbour views and the North Shore mountains as a
-            backdrop. It is inner-city living at its most authentic,
-            with all the beauty and all the complexity that entails.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Chinatown is a five-minute walk, and the two neighbourhoods
+            have always been intertwined. Dim sum mornings, the Dr. Sun
+            Yat-Sen Classical Chinese Garden, herbal shops that have been
+            in the same family for generations. CRAB Park gives you Burrard
+            Inlet waterfront with harbour views and the North Shore
+            mountains as a backdrop. Downtown is a short bike ride or a
+            brisk 20-minute walk. Main Street-Science World and
+            Stadium-Chinatown SkyTrain stations connect you to the Expo
+            and Millennium Lines. The Adanac Bikeway runs right through the
+            neighbourhood. Walk Score: 91.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;Strathcona is the only neighbourhood in Vancouver where
-              you can live in an 1890s Victorian, walk to Chinatown for dim
-              sum, and bike downtown in five minutes. Nothing else comes
-              close.&rdquo;
+              &ldquo;The only neighbourhood in Vancouver where you can live
+              in an 1890s Victorian, walk to Chinatown for dim sum, and bike
+              downtown in five minutes.&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            For an inner-city neighbourhood this close to downtown, Strathcona
-            offers genuine value. The composite benchmark is around{" "}
-            <strong>$950K</strong>. The signature properties are the heritage
-            homes, beautifully restored Victorians and Edwardians
-            running from <strong>$1.0M to $1.5M</strong>. Many are
-            heritage-designated, which protects their character but also means
-            renovation rules apply. Buyers who appreciate that kind of
-            architectural detail tend to be passionate about these homes, and
-            bidding can be competitive when a good one comes up.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Warehouse lofts and condos are the other major category, ranging
-            from <strong>$400K to $750K</strong>. These converted industrial
-            spaces with high ceilings, exposed brick, and oversized windows
-            attract creatives and professionals who want character without the
-            maintenance of an old house. Townhomes in the{" "}
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The composite benchmark is around <strong>$950K</strong>. The
+            signature properties are beautifully restored Victorians and
+            Edwardians running from <strong>$1.0M to $1.5M</strong>, many
+            heritage-designated, which protects their character but means
+            renovation rules apply. Warehouse lofts and condos range from{" "}
+            <strong>$400K to $750K</strong>, converted industrial spaces
+            with high ceilings, exposed brick, and oversized windows that
+            attract creatives and professionals who want character without
+            the maintenance of an old house. Townhomes in the{" "}
             <strong>$700K to $1.1M</strong> range offer a middle ground,
-            modern builds with ground-level access, popular with couples
-            making their first purchase who want proximity to downtown without
-            the condo tower lifestyle.
+            modern builds popular with couples making their first purchase.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Downtown is a short bike ride or a brisk 20-minute walk. Main
-            Street-Science World and Stadium-Chinatown SkyTrain stations are
-            both within reach, connecting you to the Expo and Millennium
-            Lines. The Walk Score is 91, reflecting the flat terrain and the
-            density of services in adjacent Chinatown and along Main Street.
-            Serious cyclists love Strathcona. The Adanac Bikeway runs
-            right through the neighbourhood, and you can be at your desk
-            downtown in under ten minutes without breaking a sweat.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Artists who need affordable studio space and do not want to
-            commute from the suburbs. Heritage lovers who would rather restore
-            an 1890s house than buy a new condo. Young professionals who work
-            downtown and want a neighbourhood with genuine grit and character.
-            Long-time residents, including Chinese-Canadian families
-            whose roots here go back generations, who anchor the
-            community. It is not for everyone, and the people who live here
-            know that. But for those who connect with its energy, Strathcona
-            creates a loyalty I rarely see in other parts of the city.
+            Artists who need affordable studio space, heritage lovers who
+            would rather restore an 1890s house than buy a new condo, young
+            professionals who work downtown and want genuine grit and
+            character. Long-time Chinese-Canadian families whose roots go
+            back generations anchor the community. Strathcona is not for
+            everyone, but for those who connect with its energy, it creates
+            a loyalty rarely seen in other parts of the city.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Strathcona is Vancouver&apos;s most
-              historically rich neighbourhood, and it offers something no
-              amount of new development can replicate: genuine
-              character, 130 years of stories, and an inner-city location that
-              is minutes from everything. Heritage homes, artist lofts, and
-              accessible price points make it one of the most compelling buys
-              on the east side for people who value authenticity over polish.
+              <strong>Bottom line:</strong> Strathcona offers something no
+              new development can replicate: 130 years of genuine character,
+              heritage homes, artist lofts, and an inner-city location
+              minutes from everything. For buyers who value authenticity over
+              polish, it is one of the most compelling addresses on the east
+              side.
             </p>
           </div>
         </div>

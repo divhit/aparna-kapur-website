@@ -57,108 +57,71 @@ export default function GrandviewWoodlandPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            If you want to understand what makes east Vancouver tick, I will
-            save you the research: go to Commercial Drive on a Saturday. Grab
-            an espresso at one of the Italian cafes that have been here since
-            the 1950s, watch the nonnas share the sidewalk with artists and
-            young families, browse a bookstore that has somehow survived the
-            internet age, and eat Ethiopian food for lunch at a place with no
-            sign out front but a line down the block. There are no chain
-            stores on The Drive. Not one. That is not an accident,
-            it is a statement.
+            Commercial Drive has zero chain stores. Not one. Italian cafes
+            that have been here since the 1950s share the sidewalk with
+            independent bookstores, Ethiopian restaurants with no sign out
+            front but a line down the block, and nonnas who still do their
+            shopping on foot. Italian Day on The Drive draws 300,000 people
+            and is one of the biggest street festivals in the country. But
+            the neighbourhood has always been a landing pad for waves of
+            newcomers, Italian, Portuguese, Central American, Ethiopian,
+            Vietnamese, and that layered cultural history is what makes the
+            food scene extraordinary.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Grandview-Woodland is the neighbourhood that gave east Vancouver
-            its identity. The Italian roots run deep. Italian Day on
-            The Drive draws 300,000 people and is one of the biggest street
-            festivals in the country. But the neighbourhood has always been a
-            landing pad for waves of newcomers: Italian, Portuguese, Central
-            American, Ethiopian, Vietnamese. That layered cultural history is
-            what makes the food scene so extraordinary and the community so
-            genuinely multicultural.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Behind The Drive, the residential streets tell a different story.
-            Craftsman bungalows with deep front porches. Vancouver Specials
-            with their angular rooflines. Edwardian homes with mature gardens
-            and fruit trees. Grandview Park is the social hub where everyone
-            congregates, and Britannia Community Centre, with its pool,
-            ice rink, library, and secondary school all in one complex,
-            is the beating heart of the neighbourhood. The arts scene is real,
-            not marketed: The Cultch and Rio Theatre host live performance and
-            indie film, and the live music venues along The Drive keep the
-            evenings interesting.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Behind The Drive, the residential streets are lined with
+            craftsman bungalows, Vancouver Specials, and Edwardian homes
+            with mature gardens and fruit trees. Grandview Park is the social
+            hub, and Britannia Community Centre, with its pool, ice rink,
+            library, and secondary school all in one complex, is the beating
+            heart of the neighbourhood. The Cultch and Rio Theatre host live
+            performance and indie film. Commercial-Broadway is the busiest
+            SkyTrain interchange in the region, connecting the Expo and
+            Millennium Lines. Downtown is about ten minutes by train. Walk
+            Score: 90.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;The Drive is the street that proves you do not need
-              chains, franchises, or polish to build something people love.
-              Two hundred independent businesses and counting.&rdquo;
+              &ldquo;Two hundred independent businesses and counting. The
+              Drive proves you do not need chains or polish to build
+              something people love.&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Grandview-Woodland has a composite benchmark of around{" "}
-            <strong>$1.1M</strong>, reflecting a market that skews more toward
-            detached homes than many inner-city neighbourhoods. The character
-            homes are the draw: craftsman bungalows, Vancouver Specials,
-            and Edwardian houses typically range from{" "}
-            <strong>$1.3M to $1.8M</strong>. Properties on the quieter streets
-            near The Drive command premiums for walkability, while those
-            farther east toward Woodland offer slightly more space for the
-            money.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            Condos near the SkyTrain station are popular with first-time
-            buyers, running from <strong>$500K to $850K</strong>.
-            Commercial-Broadway is the busiest station in the entire SkyTrain
-            system, and that transit access is a genuine selling point.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The composite benchmark is around <strong>$1.1M</strong>,
+            reflecting a market that skews toward detached homes. Character
+            homes, craftsman bungalows, Vancouver Specials, and Edwardian
+            houses, typically range from <strong>$1.3M to $1.8M</strong>.
+            Properties near The Drive command premiums for walkability,
+            while those farther east toward Woodland offer more space for
+            the money. Condos near the SkyTrain station run from{" "}
+            <strong>$500K to $850K</strong>, popular with first-time buyers.
             Townhomes along the Broadway corridor go for{" "}
             <strong>$900K to $1.3M</strong>, with newer builds incorporating
-            transit-oriented design. I find that buyers here are less driven by
-            investment calculus and more by the fact that they genuinely love
-            The Drive and want to live within walking distance of it. That
-            kind of emotional attachment to a neighbourhood keeps values
-            stable.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Commercial-Broadway is the busiest SkyTrain interchange in the
-            region, connecting the Expo and Millennium Lines. Downtown is about
-            ten minutes by train. The Drive itself is supremely walkable,
-            and everything you need for daily life is within a comfortable stroll.
-            Walk Score: 90. Cycling infrastructure is solid, with routes
-            connecting to the central valley greenway and the downtown
-            peninsula. Most residents I work with use transit as their primary
-            mode and keep a car mainly for weekend trips out of the city.
+            transit-oriented design.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
             The Italian families who built the neighbourhood and never left.
             Artists and musicians who need affordable space and a community
             that values what they do. Young families drawn to Grandview
-            Elementary, Britannia, and the kind of free-range childhood where
-            kids can walk to the park and the library on their own. Newcomers
-            from around the world who find in The Drive&apos;s diversity a
-            reflection of their own experience. People who would rather buy
-            from independent shops than corporations, who care about community
-            gardens and live music and knowing the person behind the counter.
-            Grandview-Woodland self-selects for people with a certain set of
-            values, and that is precisely why it works.
+            Elementary and Britannia. Newcomers from around the world who
+            find in The Drive&apos;s diversity a reflection of their own
+            experience. Cycling infrastructure connects to the central
+            valley greenway and the downtown peninsula, and most residents
+            use transit as their primary mode.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Grandview-Woodland is the
-              neighbourhood for people who want community over convenience,
-              character over polish, and a street like Commercial Drive that
-              you will never get tired of. Two SkyTrain lines keep you
-              connected, the character homes are some of the best in east
-              Vancouver, and the cultural richness, from Italian heritage to
-              global cuisine to grassroots arts, is impossible to
-              replicate. If you want a neighbourhood with a soul, this is it.
+              neighbourhood for people who want character over polish and a
+              street like Commercial Drive that never gets old. Two SkyTrain
+              lines, some of the best character homes in east Vancouver, and
+              a cultural richness that is impossible to replicate.
             </p>
           </div>
         </div>

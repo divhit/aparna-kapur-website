@@ -56,100 +56,65 @@ export default function ArbutusRidgePage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            I have a theory about Arbutus Ridge: the people who live here
-            don&apos;t talk about it much, and that&apos;s on purpose. They
-            found one of the best-positioned neighbourhoods on the west side,
-            tucked between the prestige of Shaughnessy and the village charm of
-            Kerrisdale, and they&apos;d rather keep it to themselves. I get it.
-            When you have estate-sized lots, a 9-kilometre car-free greenway
-            through your front yard, and one of BC&apos;s best high schools in
-            your catchment, why advertise?
+            Arbutus Ridge sits between the prestige of Shaughnessy and the
+            village charm of Kerrisdale, offering estate-sized lots, a
+            9-kilometre car-free greenway, and Prince of Wales Secondary in its
+            catchment. The lots here are among the largest on the west side, with
+            deep setbacks, mature gardens, and towering maples and chestnuts
+            lining the streets. The homes are a handsome mix of mid-century
+            estates, heritage places with original millwork, and contemporary
+            rebuilds. You hear birdsong more than traffic.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Arbutus Ridge is defined by two things: space and the Greenway. The
-            lots here are among the largest on the west side, deep setbacks,
-            mature gardens, towering maples and chestnuts lining the streets. The
-            homes are a handsome mix of mid-century estates that have been
-            lovingly maintained, heritage places with original millwork, and
-            ambitious contemporary rebuilds by owners who understood the value of
-            the land beneath them. The pace is unhurried. You hear birdsong more
-            than traffic.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            The Arbutus Greenway changed everything when it opened. Nine
-            kilometres of car-free pathway built on a former rail corridor,
-            running right through the heart of the neighbourhood and connecting
-            Kitsilano to the north with the Fraser River to the south. Joggers,
-            cyclists, dog walkers, parents with strollers. Community gardens and
-            public art along the route. It gave Arbutus Ridge a central spine
-            and a sense of connection it didn&apos;t quite have before, and
-            property values along the corridor noticed.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The Arbutus Greenway runs right through the heart of the
+            neighbourhood, nine kilometres of car-free pathway on a former rail
+            corridor connecting Kitsilano to the Fraser River. Community gardens
+            and public art line the route. It gave the area a central spine and
+            lifted property values along the corridor. Long-time families,
+            younger buyers drawn by Prince of Wales catchment, empty nesters in
+            the newer townhomes near the village, and remote workers who love the
+            Greenway for midday breaks make up the community. The common thread
+            is people who prefer substance over show.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;Arbutus Ridge gives you Shaughnessy-sized lots and Prince
-              of Wales catchment at a price that actually makes sense. That
-              combination is genuinely rare.&rdquo;
+              &ldquo;Shaughnessy-sized lots and Prince of Wales catchment at a
+              price that actually makes sense.&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            The composite benchmark is around <strong>$2.2M</strong>, which
-            positions Arbutus Ridge as more accessible than Shaughnessy next
-            door while still offering comparable lot sizes. Detached homes are
-            the dominant property type, ranging from{" "}
-            <strong>$2.5M to $4.5M+</strong> on generous lots. You&apos;ll find
-            everything from original 1950s ranchers with untouched potential to
-            full custom rebuilds with landscaped gardens and coach houses. The
-            sweet spot for most families is a well-updated heritage home in the
-            $3M range, enough character to feel special, enough renovation to
-            live in comfortably.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The composite benchmark is around <strong>$2.2M</strong>, more
+            accessible than Shaughnessy next door while offering comparable lot
+            sizes. Detached homes range from{" "}
+            <strong>$2.5M to $4.5M+</strong> on generous lots, from original
+            1950s ranchers with untouched potential to full custom rebuilds with
+            coach houses. The sweet spot for most families is a well-updated
+            heritage home in the $3M range. Townhomes near Arbutus Village run{" "}
+            <strong>$1.2M to $1.8M</strong>. Condos are limited, mostly low-
+            and mid-rise near the village, starting around{" "}
+            <strong>$600K to $1.2M</strong>. Walk score: 93.
           </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            A growing number of townhomes near Arbutus Village run{" "}
-            <strong>$1.2M to $1.8M</strong> and appeal to young families and
-            downsizers who want to stay in the catchment. Condos are limited,
-            mostly low- and mid-rise buildings near the village, starting around{" "}
-            <strong>$600K to $1.2M</strong>. The neighbourhood scores a 93 walk
-            score, which is remarkable for an area this quiet. Arbutus Village
-            covers groceries, pharmacy, dining, and daily needs, and both
+
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The Greenway makes cycling and walking genuinely practical. You can
+            ride to Kits, Granville Island, or the Fraser River without touching
+            a road. Bus routes on Arbutus Street and along Broadway connect to
+            the broader transit network, and the Broadway Subway will add rapid
+            transit access nearby. Downtown is about 20 minutes by car. Arbutus
+            Village covers groceries, pharmacy, dining, and daily needs, and both
             Kerrisdale Village and South Granville are walkable from most
             streets.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-6">
-            The Arbutus Greenway makes cycling and walking genuinely practical
-            here. You can ride to Kits, Granville Island, or the Fraser River
-            without touching a road. Bus routes on Arbutus Street and along
-            Broadway connect to the broader transit network, and the Broadway
-            Subway will add rapid transit access nearby. Downtown is about 20
-            minutes by car. The 93 walk score means most errands happen on foot:
-            Arbutus Village, Kerrisdale, and South Granville are all within easy
-            reach.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Long-time families who bought in the &apos;80s and &apos;90s and
-            have watched the neighbourhood quietly appreciate. Younger families
-            who specifically wanted Prince of Wales Secondary catchment and
-            found better value here than in Shaughnessy. Empty nesters who moved
-            from a detached home to one of the newer townhomes near the village.
-            A sprinkling of professionals who work from home and love the
-            Greenway for midday breaks. The common denominator is people who
-            prefer substance over show. Arbutus Ridge doesn&apos;t need a
-            reputation because the quality of life speaks for itself.
-          </p>
-
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Arbutus Ridge is the neighbourhood
-              I recommend to families who want the best of the west side
-              without overpaying for a name. Estate-sized lots, the Greenway at
-              your doorstep, Prince of Wales catchment, and walkable access to
-              three distinct village centres. It&apos;s the quiet one on the
-              block that outperforms every year.
+              <strong>Bottom line:</strong> Arbutus Ridge gives you the best of
+              the west side without overpaying for a name. Estate-sized lots, the
+              Greenway at your doorstep, Prince of Wales catchment, and walkable
+              access to three distinct village centres.
             </p>
           </div>
         </div>

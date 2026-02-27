@@ -56,97 +56,66 @@ export default function DunbarSouthlandsPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            A few years ago, I was walking down Dunbar Street on a Saturday
-            morning with a couple relocating from Toronto. We passed the
-            farmers&apos; market, ducked into 32 Books for ten minutes that
-            turned into thirty, grabbed coffee at Blenz, and bumped into three
-            separate families they&apos;d met at an open house the week before.
-            By the time we reached the car, the husband looked at his wife and
-            said: &ldquo;I think we found it.&rdquo; That&apos;s Dunbar. It
-            finds you.
+            Dunbar-Southlands is really two neighbourhoods in one. The northern
+            half centres on Dunbar Village, a charming high street of independent
+            shops, bakeries, and 32 Books. Streets are wide, lots are generous,
+            mature trees form canopies over the sidewalks, and kids still ride
+            bikes to the village after school. The southern half, Southlands, is
+            something else entirely: cross SW Marine Drive and you enter a world
+            of acreage properties, horse stables, and a pastoral calm that feels
+            genuinely rural. Paddock fences line the roads, riders use the
+            trails, and the Fraser River is right there.
           </p>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Dunbar-Southlands is really two neighbourhoods in one. The northern
-            half centres on Dunbar Village, a charming high street of
-            independent shops, bakeries, and the kind of community vibe where
-            the barista knows your order and your kids&apos; names. Streets are
-            wide, lots are generous, mature trees form canopies over the
-            sidewalks, and kids still ride bikes to the village after school. It
-            sounds like a clich&eacute;, but spend one Saturday morning here and
-            you&apos;ll see it really is like that.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            The southern half, Southlands, is something else entirely. Cross
-            SW Marine Drive and you enter a world of acreage properties, horse
-            stables, and a pastoral calm that feels genuinely rural. This is one
-            of the only places in urban Vancouver where horseback riding is part
-            of daily life. Paddock fences line the roads, you&apos;ll see riders
-            on the trails, and the Fraser River is right there. It&apos;s a ten-minute
-            drive from a university, but it feels like a different province.
+          <p className="text-warm-700 leading-relaxed mb-6">
+            Lord Byng Secondary is one of the top public high schools in BC and a
+            genuine price driver in this catchment. Pacific Spirit Park&apos;s 73
+            kilometres of trails are accessible on foot from most streets.
+            Families dominate the community: couples who outgrew their Kits condo
+            and want a yard, UBC faculty who want a 10-minute commute through the
+            forest, and parents who grew up in Dunbar and came back to raise
+            their own kids here. In Southlands, equestrian families have quietly
+            held onto their land for decades.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
             <p className="text-xl font-serif text-teal-900 italic leading-relaxed">
-              &ldquo;Dunbar is where families come when they want space, top
-              schools, and a village high street, without the price tag of
-              Shaughnessy or the commute from the suburbs.&rdquo;
+              &ldquo;Top schools, a real village high street, and space to
+              breathe, without the Shaughnessy price tag.&rdquo;
             </p>
           </blockquote>
 
-          <p className="text-warm-700 leading-relaxed mb-4">
-            Dunbar-Southlands is overwhelmingly a detached-home neighbourhood,
-            and the composite benchmark reflects that at around{" "}
-            <strong>$2.5M</strong>. The typical Dunbar house is a character home
-            or modern rebuild on a standard 33-by-122-foot lot, priced from{" "}
+          <p className="text-warm-700 leading-relaxed mb-6">
+            The composite benchmark sits around <strong>$2.5M</strong>. The
+            typical Dunbar house is a character home or modern rebuild on a
+            standard 33-by-122-foot lot, priced from{" "}
             <strong>$2.5M to $5M+</strong> depending on condition, size, and
             proximity to the village. Southlands equestrian properties on larger
-            acreage push well beyond that. The homes that sell fastest are
+            acreage push well beyond that. Townhomes near Dunbar Village run{" "}
+            <strong>$1.3M to $2M</strong> and are sought after by young families
+            who want the catchment without stretching for a detached home. A
+            handful of low-rise condos near the village start around{" "}
+            <strong>$700K to $1.2M</strong>. The homes that sell fastest are
             updated heritage places with modern kitchens and original charm
-            intact. That combination is irresistible to families.
-          </p>
-          <p className="text-warm-600 leading-relaxed mb-6">
-            The multi-family inventory is limited but growing. Townhomes near
-            Dunbar Village run <strong>$1.3M to $2M</strong> and are incredibly
-            sought after by young families who want the catchment and community
-            without stretching for a detached home. A handful of low-rise condos
-            near the village start around <strong>$700K to $1.2M</strong>. Lord
-            Byng Secondary&apos;s catchment is a genuine price driver here. I&apos;ve
-            seen families pay a premium just to land within those boundaries.
+            intact.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
             UBC is a 10-minute drive or bus ride through Pacific Spirit Park.
             Downtown is 25 to 30 minutes depending on traffic. Bus routes run
             direct to campus and connect to Broadway for SkyTrain access. The
-            neighbourhood itself is extremely walkable around the village. You
+            neighbourhood itself is extremely walkable around the village: you
             can handle groceries, coffee, the library, and kids&apos; activities
-            without touching your car. Pacific Spirit Park&apos;s 73 kilometres
-            of trails are accessible on foot from most streets, and serious
-            cyclists use the network to connect to the waterfront path and
-            beyond.
-          </p>
-
-          <p className="text-warm-700 leading-relaxed mb-6">
-            Families. Overwhelmingly, families. Couples who outgrew their Kits
-            condo and want a yard and Lord Byng catchment. UBC faculty who want
-            a 10-minute commute through the forest. Parents who grew up in
-            Dunbar and came back to raise their own kids on the same streets.
-            In Southlands, you&apos;ll find equestrian families and a handful of
-            hobby farmers who have quietly held onto their land for decades.
-            It&apos;s a neighbourhood with strong parent networks, an active
-            community association, and the kind of social fabric that forms when
-            people actually stay put.
+            without touching your car. Serious cyclists use the park network to
+            connect to the waterfront path and beyond.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> Dunbar-Southlands is Vancouver&apos;s
-              best family neighbourhood, full stop. The village is genuine, the
-              schools are excellent, Pacific Spirit Park is at your door, and the
-              community is the kind that actually looks out for each other. If
-              you want your kids to grow up riding bikes to the bookstore and
-              playing in the forest, this is where you want to be.
+              best family neighbourhood. The village is genuine, the schools are
+              excellent, Pacific Spirit Park is at your door, and the community
+              is the kind that actually looks out for each other.
             </p>
           </div>
         </div>
