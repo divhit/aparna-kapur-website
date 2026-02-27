@@ -256,7 +256,6 @@ export default function NeighborhoodsPage() {
           <SectionHeading
             eyebrow="All Neighbourhoods"
             title="Explore the Area"
-            description="Each neighbourhood offers its own unique character and lifestyle."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {neighborhoods.map((hood) => (
