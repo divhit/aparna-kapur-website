@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Link from "next/link";
 import PageBanner from "@/components/hero/PageBanner";
+import GetInTouch from "@/components/sections/GetInTouch";
 
 function formatCurrency(value: number) {
   return new Intl.NumberFormat("en-CA", {
@@ -260,29 +260,13 @@ export default function MortgageCalculatorPage() {
                   </div>
                 )}
 
-                <div className="bg-teal-50 rounded-xl p-5 border border-teal-100">
-                  <p className="text-sm font-medium text-teal-900 mb-1">
-                    Want Personalized Advice?
-                  </p>
-                  <p className="text-xs text-teal-700/80 leading-relaxed mb-3">
-                    I can connect you with trusted mortgage brokers who
-                    specialize in the Vancouver market.
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center text-sm font-medium text-teal-700 hover:text-teal-800 transition-colors"
-                  >
-                    Let&apos;s Chat
-                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <GetInTouch />
     </>
   );
 }
