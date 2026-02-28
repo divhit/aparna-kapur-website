@@ -64,16 +64,6 @@ export default function NeighbourhoodReportSignup({
           </h2>
         </div>
         <div className="overflow-hidden mb-8">
-          <p
-            className={`text-white/60 text-lg transition-all duration-700 ease-out delay-150 ${
-              visible
-                ? "translate-y-0 opacity-100"
-                : "translate-y-full opacity-0"
-            }`}
-          >
-            Detailed market data, school rankings, upcoming developments, and my
-            personal take — delivered to your inbox.
-          </p>
         </div>
 
         <div

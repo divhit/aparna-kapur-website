@@ -52,7 +52,7 @@ export default function HomeValuationPage() {
                       {item.step}
                     </div>
                     <div>
-                      <h3 className="font-medium text-teal-950 mb-1">
+                      <h3 className="font-serif font-bold italic text-xl text-teal-950 mb-1">
                         {item.title}
                       </h3>
                       <p className="text-sm text-warm-600 leading-relaxed">

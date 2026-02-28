@@ -71,7 +71,7 @@ const neighborhoods = [
     tagline: "Beach Living & Urban Energy",
     description: "One of Vancouver's most desirable beach neighbourhoods, known for its outdoor lifestyle, vibrant West 4th Avenue dining scene, and proximity to both UBC and downtown.",
     stats: { avgPrice: "$1.25M", transit: "99 B-Line & Broadway", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/kitsilano.png",
     featured: false,
   },
   {
@@ -89,7 +89,7 @@ const neighborhoods = [
     tagline: "Upscale Living on the Greenway",
     description: "A refined residential area between Kerrisdale and Shaughnessy, featuring the Arbutus Greenway, heritage homes on generous lots, and the charming Arbutus Village.",
     stats: { avgPrice: "$2.20M", transit: "Arbutus Greenway", newHomes: "Limited" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/arbutus-ridge.png",
     featured: false,
   },
   {
@@ -98,7 +98,7 @@ const neighborhoods = [
     tagline: "Family Living Near UBC & Pacific Spirit",
     description: "A family-oriented west-side neighbourhood with Dunbar Village shopping, spacious lots, and immediate access to Pacific Spirit Regional Park and UBC.",
     stats: { avgPrice: "$2.50M", transit: "Bus to UBC", newHomes: "Limited" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/dunbar-southlands.png",
     featured: false,
   },
   {
@@ -143,7 +143,7 @@ const neighborhoods = [
     tagline: "Beach Life & Vibrant Community",
     description: "One of Canada's most vibrant urban neighbourhoods, offering English Bay beaches, Davie Village culture, Denman Street dining, and Stanley Park at your doorstep.",
     stats: { avgPrice: "$680K", transit: "Burrard Station", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/west-end.jpeg",
     featured: false,
   },
   {
@@ -179,7 +179,7 @@ const neighborhoods = [
     tagline: "Multicultural Heart of East Van",
     description: "One of Vancouver's largest neighbourhoods, known for Trout Lake, the Kingsway restaurant corridor, diverse communities, and excellent value for families.",
     stats: { avgPrice: "$1.15M", transit: "Near Joyce Station", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/kensington-cedar-cottage.png",
     featured: false,
   },
   {

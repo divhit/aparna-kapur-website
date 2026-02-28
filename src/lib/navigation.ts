@@ -39,6 +39,14 @@ export const navRight: NavItem[] = [
   {
     label: "Neighborhoods",
     href: "/neighborhoods",
+    children: [
+      { label: "Oakridge", href: "/neighborhoods/oakridge" },
+      { label: "South Cambie", href: "/neighborhoods/south-cambie" },
+      { label: "Riley Park", href: "/neighborhoods/riley-park" },
+      { label: "Cambie Corridor", href: "/neighborhoods/cambie-corridor" },
+      { label: "Kerrisdale", href: "/neighborhoods/kerrisdale" },
+      { label: "Marpole", href: "/neighborhoods/marpole" },
+    ],
   },
   {
     label: "Resources",

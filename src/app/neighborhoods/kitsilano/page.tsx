@@ -24,7 +24,7 @@ export default function KitsilanoPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/1660995/pexels-photo-1660995.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop')",
+              "url('/images/neighborhoods/kitsilano.png')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />
