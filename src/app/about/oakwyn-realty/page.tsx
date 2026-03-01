@@ -18,12 +18,19 @@ export default function OakwynRealtyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="lg:sticky lg:top-28">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
                   alt="Aparna Kapur - Vancouver Realtor with Oakwyn Realty"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute bottom-4 left-4">
+                  <img
+                    src="/images/logos/oakwyn-realty.png"
+                    alt="Oakwyn Realty"
+                    className="h-12 md:h-16 drop-shadow-lg"
+                  />
+                </div>
               </div>
             </div>
 
@@ -66,11 +73,6 @@ export default function OakwynRealtyPage() {
                 </div>
               </div>
 
-              <img
-                src="/images/logos/oakwyn-realty.png"
-                alt="Oakwyn Realty"
-                className="h-20 mt-8 opacity-60"
-              />
             </div>
           </div>
         </div>

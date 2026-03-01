@@ -40,6 +40,7 @@ export const navRight: NavItem[] = [
     label: "Neighborhoods",
     href: "/neighborhoods",
     children: [
+      { label: "All Neighbourhoods", href: "/neighborhoods" },
       { label: "Oakridge", href: "/neighborhoods/oakridge" },
       { label: "South Cambie", href: "/neighborhoods/south-cambie" },
       { label: "Riley Park", href: "/neighborhoods/riley-park" },

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import GetInTouch from "@/components/sections/GetInTouch";
 import PageBanner from "@/components/hero/PageBanner";
-import MarketAccordion from "./MarketAccordion";
+import MarketByRegion from "./MarketByRegion";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Market Reports | Oakridge & Surrounding Areas",
@@ -17,7 +17,7 @@ export default function MarketReportsPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           {/* Monthly Market Snapshots */}
-          <MarketAccordion />
+          <MarketByRegion />
 
           {/* Market Context */}
           <div className="bg-warm-50 rounded-2xl p-8 mt-12 mb-12">
@@ -59,26 +59,6 @@ export default function MarketReportsPage() {
             </div>
           </div>
 
-          <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100 mb-12">
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 rounded-full bg-teal-600 flex items-center justify-center shrink-0 mt-0.5">
-                <span className="text-white font-serif text-sm font-semibold">
-                  AK
-                </span>
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-teal-900 mb-2">
-                  Want a Detailed Market Analysis?
-                </p>
-                <p className="text-sm text-teal-800/80 leading-relaxed italic">
-                  &ldquo;These are general market trends. For specific
-                  properties or streets, I can provide a detailed Comparative
-                  Market Analysis tailored to your exact situation. Just reach
-                  out. It&apos;s free and there&apos;s no obligation.&rdquo;
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

@@ -80,7 +80,7 @@ const neighborhoods = [
     tagline: "World-Class Campus & Community",
     description: "A unique west-side community where world-class academics, stunning natural beauty, and modern village living come together on Vancouver's western tip.",
     stats: { avgPrice: "$1.35M", transit: "99 B-Line", newHomes: "Wesbrook Village" },
-    image: "https://images.pexels.com/photos/2982449/pexels-photo-2982449.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/ubc.png",
     featured: false,
   },
   {
@@ -107,7 +107,7 @@ const neighborhoods = [
     tagline: "Vancouver's Most Prestigious Address",
     description: "Vancouver's grandest heritage neighbourhood, home to stately mansions, tree-lined boulevards, VanDusen Botanical Garden, and the city's most exclusive residential streets.",
     stats: { avgPrice: "$3.50M", transit: "Near Canada Line", newHomes: "Heritage" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/shaughnessy.png",
     featured: false,
   },
   {
@@ -152,7 +152,7 @@ const neighborhoods = [
     tagline: "Creative Hub & Craft Culture",
     description: "Vancouver's creative epicentre with Main Street's independent shops and restaurants, craft breweries, vibrant public art, and a growing tech scene.",
     stats: { avgPrice: "$850K", transit: "2 SkyTrain Stations", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/mount-pleasant.jpeg",
     featured: false,
   },
   {
@@ -161,7 +161,7 @@ const neighborhoods = [
     tagline: "The Drive & Diverse Community",
     description: "An eclectic and multicultural neighbourhood centred on Commercial Drive, with indie shops, Italian cafes, and the busiest SkyTrain station in the system.",
     stats: { avgPrice: "$1.10M", transit: "Commercial-Broadway", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/grandview-woodland.png",
     featured: false,
   },
   {
@@ -170,7 +170,7 @@ const neighborhoods = [
     tagline: "PNE, Parks & East-Side Character",
     description: "A large, diverse east-side neighbourhood home to the PNE and Playland, affordable character homes, Hastings Park, and a growing food scene.",
     stats: { avgPrice: "$1.20M", transit: "Near SkyTrain", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/hastings-sunrise.png",
     featured: false,
   },
   {
@@ -188,7 +188,7 @@ const neighborhoods = [
     tagline: "Historic Roots & Creative Spirit",
     description: "Vancouver's oldest residential neighbourhood with 1890s heritage homes, an active artist community, the Strathcona farmers market, and proximity to Chinatown.",
     stats: { avgPrice: "$950K", transit: "Main St Station", newHomes: "Limited" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/strathcona.png",
     featured: false,
   },
   {
@@ -197,7 +197,7 @@ const neighborhoods = [
     tagline: "Family-Friendly & Community-Centred",
     description: "A welcoming southeast Vancouver neighbourhood with one of the city's best community centres, diverse cultures, affordable homes, and Everett Crowley Park.",
     stats: { avgPrice: "$1.10M", transit: "Bus Routes", newHomes: "Moderate" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/killarney.png",
     featured: false,
   },
   {
@@ -206,7 +206,7 @@ const neighborhoods = [
     tagline: "Vancouver's Most Diverse Neighbourhood",
     description: "Vancouver's most populous neighbourhood with three SkyTrain stations, incredible multicultural food along Kingsway, and some of the best value real estate in the city.",
     stats: { avgPrice: "$1.05M", transit: "3 SkyTrain Stations", newHomes: "Growing" },
-    image: "https://images.pexels.com/photos/2382868/pexels-photo-2382868.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop",
+    image: "/images/neighborhoods/renfrew-collingwood.png",
     featured: false,
   },
   {
@@ -264,7 +264,7 @@ export default function NeighborhoodsPage() {
                   <img
                     src={hood.image}
                     alt={`${hood.name} Vancouver`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="p-6">
@@ -275,12 +275,6 @@ export default function NeighborhoodsPage() {
                   <p className="text-sm text-warm-600 leading-relaxed mb-4 line-clamp-2">
                     {hood.description}
                   </p>
-                  <span className="inline-flex items-center text-xs font-medium text-teal-700">
-                    Explore Guide
-                    <svg className="w-3.5 h-3.5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
                 </div>
               </Link>
             ))}
