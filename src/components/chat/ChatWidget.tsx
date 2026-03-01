@@ -348,17 +348,25 @@ export default function ChatWidget() {
               );
             })}
 
-            {status === "submitted" && (
-              <div className="flex justify-start">
-                <div className="bg-warm-100 px-4 py-3 rounded-2xl rounded-bl-md">
-                  <div className="flex gap-1.5">
-                    <span className="w-2 h-2 bg-warm-400 rounded-full animate-bounce" />
-                    <span className="w-2 h-2 bg-warm-400 rounded-full animate-bounce [animation-delay:0.15s]" />
-                    <span className="w-2 h-2 bg-warm-400 rounded-full animate-bounce [animation-delay:0.3s]" />
+            {(() => {
+              const lastMsg = messages[messages.length - 1];
+              const hasVisibleContent = lastMsg?.role === "assistant" &&
+                lastMsg.parts.some((p) => (p.type === "text" && p.text) || (p.type !== "text" && p.type !== SPEC_DATA_PART_TYPE && "state" in p && (p.state === "input-available" || p.state === "output-available")));
+              const showThinking = isLoading && !hasVisibleContent;
+
+              return showThinking ? (
+                <div className="flex justify-start">
+                  <div className="bg-warm-100 px-4 py-2.5 rounded-2xl rounded-bl-md flex items-center gap-2">
+                    <div className="flex gap-1">
+                      <span className="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce" />
+                      <span className="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce [animation-delay:0.15s]" />
+                      <span className="w-1.5 h-1.5 bg-warm-400 rounded-full animate-bounce [animation-delay:0.3s]" />
+                    </div>
+                    <span className="text-xs text-warm-400">Thinking...</span>
                   </div>
                 </div>
-              </div>
-            )}
+              ) : null;
+            })()}
 
             <div ref={messagesEndRef} />
           </div>
