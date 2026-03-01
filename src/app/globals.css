@@ -35,8 +35,8 @@
   --color-warm-800: #564a3d;
   --color-warm-900: #3d352e;
 
-  --font-serif: "Lora", Georgia, "Times New Roman", serif;
-  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Raleway", system-ui, -apple-system, sans-serif;
 }
 
 /* Base styles */
@@ -46,9 +46,13 @@ body {
   background-color: #ffffff;
 }
 
-/* Justify paragraph text */
+/* Justify paragraph text, but respect centered containers */
 p {
   text-align: justify;
+}
+.text-center p,
+[class*="text-center"] p {
+  text-align: center;
 }
 
 /* Smooth scrolling */

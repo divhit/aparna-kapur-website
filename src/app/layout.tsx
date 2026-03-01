@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Lora } from "next/font/google";
+import { Raleway, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,15 +8,16 @@ import ChatWidget from "@/components/chat/ChatWidget";
 import ExitIntentPopup from "@/components/lead-capture/ExitIntentPopup";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
-const dmSans = DM_Sans({
+const raleway = Raleway({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const lora = Lora({
+const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -69,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${lora.variable}`}>
+    <html lang="en" className={`${raleway.variable} ${cormorant.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <RealEstateAgentSchema />
