@@ -35,8 +35,8 @@
   --color-warm-800: #564a3d;
   --color-warm-900: #3d352e;
 
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
 }
 
 /* Base styles */

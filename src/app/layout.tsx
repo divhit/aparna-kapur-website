@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { DM_Sans, Lora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -8,13 +8,13 @@ import ChatWidget from "@/components/chat/ChatWidget";
 import ExitIntentPopup from "@/components/lead-capture/ExitIntentPopup";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const lora = Lora({
   variable: "--font-serif",
   subsets: ["latin"],
   display: "swap",
@@ -69,7 +69,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${lora.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <RealEstateAgentSchema />
