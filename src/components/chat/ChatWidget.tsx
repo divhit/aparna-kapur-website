@@ -326,13 +326,7 @@ export default function ChatWidget() {
               </div>
             )}
 
-            {messages.map((message, msgIdx) => {
-              // Hide the last assistant message while still loading — show dots instead
-              const isLastMessage = msgIdx === messages.length - 1;
-              if (isLastMessage && message.role === "assistant" && isLoading) {
-                return null;
-              }
-
+            {messages.map((message) => {
               return (
                 <div key={message.id}>
                   {message.role === "user" ? (
@@ -354,7 +348,7 @@ export default function ChatWidget() {
               );
             })}
 
-            {isLoading && (
+            {status === "submitted" && (
               <div className="flex justify-start">
                 <div className="bg-warm-100 px-4 py-3 rounded-2xl rounded-bl-md">
                   <div className="flex gap-1.5">
