@@ -44,7 +44,7 @@ export default function HomePage() {
       {/* SECTION 1: Full-screen Hero with Slideshow */}
       <HeroSlideshow height="full">
         <div className="text-center px-6 max-w-4xl mx-auto">
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6">
+          <h1 className="font-sans text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 font-extralight uppercase tracking-[0.15em]">
             Aparna Kapur
           </h1>
           <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
