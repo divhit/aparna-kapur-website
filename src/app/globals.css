@@ -46,6 +46,11 @@ body {
   background-color: #ffffff;
 }
 
+/* Justify paragraph text */
+p {
+  text-align: justify;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
