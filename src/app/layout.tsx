@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Cormorant_Garamond } from "next/font/google";
+import { Raleway, Cormorant_Garamond, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -18,6 +18,12 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -70,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} ${cormorant.variable}`}>
+    <html lang="en" className={`${raleway.variable} ${cormorant.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <RealEstateAgentSchema />
