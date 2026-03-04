@@ -214,7 +214,7 @@ async function fetchPropertiesInBounds(
     const url = `https://ddfapi.realtor.ca/odata/v1/Property?${params}`;
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}` },
-      next: { revalidate: 3600 },
+      cache: "no-store",
     });
 
     if (!res.ok) {

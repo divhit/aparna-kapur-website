@@ -4,6 +4,8 @@ import PageBanner from "@/components/hero/PageBanner";
 import ListingCard from "@/components/listings/ListingCard";
 import { fetchFeaturedListings } from "@/lib/ddf";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Featured Listings | Vancouver South Side Homes",
   description:
