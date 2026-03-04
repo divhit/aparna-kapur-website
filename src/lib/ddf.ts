@@ -69,7 +69,6 @@ async function getAccessToken(): Promise<string> {
 
   const clientId = process.env.DDF_CLIENT_ID;
   const clientSecret = process.env.DDF_CLIENT_SECRET;
-  console.log("[DDF] Token request — clientId exists:", !!clientId, "clientSecret exists:", !!clientSecret);
   if (!clientId || !clientSecret) {
     throw new Error("DDF_CLIENT_ID and DDF_CLIENT_SECRET must be set");
   }
@@ -213,27 +212,23 @@ async function fetchPropertiesInBounds(
     if (options?.skip) params.set("$skip", String(options.skip));
 
     const url = `https://ddfapi.realtor.ca/odata/v1/Property?${params}`;
-    console.log("[DDF] Fetching properties:", url.substring(0, 120));
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}` },
       cache: "no-store",
     });
 
-    console.log("[DDF] Property response status:", res.status);
     if (!res.ok) {
-      const errText = await res.text();
-      console.error("[DDF] API error:", res.status, errText);
+      console.error("DDF API error:", res.status, await res.text());
       return { listings: [] };
     }
 
     const data = await res.json();
-    console.log("[DDF] Got", data.value?.length ?? 0, "listings, total:", data["@odata.count"]);
     return {
       listings: (data.value ?? []).map(mapDDFProperty),
       totalCount: data["@odata.count"],
     };
   } catch (error) {
-    console.error("[DDF] Fetch error:", error);
+    console.error("DDF fetch error:", error);
     return { listings: [] };
   }
 }
