@@ -21,6 +21,7 @@ export const navLeft: NavItem[] = [
       { label: "Buyer's Guide", href: "/buying/guide" },
       { label: "Search Homes", href: "/buying/search" },
       { label: "Featured Listings", href: "/buying/featured-listings" },
+      { label: "Opportunities", href: "/buying/opportunities" },
     ],
   },
   {

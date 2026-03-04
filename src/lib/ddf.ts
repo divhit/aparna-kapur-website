@@ -255,6 +255,83 @@ async function fetchPropertiesInBounds(
 // Public API
 // ---------------------------------------------------------------------------
 
+const OPPORTUNITY_KEYWORDS = [
+  "court order",
+  "estate sale",
+  "motivated",
+  "below assess",
+  "investor",
+  "must sell",
+  "price reduced",
+];
+
+export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
+  try {
+    const token = await getAccessToken();
+    const bounds = ALL_NEIGHBOURHOODS_BOUNDS;
+
+    const keywordFilter = OPPORTUNITY_KEYWORDS
+      .map((kw) => `contains(PublicRemarks,'${kw}')`)
+      .join(" or ");
+
+    const filters: string[] = [
+      `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
+      `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
+      `StandardStatus eq 'Active'`,
+      `ListPrice gt 0`,
+      `PhotosCount gt 0`,
+      `(${keywordFilter})`,
+    ];
+
+    const params = new URLSearchParams({
+      $filter: filters.join(" and "),
+      $top: "24",
+      $orderby: "OriginalEntryTimestamp asc",
+      $count: "true",
+    });
+
+    const url = `https://ddfapi.realtor.ca/odata/v1/Property?${params}`;
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` },
+      cache: "no-store",
+    });
+
+    let listings: DDFProperty[] = [];
+
+    if (res.ok) {
+      const data = await res.json();
+      listings = (data.value ?? []).map(mapDDFProperty);
+    } else {
+      console.error("DDF opportunity API error:", res.status, await res.text());
+    }
+
+    // If keyword search returns too few (or failed), backfill with longest-on-market
+    if (listings.length < 6) {
+      const { listings: fallback } = await fetchPropertiesInBounds(bounds, {
+        top: 24,
+        orderby: "OriginalEntryTimestamp asc",
+      });
+      const existingKeys = new Set(listings.map((l) => l.listingKey));
+      for (const l of fallback) {
+        if (!existingKeys.has(l.listingKey)) {
+          listings.push(l);
+          if (listings.length >= 24) break;
+        }
+      }
+    }
+
+    return listings;
+  } catch (error) {
+    console.error("DDF opportunity fetch error:", error);
+    // Fallback to longest-on-market
+    const { listings } = await fetchPropertiesInBounds(ALL_NEIGHBOURHOODS_BOUNDS, {
+      top: 24,
+      orderby: "OriginalEntryTimestamp asc",
+    });
+    return listings;
+  }
+}
+
 export async function fetchFeaturedListings(): Promise<DDFProperty[]> {
   // Show longest-on-market listings first — these are the most motivated
   // sellers and most likely to have reduced prices or accept offers below asking
