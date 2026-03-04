@@ -194,6 +194,7 @@ async function fetchPropertiesInBounds(
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
       `StandardStatus eq 'Active'`,
       `ListPrice gt 0`,
+      `PhotosCount gt 0`,
     ];
 
     if (options?.minPrice) filters.push(`ListPrice ge ${options.minPrice}`);
@@ -205,7 +206,7 @@ async function fetchPropertiesInBounds(
     const params = new URLSearchParams({
       $filter: filters.join(" and "),
       $top: String(options?.top ?? 12),
-      $orderby: `PhotosCount desc,${options?.orderby ?? "ModificationTimestamp desc"}`,
+      $orderby: options?.orderby ?? "ModificationTimestamp desc",
       $count: "true",
     });
 
