@@ -205,7 +205,7 @@ async function fetchPropertiesInBounds(
     const params = new URLSearchParams({
       $filter: filters.join(" and "),
       $top: String(options?.top ?? 12),
-      $orderby: options?.orderby ?? "ModificationTimestamp desc",
+      $orderby: `PhotosCount desc,${options?.orderby ?? "ModificationTimestamp desc"}`,
       $count: "true",
     });
 
