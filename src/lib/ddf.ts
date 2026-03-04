@@ -27,6 +27,8 @@ export type DDFProperty = {
   realtorUrl: string;
   yearBuilt?: number;
   parking?: number;
+  daysOnMarket?: number;
+  listedAt?: string;
   modifiedAt: string;
 };
 
@@ -52,6 +54,8 @@ export type ListingQueryOptions = {
   maxPrice?: number;
   propertySubType?: string;
   neighbourhood?: string;
+  minBedrooms?: number;
+  minBathrooms?: number;
   orderby?: string;
 };
 
@@ -163,6 +167,13 @@ function mapDDFProperty(raw: Record<string, unknown>): DDFProperty {
       : `https://www.realtor.ca/real-estate/${raw.ListingKey as string}`,
     yearBuilt: raw.YearBuilt as number | undefined,
     parking: raw.ParkingTotal as number | undefined,
+    daysOnMarket: raw.OriginalEntryTimestamp
+      ? Math.floor(
+          (Date.now() - new Date(raw.OriginalEntryTimestamp as string).getTime()) /
+            (1000 * 60 * 60 * 24)
+        )
+      : undefined,
+    listedAt: raw.OriginalEntryTimestamp as string | undefined,
     modifiedAt: raw.ModificationTimestamp as string,
   };
 }
@@ -202,6 +213,12 @@ async function fetchPropertiesInBounds(
     if (options?.propertySubType) {
       filters.push(`PropertySubType eq '${options.propertySubType}'`);
     }
+    if (options?.minBedrooms) {
+      filters.push(`BedroomsTotal ge ${options.minBedrooms}`);
+    }
+    if (options?.minBathrooms) {
+      filters.push(`BathroomsTotalInteger ge ${options.minBathrooms}`);
+    }
 
     const params = new URLSearchParams({
       $filter: filters.join(" and "),
@@ -239,9 +256,11 @@ async function fetchPropertiesInBounds(
 // ---------------------------------------------------------------------------
 
 export async function fetchFeaturedListings(): Promise<DDFProperty[]> {
+  // Show longest-on-market listings first — these are the most motivated
+  // sellers and most likely to have reduced prices or accept offers below asking
   const { listings } = await fetchPropertiesInBounds(ALL_NEIGHBOURHOODS_BOUNDS, {
     top: 12,
-    orderby: "ListPrice desc",
+    orderby: "OriginalEntryTimestamp asc",
   });
   return listings;
 }

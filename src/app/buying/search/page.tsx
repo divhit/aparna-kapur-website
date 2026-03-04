@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import PageBanner from "@/components/hero/PageBanner";
 import ListingCard from "@/components/listings/ListingCard";
 import SearchFilters from "@/components/listings/SearchFilters";
+import ListingsMap from "@/components/listings/ListingsMap";
 import { fetchListings } from "@/lib/ddf";
 
 export const metadata: Metadata = {
@@ -21,6 +22,8 @@ export default async function SearchPage({
     neighbourhood?: string;
     price?: string;
     type?: string;
+    beds?: string;
+    baths?: string;
     sort?: string;
     page?: string;
   }>;
@@ -41,6 +44,8 @@ export default async function SearchPage({
     minPrice,
     maxPrice,
     propertySubType: params.type || undefined,
+    minBedrooms: params.beds ? parseInt(params.beds, 10) : undefined,
+    minBathrooms: params.baths ? parseInt(params.baths, 10) : undefined,
     orderby: params.sort || "ModificationTimestamp desc",
     top: PER_PAGE,
     skip: (page - 1) * PER_PAGE,
@@ -53,6 +58,8 @@ export default async function SearchPage({
     if (params.neighbourhood) sp.set("neighbourhood", params.neighbourhood);
     if (params.price) sp.set("price", params.price);
     if (params.type) sp.set("type", params.type);
+    if (params.beds) sp.set("beds", params.beds);
+    if (params.baths) sp.set("baths", params.baths);
     if (params.sort) sp.set("sort", params.sort);
     if (p > 1) sp.set("page", String(p));
     const qs = sp.toString();
@@ -61,11 +68,7 @@ export default async function SearchPage({
 
   return (
     <>
-      <PageBanner
-        eyebrow="Search"
-        title="Search Homes"
-        align="left"
-      />
+      <PageBanner eyebrow="Search" title="Search Homes" align="left" />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -79,17 +82,27 @@ export default async function SearchPage({
           </div>
 
           {/* Filters */}
-          <div className="mb-10">
+          <div className="mb-8">
             <Suspense>
               <SearchFilters />
             </Suspense>
           </div>
 
+          {/* Map */}
+          {listings.length > 0 && (
+            <div className="mb-8">
+              <ListingsMap listings={listings} />
+            </div>
+          )}
+
           {/* Results count */}
           {totalCount != null && (
             <p className="text-sm text-warm-500 mb-6">
-              {totalCount} active {totalCount === 1 ? "listing" : "listings"}
-              {params.neighbourhood ? ` in ${params.neighbourhood.replace(/-/g, " ")}` : ""}
+              {totalCount} active{" "}
+              {totalCount === 1 ? "listing" : "listings"}
+              {params.neighbourhood
+                ? ` in ${params.neighbourhood.replace(/-/g, " ")}`
+                : ""}
             </p>
           )}
 

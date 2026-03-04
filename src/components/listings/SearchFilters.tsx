@@ -31,10 +31,28 @@ const PROPERTY_TYPES = [
   { label: "Duplex", value: "Duplex" },
 ];
 
+const BEDROOMS = [
+  { label: "Any Beds", value: "" },
+  { label: "1+ Bed", value: "1" },
+  { label: "2+ Beds", value: "2" },
+  { label: "3+ Beds", value: "3" },
+  { label: "4+ Beds", value: "4" },
+  { label: "5+ Beds", value: "5" },
+];
+
+const BATHROOMS = [
+  { label: "Any Baths", value: "" },
+  { label: "1+ Bath", value: "1" },
+  { label: "2+ Baths", value: "2" },
+  { label: "3+ Baths", value: "3" },
+  { label: "4+ Baths", value: "4" },
+];
+
 const SORT_OPTIONS = [
   { label: "Newest", value: "ModificationTimestamp desc" },
   { label: "Price: High to Low", value: "ListPrice desc" },
   { label: "Price: Low to High", value: "ListPrice asc" },
+  { label: "Longest on Market", value: "OriginalEntryTimestamp asc" },
 ];
 
 export default function SearchFilters() {
@@ -59,7 +77,7 @@ export default function SearchFilters() {
     "w-full px-4 py-3 bg-white border border-warm-200 rounded-xl text-sm text-teal-950 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 appearance-none cursor-pointer";
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
       <select
         className={selectClass}
         value={searchParams.get("neighbourhood") ?? ""}
@@ -92,6 +110,30 @@ export default function SearchFilters() {
         {PROPERTY_TYPES.map((t) => (
           <option key={t.value} value={t.value}>
             {t.label}
+          </option>
+        ))}
+      </select>
+
+      <select
+        className={selectClass}
+        value={searchParams.get("beds") ?? ""}
+        onChange={(e) => updateParam("beds", e.target.value)}
+      >
+        {BEDROOMS.map((b) => (
+          <option key={b.value} value={b.value}>
+            {b.label}
+          </option>
+        ))}
+      </select>
+
+      <select
+        className={selectClass}
+        value={searchParams.get("baths") ?? ""}
+        onChange={(e) => updateParam("baths", e.target.value)}
+      >
+        {BATHROOMS.map((b) => (
+          <option key={b.value} value={b.value}>
+            {b.label}
           </option>
         ))}
       </select>

@@ -7,9 +7,9 @@ import { fetchFeaturedListings } from "@/lib/ddf";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Featured Listings | Vancouver South Side Homes",
+  title: "Featured Listings | Opportunities on Vancouver's South Side",
   description:
-    "Browse featured active listings across Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and Cambie Corridor. Curated by Aparna Kapur, Oakwyn Realty.",
+    "Properties with the most negotiation potential across Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and Cambie Corridor. Curated by Aparna Kapur, Oakwyn Realty.",
 };
 
 export default async function FeaturedListingsPage() {
@@ -30,8 +30,8 @@ export default async function FeaturedListingsPage() {
               Featured Listings
             </h1>
             <p className="text-warm-600 mt-2">
-              Active properties across my focus neighbourhoods on
-              Vancouver&apos;s south side
+              Properties with the most time on market across my neighbourhoods.
+              These sellers are motivated and there&apos;s room to negotiate.
             </p>
           </div>
 

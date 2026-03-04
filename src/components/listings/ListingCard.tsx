@@ -62,6 +62,11 @@ export default function ListingCard({ listing }: { listing: DDFProperty }) {
             <span>{listing.parking} Parking</span>
           )}
         </div>
+        {listing.daysOnMarket != null && listing.daysOnMarket > 0 && (
+          <p className="text-[10px] text-warm-400 mt-2">
+            {listing.daysOnMarket} days on market
+          </p>
+        )}
       </div>
 
       {/* REALTOR.ca link */}
