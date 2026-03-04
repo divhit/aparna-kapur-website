@@ -39,17 +39,29 @@ export default async function SearchPage({
     if (max) maxPrice = parseInt(max, 10);
   }
 
-  const { listings, totalCount } = await fetchListings({
+  const sharedFilters = {
     neighbourhood: params.neighbourhood || undefined,
     minPrice,
     maxPrice,
     propertySubType: params.type || undefined,
     minBedrooms: params.beds ? parseInt(params.beds, 10) : undefined,
     minBathrooms: params.baths ? parseInt(params.baths, 10) : undefined,
-    orderby: params.sort || "ModificationTimestamp desc",
-    top: PER_PAGE,
-    skip: (page - 1) * PER_PAGE,
-  });
+  };
+
+  // Fetch paginated results and all map pins in parallel
+  const [{ listings, totalCount }, { listings: mapListings }] =
+    await Promise.all([
+      fetchListings({
+        ...sharedFilters,
+        orderby: params.sort || "ModificationTimestamp desc",
+        top: PER_PAGE,
+        skip: (page - 1) * PER_PAGE,
+      }),
+      fetchListings({
+        ...sharedFilters,
+        top: 100,
+      }),
+    ]);
 
   const totalPages = totalCount ? Math.ceil(totalCount / PER_PAGE) : 1;
 
@@ -88,10 +100,10 @@ export default async function SearchPage({
             </Suspense>
           </div>
 
-          {/* Map */}
-          {listings.length > 0 && (
+          {/* Map — shows all matching listings, not just current page */}
+          {mapListings.length > 0 && (
             <div className="mb-8">
-              <ListingsMap listings={listings} />
+              <ListingsMap listings={mapListings} />
             </div>
           )}
 
