@@ -16,7 +16,7 @@ export const navLeft: NavItem[] = [
   },
   {
     label: "Buying",
-    href: "/buying",
+    href: "/buying/guide",
     children: [
       { label: "Buyer's Guide", href: "/buying/guide" },
       { label: "Search Homes", href: "/buying/search" },
@@ -26,7 +26,7 @@ export const navLeft: NavItem[] = [
   },
   {
     label: "Selling",
-    href: "/selling",
+    href: "/selling/guide",
     children: [
       { label: "Seller's Guide", href: "/selling/guide" },
       { label: "Home Valuation", href: "/selling/home-valuation" },
@@ -52,7 +52,7 @@ export const navRight: NavItem[] = [
   },
   {
     label: "Resources",
-    href: "/resources",
+    href: "/resources/market-reports",
     children: [
       { label: "Blog", href: "/resources/blog" },
       { label: "Market Reports", href: "/resources/market-reports" },
