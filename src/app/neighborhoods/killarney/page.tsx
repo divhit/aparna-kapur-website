@@ -57,28 +57,23 @@ export default function KillarneyPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Killarney Community Centre is the anchor of this neighbourhood.
-            Pool, ice rink, gym, fitness centre, and wall-to-wall programming
-            for toddlers through seniors. It is widely considered one of the
-            best recreation facilities in the city, and it turns a quiet
-            southeast corner of Vancouver into a place with a genuine pulse.
-            Morning swim, after-school hockey, Saturday yoga. That kind of
-            anchor changes a neighbourhood.
+            Killarney Community Centre anchors this neighbourhood: pool, ice
+            rink, gym, and wall-to-wall programming for toddlers through
+            seniors. Widely considered one of the city&apos;s best recreation
+            facilities. Morning swim, after-school hockey, Saturday yoga.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The streets are wide and residential with mature trees and generous
-            lots, mostly 1960s and &apos;70s homes that have been maintained,
-            renovated, or rebuilt over the decades. Chinese, South Asian,
-            Filipino, and Vietnamese families have been here for generations,
-            and the food along the Kingsway corridor reflects it: pho, dim sum,
-            curries, Filipino bakeries, all priced for regulars. Killarney
-            Secondary is one of Vancouver&apos;s largest high schools with over
-            1,800 students from more than 60 cultural backgrounds and a
-            renowned performing arts program. Everett Crowley Park, shared with
-            neighbouring Victoria-Fraserview, adds 40 hectares of trails and
-            panoramic views. T&T Supermarket, Champlain Square, and Metrotown
-            just across the Burnaby boundary handle everything else.
+            Wide streets, mature trees, generous lots, mostly 1960s and
+            &apos;70s homes maintained, renovated, or rebuilt over the decades.
+            Chinese, South Asian, Filipino, and Vietnamese families have been
+            here for generations, and the Kingsway food corridor reflects it:
+            pho, dim sum, curries, Filipino bakeries, all priced for regulars.
+            Killarney Secondary has 1,800+ students from 60+ cultural
+            backgrounds and a renowned performing arts program. Everett Crowley
+            Park adds 40 hectares of trails and panoramic views. T&T
+            Supermarket, Champlain Square, and Metrotown (just across the
+            Burnaby boundary) handle everything else.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -89,41 +84,33 @@ export default function KillarneyPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            At a composite benchmark of around <strong>$1.1M</strong>,
-            Killarney is one of Vancouver&apos;s strongest value propositions.
-            Condos range from <strong>$450K to $750K</strong>, mostly newer
-            builds along the main corridors offering a genuine entry point into
-            a neighbourhood with top-tier amenities. Townhomes run{" "}
-            <strong>$800K to $1.1M</strong>, attracting young families who want
-            more space than a condo but are not ready for a full house.
-            Detached homes sit in the <strong>$1.3M to $1.8M</strong> range on
-            proper lots with serious laneway house potential. Active
-            densification along Kingsway means more amenities and housing
-            options are coming.
+            Composite benchmark: around <strong>$1.1M</strong>, one of
+            Vancouver&apos;s strongest value plays. Condos at{" "}
+            <strong>$450K to $750K</strong> (mostly newer builds) offer a real
+            entry point into top-tier amenities. Townhomes run{" "}
+            <strong>$800K to $1.1M</strong> for families wanting more space.
+            Detached homes sit at <strong>$1.3M to $1.8M</strong> on proper
+            lots with laneway house potential. Densification along Kingsway is
+            bringing more amenities and housing options.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The walk score of 78 reflects a neighbourhood where daily errands,
-            groceries, school drop-off, and the community centre are all doable
-            on foot. Joyce-Collingwood SkyTrain is the closest Expo Line
-            station, reachable by bus or a short drive. Kingsway provides
-            frequent bus service, and Metrotown&apos;s transit connections are
-            just across the Burnaby boundary. The community is families:
-            Chinese, South Asian, Filipino, and Vietnamese households who have
-            been here long enough to see the neighbourhood evolve, young
-            couples who did the math and chose a Killarney townhome over a
-            west-side condo, and retirees who walk to the community centre
-            every morning and know everyone by name.
+            Walk score: 78. Daily errands, groceries, school, and the
+            community centre are all doable on foot. Joyce-Collingwood
+            SkyTrain is reachable by bus or a short drive. Kingsway has
+            frequent bus service, and Metrotown&apos;s transit hub is just
+            across the Burnaby boundary. The community: long-time Chinese,
+            South Asian, Filipino, and Vietnamese families, young couples
+            who chose a Killarney townhome over a west-side condo, and
+            retirees who walk to the community centre every morning.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Killarney is the neighbourhood for
-              value-conscious families who want community amenities, a great
-              school, generous lots, and a benchmark price that still starts
-              with a one. The community centre alone would be worth a premium,
-              and the fact that everything else comes at $1.1M makes this one
-              of the smartest buys in the city.
+              <strong>Bottom line:</strong> Community amenities, a great school,
+              generous lots, and a benchmark that still starts with a one. The
+              community centre alone would justify a premium. At $1.1M, this is
+              one of the smartest buys in the city.
             </p>
           </div>
         </div>

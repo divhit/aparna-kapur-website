@@ -57,26 +57,23 @@ export default function SunsetPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Sunset is where families come for space and stay for community. Real
-            houses on real lots with mature cherry trees, vegetable gardens, and
-            backyards where kids actually run around. The streets are quiet, the
-            gardens immaculate. Sikh families tend their vegetable patches,
-            Chinese grandparents do tai chi in the park, and the smell of fresh
-            naan drifts from one house while com tam comes from the next. No one
-            is performing multiculturalism here. They have been living it for
-            decades.
+            Families come for space and stay for community. Real lots with
+            mature cherry trees, vegetable gardens, and backyards where kids
+            run around. Sikh families tend their vegetable patches, Chinese
+            grandparents do tai chi in the park, and the smell of fresh naan
+            drifts from one house while com tam comes from the next. No one
+            performs multiculturalism here. They have lived it for decades.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The Punjabi Market on Main Street between 48th and 51st is one of
-            North America&apos;s first South Asian commercial districts,
-            established in the 1970s. Sweet shops, sari stores, jewellers, and
-            restaurants still anchor the strip, with revitalization plans
-            underway. Beyond the market, Sunset Community Centre anchors daily
-            life and Churchill Secondary draws families from across the city
-            for its IB program and strong athletics. Kids walk to school. People
-            use their front porches. It is unpretentious in the best
-            possible way.
+            The Punjabi Market on Main Street (48th to 51st) is one of North
+            America&apos;s first South Asian commercial districts, established
+            in the 1970s. Sweet shops, sari stores, jewellers, and restaurants
+            still anchor the strip, with revitalization underway. Sunset
+            Community Centre anchors daily life. Churchill Secondary draws
+            families citywide for its IB program and strong athletics. Kids
+            walk to school. People use their front porches. Unpretentious in
+            the best way.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -87,39 +84,34 @@ export default function SunsetPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark sits around <strong>$1.3M</strong>, and
-            that buys into a neighbourhood that is overwhelmingly detached
-            homes on generous lots. Detached homes run{" "}
-            <strong>$1.4M to $1.9M</strong> for solid post-war construction
-            with 33-foot frontages as standard, many wider. Condos are less
-            common but start around <strong>$450K to $650K</strong> along
-            major corridors. The real story is laneway houses: Sunset is one of
-            Vancouver&apos;s most active areas for laneway construction, with
-            suites renting for <strong>$1,800 to $2,500 per month</strong>,
-            making multigenerational living on one lot practical and
-            financially smart.
+            Composite benchmark: around <strong>$1.3M</strong>, overwhelmingly
+            detached homes on generous lots. Detached homes run{" "}
+            <strong>$1.4M to $1.9M</strong> with 33-foot frontages as
+            standard, many wider. Condos are less common, starting around{" "}
+            <strong>$450K to $650K</strong> along major corridors. The real
+            story is laneway houses: Sunset is one of Vancouver&apos;s most
+            active areas for laneway construction, with suites renting for{" "}
+            <strong>$1,800 to $2,500/month</strong>, making multigenerational
+            living practical and financially smart.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            A car helps, though the neighbourhood is far from isolated.
-            Langara-49th Station on the Canada Line is reachable by a quick
-            bus ride, putting you 20 minutes from downtown and 15 from YVR.
-            Knight Street Bridge connects directly to Richmond and Highway 99.
-            Bus routes along Main, Fraser, and 49th provide reliable service.
-            The walk score of 75 reflects a neighbourhood built for living in,
-            not rushing through. The community skews toward families who want
-            space: Sikh and South Asian families with roots in the Punjabi
-            Market, Chinese families who came for the lots and stayed for the
-            schools, and young families done with renting who want their kids
-            to have a backyard.
+            A car helps, though Langara-49th Station on the Canada Line is a
+            quick bus ride away (20 minutes to downtown, 15 to YVR). Knight
+            Street Bridge connects to Richmond and Highway 99. Bus routes
+            along Main, Fraser, and 49th are reliable. Walk score: 75. The
+            community skews toward families who want space: Sikh and South
+            Asian families with Punjabi Market roots, Chinese families who
+            came for the lots and stayed for the schools, and young families
+            done with renting.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
               <strong>Bottom line:</strong> If your priority is space, a real
-              lot, and a neighbourhood with deep cultural roots, Sunset delivers
-              in a way that very few Vancouver neighbourhoods can at this price
-              point. It will never be Kitsilano. It does not want to be.
+              lot, and deep cultural roots, Sunset delivers in a way that few
+              Vancouver neighbourhoods can at this price. It will never be
+              Kitsilano. It does not want to be.
             </p>
           </div>
         </div>

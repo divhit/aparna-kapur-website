@@ -57,27 +57,24 @@ export default function RenfrewCollingwoodPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Over 50,000 people live in Renfrew-Collingwood, making it
-            Vancouver&apos;s most populous neighbourhood, yet it still flies
-            under the radar. More than 50 cultures are represented here
-            according to census data. Chinese, Vietnamese, Filipino, South
-            Asian, and Korean families have deep roots, some going back decades.
-            Collingwood Neighbourhood House runs newcomer support, family
-            programs, and youth services that genuinely knit the community
+            Over 50,000 people, 50+ cultures, and Vancouver&apos;s most
+            populous neighbourhood, yet still under the radar. Chinese,
+            Vietnamese, Filipino, South Asian, and Korean families have deep
+            roots here. Collingwood Neighbourhood House runs newcomer support,
+            family programs, and youth services that knit the community
             together.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The north end, Renfrew, has a quieter, tree-lined suburban feel
-            with older character homes on deep lots and the hidden Renfrew
-            Ravine, a salmon-bearing urban corridor where the annual Moon
-            Festival fills the trails with lanterns and art. The south end,
-            Collingwood, is a different energy. Collingwood Village around Joyce
-            Station is transit-oriented development done right: condo towers,
-            townhomes, parks, and shops woven into a walkable community. The
-            food along Kingsway is staggering. Dim sum, pho, Korean BBQ,
-            Filipino adobo, fresh naan, block after block, all authentic
-            and affordable.
+            The north end (Renfrew) is quieter: tree-lined streets, character
+            homes on deep lots, and the hidden Renfrew Ravine, a
+            salmon-bearing corridor where the annual Moon Festival fills
+            trails with lanterns and art. The south end (Collingwood) has
+            different energy. Collingwood Village around Joyce Station is
+            transit-oriented development done right: condo towers, townhomes,
+            parks, and shops in a walkable community. The food along Kingsway
+            is staggering: dim sum, pho, Korean BBQ, Filipino adobo, fresh
+            naan, block after block.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -88,37 +85,34 @@ export default function RenfrewCollingwoodPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark sits around <strong>$1.05M</strong>,
-            meaningfully below the Vancouver average. Condos run{" "}
-            <strong>$400K to $700K</strong>, concentrated near Joyce Station
-            where rental demand is consistently strong. Townhomes go for{" "}
-            <strong>$750K to $1M</strong>, mostly newer builds that young
-            families favour for their space-to-dollar ratio. Detached homes
-            range from <strong>$1.2M to $1.7M</strong>, typically post-war
-            construction on generous lots with serious laneway house potential.
-            With the City of Vancouver actively planning densification around
-            all three SkyTrain stations (Renfrew, Rupert, and
-            Joyce-Collingwood), the long-term investment case is compelling.
+            Composite benchmark: around <strong>$1.05M</strong>, well below
+            the Vancouver average. Condos run{" "}
+            <strong>$400K to $700K</strong> near Joyce Station, where rental
+            demand stays strong. Townhomes go for{" "}
+            <strong>$750K to $1M</strong> (newer builds with good
+            space-to-dollar ratios). Detached homes range from{" "}
+            <strong>$1.2M to $1.7M</strong>, typically post-war on generous
+            lots with laneway house potential. Densification planned around
+            all three SkyTrain stations (Renfrew, Rupert, Joyce-Collingwood)
+            makes the long-term investment case compelling.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Three Expo Line stations give you a direct 20-minute ride downtown
-            with no transfer, which sets this neighbourhood apart from most of
-            south Vancouver. The walk score is 82, Kingsway provides frequent
-            bus service, and Knight Street Bridge gets you to Richmond and YVR
-            quickly by car. The community is broad: young couples priced out of
-            East Van discovering they can afford a two-bedroom near SkyTrain,
-            families near Windermere Secondary, and long-time residents who have
-            watched three generations grow up on the same block.
+            Three Expo Line stations put you downtown in 20 minutes with no
+            transfer, setting this apart from most of south Vancouver. Walk
+            score: 82. Kingsway has frequent bus service, and Knight Street
+            Bridge gets you to Richmond and YVR by car. The community: young
+            couples who can afford a two-bedroom near SkyTrain, families near
+            Windermere Secondary, and long-time residents who have watched
+            three generations grow up on the same block.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Renfrew-Collingwood is where value,
-              transit access, and genuine multicultural community converge. If
-              you want three SkyTrain stations, some of the best food in the
-              city, and a benchmark well below the Vancouver average, this is
-              the neighbourhood.
+              <strong>Bottom line:</strong> Value, transit, and genuine
+              multicultural community in one place. Three SkyTrain stations,
+              some of the city&apos;s best food, and a benchmark well below
+              the Vancouver average.
             </p>
           </div>
         </div>

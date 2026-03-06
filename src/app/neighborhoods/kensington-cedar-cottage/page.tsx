@@ -57,28 +57,24 @@ export default function KensingtonCedarCottagePage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            KCC is one of Vancouver&apos;s largest and most diverse
-            neighbourhoods, and Trout Lake is its anchor. Summer Saturdays
-            bring kids splashing at the beach, the farmers&apos; market in
-            full swing, and pickup softball on the diamond. Chinese,
-            Vietnamese, Filipino, South Asian, and Latin American communities
-            have all shaped the area&apos;s character, cuisine, and
-            commercial life over decades. The Kingsway food corridor is the
-            result: Vietnamese pho houses next to dim sum parlours next to
-            Korean barbecue, all authentic, all packed.
+            KCC is one of Vancouver&apos;s largest neighbourhoods, and Trout
+            Lake is its anchor. Summer Saturdays mean kids at the beach,
+            the farmers&apos; market in full swing, and pickup softball on
+            the diamond. Chinese, Vietnamese, Filipino, South Asian, and
+            Latin American communities have shaped the area for decades.
+            The Kingsway food corridor shows it: pho houses next to dim sum
+            parlours next to Korean barbecue, all authentic, all packed.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The lots here are genuinely big, with room for garden suites,
-            laneway houses, and the kind of backyard gardens where neighbours
-            trade zucchini over the fence. Fruit trees are a neighbourhood
-            signature: plum, cherry, apple, fig. The Trout Lake
-            Farmers&apos; Market runs May through October and has become one
-            of the city&apos;s most beloved weekend rituals. Joyce-Collingwood
-            Station on the Expo Line anchors the eastern edge, getting you
-            downtown in about 20 minutes. The Kingsway corridor has frequent
-            bus service, and cycling connections to the central valley
-            greenway continue to improve. Walk Score: 80.
+            The lots are big enough for garden suites, laneway houses, and
+            backyard gardens where neighbours trade zucchini over the fence.
+            Fruit trees are a signature: plum, cherry, apple, fig. The
+            Trout Lake Farmers&apos; Market runs May through October.
+            Joyce-Collingwood Station gets you downtown in 20 minutes.
+            Frequent bus service runs along Kingsway, and cycling
+            connections to the Central Valley Greenway keep improving.
+            Walk Score: 80.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -90,37 +86,31 @@ export default function KensingtonCedarCottagePage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark is around <strong>$1.15M</strong>,
-            and what you get for that is significantly more space per dollar
-            than almost anywhere else in the city. Detached homes are the
-            backbone, ranging from <strong>$1.2M to $1.6M</strong> with
-            generous lot sizes that often include laneway house potential.
-            That laneway income can meaningfully offset a mortgage. Condos
-            are a growing segment near Kingsway and Joyce-Collingwood
-            Station at <strong>$450K to $700K</strong>. Townhomes in the{" "}
-            <strong>$800K to $1.2M</strong> range are popular with young
-            families who want more space than a condo but are not quite
-            ready for a detached home.
+            Composite benchmark: around <strong>$1.15M</strong>, with
+            significantly more space per dollar than almost anywhere else
+            in the city. Detached homes range from{" "}
+            <strong>$1.2M to $1.6M</strong> on generous lots with laneway
+            house potential (that rental income offsets a mortgage). Condos
+            near Kingsway and Joyce-Collingwood Station run{" "}
+            <strong>$450K to $700K</strong>. Townhomes at{" "}
+            <strong>$800K to $1.2M</strong> suit young families who want
+            more space than a condo.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Families are the core. Multi-generational households with
-            grandparents, parents, and kids under one roof, the lot sizes
-            actually allow for that. Young couples buying their first home
-            who want a backyard and a garden. Food lovers who consider
-            Kingsway dining a non-negotiable lifestyle amenity. Long-time
-            residents from the Chinese, Vietnamese, and Filipino communities
-            who have built their lives here for decades. KCC delivers
-            substance, space, and a sense of belonging.
+            Families are the core: multi-generational households (the lot
+            sizes allow it), first-time buyers who want a backyard, food
+            lovers who consider Kingsway dining non-negotiable, and
+            long-time residents from the Chinese, Vietnamese, and Filipino
+            communities.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> KCC delivers a real house with a
-              real yard in a real community, all within city limits. For
-              families and anyone who values space and authenticity over
-              proximity to downtown, it offers more per dollar than anywhere
-              else in Vancouver.
+              <strong>Bottom line:</strong> A real house, a real yard, a real
+              community, all within city limits. For families who value space
+              and authenticity over proximity to downtown, KCC offers more per
+              dollar than anywhere else in Vancouver.
             </p>
           </div>
         </div>
