@@ -76,13 +76,6 @@ export default async function CambieCorridorPage() {
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-4">
             Cambie Corridor, Vancouver
           </h1>
-          <p className="text-xl text-teal-200 font-medium mb-2">
-            The Complete Neighborhood Guide
-          </p>
-          <p className="text-white/70 max-w-2xl text-lg">
-            Vancouver&apos;s most dynamic transit-oriented development corridor,
-            stretching along the Canada Line from downtown to Marine Drive.
-          </p>
         </div>
       </section>
 
