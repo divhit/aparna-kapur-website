@@ -56,25 +56,22 @@ export default function WestPointGreyPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            West Point Grey is old Vancouver in the best possible sense. The
-            streets are quiet, the lots are generous, and the homes range from
-            lovingly maintained 1930s craftsman bungalows to ambitious
-            contemporary builds. There are no towers, no chain restaurants, no
-            rush. Kids grow up sailing at the Jericho Sailing Centre and cycling
-            the waterfront path to Kits. Three spectacular beaches line the
-            northern edge: Spanish Banks, Locarno, and Jericho.
+            Old Vancouver in the best sense. Quiet streets, generous lots,
+            homes ranging from 1930s craftsman bungalows to ambitious
+            contemporary builds. No towers, no chains, no rush. Kids sail at
+            the Jericho Sailing Centre and cycle the waterfront to Kits. Three
+            spectacular beaches line the northern edge: Spanish Banks, Locarno,
+            and Jericho.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The 10th Avenue corridor has a small cluster of shops and cafes, but
-            people chose this neighbourhood for the land, the light, and the
-            proximity to UBC and Pacific Spirit Park. Lord Byng Secondary is one
-            of the top public high schools in BC. The Folk Music Festival at
-            Jericho Beach Park every July draws a crowd that is half
+            The 10th Avenue corridor has a small cluster of shops and cafes,
+            but people choose this neighbourhood for the land, the light, and
+            UBC/Pacific Spirit Park proximity. Lord Byng Secondary is one of
+            BC&apos;s top public high schools. The Folk Music Festival at
+            Jericho Beach Park every July draws a crowd half composed of
             neighbourhood locals. UBC professors, established families, and
-            executives who could live anywhere make up the community. This is a
-            neighbourhood of lifers who found exactly what they wanted and
-            stopped searching.
+            executives who could live anywhere make up the community.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -85,36 +82,31 @@ export default function WestPointGreyPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            This is a detached-home neighbourhood. The composite benchmark is
-            around <strong>$2.3M</strong>, though the few condos and townhomes
-            pull that figure down. Single-family homes run{" "}
-            <strong>$2.5M to $6M+</strong> depending on lot size, condition, and
-            ocean views. A character Tudor on a 50-foot lot off West 8th might
-            come in around $3M. A contemporary rebuild on a double lot with water
-            views reaches $5M to $6M. Limited condos near 10th and Alma run{" "}
-            <strong>$600K to $1.3M</strong>, appealing to downsizers and UBC
-            faculty. Townhomes are scarce at <strong>$1.2M to $2M</strong> and
-            extremely sought after. Turnover is low, inventory is always tight,
-            and well-priced homes sell quickly.
+            Primarily detached homes. Composite benchmark:{" "}
+            <strong>$2.3M</strong> (a few condos and townhomes pull the figure
+            down). Single-family homes run <strong>$2.5M to $6M+</strong>
+            depending on lot size, condition, and ocean views. A character Tudor
+            on a 50-foot lot off West 8th might come in around $3M; a
+            contemporary rebuild on a double lot with water views reaches $5M
+            to $6M. Limited condos near 10th and Alma run{" "}
+            <strong>$600K to $1.3M</strong>. Townhomes are scarce at{" "}
+            <strong>$1.2M to $2M</strong> and extremely sought after. Turnover
+            is low, and well-priced homes sell fast.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            UBC is five minutes west through Pacific Spirit Park. Downtown is 20
-            to 25 minutes by car, with bus routes along West 4th, West 10th, and
-            West Broadway connecting to the broader transit network. The
-            waterfront cycling path links seamlessly to Kits, the Burrard
-            Bridge, and Stanley Park. Most families have two cars but use them
-            less than they expected. Once you settle into the beach-and-park
-            rhythm, the need to go anywhere else fades.
+            UBC is five minutes west through Pacific Spirit Park. Downtown is
+            20 to 25 minutes by car, with buses along West 4th, West 10th, and
+            West Broadway. The waterfront cycling path links to Kits, the
+            Burrard Bridge, and Stanley Park.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> West Point Grey delivers space,
-              beauty, and permanence, with three of Vancouver&apos;s best
-              beaches, UBC and Pacific Spirit Park as your backyard, and top
-              schools. If you want a home your family will keep for 30 years,
-              start here.
+              <strong>Bottom line:</strong> Space, beauty, and permanence.
+              Three of Vancouver&apos;s best beaches, UBC and Pacific Spirit
+              Park as your backyard, top schools. If you want a home your
+              family keeps for 30 years, start here.
             </p>
           </div>
         </div>

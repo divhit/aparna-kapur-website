@@ -26,27 +26,27 @@ const faqs = [
   {
     question: "Is the Cambie Corridor a good area to invest in?",
     answer:
-      "The Cambie Corridor is one of Vancouver's strongest investment corridors. The City of Vancouver's Cambie Corridor Plan has designated this area for significant densification along the Canada Line, creating a steady pipeline of new construction and pre-sale opportunities. Transit-oriented properties along the Canada Line have historically appreciated faster than the Vancouver average, and ongoing density increases continue to drive demand for both rental and ownership housing.",
+      "One of Vancouver's strongest investment corridors. The Cambie Corridor Plan drives densification along the Canada Line with a steady pipeline of new construction and pre-sales. Transit-oriented properties here have historically outpaced the Vancouver average.",
   },
   {
     question: "How much does a home cost along the Cambie Corridor?",
     answer:
-      "The GVR MLS\u00AE HPI composite benchmark for the Cambie sub-area is $1.46M as of January 2026, with condos benchmarked at $1.01M, townhomes at $1.75M, and detached homes at $2.43M. Prices vary by location along the corridor; properties closer to SkyTrain stations and new development nodes tend to command higher prices per square foot.",
+      "GVR MLS\u00AE HPI benchmarks (January 2026): condos $1.01M, townhomes $1.75M, detached $2.43M. Composite: $1.46M. Prices rise near SkyTrain stations and development nodes.",
   },
   {
     question: "What is the Cambie Corridor Plan?",
     answer:
-      "The Cambie Corridor Plan is the City of Vancouver's comprehensive master plan for transit-oriented development along the Canada Line from downtown to Marine Drive. Adopted in phases between 2011 and 2018, the plan allows for increased density around each SkyTrain station, transforming formerly single-family blocks into mixed-use communities with condos, townhomes, rental housing, retail, and community amenities. It is one of the most ambitious urban planning initiatives in Vancouver's history.",
+      "Vancouver's master plan for transit-oriented development along the Canada Line from downtown to Marine Drive. Adopted 2011-2018, it increases density around each station, transforming single-family blocks into mixed-use communities. One of Vancouver's most ambitious planning initiatives.",
   },
   {
     question: "What SkyTrain stations are on the Cambie Corridor?",
     answer:
-      "The Cambie Corridor is served by five Canada Line SkyTrain stations: Broadway-City Hall, King Edward, Oakridge-41st Avenue, Langara-49th Avenue, and Marine Drive. Each station area has its own distinct character and development plan. The upcoming Broadway Subway extension will also enhance connectivity at Broadway-City Hall station, making it a major transit interchange.",
+      "Five Canada Line stations: Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive. Each has distinct character and development. The Broadway Subway extension will make Broadway-City Hall a major interchange.",
   },
   {
     question: "Is the Cambie Corridor good for first-time buyers?",
     answer:
-      "The Cambie Corridor is excellent for first-time buyers, particularly those looking at condos and townhomes. The high volume of new construction means a strong supply of modern, move-in-ready units, many with competitive pre-sale pricing. The excellent transit access reduces the need for a car, lowering overall living costs. Buyers can find well-priced entry points at the southern end near Marine Drive and Langara-49th stations.",
+      "Excellent for first-time buyers looking at condos and townhomes. High new-construction volume means modern, move-in-ready units with competitive pre-sale pricing. Transit access reduces car dependency. Best entry points at the southern end near Marine Drive and Langara-49th.",
   },
 ];
 
@@ -167,13 +167,13 @@ export default async function CambieCorridorPage() {
                   Overview
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor is Vancouver&apos;s most significant transit-oriented development corridor, stretching roughly 6 kilometres along Cambie Street from the edge of downtown south to the Fraser River at Marine Drive. Defined by the Canada Line SkyTrain route that runs beneath it, this corridor has become the blueprint for how Vancouver is evolving from a city of single-family homes into a more complete, connected, and livable urban environment.
+                  The Cambie Corridor stretches 6 km along Cambie Street from downtown&apos;s edge south to the Fraser River at Marine Drive. Defined by the Canada Line beneath it, this corridor is the blueprint for Vancouver&apos;s evolution into a denser, more connected city.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Unlike a traditional neighborhood with fixed boundaries, the Cambie Corridor is better understood as a series of distinct communities connected by rapid transit. Each station area (Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive) has its own character, amenities, and real estate profile. The northern sections near Broadway are more urban and dense, with a vibrant mix of restaurants, shops, and offices. As you move south, the corridor transitions into quieter, more residential streets before arriving at the bustling mixed-use hub of Marine Gateway.
+                  Five station areas (Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, Marine Drive) each have distinct character and real estate profiles. The northern end near Broadway is urban and dense with restaurants, shops, and offices. Moving south, streets grow quieter before reaching the mixed-use Marine Gateway hub.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  What unites the entire corridor is transformation. Since the Canada Line opened in 2009, billions of dollars of development have reshaped block after block, bringing new condominiums, townhome complexes, rental buildings, retail, and community spaces to streets that were formerly lined with single-family houses. For homebuyers and investors, the Cambie Corridor represents one of the most compelling long-term value propositions in Metro Vancouver.
+                  Since the Canada Line opened in 2009, billions in development have reshaped block after block with condos, townhomes, rentals, retail, and community spaces. For buyers and investors, the corridor is one of Metro Vancouver&apos;s most compelling long-term plays.
                 </p>
               </section>
 
@@ -200,11 +200,11 @@ export default async function CambieCorridorPage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">City of Vancouver Master Plan</p>
                   <p className="text-sm text-gold-700">
-                    The Cambie Corridor Plan is one of the most ambitious urban planning initiatives in Vancouver&apos;s history. Adopted in phases from 2011 to 2018, it establishes a framework for thoughtful densification along the entire Canada Line route. The idea is to create complete communities around every SkyTrain station.
+                    One of Vancouver&apos;s most ambitious planning initiatives. Adopted 2011-2018, it establishes a framework for densification along the Canada Line, building complete communities around every station.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The City envisioned a graduated density approach: the highest towers and most intense mixed-use development within a short walk of each station, transitioning to mid-rise buildings, townhomes, and duplexes further out, and preserving existing character in areas beyond the corridor&apos;s influence.
+                  Graduated density: tallest towers and densest mixed-use near each station, transitioning to mid-rise, townhomes, and duplexes further out, preserving existing character beyond the corridor.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">Key Station Areas</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -222,7 +222,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The plan continues to roll out, with new projects breaking ground every year. For buyers, this means an ongoing supply of new construction and pre-sale opportunities. For owners, it means neighborhood improvement and amenity growth along with property value appreciation as different phases get completed.
+                  New projects break ground every year. Buyers get ongoing new construction and pre-sale opportunities. Owners benefit from improving amenities and appreciating values as phases complete.
                 </p>
               </section>
 
@@ -232,13 +232,13 @@ export default async function CambieCorridorPage() {
                   Cambie Corridor Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor real estate market is dominated by condominiums and townhomes. It reflects transit-oriented density. Though detached homes still exist, they are increasingly being replaced by multi-family developments.
+                  Condos and townhomes dominate, reflecting transit-oriented density. Detached homes still exist but are increasingly giving way to multi-family development.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "The most common property type along the corridor. Benchmark price is $1.01M. These new constructions offer modern amenities, open layouts, and strong rental potential." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Increasingly popular family-friendly option. Benchmark price is $1.75M. Many new townhome projects offer 3-bedroom layouts with private outdoor space." },
-                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "Few but still present on side streets away from the main corridor. Benchmark price is $2.43M. Many carry development potential as the Corridor Plan allows for rezoning." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Most common type. Benchmark: $1.01M. Modern amenities, open layouts, strong rental potential." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Popular family option. Benchmark: $1.75M. Many offer 3-bedroom layouts with private outdoor space." },
+                    { type: "Detached Homes", range: "$2.0M - $3.5M+", desc: "Few remain on side streets. Benchmark: $2.43M. Many carry development potential under Corridor Plan rezoning." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline justify-between mb-1">
@@ -250,12 +250,12 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The composite benchmark for the Cambie sub-area is $1.46M as of January 2026 (-6.1% year-over-year). Properties at the northern end near Broadway command premium prices due to proximity to downtown and the new Broadway Subway. The southern end near Marine Drive and Langara offers more affordable options.
+                  Composite benchmark: $1.46M (January 2026, -6.1% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    A very strong contender for long-term appreciation with city-sanctioned densification and ongoing construction. The backbone of Canada Line transit creates a cycle of increasing demand, improving amenities, and rising property values. Pre-sale opportunities along the corridor offer entry points for investors to ride this trajectory.
+                    City-sanctioned densification and ongoing construction support long-term appreciation. Canada Line transit drives a cycle of increasing demand, improving amenities, and rising values. Pre-sales offer entry points along the corridor.
                   </p>
                 </div>
               </section>
@@ -270,11 +270,11 @@ export default async function CambieCorridorPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "SkyTrain (Canada Line)", detail: "Five stations along the corridor: Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive. Downtown Vancouver in approximately 15 minutes, YVR airport in about 20 minutes. Trains run every 3-6 minutes during peak hours." },
-                    { mode: "Broadway Subway", detail: "The new Broadway Subway extension connects at Broadway-City Hall station, dramatically improving east-west transit to UBC, Commercial Drive, and beyond. A major upgrade for the corridor's northern end." },
-                    { mode: "Bus", detail: "Frequent bus routes along Cambie Street (Route 15), 41st Avenue (Route 43), and 49th Avenue (Route 49) connect to UBC, Metrotown, and surrounding neighborhoods." },
-                    { mode: "Cycling", detail: "The Ontario Street and Heather Street cycling greenways run parallel to the corridor. The Arbutus Greenway, a dedicated cycling and walking path, is accessible nearby." },
-                    { mode: "Driving", detail: "Cambie Street provides a direct north-south route. Oak Street, Granville Street, and Main Street run parallel. Highway 99 is accessible via the Oak Street Bridge at the southern end." },
+                    { mode: "SkyTrain (Canada Line)", detail: "Five stations. Downtown in 15 min, YVR in 20. Trains every 3-6 minutes at peak." },
+                    { mode: "Broadway Subway", detail: "Connects at Broadway-City Hall, improving east-west transit to UBC, Commercial Drive, and beyond." },
+                    { mode: "Bus", detail: "Cambie (15), 41st (43), and 49th (49) connect to UBC, Metrotown, and surrounding areas." },
+                    { mode: "Cycling", detail: "Ontario and Heather Street greenways run parallel. Arbutus Greenway accessible nearby." },
+                    { mode: "Driving", detail: "Cambie runs north-south. Oak, Granville, and Main parallel. Highway 99 via Oak Street Bridge at the southern end." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -297,15 +297,15 @@ export default async function CambieCorridorPage() {
                   Parks &amp; Recreation
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Cambie Corridor stretches past some of Vancouver&apos;s finest parks and green spaces. No matter which section you live in, quality recreation is within walking distance:
+                  Quality parks and recreation within walking distance throughout the corridor:
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park sits adjacent to the corridor near 33rd Avenue. Stunning city and mountain views from the hilltop, the Bloedel Conservatory, rose gardens, pitch-and-putt golf, and walking trails through beautifully landscaped grounds." },
-                    { name: "Douglas Park", desc: "A well-loved community park near King Edward station with playing fields, tennis courts, a playground, outdoor pool, and a community centre offering programs for all ages. A true neighborhood gathering place." },
-                    { name: "Hillcrest Community Centre & Park", desc: "One of Vancouver's premier recreation facilities, built for the 2010 Olympics. Indoor pool, ice rink, gymnasium, and extensive playing fields. Located near the Oakridge-41st section of the corridor." },
-                    { name: "Langara Golf Course", desc: "An 18-hole public golf course near Langara-49th station with perimeter walking trails. A remarkable green space asset for residents of the southern corridor." },
-                    { name: "Pocket Parks & Greenways", desc: "The Cambie Corridor Plan requires developers to contribute to new parks and green spaces. New pocket parks and improved streetscaping are being added with each development phase, steadily increasing the corridor's green space." },
+                    { name: "Queen Elizabeth Park", desc: "Adjacent to the corridor near 33rd. City and mountain views, Bloedel Conservatory, rose gardens, pitch-and-putt, and walking trails." },
+                    { name: "Douglas Park", desc: "Near King Edward station. Playing fields, tennis, playground, outdoor pool, and community centre." },
+                    { name: "Hillcrest Community Centre & Park", desc: "Built for the 2010 Olympics. Pool, ice rink, gymnasium, and playing fields near Oakridge-41st." },
+                    { name: "Langara Golf Course", desc: "18-hole public course near Langara-49th with perimeter walking trails." },
+                    { name: "Pocket Parks & Greenways", desc: "Developers contribute new parks under the Corridor Plan. Pocket parks and streetscaping added with each phase." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -321,16 +321,16 @@ export default async function CambieCorridorPage() {
                   Schools &amp; Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Because the Cambie Corridor spans multiple neighborhoods, families have access to a wide range of schools depending on their section of the corridor:
+                  Spanning multiple neighborhoods, families access different schools depending on their section:
                 </p>
                 <div className="mb-6">
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Public Elementary Schools</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Van Horne Elementary", type: "K-7 Public", detail: "Serving the central corridor near Oakridge-41st. Strong academic programs and a diverse student body." },
-                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another well-regarded option in the Oakridge catchment area." },
-                      { name: "Douglas Park Community School", type: "K-7 Public", detail: "Serving the northern corridor near King Edward station. Community-focused with strong parent involvement." },
-                      { name: "Sir Richard McBride Elementary", type: "K-7 Public", detail: "Serving the southern corridor near Marine Drive." },
+                      { name: "Van Horne Elementary", type: "K-7 Public", detail: "Central corridor near Oakridge-41st. Strong academics, diverse student body." },
+                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Well-regarded option in the Oakridge catchment." },
+                      { name: "Douglas Park Community School", type: "K-7 Public", detail: "Northern corridor near King Edward. Community-focused." },
+                      { name: "Sir Richard McBride Elementary", type: "K-7 Public", detail: "Southern corridor near Marine Drive." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -349,10 +349,10 @@ export default async function CambieCorridorPage() {
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Secondary &amp; Post-Secondary</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "A large, well-respected secondary school serving the central corridor with strong academics and athletics." },
-                      { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "Another excellent option for families in the Oakridge-41st section of the corridor." },
-                      { name: "John Oliver Secondary", type: "8-12 Public", detail: "Serving the southern corridor near the Marine Drive end." },
-                      { name: "Langara College", type: "Post-Secondary", detail: "Located directly on the corridor at 49th and Cambie, serving over 23,000 students with university transfer, career, and continuing education programs." },
+                      { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "Central corridor. Strong academics and athletics." },
+                      { name: "Sir Winston Churchill Secondary", type: "8-12 Public", detail: "Serves the Oakridge-41st section." },
+                      { name: "John Oliver Secondary", type: "8-12 Public", detail: "Southern corridor near Marine Drive." },
+                      { name: "Langara College", type: "Post-Secondary", detail: "At 49th and Cambie. 23,000+ students, university transfer, career, and continuing education." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -375,19 +375,19 @@ export default async function CambieCorridorPage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Cambie Corridor offers distinct shopping and dining experiences depending on where you are along its length.
+                  Distinct experiences along the corridor&apos;s length.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The northern section around Cambie Village (between Broadway and 19th Avenue) has locally owned boutiques, bakeries, coffee shops, restaurants, and specialty stores lining Cambie Street in a charming, walkable setting.
+                  Cambie Village (Broadway to 19th) has boutiques, bakeries, coffee shops, and restaurants in a walkable setting.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Further south, the Oakridge Park redevelopment is set to transform the 41st Avenue node into a premier retail and dining destination with over 500,000 square feet of retail.
+                  Oakridge Park at 41st will add 500,000+ square feet of retail and dining.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  At its southern end, Marine Gateway is already a thriving mixed-use hub with a cinema, grocery stores, restaurants, and everyday services that are connected directly to the Marine Drive SkyTrain station.
+                  Marine Gateway at the southern end is a thriving hub with cinema, grocery, restaurants, and services connected to Marine Drive SkyTrain.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Along the way, 41st Avenue and 49th Avenue provide additional retail strips with a diverse mix of Asian restaurants, specialty grocers and services that reflect the cultural richness of this neighborhood.
+                  Along 41st and 49th Avenues: Asian restaurants, specialty grocers, and services reflecting the corridor&apos;s cultural richness.
                 </p>
               </section>
 

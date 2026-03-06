@@ -56,26 +56,22 @@ export default function DunbarSouthlandsPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Dunbar-Southlands is really two neighbourhoods in one. The northern
-            half centres on Dunbar Village, a charming high street of independent
-            shops, bakeries, and 32 Books. Streets are wide, lots are generous,
-            mature trees form canopies over the sidewalks, and kids still ride
-            bikes to the village after school. The southern half, Southlands, is
-            something else entirely: cross SW Marine Drive and you enter a world
-            of acreage properties, horse stables, and a pastoral calm that feels
-            genuinely rural. Paddock fences line the roads, riders use the
-            trails, and the Fraser River is right there.
+            Two neighbourhoods in one. The northern half centres on Dunbar
+            Village: independent shops, bakeries, and 32 Books on a charming
+            high street. Wide streets, generous lots, tree canopies, and kids
+            biking to the village after school. South of SW Marine Drive,
+            Southlands turns rural: acreage properties, horse stables, paddock
+            fences, and the Fraser River.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Lord Byng Secondary is one of the top public high schools in BC and a
-            genuine price driver in this catchment. Pacific Spirit Park&apos;s 73
-            kilometres of trails are accessible on foot from most streets.
-            Families dominate the community: couples who outgrew their Kits condo
-            and want a yard, UBC faculty who want a 10-minute commute through the
-            forest, and parents who grew up in Dunbar and came back to raise
-            their own kids here. In Southlands, equestrian families have quietly
-            held onto their land for decades.
+            Lord Byng Secondary is one of BC&apos;s top public high schools
+            and a genuine price driver in this catchment. Pacific Spirit
+            Park&apos;s 73 kilometres of trails are accessible on foot from
+            most streets. Families dominate: couples outgrowing their Kits
+            condo, UBC faculty wanting a 10-minute forest commute, and parents
+            who grew up here and came back. In Southlands, equestrian families
+            have held their land for decades.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -86,36 +82,30 @@ export default function DunbarSouthlandsPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark sits around <strong>$2.5M</strong>. The
-            typical Dunbar house is a character home or modern rebuild on a
-            standard 33-by-122-foot lot, priced from{" "}
-            <strong>$2.5M to $5M+</strong> depending on condition, size, and
-            proximity to the village. Southlands equestrian properties on larger
-            acreage push well beyond that. Townhomes near Dunbar Village run{" "}
-            <strong>$1.3M to $2M</strong> and are sought after by young families
-            who want the catchment without stretching for a detached home. A
-            handful of low-rise condos near the village start around{" "}
-            <strong>$700K to $1.2M</strong>. The homes that sell fastest are
-            updated heritage places with modern kitchens and original charm
-            intact.
+            Composite benchmark: <strong>$2.5M</strong>. Typical Dunbar homes
+            are character houses or modern rebuilds on 33-by-122-foot lots,
+            priced from <strong>$2.5M to $5M+</strong>. Southlands equestrian
+            properties push well beyond that. Townhomes near the village
+            run <strong>$1.3M to $2M</strong>, popular with families wanting
+            the catchment without a detached price tag. A handful of condos
+            start around <strong>$700K to $1.2M</strong>. Updated heritage
+            homes with modern kitchens and original charm sell fastest.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            UBC is a 10-minute drive or bus ride through Pacific Spirit Park.
-            Downtown is 25 to 30 minutes depending on traffic. Bus routes run
-            direct to campus and connect to Broadway for SkyTrain access. The
-            neighbourhood itself is extremely walkable around the village: you
-            can handle groceries, coffee, the library, and kids&apos; activities
-            without touching your car. Serious cyclists use the park network to
-            connect to the waterfront path and beyond.
+            UBC is 10 minutes through Pacific Spirit Park. Downtown is 25 to
+            30 minutes. Buses run direct to campus and connect to Broadway for
+            SkyTrain. The village itself is extremely walkable: groceries,
+            coffee, the library, and kids&apos; activities without touching
+            your car.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Dunbar-Southlands is Vancouver&apos;s
-              best family neighbourhood. The village is genuine, the schools are
-              excellent, Pacific Spirit Park is at your door, and the community
-              is the kind that actually looks out for each other.
+              <strong>Bottom line:</strong> Vancouver&apos;s best family
+              neighbourhood. Genuine village, excellent schools, Pacific Spirit
+              Park at your door, and a community that actually looks out for
+              each other.
             </p>
           </div>
         </div>

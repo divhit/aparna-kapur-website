@@ -25,27 +25,27 @@ const faqs = [
   {
     question: "Is Riley Park a good neighborhood to buy in?",
     answer:
-      "Riley Park is one of Vancouver's most desirable neighborhoods for buyers who value character, community, and walkability. The Main Street corridor provides vibrant urban amenities, while the residential streets maintain a quieter, tree-lined charm. Strong demand for character homes, excellent transit access, and a thriving local economy make Riley Park a solid long-term investment. The Vancouver East detached benchmark is $1.70M (January 2026), with strong appreciation driven by limited supply and high buyer interest.",
+      "Riley Park is highly desirable for buyers who value character, community, and walkability. Main Street provides vibrant amenities while residential streets stay quiet and tree-lined. Strong demand, excellent transit, and a thriving local economy make it a solid long-term investment. Vancouver East detached benchmark: $1.70M (January 2026).",
   },
   {
     question: "How much does a home cost in Riley Park?",
     answer:
-      "Riley Park offers a range of housing options. Based on Vancouver East GVR MLS® HPI benchmarks (January 2026): condos at $639K, townhomes at $1.04M, and detached homes at $1.70M. Heritage character homes in prime Main Street locations can command a significant premium above the benchmark.",
+      "Vancouver East GVR MLS® HPI benchmarks (January 2026): condos $639K, townhomes $1.04M, detached $1.70M. Heritage character homes near Main Street can command a significant premium.",
   },
   {
     question: "What is Main Street like in Riley Park?",
     answer:
-      "Main Street is the cultural heart of Riley Park and one of Vancouver's most celebrated independent shopping corridors. Stretching from Broadway south to 33rd Avenue, it is lined with craft breweries (33 Acres, Brassneck, Main Street Brewing), independent boutiques, vintage shops, acclaimed restaurants, and locally owned cafes. The street has a distinctly creative, community-driven atmosphere that sets it apart from more commercial shopping districts.",
+      "Main Street is Riley Park's cultural heart and one of Vancouver's top independent corridors. From Broadway to 33rd Avenue: craft breweries (33 Acres, Brassneck, Main Street Brewing), boutiques, vintage shops, acclaimed restaurants, and local cafes. Creative and community-driven.",
   },
   {
     question: "What schools serve the Riley Park area?",
     answer:
-      "Riley Park has strong public school options at every level. Elementary schools include General Wolfe Elementary and Emily Carr Elementary, both well-regarded within the Vancouver School Board. Sir Charles Tupper Secondary serves the area for grades 8 through 12 and offers diverse programs including French Immersion. Several private and alternative schools are also accessible nearby.",
+      "Elementary: General Wolfe and Emily Carr, both well-regarded. High school: Sir Charles Tupper Secondary (French Immersion available). Private and alternative schools accessible nearby.",
   },
   {
     question: "How is transit in Riley Park?",
     answer:
-      "Riley Park has excellent transit connectivity. Multiple bus routes serve the neighborhood, including routes along Main Street, King Edward Avenue, and Broadway. The King Edward SkyTrain station (Canada Line) is within walking or short cycling distance for many residents, and the Broadway-City Hall station provides Expo Line access. The upcoming Broadway Subway extension further improves connectivity to the west side and UBC.",
+      "Bus routes along Main Street, King Edward, and Broadway. King Edward SkyTrain (Canada Line) is walkable for many residents; Broadway-City Hall offers Expo Line access. The Broadway Subway extension further improves westside and UBC connectivity.",
   },
 ];
 
@@ -164,13 +164,13 @@ export default async function RileyParkPage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park is a vibrant neighborhood in central Vancouver, bounded roughly by King Edward Avenue to the north, 41st Avenue to the south, Main Street to the east, and Cambie Street to the west. Named after the park at its centre, this community has evolved to a trend setting neighborhood where creative energy and community spirit come together.
+                  Riley Park sits in central Vancouver between King Edward, 41st Avenue, Main Street, and Cambie Street. A trend-setting neighborhood where creative energy and community spirit meet.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  It is home to Vancouver&apos;s celebrated craft brewery district. This is not a neighborhood built on chain stores infact its the mecca of independent boutiques with some acclaimed restaurants and cafes.
+                  Home to Vancouver&apos;s craft brewery district, this is a neighborhood built on independents: boutiques, acclaimed restaurants, and local cafes. No chain stores.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Riley Park is also home to Nat Bailey Stadium, a beloved heritage ballpark where the Vancouver Canadians play summer baseball. The combination of local character, walkable urban life while having a connection to community is what living here is all about.
+                  Nat Bailey Stadium, a heritage ballpark hosting Vancouver Canadians summer baseball, anchors the community. Local character, walkability, and connection define life here.
                 </p>
               </section>
 
@@ -192,16 +192,16 @@ export default async function RileyParkPage() {
                   Living in Riley Park
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park offers a balance of urban vibrancy and residential calm. Step off Main Street onto any of the neighborhood&apos;s side streets and you&apos;ll be on quiet, tree-lined blocks with maintained character homes and the occasional newer infill. Mature street trees form canopies overhead, front gardens are lovingly tended, and neighbors know each other.
+                  Step off Main Street and you are on quiet, tree-lined blocks with character homes and the occasional newer infill. Mature canopies, tended gardens, and neighbors who know each other.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The community is popular with young professionals and growing families. There is a strong sense of neighborhood pride; residents support local businesses, attend community events.
+                  Popular with young professionals and growing families. Residents support local businesses and show up for community events.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  You can start your day with a flat white from a specialty coffee roaster on Main Street. Walk the kids to Emily Carr Elementary through streets lined with heritage homes. Cycle to work via the Ontario Street Greenway, or hop on the bus down Main. After school have swim with the kids at Hillcrest Community Centre. Evening plans might mean pints at Brassneck Brewery, dinner at a farm-to-table restaurant, or a summer evening watching the Vancouver Canadians play at Nat Bailey Stadium with the mountains glowing pink behind the outfield.
+                  Flat white from a specialty roaster on Main. Walk the kids to Emily Carr Elementary. Cycle to work via the Ontario Street Greenway. After school: swimming at Hillcrest. Evening: pints at Brassneck, farm-to-table dinner, or Vancouver Canadians baseball at Nat Bailey with mountains glowing behind the outfield.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Weekends bring the farmers&apos; market, browsing vintage shops on Main, or exploring Queen Elizabeth Park just a short walk to the west. This is the Riley Park rhythm: creative, connected, and grounded in community.
+                  Weekends: farmers&apos; market, vintage shops on Main, Queen Elizabeth Park. Creative, connected, and grounded in community.
                 </p>
               </section>
 
@@ -211,7 +211,7 @@ export default async function RileyParkPage() {
                   Riley Park Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park&apos;s real estate market is defined by strong demand and a housing stock that rewards buyers who appreciate character and charm.
+                  Strong demand and a housing stock that rewards buyers who appreciate character and charm.
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -229,12 +229,12 @@ export default async function RileyParkPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Vancouver East detached home benchmark is $1.70M as of January 2026 (-8.1% year-over-year), though character homes in premium Riley Park locations can exceed $2.5M. Demand consistently outpaces supply, particularly for well-maintained heritage homes with original details intact. Properties close to Main Street command a premium for their walkability and proximity to amenities.
+                  Vancouver East detached benchmark: $1.70M (January 2026, -8.1% YoY). Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    Riley Park benefits from several long-term value drivers: the ongoing densification along the Cambie Corridor, the Broadway Subway extension improving westside connectivity, limited new detached home supply, and Vancouver&apos;s growing appetite for walkable, character-rich neighborhoods. Properties with laneway suite potential or duplex zoning offer particularly strong investment returns.
+                    Long-term value drivers: Cambie Corridor densification, the Broadway Subway extension, limited detached supply, and growing demand for walkable, character-rich neighborhoods. Properties with laneway suite or duplex zoning potential offer strong returns.
                   </p>
                 </div>
               </section>
@@ -249,10 +249,10 @@ export default async function RileyParkPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "SkyTrain", detail: "King Edward station (Canada Line) is accessible to the west, and Broadway-City Hall station (Expo and Millennium Lines) connects to the north. Both stations provide quick access to downtown (15 min), Richmond, and YVR airport." },
-                    { mode: "Bus", detail: "The 3 Main Street bus runs the length of the neighborhood corridor. Routes along King Edward Avenue (25), Broadway (9/99 B-Line), and 41st Avenue (43) provide excellent east-west connectivity." },
-                    { mode: "Cycling", detail: "The Ontario Street Greenway runs through Riley Park, providing a dedicated north-south cycling route. The neighborhood's flat terrain and bike-friendly streets make cycling a popular daily commute option." },
-                    { mode: "Walking", detail: "With a walk score in the 90s, most errands, dining, and shopping are comfortably within walking distance for residents near Main Street. The grid street pattern and short blocks make the neighborhood highly pedestrian-friendly." },
+                    { mode: "SkyTrain", detail: "King Edward (Canada Line) to the west; Broadway-City Hall (Expo/Millennium) to the north. Downtown in 15 min." },
+                    { mode: "Bus", detail: "The 3 runs the length of Main Street. King Edward (25), Broadway (9/99 B-Line), and 41st (43) provide east-west connections." },
+                    { mode: "Cycling", detail: "Ontario Street Greenway provides a dedicated north-south route. Flat terrain makes cycling a popular commute option." },
+                    { mode: "Walking", detail: "Walk score in the 90s. Most errands, dining, and shopping within walking distance of Main Street." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -279,10 +279,10 @@ export default async function RileyParkPage() {
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 mb-6 space-y-5">
                   {[
-                    { name: "Riley Park", desc: "The neighborhood's namesake park features sports fields, a playground, and open green space. It is a community gathering point and the site of Nat Bailey Stadium, home to the Vancouver Canadians minor league baseball team. Summer evening games here, with the North Shore mountains as a backdrop, are a quintessential Vancouver experience." },
-                    { name: "Hillcrest Community Centre & Park", desc: "A world-class recreation facility built for the 2010 Olympics. Features include a full aquatic centre with a 50-metre pool, ice rink, gymnasium, fitness centre, library branch, and extensive outdoor park space with playgrounds and playing fields. This is one of the finest community centres in the city." },
-                    { name: "Queen Elizabeth Park", desc: "Vancouver's highest point and second-most visited park lies just west of Riley Park. The Bloedel Conservatory, rose gardens, arboretum, pitch-and-putt golf, and panoramic city and mountain views make this a year-round destination for residents." },
-                    { name: "Douglas Park", desc: "Located at the neighborhood's northern edge, Douglas Park offers a community centre, outdoor pool, tennis courts, playgrounds, and a popular off-leash dog area. A great option for families and pet owners." },
+                    { name: "Riley Park", desc: "Sports fields, playground, and Nat Bailey Stadium (Vancouver Canadians baseball). Summer evening games with the North Shore mountains as backdrop are a quintessential Vancouver experience." },
+                    { name: "Hillcrest Community Centre & Park", desc: "Built for the 2010 Olympics. 50-metre pool, ice rink, gymnasium, fitness centre, library branch, playgrounds, and playing fields." },
+                    { name: "Queen Elizabeth Park", desc: "Just west of Riley Park. Bloedel Conservatory, rose gardens, arboretum, pitch-and-putt, and panoramic city and mountain views." },
+                    { name: "Douglas Park", desc: "Northern edge of the neighborhood. Community centre, outdoor pool, tennis courts, playgrounds, and off-leash dog area." },
                   ].map((park) => (
                     <div key={park.name}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -302,12 +302,12 @@ export default async function RileyParkPage() {
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 mb-6 space-y-4">
                   {[
-                    { name: "General Wolfe Elementary", type: "K-7 Public", detail: "A well-established school serving the heart of Riley Park. Known for strong community engagement and diverse programs." },
-                    { name: "Emily Carr Elementary", type: "K-7 Public", detail: "Another excellent catchment school with a welcoming community." },
-                    { name: "Sir William Van Horne Elementary", type: "K-7 Public", detail: "Located near the western edge of the neighborhood, serving families in the Cambie-Riley Park border area." },
-                    { name: "Sir Charles Tupper Secondary", type: "8-12 Public", detail: "The local high school for Riley Park residents. Offers French Immersion, strong arts programs, and diverse extracurricular activities." },
-                    { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "An alternative catchment option just west of the neighborhood, known for strong academics and athletics." },
-                    { name: "Langara College", type: "Post-Secondary", detail: "Located nearby at 49th and Cambie, offering university transfer programs, diplomas, and continuing education for over 23,000 students." },
+                    { name: "General Wolfe Elementary", type: "K-7 Public", detail: "Serves the heart of Riley Park. Strong community engagement." },
+                    { name: "Emily Carr Elementary", type: "K-7 Public", detail: "Excellent catchment school with a welcoming community." },
+                    { name: "Sir William Van Horne Elementary", type: "K-7 Public", detail: "Near the western edge, serving the Cambie-Riley Park border." },
+                    { name: "Sir Charles Tupper Secondary", type: "8-12 Public", detail: "French Immersion, strong arts, and diverse extracurriculars." },
+                    { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "Alternative catchment just west. Strong academics and athletics." },
+                    { name: "Langara College", type: "Post-Secondary", detail: "At 49th and Cambie. University transfer, diplomas, and continuing education for 23,000+ students." },
                   ].map((school) => (
                     <div key={school.name} className="flex items-start gap-3">
                       <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -329,16 +329,16 @@ export default async function RileyParkPage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Riley Park is defined by independent ownership, from the bookshops and record stores to the farm-to-table restaurants and specialty coffee roasters. If you&apos;re looking for a big box retailer, you won&apos;t find one here. That is precisely the point.
+                  Independent ownership defines Riley Park, from bookshops and record stores to farm-to-table restaurants and coffee roasters. No big box retailers. That is the point.
                 </p>
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">The Craft Brewery District</p>
                   <p className="text-sm text-gold-700">
-                    Riley Park&apos;s stretch of Main Street is the epicentre of Vancouver&apos;s craft beer scene. 33 Acres Brewing, Brassneck Brewery, Main Street Brewing, Faculty Brewing, and others have established a walkable brewery district that draws visitors from across the city. Tasting rooms double as community gathering spots, and many host events, art shows, and food pop-ups.
+                    Main Street is the epicentre of Vancouver&apos;s craft beer scene. 33 Acres, Brassneck, Main Street Brewing, Faculty Brewing, and others form a walkable brewery district. Tasting rooms double as gathering spots, hosting events, art shows, and food pop-ups.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Beyond breweries, the dining scene spans cuisines and price points, from acclaimed restaurants and intimate wine bars to family-friendly pizzerias and authentic international kitchens. The vintage and thrift shop scene is among Vancouver&apos;s best, with curated shops offering everything from mid-century furniture to rare vinyl records and vintage clothing.
+                  The dining scene spans cuisines and price points: acclaimed restaurants, wine bars, family pizzerias, and international kitchens. The vintage and thrift scene is among Vancouver&apos;s best, with mid-century furniture, rare vinyl, and vintage clothing.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
                   For everyday needs, the neighborhood has independent grocers, pharmacies, and services along Main Street and King Edward Avenue. Larger shopping options at Oakridge just minutes away.

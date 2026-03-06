@@ -56,22 +56,19 @@ export default function KitsilanoPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            If you want to understand why people move to Vancouver, spend one
-            evening in Kitsilano. The sun drops behind the mountains, someone is
-            still playing volleyball at Kits Beach, the patios on West 4th are
-            full, and a cyclist rolls past with a surfboard under one arm. It
-            doesn&apos;t feel performative. It just feels like a Tuesday.
+            Spend one evening in Kitsilano and you get it. Sunset behind the
+            mountains, volleyball at Kits Beach, full patios on West 4th, a
+            cyclist rolling past with a surfboard under one arm. It just feels
+            like a Tuesday.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Locals call it Kits. The mornings start with yoga and specialty
-            coffee. Afternoons are spent on the beach or browsing the
-            independent shops along West 4th and Broadway. The architecture
-            is part of the appeal: 1940s craftsman bungalows, heritage
-            conversions, and low-rise condos on tree-lined streets. No towers,
-            no cookie-cutter developments. It skews younger than most of the
-            west side, with tech workers, creatives, and young families drawn
-            by the energy and the walkability.
+            Locals call it Kits. Mornings start with yoga and specialty coffee.
+            Afternoons belong to the beach and the independent shops along
+            West 4th. The housing mix is 1940s craftsman bungalows, heritage
+            conversions, and low-rise condos on tree-lined streets. No towers.
+            It skews younger than most of the west side: tech workers,
+            creatives, and young families drawn by the walkability.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -82,35 +79,30 @@ export default function KitsilanoPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark sits around <strong>$1.25M</strong>.
-            Condos are the most common entry point at{" "}
-            <strong>$550K to $1.2M</strong> for a well-located one- or
-            two-bedroom near the beach or Broadway. Townhomes in heritage
-            conversions go for <strong>$1.2M to $1.8M</strong> and are
-            increasingly popular with young families. Detached craftsman homes
-            start around <strong>$2M</strong> and push past{" "}
-            <strong>$4M</strong> near the water. With the Broadway Subway
-            opening in 2026, properties along the corridor are attracting
-            serious attention.
+            Composite benchmark: <strong>$1.25M</strong>. Condos run{" "}
+            <strong>$550K to $1.2M</strong> for a one- or two-bedroom near
+            the beach or Broadway. Heritage-conversion townhomes go for{" "}
+            <strong>$1.2M to $1.8M</strong>. Detached craftsman homes start
+            around <strong>$2M</strong> and push past{" "}
+            <strong>$4M</strong> near the water. The 2026 Broadway Subway
+            opening is driving strong interest along the corridor.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            This is a neighbourhood built for bikes and walking. Dedicated
-            lanes reach downtown via the Burrard Bridge in about 15 minutes.
-            The 99 B-Line is one of the busiest bus routes in North America,
-            and the new Broadway Subway will add rapid transit access. Walk
-            score: 88. You will not need your car most days. The community
-            is age-diverse: tech workers from the Broadway corridor, young
-            couples in their first condo, families who want west-side
-            character, and retirees who have been here since the 1970s.
+            Built for bikes and walking. Dedicated lanes reach downtown via
+            the Burrard Bridge in 15 minutes. The 99 B-Line is one of North
+            America&apos;s busiest bus routes, and the Broadway Subway adds
+            rapid transit. Walk Score: 88. The community is age-diverse: tech
+            workers, young couples in their first condo, families who want
+            west-side character, and retirees here since the 1970s.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Kitsilano delivers beach access,
-              walkable streets, and genuine community without Point Grey prices
-              or downtown density. If your ideal day involves a bike commute
-              and sunset at the beach, this is the one.
+              <strong>Bottom line:</strong> Beach access, walkable streets,
+              and genuine community without Point Grey prices or downtown
+              density. If your ideal day is a bike commute and sunset at the
+              beach, this is the one.
             </p>
           </div>
         </div>

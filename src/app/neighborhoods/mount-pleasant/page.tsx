@@ -56,27 +56,22 @@ export default function MountPleasantPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Mount Pleasant turned abandoned warehouses into the best brewery
-            district in Western Canada, covered its buildings in world-class
-            street art, and filled Main Street with independent shops and
-            restaurants that make you forget chain stores exist. It is also
-            eight minutes from downtown on the SkyTrain with a Walk Score of
-            92. The mornings start with serious coffee (49th Parallel,
-            Matchstick, JJ Bean&apos;s flagship), Saturdays bring the
-            farmers&apos; market, and by mid-afternoon the brewery patios
-            are full.
+            Mount Pleasant turned abandoned warehouses into Western
+            Canada&apos;s best brewery district, covered its buildings in
+            world-class street art, and filled Main Street with independents
+            that make you forget chains exist. Eight minutes from downtown on
+            SkyTrain. Walk Score: 92. Mornings mean serious coffee (49th
+            Parallel, Matchstick, JJ Bean&apos;s flagship). By mid-afternoon
+            the brewery patios are full.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            South of Broadway, the streets shift to heritage character homes
-            under mature trees. North of Broadway, it is newer condos, tech
-            offices, and the brewery district where 10-plus taprooms have
-            colonized old industrial buildings east of Main. The Vancouver
-            Mural Festival has turned entire building facades into open-air
-            galleries, community-driven art that reflects who lives here.
-            The community skews toward creatives, tech workers, young
-            professionals, and families at Mount Pleasant Elementary who
-            walk to Clark Park after school.
+            South of Broadway: heritage character homes under mature trees.
+            North: newer condos, tech offices, and 10-plus taprooms in old
+            industrial buildings east of Main. The Vancouver Mural Festival
+            has turned entire facades into open-air galleries. The community
+            skews toward creatives, tech workers, young professionals, and
+            families at Mount Pleasant Elementary.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -88,28 +83,22 @@ export default function MountPleasantPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark sits around <strong>$850K</strong>,
-            undercutting both Kitsilano and Fairview while delivering
-            similar walkability and better transit. Condos are the primary
-            entry point at <strong>$550K to $1M</strong> for modern builds
-            along the Main and Broadway corridors. Townhomes in
-            the <strong>$1M to $1.5M</strong> range are increasingly popular
-            with young families. The real gems are the heritage character
-            homes south of Broadway, Edwardian and craftsman houses running
-            from <strong>$1.2M to $2.5M+</strong>. With two SkyTrain
-            stations already here and the Broadway Subway adding more
-            connectivity, Mount Pleasant should continue appreciating ahead
-            of the broader east side market.
+            Composite benchmark: <strong>$850K</strong>, undercutting Kits and
+            Fairview with similar walkability and better transit. Condos
+            run <strong>$550K to $1M</strong> along the Main and Broadway
+            corridors. Townhomes sit at <strong>$1M to $1.5M</strong>. The
+            real gems are heritage character homes south of Broadway,
+            Edwardian and craftsman houses at{" "}
+            <strong>$1.2M to $2.5M+</strong>. Two SkyTrain stations plus the
+            Broadway Subway expansion should keep appreciation ahead of the
+            broader east side.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Two SkyTrain stations bracket the neighbourhood:
-            Broadway-City Hall on the Canada Line and Main Street-Science
-            World on the Expo and Millennium Lines. Downtown is eight
-            minutes away. Dedicated cycling lanes run on Ontario Street and
-            the off-Broadway route. Walk Score: 92. Between transit, cycling,
-            and the density of everything you need on Main Street, a car is
-            genuinely optional.
+            Broadway-City Hall (Canada Line) and Main Street-Science World
+            (Expo/Millennium Lines) bracket the neighbourhood. Downtown: eight
+            minutes. Cycling lanes run on Ontario Street and the off-Broadway
+            route. Walk Score: 92. A car is genuinely optional.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">

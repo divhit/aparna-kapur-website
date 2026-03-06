@@ -25,27 +25,27 @@ const faqs = [
   {
     question: "Is South Cambie a good area to buy a home in Vancouver?",
     answer:
-      "South Cambie is one of Vancouver's most desirable residential neighborhoods. Its combination of Queen Elizabeth Park, two Canada Line SkyTrain stations, the Cambie Corridor development plan, excellent school catchments, and proximity to hospitals makes it a strong choice for both families and investors. The neighborhood offers long-term value thanks to ongoing transit-oriented development and its central westside location.",
+      "South Cambie combines Queen Elizabeth Park, two Canada Line stations, the Cambie Corridor Plan, strong school catchments, and hospital proximity. A strong choice for families and investors with long-term value driven by transit-oriented development.",
   },
   {
     question: "How much do homes cost in South Cambie?",
     answer:
-      "South Cambie offers a range of housing options. The GVR MLS® HPI benchmark prices as of January 2026 are: condos at $1.02M, townhomes at $1.56M, and detached homes at $4.16M. The composite benchmark across all property types is $1.44M, though prices vary significantly depending on property type, lot size, and proximity to SkyTrain stations.",
+      "GVR MLS® HPI benchmarks (January 2026): condos $1.02M, townhomes $1.56M, detached $4.16M. Composite: $1.44M. Prices vary by property type, lot size, and proximity to SkyTrain.",
   },
   {
     question: "What is the Cambie Corridor plan and how does it affect South Cambie?",
     answer:
-      "The Cambie Corridor Plan is the City of Vancouver's long-term vision to add housing, amenities, and mixed-use development along the Canada Line SkyTrain route from Marine Drive to King Edward. In South Cambie, this has introduced new townhome and condominium projects near the King Edward and Oakridge-41st stations, increasing housing choice while maintaining the area's residential character. The plan has been a key driver of property values along the corridor.",
+      "The City of Vancouver's long-term vision for housing, amenities, and mixed-use development along the Canada Line from Marine Drive to King Edward. In South Cambie, it has introduced townhome and condo projects near King Edward and Oakridge-41st stations, increasing housing choice while maintaining residential character.",
   },
   {
     question: "What schools serve the South Cambie neighborhood?",
     answer:
-      "South Cambie has excellent schools at every level. Sir William Van Horne Elementary and Jamieson Elementary serve the elementary catchment, while Eric Hamber Secondary is the local high school and is one of Vancouver's most sought-after public secondaries. Langara College at 49th and Cambie provides post-secondary education, and several private school options are accessible nearby.",
+      "Elementary: Van Horne and Jamieson. High school: Eric Hamber Secondary, one of Vancouver's most sought-after. Post-secondary: Langara College at 49th and Cambie. Private options nearby.",
   },
   {
     question: "How is transit access in South Cambie?",
     answer:
-      "South Cambie has outstanding transit access. Two Canada Line SkyTrain stations serve the neighborhood: King Edward Station and Oakridge-41st Avenue Station. Downtown Vancouver is just 12 to 15 minutes by SkyTrain, and Vancouver International Airport (YVR) is about 20 minutes. Major bus routes run along Cambie Street, King Edward Avenue, and 41st Avenue, connecting to UBC and the rest of the city.",
+      "Two Canada Line stations: King Edward and Oakridge-41st Avenue. Downtown in 12-15 minutes, YVR in 20. Bus routes along Cambie, King Edward, and 41st connect to UBC and the rest of the city.",
   },
 ];
 
@@ -165,13 +165,13 @@ export default async function SouthCambiePage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie is a quiet, established neighborhood in the heart of Vancouver&apos;s westside, roughly bounded by West 16th Avenue to the north, West 41st Avenue to the south, Cambie Street to the east, and Oak Street to the west. It sits at a geographic crossroads, close enough to downtown for an easy commute, yet far enough to feel like a world apart.
+                  South Cambie is a quiet, established westside neighborhood bounded by 16th Avenue, 41st Avenue, Cambie Street, and Oak Street. Close enough to downtown for an easy commute, yet calm enough to feel removed from the city.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The neighborhood&apos;s crown jewel is Queen Elizabeth Park, Vancouver&apos;s highest point at 152 metres above sea level. The park&apos;s sweeping views of the downtown skyline, the North Shore Mountains, and the surrounding city are among the most photographed vistas in British Columbia. For many South Cambie residents, these views are part of daily life: a morning jog, an after-dinner walk, or a Saturday at the pitch and putt.
+                  Its crown jewel is Queen Elizabeth Park, Vancouver&apos;s highest point at 152 metres. Sweeping views of the skyline and North Shore Mountains are among B.C.&apos;s most photographed vistas. For residents, these views are part of daily life through morning jogs, evening walks, and Saturday pitch and putt.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  South Cambie has long been treasured for its tree-lined streets, heritage homes, and strong sense of community. In recent years, the Cambie Corridor development plan has brought thoughtful densification to the area, adding modern townhomes and condominiums near SkyTrain stations while preserving the residential calm that defines the neighborhood&apos;s character.
+                  Tree-lined streets and heritage homes define the area. The Cambie Corridor Plan has added modern townhomes and condos near SkyTrain stations while preserving residential character.
                 </p>
               </section>
 
@@ -193,17 +193,17 @@ export default async function SouthCambiePage() {
                   Living in South Cambie
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie offers something increasingly rare in Vancouver: a genuine neighborhood feel within minutes of the city centre. The streets are wide, mature trees form a canopy overhead in summer, and neighbours still wave from their porches. It is the kind of place where families put down roots for decades.
+                  Wide streets, mature canopy trees, and neighbours who wave from their porches. Families put down roots here for decades.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The housing stock tells the story of the neighborhood&apos;s evolution. You will find beautifully maintained Craftsman and Tudor-style heritage homes sitting alongside newer duplexes, thoughtfully designed townhome complexes, and boutique condo developments. This mix gives South Cambie its visual character, a blend of old and new that feels organic rather than forced.
+                  Craftsman and Tudor heritage homes sit alongside newer duplexes, townhome complexes, and boutique condos. The blend of old and new feels organic.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in South Cambie</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Start with a morning coffee from one of the cafes along Cambie Street. Walk the kids to Jamieson Elementary or Van Horne, then hop on the Canada Line at King Edward Station for a twelve-minute ride to the office downtown. After school, the kids have swimming lessons at Hillcrest Community Centre or soccer practice at Douglas Park. Pick up groceries at Cambie Village on the way home. On weekends, there is the Bloedel Conservatory to explore, a round of pitch and putt at Queen Elizabeth Park, or a family outing to catch a Vancouver Canadians baseball game at nearby Nat Bailey Stadium.
+                  Morning coffee on Cambie Street. Walk the kids to Jamieson or Van Horne, then twelve minutes on the Canada Line to downtown. After school: swimming at Hillcrest or soccer at Douglas Park. Groceries at Cambie Village. Weekends: Bloedel Conservatory, pitch and putt at QE Park, or a Vancouver Canadians game at Nat Bailey Stadium.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  South Cambie&apos;s proximity to Vancouver General Hospital and other medical facilities along the Cambie Corridor also makes it a practical choice for healthcare professionals and anyone who values having top-tier medical care close at hand.
+                  Proximity to Vancouver General Hospital also makes it practical for healthcare professionals and anyone who values nearby medical care.
                 </p>
               </section>
 
@@ -213,13 +213,13 @@ export default async function SouthCambiePage() {
                   South Cambie Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie&apos;s real estate market reflects its status as one of Vancouver&apos;s most balanced neighborhoods, offering diverse housing types at a range of price points:
+                  South Cambie offers diverse housing types across a range of price points:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units in newer developments near SkyTrain stations along the Cambie Corridor. GVR benchmark: $1.02M. Attractive to first-time buyers and investors seeking transit-oriented properties." },
-                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Multi-level homes in well-designed complexes, many built as part of the Cambie Corridor Plan. GVR benchmark: $1.56M. Increasingly popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage character homes and newer builds on generous lots. GVR benchmark: $4.16M. Many original homes offer renovation potential or laneway house opportunities." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units near SkyTrain along the Cambie Corridor. GVR benchmark: $1.02M. Attractive to first-time buyers and investors." },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Well-designed complexes, many from the Cambie Corridor Plan. GVR benchmark: $1.56M. Popular with young families." },
+                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage homes and newer builds on generous lots. GVR benchmark: $4.16M. Many offer renovation or laneway suite potential." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -231,12 +231,12 @@ export default async function SouthCambiePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The GVR MLS® HPI composite benchmark for South Cambie is $1.44M as of January 2026 (-9.5% year-over-year), with detached homes benchmarked at $4.16M. The neighborhood has seen consistent long-term appreciation driven by the Canada Line, the Cambie Corridor Plan&apos;s controlled densification, and the enduring appeal of Queen Elizabeth Park.
+                  GVR MLS® HPI composite benchmark: $1.44M (January 2026, -9.5% YoY). Detached benchmark: $4.16M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    The Cambie Corridor Plan continues to guide development in South Cambie, adding housing supply while improving walkability and amenities. Transit-oriented neighborhoods along the Canada Line have historically outperformed the broader Vancouver market. With the nearby Oakridge Park redevelopment completing in phases through 2026 and beyond, South Cambie stands to benefit from increased retail, dining, and community amenities at its doorstep.
+                    The Cambie Corridor Plan adds housing while improving walkability and amenities. Canada Line neighborhoods have historically outperformed the broader market. The nearby Oakridge Park redevelopment, completing in phases through 2026+, will bring retail, dining, and amenities to the doorstep.
                   </p>
                 </div>
               </section>
@@ -247,14 +247,14 @@ export default async function SouthCambiePage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  South Cambie&apos;s central location and excellent transit infrastructure make it one of the most connected residential neighborhoods in Vancouver:
+                  Central location and strong transit make South Cambie one of Vancouver&apos;s most connected residential areas:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "SkyTrain", detail: "Two Canada Line stations serve the neighborhood: King Edward Station and Oakridge-41st Avenue Station. Downtown in 12 minutes, YVR airport in 20 minutes. The convenience is hard to overstate." },
-                    { mode: "Bus", detail: "Major routes along Cambie Street (15), King Edward Avenue (25), and 41st Avenue (43) connect to UBC, Commercial-Broadway, and surrounding neighborhoods with frequent service." },
-                    { mode: "Cycling", detail: "The Ontario Street and Heather Street bike routes pass through or alongside South Cambie. The Arbutus Greenway, a dedicated cycling and walking path, is easily accessible to the west." },
-                    { mode: "Driving", detail: "Cambie Street and Oak Street provide direct north-south routes to downtown and the airport. King Edward and 41st Avenue offer efficient east-west connections across the city." },
+                    { mode: "SkyTrain", detail: "King Edward and Oakridge-41st stations. Downtown in 12 minutes, YVR in 20." },
+                    { mode: "Bus", detail: "Cambie (15), King Edward (25), and 41st (43) connect to UBC, Commercial-Broadway, and surrounding neighborhoods." },
+                    { mode: "Cycling", detail: "Ontario and Heather Street bike routes pass through the area. Arbutus Greenway accessible to the west." },
+                    { mode: "Driving", detail: "Cambie and Oak streets run north-south to downtown and the airport. King Edward and 41st provide east-west connections." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -277,14 +277,14 @@ export default async function SouthCambiePage() {
                   Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie residents enjoy some of the finest green space in Vancouver. The parks here are not just amenities; they are defining features of the neighborhood:
+                  South Cambie&apos;s parks are defining features of the neighborhood:
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Queen Elizabeth Park", desc: "Vancouver's highest point and second-most visited park. The 130-acre grounds include the Bloedel Conservatory (a tropical dome housing exotic birds and plants), a pitch and putt golf course, tennis courts, rose gardens, arboretum, and panoramic viewpoints of the city skyline and North Shore Mountains. For South Cambie residents, this is essentially the backyard." },
-                    { name: "Hillcrest Community Centre & Park", desc: "A modern recreation hub adjacent to Queen Elizabeth Park offering an aquatic centre, ice rink, gymnasium, fitness facilities, and outdoor playing fields. The complex was built for the 2010 Winter Olympics and remains one of the city's premier community recreation facilities." },
-                    { name: "Douglas Park", desc: "A beloved community park with a playground, sports fields, tennis courts, a community centre, and a wading pool. Douglas Park is a gathering spot for families and hosts seasonal programs and events throughout the year." },
-                    { name: "Nat Bailey Stadium Area", desc: "Home to the Vancouver Canadians baseball team, the stadium and surrounding green space at Hillcrest Park offer a unique recreational asset. Summer evenings at a Canadians game are a South Cambie tradition." },
+                    { name: "Queen Elizabeth Park", desc: "Vancouver's highest point and second-most visited park. 130 acres with the Bloedel Conservatory, pitch and putt, tennis courts, rose gardens, arboretum, and panoramic city and mountain views." },
+                    { name: "Hillcrest Community Centre & Park", desc: "Built for the 2010 Olympics. Aquatic centre, ice rink, gymnasium, fitness facilities, and outdoor fields. One of the city's premier recreation complexes." },
+                    { name: "Douglas Park", desc: "Playground, sports fields, tennis courts, community centre, and wading pool. A family gathering spot with year-round programs." },
+                    { name: "Nat Bailey Stadium Area", desc: "Home to the Vancouver Canadians baseball team. Summer evening games are a South Cambie tradition." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -300,15 +300,15 @@ export default async function SouthCambiePage() {
                   Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  South Cambie&apos;s school catchments are among the most desirable in Vancouver, making it a top choice for families prioritizing education:
+                  South Cambie&apos;s school catchments are among Vancouver&apos;s most desirable:
                 </p>
                 <div className="mb-6">
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Sir William Van Horne Elementary", type: "K-7 Public", detail: "A well-regarded school within walking distance for most South Cambie families. Known for strong academics and an engaged parent community." },
-                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Another excellent option in the catchment, offering diverse programs and a welcoming environment for students and families." },
-                      { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "One of Vancouver's most sought-after public high schools, located right in the neighborhood. Strong academics, arts programs, athletics, and a dedicated IB pathway make it a draw for families across the city." },
+                      { name: "Sir William Van Horne Elementary", type: "K-7 Public", detail: "Walking distance for most families. Strong academics and engaged parent community." },
+                      { name: "Jamieson Elementary", type: "K-7 Public", detail: "Diverse programs and a welcoming environment." },
+                      { name: "Eric Hamber Secondary", type: "8-12 Public", detail: "One of Vancouver's most sought-after public high schools. Strong academics, arts, athletics, and an IB pathway." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -327,9 +327,9 @@ export default async function SouthCambiePage() {
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Post-Secondary &amp; Nearby Options</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Langara College", type: "Post-Secondary", detail: "Located at 49th and Cambie, just south of the neighborhood. Serves over 23,000 students with university transfer programs, career training, and continuing education." },
-                      { name: "King David High School", type: "Private", detail: "An independent Jewish high school located nearby, offering faith-based education with strong academic standards." },
-                      { name: "Vancouver College", type: "Private", detail: "A well-established Catholic boys' school accessible from South Cambie, with a long tradition of academic and athletic excellence." },
+                      { name: "Langara College", type: "Post-Secondary", detail: "At 49th and Cambie. Serves 23,000+ students with university transfer, career training, and continuing education." },
+                      { name: "King David High School", type: "Private", detail: "Independent Jewish high school with strong academics." },
+                      { name: "Vancouver College", type: "Private", detail: "Established Catholic boys' school with a tradition of academic and athletic excellence." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -352,16 +352,16 @@ export default async function SouthCambiePage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  South Cambie&apos;s shopping and dining scene is anchored by Cambie Village, the stretch of Cambie Street around the King Edward intersection. Here you will find a curated mix of independent cafes, bakeries, restaurants, and everyday shops. The village atmosphere is walkable and welcoming, the kind of main street where the barista knows your order.
+                  Cambie Village around King Edward anchors the scene: independent cafes, bakeries, restaurants, and everyday shops in a walkable setting where the barista knows your order.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  For more extensive shopping, the upcoming Oakridge Park development at 41st and Cambie will deliver over 500,000 square feet of retail and dining, including the highly anticipated Time Out Market food hall. This will put world-class shopping and cuisine within a short walk or single SkyTrain stop for South Cambie residents.
+                  Oakridge Park at 41st and Cambie will deliver 500,000+ square feet of retail, including Time Out Market. World-class shopping a short walk or one SkyTrain stop away.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Main Street&apos;s vibrant collection of independent boutiques, breweries, and restaurants is just a short trip east and offers a more eclectic, hip dining and shopping experience. Granville Street to the west provides additional retail options and services.
+                  Main Street&apos;s boutiques, breweries, and restaurants are a short trip east. Granville Street to the west adds more retail.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For groceries and daily errands, residents are well served by supermarkets along Cambie and 41st Avenue, as well as specialty food stores reflecting the area&apos;s diverse community. The Seasons in the Park restaurant at Queen Elizabeth Park is a local fine-dining institution with panoramic mountain and city views, perfect for special occasions without leaving the neighborhood.
+                  Supermarkets along Cambie and 41st handle daily needs. Seasons in the Park at Queen Elizabeth Park offers fine dining with panoramic mountain and city views.
                 </p>
               </section>
 

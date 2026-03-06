@@ -9,7 +9,7 @@ import FAQAccordion from "./FAQAccordion";
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
   description:
-    "The definitive guide to Oakridge, Vancouver. Explore real estate, the Oakridge Park redevelopment, schools, transit, parks, and lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "Guide to Oakridge, Vancouver. Explore real estate, the Oakridge Park redevelopment, schools, transit, parks, and lifestyle. By Aparna Kapur, Oakwyn Realty.",
   keywords: [
     "Oakridge Vancouver real estate",
     "Oakridge homes for sale",
@@ -24,27 +24,27 @@ const faqs = [
   {
     question: "Is Oakridge a good neighborhood to invest in?",
     answer:
-      "Oakridge is one of Vancouver's strongest investment areas. The $6 billion Oakridge Park redevelopment, two SkyTrain stations, proximity to Queen Elizabeth Park, and strong school catchments make it a compelling long-term investment. Property values in transit-oriented neighborhoods have historically appreciated faster than the Vancouver average.",
+      "Oakridge is one of Vancouver's strongest investment areas. The $6 billion Oakridge Park redevelopment, two SkyTrain stations, Queen Elizabeth Park, and strong school catchments support long-term appreciation. Transit-oriented neighborhoods have historically outperformed the Vancouver average.",
   },
   {
     question: "How much does a home cost in Oakridge Vancouver?",
     answer:
-      "Oakridge offers a range of housing options. The GVR MLS\u00ae HPI benchmark prices as of January 2026 are: condos at $998K, townhomes at $1.64M, and detached homes at $3.36M. The composite benchmark across all property types is $1.49M. Prices vary by unit size, condition, and proximity to SkyTrain stations and the Oakridge Park development.",
+      "GVR MLS\u00ae HPI benchmarks (January 2026): condos $998K, townhomes $1.64M, detached $3.36M. Composite benchmark: $1.49M. Prices vary by size, condition, and proximity to SkyTrain and Oakridge Park.",
   },
   {
     question: "What is the Oakridge Park redevelopment?",
     answer:
-      "Oakridge Park (formerly Oakridge Centre) is one of the largest mixed-use developments in Canadian history. The $6 billion project is transforming the old Oakridge mall into a vibrant community with over 3,300 new homes, a 9-acre public park, 500,000+ sq ft of retail, office space, and community amenities. Portions are completing in 2026.",
+      "Oakridge Park (formerly Oakridge Centre) is one of Canada's largest mixed-use developments. The $6 billion project delivers 3,300+ homes, a 9-acre public park, 500,000+ sq ft of retail, office space, and community amenities. Portions are completing in 2026.",
   },
   {
     question: "What schools are in the Oakridge area?",
     answer:
-      "Oakridge has excellent schools at every level. Elementary schools include Van Horne Elementary and Jamieson Elementary. Sir Winston Churchill Secondary is the local high school. Private options include King David High School and Vancouver College. Langara College provides post-secondary education at 49th and Cambie.",
+      "Elementary: Van Horne and Jamieson. High school: Sir Winston Churchill Secondary. Private: King David High School and Vancouver College. Post-secondary: Langara College at 49th and Cambie.",
   },
   {
     question: "How do I get around from Oakridge?",
     answer:
-      "Oakridge has excellent transit access with two Canada Line SkyTrain stations: Oakridge-41st Avenue and Langara-49th Avenue. Downtown Vancouver is just 15 minutes by SkyTrain, and Vancouver International Airport (YVR) is about 20 minutes. Multiple bus routes serve the neighborhood, and cycling infrastructure continues to improve.",
+      "Two Canada Line stations: Oakridge-41st Avenue and Langara-49th Avenue. Downtown in 15 minutes, YVR in 20. Multiple bus routes serve the area, and cycling infrastructure continues to improve.",
   },
 ];
 
@@ -165,13 +165,13 @@ export default async function OakridgePage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Oakridge is a south-central Vancouver neighborhood bordered by West 41st Avenue to the north, West 49th Avenue to the south, Ontario Street to the east, and Oak Street to the west. Encompassing approximately 401 hectares, it sits at the geographical heart of the city.
+                  Oakridge spans roughly 401 hectares in south-central Vancouver, bounded by 41st Avenue, 49th Avenue, Ontario Street, and Oak Street. It sits at the geographical heart of the city.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  What makes Oakridge truly special right now is its transformation. The massive Oakridge Park redevelopment is turning the former suburban mall into one of Canada&apos;s largest mixed-use communities, bringing thousands of new homes, a spectacular public park, and world-class amenities to an already well-established neighborhood.
+                  The $6 billion Oakridge Park redevelopment is turning the former suburban mall into one of Canada&apos;s largest mixed-use communities, with thousands of new homes, a 9-acre public park, and world-class amenities.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Oakridge is also one of Vancouver&apos;s most culturally diverse neighborhoods. It is home to a significant Jewish community with specialty shops, synagogues, and schools, as well as a substantial Chinese community. This cultural richness contributes to the neighborhood&apos;s vibrant character, diverse dining scene, and strong sense of community.
+                  Oakridge is one of Vancouver&apos;s most culturally diverse neighborhoods, home to significant Jewish and Chinese communities. This shapes its dining scene, specialty shops, synagogues, and schools.
                 </p>
               </section>
 
@@ -195,11 +195,11 @@ export default async function OakridgePage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">Oakridge Park Redevelopment</p>
                   <p className="text-sm text-gold-700">
-                    One of the largest mixed-use projects in Canadian history, the $6 billion Oakridge Park redevelopment is transforming 28 acres at 41st &amp; Cambie into a vibrant new community. Portions are completing in 2026.
+                      The $6 billion Oakridge Park redevelopment is transforming 28 acres at 41st &amp; Cambie into a major mixed-use community. Portions completing in 2026.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Oakridge Park redevelopment (formerly Oakridge Centre) is the single most significant development happening in Vancouver outside of downtown. Construction began in 2019, and the project encompasses over 5 million square feet of development across 28 acres.
+                  Oakridge Park (formerly Oakridge Centre) is Vancouver&apos;s most significant development outside downtown. Construction began in 2019, spanning 5 million square feet across 28 acres.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">What&apos;s Coming</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -217,10 +217,10 @@ export default async function OakridgePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The first phases completing in 2026 include the Time Out Market dining hall, the shopping centre, and the 9-acre public park. Residential towers and office space will follow throughout 2026 and beyond.
+                  First phases completing in 2026: Time Out Market, the shopping centre, and the 9-acre public park. Residential towers and office space follow through 2026 and beyond.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For real estate investors and homebuyers, the Oakridge Park redevelopment represents a generational opportunity. Properties in the surrounding area are expected to benefit significantly from the increased amenities, foot traffic, and neighborhood desirability that this development brings.
+                  For buyers and investors, this is a generational opportunity. Surrounding properties stand to benefit from the increased amenities, foot traffic, and desirability.
                 </p>
               </section>
 
@@ -230,17 +230,17 @@ export default async function OakridgePage() {
                   Living in Oakridge
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Oakridge offers a rare combination in Vancouver: the tranquility of a residential neighborhood with the convenience of urban amenities. Most of the neighborhood&apos;s residential streets are quiet and tree-lined, with a mix of mid-century homes, newer builds, and an increasing number of condominium developments.
+                  Oakridge pairs residential calm with urban convenience. Its tree-lined streets hold a mix of mid-century homes, newer builds, and growing condo developments.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Residents love Oakridge for its walkability, its proximity to some of Vancouver&apos;s best parks (Queen Elizabeth Park is just a block away), and its excellent transit access. The two Canada Line stations make commuting effortless; you can be downtown in 15 minutes or at YVR airport in 20.
+                  Residents value the walkability, proximity to Queen Elizabeth Park (one block away), and two Canada Line stations. Downtown is 15 minutes by SkyTrain, YVR 20 minutes.
                 </p>
                 <h3 className="font-serif text-xl text-teal-900 mt-8 mb-3">A Day in Oakridge</h3>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Morning coffee at a local cafe on Cambie Street. A walk or jog around the Langara Golf Course trails. Drop the kids at Van Horne Elementary, then hop on the SkyTrain to downtown for work. After school activities at the community center. Dinner at one of the many restaurants along 41st Avenue, or a home-cooked meal with ingredients from the Asian grocery stores that reflect the neighborhood&apos;s diversity. Weekend visits to Queen Elizabeth Park&apos;s Bloedel Conservatory or the VanDusen Botanical Garden nearby.
+                  Morning coffee on Cambie Street. A jog around Langara Golf Course. Drop the kids at Van Horne Elementary, then SkyTrain to downtown. After-school activities at the community center. Dinner along 41st Avenue or a home-cooked meal with ingredients from the neighborhood&apos;s Asian grocery stores. Weekends at the Bloedel Conservatory or VanDusen Botanical Garden.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  This is the Oakridge lifestyle: suburban peace with urban convenience, cultural richness, and a community that&apos;s being revitalized without losing its soul.
+                  Suburban peace, urban convenience, cultural richness, and a community being revitalized without losing its soul.
                 </p>
               </section>
 
@@ -254,9 +254,9 @@ export default async function OakridgePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$600K - $1.2M", desc: "Modern units near SkyTrain stations and the Oakridge Park development. GVR benchmark: $998K. Popular with first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: "Multi-level homes offering more space than condos. GVR benchmark: $1.64M. Increasingly popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Single-family homes on established streets. GVR benchmark: $3.36M. Many mid-century homes with renovation potential or newer builds." },
+                    { type: "Condominiums", range: "$600K - $1.2M", desc: "Modern units near SkyTrain and Oakridge Park. GVR benchmark: $998K. Popular with first-time buyers and investors." },
+                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: "Multi-level homes with more space. GVR benchmark: $1.64M. Popular with young families." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Established streets. GVR benchmark: $3.36M. Many mid-century homes with renovation potential or newer builds." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -268,12 +268,12 @@ export default async function OakridgePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The GVR MLS® HPI composite benchmark for Oakridge is $1.49M as of January 2026 (-2.8% year-over-year). The neighborhood has seen steady long-term appreciation driven by transit investment, the Oakridge Park redevelopment, and its central location.
+                  GVR MLS® HPI composite benchmark: $1.49M (January 2026, -2.8% YoY). Long-term appreciation driven by transit investment, the Oakridge Park project, and central location.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    With the Oakridge Park completion driving increased foot traffic, retail, and amenities, surrounding properties are well-positioned for appreciation. Transit-oriented developments along the Canada Line corridor have historically outperformed the broader Vancouver market.
+                    Oakridge Park completion will drive foot traffic, retail, and amenities. Transit-oriented properties along the Canada Line have historically outperformed the broader Vancouver market.
                   </p>
                 </div>
               </section>
@@ -284,7 +284,7 @@ export default async function OakridgePage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Oakridge has some of the best transit access in all of Vancouver&apos;s residential neighborhoods:
+                  Oakridge has some of the best transit access among Vancouver&apos;s residential neighborhoods:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
@@ -318,10 +318,10 @@ export default async function OakridgePage() {
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park, just one block from Oakridge. Stunning city views, the Bloedel Conservatory, rose gardens, and seasonal gardens. A true gem for daily walks or weekend picnics." },
-                    { name: "Langara Golf Course", desc: "An 18-hole public golf course with perimeter walking, jogging, and dog-walking trails that loop the entire course. Perfect for morning runs or evening strolls." },
-                    { name: "Columbia Park & Tisdall Park", desc: "Neighborhood parks with playgrounds, sports fields, and community gathering spaces within easy walking distance." },
-                    { name: "Oakridge Park (Coming 2026)", desc: "The crown jewel: a 9-acre public park as part of the Oakridge Park redevelopment. Will include playgrounds, playing fields, a woodland area, community garden, concert stages, yoga platforms, and a running loop." },
+                    { name: "Queen Elizabeth Park", desc: "Vancouver's second-most visited park, one block away. City views, the Bloedel Conservatory, rose gardens, and seasonal gardens." },
+                    { name: "Langara Golf Course", desc: "18-hole public course with perimeter walking, jogging, and dog-walking trails." },
+                    { name: "Columbia Park & Tisdall Park", desc: "Neighbourhood parks with playgrounds, sports fields, and gathering spaces." },
+                    { name: "Oakridge Park (Coming 2026)", desc: "A 9-acre public park with playgrounds, playing fields, woodland, community garden, concert stages, yoga platforms, and a running loop." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -389,13 +389,13 @@ export default async function OakridgePage() {
                   Shopping &amp; Dining
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Oakridge&apos;s dining and shopping scene reflects its cultural diversity. Along 41st Avenue and Cambie Street, you&apos;ll find a mix of Asian restaurants, Jewish delis, trendy cafes, and international cuisine. The neighborhood&apos;s food scene is one of Vancouver&apos;s best-kept secrets.
+                  Along 41st Avenue and Cambie Street: Asian restaurants, Jewish delis, cafes, and international cuisine. One of Vancouver&apos;s best-kept food secrets.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The Oakridge Park redevelopment will dramatically expand shopping and dining options with over 500,000 square feet of retail space, including the highly anticipated Time Out Market, a curated food hall featuring Vancouver&apos;s best chefs and restaurants.
+                  Oakridge Park adds 500,000+ square feet of retail, including the Time Out Market food hall featuring top Vancouver chefs.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For everyday needs, the Cambie Village shopping district is nearby, and Main Street&apos;s eclectic boutiques and restaurants are just a short drive or bus ride east.
+                  Cambie Village is nearby for everyday needs, and Main Street&apos;s boutiques and restaurants are a short trip east.
                 </p>
               </section>
 

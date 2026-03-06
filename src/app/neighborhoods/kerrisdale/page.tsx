@@ -26,27 +26,27 @@ const faqs = [
   {
     question: "Is Kerrisdale a good neighborhood to buy a home in?",
     answer:
-      "Kerrisdale is one of Vancouver's most desirable and established residential neighborhoods. Its combination of heritage charm, top-tier schools (both public and private), village-style shopping, and proximity to Pacific Spirit Park and UBC make it a perennial favorite among affluent families and long-term investors. Property values in Kerrisdale have historically held strong, even during broader market corrections, due to limited land supply and consistently high demand.",
+      "Kerrisdale combines heritage charm, top schools (public and private), village shopping, and proximity to Pacific Spirit Park and UBC. A perennial favorite among affluent families and investors. Values hold strong even during corrections due to limited supply and high demand.",
   },
   {
     question: "How much does a home cost in Kerrisdale Vancouver?",
     answer:
-      "Kerrisdale is among Vancouver's most prestigious neighborhoods. The GVR MLS® HPI benchmark prices as of January 2026 are: detached homes at $2.98M, condos at $974K, and townhomes at $1.66M. The composite benchmark across all property types is $1.90M. Exceptional heritage estates and larger lots can command significantly higher prices.",
+      "GVR MLS® HPI benchmarks (January 2026): detached $2.98M, condos $974K, townhomes $1.66M. Composite: $1.90M. Heritage estates and larger lots command significantly more.",
   },
   {
     question: "What schools are near Kerrisdale?",
     answer:
-      "Kerrisdale is one of Vancouver's strongest neighborhoods for education. Public options include Kerrisdale Elementary (K-7), Kerrisdale Annex, and Point Grey Secondary (8-12). Top private schools include Crofton House School (all-girls, JK-12) and St. George's School (all-boys, 1-12) nearby. The proximity to UBC also adds post-secondary convenience for older students and academic families.",
+      "Public: Kerrisdale Elementary (K-7), Kerrisdale Annex, and Point Grey Secondary (8-12). Private: Crofton House (all-girls, JK-12) and St. George's (all-boys, 1-12) nearby. UBC adds post-secondary convenience.",
   },
   {
     question: "What is Kerrisdale Village?",
     answer:
-      "Kerrisdale Village is the charming commercial heart of the neighborhood, centered along 41st Avenue between Larch Street and Yew Street. It features an eclectic mix of boutique shops, independent bookstores, specialty food stores, cafes, and restaurants. Unlike larger commercial districts, Kerrisdale Village retains a walkable, small-town atmosphere with tree-lined sidewalks and locally owned businesses that give it a unique character.",
+      "The commercial heart of the neighborhood along 41st Avenue between Larch and Yew. Boutique shops, bookstores, specialty food stores, cafes, and restaurants. Walkable, small-town atmosphere with locally owned businesses.",
   },
   {
     question: "How do I get around from Kerrisdale?",
     answer:
-      "Kerrisdale is well-connected by bus transit, with major routes running along 41st Avenue and Dunbar/Boulevard connecting to downtown, UBC, and the Oakridge-41st SkyTrain station. The Arbutus Greenway provides an excellent cycling and walking corridor. Driving access is convenient via West Boulevard, Arbutus Street, and 41st Avenue. UBC is approximately 10 minutes by car, and downtown Vancouver is about 20 minutes.",
+      "Bus routes along 41st Avenue and Dunbar/Boulevard connect to downtown, UBC, and Oakridge-41st SkyTrain. The Arbutus Greenway provides cycling and walking. UBC is 10 minutes by car, downtown about 20.",
   },
 ];
 
@@ -166,13 +166,13 @@ export default async function KerrisdalePage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Kerrisdale is an upscale, established residential neighborhood in southwest Vancouver, bounded roughly by West 33rd Avenue to the north, West 49th Avenue to the south, Granville Street to the east, and Blenheim Street to the west. One of the city&apos;s oldest and most prestigious neighborhoods, Kerrisdale has maintained its refined character for over a century while evolving into a vibrant community that appeals to families, professionals, and retirees alike.
+                  Kerrisdale is an upscale neighborhood in southwest Vancouver, bounded by 33rd Avenue, 49th Avenue, Granville Street, and Blenheim Street. One of the city&apos;s oldest and most prestigious areas, it has maintained its refined character for over a century while appealing to families, professionals, and retirees.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  What sets Kerrisdale apart from other Vancouver neighborhoods is its genuine village atmosphere. Unlike the high-rise density of downtown or the busy commercial corridors of other neighborhoods, Kerrisdale offers a quieter, more refined pace of life. Grand heritage homes sit on generous lots beneath mature tree canopies, and the local shopping district feels more like a charming small town than a city neighborhood.
+                  A genuine village atmosphere sets Kerrisdale apart. Grand heritage homes on generous lots beneath mature canopies, and a shopping district that feels more small town than big city.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  The neighborhood is also home to a rich cultural mix, with strong East Asian and European communities that have shaped Kerrisdale&apos;s dining scene, specialty shops, and community character. This blend of old-world elegance and multicultural vibrancy gives Kerrisdale a distinctive identity that is difficult to replicate elsewhere in Vancouver.
+                  Strong East Asian and European communities shape the dining scene, specialty shops, and community character. Old-world elegance meets multicultural vibrancy.
                 </p>
               </section>
 
@@ -197,13 +197,13 @@ export default async function KerrisdalePage() {
                   The streets are wide, tree-lined, and remarkably quiet. You will know your neighbors by name and children will walk to school through canopied sidewalks.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  One finds beautifully maintained Tudor-style homes, stately Georgian residences, some classic craftsman bungalows as well as distinguished mid-century estates. Many homes sit on some of Vancouver&apos;s largest residential lots, with mature gardens, established landscaping and the kind of curb appeal that newer developments simply cannot replicate.
+                  Tudor homes, Georgian residences, craftsman bungalows, and mid-century estates. Many sit on some of Vancouver&apos;s largest residential lots, with mature gardens and curb appeal that newer developments cannot replicate.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  A day in Kerrisdale can start with a morning espresso at one of the cozy cafes along 41st Avenue. A stroll through Kerrisdale Park with the dog before dropping the children at Crofton House or Kerrisdale Elementary. Afternoon errands can look like picking up fresh pastries from Thomas Haas, browsing the shelves at the local bookstore or stopping in at a boutique clothing shop. An after-school activity at Kerrisdale Community Centre, followed by dinner at one of the neighborhood&apos;s excellent restaurants. Weekend mornings might include a family hike through Pacific Spirit Park, just minutes away, or a bike ride along the Arbutus Greenway.
+                  Morning espresso on 41st Avenue. Walk the dog through Kerrisdale Park, drop the kids at Crofton House or Kerrisdale Elementary. Afternoon: pastries from Thomas Haas, browsing the local bookstore, a boutique clothing shop. After school at Kerrisdale Community Centre, then dinner at a neighborhood restaurant. Weekends: family hike through Pacific Spirit Park or bike ride along the Arbutus Greenway.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Kerrisdale is unhurried and gracious, with everything you need within walking distance, and the natural beauty of Vancouver&apos;s west side at your doorstep.
+                  Unhurried and gracious, with everything within walking distance and Vancouver&apos;s west-side natural beauty at the doorstep.
                 </p>
               </section>
 
@@ -213,13 +213,13 @@ export default async function KerrisdalePage() {
                   Kerrisdale Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Kerrisdale is one of Vancouver&apos;s most coveted and expensive residential neighborhoods, defined by limited supply, strong demand, and a range from luxury heritage estates to modern condominiums:
+                  Limited supply, strong demand, and a range from heritage estates to modern condos:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Primarily heritage and character homes on generous lots. Benchmark price is $2.98M. Tudor, Georgian, and craftsman styles predominate." },
-                    { type: "Condominiums", range: "$600K - $1.3M", desc: "You will find these concentrated along 41st Avenue and West Boulevard. Benchmark price is $974K. Popular with retirees, and professionals who want a Kerrisdale life at a more accessible price point." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common here but increasingly sought after. Benchmark price is $1.66M." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Heritage and character homes on generous lots. Benchmark: $2.98M. Tudor, Georgian, and craftsman styles." },
+                    { type: "Condominiums", range: "$600K - $1.3M", desc: "Concentrated along 41st Avenue and West Boulevard. Benchmark: $974K. Popular with retirees and professionals." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common but increasingly sought after. Benchmark: $1.66M." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -231,12 +231,12 @@ export default async function KerrisdalePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Despite the premium, Kerrisdale properties have historically demonstrated strong value retention due to the neighborhood&apos;s established reputation, excellent schools, and the scarcity of available lots.
+                  Kerrisdale properties show strong value retention thanks to established reputation, excellent schools, and lot scarcity.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    Kerrisdale benefits from a combination of factors that support long-term appreciation: proximity to UBC, top-ranked private schools, the Arbutus Greenway development, and limited new detached-home supply. For buyers seeking a stable, prestige west-side address with strong fundamentals, Kerrisdale is one of Vancouver&apos;s most reliable neighborhoods.
+                    Proximity to UBC, top private schools, the Arbutus Greenway, and limited detached supply support long-term appreciation. For a stable, prestige west-side address, Kerrisdale is one of Vancouver&apos;s most reliable picks.
                   </p>
                 </div>
               </section>
@@ -247,14 +247,14 @@ export default async function KerrisdalePage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  While Kerrisdale does not have its own SkyTrain station, the neighborhood is well-served by transit and benefits from its central west-side location:
+                  No SkyTrain station, but well-served by bus transit and centrally located on the west side:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "Bus", detail: "Major bus routes run along 41st Avenue (43 and 41), connecting Kerrisdale to the Oakridge-41st SkyTrain station and UBC. Additional routes on Dunbar Street, Arbutus Street, and West Boulevard provide north-south connections to downtown and south Vancouver." },
-                    { mode: "Cycling", detail: "The Arbutus Greenway, a dedicated cycling and walking corridor built on the former Arbutus rail line, runs along the eastern edge of Kerrisdale. It provides a scenic, car-free route connecting Kerrisdale to Marpole, Kitsilano, and beyond." },
-                    { mode: "Driving", detail: "Easy access to 41st Avenue, Granville Street, and West Boulevard. UBC is approximately 10 minutes, downtown Vancouver about 20 minutes. The airport is accessible via Granville Street to the Arthur Laing Bridge." },
-                    { mode: "Walking", detail: "Kerrisdale Village is one of Vancouver's most walkable shopping districts. Most daily errands, schools, and parks are within comfortable walking distance for residents, making a car-light lifestyle entirely feasible." },
+                    { mode: "Bus", detail: "41st Avenue (43/41) connects to Oakridge-41st SkyTrain and UBC. Dunbar, Arbutus, and West Boulevard routes provide north-south connections." },
+                    { mode: "Cycling", detail: "The Arbutus Greenway runs along the eastern edge, a scenic car-free corridor connecting to Marpole, Kitsilano, and beyond." },
+                    { mode: "Driving", detail: "41st Avenue, Granville, and West Boulevard. UBC in 10 minutes, downtown in 20. Airport via Granville to the Arthur Laing Bridge." },
+                    { mode: "Walking", detail: "Kerrisdale Village is one of Vancouver's most walkable districts. Daily errands, schools, and parks within comfortable distance." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -281,11 +281,11 @@ export default async function KerrisdalePage() {
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Kerrisdale Park", desc: "The neighborhood's central green space, featuring playgrounds, tennis courts, sports fields, and a seasonal outdoor pool. Located adjacent to the Kerrisdale Community Centre, it serves as the recreational hub for families throughout the year." },
-                    { name: "Elm Park", desc: "A quiet, leafy neighborhood park with a playground, open green space, and towering elm trees. A favorite for families with young children and morning dog walkers." },
-                    { name: "Quilchena Park", desc: "A larger park on the northern edge of Kerrisdale with expansive playing fields, a running track, and a playground. Home to local soccer and field hockey leagues, it offers open space that is increasingly rare on the west side." },
-                    { name: "Pacific Spirit Regional Park", desc: "Just minutes from Kerrisdale, this 763-hectare urban forest offers over 73 kilometers of trails for hiking, running, cycling, and horseback riding. It is one of the largest urban parks in North America and a defining feature of west-side living." },
-                    { name: "Arbutus Greenway", desc: "A linear park and active transportation corridor running along the former Arbutus rail line. Perfect for walking, jogging, and cycling, it connects Kerrisdale to other neighborhoods and provides a scenic urban trail experience." },
+                    { name: "Kerrisdale Park", desc: "Playgrounds, tennis courts, sports fields, and seasonal outdoor pool. Adjacent to the Community Centre." },
+                    { name: "Elm Park", desc: "Quiet park with playground, green space, and towering elms. Popular with young families and dog walkers." },
+                    { name: "Quilchena Park", desc: "Northern edge of Kerrisdale. Expansive playing fields, running track, and playground. Home to local soccer and field hockey leagues." },
+                    { name: "Pacific Spirit Regional Park", desc: "763 hectares of urban forest with 73+ km of trails for hiking, running, cycling, and horseback riding. One of North America's largest urban parks, minutes away." },
+                    { name: "Arbutus Greenway", desc: "Linear park on the former rail line. Walking, jogging, and cycling corridor connecting Kerrisdale to surrounding neighbourhoods." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -294,7 +294,7 @@ export default async function KerrisdalePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The Kerrisdale Community Centre is a hub for activities across all ages. It is equipped with a swimming pool which is a big plus point for kids and seniors since not all community centres have pools. It also is one of the most active community centres on Vancouver&apos;s west side and plays a central role in neighborhood life.
+                  Kerrisdale Community Centre is one of the west side&apos;s most active, with a swimming pool (not all centres have one), programs for all ages, and a central role in neighbourhood life.
                 </p>
               </section>
 
@@ -304,7 +304,7 @@ export default async function KerrisdalePage() {
                   Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Education is one of Kerrisdale&apos;s strongest draws. The neighborhood and its immediate surroundings are home to some of Vancouver&apos;s best public and private schools. Moreover there are many great after school activities that are concentrated here which makes it very easy to hop from one to another with multiple kids in tow!
+                  Education is one of Kerrisdale&apos;s strongest draws, with some of Vancouver&apos;s best public and private schools. Concentrated after-school activities make it easy to manage schedules with multiple kids.
                 </p>
                 <div className="mb-6">
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
@@ -331,9 +331,9 @@ export default async function KerrisdalePage() {
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Private Schools</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Crofton House School", type: "JK-12 Private (Girls)", detail: "One of Vancouver's most prestigious all-girls schools, located in Kerrisdale. Consistently ranked among the top independent schools in British Columbia." },
-                      { name: "St. George's School", type: "1-12 Private (Boys)", detail: "A premier all-boys school located nearby in the Dunbar area. Known for academic excellence, competitive athletics, and a strong alumni network." },
-                      { name: "Vancouver College", type: "K-12 Private", detail: "A well-established Catholic school offering excellent academic and athletic development within easy reach of Kerrisdale." },
+                      { name: "Crofton House School", type: "JK-12 Private (Girls)", detail: "One of Vancouver's most prestigious all-girls schools. Consistently top-ranked in B.C." },
+                      { name: "St. George's School", type: "1-12 Private (Boys)", detail: "Premier all-boys school in nearby Dunbar. Academic excellence, competitive athletics, strong alumni network." },
+                      { name: "Vancouver College", type: "K-12 Private", detail: "Established Catholic school with strong academics and athletics, within easy reach." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -349,7 +349,7 @@ export default async function KerrisdalePage() {
                   </div>
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The proximity to the University of British Columbia (UBC) also adds educational value to the neighborhood, with families benefiting from university events, libraries, cultural programs, and the general academic atmosphere that influences this west side neighbourhood.
+                  Proximity to UBC adds further value through university events, libraries, and cultural programs.
                 </p>
               </section>
 
@@ -365,16 +365,16 @@ export default async function KerrisdalePage() {
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Kerrisdale Village is what makes this neighborhood truly special for day-to-day living. The shopping district has resisted the homogenization that has affected many Vancouver commercial areas, retaining a mix of independent boutiques, specialty stores, and locally owned businesses that give it genuine character.
+                  Kerrisdale Village has resisted the homogenization of other commercial areas, retaining independent boutiques, specialty stores, and locally owned businesses.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  For dining, Kerrisdale offers everything from cozy neighbourhood cafes and upscale Japanese restaurants to classic European bakeries and modern West Coast cuisine. The neighborhood&apos;s East Asian and European cultural influences are beautifully reflected in its food scene.
+                  Dining spans cozy cafes, upscale Japanese, European bakeries, and West Coast cuisine. East Asian and European influences shape the food scene.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Notable destinations include Thomas Haas, Beaucoup Bakery, a range of excellent sushi restaurants, and several well-loved cafes. Along West Boulevard, additional shops and eateries extend the village atmosphere south.
+                  Notable spots: Thomas Haas, Beaucoup Bakery, excellent sushi restaurants, and well-loved cafes. West Boulevard extends the village atmosphere south.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For grocery needs, Kerrisdale is home to quality supermarkets, specialty food shops, and organic grocers. The neighborhood&apos;s self-contained nature means most residents rarely need to leave for shopping or dining.
+                  Quality supermarkets, specialty food shops, and organic grocers mean residents rarely need to leave the neighbourhood for shopping or dining.
                 </p>
               </section>
 
