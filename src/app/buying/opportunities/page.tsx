@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import PageBanner from "@/components/hero/PageBanner";
-import ListingCard from "@/components/listings/ListingCard";
-import ContactForm from "@/components/forms/ContactForm";
-import { fetchOpportunityListings } from "@/lib/ddf";
-
-export const dynamic = "force-dynamic";
+import GetInTouch from "@/components/sections/GetInTouch";
 
 export const metadata: Metadata = {
   title: "Below-Market Homes & Motivated Sellers | Vancouver South Side",
@@ -52,13 +47,7 @@ const VALUE_PROPS = [
   },
 ];
 
-export default async function OpportunitiesPage() {
-  const listings = await fetchOpportunityListings();
-
-  // Split listings for mid-page CTA insertion
-  const firstHalf = listings.slice(0, 6);
-  const secondHalf = listings.slice(6);
-
+export default function OpportunitiesPage() {
   return (
     <>
       <PageBanner
@@ -99,84 +88,19 @@ export default async function OpportunitiesPage() {
             ))}
           </div>
 
-          {/* Results count */}
-          {listings.length > 0 && (
-            <p className="text-sm text-warm-500 mb-6">
-              {listings.length} opportunity{" "}
-              {listings.length === 1 ? "listing" : "listings"} found
+          <div className="text-center py-8">
+            <p className="text-warm-600 text-lg mb-2">
+              Interested in off-market opportunities?
             </p>
-          )}
-
-          {/* First batch of listings */}
-          {firstHalf.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {firstHalf.map((listing) => (
-                <ListingCard key={listing.listingKey} listing={listing} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-16">
-              <p className="text-warm-500 text-lg mb-4">
-                No opportunity listings available right now.
-              </p>
-              <p className="text-warm-400 text-sm">
-                Reach out to me directly &mdash; I have access to off-market
-                properties and pre-foreclosure opportunities not listed on MLS.
-              </p>
-            </div>
-          )}
-
-          {/* Mid-page lead capture CTA */}
-          <div className="my-16 bg-teal-950 rounded-2xl p-8 md:p-12">
-            <div className="max-w-xl mx-auto text-center">
-              <h2 className="font-serif text-2xl md:text-3xl text-white italic mb-3">
-                Get Early Access to Off-Market Deals
-              </h2>
-              <p className="text-teal-200/80 text-sm mb-8 leading-relaxed">
-                These are just the public listings. I have access to off-market
-                properties, pocket listings, and pre-foreclosure opportunities
-                not on MLS. Leave your details and I&apos;ll send you my curated
-                list.
-              </p>
-              <ContactForm compact light source="Opportunities Page" />
-            </div>
-          </div>
-
-          {/* Second batch of listings */}
-          {secondHalf.length > 0 && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {secondHalf.map((listing) => (
-                <ListingCard key={listing.listingKey} listing={listing} />
-              ))}
-            </div>
-          )}
-
-          {/* Bottom CTA + navigation */}
-          <div className="mt-16 flex flex-col items-center gap-6">
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/buying/search"
-                className="px-8 py-3 bg-teal-700 text-white rounded-xl font-medium hover:bg-teal-800 transition-colors"
-              >
-                Search All Listings
-              </Link>
-              <Link
-                href="/buying/featured-listings"
-                className="px-8 py-3 bg-white border border-warm-200 text-teal-700 rounded-xl font-medium hover:bg-teal-50 transition-colors"
-              >
-                Featured Listings
-              </Link>
-            </div>
-
-            {/* CREA Attribution */}
-            <p className="text-[10px] text-warm-400 uppercase tracking-wider text-center max-w-lg">
-              Listing data supplied by CREA&apos;s Data Distribution Facility
-              (DDF&reg;). REALTOR&reg;, MLS&reg; and associated logos are
-              trademarks of The Canadian Real Estate Association.
+            <p className="text-warm-500 text-sm">
+              Reach out to me directly &mdash; I have access to off-market
+              properties, pocket listings, and pre-foreclosure opportunities not listed on MLS.
             </p>
           </div>
         </div>
       </section>
+
+      <GetInTouch />
     </>
   );
 }
