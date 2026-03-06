@@ -56,23 +56,21 @@ export default function UBCPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            UBC sits on the western tip of the Point Grey peninsula, surrounded
-            by ocean on three sides and wrapped in 763 hectares of Pacific Spirit
-            Park. Morning runs happen on old-growth forest trails. Evening walks
-            end at Spanish Banks watching the sun drop behind Vancouver Island.
-            The campus brings 70,000 people daily, which means world-class
-            lectures, art exhibitions at the Belkin Gallery, Thunderbirds
-            athletics, and a cultural calendar that rivals downtown&apos;s.
+            UBC sits on the western tip of Point Grey, surrounded by ocean on
+            three sides and wrapped in 763 hectares of Pacific Spirit Park.
+            Morning runs on old-growth forest trails. Evening walks end at
+            Spanish Banks watching the sun drop behind Vancouver Island. The
+            campus brings 70,000 people daily: world-class lectures, Belkin
+            Gallery exhibitions, Thunderbirds athletics, and a cultural
+            calendar that rivals downtown&apos;s.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Wesbrook Village is the residential heart: modern, thoughtfully
-            planned, and genuinely walkable. There&apos;s a Save-On-Foods, solid
-            restaurants, a community centre, and Norma Rose Point Elementary
-            right in the village. The vibe is young, international, and quietly
-            ambitious. People here chose nature and academia over downtown flash,
-            and no UBC affiliation is required to buy. Anyone can purchase in
-            Wesbrook Village, Hawthorn Place, or Chancellor Place.
+            Wesbrook Village is the residential heart: modern, walkable, with a
+            Save-On-Foods, restaurants, community centre, and Norma Rose Point
+            Elementary. The vibe is young, international, and quietly ambitious.
+            No UBC affiliation required to buy. Anyone can purchase in Wesbrook
+            Village, Hawthorn Place, or Chancellor Place.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -83,37 +81,32 @@ export default function UBCPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Every property at UBC sits on a 99-year prepaid lease from the
-            university. For financing and resale it functions almost identically
-            to freehold. The composite benchmark sits around{" "}
-            <strong>$1.35M</strong>. Condos are the most common entry point at{" "}
-            <strong>$550K to $1.2M</strong> for modern builds in Wesbrook Village
-            and Hawthorn Place with mountain or forest views. Townhomes run{" "}
-            <strong>$1.3M to $2M</strong> and are the sweet spot for families.
+            Every property sits on a 99-year prepaid lease from UBC. For
+            financing and resale it functions almost identically to freehold.
+            Composite benchmark: around <strong>$1.35M</strong>. Condos at{" "}
+            <strong>$550K to $1.2M</strong> in Wesbrook Village and Hawthorn
+            Place with mountain or forest views. Townhomes at{" "}
+            <strong>$1.3M to $2M</strong>, the sweet spot for families.
             Detached homes in the University Endowment Lands are extremely
-            limited at <strong>$2.5M to $4.5M+</strong> and barely come to
-            market.
+            limited at <strong>$2.5M to $4.5M+</strong>.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            You are at the end of a peninsula, and rush hour can feel that way.
-            The 99 B-Line express bus runs every 3 to 5 minutes at peak and
-            reaches Commercial-Broadway SkyTrain in about 30 minutes. By car,
-            downtown is 20 to 30 minutes via West 4th or SW Marine Drive, and
-            the Broadway Subway extension will improve connections further. The
-            community is UBC faculty, international families drawn by the schools
-            and safety, retirees who traded their Kerrisdale house for a
-            low-maintenance condo with forest views, and remote workers who
-            prioritize nature over nightlife.
+            Rush hour can feel like the end of a peninsula. The 99 B-Line runs
+            every 3 to 5 minutes at peak and reaches Commercial-Broadway
+            SkyTrain in about 30 minutes. Downtown is 20 to 30 minutes by car,
+            and the Broadway Subway extension will improve connections further.
+            The community: UBC faculty, international families drawn by schools
+            and safety, retirees who traded Kerrisdale houses for forest-view
+            condos, and remote workers who prioritize nature over nightlife.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> UBC delivers nature-immersed
-              west-side living at a slight discount to freehold, with
-              world-class amenities on your doorstep. If your ideal evening is a
-              trail run through old-growth forest followed by a lecture on
-              campus, this is the one.
+              <strong>Bottom line:</strong> Nature-immersed west-side living
+              at a slight discount to freehold, with world-class amenities on
+              your doorstep. If your ideal evening is a trail run through
+              old-growth forest followed by a campus lecture, this is the one.
             </p>
           </div>
         </div>

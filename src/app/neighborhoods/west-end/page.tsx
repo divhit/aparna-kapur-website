@@ -26,27 +26,27 @@ const faqs = [
   {
     question: "Is the West End a good place to buy a condo?",
     answer:
-      "The West End is one of Vancouver's most desirable neighbourhoods for condo buyers, particularly those who value walkability, beach access, and vibrant community life. Its location between Stanley Park and Downtown, combined with a Walk Score of 97 and three beaches within walking distance, creates a lifestyle that is genuinely unique in Canada. The West End offers some of the most affordable entry points in the Downtown peninsula, making it accessible to first-time buyers and investors. The strong rental demand, driven by the neighbourhood's popularity with professionals and students, also makes it a solid investment choice.",
+      "The West End is one of Vancouver's most desirable condo neighbourhoods for buyers who value walkability, beach access, and vibrant community life. Its location between Stanley Park and Downtown, a Walk Score of 97, and three beaches create a lifestyle unique in Canada. It also offers some of the most affordable entry points on the Downtown peninsula, making it accessible to first-time buyers and investors. Strong rental demand adds solid investment appeal.",
   },
   {
     question: "How much does a condo cost in the West End?",
     answer:
-      "The West End is one of the more accessible neighbourhoods on the Downtown peninsula in terms of pricing. The composite benchmark price is approximately $680K. Studio apartments range from $350K to $450K, one-bedroom units from $500K to $650K, and two-bedroom condos from $700K to $1M. Larger or renovated units with ocean or park views can command $1M to $1.5M. Heritage building conversions, while less common, offer unique character at varying price points. The lower price per unit compared to Coal Harbour or Yaletown reflects the older building stock, but many buyers view this as excellent value given the location.",
+      "The composite benchmark is approximately $680K. Studios range from $350K to $450K, one-bedrooms from $500K to $650K, and two-bedrooms from $700K to $1M. Larger or renovated units with ocean or park views can reach $1M to $1.5M. Prices run lower than Coal Harbour or Yaletown due to older building stock, but many buyers see this as excellent value for the location.",
   },
   {
     question: "What is Davie Village?",
     answer:
-      "Davie Village, centred along Davie Street between Burrard and Jervis Streets, is the heart of Vancouver's LGBTQ+ community and one of Canada's most prominent queer neighbourhoods. It is marked by rainbow crosswalks, vibrant nightlife, eclectic restaurants, and community-focused businesses. The neighbourhood hosts the annual Vancouver Pride Parade and Festival, one of the largest Pride events in the country. Beyond its identity as an LGBTQ+ hub, Davie Village is a welcoming, diverse, and lively commercial strip that adds significant character and energy to the West End.",
+      "Davie Village, along Davie Street between Burrard and Jervis, is the heart of Vancouver's LGBTQ+ community and one of Canada's most prominent queer neighbourhoods. Rainbow crosswalks, vibrant nightlife, eclectic restaurants, and community-focused businesses define the strip. It hosts the annual Vancouver Pride Parade and Festival, one of the country's largest Pride events. It is also a welcoming, lively commercial area that adds character to the broader West End.",
   },
   {
     question: "How close is Stanley Park to the West End?",
     answer:
-      "Stanley Park is essentially the West End's backyard. The park's entrance at the foot of Georgia Street is a five-to-ten-minute walk from most West End residences. Many West End residents use Stanley Park daily for running, cycling, walking, or simply enjoying the seawall. The proximity to a 405-hectare urban forest with old-growth trees, beaches, the Vancouver Aquarium, and some of the most scenic views in the city is one of the West End's defining advantages. No other neighbourhood in Vancouver provides this level of access to such a significant green space.",
+      "Stanley Park is the West End's backyard. The entrance at the foot of Georgia Street is a five-to-ten-minute walk from most residences. Many locals use it daily for running, cycling, or walking the seawall. Access to a 405-hectare urban forest with old-growth trees, beaches, the Vancouver Aquarium, and some of the city's best views is the West End's defining advantage.",
   },
   {
     question: "What is the community vibe like in the West End?",
     answer:
-      "The West End has one of the strongest senses of community of any Vancouver neighbourhood, despite being one of the most densely populated areas in Canada. This is largely due to its walkable, pedestrian-oriented streets, the concentration of local businesses, and active community organizations. Neighbours greet each other on the street, regulars are known at local cafes, and community events from beach volleyball tournaments to the English Bay fireworks create shared experiences. The neighbourhood is exceptionally diverse, welcoming people of all ages, backgrounds, orientations, and lifestyles. It is the kind of place where you feel part of a genuine urban village.",
+      "Despite being one of Canada's most densely populated areas, the West End has a strong sense of community. Walkable streets, local businesses, and active community organizations bring people together. Neighbours greet each other, regulars are known at cafes, and events from beach volleyball to the English Bay fireworks create shared experiences. The neighbourhood is exceptionally diverse, welcoming people of all ages, backgrounds, and lifestyles. It feels like a genuine urban village.",
   },
 ];
 
@@ -164,13 +164,13 @@ export default async function WestEndPage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End is a vibrant residential neighbourhood occupying the western portion of Vancouver&apos;s Downtown peninsula, bounded by Stanley Park to the west, Coal Harbour to the north, the Downtown business core to the east, and English Bay to the south. It is one of the most densely populated neighbourhoods in Canada, yet it maintains an intimate, village-like character that defies its urban density. With three beaches, Stanley Park at its doorstep, and a Walk Score of 97, the West End offers a lifestyle that is uniquely Vancouver.
+                  The West End occupies the western portion of Vancouver&apos;s Downtown peninsula, bounded by Stanley Park, Coal Harbour, the business core, and English Bay. One of Canada&apos;s most densely populated neighbourhoods, it maintains an intimate, village-like character. Three beaches, Stanley Park at its doorstep, and a Walk Score of 97 make for a lifestyle that is uniquely Vancouver.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End is defined by its remarkable diversity and inclusivity. It is home to one of Canada&apos;s most prominent LGBTQ+ communities, centred around Davie Village, and its residents span every age group, cultural background, and lifestyle. This diversity is reflected in the neighbourhood&apos;s eclectic dining scene, independent shops, and community events. The West End is a place where everyone is welcome, and that spirit of openness is palpable on its streets.
+                  Diversity and inclusivity define the West End. It is home to one of Canada&apos;s most prominent LGBTQ+ communities, centred around Davie Village, and its residents span every age group and cultural background. That openness is reflected in the eclectic dining scene, independent shops, and community events.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  What makes the West End truly special is its relationship with the natural environment. English Bay Beach, Sunset Beach, and Second Beach are all within walking distance of virtually every address in the neighbourhood. Stanley Park&apos;s 405 hectares of forest, trails, and seawall are steps away. The combination of intense urban density and immediate access to beaches, forest, and ocean is what draws people to the West End and keeps them there for decades.
+                  English Bay Beach, Sunset Beach, and Second Beach are all walkable from virtually every address. Stanley Park&apos;s 405 hectares of forest, trails, and seawall are steps away. The combination of urban density and immediate access to beaches, forest, and ocean is what draws people here and keeps them for decades.
                 </p>
               </section>
 
@@ -192,16 +192,16 @@ export default async function WestEndPage() {
                   Living in the West End
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Life in the West End revolves around the outdoors and the street. Morning jogs along the seawall to Stanley Park. Coffee at a neighbourhood cafe on Denman Street. An afternoon at English Bay Beach watching the freighters on the inlet. Dinner at one of the dozens of restaurants within walking distance. The West End is a neighbourhood where the car is truly optional and the sidewalk is your living room.
+                  Life here revolves around the outdoors. Morning seawall jogs to Stanley Park. Coffee on Denman Street. An afternoon at English Bay watching freighters on the inlet. Dinner at one of dozens of walkable restaurants. The car is truly optional and the sidewalk is your living room.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The residential landscape is primarily mid-rise and high-rise apartment buildings, many dating from the 1960s and 1970s, interspersed with some newer towers and a scattering of heritage homes and conversions. The older buildings offer character, generous floor plans by modern standards, and the patina of a well-loved neighbourhood. Newer developments bring modern finishes and amenities while maintaining the neighbourhood&apos;s residential scale.
+                  Housing is primarily mid-rise and high-rise apartments, many from the 1960s and 1970s, plus some newer towers and heritage conversions. Older buildings offer character and generous floor plans by modern standards. Newer developments bring modern finishes while maintaining the neighbourhood&apos;s residential scale.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Community events are a cornerstone of West End life. The Celebration of Light fireworks at English Bay draw hundreds of thousands of spectators each summer. The Pride Parade through Davie Village is one of Canada&apos;s largest. The West End farmers&apos; market, street festivals, and seasonal events create a year-round social calendar that brings residents together.
+                  Community events anchor West End life. The Celebration of Light fireworks at English Bay draw hundreds of thousands each summer. The Pride Parade through Davie Village is one of Canada&apos;s largest. Farmers&apos; markets, street festivals, and seasonal events fill the year-round social calendar.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  The West End appeals to a wide range of residents: young professionals drawn to the vibrant social scene, retirees who love the walkability and beach access, LGBTQ+ community members who find a welcoming home in Davie Village, and everyone in between. It is one of the few neighbourhoods in Vancouver where you can live a truly car-free, beach-adjacent, nature-immersed urban life.
+                  The area appeals to young professionals, retirees who love walkability and beach access, LGBTQ+ community members in Davie Village, and everyone in between. Few neighbourhoods in Vancouver offer truly car-free, beach-adjacent, nature-immersed urban life.
                 </p>
               </section>
 
@@ -211,13 +211,13 @@ export default async function WestEndPage() {
                   West End Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End&apos;s real estate market is predominantly condominiums and rental apartments, with some of the most accessible pricing on the Downtown peninsula:
+                  The market is predominantly condos and rental apartments, with some of the most accessible pricing on the Downtown peninsula:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$350K - $1M", desc: "The West End offers a wide range of condos, from compact studios starting around $350K to spacious two-bedroom units up to $1M. The benchmark price is approximately $680K. Older buildings from the 1960s-1980s offer lower entry points, while newer or renovated units command premiums." },
-                    { type: "Ocean View Units", range: "$700K - $1.5M", desc: "Units with views of English Bay, the North Shore mountains, or Stanley Park carry significant premiums. South and west-facing units on higher floors are the most sought after, particularly in buildings along Beach Avenue and Pacific Street." },
-                    { type: "Heritage Conversions", range: "$500K - $900K", desc: "A small number of heritage homes have been converted into unique multi-unit residences. These offer character and charm that cannot be replicated in new construction. They are in limited supply and tend to attract buyers seeking something distinctive." },
+                    { type: "Condominiums", range: "$350K - $1M", desc: "Compact studios start around $350K, spacious two-bedrooms reach $1M. Benchmark is approximately $680K. Older buildings (1960s-1980s) offer lower entry points; newer or renovated units command premiums." },
+                    { type: "Ocean View Units", range: "$700K - $1.5M", desc: "Views of English Bay, the North Shore mountains, or Stanley Park carry significant premiums. South and west-facing higher floors along Beach Avenue and Pacific Street are most sought after." },
+                    { type: "Heritage Conversions", range: "$500K - $900K", desc: "A small number of heritage homes converted into multi-unit residences. Character and charm that new construction cannot replicate. Limited supply attracts buyers seeking something distinctive." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -229,12 +229,12 @@ export default async function WestEndPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End&apos;s rental market is exceptionally strong, with vacancy rates consistently below the city average. This makes West End condos attractive to investor-buyers, as rental demand from professionals, students, and newcomers remains robust year-round.
+                  Vacancy rates sit consistently below the city average, making condos attractive to investors. Rental demand from professionals, students, and newcomers stays robust year-round.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    The West End benefits from irreplaceable locational advantages: Stanley Park, three beaches, Downtown employment, and a Walk Score of 97. The City of Vancouver&apos;s West End Community Plan encourages sensitive densification and improved public spaces. The neighbourhood&apos;s lower average prices compared to Coal Harbour and Yaletown, combined with its exceptional lifestyle amenities, make it an increasingly attractive value proposition for buyers seeking long-term appreciation on the Downtown peninsula.
+                    Irreplaceable location: Stanley Park, three beaches, Downtown employment, Walk Score of 97. The City&apos;s West End Community Plan encourages sensitive densification and improved public spaces. Lower average prices than Coal Harbour and Yaletown, combined with exceptional lifestyle amenities, make this an increasingly attractive value proposition for long-term appreciation.
                   </p>
                 </div>
               </section>
@@ -245,14 +245,14 @@ export default async function WestEndPage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  The West End&apos;s compact layout and exceptional walkability mean that most daily trips can be made on foot, but transit options are strong for longer journeys:
+                  Most daily trips happen on foot, but transit options are strong for longer journeys:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "SkyTrain", detail: "Burrard Station on the Expo Line is the closest SkyTrain stop, located at the eastern edge of the West End. It provides direct connections to Downtown, Commercial-Broadway, New Westminster, and Surrey. The Granville and Vancouver City Centre stations are also within walking distance." },
-                    { mode: "Bus", detail: "Multiple bus routes serve the West End. The 5 and 6 run along Robson and Davie Streets, the C21 and C23 community shuttles circulate through the neighbourhood, and routes along Denman and Burrard Streets provide connections to Kitsilano, UBC, and south Vancouver." },
-                    { mode: "Cycling", detail: "The West End is well-served by cycling infrastructure. The seawall provides a scenic, car-free route around the entire waterfront. The Comox-Helmcken Greenway offers a protected east-west cycling route through the neighbourhood. Mobi bike-share stations are plentiful throughout the area." },
-                    { mode: "Walking", detail: "With a Walk Score of 97, virtually everything is within walking distance in the West End. Groceries, dining, shopping, beaches, Stanley Park, and transit are all accessible on foot. The flat terrain and pedestrian-friendly streets make walking the primary mode of transportation for most residents." },
+                    { mode: "SkyTrain", detail: "Burrard Station (Expo Line) sits at the eastern edge, with direct connections to Commercial-Broadway, New Westminster, and Surrey. Granville and Vancouver City Centre stations are also walkable." },
+                    { mode: "Bus", detail: "The 5 and 6 run along Robson and Davie Streets. C21 and C23 community shuttles circulate the neighbourhood. Routes along Denman and Burrard connect to Kitsilano, UBC, and south Vancouver." },
+                    { mode: "Cycling", detail: "The seawall provides a scenic, car-free waterfront route. The Comox-Helmcken Greenway offers protected east-west cycling. Mobi bike-share stations are plentiful." },
+                    { mode: "Walking", detail: "Walk Score of 97. Groceries, dining, beaches, Stanley Park, and transit are all accessible on foot. Flat terrain and pedestrian-friendly streets make walking the default for most residents." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -275,15 +275,15 @@ export default async function WestEndPage() {
                   Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End is one of the most park-rich neighbourhoods in Vancouver, with beaches, urban green spaces, and Stanley Park all within walking distance:
+                  One of Vancouver&apos;s most park-rich neighbourhoods, with beaches, green spaces, and Stanley Park all walkable:
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Stanley Park", desc: "The crown jewel of Vancouver's park system and the West End's greatest asset. This 405-hectare urban forest offers old-growth trees, the seawall, Beaver Lake, Lost Lagoon, the Vancouver Aquarium, totem poles, and countless trails. It is larger than New York's Central Park and serves as the West End's backyard." },
-                    { name: "English Bay Beach", desc: "Vancouver's most popular urban beach, located at the foot of Denman Street. English Bay is the epicentre of West End social life in summer, hosting the Celebration of Light fireworks, polar bear swims, and spectacular sunsets year-round. The adjacent bathhouse building adds historical character." },
-                    { name: "Sunset Beach", desc: "A quieter alternative to English Bay, Sunset Beach stretches along the seawall toward the Burrard Bridge. It offers a more relaxed atmosphere, an off-leash dog area, and views across False Creek. The annual Vancouver Pride celebrations use Sunset Beach as a gathering point." },
-                    { name: "Alexandra Park", desc: "A neighbourhood green space in the heart of the residential West End, featuring a bandshell that hosts concerts, a playground, and open lawns. It serves as an intimate community park for nearby residents." },
-                    { name: "Nelson Park", desc: "A well-used neighbourhood park with a community garden, playground, and sports courts. Located in the central West End, it provides green space and community gathering opportunities in the densest part of the neighbourhood." },
+                    { name: "Stanley Park", desc: "A 405-hectare urban forest (larger than Central Park) with old-growth trees, the seawall, Beaver Lake, Lost Lagoon, the Vancouver Aquarium, totem poles, and countless trails. The West End's backyard." },
+                    { name: "English Bay Beach", desc: "Vancouver's most popular urban beach, at the foot of Denman Street. The epicentre of West End summer life: Celebration of Light fireworks, polar bear swims, and year-round sunsets. The adjacent bathhouse adds historical character." },
+                    { name: "Sunset Beach", desc: "A quieter alternative stretching along the seawall toward the Burrard Bridge. Relaxed atmosphere, off-leash dog area, and False Creek views. A gathering point for Vancouver Pride celebrations." },
+                    { name: "Alexandra Park", desc: "A neighbourhood green space with a bandshell for concerts, a playground, and open lawns. An intimate community park in the residential heart of the West End." },
+                    { name: "Nelson Park", desc: "Community garden, playground, and sports courts in the central West End. Green space and gathering opportunities in the neighbourhood's densest section." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -292,7 +292,7 @@ export default async function WestEndPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The West End Community Centre on Denman Street offers fitness, recreation, swimming, and community programming. Its location near English Bay and Stanley Park makes it a hub for active residents throughout the year.
+                  The West End Community Centre on Denman offers fitness, recreation, swimming, and programming year-round, positioned between English Bay and Stanley Park.
                 </p>
               </section>
 
@@ -302,15 +302,15 @@ export default async function WestEndPage() {
                   Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  The West End is not traditionally a family-focused neighbourhood, but the growing number of families choosing urban living has increased demand for local schools. The neighbourhood shares school catchments with Downtown and offers access to schools across the peninsula.
+                  Not traditionally family-focused, but growing urban families have increased demand for local schools. The neighbourhood shares catchments with Downtown.
                 </p>
                 <div className="mb-6">
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Lord Roberts Annex", type: "K-3 Public", detail: "A small primary school located in the West End, serving young children with an intimate, community-oriented learning environment. It is the most accessible public school option for West End families with young children." },
-                      { name: "Lord Roberts Elementary", type: "K-7 Public", detail: "The primary elementary school serving the West End and Downtown area. It offers a diverse, urban school experience with strong community engagement." },
-                      { name: "King George Secondary", type: "8-12 Public", detail: "Located near the border of the West End and Downtown, King George Secondary serves secondary students from the peninsula. It offers a range of academic programs and benefits from its central, transit-accessible location." },
+                      { name: "Lord Roberts Annex", type: "K-3 Public", detail: "A small primary school with an intimate, community-oriented environment. The most accessible option for West End families with young children." },
+                      { name: "Lord Roberts Elementary", type: "K-7 Public", detail: "The primary elementary serving the West End and Downtown. Diverse urban school with strong community engagement." },
+                      { name: "King George Secondary", type: "8-12 Public", detail: "Near the West End/Downtown border. Serves peninsula students with a range of academic programs in a central, transit-accessible location." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -329,9 +329,9 @@ export default async function WestEndPage() {
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Nearby Options</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Elsie Roy Elementary", type: "K-7 Public", detail: "Located in the nearby Olympic Village/False Creek area, Elsie Roy is a modern school that draws families from the broader Downtown peninsula." },
-                      { name: "Various Private Schools", type: "Private", detail: "The West End's central location provides convenient transit access to private schools across Vancouver, including St. Paul's, York House, and Little Flower Academy." },
-                      { name: "West End Community Centre Programs", type: "Community", detail: "The West End Community Centre offers extensive after-school and youth programs, filling a vital role for families in the neighbourhood." },
+                      { name: "Elsie Roy Elementary", type: "K-7 Public", detail: "A modern school in nearby Olympic Village/False Creek that draws families from the broader peninsula." },
+                      { name: "Various Private Schools", type: "Private", detail: "Central location gives convenient transit access to St. Paul's, York House, Little Flower Academy, and others." },
+                      { name: "West End Community Centre Programs", type: "Community", detail: "Extensive after-school and youth programs that fill a vital role for neighbourhood families." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -347,7 +347,7 @@ export default async function WestEndPage() {
                   </div>
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The West End&apos;s excellent transit connections mean families have easy access to schools throughout the city. Many families in the neighbourhood send their children to schools in Fairview, Kitsilano, or other nearby areas, all within a short commute.
+                  Excellent transit gives families easy access to schools across the city. Many send children to schools in Fairview, Kitsilano, or other nearby areas.
                 </p>
               </section>
 
@@ -359,20 +359,20 @@ export default async function WestEndPage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">Denman Street</p>
                   <p className="text-sm text-gold-700">
-                    Denman Street is the West End&apos;s main commercial artery, stretching from Coal Harbour to English Bay Beach. It is lined with an eclectic mix of restaurants representing cuisines from around the world, independent shops, cafes, and services. Denman Street is where the West End community gathers, and its proximity to English Bay makes it especially vibrant in the warmer months.
+                    The West End&apos;s main commercial artery, stretching from Coal Harbour to English Bay Beach. Lined with restaurants from around the world, independent shops, cafes, and services. Proximity to English Bay makes it especially vibrant in warmer months.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The West End&apos;s dining scene is one of the most diverse and exciting in Vancouver. Denman Street alone offers Japanese ramen, Korean barbecue, Italian trattorias, Indian curry houses, Thai restaurants, and much more. The concentration of excellent, affordable dining in a walkable area is one of the West End&apos;s greatest draws.
+                  Denman Street alone offers Japanese ramen, Korean barbecue, Italian trattorias, Indian curry houses, Thai, and more. The concentration of excellent, affordable dining in a walkable area is one of the West End&apos;s greatest draws.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Davie Street adds another dimension with its vibrant restaurants, cafes, and nightlife. From brunch spots to late-night eateries, Davie Village caters to all hours and tastes. Robson Street, running along the northern edge of the West End, adds major retail and international dining options.
+                  Davie Street adds vibrant restaurants, cafes, and nightlife from brunch to late-night. Robson Street along the northern edge brings major retail and international dining.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  For daily shopping, the West End is well-served by grocery stores including IGA, Safeway, and various Asian grocery shops on Denman and Robson Streets. The neighbourhood&apos;s walkability means that most residents can access multiple shopping options on foot within minutes.
+                  Groceries include IGA, Safeway, and Asian grocery shops on Denman and Robson. Most residents reach multiple options on foot within minutes.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  Independent shops, bookstores, vintage clothing stores, and specialty food shops give the West End a character that larger commercial districts often lack. The neighbourhood rewards exploration, with hidden gems tucked away on side streets and in heritage buildings throughout the area.
+                  Independent bookstores, vintage clothing stores, and specialty food shops give the West End a character larger commercial districts lack. Hidden gems hide on side streets and in heritage buildings throughout.
                 </p>
               </section>
 

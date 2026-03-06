@@ -59,26 +59,22 @@ export default function StrathconaPage() {
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
             Strathcona is where Vancouver&apos;s history lives. Victorian
             houses with gingerbread trim, workers&apos; cottages from the
-            1890s, converted warehouses where artists now stretch canvases
-            under skylights. Every block predates the modern city. The
-            community is tight-knit and fiercely protective: residents tend
+            1890s, converted warehouses where artists stretch canvases under
+            skylights. Every block predates the modern city. Residents tend
             over 200 plots at Cottonwood Community Gardens, fight for
-            heritage preservation at council meetings, and actually know
-            their neighbours by name. Annual studio tours open the warehouse
-            conversions where painters, ceramicists, and furniture makers
-            work.
+            heritage preservation at council, and know their neighbours by
+            name. Annual studio tours open the warehouse conversions where
+            painters, ceramicists, and furniture makers work.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Chinatown is a five-minute walk, and the two neighbourhoods
-            have always been intertwined. Dim sum mornings, the Dr. Sun
-            Yat-Sen Classical Chinese Garden, herbal shops that have been
-            in the same family for generations. CRAB Park gives you Burrard
-            Inlet waterfront with harbour views and the North Shore
-            mountains as a backdrop. Downtown is a short bike ride or a
-            brisk 20-minute walk. Main Street-Science World and
-            Stadium-Chinatown SkyTrain stations connect you to the Expo
-            and Millennium Lines. The Adanac Bikeway runs right through the
+            Chinatown is a five-minute walk. Dim sum mornings, the Dr. Sun
+            Yat-Sen Classical Chinese Garden, herbal shops in the same
+            family for generations. CRAB Park offers Burrard Inlet
+            waterfront with North Shore mountain views. Downtown is a short
+            bike ride or 20-minute walk. Main Street-Science World and
+            Stadium-Chinatown SkyTrain stations connect to the Expo and
+            Millennium Lines. The Adanac Bikeway runs through the
             neighbourhood. Walk Score: 91.
           </p>
 
@@ -91,37 +87,32 @@ export default function StrathconaPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark is around <strong>$950K</strong>. The
-            signature properties are beautifully restored Victorians and
-            Edwardians running from <strong>$1.0M to $1.5M</strong>, many
-            heritage-designated, which protects their character but means
-            renovation rules apply. Warehouse lofts and condos range from{" "}
-            <strong>$400K to $750K</strong>, converted industrial spaces
-            with high ceilings, exposed brick, and oversized windows that
-            attract creatives and professionals who want character without
-            the maintenance of an old house. Townhomes in the{" "}
-            <strong>$700K to $1.1M</strong> range offer a middle ground,
-            modern builds popular with couples making their first purchase.
+            Composite benchmark: around <strong>$950K</strong>. Restored
+            Victorians and Edwardians run from{" "}
+            <strong>$1.0M to $1.5M</strong>, many heritage-designated
+            (character protected, renovation rules apply). Warehouse lofts
+            and condos range from <strong>$400K to $750K</strong>: high
+            ceilings, exposed brick, oversized windows for creatives and
+            professionals who want character without old-house maintenance.
+            Townhomes at <strong>$700K to $1.1M</strong> offer a middle
+            ground, popular with couples making a first purchase.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Artists who need affordable studio space, heritage lovers who
-            would rather restore an 1890s house than buy a new condo, young
-            professionals who work downtown and want genuine grit and
-            character. Long-time Chinese-Canadian families whose roots go
-            back generations anchor the community. Strathcona is not for
-            everyone, but for those who connect with its energy, it creates
-            a loyalty rarely seen in other parts of the city.
+            Artists who need affordable studio space. Heritage lovers who
+            would rather restore an 1890s house than buy new. Downtown
+            professionals who want genuine grit. Long-time Chinese-Canadian
+            families whose roots go back generations anchor the community.
+            Not for everyone, but those who connect with its energy develop
+            a loyalty rarely seen elsewhere in the city.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Strathcona offers something no
-              new development can replicate: 130 years of genuine character,
+              <strong>Bottom line:</strong> 130 years of genuine character,
               heritage homes, artist lofts, and an inner-city location
-              minutes from everything. For buyers who value authenticity over
-              polish, it is one of the most compelling addresses on the east
-              side.
+              minutes from everything. For buyers who value authenticity
+              over polish, one of the most compelling east-side addresses.
             </p>
           </div>
         </div>

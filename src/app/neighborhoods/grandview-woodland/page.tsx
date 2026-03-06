@@ -57,29 +57,24 @@ export default function GrandviewWoodlandPage() {
       <article className="py-16">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-lg text-warm-700 leading-relaxed mb-6">
-            Commercial Drive has zero chain stores. Not one. Italian cafes
-            that have been here since the 1950s share the sidewalk with
-            independent bookstores, Ethiopian restaurants with no sign out
-            front but a line down the block, and nonnas who still do their
-            shopping on foot. Italian Day on The Drive draws 300,000 people
-            and is one of the biggest street festivals in the country. But
-            the neighbourhood has always been a landing pad for waves of
-            newcomers, Italian, Portuguese, Central American, Ethiopian,
-            Vietnamese, and that layered cultural history is what makes the
-            food scene extraordinary.
+            Commercial Drive has zero chain stores. Italian cafes from the
+            1950s share the sidewalk with independent bookstores and
+            Ethiopian restaurants with no sign but a line down the block.
+            Italian Day on The Drive draws 300,000 people. Waves of
+            newcomers (Italian, Portuguese, Central American, Ethiopian,
+            Vietnamese) have layered a cultural history that makes the food
+            scene extraordinary.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Behind The Drive, the residential streets are lined with
-            craftsman bungalows, Vancouver Specials, and Edwardian homes
-            with mature gardens and fruit trees. Grandview Park is the social
-            hub, and Britannia Community Centre, with its pool, ice rink,
-            library, and secondary school all in one complex, is the beating
-            heart of the neighbourhood. The Cultch and Rio Theatre host live
-            performance and indie film. Commercial-Broadway is the busiest
-            SkyTrain interchange in the region, connecting the Expo and
-            Millennium Lines. Downtown is about ten minutes by train. Walk
-            Score: 90.
+            Behind The Drive, residential streets are lined with craftsman
+            bungalows, Vancouver Specials, and Edwardian homes with mature
+            gardens. Britannia Community Centre (pool, ice rink, library,
+            secondary school) is the neighbourhood&apos;s beating heart. The
+            Cultch and Rio Theatre host live performance and indie film.
+            Commercial-Broadway, the region&apos;s busiest SkyTrain interchange,
+            connects the Expo and Millennium Lines. Downtown is ten minutes
+            by train. Walk Score: 90.
           </p>
 
           <blockquote className="my-10 border-l-4 border-teal-600 pl-6 py-2">
@@ -91,37 +86,32 @@ export default function GrandviewWoodlandPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The composite benchmark is around <strong>$1.1M</strong>,
-            reflecting a market that skews toward detached homes. Character
-            homes, craftsman bungalows, Vancouver Specials, and Edwardian
-            houses, typically range from <strong>$1.3M to $1.8M</strong>.
-            Properties near The Drive command premiums for walkability,
-            while those farther east toward Woodland offer more space for
-            the money. Condos near the SkyTrain station run from{" "}
+            Composite benchmark: around <strong>$1.1M</strong>, skewing
+            toward detached homes. Character homes and Edwardians range
+            from <strong>$1.3M to $1.8M</strong>. Properties near The Drive
+            command premiums; those farther east toward Woodland offer more
+            space for the money. Condos near SkyTrain run{" "}
             <strong>$500K to $850K</strong>, popular with first-time buyers.
-            Townhomes along the Broadway corridor go for{" "}
-            <strong>$900K to $1.3M</strong>, with newer builds incorporating
-            transit-oriented design.
+            Townhomes along Broadway go for{" "}
+            <strong>$900K to $1.3M</strong>.
           </p>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            The Italian families who built the neighbourhood and never left.
-            Artists and musicians who need affordable space and a community
-            that values what they do. Young families drawn to Grandview
-            Elementary and Britannia. Newcomers from around the world who
-            find in The Drive&apos;s diversity a reflection of their own
-            experience. Cycling infrastructure connects to the central
-            valley greenway and the downtown peninsula, and most residents
-            use transit as their primary mode.
+            Italian families who built the neighbourhood and never left.
+            Artists and musicians who need affordable space. Young families
+            drawn to Grandview Elementary and Britannia. Newcomers who find
+            The Drive&apos;s diversity a reflection of their own experience.
+            Cycling infrastructure connects to the Central Valley Greenway
+            and downtown, and most residents use transit as their primary
+            mode.
           </p>
 
           <div className="mt-10 pt-8 border-t border-warm-200">
             <p className="text-warm-800 leading-relaxed font-medium">
-              <strong>Bottom line:</strong> Grandview-Woodland is the
-              neighbourhood for people who want character over polish and a
-              street like Commercial Drive that never gets old. Two SkyTrain
-              lines, some of the best character homes in east Vancouver, and
-              a cultural richness that is impossible to replicate.
+              <strong>Bottom line:</strong> Character over polish. Two
+              SkyTrain lines, some of the best heritage homes in east
+              Vancouver, and a cultural richness that is impossible to
+              replicate.
             </p>
           </div>
         </div>

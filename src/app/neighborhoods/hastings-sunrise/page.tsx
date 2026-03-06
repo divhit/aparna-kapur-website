@@ -26,27 +26,27 @@ const faqs = [
   {
     question: "Is Hastings-Sunrise a good neighborhood to buy a home in?",
     answer:
-      "Hastings-Sunrise is an excellent neighbourhood for buyers seeking value in Vancouver's east side. It offers a compelling combination of relatively affordable housing, strong community character, proximity to the PNE grounds and waterfront parks, and improving transit access. The neighbourhood has seen significant investment in recent years, with new restaurants, shops, and community amenities enhancing livability. For families and first-time buyers, Hastings-Sunrise represents one of the best opportunities for entry into the Vancouver market while still being within easy reach of downtown.",
+      "Hastings-Sunrise offers strong value on Vancouver's east side: relatively affordable housing, genuine community character, proximity to the PNE grounds and waterfront parks, and improving transit. New restaurants, shops, and amenities have enhanced livability in recent years. For families and first-time buyers, it is one of the best entry points into the Vancouver market within easy reach of downtown.",
   },
   {
     question: "How much does a home cost in Hastings-Sunrise Vancouver?",
     answer:
-      "Hastings-Sunrise offers some of the more accessible pricing on Vancouver's east side. The composite benchmark across all property types is approximately $1.2M. Detached homes, which include a mix of character homes and newer builds, typically range from $1.2M to $1.7M. Condominiums range from $450K to $750K, and townhomes from $800K to $1.2M. The neighbourhood offers notably better value than comparable west-side areas, making it popular with young families and investors.",
+      "The composite benchmark is approximately $1.2M. Detached homes (character homes and newer builds) range from $1.2M to $1.7M. Condos run $450K to $750K, townhomes $800K to $1.2M. Notably better value than comparable west-side areas, making it popular with young families and investors.",
   },
   {
     question: "What is there to do near Hastings-Sunrise?",
     answer:
-      "Hastings-Sunrise is home to Hastings Park, which includes the Pacific National Exhibition (PNE) fairgrounds, Playland amusement park, the Pacific Coliseum, and the Hastings Racecourse. The annual PNE summer fair is one of Vancouver's largest community events. New Brighton Park offers a waterfront pool and harbour views. The neighbourhood also has a growing restaurant and cafe scene along East Hastings Street, with excellent Italian, Vietnamese, and Chinese dining options reflecting the area's diverse communities.",
+      "Hastings Park includes the PNE fairgrounds, Playland, the Pacific Coliseum, and Hastings Racecourse. The annual PNE summer fair is one of Vancouver's largest events. New Brighton Park offers a waterfront pool and harbour views. A growing cafe and restaurant scene along East Hastings features excellent Italian, Vietnamese, and Chinese dining.",
   },
   {
     question: "How is the transit in Hastings-Sunrise?",
     answer:
-      "Hastings-Sunrise is served by several major bus routes running along East Hastings Street, which provide frequent east-west service connecting to downtown Vancouver and the eastern suburbs. The Renfrew and Rupert SkyTrain stations on the Expo Line are located along the neighbourhood's southern boundary, providing rapid transit access to downtown (approximately 15 minutes), Burnaby, and points east. The combination of bus and SkyTrain service makes car-light living feasible for many residents.",
+      "Major bus routes along East Hastings provide frequent east-west service to downtown and the eastern suburbs. Renfrew and Rupert SkyTrain stations (Expo Line) sit on the southern boundary, reaching downtown in about 15 minutes. Bus and SkyTrain together make car-light living feasible.",
   },
   {
     question: "What are the schools like in Hastings-Sunrise?",
     answer:
-      "Hastings-Sunrise is served by several well-regarded public schools. Hastings Elementary is a long-established neighbourhood school known for its diverse community and strong parent involvement. Templeton Secondary offers comprehensive programs including athletics and arts. The neighbourhood also has access to various elementary options including Graham, Franklin, and Tillicum schools. The diverse student populations at these schools reflect the multicultural character of the broader community.",
+      "Several well-regarded public schools serve the area. Hastings Elementary is known for its diverse community and strong parent involvement. Templeton Secondary offers comprehensive programs including athletics and arts. Additional elementary options include Graham, Franklin, and Tillicum. The diverse student populations reflect the multicultural character of the community.",
   },
 ];
 
@@ -163,13 +163,13 @@ export default async function HastingsSunrisePage() {
               {/* Overview */}
               <section className="mb-16">
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise is a large, diverse residential neighbourhood in Vancouver&apos;s east side, stretching from Clark Drive to Boundary Road and from the Burrard Inlet waterfront south to Broadway. It is one of the city&apos;s most established working-class neighbourhoods, shaped by generations of Italian, Chinese, Vietnamese, and South Asian families who have built a rich, multicultural community with deep roots and genuine character.
+                  Hastings-Sunrise stretches from Clark Drive to Boundary Road, Burrard Inlet to Broadway. Generations of Italian, Chinese, Vietnamese, and South Asian families have built a rich, multicultural community with deep roots and genuine character.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The neighbourhood is perhaps best known as the home of Hastings Park, which houses the Pacific National Exhibition (PNE), Playland amusement park, and the Pacific Coliseum. But beyond these well-known attractions, Hastings-Sunrise is a residential neighbourhood of quiet streets, lovingly maintained gardens, and a growing commercial corridor along East Hastings that has attracted an influx of new cafes, bakeries, and restaurants in recent years.
+                  Best known as the home of Hastings Park (PNE, Playland, Pacific Coliseum), it is also a neighbourhood of quiet streets, well-maintained gardens, and a growing East Hastings corridor that has attracted new cafes, bakeries, and restaurants in recent years.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For homebuyers, Hastings-Sunrise represents one of Vancouver&apos;s best value propositions. The neighbourhood offers genuine community character, improving amenities, and reasonable proximity to downtown at price points significantly lower than the west side. It is a neighbourhood on the rise, yet one that retains the unpretentious, grounded feeling that has defined east Vancouver for generations.
+                  For buyers, Hastings-Sunrise is one of Vancouver&apos;s best value propositions: genuine community character, improving amenities, and proximity to downtown at price points well below the west side. On the rise, yet still grounded and unpretentious.
                 </p>
               </section>
 
@@ -191,16 +191,16 @@ export default async function HastingsSunrisePage() {
                   Living in Hastings-Sunrise
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise has the feel of a neighbourhood where people have put down roots for generations. The residential streets are lined with well-kept character homes, many with the distinctive front porches and mature fruit trees that are hallmarks of east Vancouver living. Neighbours wave to each other, community gardens flourish, and local businesses know their regulars by name.
+                  People have put down roots here for generations. Residential streets are lined with well-kept character homes, front porches, and mature fruit trees. Neighbours wave to each other, community gardens flourish, and local businesses know their regulars by name.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The housing stock is a comfortable mix of older character homes from the 1920s through the 1960s, Vancouver Specials from the 1970s and 1980s, and an increasing number of newer laneway houses and infill projects. Many homes sit on generous lots with established gardens and fruit trees, offering a level of outdoor living space that newer developments simply cannot match.
+                  Housing mixes character homes (1920s-1960s), Vancouver Specials (1970s-1980s), and newer laneway houses and infill projects. Many homes sit on generous lots with established gardens, offering outdoor space that newer developments cannot match.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  A typical weekend in Hastings-Sunrise might include a morning coffee at one of the new specialty cafes on East Hastings, followed by a family outing to Playland or a walk through New Brighton Park along the waterfront. In summer, the PNE fair transforms the neighbourhood with carnival rides, agricultural exhibits, and live entertainment. The rest of the year, the Hastings Park grounds serve as a large urban green space for jogging, walking, and community sports.
+                  A typical weekend: morning coffee at a specialty cafe on East Hastings, a family outing to Playland, or a walk through New Brighton Park along the waterfront. In summer, the PNE fair brings carnival rides, agricultural exhibits, and live entertainment. Year-round, Hastings Park serves as a large urban green space.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  The neighbourhood has a distinctly family-friendly feel, with plenty of elementary schools, community centres, and parks that make it practical for raising children. At the same time, the evolving restaurant and cafe scene along East Hastings is attracting younger professionals who appreciate the neighbourhood&apos;s authenticity and relative affordability.
+                  Family-friendly with plenty of elementary schools, community centres, and parks. The evolving East Hastings restaurant and cafe scene also draws younger professionals who appreciate the authenticity and affordability.
                 </p>
               </section>
 
@@ -210,13 +210,13 @@ export default async function HastingsSunrisePage() {
                   Hastings-Sunrise Real Estate Market
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise offers some of the most accessible pricing in the City of Vancouver proper, making it a popular choice for families and first-time buyers:
+                  Some of the most accessible pricing in Vancouver proper, popular with families and first-time buyers:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Detached Homes", range: "$1.2M - $1.7M", desc: "A mix of character homes, Vancouver Specials, and newer builds. Many lots are standard 33-foot widths, though larger parcels exist. Renovation potential is strong, and laneway house construction has become common." },
-                    { type: "Condominiums", range: "$450K - $750K", desc: "A growing supply of condos, particularly in newer mid-rise developments along Hastings Street and near the SkyTrain stations. These offer an accessible entry point into Vancouver homeownership." },
-                    { type: "Townhomes", range: "$800K - $1.2M", desc: "New townhome developments have appeared along major corridors, offering modern layouts with family-friendly configurations that appeal to growing households." },
+                    { type: "Detached Homes", range: "$1.2M - $1.7M", desc: "Character homes, Vancouver Specials, and newer builds. Standard 33-foot lots with strong renovation potential. Laneway house construction is common." },
+                    { type: "Condominiums", range: "$450K - $750K", desc: "Growing supply in mid-rise developments along Hastings Street and near SkyTrain. An accessible entry point into Vancouver homeownership." },
+                    { type: "Townhomes", range: "$800K - $1.2M", desc: "New developments along major corridors with modern, family-friendly layouts." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -228,12 +228,12 @@ export default async function HastingsSunrisePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise has benefited from the general eastward migration of Vancouver buyers seeking value, and the neighbourhood has seen steady appreciation over the past decade as amenities and transit access have improved.
+                  The eastward migration of Vancouver buyers seeking value has driven steady appreciation over the past decade as amenities and transit have improved.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
                   <p className="text-sm text-teal-800/80">
-                    Hastings-Sunrise offers strong long-term value driven by improving commercial amenities along East Hastings, proximity to SkyTrain stations at Renfrew and Rupert, and the ongoing redevelopment of Hastings Park. As east Vancouver continues to attract investment and new residents, this neighbourhood is well-positioned for sustained growth while maintaining the affordability advantage that draws buyers in the first place.
+                    Strong long-term value: improving East Hastings amenities, SkyTrain at Renfrew and Rupert, and ongoing Hastings Park redevelopment. Well-positioned for sustained growth while maintaining the affordability advantage that draws buyers.
                   </p>
                 </div>
               </section>
@@ -244,14 +244,14 @@ export default async function HastingsSunrisePage() {
                   Getting Around
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Hastings-Sunrise benefits from solid transit infrastructure and a practical layout that supports multiple modes of transportation:
+                  Solid transit infrastructure supports multiple travel modes:
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { mode: "SkyTrain", detail: "Renfrew Station and Rupert Station on the Expo Line are located along the neighbourhood's southern edge. These provide rapid transit access to downtown Vancouver (approximately 15 minutes), Commercial-Broadway for Millennium Line transfers, and points east to Burnaby, New Westminster, and Surrey." },
-                    { mode: "Bus", detail: "East Hastings Street is a major bus corridor with frequent service connecting to downtown and the eastern suburbs. Additional routes along Renfrew Street and Nanaimo Street provide north-south connections. The number 160 bus connects to the PNE grounds and surrounding areas." },
-                    { mode: "Cycling", detail: "The neighbourhood has several designated cycling routes, and the relatively flat terrain makes cycling practical for daily commuting. The Adanac Bikeway provides an east-west cycling corridor through the neighbourhood." },
-                    { mode: "Driving", detail: "Easy access to Hastings Street, Renfrew Street, and the Trans-Canada Highway via the Cassiar Connector. Downtown Vancouver is approximately 15-20 minutes by car. Highway 1 access makes it convenient for trips to the North Shore, Burnaby, and the eastern suburbs." },
+                    { mode: "SkyTrain", detail: "Renfrew and Rupert stations (Expo Line) on the southern edge. Downtown in about 15 minutes, with Millennium Line transfers at Commercial-Broadway." },
+                    { mode: "Bus", detail: "East Hastings is a major bus corridor with frequent service to downtown and eastern suburbs. Renfrew and Nanaimo Streets provide north-south connections." },
+                    { mode: "Cycling", detail: "Flat terrain makes cycling practical. The Adanac Bikeway provides an east-west corridor through the neighbourhood." },
+                    { mode: "Driving", detail: "Easy access to Hastings Street, Renfrew Street, and Highway 1 via the Cassiar Connector. Downtown is 15-20 minutes by car." },
                   ].map((item) => (
                     <div key={item.mode} className="flex gap-4">
                       <div className="w-10 h-10 rounded-lg bg-teal-50 flex items-center justify-center shrink-0 mt-0.5">
@@ -274,15 +274,15 @@ export default async function HastingsSunrisePage() {
                   Parks
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise has a strong network of parks, anchored by the expansive Hastings Park grounds:
+                  A strong park network anchored by Hastings Park:
                 </p>
                 <div className="bg-warm-50 rounded-xl p-5 space-y-4 mb-6">
                   {[
-                    { name: "Hastings Park (PNE Grounds)", desc: "The neighbourhood's defining green space, encompassing the PNE fairgrounds, Playland, Pacific Coliseum, and the Hastings Racecourse. Outside of fair season, the grounds offer extensive walking paths, the Empire Fields sports complex, and the beautiful Italian Garden and Momiji Garden. A major sanctuary garden was also added in recent years." },
-                    { name: "New Brighton Park", desc: "A waterfront gem on the Burrard Inlet, featuring a saltwater outdoor pool, playground, sports courts, and spectacular harbour views. The park's location on the waterfront provides a rare connection to the ocean within an east-side neighbourhood." },
-                    { name: "Sunrise Park", desc: "A well-used community park with a playground, wading pool, and sports fields. It serves as a neighbourhood gathering point for families and hosts community events throughout the summer months." },
-                    { name: "McGill Park", desc: "A quiet neighbourhood park with a playground, open green space, and mature trees. A pleasant spot for a morning walk or an afternoon with young children." },
-                    { name: "E-Comm Park & Greenways", desc: "The neighbourhood benefits from several greenway connections and smaller pocket parks that provide green corridors linking residential areas to larger parks and commercial streets." },
+                    { name: "Hastings Park (PNE Grounds)", desc: "PNE fairgrounds, Playland, Pacific Coliseum, Hastings Racecourse. Outside fair season: extensive walking paths, Empire Fields sports complex, the Italian Garden, and Momiji Garden." },
+                    { name: "New Brighton Park", desc: "Waterfront gem on Burrard Inlet with a saltwater outdoor pool, playground, sports courts, and harbour views. A rare ocean connection on the east side." },
+                    { name: "Sunrise Park", desc: "Playground, wading pool, and sports fields. A neighbourhood gathering point with summer community events." },
+                    { name: "McGill Park", desc: "Quiet park with a playground, open green space, and mature trees." },
+                    { name: "E-Comm Park & Greenways", desc: "Several greenway connections and pocket parks link residential areas to larger parks and commercial streets." },
                   ].map((park, i, arr) => (
                     <div key={park.name} className={i < arr.length - 1 ? "pb-4 border-b border-warm-200" : ""}>
                       <h4 className="font-medium text-teal-950 mb-1">{park.name}</h4>
@@ -291,7 +291,7 @@ export default async function HastingsSunrisePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The Hastings Community Centre, located within the neighbourhood, provides fitness facilities, programs for all ages, and community gathering space. The PNE Forum also hosts events, trade shows, and concerts throughout the year, adding entertainment value for local residents.
+                  Hastings Community Centre provides fitness facilities and programs for all ages. The PNE Forum hosts events, trade shows, and concerts year-round.
                 </p>
               </section>
 
@@ -301,16 +301,16 @@ export default async function HastingsSunrisePage() {
                   Education
                 </h2>
                 <p className="text-warm-600 leading-relaxed mb-6">
-                  Hastings-Sunrise is well-served by public schools that reflect the neighbourhood&apos;s diverse and family-oriented character. The schools here are known for their welcoming communities and multicultural student bodies.
+                  Well-served by public schools reflecting the neighbourhood&apos;s diverse, family-oriented character:
                 </p>
                 <div className="mb-6">
                   <h3 className="font-serif text-lg text-teal-900 mb-3">Public Schools</h3>
                   <div className="bg-warm-50 rounded-xl p-4 space-y-3">
                     {[
-                      { name: "Hastings Elementary", type: "K-7 Public", detail: "A well-established neighbourhood elementary school with a diverse student body and strong community engagement. The school benefits from an active parent advisory council and a range of extracurricular activities." },
-                      { name: "Templeton Secondary", type: "8-12 Public", detail: "The neighbourhood's main secondary school, offering comprehensive academic, athletic, and arts programming. Templeton is known for its inclusive environment and diverse student population." },
-                      { name: "Graham Elementary", type: "K-7 Public", detail: "A smaller neighbourhood elementary school with a warm community feel. Known for its dedicated teaching staff and strong programs in literacy and numeracy." },
-                      { name: "Franklin Elementary", type: "K-7 Public", detail: "A community school offering a range of programs and known for its emphasis on social-emotional learning alongside strong academics." },
+                      { name: "Hastings Elementary", type: "K-7 Public", detail: "Well-established with a diverse student body, active parent advisory council, and strong extracurriculars." },
+                      { name: "Templeton Secondary", type: "8-12 Public", detail: "Comprehensive academic, athletic, and arts programming. Known for its inclusive, diverse environment." },
+                      { name: "Graham Elementary", type: "K-7 Public", detail: "Smaller school with a warm community feel. Strong literacy and numeracy programs." },
+                      { name: "Franklin Elementary", type: "K-7 Public", detail: "Community school emphasizing social-emotional learning alongside strong academics." },
                     ].map((school, i, arr) => (
                       <div key={school.name} className={`flex items-start gap-3 ${i < arr.length - 1 ? "pb-3 border-b border-warm-200" : ""}`}>
                         <svg className="w-5 h-5 text-teal-600 mt-0.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -326,7 +326,7 @@ export default async function HastingsSunrisePage() {
                   </div>
                 </div>
                 <p className="text-warm-600 leading-relaxed">
-                  The neighbourhood&apos;s schools benefit from the multicultural richness of the community, with diverse student populations that provide children with a broad worldview. Many schools in the area also offer strong English Language Learning (ELL) programs to support immigrant families.
+                  Diverse student populations provide children with a broad worldview. Many schools offer strong English Language Learning (ELL) programs supporting immigrant families.
                 </p>
               </section>
 
@@ -338,20 +338,20 @@ export default async function HastingsSunrisePage() {
                 <div className="bg-gold-50 rounded-2xl p-6 mb-6 border border-gold-200">
                   <p className="text-sm font-semibold text-gold-800 mb-2">East Hastings Street</p>
                   <p className="text-sm text-gold-700">
-                    The commercial spine of the neighbourhood, East Hastings Street has undergone a quiet renaissance in recent years. New specialty cafes, bakeries, and restaurants have joined long-established Italian delis, Vietnamese pho shops, and Chinese bakeries, creating one of east Vancouver&apos;s most interesting and evolving food corridors.
+                    A quiet renaissance in recent years. New specialty cafes, bakeries, and restaurants have joined long-established Italian delis, Vietnamese pho shops, and Chinese bakeries, creating one of east Vancouver&apos;s most interesting food corridors.
                   </p>
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Hastings-Sunrise&apos;s dining scene is deeply influenced by its Italian and East Asian communities. Along East Hastings, you will find some of the city&apos;s best pho restaurants, authentic Chinese bakeries, classic Italian trattorias, and an emerging wave of modern cafes and brunch spots that reflect the neighbourhood&apos;s evolving demographics.
+                  The dining scene reflects its Italian and East Asian communities: some of the city&apos;s best pho restaurants, authentic Chinese bakeries, classic Italian trattorias, and an emerging wave of modern brunch spots.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  For everyday shopping, residents benefit from a range of grocery options including large Asian supermarkets, Italian specialty stores, and conventional grocery chains. The commercial areas along East Hastings and Nanaimo Street provide most daily necessities within easy reach.
+                  Grocery options include large Asian supermarkets, Italian specialty stores, and conventional chains along East Hastings and Nanaimo Street.
                 </p>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  The neighbourhood is also home to a growing number of specialty food producers, craft breweries, and artisan businesses that have been attracted by the area&apos;s more affordable commercial rents and authentic character.
+                  Affordable commercial rents have attracted specialty food producers, craft breweries, and artisan businesses.
                 </p>
                 <p className="text-warm-600 leading-relaxed">
-                  For larger shopping needs, the nearby Renfrew and Rupert areas provide access to big-box retail, and Commercial Drive is just a short trip to the west for those seeking the eclectic shops and restaurants of The Drive.
+                  Big-box retail is nearby in the Renfrew and Rupert areas, and Commercial Drive is a short trip west.
                 </p>
               </section>
 
