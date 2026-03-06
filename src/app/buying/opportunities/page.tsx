@@ -93,8 +93,8 @@ export default function OpportunitiesPage() {
               Interested in off-market opportunities?
             </p>
             <p className="text-warm-500 text-sm">
-              Reach out to me directly &mdash; I have access to off-market
-              properties, pocket listings, and pre-foreclosure opportunities not listed on MLS.
+              Reach out to me directly to access off-market
+              properties, pocket listings and pre-foreclosure opportunities not listed on MLS.
             </p>
           </div>
         </div>
