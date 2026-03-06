@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageBanner from "@/components/hero/PageBanner";
 import ListingCard from "@/components/listings/ListingCard";
+import ListingsMap from "@/components/listings/ListingsMap";
 import { fetchFeaturedListings } from "@/lib/ddf";
 
 export const dynamic = "force-dynamic";
@@ -34,6 +35,12 @@ export default async function FeaturedListingsPage() {
               These sellers are motivated and there&apos;s room to negotiate.
             </p>
           </div>
+
+          {listings.length > 0 && (
+            <div className="mb-8">
+              <ListingsMap listings={listings} />
+            </div>
+          )}
 
           {listings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
