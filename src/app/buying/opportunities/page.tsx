@@ -77,7 +77,6 @@ export default function OpportunitiesPage() {
                 key={prop.title}
                 className="bg-white border border-warm-100 rounded-xl p-6 hover:shadow-md hover:border-teal-200 transition-all"
               >
-                <div className="text-teal-600 mb-3">{prop.icon}</div>
                 <h3 className="font-serif text-lg text-teal-950 mb-1.5">
                   {prop.title}
                 </h3>
