@@ -4,7 +4,6 @@ import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -131,6 +130,7 @@ export default async function KerrisdalePage() {
                   ["schools", "Education", "6"],
                   ["shopping", "Shopping & Dining", "7"],
                   ["faq", "FAQ", "8"],
+                  ["related", "Related Areas", "9"],
                 ].map(([id, label, step]) => (
                   <a
                     key={id}
