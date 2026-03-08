@@ -5,6 +5,7 @@ import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
@@ -46,6 +47,56 @@ const faqs = [
     answer:
       "Oakridge has excellent transit access with two Canada Line SkyTrain stations: Oakridge-41st Avenue and Langara-49th Avenue. Downtown Vancouver is just 15 minutes by SkyTrain, and Vancouver International Airport (YVR) is about 20 minutes. Multiple bus routes serve the neighborhood, and cycling infrastructure continues to improve.",
   },
+  {
+    question: "When does Oakridge Park mall open in 2026?",
+    answer:
+      "The Oakridge Park retail centre is scheduled to begin its phased opening in Spring 2026. The first phase includes over 500,000 square feet of retail space featuring luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, along with Time Out Market Vancouver — an 18-kitchen food hall that will be only the second Time Out Market in Canada. The 9-acre rooftop public park and civic amenities including a new community centre, library branch, and childcare facilities are expected to follow in Summer 2026.",
+  },
+  {
+    question: "What luxury brands are coming to Oakridge Park Vancouver?",
+    answer:
+      "Oakridge Park will feature an unprecedented luxury retail lineup for Vancouver, including Louis Vuitton, Prada, Bvlgari, Tiffany & Co., Rolex, Valentino, Loewe, Dolce & Gabbana, Loro Piana, Thom Browne, Acne Studios, Brunello Cucinelli, Moncler, and Alexander Wang. The development will also house a Giorgio Armani Cafe — only the third location in North America. This positions Oakridge as Vancouver's premier luxury shopping destination.",
+  },
+  {
+    question: "Is Oakridge Vancouver good for families?",
+    answer:
+      "Oakridge is one of the best neighbourhoods in Vancouver for families. It offers highly rated schools including Dr. Annie B. Jamieson Elementary (ranked 61st out of 932 schools in BC by the Fraser Institute) and Sir Winston Churchill Secondary with its International Baccalaureate programme. The neighbourhood has excellent parks including Queen Elizabeth Park and the upcoming 9-acre Oakridge Park, two Canada Line SkyTrain stations, a new community centre with pool and ice rink coming in 2026, and a strong multicultural community. About 75% of households are married couples, with 47% being families with children.",
+  },
+  {
+    question: "How far is Oakridge from downtown Vancouver?",
+    answer:
+      "Oakridge is approximately 15 minutes from downtown Vancouver by SkyTrain on the Canada Line. The Oakridge-41st Avenue station provides direct, frequent service to Waterfront station downtown with no transfers required. By car, downtown is about 20-25 minutes depending on traffic. Vancouver International Airport (YVR) is approximately 20 minutes by SkyTrain. This exceptional transit connectivity is one of Oakridge's greatest advantages.",
+  },
+  {
+    question: "What is the R1-1 zone and how does it affect Oakridge property?",
+    answer:
+      "The R1-1 (Residential Inclusive) zone is Vancouver's city-wide rezoning that took effect in October 2023. It allows property owners to build 3-6 market ownership units or up to 8 secured rental units on lots that were previously restricted to single-family homes. In Oakridge, this means many traditional detached home lots can now be redeveloped into multiplexes without a separate rezoning application. This has significant implications for property values, as it effectively increases the development potential of every residential lot in the neighbourhood.",
+  },
+  {
+    question: "How has the Canada Line affected Oakridge property values?",
+    answer:
+      "The Canada Line, which opened in 2009, has been transformative for Oakridge real estate. Properties within walking distance of the two Oakridge stations — Oakridge-41st Avenue and Langara-49th Avenue — have consistently outperformed the broader Vancouver market. Transit-oriented development along the Canada Line corridor has driven density, amenity growth, and property appreciation. The Oakridge Park redevelopment itself was made possible by this transit infrastructure, and the resulting investment continues to push values higher in the surrounding area.",
+  },
+  {
+    question: "What is the Cambie Corridor Plan and how does it affect Oakridge?",
+    answer:
+      "The Cambie Corridor Plan, with major updates approved in October 2025, enables increased density along the Canada Line route through Oakridge and surrounding areas. Key changes include tower heights near Oakridge-41st Station increasing from 15-18 to 20-26 storeys, and over 4,300 properties receiving pre-zoning — meaning development projects can skip the lengthy rezoning process and go directly to development permit, saving approximately 12 months. For property owners in Oakridge, this means increased land value and development potential.",
+  },
+  {
+    question: "What are the demographics of Oakridge Vancouver?",
+    answer:
+      "Oakridge has a population of approximately 14,826 residents. It is one of Vancouver's most culturally diverse neighbourhoods — about 59.88% of residents are of Chinese heritage (including mainland China, Hong Kong, and Taiwan), alongside a significant Jewish community. The median age is 42.8 years, 75% of households are married couples, and 47% are families with children. This diversity contributes to the neighbourhood's vibrant dining scene, cultural institutions, and community character.",
+  },
+  {
+    question: "Should I buy in Oakridge or Kerrisdale?",
+    answer:
+      "Both are excellent Vancouver west side neighbourhoods, but they serve different buyer profiles. Oakridge offers stronger growth potential due to the $6 billion Oakridge Park redevelopment, better transit access with two Canada Line stations, and more diverse housing options including new condos and townhomes from $600K. Kerrisdale offers a quieter, more established village atmosphere with charming independent shops, mature tree-lined streets, and a slightly higher price point for detached homes. Families prioritising transit and new amenities may prefer Oakridge, while those seeking established charm may lean toward Kerrisdale.",
+  },
+  {
+    question: "What will Oakridge Vancouver look like in 5 years?",
+    answer:
+      "By 2030-2031, Oakridge will be virtually unrecognisable from a decade ago. The full Oakridge Park development will be complete with all 13 residential towers (3,300+ homes housing over 6,000 new residents), the 9-acre rooftop park, the luxury retail centre, Time Out Market, Giorgio Armani Cafe, the new community centre with pool and ice rink, a major Vancouver Public Library branch, childcare facilities, and artist studios. Combined with the Cambie Corridor Plan driving further development nearby, Oakridge is positioned to become Vancouver's most significant secondary urban centre after downtown.",
+  },
 ];
 
 const oakridgeData = NEIGHBOURHOODS["oakridge"];
@@ -55,6 +106,13 @@ export default async function OakridgePage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Neighbourhoods", href: "/neighborhoods" },
+          { name: "Oakridge", href: "/neighborhoods/oakridge" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative pt-28 pb-16 md:py-24">
         <div
