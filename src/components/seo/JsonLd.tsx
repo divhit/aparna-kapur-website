@@ -18,7 +18,7 @@ export function RealEstateAgentSchema() {
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
         name: "Aparna Kapur",
-        url: "https://aparnakapur.com",
+        url: "https://www.aparnakapur.com",
         telephone: "+1-604-612-7694",
         email: "aparna@aparnakapur.com",
         image: "https://aparnakapur.com/og-image.png",
@@ -120,7 +120,7 @@ export function WebsiteSchema() {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: "Aparna Kapur Real Estate",
-        url: "https://aparnakapur.com",
+        url: "https://www.aparnakapur.com",
         description:
           "Vancouver real estate services by Aparna Kapur with Oakwyn Realty. Expert guidance for buyers and sellers in Oakridge and surrounding neighborhoods.",
         publisher: {
@@ -160,7 +160,7 @@ export function LocalBusinessSchema() {
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
         name: "Aparna Kapur - Oakwyn Realty",
-        url: "https://aparnakapur.com",
+        url: "https://www.aparnakapur.com",
         telephone: "+1-604-612-7694",
         email: "aparna@aparnakapur.com",
         address: {

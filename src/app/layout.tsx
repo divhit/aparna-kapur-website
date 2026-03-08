@@ -28,7 +28,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aparnakapur.com"),
+  metadataBase: new URL("https://www.aparnakapur.com"),
   title: {
     default: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
     template: "%s | Aparna Kapur, Oakwyn Realty",
@@ -47,6 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
+    url: "https://www.aparnakapur.com",
     siteName: "Aparna Kapur Real Estate",
     images: [
       {
@@ -68,6 +69,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  other: {
+    "geo.region": "CA-BC",
+    "geo.placename": "Vancouver",
+    "geo.position": "49.2488;-123.1275",
+    "ICBM": "49.2488, -123.1275",
+  },
+  verification: {
+    google: "92v2XTbnirJ_PGqJk6MoYNA3_7Da5XqY-nELvtykEao",
+  },
 };
 
 export default function RootLayout({
@@ -76,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} ${cormorant.variable} ${playfair.variable}`}>
+    <html lang="en-CA" className={`${raleway.variable} ${cormorant.variable} ${playfair.variable}`}>
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <RealEstateAgentSchema />

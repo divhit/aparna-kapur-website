@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://aparnakapur.com",
+  siteUrl: "https://www.aparnakapur.com",
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: "weekly",
@@ -11,6 +11,9 @@ module.exports = {
         userAgent: "*",
         allow: "/",
       },
+    ],
+    additionalSitemaps: [
+      "https://www.aparnakapur.com/sitemap.xml",
     ],
   },
   transform: async (config, path) => {
