@@ -23,29 +23,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is South Cambie a good area to buy a home in Vancouver?",
+    question: "What is the average home price in South Cambie, Vancouver?",
     answer:
-      "South Cambie combines Queen Elizabeth Park, two Canada Line stations, the Cambie Corridor Plan, strong school catchments, and hospital proximity. A strong choice for families and investors with long-term value driven by transit-oriented development.",
+      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.44M (January 2026). Condos average around $1.02M, townhomes $1.56M, and detached homes $4.16M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
   },
   {
-    question: "How much do homes cost in South Cambie?",
+    question: "Is South Cambie a good neighbourhood to buy in?",
     answer:
-      "GVR MLS® HPI benchmarks (January 2026): condos $1.02M, townhomes $1.56M, detached $4.16M. Composite: $1.44M. Prices vary by property type, lot size, and proximity to SkyTrain.",
+      "Yes. South Cambie is one of Vancouver\u2019s most desirable westside neighbourhoods. It borders Queen Elizabeth Park\u2014the city\u2019s highest point with panoramic mountain and skyline views\u2014and sits along the Cambie Corridor, one of Vancouver\u2019s most significant transit-oriented development zones. Two Canada Line stations provide rapid transit downtown in 12 minutes. Quiet, tree-lined streets, strong school catchments, and proximity to Hillcrest Community Centre make it ideal for families and long-term investors.",
   },
   {
-    question: "What is the Cambie Corridor plan and how does it affect South Cambie?",
+    question: "What is the Cambie Corridor rezoning?",
     answer:
-      "The City of Vancouver's long-term vision for housing, amenities, and mixed-use development along the Canada Line from Marine Drive to King Edward. In South Cambie, it has introduced townhome and condo projects near King Edward and Oakridge-41st stations, increasing housing choice while maintaining residential character.",
+      "The Cambie Corridor Plan is the City of Vancouver\u2019s long-term vision for housing densification and mixed-use development along the Canada Line from Marine Drive to King Edward. In South Cambie, this has introduced modern townhome and condo projects near King Edward and Oakridge-41st stations, increasing housing supply and neighbourhood amenities while preserving residential character on interior streets. The rezoning has been a key driver of property value appreciation in the area.",
   },
   {
-    question: "What schools serve the South Cambie neighborhood?",
+    question: "What transit is near South Cambie?",
     answer:
-      "Elementary: Van Horne and Jamieson. High school: Eric Hamber Secondary, one of Vancouver's most sought-after. Post-secondary: Langara College at 49th and Cambie. Private options nearby.",
+      "South Cambie is served by two Canada Line SkyTrain stations: King Edward and Oakridge-41st Avenue. Downtown is reachable in 12 minutes, and YVR airport in about 20 minutes. Major bus routes run along Cambie Street (Route 15), King Edward Boulevard (Route 25), and 41st Avenue (Route 43), connecting to UBC, Commercial-Broadway, and surrounding neighbourhoods. The Ontario and Heather Street bike routes also pass through the area.",
   },
   {
-    question: "How is transit access in South Cambie?",
+    question: "Who is the best realtor for South Cambie Vancouver?",
     answer:
-      "Two Canada Line stations: King Edward and Oakridge-41st Avenue. Downtown in 12-15 minutes, YVR in 20. Bus routes along Cambie, King Edward, and 41st connect to UBC and the rest of the city.",
+      "Aparna Kapur of Oakwyn Realty is a Vancouver south side real estate specialist with deep expertise in South Cambie, Oakridge, Riley Park, Marpole, and the broader Cambie Corridor. She provides data-driven pricing guidance, neighbourhood-specific market insights, and hands-on support for buyers and sellers. Reach Aparna at 604-612-7694 or visit aparnakapur.com to get started.",
   },
 ];
 
@@ -377,9 +377,65 @@ export default async function SouthCambiePage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <FAQAccordion faqs={faqs} />
+                <div className="space-y-2">
+                  {faqs.map((faq) => (
+                    <details key={faq.question} className="group bg-warm-50 rounded-xl overflow-hidden">
+                      <summary className="flex items-center justify-between p-5 cursor-pointer list-none text-left [&::-webkit-details-marker]:hidden">
+                        <h3 className="font-medium text-teal-950 text-sm pr-4">{faq.question}</h3>
+                        <svg
+                          className="w-5 h-5 text-teal-600 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <div className="px-5 pb-5 -mt-1">
+                        <p className="text-sm text-warm-600 leading-relaxed">{faq.answer}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
               </section>
+
+              {/* Search CTA */}
+              <p className="text-warm-600 leading-relaxed mb-16">
+                Ready to explore what&apos;s available?{" "}
+                <Link href="/buying/search" className="text-teal-700 font-medium underline underline-offset-2 hover:text-teal-900 transition-colors">
+                  Browse current South Cambie listings
+                </Link>{" "}
+                to see homes, condos, and townhomes on the market right now.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Neighbourhoods */}
+      <section className="py-16 bg-warm-50 border-y border-warm-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-serif text-3xl text-teal-950 mb-8 text-center">
+            Related Neighbourhoods
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {[
+              ["Oakridge", "oakridge"],
+              ["Riley Park", "riley-park"],
+              ["Cambie Corridor", "cambie-corridor"],
+              ["Marpole", "marpole"],
+            ].map(([name, slug]) => (
+              <Link
+                key={slug}
+                href={`/neighborhoods/${slug}`}
+                className="flex items-center justify-center gap-2 px-5 py-4 bg-white rounded-xl border border-warm-200 text-sm font-medium text-teal-900 hover:border-teal-300 hover:shadow-sm transition-all"
+              >
+                {name}
+                <svg className="w-4 h-4 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

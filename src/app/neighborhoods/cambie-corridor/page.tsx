@@ -135,6 +135,7 @@ export default async function CambieCorridorPage() {
                   ["schools", "Schools & Education"],
                   ["shopping", "Shopping & Dining"],
                   ["faq", "FAQ"],
+                  ["related", "Related Areas"],
                 ].map(([id, label]) => (
                   <a
                     key={id}
@@ -452,7 +453,7 @@ export default async function CambieCorridorPage() {
               </div>
 
               {/* Related Neighbourhoods */}
-              <section className="mb-16">
+              <section id="related" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Related Neighbourhoods
                 </h2>
@@ -478,6 +479,8 @@ export default async function CambieCorridorPage() {
           </div>
         </div>
       </section>
+
+      <NeighbourhoodReportSignup neighbourhood="Cambie Corridor" />
 
       {/* Get In Touch CTA */}
       <GetInTouch />

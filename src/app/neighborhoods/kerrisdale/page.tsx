@@ -25,29 +25,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is Kerrisdale a good neighborhood to buy a home in?",
+    question: "What is the average home price in Kerrisdale, Vancouver?",
     answer:
-      "Kerrisdale combines heritage charm, top schools (public and private), village shopping, and proximity to Pacific Spirit Park and UBC. A perennial favorite among affluent families and investors. Values hold strong even during corrections due to limited supply and high demand.",
+      "As of early 2026, GVR MLS\u00ae HPI benchmarks place Kerrisdale detached homes at approximately $2.98M, condos at $974K, and townhomes at $1.66M. Heritage estates on larger lots can exceed $5M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
   },
   {
-    question: "How much does a home cost in Kerrisdale Vancouver?",
+    question: "Is Kerrisdale a good neighbourhood to buy in?",
     answer:
-      "GVR MLS® HPI benchmarks (January 2026): detached $2.98M, condos $974K, townhomes $1.66M. Composite: $1.90M. Heritage estates and larger lots command significantly more.",
+      "Absolutely. Kerrisdale offers a rare heritage village feel with tree-lined streets, top-ranked public and private schools, mature gardens, and enduring west-side prestige. Property values hold strong even during market corrections thanks to limited supply and consistently high demand from families and investors alike.",
   },
   {
-    question: "What schools are near Kerrisdale?",
+    question: "What schools are in Kerrisdale?",
     answer:
-      "Public: Kerrisdale Elementary (K-7), Kerrisdale Annex, and Point Grey Secondary (8-12). Private: Crofton House (all-girls, JK-12) and St. George's (all-boys, 1-12) nearby. UBC adds post-secondary convenience.",
+      "Kerrisdale is served by excellent public schools including Point Grey Secondary (8\u201312), Kerrisdale Elementary (K\u20137), and Kerrisdale Annex (K\u20133). Top private schools nearby include Crofton House School (all-girls, JK\u201312) and St. George\u2019s School (all-boys, 1\u201312). UBC is just 10 minutes away for post-secondary education.",
   },
   {
-    question: "What is Kerrisdale Village?",
+    question: "What makes Kerrisdale different from Oakridge?",
     answer:
-      "The commercial heart of the neighborhood along 41st Avenue between Larch and Yew. Boutique shops, bookstores, specialty food stores, cafes, and restaurants. Walkable, small-town atmosphere with locally owned businesses.",
+      "Kerrisdale is defined by its established village atmosphere, heritage character homes, mature tree canopies, and walkable boutique shopping along 41st Avenue. Oakridge, by contrast, is undergoing massive redevelopment centred on the new Oakridge Park mixed-use complex, bringing modern high-rise condos, transit-oriented density, and a more urban feel. Kerrisdale appeals to buyers seeking timeless charm; Oakridge attracts those drawn to new construction and future growth.",
   },
   {
-    question: "How do I get around from Kerrisdale?",
+    question: "Who is the best realtor for Kerrisdale Vancouver?",
     answer:
-      "Bus routes along 41st Avenue and Dunbar/Boulevard connect to downtown, UBC, and Oakridge-41st SkyTrain. The Arbutus Greenway provides cycling and walking. UBC is 10 minutes by car, downtown about 20.",
+      "Aparna Kapur of Oakwyn Realty is a trusted south Vancouver specialist with deep expertise in Kerrisdale and surrounding west-side neighbourhoods. Her local knowledge, data-driven approach, and commitment to client service make her the go-to agent for buying or selling in Kerrisdale. Reach Aparna at 604-612-7694.",
   },
 ];
 
@@ -391,7 +391,98 @@ export default async function KerrisdalePage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <FAQAccordion faqs={faqs} />
+                <div className="space-y-2">
+                  {faqs.map((faq) => (
+                    <details
+                      key={faq.question}
+                      className="group bg-warm-50 rounded-xl overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between p-5 cursor-pointer list-none text-left [&::-webkit-details-marker]:hidden">
+                        <h3 className="font-medium text-teal-950 text-sm pr-4">
+                          {faq.question}
+                        </h3>
+                        <svg
+                          className="w-5 h-5 text-teal-600 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </summary>
+                      <div className="px-5 pb-5 -mt-1">
+                        <p className="text-sm text-warm-600 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+
+              {/* Search Listings CTA */}
+              <section className="mb-16">
+                <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100 text-center">
+                  <p className="text-sm font-semibold text-teal-900 mb-2">
+                    Looking for homes in Kerrisdale?
+                  </p>
+                  <p className="text-sm text-teal-800/80 mb-4">
+                    Browse current Kerrisdale listings and set up custom alerts for new properties.
+                  </p>
+                  <Link
+                    href="/buying/search"
+                    className="inline-block bg-teal-700 text-white text-sm font-medium px-6 py-2.5 rounded-lg hover:bg-teal-800 transition-colors"
+                  >
+                    Search Listings
+                  </Link>
+                </div>
+              </section>
+
+              {/* Related Neighbourhoods */}
+              <section id="related" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Related Neighbourhoods
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    {
+                      name: "Oakridge",
+                      slug: "oakridge",
+                      desc: "Transit-oriented redevelopment with modern condos and the new Oakridge Park.",
+                    },
+                    {
+                      name: "South Cambie",
+                      slug: "south-cambie",
+                      desc: "Quiet residential streets between Queen Elizabeth Park and Oakridge.",
+                    },
+                    {
+                      name: "Arbutus Ridge",
+                      slug: "arbutus-ridge",
+                      desc: "Family-friendly west-side neighbourhood with sweeping views and the Arbutus Greenway.",
+                    },
+                    {
+                      name: "Dunbar-Southlands",
+                      slug: "dunbar-southlands",
+                      desc: "Established west-side community near UBC with heritage homes and village shopping.",
+                    },
+                  ].map((n) => (
+                    <Link
+                      key={n.slug}
+                      href={`/neighborhoods/${n.slug}`}
+                      className="block bg-warm-50 rounded-xl p-5 hover:bg-warm-100 transition-colors group"
+                    >
+                      <h3 className="font-medium text-teal-950 group-hover:text-teal-700 transition-colors mb-1">
+                        {n.name}
+                      </h3>
+                      <p className="text-sm text-warm-600">{n.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </section>
             </div>
           </div>
