@@ -7,7 +7,7 @@ import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Vancouver Real Estate Blog | Tips, Insights & Market Updates",
+  title: "Vancouver Real Estate Blog | Tips & Updates",
   description:
     "Read Aparna Kapur's blog for Vancouver real estate insights, buying and selling tips, neighbourhood spotlights, and market analysis for Oakridge and surrounding areas.",
 };

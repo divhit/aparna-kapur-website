@@ -6,7 +6,7 @@ import PageBanner from "@/components/hero/PageBanner";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Sell Your Vancouver Home | Seller's Guide & Valuation",
+  title: "Sell Your Vancouver Home | Seller's Guide",
   description:
     "Sell your Vancouver home for top dollar. Expert pricing, staging advice, and negotiation from Aparna Kapur at Oakwyn Realty.",
 };
@@ -30,6 +30,7 @@ export default function SellingPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Sell Your Vancouver Home with Aparna Kapur</h1>
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
               Your Roadmap

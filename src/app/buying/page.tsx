@@ -6,7 +6,7 @@ import PageBanner from "@/components/hero/PageBanner";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Buy a Home in Vancouver | Buyer's Guide & Resources",
+  title: "Buy a Home in Vancouver | Buyer's Guide",
   description:
     "Your complete guide to buying a home in Vancouver. From pre-approval to closing day, Aparna Kapur walks you through every step with expert local guidance.",
 };
@@ -31,6 +31,7 @@ export default function BuyingPage() {
       {/* 6-Step Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Buy a Home in Vancouver with Aparna Kapur</h1>
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
               Your Roadmap

@@ -8,7 +8,7 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Oakridge Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
+  title: "Oakridge Vancouver Real Estate Guide 2026",
   description:
     "Guide to Oakridge, Vancouver. Explore real estate, the Oakridge Park redevelopment, schools, transit, parks, and lifestyle. By Aparna Kapur, Oakwyn Realty.",
   keywords: [

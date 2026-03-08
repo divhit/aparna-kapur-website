@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.aparnakapur.com"),
   title: {
     default: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
-    template: "%s | Aparna Kapur, Oakwyn Realty",
+    template: "%s | Aparna Kapur",
   },
   description:
     "Your trusted Oakridge & Vancouver real estate expert. Aparna Kapur with Oakwyn Realty helps buyers and sellers navigate Vancouver's most exciting neighborhoods.",

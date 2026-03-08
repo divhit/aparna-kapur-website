@@ -4,7 +4,7 @@ import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
-  title: "Contact Aparna Kapur | Vancouver Real Estate",
+  title: "Contact Aparna Kapur | Vancouver Realtor",
   description:
     "Get in touch with Aparna Kapur, your Oakridge & Vancouver real estate expert at Oakwyn Realty. Call, email, or send a message.",
 };
@@ -28,6 +28,7 @@ export default function ContactPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Contact Aparna Kapur, Vancouver Real Estate Agent</h1>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
             {/* Contact Info */}
             <div className="lg:col-span-2 space-y-8">

@@ -6,7 +6,7 @@ import PageBanner from "@/components/hero/PageBanner";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Vancouver Neighborhoods Guide | Oakridge, Marpole, Cambie & More",
+  title: "Vancouver Neighbourhoods Guide | Oakridge & More",
   description:
     "Explore detailed guides to Vancouver's best neighborhoods. From Oakridge to Kerrisdale, find the perfect area for your lifestyle with Aparna Kapur.",
 };
@@ -248,6 +248,7 @@ export default function NeighborhoodsPage() {
       {/* Interactive Map */}
       <section className="py-12 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Vancouver Neighbourhoods Guide by Aparna Kapur</h1>
           <div className="max-w-2xl mx-auto text-center mb-12">
             <h2 className="font-serif text-3xl md:text-4xl leading-tight text-teal-950 italic font-bold">
               Find Your Neighbourhood.

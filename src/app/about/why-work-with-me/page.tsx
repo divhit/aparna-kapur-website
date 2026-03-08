@@ -5,7 +5,7 @@ import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Aparna Kapur | Oakridge Vancouver Realtor | Oakwyn Realty",
+  title: "About Aparna Kapur | Oakridge Realtor",
   description:
     "Aparna Kapur is a Vancouver real estate agent with Oakwyn Realty specializing in Oakridge, Marpole, South Cambie, Kerrisdale, and the Cambie Corridor. Call 604-612-7694.",
 };

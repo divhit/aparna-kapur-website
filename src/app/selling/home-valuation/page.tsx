@@ -4,7 +4,7 @@ import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
-  title: "Free Home Valuation | What's Your Vancouver Home Worth?",
+  title: "Free Home Valuation | Vancouver",
   description:
     "Get a free, no-obligation market analysis of your Vancouver home. Aparna Kapur provides expert valuations based on current market data and comparable sales.",
 };
@@ -24,6 +24,7 @@ export default function HomeValuationPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Free Vancouver Home Valuation by Aparna Kapur</h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-6 italic font-bold">
