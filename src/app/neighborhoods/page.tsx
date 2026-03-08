@@ -3,6 +3,7 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
 import PageBanner from "@/components/hero/PageBanner";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Vancouver Neighborhoods Guide | Oakridge, Marpole, Cambie & More",
@@ -232,6 +233,12 @@ const neighborhoods = [
 export default function NeighborhoodsPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Neighbourhoods", href: "/neighborhoods" },
+        ]}
+      />
       <PageBanner
         eyebrow="Neighbourhood Guides"
         title="Explore Vancouver's Best Neighbourhoods"
