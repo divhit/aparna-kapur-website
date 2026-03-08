@@ -432,7 +432,7 @@ If you own property along the Cambie Corridor, the October 2025 changes have lik
 - **Participate in a land assembly.** If your neighbours are also interested in selling, a coordinated assembly can command a higher per-lot price than individual sales. I've helped facilitate these conversations, and they can be quite productive when neighbours are on the same page.
 - **Hold and wait.** As each phase of development along the corridor completes and the neighbourhood improves, land values should continue to rise. But holding means continuing to pay property taxes on a potentially higher assessment.
 
-**My honest recommendation:** Get a current land value assessment from someone who understands the new zoning — not just comparable home sales, but development land values. Many homeowners along the corridor are sitting on significantly more value than they realize, and the October 2025 changes have accelerated the timeline.
+**My honest recommendation:** Get a current land value assessment from someone who understands the new zoning — development land values, not comparable home sales. Many homeowners along the corridor are sitting on significantly more value than they realize, and the October 2025 changes have accelerated the timeline.
 
 ## What This Means if You're Buying
 
@@ -547,7 +547,7 @@ The rezoning enabled:
 - **A 9-acre public rooftop park**, larger than two football fields
 - **560,000 square feet of retail space** with globally branded luxury outlets
 
-The scale was unprecedented for any single site outside of downtown Vancouver.
+Nothing of this scale had ever been attempted on a single site outside of downtown Vancouver.
 
 ## 2026: Construction Becomes Reality
 
@@ -811,7 +811,7 @@ Here are my top picks for family-friendly neighbourhoods in Vancouver for 2026, 
 
 **Best for:** Families wanting top schools, transit access, and a neighbourhood in transformation
 
-Oakridge is my top pick for families in 2026, and not just because it's my specialty area. The combination of excellent schools, direct SkyTrain access, and the massive Oakridge Park redevelopment makes this neighbourhood unbeatable.
+Oakridge is my top pick for families in 2026. Yes, it is my specialty area, but the reasons are straightforward: excellent schools, direct SkyTrain access, and the Oakridge Park redevelopment bringing a community centre, 9-acre park, and library to the neighbourhood.
 
 **Schools:** Sir Wilfrid Laurier Elementary and Jamieson Elementary are both highly regarded. For secondary, Sir Winston Churchill is one of Vancouver's top public high schools.
 
