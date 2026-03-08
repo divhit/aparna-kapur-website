@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { sellingGuideSteps } from "@/lib/guide-data";
 import PageBanner from "@/components/hero/PageBanner";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Sell Your Vancouver Home | Seller's Guide & Valuation",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 export default function SellingPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Selling", href: "/selling" },
+        ]}
+      />
+
       <PageBanner
         eyebrow="For Sellers"
         title="Selling Your Vancouver Home"

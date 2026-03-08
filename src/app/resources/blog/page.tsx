@@ -3,6 +3,8 @@ import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Blog | Tips, Insights & Market Updates",
@@ -13,6 +15,26 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Blog", href: "/resources/blog" },
+        ]}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Vancouver Real Estate Blog",
+          description: "Tips, market analysis, and neighbourhood guides for Vancouver real estate by Aparna Kapur.",
+          url: "https://aparnakapur.com/resources/blog",
+          numberOfItems: blogPosts.length,
+          publisher: {
+            "@type": "Organization",
+            name: "Aparna Kapur Real Estate",
+          },
+        }}
+      />
       <PageBanner eyebrow="Blog" title="Vancouver Real Estate Insights" description="Tips, market analysis, and neighbourhood guides to help you navigate the Vancouver real estate market with confidence." />
 
       <section className="py-20">

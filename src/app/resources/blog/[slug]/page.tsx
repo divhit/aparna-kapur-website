@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: [post.category, "Vancouver real estate", "Aparna Kapur", post.title.split(":")[0]],
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -60,6 +61,9 @@ export default async function BlogPostPage({ params }: Props) {
           description: post.excerpt,
           image: post.image,
           datePublished: post.date,
+          dateModified: post.date,
+          keywords: post.category,
+          articleSection: post.category,
           author: {
             "@type": "Person",
             name: "Aparna Kapur",

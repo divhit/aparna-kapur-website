@@ -5,6 +5,7 @@ import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Riley Park Vancouver Real Estate Guide 2026 | Homes, Market Data & Lifestyle",
@@ -56,6 +57,13 @@ export default async function RileyParkPage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Neighbourhoods", href: "/neighborhoods" },
+          { name: "Riley Park", href: "/neighborhoods/riley-park" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative pt-28 pb-16 md:py-24">
         <div

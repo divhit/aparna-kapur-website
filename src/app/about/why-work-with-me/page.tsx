@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Why Work With Aparna Kapur | Vancouver Realtor",
@@ -38,6 +39,13 @@ const highlights = [
 export default function WhyWorkWithMePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "About", href: "/about" },
+        ]}
+      />
+
       <PageBanner
         eyebrow="About Me"
         title="Why Work With Me"

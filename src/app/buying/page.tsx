@@ -3,6 +3,7 @@ import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { buyingGuideSteps } from "@/lib/guide-data";
 import PageBanner from "@/components/hero/PageBanner";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Buy a Home in Vancouver | Buyer's Guide & Resources",
@@ -13,6 +14,13 @@ export const metadata: Metadata = {
 export default function BuyingPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Buying", href: "/buying" },
+        ]}
+      />
+
       <PageBanner
         eyebrow="For Buyers"
         title="Buying a Home in Vancouver"

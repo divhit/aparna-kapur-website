@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Killarney Vancouver | Community Centre & Real Estate Guide 2026",
@@ -18,6 +19,13 @@ export const metadata: Metadata = {
 export default function KillarneyPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Neighbourhoods", href: "/neighborhoods" },
+          { name: "Killarney", href: "/neighborhoods/killarney" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative pt-28 pb-16 md:py-24">
         <div

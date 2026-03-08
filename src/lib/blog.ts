@@ -20,17 +20,17 @@ export const blogPosts: BlogPost[] = [
     readTime: "9 min read",
     image:
       "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-    content: `## Oakridge Park Is Finally Opening — And It Is Big
+    content: `## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
 
-After nearly seven years of construction, Oakridge Park is opening its doors in 2026. What was once the old Oakridge Centre mall at 41st and Cambie is now a $6 billion, 28-acre mixed-use development that will fundamentally change what it means to live, shop, and spend time on Vancouver's west side.
+I'm Aparna Kapur, a realtor with Oakwyn Realty based in Oakridge, Vancouver, and I've been watching this site evolve since the original rezoning. Last week, walking along Cambie Street toward the Canada Line station, I could finally see it: the storefronts being fitted out, the park taking shape on the rooftop, families peering through the hoarding trying to get a look inside. After nearly seven years of construction, Oakridge Park — the $6 billion, 28-acre development at 41st and Cambie — is actually opening in 2026.
 
-I have been tracking this project since the original rezoning, and I can say with confidence: nothing of this scale has ever been built in Vancouver outside of the downtown core. The ambition is enormous, and the execution, from what I have seen so far, matches it.
+Nothing this ambitious has been built in Vancouver outside of the downtown core. And honestly, I think most people in the surrounding neighbourhoods of South Cambie, Marpole, and Kerrisdale still don't fully grasp the scale of what's arriving.
 
-Here is a detailed breakdown of everything opening at Oakridge Park in 2026, and what it means for buyers, sellers, and investors in the area.
+So let me walk you through everything opening this year, and what it means if you own property nearby or are thinking about buying.
 
-## Luxury Retail: Vancouver's New High-End Shopping Destination
+## Luxury Retail Coming to Oakridge, Vancouver
 
-The retail component of Oakridge Park is positioning Vancouver alongside cities like Toronto, New York, and London in terms of luxury brand presence. The lineup of confirmed tenants reads like a who's who of global luxury fashion and jewellery.
+The retail lineup at Oakridge Park reads like something you'd expect in Yorkville or on Alberni Street downtown — except it's in a purpose-built setting with open-air design and direct SkyTrain access from the Oakridge-41st Avenue Canada Line station.
 
 **Confirmed luxury brands include:**
 
@@ -49,27 +49,27 @@ The retail component of Oakridge Park is positioning Vancouver alongside cities 
 - **Moncler** — premium outerwear
 - **Alexander Wang** — contemporary American designer
 
-This is not just a mall expansion. This is Vancouver finally getting a luxury retail destination that rivals Yorkville in Toronto or the boutiques on Alberni Street downtown, but in a purpose-built setting with modern architecture, open-air design, and direct SkyTrain access.
+That's fourteen luxury brands in one location on the west side of Vancouver, British Columbia. For context, many of these didn't have a dedicated Vancouver presence before.
 
-**What this means for the neighbourhood:** Luxury retail attracts high-income residents and visitors, which supports premium pricing for nearby properties. For existing homeowners in Oakridge and adjacent areas like South Cambie and Kerrisdale, the arrival of these brands elevates the entire neighbourhood's profile and desirability.
+**What this means for the neighbourhood:** Luxury retail attracts high-income residents and visitors, which supports premium pricing for nearby properties. For existing homeowners in [Oakridge](/neighborhoods/oakridge) and adjacent areas like South Cambie and Kerrisdale, the arrival of these brands raises the entire neighbourhood's profile. I've already seen buyer interest pick up from people who hadn't considered the area before.
 
-## Time Out Market Vancouver: 18 Kitchens, One Incredible Food Hall
+## Time Out Market Vancouver: 18 Kitchens Under One Roof
 
-One of the most anticipated openings is **Time Out Market Vancouver**, only the second Time Out Market in Canada (after Montreal) and one of just a handful globally.
+I'm genuinely excited about this one. **Time Out Market Vancouver** will be only the second Time Out Market in Canada (after Montreal) and one of a handful globally.
 
-Time Out Market curates the best chefs and restaurants in a city into a single food hall. The Vancouver location will feature **18 kitchens** showcasing the city's diverse culinary talent. Based on the Time Out Market model in Lisbon, New York, and Montreal, expect a mix of established Vancouver chefs alongside rising stars, covering everything from sushi and dim sum to artisanal pizza and craft cocktails.
+The concept is simple: Time Out curates the best chefs and restaurants in a city into a single food hall. The Vancouver location will feature **18 kitchens** — expect a mix of established Vancouver chefs alongside rising stars, covering everything from sushi and dim sum to artisanal pizza and craft cocktails.
 
-For residents of Oakridge Park and the surrounding area, this will become a go-to gathering spot — a place to eat, drink, and socialise without driving downtown.
+For residents of Oakridge Park and the surrounding area, this becomes a go-to gathering spot. You can eat well, meet friends, and spend an evening out without ever getting on the Canada Line to head downtown.
 
-## Giorgio Armani Caffè: Only the Third in North America
+## Giorgio Armani Caffe: Only the Third in North America
 
-Adding to the luxury dining experience, **Giorgio Armani Caffè** is opening at Oakridge Park. This will be only the **third location in North America** and signals the level of international prestige this development is attracting.
+**Giorgio Armani Caffe** is opening at Oakridge Park — only the **third location in North America**. The concept combines Italian fine dining with the brand's signature aesthetic. Beautiful interiors, curated menus, and a dining experience that puts Oakridge, Vancouver on the map for food alongside fashion.
 
-The Armani Caffè concept combines Italian fine dining with the brand's signature aesthetic — expect impeccable interiors, curated menus, and a destination dining experience that puts Oakridge on the map for food and fashion simultaneously.
+The fact that Armani chose this location over dozens of other options across North America tells you something about the calibre of what's being built here.
 
-## The 9-Acre Rooftop Park: Vancouver's Newest Green Space
+## The 9-Acre Rooftop Park: How Big Is It Really?
 
-Perhaps the most remarkable element of Oakridge Park is the **9-acre public rooftop park** — a green space larger than two football fields, built on top of the retail and residential podium.
+This is the part I think will surprise people the most. The **9-acre public rooftop park** sits on top of the retail and residential podium — a green space larger than two football fields, open to everyone.
 
 **The park will include:**
 
@@ -81,31 +81,31 @@ Perhaps the most remarkable element of Oakridge Park is the **9-acre public roof
 - **A running and walking loop** circling the entire park
 - **Seating areas and lookouts** with views of the North Shore mountains
 
-This is not a token green space squeezed between towers. It is a genuine park designed by landscape architects to function as a community anchor. Families, fitness enthusiasts, dog walkers, and anyone looking for outdoor space in the heart of the city will use this daily.
+I want to be clear about what this is: it's a real park, designed by landscape architects as a community anchor. Families, runners, dog walkers — people will use this daily. It's not a decorative green strip between towers.
 
-**For real estate values**, a park of this quality acts as a permanent amenity premium. Properties adjacent to well-maintained urban parks consistently trade at a premium over comparable units without park access. I expect this effect to be particularly strong for units within Oakridge Park itself and for homes within a 10-minute walk.
+**For property values**, parks of this quality create a permanent amenity premium. Properties adjacent to well-maintained urban parks consistently trade higher than comparable units without park access. I expect this effect to be particularly strong for homes within a 10-minute walk of the Oakridge Park site.
 
-## Civic Amenities: A New Community Hub
+## Civic Amenities: The Part That Actually Makes a Neighbourhood
 
-The City of Vancouver negotiated significant civic amenities as part of the Oakridge Park rezoning, and these are among the most exciting elements of the project.
+The City of Vancouver negotiated significant civic amenities as part of the Oakridge Park rezoning, and honestly, these might matter more for day-to-day life than the luxury retail.
 
-**Community centre (~103,000 square feet):** This will be one of the largest community centres in Vancouver, featuring a **50-metre swimming pool**, an **ice rink**, a **gymnasium**, **fitness facilities**, and **multi-purpose rooms** for programming. For families, this alone is a game-changer.
+**Community centre (~103,000 square feet):** One of the largest community centres in Vancouver, featuring a **50-metre swimming pool**, an **ice rink**, a **gymnasium**, **fitness facilities**, and **multi-purpose rooms**. If you have kids, this is enormous. The nearest comparable facilities are Hillcrest and Kerrisdale Community Centre, and both are already stretched.
 
-**Seniors' centre:** A dedicated facility for seniors programming, social activities, and services, filling a gap in the area's existing infrastructure.
+**Seniors' centre:** A dedicated facility for seniors programming, social activities, and services — filling a real gap in the area.
 
 **Youth hub:** Purpose-built space for youth programming and activities.
 
-**Vancouver Public Library branch (~25,000 square feet):** A new, modern VPL branch that will serve the growing Oakridge and South Cambie population. At 25,000 square feet, this will be one of the larger branch libraries in the system.
+**Vancouver Public Library branch (~25,000 square feet):** A new, modern VPL branch serving the growing Oakridge and South Cambie population. At 25,000 square feet, one of the larger branches in the system.
 
-**Childcare:** Licensed childcare spaces to serve families in the development and surrounding area — a critical amenity in a city where finding quality childcare is notoriously difficult.
+**Childcare:** Licensed childcare spaces — critical in a city where finding quality childcare is notoriously difficult.
 
-**Artist studios:** Dedicated studio spaces for artists, reflecting the City's commitment to maintaining cultural diversity in new developments.
+**Artist studios:** Dedicated studio spaces for artists, reflecting the City's commitment to cultural diversity in new developments.
 
-These are not just nice-to-haves. Community centres, libraries, and childcare facilities are the infrastructure that makes a neighbourhood livable for families, and they support long-term property values by making the area genuinely desirable for owner-occupiers, not just investors.
+Community centres, libraries, and childcare are the infrastructure that makes a neighbourhood livable for families. They support long-term property values by making an area genuinely desirable for owner-occupiers, and that matters more than any retail tenant list.
 
 ## Residential: 1,400 Homes Completing by End of 2026
 
-The residential component of Oakridge Park is massive. Across the full build-out, the development will deliver over 3,300 homes. By the end of 2026, approximately **1,400 of those homes** will be completed and occupied.
+The residential component is substantial. Across the full build-out, Oakridge Park will deliver over 3,300 homes. By the end of 2026, approximately **1,400 of those homes** will be completed and occupied.
 
 The housing mix includes:
 
@@ -113,36 +113,36 @@ The housing mix includes:
 - **Townhomes** at grade level, offering ground-oriented family living
 - **Rental apartments** including below-market and social housing units
 
-The arrival of 1,400 new households in a single location will shift the demographic character of the neighbourhood significantly. More residents means more foot traffic for retail and restaurants, more demand for services, and a more vibrant street-level experience.
+That's 1,400 new households arriving in a single location. More residents means more foot traffic for retail and restaurants, more demand for services, and a more vibrant street-level experience in Oakridge, Vancouver.
 
-## Impact on Property Values: What I Am Seeing
+## Impact on Oakridge Property Values: What I Am Seeing
 
 The "Oakridge effect" on surrounding property values is real and measurable. Properties within a 10-minute walk of Oakridge Park have outperformed the citywide average since the project was announced, and I expect that trend to **accelerate** as the development opens.
 
 **Why values will continue to rise:**
 
-- **Amenity completion drives demand.** As the park, community centre, and retail open, the neighbourhood becomes tangibly more desirable. Buyers can see and experience the amenities, not just imagine them.
-- **Transit-oriented locations outperform.** Oakridge sits directly on the Canada Line with two stations (Oakridge–41st and King Edward) within walking distance. In a city moving aggressively toward transit-oriented density, this is a structural advantage.
-- **Supply constraints remain.** Despite the new units at Oakridge Park, the broader Oakridge and [South Cambie area](/neighborhoods/oakridge) remains supply-constrained for detached homes and townhomes. The new condo supply does not directly compete with the existing housing stock.
+- **Amenity completion drives demand.** As the park, community centre, and retail open, the neighbourhood becomes tangibly more desirable. Buyers can see and experience the amenities rather than imagining them from renderings.
+- **Transit-oriented locations outperform.** Oakridge sits directly on the Canada Line with two stations (Oakridge-41st and King Edward) within walking distance. In a city moving aggressively toward transit-oriented density, this is a structural advantage.
+- **Supply constraints remain.** Despite the new units at Oakridge Park, the broader [Oakridge and South Cambie area](/neighborhoods/oakridge) remains supply-constrained for detached homes and townhomes. The new condo supply doesn't directly compete with the existing housing stock.
 
-**Potential headwinds to watch:**
+**Some honest headwinds to watch:**
 
 - **Short-term supply surge.** As 1,400 units are delivered in a compressed timeframe, there may be temporary downward pressure on condo prices in the immediate area as some buyers and investors look to sell.
-- **Construction fatigue.** The remaining phases of Oakridge Park will continue through 2028-2029. Buyers in immediately adjacent properties will still live with construction activity for several more years.
+- **Construction fatigue.** The remaining phases of Oakridge Park will continue through 2028-2029. Buyers in immediately adjacent properties will still live with construction activity for several more years. That's worth factoring in.
 
 ## What This Means for Buyers, Sellers, and Investors
 
-**For buyers:** If you have been waiting for Oakridge Park to "prove itself" before buying in the area, 2026 is the year that proof arrives. You can walk the park, eat at Time Out Market, and see the community centre taking shape. The neighbourhood is no longer a promise — it is becoming a reality. That said, the best pricing was available during peak construction disruption. Buying now is still a strong long-term play, but you are paying closer to the neighbourhood's true value.
+**For buyers:** If you've been waiting for Oakridge Park to "prove itself" before buying in the area, 2026 is the year that proof arrives. You can walk the park, eat at Time Out Market, and see the community centre taking shape. The neighbourhood is no longer a promise — it's becoming a reality. I should be honest, though: the best pricing was available during peak construction disruption. Buying now is still a strong long-term play, but you're paying closer to the neighbourhood's true value.
 
-**For sellers:** If you own property in Oakridge, South Cambie, or the [surrounding area](/neighborhoods/oakridge), the opening of Oakridge Park strengthens your position. Listing a home near a world-class amenity package is a completely different conversation than listing near a construction site. If you have been holding off on selling, the next 12 to 18 months represent an excellent window.
+**For sellers:** If you own property in Oakridge, South Cambie, or the [surrounding area](/neighborhoods/oakridge), the opening of Oakridge Park strengthens your position considerably. Listing a home near a world-class amenity package is a completely different conversation than listing near a construction site. If you've been holding off, the next 12 to 18 months represent an excellent window.
 
-**For investors:** Rental demand in Oakridge will be exceptionally strong. The combination of SkyTrain access, luxury retail, dining, and community amenities creates a rental product that commands premium rents and experiences very low vacancy. Purpose-built rental units within Oakridge Park will perform well, but so will older rental stock in adjacent buildings that benefit from the neighbourhood uplift.
+**For investors:** Rental demand in Oakridge will be exceptionally strong. The combination of SkyTrain access, luxury retail, dining, and community amenities creates a rental product that commands premium rents and experiences very low vacancy. Purpose-built rental units within Oakridge Park will perform well, and so will older rental stock in adjacent buildings that benefit from the neighbourhood uplift.
 
-## The Bottom Line
+## What Oakridge Park Means for Vancouver's West Side
 
-Oakridge Park is the single most transformative development in Vancouver outside of the downtown core. In 2026, it stops being a construction project and starts being a neighbourhood. The luxury retail, Time Out Market, Giorgio Armani Caffè, the 9-acre rooftop park, the community centre, and the residential towers are all converging to create something Vancouver has never had before: a true urban centre on the west side.
+In 2026, Oakridge Park stops being a construction project and starts being a neighbourhood. The luxury retail, Time Out Market, Giorgio Armani Caffe, the 9-acre rooftop park, the community centre, and the residential towers are all converging to create a true urban centre on the west side of Vancouver — something this city hasn't had before.
 
-If you want to understand what Oakridge Park means for your specific real estate plans — whether you are buying, selling, or investing — reach out to me directly. I work this neighbourhood every day, and I can give you the ground-level perspective that no marketing brochure will.`,
+If you want to understand what this means for your specific real estate plans — whether you're buying, selling, or investing in Oakridge, South Cambie, Marpole, or Riley Park — I'd love to help. I'm Aparna Kapur with Oakwyn Realty, and I work this neighbourhood every day. You can reach me at 604-612-7694 or through [aparnakapur.com](https://aparnakapur.com). I'll give you the ground-level perspective that no marketing brochure will.`,
   },
   {
     slug: "oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison",
@@ -155,43 +155,43 @@ If you want to understand what Oakridge Park means for your specific real estate
     readTime: "8 min read",
     image:
       "https://images.pexels.com/photos/2079234/pexels-photo-2079234.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-    content: `## Two West Side Neighbourhoods, Two Very Different Futures
+    content: `## I Walk Both of These Neighbourhoods Every Week
 
-Oakridge and Kerrisdale sit side by side on Vancouver's west side, separated by just a few blocks. Both are highly desirable, both attract families and professionals, and both command premium prices. But they are heading in very different directions.
+Oakridge and Kerrisdale sit side by side on Vancouver's west side, separated by a few blocks along 41st Avenue. I'm Aparna Kapur with Oakwyn Realty, and I spend a lot of time in both — showing homes, grabbing coffee on the Kerrisdale village strip, watching the cranes at Oakridge Park. I genuinely love both neighbourhoods, which is why this is one of my favourite conversations to have with buyers.
 
-Oakridge is in the middle of the most significant urban transformation Vancouver has ever seen outside of downtown. Kerrisdale is a mature, established neighbourhood that prizes its village character and quiet residential streets.
+They're both excellent. They're both premium. And they're heading in very different directions.
 
-I work extensively in both areas, and I get asked regularly: which one is right for me? The answer depends entirely on what you value. Here is an honest, detailed comparison to help you decide.
+Oakridge, Vancouver is in the middle of an enormous urban transformation centred on the $6 billion Oakridge Park development at 41st and Cambie. Kerrisdale prizes its village character, its quiet residential streets, its tree canopy. The question isn't which is "better" — it's which one fits your life.
 
-## Location and Geography
+## Where Exactly Are Oakridge and Kerrisdale?
 
-**Oakridge** is centred around the intersection of 41st Avenue and Cambie Street, anchored by the Oakridge Park development. It sits in the geographic centre of Vancouver, roughly equidistant from downtown, UBC, and the Fraser River. The neighbourhood is bounded roughly by 33rd Avenue to the north, 49th Avenue to the south, Oak Street to the west, and Main Street to the east.
+**Oakridge** is centred around the intersection of 41st Avenue and Cambie Street, anchored by the Oakridge Park development. It sits in the geographic centre of Vancouver, British Columbia — roughly equidistant from downtown, UBC, and the Fraser River. The neighbourhood runs from about 33rd Avenue to 49th Avenue, between Oak Street and Main Street.
 
-**Kerrisdale** is located west of Oakridge, centred on the 41st Avenue shopping village between East Boulevard and Yew Street. The neighbourhood extends from roughly 33rd Avenue to 49th Avenue, between Arbutus Street and Blenheim Street. It is slightly closer to UBC and the beaches of Point Grey.
+**Kerrisdale** is located west of Oakridge, centred on the 41st Avenue shopping village between East Boulevard and Yew Street. The neighbourhood extends from roughly 33rd Avenue to 49th Avenue, between Arbutus Street and Blenheim Street. It's slightly closer to UBC and the beaches of Point Grey.
 
-Both neighbourhoods occupy the same east-west band across the city, giving them similar proximity to major corridors. The key geographic difference is that Oakridge sits on a major transit line while Kerrisdale does not.
+Both neighbourhoods occupy the same east-west band across the city. The key geographic difference: Oakridge sits on a major transit line. Kerrisdale does not.
 
-## Transit Access: A Major Differentiator
+## Does Transit Access Matter? (Yes, Increasingly)
 
-This is perhaps the single biggest differentiator between these two neighbourhoods, and it will only become more important over time.
+This is the single biggest differentiator, and it will only become more important over time.
 
 **Oakridge transit advantages:**
 
-- **Two Canada Line SkyTrain stations** — Oakridge–41st Avenue and King Edward — are within walking distance of most of the neighbourhood
+- **Two Canada Line SkyTrain stations** — Oakridge-41st Avenue and King Edward — within walking distance of most of the neighbourhood
 - Direct service to **downtown Vancouver in 15 minutes** and **YVR Airport in 20 minutes**
 - Multiple bus routes along Cambie Street and 41st Avenue
-- The development itself is designed around transit-oriented density
+- The Oakridge Park development itself is designed around transit-oriented density
 
 **Kerrisdale transit access:**
 
-- **No SkyTrain station.** The closest Canada Line stations are Oakridge–41st (a 15-20 minute walk or short bus ride) and Marine Drive
+- **No SkyTrain station.** The closest Canada Line stations are Oakridge-41st (a 15-20 minute walk or short bus ride) and Marine Drive
 - Bus service on 41st Avenue (the 43 bus) provides east-west connections
 - The Arbutus Greenway offers a walking and cycling corridor but is not rapid transit
 - Residents are largely car-dependent for commuting
 
-For buyers who commute daily, work downtown, or value the flexibility of rapid transit, Oakridge holds a significant structural advantage. For buyers who work from home, drive, or prioritize a quieter residential feel over transit convenience, Kerrisdale's lack of SkyTrain is less of a concern.
+If you commute daily or work downtown, Oakridge has a real structural advantage. If you work from home, drive, or simply prefer a quieter residential feel, Kerrisdale's lack of SkyTrain may not bother you at all.
 
-## Schools: Both Excellent, With Different Strengths
+## How Do the Schools Compare?
 
 Both Oakridge and Kerrisdale are known for strong schools, and this is a primary reason families choose either neighbourhood.
 
@@ -209,7 +209,7 @@ Both Oakridge and Kerrisdale are known for strong schools, and this is a primary
 - **Point Grey Secondary** — another excellent option nearby, known for Mini School and strong arts programs
 - Several private schools within easy reach, including Crofton House School and St. George's School
 
-**The verdict on schools:** Both neighbourhoods offer top-tier public education. Kerrisdale Elementary and Laurier Elementary are both exceptional. For secondary, Churchill (Oakridge catchment) and Point Grey (Kerrisdale catchment) are both among the best in Vancouver. This category is essentially a draw, though individual families may prefer one school's specific programs over another.
+Honestly, schools are essentially a draw. Kerrisdale Elementary and Laurier Elementary are both exceptional. For secondary, Churchill (Oakridge catchment) and Point Grey (Kerrisdale catchment) are both among the best in Vancouver. Individual families may prefer one school's specific programs, but you can't go wrong in either neighbourhood.
 
 ## Pricing: Head-to-Head Comparison
 
@@ -226,41 +226,43 @@ Here is how current benchmark pricing compares across the two neighbourhoods, ba
 
 **Key pricing observations:**
 
-- **Detached homes in Oakridge command a significant premium** over Kerrisdale, largely driven by the Oakridge Park development effect and the area's designation as a municipal town centre. The transit access and future amenity package justify the premium for many buyers.
+- **Detached homes in Oakridge command a significant premium** over Kerrisdale — about $380K more — largely driven by the Oakridge Park development effect and the area's designation as a municipal town centre. Transit access and the incoming amenity package justify the premium for many buyers.
 - **Condos and townhomes are priced similarly** in both neighbourhoods, suggesting comparable buyer demand at these price points.
 - **Kerrisdale offers better value for detached home buyers** who prioritise square footage and lot size over transit access and new-build amenities.
 
-## Development and Growth Trajectory
+## Where Is Each Neighbourhood Heading?
 
-This is where the two neighbourhoods diverge most dramatically.
+This is where the two diverge most.
 
 **Oakridge: Rapid transformation.**
 
-Oakridge is in the midst of a once-in-a-generation transformation driven by the Oakridge Park development and the Cambie Corridor Plan. The neighbourhood is adding thousands of new homes, hundreds of thousands of square feet of retail, a world-class community centre, a 9-acre rooftop park, and luxury dining and shopping. Tower heights have been increased to 20-26 storeys near the 41st Avenue station under the October 2025 Cambie Corridor Plan update. The density and urban character of Oakridge will continue to intensify over the next decade.
+Oakridge is in the midst of a once-in-a-generation transformation driven by the Oakridge Park development and the Cambie Corridor Plan. Thousands of new homes, hundreds of thousands of square feet of retail, a world-class community centre, a 9-acre rooftop park, luxury dining and shopping. Tower heights have been increased to 20-26 storeys near the 41st Avenue station under the October 2025 Cambie Corridor Plan update. The density and urban character of [Oakridge](/neighborhoods/oakridge) will continue to intensify over the next decade.
 
 **Kerrisdale: Stable village character.**
 
-Kerrisdale has actively resisted large-scale densification. The neighbourhood's character is defined by tree-lined streets of detached homes and low-rise apartments, anchored by the charming 41st Avenue shopping village. While some infill development is occurring — laneway homes, duplexes under the city-wide R1-1 rezoning — the overall scale and character of Kerrisdale is not changing dramatically. The community has been vocal about preserving its village feel.
+Kerrisdale has actively resisted large-scale densification. Tree-lined streets of detached homes and low-rise apartments, anchored by the charming 41st Avenue shopping village. Some infill is happening — laneway homes, duplexes under the city-wide R1-1 rezoning — but the overall scale and character of Kerrisdale is staying largely the same. The community has been vocal about preserving its village feel, and so far, it's working.
 
-**What this means for buyers:**
+**What this means for you:**
 
-- If you want to be part of a neighbourhood that is growing, evolving, and increasing in urban intensity, **Oakridge is the clear choice**.
-- If you value stability, predictability, and a neighbourhood that will look and feel much the same in 10 years as it does today, **Kerrisdale is your neighbourhood**.
+- If you want to be part of a neighbourhood that's growing, evolving, and increasing in urban intensity, **Oakridge is the clear choice**.
+- If you value stability, predictability, and a neighbourhood that will look and feel much the same in 10 years, **Kerrisdale is your neighbourhood**.
+
+Neither is wrong. They're just different philosophies about what makes a good place to live.
 
 ## Lifestyle and Community Feel
 
 **Oakridge lifestyle:**
 
 - Urban, transit-oriented, and increasingly cosmopolitan
-- The arrival of Time Out Market, Giorgio Armani Caffè, and luxury retail will create a vibrant social scene
-- Construction activity continues through 2028-2029 — the neighbourhood is a work in progress
+- Time Out Market, Giorgio Armani Caffe, and luxury retail will create a vibrant social scene
+- Construction activity continues through 2028-2029 — the neighbourhood is a work in progress, and I think it's worth being honest about that
 - Diverse, multicultural, with a growing population of young professionals and families
 - Queen Elizabeth Park provides one of Vancouver's best green spaces within walking distance
 
 **Kerrisdale lifestyle:**
 
 - Village-like, residential, and quiet
-- The 41st Avenue shopping village offers independent boutiques, cafés, bakeries, and restaurants — a genuine neighbourhood high street
+- The 41st Avenue shopping village offers independent boutiques, cafes, bakeries, and restaurants — a genuine neighbourhood high street that I personally adore
 - Mature tree-lined streets with large lots and established gardens
 - Strong sense of community identity and neighbourhood pride
 - Kerrisdale Community Centre offers extensive programming including ice skating, swimming, and seniors' activities
@@ -268,9 +270,9 @@ Kerrisdale has actively resisted large-scale densification. The neighbourhood's 
 
 ## Dining and Shopping
 
-**Oakridge** is about to leapfrog most Vancouver neighbourhoods with the arrival of Oakridge Park's retail and dining. Time Out Market's 18 kitchens, the luxury brand lineup, and Giorgio Armani Caffè will create a destination that draws people from across the region. The existing dining along Cambie Street is solid but not remarkable.
+**Oakridge** is about to leapfrog most Vancouver neighbourhoods with the arrival of Oakridge Park's retail and dining. Time Out Market's 18 kitchens, the luxury brand lineup, and Giorgio Armani Caffe will create a destination that draws people from across the region. The existing dining along Cambie Street is solid but unexceptional.
 
-**Kerrisdale** offers a more intimate, neighbourhood-scale dining and shopping experience. Highlights include Thomas Haas for pastries, Meinhardt Fine Foods, and a collection of independent restaurants and cafés. The 41st Avenue village has a charm that large-scale developments cannot easily replicate.
+**Kerrisdale** offers a more intimate, neighbourhood-scale experience. Thomas Haas for pastries, Meinhardt Fine Foods, a collection of independent restaurants and cafes. The 41st Avenue village has a charm that large-scale developments can't easily replicate. I grab coffee there most weeks, and the atmosphere is genuinely warm.
 
 ## Parks and Recreation
 
@@ -289,7 +291,7 @@ Kerrisdale has actively resisted large-scale densification. The neighbourhood's 
 - **Kerrisdale Community Centre** — pool, ice rink, fitness, and extensive programming (already operational)
 - Close proximity to **Pacific Spirit Regional Park** and **Jericho Beach**
 
-**The verdict on parks:** Oakridge wins on sheer scale with Queen Elizabeth Park and the incoming rooftop park. Kerrisdale wins on proximity to Pacific Spirit Park and the beaches. Both have solid community centre facilities — Kerrisdale's are operational now, while Oakridge's new centre opens in 2027.
+Oakridge wins on sheer scale with Queen Elizabeth Park and the incoming rooftop park. Kerrisdale wins on proximity to Pacific Spirit Park and the beaches. Both have solid community centre facilities — Kerrisdale's are operational now, while Oakridge's new centre opens in 2027.
 
 ## Who Should Choose Oakridge
 
@@ -297,21 +299,21 @@ Kerrisdale has actively resisted large-scale densification. The neighbourhood's 
 - **Buyers seeking long-term appreciation** driven by neighbourhood transformation
 - **Families excited by new amenities** — the community centre, park, and library
 - **Investors** targeting high-demand, transit-oriented rental properties
-- **Buyers who enjoy urban energy** and want to be part of a neighbourhood that is growing
+- **Buyers who enjoy urban energy** and want to be part of a neighbourhood that's growing
 
 ## Who Should Choose Kerrisdale
 
 - **Families who value a quiet, established neighbourhood** with a proven track record
 - **Detached home buyers** looking for better value per square foot on the west side
 - **Buyers who prefer village character** and walkable, independent shopping
-- **Work-from-home professionals** who do not need daily transit access
-- **Buyers who want stability** and are not interested in living through ongoing development and construction
+- **Work-from-home professionals** who don't need daily transit access
+- **Buyers who want stability** and aren't interested in living through ongoing development and construction
 
-## The Bottom Line
+## So Which One Fits You?
 
-Both Oakridge and Kerrisdale are excellent west side neighbourhoods. The choice comes down to what you value more: transformation and future upside (Oakridge) or stability and established charm (Kerrisdale).
+Both Oakridge and Kerrisdale are excellent west side neighbourhoods in Vancouver, British Columbia. The choice comes down to what you value more: growth and future upside, or stability and established charm. I've helped families choose both, and I've never had someone regret either decision when it was the right fit for their life.
 
-I work extensively in both neighbourhoods and can give you an honest, nuanced assessment of which one fits your specific situation. If you are weighing these two areas, or comparing them to other west side options, let us sit down and talk through what matters most to you. Reach out anytime.`,
+If you're weighing these two areas — or comparing them to South Cambie, Riley Park, Marpole, or other west side options — I'd love to talk it through. You can reach me at 604-612-7694 or visit [aparnakapur.com](https://aparnakapur.com). I'll give you an honest take, not a sales pitch.`,
   },
   {
     slug: "cambie-corridor-rezoning-2025-what-homeowners-need-to-know",
@@ -324,45 +326,45 @@ I work extensively in both neighbourhoods and can give you an honest, nuanced as
     readTime: "7 min read",
     image:
       "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-    content: `## The Cambie Corridor Just Changed — Significantly
+    content: `## In October 2025, Vancouver Quietly Rezoned Over 4,300 Properties Along the Canada Line
 
-In October 2025, Vancouver City Council approved a major update to the Cambie Corridor Plan. This is the most significant change to development policy along the Canada Line corridor since the original plan was adopted, and it directly affects thousands of property owners between Marine Drive and King Edward stations.
+If you own a home along Cambie Street between Marine Drive and King Edward — in Oakridge, South Cambie, Langara, or Marpole — your property's zoning may have changed. You might not have even noticed.
 
-If you own property along the Cambie Corridor, or are considering buying or investing in the area, you need to understand what changed and what it means for property values, development potential, and the future character of the neighbourhood.
+In October 2025, Vancouver City Council approved a major update to the Cambie Corridor Plan. It's the most significant change to development policy along the Canada Line corridor since the original plan was adopted. And I know from talking with homeowners in the area that a lot of people are confused about what it actually means for them. Some are worried. Some are excited. Most just want a straight answer.
 
-Here is my breakdown.
+I'm Aparna Kapur, a realtor with Oakwyn Realty, and I specialize in the [Oakridge](/neighborhoods/oakridge) and Cambie Corridor markets in Vancouver, British Columbia. I'm going to walk through what changed, what it means for your property, and what your options are — as plainly as I can.
 
 ## What Is the Cambie Corridor Plan?
 
-The Cambie Corridor Plan is the City of Vancouver's framework for managing growth along the Canada Line, Vancouver's north-south rapid transit line that runs from Waterfront Station downtown to Richmond and YVR Airport.
+The Cambie Corridor Plan is the City of Vancouver's framework for managing growth along the Canada Line, the north-south rapid transit line running from Waterfront Station downtown to Richmond and YVR Airport.
 
 The corridor stretches along Cambie Street from approximately King Edward Avenue in the north to Marine Drive in the south, encompassing the neighbourhoods of South Cambie, Oakridge, Langara, and Marpole.
 
-The original plan, adopted in phases between 2011 and 2018, envisioned transforming the predominantly single-family neighbourhoods along the Canada Line into higher-density, transit-oriented communities. The logic was straightforward: **Vancouver invested billions in rapid transit infrastructure, and the neighbourhoods around those stations should accommodate significantly more housing to justify that investment and address the city's housing shortage.**
+The original plan, adopted in phases between 2011 and 2018, envisioned transforming the predominantly single-family neighbourhoods along the Canada Line into higher-density, transit-oriented communities. The reasoning was straightforward: **Vancouver invested billions in rapid transit infrastructure, and the neighbourhoods around those stations should accommodate significantly more housing to justify that investment and address the city's housing shortage.**
 
-The October 2025 update accelerates that vision.
+The October 2025 update accelerates that vision considerably.
 
-## What Changed in October 2025
+## What Actually Changed in October 2025?
 
-The update introduced several major changes that directly affect property owners and developers along the corridor.
+Four things matter most. I'll take them one at a time.
 
 ### 1. Over 4,300 Properties Pre-Zoned for Higher Density
 
-The single most important change: **more than 4,300 properties along the Cambie Corridor have been pre-zoned**, meaning their zoning has been officially changed to allow higher-density development without requiring a separate rezoning application.
+This is the big one. **More than 4,300 properties along the Cambie Corridor have been pre-zoned**, meaning their zoning has been officially changed to allow higher-density development without requiring a separate rezoning application.
 
 Previously, a property owner or developer who wanted to build beyond what the existing zoning allowed had to go through a **rezoning process** — a lengthy, expensive, and uncertain undertaking that could take 18 to 36 months and cost hundreds of thousands of dollars in consultant fees, with no guarantee of approval.
 
 Under pre-zoning, eligible properties can proceed directly to the **development permit stage**, skipping the rezoning step entirely. This saves approximately **12 months** off the development timeline and eliminates a major source of uncertainty and cost.
 
-**What this means for property owners:** If your property is one of the 4,300+ that has been pre-zoned, its development potential — and therefore its land value — has increased. You no longer need to gamble on a rezoning application. The density is already approved in principle.
+**What this means for you:** If your property is one of the 4,300+ that has been pre-zoned, its development potential — and therefore its land value — has increased. You no longer need to gamble on a rezoning application. The density is already approved in principle. That's a meaningful change, even if you have no intention of selling right now.
 
-### 2. Increased Tower Heights Near Oakridge–41st Avenue Station
+### 2. Taller Towers Allowed Near Oakridge-41st Avenue Station
 
-The update increased allowable tower heights near the Oakridge–41st Avenue Canada Line station from **15-18 storeys to 20-26 storeys**.
+The update increased allowable tower heights near the Oakridge-41st Avenue Canada Line station from **15-18 storeys to 20-26 storeys**.
 
-This is a direct response to the Oakridge Park development and the station area's designation as a municipal town centre. The City is signalling that the blocks immediately surrounding Oakridge Park should develop at a scale consistent with the development itself — that is, genuine urban density comparable to areas like Brentwood in Burnaby.
+This is a direct response to the Oakridge Park development and the station area's designation as a municipal town centre. The City is signalling that the blocks immediately surrounding Oakridge Park should develop at a scale consistent with the development itself — genuine urban density comparable to areas like Brentwood in Burnaby.
 
-**What this means:** Properties within the tower height increase zone now have significantly more development potential. More storeys means more units, which means higher land values. Developers will be actively seeking assembly opportunities in this area.
+Properties within the tower height increase zone now have significantly more development potential. More storeys means more units, which means higher land values. Developers will be actively seeking assembly opportunities in this part of Oakridge, Vancouver.
 
 ### 3. Streamlined Development Permit Process
 
@@ -376,69 +378,69 @@ The combination of pre-zoning and a streamlined permit process means that the ti
 
 Under the previous framework, rezoning applications along the Cambie Corridor were expected to include **30% of floor area as social or below-market housing**. The October 2025 update reduced this requirement to **20%**.
 
-This change was pragmatic. The 30% requirement was making many projects financially unviable, particularly smaller-scale developments. By reducing the requirement to 20%, the City is making it easier for projects to proceed while still delivering meaningful affordable housing contributions.
+This change was pragmatic. The 30% requirement was making many projects financially unviable, particularly smaller-scale developments. Reducing it to 20% makes it easier for projects to proceed while still delivering meaningful affordable housing contributions.
 
-**What this means for the market:** More projects will be financially viable, which means more development activity, more housing supply, and more opportunities for both developers and property sellers along the corridor.
+The practical result: more projects will pencil out financially, which means more development activity, more housing supply, and more opportunities for both developers and property sellers along the corridor.
 
-## How Pre-Zoning Works in Practice
+## How Does Pre-Zoning Actually Work?
 
-If your property has been pre-zoned under the Cambie Corridor Plan update, here is what that means in practical terms:
+I get this question a lot from homeowners who received a notice and aren't sure what to do with it. So let me be specific.
 
-**Your property's zoning has been officially changed.** You do not need to apply for rezoning. The new zoning is in effect now.
+**Your property's zoning has been officially changed.** You don't need to apply for anything. The new zoning is in effect now.
 
 **You can develop (or sell to a developer) under the new zoning.** If you own a single-family lot that has been pre-zoned for a 6-storey apartment building, for example, you or a developer can apply for a development permit to build that 6-storey building without going through a separate rezoning.
 
-**Your property tax assessment may increase.** BC Assessment values properties based on their "highest and best use." If your property has been pre-zoned for higher density, its assessed value — and potentially your property taxes — may increase to reflect the higher development potential, even if you are still living in a single-family home.
+**Your property tax assessment may increase.** BC Assessment values properties based on their "highest and best use." If your property has been pre-zoned for higher density, its assessed value — and potentially your property taxes — may increase to reflect the higher development potential, even if you are still living in a single-family home. I know this worries people, and it's worth checking with BC Assessment or your accountant.
 
-**You are not required to develop.** Pre-zoning does not force you to sell or develop. You can continue living in your current home. But the economics change: your land is now worth more to a developer than it was before, which changes your options.
+**You are not required to develop or sell.** Pre-zoning doesn't force you to do anything. You can continue living in your current home for as long as you want. But the economics have changed: your land is now worth more to a developer than it was before, which gives you options you didn't have six months ago.
 
-## Impact on Property Values Along the Corridor
+## What Does This Mean for Property Values Along the Cambie Corridor?
 
-The Cambie Corridor Plan update has clear implications for property values, though the impact varies by location and property type.
+The impact varies by location and property type, but the direction is clear.
 
-**Properties closest to Canada Line stations** will see the largest impact. The tower height increases near Oakridge–41st Avenue and the pre-zoning of properties near other stations (King Edward, Langara–49th, Marine Drive) create significant new development potential.
+**Properties closest to Canada Line stations** will see the largest impact. The tower height increases near Oakridge-41st Avenue and the pre-zoning of properties near other stations (King Edward, Langara-49th, Marine Drive) create significant new development potential.
 
 **Assembly sites** — groups of adjacent lots that can be combined for a larger development — are particularly valuable. Developers need contiguous parcels to build efficiently, and holdout properties in the middle of potential assemblies can command significant premiums.
 
 **Detached homes on pre-zoned lots** are now valued primarily for their land, not their structures. A 60-year-old bungalow on a lot pre-zoned for a 6-storey building is worth what a developer will pay for the land, which is often substantially more than the home's value as a residence.
 
-**Condos in existing buildings** along the corridor may benefit from the neighbourhood improvements that come with new development — better retail, more services, improved streetscapes — but they do not directly benefit from the rezoning in the same way that land owners do.
+**Condos in existing buildings** along the corridor may benefit from the neighbourhood improvements that come with new development — better retail, more services, improved streetscapes — but they don't directly benefit from the rezoning in the same way that land owners do.
 
-## The R1-1 Zone and Multiplexes: A Parallel Shift
+## How the R1-1 Zone and Multiplexes Fit In
 
-It is worth noting that the Cambie Corridor changes are happening alongside Vancouver's city-wide **R1-1 rezoning**, which allows multiplexes (up to 6 units) on virtually all former single-family lots across the city.
+Worth mentioning: the Cambie Corridor changes are happening alongside Vancouver's city-wide **R1-1 rezoning**, which allows multiplexes (up to 6 units) on virtually all former single-family lots across the city.
 
-Since the R1-1 zone was implemented, the City has received approximately **370 applications** for multiplex developments, representing roughly **1,500 new housing units**. Many of these applications are along or near the Cambie Corridor, where the combination of transit access and the R1-1 zoning makes multiplex development particularly attractive.
+Since the R1-1 zone was implemented, the City has received approximately **370 applications** for multiplex developments, representing roughly **1,500 new housing units**. Many of these applications are along or near the Cambie Corridor, where the combination of transit access and R1-1 zoning makes multiplex development particularly attractive.
 
-The R1-1 zone and the Cambie Corridor Plan update work together: the corridor plan handles the larger-scale, transit-oriented density near stations, while R1-1 enables gentle densification on the blocks between stations. The result is a more gradual transition from high-density station areas to medium-density residential streets.
+The two policies work together: the corridor plan handles the larger-scale, transit-oriented density near stations, while R1-1 enables gentle densification on the blocks between stations. The result is a more gradual transition from high-density station areas to medium-density residential streets, which is honestly a smarter approach than the all-or-nothing patterns we've seen in other parts of the city.
 
 ## The Broadway Plan Connection
 
-The Cambie Corridor Plan update does not exist in isolation. It connects directly to the **Broadway Plan**, which governs development along the Broadway corridor from Clark Drive to Vine Street, centred on the new Broadway Subway (Millennium Line extension).
+The Cambie Corridor Plan update connects directly to the **Broadway Plan**, which governs development along the Broadway corridor from Clark Drive to Vine Street, centred on the new Broadway Subway (Millennium Line extension).
 
 The two plans share a common philosophy: concentrate housing density around rapid transit stations, reduce car dependency, and create complete communities with housing, retail, and services within walking distance.
 
-For investors and developers, the intersection of the Broadway Plan and the Cambie Corridor Plan — particularly near the future Cambie–Broadway station area — represents one of the highest-growth zones in Metro Vancouver. Properties in this overlap area benefit from both plans' density provisions and two rapid transit lines.
+For investors and developers, the intersection of the Broadway Plan and the Cambie Corridor Plan — particularly near the future Cambie-Broadway station area — represents one of the highest-growth zones in Metro Vancouver. Properties in this overlap area benefit from both plans' density provisions and two rapid transit lines.
 
-## What This Means for Sellers
+## What This Means if You're Thinking of Selling
 
-If you own property along the Cambie Corridor, the October 2025 changes have likely increased your land's value. The question is how to capture that value.
+If you own property along the Cambie Corridor, the October 2025 changes have likely increased your land's value. The question is how to capture that value — and when.
 
 **Options for sellers:**
 
-- **Sell to a developer now.** With pre-zoning in place, developers have more certainty and are willing to pay accordingly. The reduced social housing requirement makes more projects viable, expanding the pool of potential buyers.
-- **Participate in a land assembly.** If your neighbours are also interested in selling, a coordinated assembly can command a higher per-lot price than individual sales.
+- **Sell to a developer now.** With pre-zoning in place, developers have more certainty and are willing to pay accordingly. The reduced social housing requirement makes more projects viable, expanding the pool of potential buyers for your lot.
+- **Participate in a land assembly.** If your neighbours are also interested in selling, a coordinated assembly can command a higher per-lot price than individual sales. I've helped facilitate these conversations, and they can be quite productive when neighbours are on the same page.
 - **Hold and wait.** As each phase of development along the corridor completes and the neighbourhood improves, land values should continue to rise. But holding means continuing to pay property taxes on a potentially higher assessment.
 
-**My recommendation:** Get a current land value assessment from someone who understands the new zoning. Many homeowners along the corridor are sitting on significantly more value than they realise, and the October 2025 changes have accelerated the timeline for realising that value.
+**My honest recommendation:** Get a current land value assessment from someone who understands the new zoning — not just comparable home sales, but development land values. Many homeowners along the corridor are sitting on significantly more value than they realize, and the October 2025 changes have accelerated the timeline.
 
-## What This Means for Buyers
+## What This Means if You're Buying
 
-**More supply is coming.** The pre-zoning and streamlined approvals will accelerate housing construction along the corridor. Over the next 5 to 10 years, thousands of new condos, townhomes, and rental units will be built. For buyers, this means more choice and potentially more competitive pricing in certain segments.
+**More supply is coming.** The pre-zoning and streamlined approvals will accelerate housing construction along the corridor. Over the next 5 to 10 years, thousands of new condos, townhomes, and rental units will be built in South Cambie, Oakridge, Langara, and Marpole. For buyers, this means more choice and potentially more competitive pricing in certain segments.
 
-**Transit-oriented locations are the future.** If you are buying a home in Vancouver with a 10 to 20 year time horizon, being near a Canada Line or SkyTrain station is one of the strongest value drivers you can choose. The Cambie Corridor is purpose-built for this reality.
+**Transit-oriented locations are the future.** If you're buying a home in Vancouver with a 10 to 20 year time horizon, being near a Canada Line or SkyTrain station is one of the strongest value drivers you can choose. The Cambie Corridor is purpose-built for this reality.
 
-**Consider adjacent areas for value.** The blocks immediately surrounding stations will command the highest prices. For buyers seeking better value, look at properties one or two blocks further from the stations that still benefit from the neighbourhood improvements without the full station-area premium.
+**Consider adjacent areas for value.** The blocks immediately surrounding stations will command the highest prices. For buyers seeking better value, look at properties one or two blocks further out — you still benefit from the neighbourhood improvements without paying the full station-area premium.
 
 ## What This Means for Investors
 
@@ -447,17 +449,15 @@ The Cambie Corridor is one of the most compelling investment corridors in Metro 
 **Investment strategies to consider:**
 
 - **Existing condos near stations** for rental income, benefiting from growing tenant demand as the corridor densifies
-- **Pre-sale units in new developments** along the corridor, particularly near Oakridge–41st and Langara–49th
+- **Pre-sale units in new developments** along the corridor, particularly near Oakridge-41st and Langara-49th
 - **Land acquisition** for those with development expertise and capital, now that pre-zoning reduces risk
 - **Multiplex development** on R1-1 zoned lots near the corridor, combining the gentle density allowances with transit proximity
 
-## The Bottom Line
+## If You're Feeling Uncertain, That's Normal
 
-The October 2025 Cambie Corridor Plan update is a watershed moment for property owners along the Canada Line. Pre-zoning over 4,300 properties, increasing tower heights near Oakridge, streamlining approvals, and reducing the social housing requirement all point in one direction: **more development, faster, with greater certainty.**
+Zoning changes can feel abstract until they show up on your property tax notice. If you own along the Cambie Corridor and you're not sure whether to sell, hold, develop, or join an assembly — that's a perfectly reasonable place to be. These are big decisions, and they deserve a careful, honest conversation.
 
-Whether you are a homeowner wondering what your property is now worth, a buyer looking at where to invest for the long term, or a developer evaluating sites, the Cambie Corridor demands your attention.
-
-I specialise in the Oakridge, South Cambie, and Cambie Corridor markets. If you want to understand how the October 2025 changes affect your specific property or investment plans, get in touch. I will give you an honest, data-driven assessment.`,
+I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor markets. If you want to understand how the October 2025 changes affect your specific property or investment plans, reach me at 604-612-7694 or through [aparnakapur.com](https://aparnakapur.com). I'll give you a straightforward, data-driven assessment — no pressure, just clarity.`,
   },
   {
     slug: "resale-vs-presale-vancouver-condos-2026",
