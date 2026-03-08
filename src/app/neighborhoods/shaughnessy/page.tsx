@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Shaughnessy Vancouver | Heritage Mansions & Estate Living Guide 2026",
+  title: "Shaughnessy Homes for Sale | Vancouver",
   description:
     "Your quick guide to Shaughnessy, Vancouver. Heritage mansions, VanDusen Botanical Garden, tree-lined boulevards, top private schools, and what makes this Vancouver's most prestigious residential address.",
   keywords: [

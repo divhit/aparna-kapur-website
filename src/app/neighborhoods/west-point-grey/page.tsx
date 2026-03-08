@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "West Point Grey Vancouver | Beach & Luxury Homes Guide 2026",
+  title: "West Point Grey Homes for Sale | 2026",
   description:
     "Your quick guide to West Point Grey, Vancouver. Spanish Banks, Jericho Beach, luxury homes, proximity to UBC, top schools, transit, and what makes this neighbourhood one of Vancouver's most coveted residential addresses.",
   keywords: [

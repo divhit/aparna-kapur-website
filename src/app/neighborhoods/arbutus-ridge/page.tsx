@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Arbutus Ridge Vancouver | Greenway Living & Real Estate Guide 2026",
+  title: "Arbutus Ridge Homes for Sale | Vancouver",
   description:
     "Your quick guide to Arbutus Ridge, Vancouver. The Arbutus Greenway, heritage homes, Quilchena Park, top schools, and what makes this quiet west-side neighbourhood a hidden gem between Kerrisdale and Shaughnessy.",
   keywords: [

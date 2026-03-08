@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Fairview Vancouver | Broadway Corridor & Real Estate Guide 2026",
+  title: "Fairview Homes for Sale | Vancouver 2026",
   description:
     "Your quick guide to Fairview, Vancouver. Broadway Plan development, South Granville shopping, Granville Island, transit, and what makes Fairview one of Vancouver's best-connected neighbourhoods.",
   keywords: [

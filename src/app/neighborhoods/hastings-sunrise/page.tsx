@@ -8,7 +8,7 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Hastings-Sunrise Vancouver Real Estate Guide 2026 | Homes & Market Data",
+  title: "Hastings-Sunrise Homes for Sale | 2026",
   description:
     "The definitive guide to Hastings-Sunrise, Vancouver. Explore PNE/Playland, real estate, schools, parks, transit, and community life. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
   keywords: [

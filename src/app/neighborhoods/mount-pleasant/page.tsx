@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Mount Pleasant Vancouver | Creative Living & Real Estate Guide 2026",
+  title: "Mount Pleasant Homes for Sale | 2026",
   description:
     "Your quick guide to Mount Pleasant, Vancouver. Craft breweries, Main Street shopping, murals, tech hubs, and what makes Mount Pleasant one of Vancouver's most creative neighbourhoods.",
   keywords: [

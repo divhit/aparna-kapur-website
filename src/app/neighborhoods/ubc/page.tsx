@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "UBC Vancouver | Campus Living & Real Estate Guide 2026",
+  title: "UBC Homes for Sale | Vancouver 2026",
   description:
     "Your quick guide to UBC, Vancouver. Campus lifestyle, leasehold real estate, Pacific Spirit Park, Wesbrook Village, schools, transit, and what makes living at UBC unlike anywhere else in Metro Vancouver.",
   keywords: [

@@ -8,7 +8,7 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Downtown Vancouver Real Estate Guide 2026 | Condos, Penthouses & Market Data",
+  title: "Downtown Vancouver Condos for Sale | 2026",
   description:
     "The definitive guide to Downtown Vancouver. Explore condos, luxury penthouses, Robson Street shopping, Gastown, transit options, and urban lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
   keywords: [

@@ -4,7 +4,7 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Strathcona Vancouver | Heritage Homes & Real Estate Guide 2026",
+  title: "Strathcona Homes for Sale | Vancouver 2026",
   description:
     "Your quick guide to Strathcona, Vancouver. Heritage Victorian homes, artist lofts, Chinatown adjacency, transit, and what makes Strathcona Vancouver's most historically layered neighbourhood.",
   keywords: [
