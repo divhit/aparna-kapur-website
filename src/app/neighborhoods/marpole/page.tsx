@@ -24,29 +24,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is Marpole a good neighborhood to buy in?",
+    question: "What is the average home price in Marpole, Vancouver?",
     answer:
-      "Marpole is one of the best values on Vancouver's west side. At $1.14M benchmark, well below Oakridge ($1.49M) or Kerrisdale ($1.90M), it offers Canada Line access at Marine Drive, proximity to YVR, and a community plan bringing new density and amenities. A compelling choice for long-term appreciation in a family-friendly setting.",
+      "The GVR MLS® HPI composite benchmark for Marpole is $1.14M (January 2026). Condos average around $684K, townhomes $1.58M, and detached homes $2.13M. For a detailed pricing breakdown and current listings, contact Aparna Kapur at 604-612-7694 — she specializes in Vancouver's south-side neighbourhoods and can provide up-to-date market analysis.",
   },
   {
-    question: "How much does a home cost in Marpole?",
+    question: "Is Marpole a good neighbourhood to buy in?",
     answer:
-      "GVR MLS® HPI benchmarks (January 2026): condos $684K, townhomes $1.58M, detached $2.13M. Composite benchmark: $1.14M, making it one of Vancouver's more accessible west-side neighborhoods.",
+      "Yes — Marpole is one of the best values on Vancouver's west side. At $1.14M benchmark, it is well below Oakridge ($1.49M), Kerrisdale ($1.90M), and South Cambie ($1.44M). The neighbourhood offers Canada Line access at Marine Drive station, a vibrant Marine Drive shopping corridor, generous parks like Marpole Park and Winona Park, and a community plan bringing new density and amenities. Its affordability relative to neighbouring west-side areas makes it a compelling choice for long-term appreciation.",
   },
   {
-    question: "What is the Marpole Community Plan?",
+    question: "What transit is near Marpole?",
     answer:
-      "Adopted by Vancouver City Council, the plan guides development through 2040. It increases density along Cambie, Granville, and SW Marine Drive while preserving interior residential character. It envisions new housing, improved parks, better cycling connections, and enhanced commercial areas.",
+      "Marpole is served by the Canada Line's Marine Drive station, which gets you downtown in 20 minutes and to YVR airport in just 7 minutes (two stops). Frequent bus routes run along Granville (#10), Marine Drive (#100), Cambie (#15), and Oak (#17). Drivers have direct access to the Arthur Laing Bridge (YVR), Oak Street Bridge (Richmond and Highway 99 south), and Granville Street heading north. The proximity to YVR makes Marpole especially popular with frequent travellers.",
   },
   {
-    question: "What schools are in the Marpole area?",
+    question: "What schools are in Marpole?",
     answer:
-      "Elementary: David Lloyd George and Sir Wilfrid Laurier. High school: Sir Winston Churchill Secondary, known for strong academics. Langara College sits just north of the neighbourhood.",
+      "Marpole has several well-regarded public schools. Elementary options include David Lloyd George Elementary (K-7, with French Immersion), Sir Wilfrid Laurier Elementary, and J.W. Sexsmith Elementary. For high school, Sir Winston Churchill Secondary sits at the Oakridge-Marpole border and is ranked among Vancouver's top public secondaries for academics, athletics, and arts. Langara College (23,000+ students) is just north of the neighbourhood at 49th and Cambie.",
   },
   {
-    question: "How do I get around from Marpole?",
+    question: "Who is the best realtor for Marpole Vancouver?",
     answer:
-      "Marine Drive SkyTrain station: downtown in 20 minutes, YVR just two stops (7 minutes). Bus routes along Granville, Marine Drive, and Cambie. Drivers have direct access to the Arthur Laing Bridge (YVR), Oak Street Bridge (Richmond), and Granville heading north.",
+      "Aparna Kapur with Oakwyn Realty is a top choice for Marpole real estate. She lives on Vancouver's south side and has deep knowledge of Marpole's streets, pricing trends, and the Community Plan's impact on property values. Whether you are buying your first condo near Marine Drive or selling a detached home, Aparna provides honest, data-driven guidance. Reach her at 604-612-7694.",
   },
 ];
 
@@ -130,6 +130,7 @@ export default async function MarpolePage() {
                   ["schools", "Education", "6"],
                   ["shopping", "Shopping & Dining", "7"],
                   ["faq", "FAQ", "8"],
+                  ["related", "Related Areas", "9"],
                 ].map(([id, label, step]) => (
                   <a
                     key={id}
@@ -151,7 +152,7 @@ export default async function MarpolePage() {
                       ["Oakridge", "oakridge"],
                       ["South Cambie", "south-cambie"],
                       ["Kerrisdale", "kerrisdale"],
-                      ["Cambie Corridor", "cambie-corridor"],
+                      ["Sunset", "sunset"],
                     ].map(([name, slug]) => (
                       <li key={slug}>
                         <Link
@@ -177,8 +178,11 @@ export default async function MarpolePage() {
                 <p className="text-warm-600 leading-relaxed mb-4">
                   The streets hold post-war bungalows, early 20th-century character homes, and a growing number of modern condos and townhomes. The Marpole Community Plan guides densification along major corridors while preserving the quiet, family-friendly interior streets.
                 </p>
-                <p className="text-warm-600 leading-relaxed">
+                <p className="text-warm-600 leading-relaxed mb-4">
                   At $1.14M benchmark, Marpole is well below Oakridge ($1.49M), Kerrisdale ($1.90M), and South Cambie ($1.44M). With Marine Drive SkyTrain, proximity to YVR, and growing shops and restaurants, it is attracting savvy buyers and investors.
+                </p>
+                <p className="text-warm-600 leading-relaxed">
+                  <Link href="/buying/search" className="text-teal-700 underline underline-offset-2 hover:text-teal-900 transition-colors">Browse current Marpole listings</Link> to see what is available right now.
                 </p>
               </section>
 
@@ -386,6 +390,34 @@ export default async function MarpolePage() {
                 <FAQAccordion faqs={faqs} />
               </section>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Neighbourhoods */}
+      <section id="related" className="py-16 bg-warm-50 border-t border-warm-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-serif text-3xl text-teal-950 mb-8 text-center">
+            Related Neighbourhoods
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+            {[
+              { name: "Oakridge", href: "/neighborhoods/oakridge" },
+              { name: "South Cambie", href: "/neighborhoods/south-cambie" },
+              { name: "Kerrisdale", href: "/neighborhoods/kerrisdale" },
+              { name: "Sunset", href: "/neighborhoods/sunset" },
+            ].map((n) => (
+              <Link
+                key={n.href}
+                href={n.href}
+                className="bg-white rounded-xl p-5 text-center border border-warm-100 hover:border-teal-200 hover:shadow-md transition-all group"
+              >
+                <p className="font-serif text-lg text-teal-900 group-hover:text-teal-700 transition-colors">
+                  {n.name}
+                </p>
+                <p className="text-xs text-warm-500 mt-1">View Guide &rarr;</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

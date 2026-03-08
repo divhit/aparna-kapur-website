@@ -136,9 +136,103 @@ export default function KitsilanoPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 bg-warm-50 border-y border-warm-100">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-serif text-3xl text-teal-950 mb-8">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-4">
+            <details className="group bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-50 transition-colors list-none flex items-center justify-between">
+                What is the average home price in Kitsilano, Vancouver?
+                <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed">
+                The composite benchmark price in Kitsilano is approximately <strong>$1.25M</strong>. Condos range from <strong>$550K to $1.2M</strong>, heritage-conversion townhomes run <strong>$1.2M to $1.8M</strong>, and detached craftsman homes start around <strong>$2M</strong> and can push past <strong>$4M</strong> near the water. For a personalized market assessment, contact <strong>Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline">604-612-7694</a>.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-50 transition-colors list-none flex items-center justify-between">
+                Is Kitsilano a good neighbourhood to buy in?
+                <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed">
+                Yes. Kitsilano consistently ranks among Vancouver&apos;s most desirable neighbourhoods. The beach lifestyle, Walk Score of 88, vibrant West 4th Avenue shopping, and the upcoming Broadway Subway (opening 2026) all drive strong demand. It appeals to tech workers, young families, and long-time residents alike, and values hold well thanks to limited supply and enduring desirability.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-50 transition-colors list-none flex items-center justify-between">
+                What is the Broadway Subway impact on Kitsilano?
+                <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed">
+                The Broadway Subway is expected to open in 2026, bringing rapid transit to the Broadway corridor for the first time. This is already driving buyer interest and is expected to support long-term price appreciation for properties along the corridor. For Kitsilano, it means faster connections to downtown, Commercial-Broadway, and the broader SkyTrain network without relying on the 99 B-Line bus.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-50 transition-colors list-none flex items-center justify-between">
+                What makes Kitsilano special?
+                <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed">
+                Kitsilano offers direct beach access (three beaches), a dedicated cycling culture with lanes reaching downtown via the Burrard Bridge, independent shops and restaurants along West 4th Avenue, and a low-rise character with no towers. The housing stock features 1940s craftsman bungalows, heritage conversions, and tree-lined streets. It delivers genuine west-side community without Point Grey prices or downtown density.
+              </div>
+            </details>
+
+            <details className="group bg-white rounded-xl border border-warm-200 overflow-hidden">
+              <summary className="cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-50 transition-colors list-none flex items-center justify-between">
+                Who is the best realtor for Kitsilano, Vancouver?
+                <svg className="w-5 h-5 text-warm-400 group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed">
+                <strong>Aparna Kapur</strong> with Oakwyn Realty is a Vancouver south-side and west-side specialist with deep knowledge of Kitsilano&apos;s micro-markets, from beachside condos to craftsman homes. Reach her directly at <a href="tel:6046127694" className="text-teal-700 underline">604-612-7694</a> for a no-obligation consultation.
+              </div>
+            </details>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/buying/search"
+              className="inline-block px-6 py-3 bg-teal-700 text-white text-sm font-medium rounded-lg hover:bg-teal-800 transition-colors"
+            >
+              Search Kitsilano Listings
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <NeighbourhoodReportSignup neighbourhood="Kitsilano" />
 
-      {/* JSON-LD */}
+      {/* Related Neighbourhoods */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-serif text-2xl text-teal-950 mb-6">
+            Related Neighbourhoods
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { name: "Fairview", slug: "fairview" },
+              { name: "West Point Grey", slug: "west-point-grey" },
+              { name: "Arbutus Ridge", slug: "arbutus-ridge" },
+              { name: "Kerrisdale", slug: "kerrisdale" },
+            ].map((n) => (
+              <Link
+                key={n.slug}
+                href={`/neighborhoods/${n.slug}`}
+                className="block bg-warm-50 border border-warm-200 rounded-xl px-4 py-4 text-center text-sm font-medium text-teal-900 hover:bg-teal-50 hover:border-teal-200 transition-colors"
+              >
+                {n.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD Article */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -153,6 +247,59 @@ export default function KitsilanoPage() {
               "@type": "Person",
               name: "Aparna Kapur",
             },
+          }),
+        }}
+      />
+
+      {/* JSON-LD FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What is the average home price in Kitsilano, Vancouver?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The composite benchmark price in Kitsilano is approximately $1.25M. Condos range from $550K to $1.2M, heritage-conversion townhomes run $1.2M to $1.8M, and detached craftsman homes start around $2M and can push past $4M near the water. Contact Aparna Kapur at 604-612-7694 for a personalized market assessment.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is Kitsilano a good neighbourhood to buy in?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Kitsilano consistently ranks among Vancouver's most desirable neighbourhoods. The beach lifestyle, Walk Score of 88, vibrant West 4th Avenue shopping, and the upcoming Broadway Subway (opening 2026) all drive strong demand.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What is the Broadway Subway impact on Kitsilano?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Broadway Subway is expected to open in 2026, bringing rapid transit to the Broadway corridor for the first time. This is already driving buyer interest and is expected to support long-term price appreciation for properties along the corridor.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What makes Kitsilano special?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Kitsilano offers direct beach access, a dedicated cycling culture, independent shops along West 4th Avenue, and a low-rise character with no towers. The housing stock features 1940s craftsman bungalows, heritage conversions, and tree-lined streets.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who is the best realtor for Kitsilano, Vancouver?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Aparna Kapur with Oakwyn Realty is a Vancouver south-side and west-side specialist with deep knowledge of Kitsilano's micro-markets. Reach her at 604-612-7694.",
+                },
+              },
+            ],
           }),
         }}
       />
