@@ -21,7 +21,7 @@ export function RealEstateAgentSchema() {
         url: "https://www.aparnakapur.com",
         telephone: "+1-604-612-7694",
         email: "aparna@aparnakapur.com",
-        image: "https://aparnakapur.com/og-image.png",
+        image: "https://www.aparnakapur.com/og-image.png",
         description:
           "Aparna Kapur is a Vancouver real estate agent with Oakwyn Realty, specializing in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.",
         address: {
@@ -146,7 +146,7 @@ export function BreadcrumbSchema({
           "@type": "ListItem",
           position: index + 1,
           name: item.name,
-          item: `https://aparnakapur.com${item.href}`,
+          item: `https://www.aparnakapur.com${item.href}`,
         })),
       }}
     />

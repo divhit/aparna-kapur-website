@@ -142,7 +142,7 @@ The "Oakridge effect" on surrounding property values is real and measurable. Pro
 
 In 2026, Oakridge Park stops being a construction project and starts being a neighbourhood. The luxury retail, Time Out Market, Giorgio Armani Caffe, the 9-acre rooftop park, the community centre, and the residential towers are all converging to create a true urban centre on the west side of Vancouver — something this city hasn't had before.
 
-If you want to understand what this means for your specific real estate plans — whether you're buying, selling, or investing in Oakridge, South Cambie, Marpole, or Riley Park — I'd love to help. I'm Aparna Kapur with Oakwyn Realty, and I work this neighbourhood every day. You can reach me at 604-612-7694 or through [aparnakapur.com](https://aparnakapur.com). I'll give you the ground-level perspective that no marketing brochure will.`,
+If you want to understand what this means for your specific real estate plans — whether you're buying, selling, or investing in Oakridge, South Cambie, Marpole, or Riley Park — I'd love to help. I'm Aparna Kapur with Oakwyn Realty, and I work this neighbourhood every day. You can reach me at 604-612-7694 or through [aparnakapur.com](https://www.aparnakapur.com). I'll give you the ground-level perspective that no marketing brochure will.`,
   },
   {
     slug: "oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison",
@@ -313,7 +313,7 @@ Oakridge wins on sheer scale with Queen Elizabeth Park and the incoming rooftop 
 
 Both Oakridge and Kerrisdale are excellent west side neighbourhoods in Vancouver, British Columbia. The choice comes down to what you value more: growth and future upside, or stability and established charm. I've helped families choose both, and I've never had someone regret either decision when it was the right fit for their life.
 
-If you're weighing these two areas — or comparing them to South Cambie, Riley Park, Marpole, or other west side options — I'd love to talk it through. You can reach me at 604-612-7694 or visit [aparnakapur.com](https://aparnakapur.com). I'll give you an honest take, not a sales pitch.`,
+If you're weighing these two areas — or comparing them to South Cambie, Riley Park, Marpole, or other west side options — I'd love to talk it through. You can reach me at 604-612-7694 or visit [aparnakapur.com](https://www.aparnakapur.com). I'll give you an honest take, not a sales pitch.`,
   },
   {
     slug: "cambie-corridor-rezoning-2025-what-homeowners-need-to-know",
@@ -457,7 +457,7 @@ The Cambie Corridor is one of the most compelling investment corridors in Metro 
 
 Zoning changes can feel abstract until they show up on your property tax notice. If you own along the Cambie Corridor and you're not sure whether to sell, hold, develop, or join an assembly — that's a perfectly reasonable place to be. These are big decisions, and they deserve a careful, honest conversation.
 
-I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor markets. If you want to understand how the October 2025 changes affect your specific property or investment plans, reach me at 604-612-7694 or through [aparnakapur.com](https://aparnakapur.com). I'll give you a straightforward, data-driven assessment — no pressure, just clarity.`,
+I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor markets. If you want to understand how the October 2025 changes affect your specific property or investment plans, reach me at 604-612-7694 or through [aparnakapur.com](https://www.aparnakapur.com). I'll give you a straightforward, data-driven assessment — no pressure, just clarity.`,
   },
   {
     slug: "resale-vs-presale-vancouver-condos-2026",

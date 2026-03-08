@@ -67,12 +67,12 @@ export default async function BlogPostPage({ params }: Props) {
           author: {
             "@type": "Person",
             name: "Aparna Kapur",
-            url: "https://aparnakapur.com/about",
+            url: "https://www.aparnakapur.com/about",
           },
           publisher: {
             "@type": "Organization",
             name: "Aparna Kapur Real Estate",
-            url: "https://aparnakapur.com",
+            url: "https://www.aparnakapur.com",
           },
         }}
       />

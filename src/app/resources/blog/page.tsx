@@ -27,7 +27,7 @@ export default function BlogPage() {
           "@type": "CollectionPage",
           name: "Vancouver Real Estate Blog",
           description: "Tips, market analysis, and neighbourhood guides for Vancouver real estate by Aparna Kapur.",
-          url: "https://aparnakapur.com/resources/blog",
+          url: "https://www.aparnakapur.com/resources/blog",
           numberOfItems: blogPosts.length,
           publisher: {
             "@type": "Organization",
@@ -39,6 +39,7 @@ export default function BlogPage() {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <h1 className="sr-only">Vancouver Real Estate Blog by Aparna Kapur</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <Link

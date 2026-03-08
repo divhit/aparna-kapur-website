@@ -47,7 +47,6 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_CA",
-    url: "https://www.aparnakapur.com",
     siteName: "Aparna Kapur Real Estate",
     images: [
       {
@@ -65,9 +64,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: "/",
   },
   other: {
     "geo.region": "CA-BC",
