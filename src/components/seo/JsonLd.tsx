@@ -107,7 +107,23 @@ export function RealEstateAgentSchema() {
           "Kerrisdale real estate",
           "Cambie Corridor development",
           "Oakridge Park redevelopment",
+          "Vancouver R1-1 zoning",
+          "Canada Line property values",
+          "Vancouver west side real estate",
         ],
+        sameAs: [
+          "https://www.google.com/maps/place/Aparna+Kapur+Real+Estate",
+          "https://www.instagram.com/aparnakapur.realestate/",
+        ],
+        jobTitle: "Real Estate Agent",
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "Real Estate License",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "British Columbia Financial Services Authority (BCFSA)",
+          },
+        },
       }}
     />
   );

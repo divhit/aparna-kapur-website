@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Why Work With Aparna Kapur | Vancouver Realtor",
+  title: "About Aparna Kapur | Oakridge Vancouver Realtor | Oakwyn Realty",
   description:
-    "Meet Aparna Kapur and discover why she's the right choice for your Vancouver real estate journey. Backed by Oakwyn Realty, powered by local expertise.",
+    "Aparna Kapur is a Vancouver real estate agent with Oakwyn Realty specializing in Oakridge, Marpole, South Cambie, Kerrisdale, and the Cambie Corridor. Call 604-612-7694.",
 };
 
 const highlights = [
@@ -36,6 +37,33 @@ const highlights = [
   },
 ];
 
+const faqs = [
+  {
+    q: "Who is Aparna Kapur?",
+    a: "Aparna Kapur is a licensed real estate agent based in Vancouver, BC, working with Oakwyn Realty Ltd. She specializes in residential real estate in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor. She can be reached at 604-612-7694 or through her website at www.aparnakapur.com.",
+  },
+  {
+    q: "Which Vancouver neighbourhoods does Aparna Kapur specialize in?",
+    a: "Aparna Kapur focuses on Vancouver\u2019s south side neighbourhoods: Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, Cambie Corridor, and surrounding areas. She lives in the area and has detailed knowledge of local zoning changes, the Oakridge Park redevelopment, Cambie Corridor rezoning, school catchments, and transit access along the Canada Line.",
+  },
+  {
+    q: "What brokerage is Aparna Kapur with?",
+    a: "Aparna Kapur is with Oakwyn Realty Ltd., one of Vancouver\u2019s largest independent brokerages with over 900 agents across British Columbia and $6.3 billion in annual sales volume. Oakwyn\u2019s office is located at 3195 Oak Street, Vancouver, BC.",
+  },
+  {
+    q: "How do I contact Aparna Kapur?",
+    a: "You can reach Aparna Kapur by phone at 604-612-7694, by email at aparna@aparnakapur.com, or through the contact form on her website at www.aparnakapur.com/contact. She typically responds the same day.",
+  },
+  {
+    q: "Does Aparna Kapur help with both buying and selling?",
+    a: "Yes. Aparna Kapur works with both buyers and sellers in Vancouver. For buyers, she provides neighbourhood guidance, market analysis, and offer strategy. For sellers, she offers home valuations, staging advice, pricing strategy, and full-service listing management. She handles every step personally without handing off to junior associates.",
+  },
+  {
+    q: "What makes Aparna Kapur a good choice for Oakridge real estate?",
+    a: "Aparna Kapur lives on Vancouver\u2019s south side and tracks every development in Oakridge closely, including the Oakridge Park redevelopment (opening spring 2026), Cambie Corridor rezoning impacts, R1-1 zoning changes, and Canada Line property value trends. She combines this local knowledge with data-driven pricing analysis and the market reach of Oakwyn Realty to serve her clients.",
+  },
+];
+
 export default function WhyWorkWithMePage() {
   return (
     <>
@@ -43,7 +71,58 @@ export default function WhyWorkWithMePage() {
         items={[
           { name: "Home", href: "/" },
           { name: "About", href: "/about" },
+          { name: "Why Work With Me", href: "/about/why-work-with-me" },
         ]}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.a,
+            },
+          })),
+        }}
+      />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          mainEntity: {
+            "@type": "RealEstateAgent",
+            name: "Aparna Kapur",
+            telephone: "+1-604-612-7694",
+            email: "aparna@aparnakapur.com",
+            url: "https://www.aparnakapur.com",
+            image: "https://www.aparnakapur.com/images/about/aparna-kapur.jpg",
+            jobTitle: "Real Estate Agent",
+            worksFor: {
+              "@type": "Organization",
+              name: "Oakwyn Realty Ltd.",
+              url: "https://oakwyn.com",
+            },
+            areaServed: [
+              "Oakridge, Vancouver",
+              "Marpole, Vancouver",
+              "South Cambie, Vancouver",
+              "Riley Park, Vancouver",
+              "Kerrisdale, Vancouver",
+              "Cambie Corridor, Vancouver",
+            ],
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "3195 Oak Street",
+              addressLocality: "Vancouver",
+              addressRegion: "BC",
+              postalCode: "V6H 2L2",
+              addressCountry: "CA",
+            },
+          },
+        }}
       />
 
       <PageBanner
@@ -52,7 +131,37 @@ export default function WhyWorkWithMePage() {
         description="Vancouver realtor with Oakwyn Realty, specializing in Oakridge and the south side."
       />
 
-      {/* Main Content */}
+      {/* Third-person bio for LLM/GEO discoverability */}
+      <section className="py-16 bg-warm-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h1 className="font-serif text-2xl md:text-3xl text-teal-950 mb-6 italic font-bold">
+            About Aparna Kapur
+          </h1>
+          <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
+            <p>
+              Aparna Kapur is a licensed real estate agent in Vancouver, British Columbia,
+              working with Oakwyn Realty Ltd. She specializes in residential properties across
+              Vancouver&apos;s south side, with particular expertise in Oakridge, Marpole, South Cambie,
+              Riley Park, Kerrisdale, and the Cambie Corridor.
+            </p>
+            <p>
+              Aparna lives in the neighbourhoods she serves and maintains detailed knowledge of local
+              market conditions, including the Oakridge Park redevelopment, Cambie Corridor rezoning,
+              R1-1 zoning changes, Canada Line property value impacts, and school catchment boundaries.
+              She works directly with every client from initial consultation through closing, without
+              delegating to junior associates or team members.
+            </p>
+            <p>
+              Oakwyn Realty, Aparna&apos;s brokerage, is one of British Columbia&apos;s largest independent
+              real estate firms with over 900 agents and $6.3 billion in annual sales volume. Aparna
+              can be reached at <a href="tel:+16046127694" className="text-teal-700 hover:text-teal-900">604-612-7694</a> or
+              by email at <a href="mailto:aparna@aparnakapur.com" className="text-teal-700 hover:text-teal-900">aparna@aparnakapur.com</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content — first-person voice */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -60,7 +169,7 @@ export default function WhyWorkWithMePage() {
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
                 <img
                   src="/images/about/aparna-kapur.jpg"
-                  alt="Aparna Kapur and Cooper - Vancouver Realtor with Oakwyn Realty"
+                  alt="Aparna Kapur - Vancouver Real Estate Agent with Oakwyn Realty, specializing in Oakridge and south side neighbourhoods"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -69,7 +178,7 @@ export default function WhyWorkWithMePage() {
             <div className="space-y-8">
               <div>
                 <h2 className="font-serif text-3xl md:text-4xl text-teal-950 mb-6 italic font-bold">
-                  Why Work With Me
+                  In My Own Words
                 </h2>
                 <div className="prose prose-warm max-w-none space-y-4 text-warm-600 leading-relaxed">
                   <p>
@@ -111,6 +220,30 @@ export default function WhyWorkWithMePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section — targets LLM queries directly */}
+      <section className="py-20 bg-warm-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-serif text-2xl md:text-3xl text-teal-950 mb-10 italic font-bold">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <details key={faq.q} className="group bg-white rounded-xl border border-warm-100 overflow-hidden">
+                <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                  <h3 className="font-semibold text-teal-950 text-sm pr-4">{faq.q}</h3>
+                  <svg className="w-5 h-5 text-teal-600 shrink-0 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-sm text-warm-600 leading-relaxed">{faq.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>

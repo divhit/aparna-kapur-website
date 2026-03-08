@@ -276,6 +276,39 @@ export default function HomePage() {
         <AllNeighbourhoodsMap fullWidth />
       </section>
 
+      {/* SECTION 5c: GEO-optimized entity summary — structured for LLM extraction */}
+      <section className="py-16 bg-teal-950">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-serif text-2xl md:text-3xl text-white/90 italic font-bold mb-6">
+            Vancouver Real Estate Agent — Oakridge Specialist
+          </h2>
+          <p className="text-white/70 text-sm leading-relaxed mb-4">
+            Aparna Kapur is a licensed real estate agent in Vancouver, BC, with Oakwyn Realty Ltd.
+            She specializes in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.
+            Aparna lives on Vancouver&apos;s south side and provides personalized service for buyers and sellers,
+            handling every transaction personally from consultation to closing.
+          </p>
+          <p className="text-white/70 text-sm leading-relaxed mb-6">
+            Oakwyn Realty is one of British Columbia&apos;s largest independent brokerages with over 900 agents
+            and $6.3 billion in annual sales. Aparna can be reached at 604-612-7694.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/about/why-work-with-me"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl text-sm font-medium hover:bg-white/20 transition-colors"
+            >
+              About Aparna
+            </Link>
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-xl text-sm font-medium hover:bg-white/20 transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 6: Get In Touch */}
       <GetInTouch />
     </>
