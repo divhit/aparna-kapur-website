@@ -8,9 +8,9 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Kerrisdale Vancouver Real Estate Guide 2026 | Luxury Homes & Market Data",
+  title: "Kerrisdale Vancouver | Real Estate Guide",
   description:
-    "The definitive guide to Kerrisdale, Vancouver. Explore luxury real estate, heritage homes, top private schools, Kerrisdale Village shopping, parks, and lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "Kerrisdale neighbourhood guide: luxury real estate, heritage homes, top schools, Kerrisdale Village, and market trends. By Aparna Kapur. 604-612-7694.",
   keywords: [
     "Kerrisdale Vancouver real estate",
     "Kerrisdale homes for sale",

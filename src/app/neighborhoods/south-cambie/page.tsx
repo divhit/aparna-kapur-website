@@ -8,9 +8,9 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "South Cambie Vancouver Real Estate Guide 2026 | Homes, Townhomes & Market Insights",
+  title: "South Cambie Vancouver | Real Estate Guide",
   description:
-    "Your complete guide to South Cambie, Vancouver. Discover real estate opportunities, Queen Elizabeth Park, the Cambie Corridor plan, schools, transit, and lifestyle. Neighborhood insights by Aparna Kapur, Oakwyn Realty.",
+    "South Cambie neighbourhood guide: real estate prices, Queen Elizabeth Park, Canada Line, schools, and market trends. By Aparna Kapur. 604-612-7694.",
   keywords: [
     "South Cambie Vancouver real estate",
     "South Cambie homes for sale",

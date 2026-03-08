@@ -4,9 +4,9 @@ import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodR
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Kitsilano Vancouver | Beach Living & Real Estate Guide 2026",
+  title: "Kitsilano Vancouver | Real Estate Guide 2026",
   description:
-    "Your quick guide to Kitsilano, Vancouver. Beach lifestyle, real estate prices, West 4th Avenue dining, schools, transit, and what makes Kits one of Vancouver's most loved neighbourhoods.",
+    "Kitsilano neighbourhood guide: beach lifestyle, real estate prices, West 4th Avenue, schools, transit, and market trends. By Aparna Kapur. 604-612-7694.",
   keywords: [
     "Kitsilano Vancouver",
     "Kitsilano real estate",

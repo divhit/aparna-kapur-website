@@ -8,9 +8,9 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Riley Park Vancouver Real Estate Guide 2026 | Homes, Market Data & Lifestyle",
+  title: "Riley Park Vancouver | Real Estate Guide",
   description:
-    "Your complete guide to Riley Park, Vancouver. Explore real estate, Main Street culture, craft breweries, schools, parks, and lifestyle. Neighborhood insights by Aparna Kapur, Oakwyn Realty.",
+    "Riley Park neighbourhood guide: real estate prices, Main Street culture, schools, parks, and market trends. By Aparna Kapur, Oakwyn Realty. 604-612-7694.",
   keywords: [
     "Riley Park Vancouver real estate",
     "Riley Park homes for sale",

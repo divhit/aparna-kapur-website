@@ -8,9 +8,9 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Marpole Vancouver Real Estate Guide 2026 | Homes, Condos & Market Data",
+  title: "Marpole Vancouver | Real Estate Guide 2026",
   description:
-    "Your complete guide to Marpole, Vancouver. Explore real estate, schools, parks, transit, and lifestyle in one of Vancouver's oldest and most affordable south-side neighborhoods. By Aparna Kapur, Oakwyn Realty.",
+    "Marpole neighbourhood guide: real estate prices, schools, Marine Drive station, parks, and market trends. By Aparna Kapur, Oakwyn Realty. 604-612-7694.",
   keywords: [
     "Marpole Vancouver real estate",
     "Marpole homes for sale",

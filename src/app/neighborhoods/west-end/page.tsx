@@ -8,7 +8,7 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "West End Condos for Sale | Vancouver 2026",
+  title: "West End Vancouver | Real Estate Guide",
   description:
     "The definitive guide to the West End, Vancouver. Explore condos, English Bay beach living, Davie Village, Denman Street dining, Stanley Park access, and urban lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
   keywords: [

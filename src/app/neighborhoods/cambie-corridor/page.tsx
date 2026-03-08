@@ -8,9 +8,9 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Cambie Corridor Vancouver Real Estate Guide 2026 | Condos, Townhomes & Market Insights",
+  title: "Cambie Corridor | Real Estate Guide 2026",
   description:
-    "The definitive guide to Cambie Corridor, Vancouver. Explore real estate, the Cambie Corridor Plan, transit-oriented development, schools, parks, and lifestyle along the Canada Line. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "Cambie Corridor neighbourhood guide: condos, townhomes, Canada Line transit, Cambie Corridor Plan, and market trends. By Aparna Kapur. 604-612-7694.",
   keywords: [
     "Cambie Corridor Vancouver real estate",
     "Cambie Corridor condos for sale",
