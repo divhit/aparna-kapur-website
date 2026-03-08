@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import GetInTouch from "@/components/sections/GetInTouch";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
@@ -24,29 +25,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is Riley Park a good neighborhood to buy in?",
+    question: "What is the average home price in Riley Park, Vancouver?",
     answer:
-      "Riley Park is highly desirable for buyers who value character, community, and walkability. Main Street provides vibrant amenities while residential streets stay quiet and tree-lined. Strong demand, excellent transit, and a thriving local economy make it a solid long-term investment. Vancouver East detached benchmark: $1.70M (January 2026).",
+      "As of January 2026, the Vancouver East detached benchmark is $1.70M. Condos start around $639K and townhomes around $1.04M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
   },
   {
-    question: "How much does a home cost in Riley Park?",
+    question: "Is Riley Park a good neighbourhood to buy in?",
     answer:
-      "Vancouver East GVR MLS® HPI benchmarks (January 2026): condos $639K, townhomes $1.04M, detached $1.70M. Heritage character homes near Main Street can command a significant premium.",
+      "Yes \u2014 Riley Park is one of Vancouver\u2019s most desirable neighbourhoods. Character homes line quiet, tree-lined streets just steps from Main Street\u2019s independent shops, craft breweries (33 Acres, Brassneck), and acclaimed restaurants. Nat Bailey Stadium hosts summer baseball, and families love the proximity to parks and strong schools. Walkable, community-driven, and family-friendly, it\u2019s a strong long-term investment.",
   },
   {
-    question: "What is Main Street like in Riley Park?",
+    question: "What is Riley Park known for?",
     answer:
-      "Main Street is Riley Park's cultural heart and one of Vancouver's top independent corridors. From Broadway to 33rd Avenue: craft breweries (33 Acres, Brassneck, Main Street Brewing), boutiques, vintage shops, acclaimed restaurants, and local cafes. Creative and community-driven.",
+      "Riley Park is known for Main Street\u2019s vibrant independent shops, Vancouver\u2019s craft brewery district (10+ breweries), heritage and character homes, and Nat Bailey Stadium. Queen Elizabeth Park with its Bloedel Conservatory and rose gardens sits just to the west. The neighbourhood is creative, walkable, and fiercely independent \u2014 no chain stores.",
   },
   {
-    question: "What schools serve the Riley Park area?",
+    question: "What schools are in Riley Park?",
     answer:
-      "Elementary: General Wolfe and Emily Carr, both well-regarded. High school: Sir Charles Tupper Secondary (French Immersion available). Private and alternative schools accessible nearby.",
+      "Riley Park is served by General Wolfe Elementary, Emily Carr Elementary, and Sir William Van Horne Elementary (K\u20137). Sir Charles Tupper Secondary offers French Immersion and strong arts programs. Eric Hamber Secondary is an alternative catchment nearby. Langara College at 49th and Cambie provides post-secondary options.",
   },
   {
-    question: "How is transit in Riley Park?",
+    question: "Who is the best realtor for Riley Park Vancouver?",
     answer:
-      "Bus routes along Main Street, King Edward, and Broadway. King Edward SkyTrain (Canada Line) is walkable for many residents; Broadway-City Hall offers Expo Line access. The Broadway Subway extension further improves westside and UBC connectivity.",
+      "Aparna Kapur with Oakwyn Realty is a south Vancouver specialist with deep knowledge of Riley Park\u2019s character homes, market trends, and neighbourhood culture. Whether you\u2019re buying your first home or selling a heritage property, Aparna provides expert guidance. Reach her at 604-612-7694.",
   },
 ];
 
@@ -130,6 +131,7 @@ export default async function RileyParkPage() {
                   ["schools", "Schools & Education", "6"],
                   ["shopping", "Shopping & Dining", "7"],
                   ["faq", "FAQ", "8"],
+                  ["related", "Related Areas", "9"],
                 ].map(([id, label, step]) => (
                   <a
                     key={id}
@@ -361,10 +363,49 @@ export default async function RileyParkPage() {
                 <FAQAccordion faqs={faqs} />
               </section>
 
+              {/* Related Neighbourhoods */}
+              <section id="related" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Related Neighbourhoods
+                </h2>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    ["South Cambie", "south-cambie"],
+                    ["Mount Pleasant", "mount-pleasant"],
+                    ["Kensington-Cedar Cottage", "kensington-cedar-cottage"],
+                    ["Oakridge", "oakridge"],
+                  ].map(([name, slug]) => (
+                    <Link
+                      key={slug}
+                      href={`/neighborhoods/${slug}`}
+                      className="group bg-warm-50 rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:bg-teal-50/50 transition-colors"
+                    >
+                      <p className="font-serif text-teal-950 group-hover:text-teal-700 transition-colors">
+                        {name}
+                      </p>
+                      <p className="text-xs text-warm-500 mt-1">View neighbourhood guide</p>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/buying/search"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    </svg>
+                    Search all homes for sale in Vancouver
+                  </Link>
+                </div>
+              </section>
+
             </div>
           </div>
         </div>
       </section>
+
+      <NeighbourhoodReportSignup neighbourhood="Riley Park" />
 
       {/* Get In Touch CTA */}
       <GetInTouch />

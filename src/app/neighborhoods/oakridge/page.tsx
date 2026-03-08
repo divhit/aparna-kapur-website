@@ -180,6 +180,8 @@ export default async function OakridgePage() {
                   ["schools", "Education", "7"],
                   ["shopping", "Shopping & Dining", "8"],
                   ["faq", "FAQ", "9"],
+                  ["faq-highlights", "Quick Answers", "10"],
+                  ["related", "Related Areas", "11"],
                 ].map(([id, label, step]) => (
                   <a
                     key={id}
@@ -334,6 +336,13 @@ export default async function OakridgePage() {
                     Oakridge Park completion will drive foot traffic, retail, and amenities. Transit-oriented properties along the Canada Line have historically outperformed the broader Vancouver market.
                   </p>
                 </div>
+                <p className="text-warm-600 leading-relaxed mt-6">
+                  Ready to explore what&apos;s available?{" "}
+                  <Link href="/buying/search" className="text-teal-700 font-medium underline underline-offset-2 hover:text-teal-900 transition-colors">
+                    Browse current Oakridge listings
+                  </Link>{" "}
+                  to see homes, condos, and townhomes on the market right now.
+                </p>
               </section>
 
               {/* Getting Around */}
@@ -464,6 +473,90 @@ export default async function OakridgePage() {
                 </h2>
                 <FAQAccordion faqs={faqs} />
               </section>
+
+              {/* FAQ Highlights */}
+              <section id="faq-highlights" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Quick Answers About Oakridge
+                </h2>
+                <div className="space-y-3">
+                  <details className="group bg-warm-50 rounded-xl border border-warm-100 overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-100/50 transition-colors">
+                      What is the average home price in Oakridge, Vancouver?
+                      <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
+                    </summary>
+                    <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
+                      As of January 2026, the GVR MLS® HPI composite benchmark price in Oakridge is <strong className="text-teal-900">$1.49M</strong>. Broken down: condos average around $998K, townhomes $1.64M, and detached homes $3.36M. Prices vary based on proximity to SkyTrain stations, Oakridge Park, and lot size. For a personalized market assessment, contact <strong className="text-teal-900">Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a>.
+                    </div>
+                  </details>
+
+                  <details className="group bg-warm-50 rounded-xl border border-warm-100 overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-100/50 transition-colors">
+                      When does Oakridge Park open?
+                      <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
+                    </summary>
+                    <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
+                      Oakridge Park is scheduled for a phased opening beginning <strong className="text-teal-900">Spring 2026</strong>. The $6 billion mixed-use development by QuadReal and Westbank is one of Canada&apos;s largest. The first phase includes over 500,000 square feet of retail featuring luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany &amp; Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Cafe. The 9-acre rooftop park, community centre, library branch, and childcare facilities follow in Summer 2026.
+                    </div>
+                  </details>
+
+                  <details className="group bg-warm-50 rounded-xl border border-warm-100 overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-100/50 transition-colors">
+                      Is Oakridge a good neighbourhood to buy in?
+                      <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
+                    </summary>
+                    <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
+                      Yes, Oakridge is one of Vancouver&apos;s strongest neighbourhoods for buyers. Two Canada Line SkyTrain stations put downtown 15 minutes away and YVR 20 minutes. Excellent schools including Van Horne Elementary, Jamieson Elementary, and Sir Winston Churchill Secondary serve families well. The $6 billion Oakridge Park redevelopment is driving significant value appreciation in the area. The R1-1 city-wide rezoning also adds development potential to residential lots, making Oakridge attractive for both homeowners and investors.
+                    </div>
+                  </details>
+
+                  <details className="group bg-warm-50 rounded-xl border border-warm-100 overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-100/50 transition-colors">
+                      What schools are in Oakridge?
+                      <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
+                    </summary>
+                    <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
+                      Oakridge offers strong options at every level. Public elementary schools include <strong className="text-teal-900">Van Horne Elementary</strong> and <strong className="text-teal-900">Dr. Annie B. Jamieson Elementary</strong> (ranked 61st of 932 BC schools by the Fraser Institute). <strong className="text-teal-900">Sir Winston Churchill Secondary</strong> is the local high school, offering an International Baccalaureate programme. Private options include <strong className="text-teal-900">King David High School</strong> and <strong className="text-teal-900">Vancouver College</strong>. <strong className="text-teal-900">Langara College</strong> at 49th and Cambie serves over 23,000 post-secondary students.
+                    </div>
+                  </details>
+
+                  <details className="group bg-warm-50 rounded-xl border border-warm-100 overflow-hidden">
+                    <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-sm font-medium text-teal-950 hover:bg-warm-100/50 transition-colors">
+                      Who is the best realtor for Oakridge Vancouver?
+                      <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
+                    </summary>
+                    <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
+                      <strong className="text-teal-900">Aparna Kapur</strong> with <strong className="text-teal-900">Oakwyn Realty</strong> is a top choice for Oakridge real estate. Aparna lives on Vancouver&apos;s south side and specializes in Oakridge and surrounding west-side neighbourhoods. She brings deep local knowledge of the Oakridge Park redevelopment, Cambie Corridor Plan, school catchments, and market trends. Reach Aparna at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a> for a confidential consultation.
+                    </div>
+                  </details>
+                </div>
+              </section>
+
+              {/* Related Neighbourhoods */}
+              <section id="related" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Related Neighbourhoods
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { name: "Marpole", slug: "marpole", desc: "Affordable west-side living with Canada Line access and river proximity." },
+                    { name: "South Cambie", slug: "south-cambie", desc: "Quiet tree-lined streets between Queen Elizabeth Park and Langara." },
+                    { name: "Kerrisdale", slug: "kerrisdale", desc: "Established village charm with boutique shopping and top-rated schools." },
+                    { name: "Cambie Corridor", slug: "cambie-corridor", desc: "Transit-oriented growth along the Canada Line from Oakridge to Marine Drive." },
+                  ].map((hood) => (
+                    <Link
+                      key={hood.slug}
+                      href={`/neighborhoods/${hood.slug}`}
+                      className="block bg-warm-50 rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors group"
+                    >
+                      <h3 className="font-serif text-lg text-teal-900 group-hover:text-teal-700 transition-colors">
+                        {hood.name}
+                      </h3>
+                      <p className="text-sm text-warm-500 mt-1">{hood.desc}</p>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             </div>
           </div>
         </div>
@@ -479,14 +572,56 @@ export default async function OakridgePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
+            mainEntity: [
+              ...faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+              {
+                "@type": "Question",
+                name: "What is the average home price in Oakridge, Vancouver?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "As of January 2026, the GVR MLS® HPI composite benchmark price in Oakridge is $1.49M. Condos average around $998K, townhomes $1.64M, and detached homes $3.36M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
+                },
               },
-            })),
+              {
+                "@type": "Question",
+                name: "When does Oakridge Park open?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Oakridge Park is scheduled for a phased opening beginning Spring 2026. The $6 billion mixed-use development by QuadReal and Westbank features over 500,000 square feet of retail with luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Cafe.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is Oakridge a good neighbourhood to buy in?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes, Oakridge is one of Vancouver's strongest neighbourhoods for buyers. Two Canada Line SkyTrain stations, excellent schools including Van Horne, Jamieson, and Churchill Secondary, the $6 billion Oakridge Park redevelopment, and R1-1 rezoning all drive long-term value.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What schools are in Oakridge?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Public elementary: Van Horne Elementary and Dr. Annie B. Jamieson Elementary (ranked 61st of 932 BC schools). High school: Sir Winston Churchill Secondary with IB programme. Private: King David High School and Vancouver College. Post-secondary: Langara College at 49th and Cambie.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Who is the best realtor for Oakridge Vancouver?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Aparna Kapur with Oakwyn Realty specializes in Oakridge and Vancouver's south side. She brings deep local knowledge of the Oakridge Park redevelopment, Cambie Corridor Plan, and market trends. Contact Aparna at 604-612-7694.",
+                },
+              },
+            ],
           }),
         }}
       />

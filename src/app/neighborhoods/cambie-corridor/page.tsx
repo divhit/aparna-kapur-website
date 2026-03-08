@@ -4,7 +4,7 @@ import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
-import FAQAccordion from "./FAQAccordion";
+import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -25,29 +25,29 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    question: "Is the Cambie Corridor a good area to invest in?",
+    question: "What is the average home price in Cambie Corridor, Vancouver?",
     answer:
-      "One of Vancouver's strongest investment corridors. The Cambie Corridor Plan drives densification along the Canada Line with a steady pipeline of new construction and pre-sales. Transit-oriented properties here have historically outpaced the Vancouver average.",
+      "The composite benchmark price in Cambie Corridor is $1.46M (January 2026). Condos average around $1.01M, townhomes $1.75M, and detached homes $2.43M. Prices vary by proximity to SkyTrain stations and development nodes. Contact Aparna Kapur at 604-612-7694 for a current market evaluation tailored to your budget and goals.",
   },
   {
-    question: "How much does a home cost along the Cambie Corridor?",
+    question: "What is the Cambie Corridor rezoning?",
     answer:
-      "GVR MLS\u00AE HPI benchmarks (January 2026): condos $1.01M, townhomes $1.75M, detached $2.43M. Composite: $1.46M. Prices rise near SkyTrain stations and development nodes.",
+      "The Cambie Corridor Plan is the City of Vancouver\u2019s master plan to densify the land along Cambie Street from downtown to Marine Drive. Adopted between 2011 and 2018, it allows taller buildings and higher density near each Canada Line station, transforming former single-family blocks into mixed-use communities with condos, townhomes, rental buildings, retail, and public amenities.",
   },
   {
-    question: "What is the Cambie Corridor Plan?",
+    question: "Is Cambie Corridor a good investment?",
     answer:
-      "Vancouver's master plan for transit-oriented development along the Canada Line from downtown to Marine Drive. Adopted 2011-2018, it increases density around each station, transforming single-family blocks into mixed-use communities. One of Vancouver's most ambitious planning initiatives.",
+      "Yes. City-sanctioned rezoning creates ongoing development upside, and the Canada Line provides rapid transit access that drives sustained demand. Properties near stations have historically outpaced the Vancouver average in appreciation. A steady pipeline of new construction and pre-sales offers multiple entry points for investors and end users alike.",
   },
   {
-    question: "What SkyTrain stations are on the Cambie Corridor?",
+    question: "What transit is on the Cambie Corridor?",
     answer:
-      "Five Canada Line stations: Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive. Each has distinct character and development. The Broadway Subway extension will make Broadway-City Hall a major interchange.",
+      "The Canada Line runs beneath Cambie Street with five stations: Broadway-City Hall, King Edward, Oakridge-41st, Langara-49th, and Marine Drive. Trains run every 3\u20136 minutes at peak, reaching downtown in 15 minutes and YVR Airport in 20. Bus routes along Cambie (15), 41st (43), and 49th (49) connect east-west to UBC, Metrotown, and surrounding areas. The Broadway Subway extension adds a major interchange at Broadway-City Hall.",
   },
   {
-    question: "Is the Cambie Corridor good for first-time buyers?",
+    question: "Who is the best realtor for Cambie Corridor Vancouver?",
     answer:
-      "Excellent for first-time buyers looking at condos and townhomes. High new-construction volume means modern, move-in-ready units with competitive pre-sale pricing. Transit access reduces car dependency. Best entry points at the southern end near Marine Drive and Langara-49th.",
+      "Aparna Kapur of Oakwyn Realty is a Cambie Corridor specialist with deep knowledge of the corridor\u2019s station areas, rezoning opportunities, and new developments. Whether you are buying your first condo, upgrading to a townhome, or exploring investment properties, Aparna provides data-driven guidance and hands-on service. Reach her at 604-612-7694.",
   },
 ];
 
@@ -404,7 +404,75 @@ export default async function CambieCorridorPage() {
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">
                   Frequently Asked Questions
                 </h2>
-                <FAQAccordion faqs={faqs} />
+                <div className="space-y-2">
+                  {faqs.map((faq) => (
+                    <details
+                      key={faq.question}
+                      className="group bg-warm-50 rounded-xl overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between p-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                        <h3 className="font-medium text-teal-950 text-sm pr-4">
+                          {faq.question}
+                        </h3>
+                        <svg
+                          className="w-5 h-5 text-teal-600 shrink-0 transition-transform duration-200 group-open:rotate-180"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </summary>
+                      <div className="px-5 pb-5 -mt-1">
+                        <p className="text-sm text-warm-600 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </section>
+
+              {/* Search Listings CTA */}
+              <div className="mb-16">
+                <Link
+                  href="/buying/search"
+                  className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-800 text-white text-sm font-medium px-6 py-3 rounded-lg transition-colors"
+                >
+                  Search Cambie Corridor Listings
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+
+              {/* Related Neighbourhoods */}
+              <section className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Related Neighbourhoods
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { name: "Oakridge", slug: "oakridge", desc: "Adjacent station area with the massive Oakridge Park redevelopment and established residential streets." },
+                    { name: "South Cambie", slug: "south-cambie", desc: "Quiet tree-lined blocks between Queen Elizabeth Park and the corridor. Heritage homes and growing density." },
+                    { name: "Marpole", slug: "marpole", desc: "The corridor\u2019s southern gateway at Marine Drive. Rapid transformation with new condos, townhomes, and transit access." },
+                    { name: "Riley Park", slug: "riley-park", desc: "East of the corridor near Nat Bailey Stadium. Craftsman homes, Main Street shops, and strong community feel." },
+                  ].map((hood) => (
+                    <Link
+                      key={hood.slug}
+                      href={`/neighborhoods/${hood.slug}`}
+                      className="block bg-warm-50 hover:bg-warm-100 rounded-xl p-5 transition-colors"
+                    >
+                      <p className="font-serif text-lg text-teal-700 mb-1">{hood.name}</p>
+                      <p className="text-xs text-warm-600">{hood.desc}</p>
+                    </Link>
+                  ))}
+                </div>
               </section>
             </div>
           </div>
