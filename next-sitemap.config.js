@@ -44,6 +44,9 @@ module.exports = {
     } else if (path.startsWith("/neighborhoods/")) {
       priority = 0.8;
       changefreq = "monthly";
+    } else if (path.startsWith("/resources/blog/")) {
+      priority = 0.8;
+      changefreq = "weekly";
     } else if (path.startsWith("/resources/")) {
       priority = 0.6;
       changefreq = "monthly";

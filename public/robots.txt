@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://aparnakapur.com
+Host: https://www.aparnakapur.com
 
 # Sitemaps
-Sitemap: https://aparnakapur.com/sitemap.xml
+Sitemap: https://www.aparnakapur.com/sitemap.xml
