@@ -20,7 +20,7 @@ export function RealEstateAgentSchema() {
         name: "Aparna Kapur",
         url: "https://www.aparnakapur.com",
         telephone: "+1-604-612-7694",
-        email: "aparna@aparnakapur.com",
+        email: "ak@aparnakapur.com",
         image: "https://www.aparnakapur.com/og-image.png",
         description:
           "Aparna Kapur is a Vancouver real estate agent with Oakwyn Realty, specializing in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.",
@@ -178,7 +178,7 @@ export function LocalBusinessSchema() {
         name: "Aparna Kapur - Oakwyn Realty",
         url: "https://www.aparnakapur.com",
         telephone: "+1-604-612-7694",
-        email: "aparna@aparnakapur.com",
+        email: "ak@aparnakapur.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "3195 Oak Street",

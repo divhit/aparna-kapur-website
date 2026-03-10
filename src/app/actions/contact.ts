@@ -42,7 +42,7 @@ export async function submitContactForm(data: ContactFormData) {
       },
       body: JSON.stringify({
         from: "Website <leads@aparnakapur.com>",
-        to: ["aparna@aparnakapur.com"],
+        to: ["ak@aparnakapur.com"],
         subject: `New Lead: ${name} - ${interest || "General Inquiry"}`,
         html: `
           <h2>New Website Lead</h2>
@@ -150,7 +150,7 @@ export async function submitChatLead(data: ChatLeadData) {
       },
       body: JSON.stringify({
         from: "Website <leads@aparnakapur.com>",
-        to: ["aparna@aparnakapur.com"],
+        to: ["ak@aparnakapur.com"],
         subject,
         html,
       }),

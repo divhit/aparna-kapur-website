@@ -159,7 +159,7 @@ export default function ContactCard({
           Call
         </a>
         <a
-          href="mailto:aparna@aparnakapur.com"
+          href="mailto:ak@aparnakapur.com"
           className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-lg bg-warm-50 hover:bg-teal-50 transition-colors text-xs text-warm-700"
         >
           <svg

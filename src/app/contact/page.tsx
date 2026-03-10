@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </a>
                 <div className="border-t border-warm-200" />
                 <a
-                  href="mailto:aparna@aparnakapur.com"
+                  href="mailto:ak@aparnakapur.com"
                   className="flex items-center gap-4 hover:text-teal-700 transition-colors"
                 >
                   <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-warm-900">Email</p>
-                    <p className="text-sm text-warm-600">aparna@aparnakapur.com</p>
+                    <p className="text-sm text-warm-600">ak@aparnakapur.com</p>
                   </div>
                 </a>
                 <div className="border-t border-warm-200" />
