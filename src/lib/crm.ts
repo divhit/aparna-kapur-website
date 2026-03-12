@@ -1,9 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 
-// CRM Supabase client — pushes leads into Aparna's CRM database
+// CRM Supabase client — pushes leads into Aparna's CRM database.
+// Uses service role key to bypass RLS (runs server-side only in server actions).
 function getCrmClient() {
   const url = process.env.CRM_SUPABASE_URL;
-  const key = process.env.CRM_SUPABASE_ANON_KEY;
+  const key = process.env.CRM_SUPABASE_SERVICE_KEY;
   if (!url || !key) return null;
   return createClient(url, key);
 }
@@ -33,7 +34,7 @@ export async function pushLeadToCrm(data: LeadData): Promise<boolean> {
   try {
     const supabase = getCrmClient();
     if (!supabase) {
-      console.log("[CRM] Skipped — CRM_SUPABASE_URL or CRM_SUPABASE_ANON_KEY not set");
+      console.log("[CRM] Skipped — CRM_SUPABASE_URL or CRM_SUPABASE_SERVICE_KEY not set");
       return false;
     }
 
