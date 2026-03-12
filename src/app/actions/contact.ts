@@ -1,5 +1,7 @@
 "use server";
 
+import { pushLeadToCrm, splitName, mapInterestToContactType } from "@/lib/crm";
+
 type ContactFormData = {
   name: string;
   email: string;
@@ -16,6 +18,20 @@ export async function submitContactForm(data: ContactFormData) {
   if (!name || !email) {
     return { success: false, error: "Name and email are required." };
   }
+
+  // Push to CRM (fire-and-forget, don't block on failure)
+  const { first_name, last_name } = splitName(name);
+  const isOpenHouse = source?.toLowerCase().includes("open house");
+  pushLeadToCrm({
+    first_name,
+    last_name,
+    email: email || undefined,
+    phone: phone || undefined,
+    contact_type: mapInterestToContactType(interest),
+    lead_source: isOpenHouse ? "open_house" : "website",
+    tags: source ? [source] : undefined,
+    notes: message || undefined,
+  });
 
   const apiKey = process.env.RESEND_API_KEY;
 
@@ -90,6 +106,22 @@ export async function submitChatLead(data: ChatLeadData) {
   if (!name || (!email && !phone)) {
     return { success: false, error: "Name and a way to reach you are required." };
   }
+
+  // Push to CRM
+  const { first_name, last_name } = splitName(name);
+  pushLeadToCrm({
+    first_name,
+    last_name,
+    email: email || undefined,
+    phone: phone || undefined,
+    contact_type: buyerType === "seller" ? "seller" : "buyer",
+    lead_source: "website",
+    tags: ["Chat Lead"],
+    notes: summary || undefined,
+    buyer_areas: neighbourhood ? [neighbourhood] : undefined,
+    buyer_property_types: propertyType ? [propertyType] : undefined,
+    buyer_timeline: timeline || undefined,
+  });
 
   const apiKey = process.env.RESEND_API_KEY;
 
@@ -177,5 +209,88 @@ export async function submitChatLead(data: ChatLeadData) {
     console.log("Details:", { budget, neighbourhood, propertyType, timeline, buyerType });
     console.log("================");
     return { success: true };
+  }
+}
+
+type OpenHouseData = {
+  name: string;
+  email: string;
+  phone: string;
+  hasRealtor: boolean;
+  realtorName?: string;
+  propertyAddress: string;
+};
+
+export async function submitOpenHouseSignIn(data: OpenHouseData) {
+  const { name, email, phone, hasRealtor, realtorName, propertyAddress } = data;
+
+  if (!name || !phone) {
+    return { success: false, error: "Name and phone number are required." };
+  }
+
+  // Push to CRM
+  const { first_name, last_name } = splitName(name);
+  pushLeadToCrm({
+    first_name,
+    last_name,
+    email: email || undefined,
+    phone: phone || undefined,
+    contact_type: "buyer",
+    lead_source: "open_house",
+    tags: [`Open House: ${propertyAddress}`],
+    notes: hasRealtor
+      ? `Has realtor${realtorName ? `: ${realtorName}` : ""}. Visited open house at ${propertyAddress}.`
+      : `No realtor. Visited open house at ${propertyAddress}.`,
+  });
+
+  // Also send email notification
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    console.log("=== OPEN HOUSE SIGN-IN ===");
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Phone:", phone);
+    console.log("Has Realtor:", hasRealtor, realtorName || "");
+    console.log("Property:", propertyAddress);
+    console.log("================");
+    return { success: true };
+  }
+
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        from: "Website <leads@aparnakapur.com>",
+        to: ["aparna@aparnakapur.com"],
+        subject: `Open House Sign-In: ${name} — ${propertyAddress}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;">
+            <div style="background:#115e59;color:white;padding:20px;border-radius:8px 8px 0 0;">
+              <h2 style="margin:0 0 4px 0;">Open House Sign-In</h2>
+              <p style="margin:0;opacity:0.8;font-size:14px;">${propertyAddress}</p>
+            </div>
+            <div style="padding:20px;border:1px solid #e5e5e5;border-top:none;border-radius:0 0 8px 8px;">
+              <table style="border-collapse:collapse;width:100%;">
+                <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Name</td><td style="padding:8px;border-bottom:1px solid #eee;">${name}</td></tr>
+                <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Phone</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="tel:${phone}">${phone}</a></td></tr>
+                ${email ? `<tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Email</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="mailto:${email}">${email}</a></td></tr>` : `<tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Email</td><td style="padding:8px;border-bottom:1px solid #eee;">Not provided</td></tr>`}
+                <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Working with a Realtor?</td><td style="padding:8px;border-bottom:1px solid #eee;">${hasRealtor ? `Yes${realtorName ? ` — ${realtorName}` : ""}` : "No"}</td></tr>
+              </table>
+              <p style="color:#888;font-size:12px;margin-top:20px;">Signed in at ${new Date().toISOString()}</p>
+            </div>
+          </div>
+        `,
+      }),
+    });
+
+    return { success: true };
+  } catch (error) {
+    console.error("Open house email error:", error);
+    return { success: true }; // CRM already has the lead
   }
 }
