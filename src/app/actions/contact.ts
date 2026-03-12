@@ -241,6 +241,8 @@ export async function submitOpenHouseSignIn(data: OpenHouseData) {
     notes: hasRealtor
       ? `Has realtor${realtorName ? `: ${realtorName}` : ""}. Visited open house at ${propertyAddress}.`
       : `No realtor. Visited open house at ${propertyAddress}.`,
+    has_realtor: hasRealtor,
+    realtor_name: realtorName || undefined,
   });
 
   // Also send email notification

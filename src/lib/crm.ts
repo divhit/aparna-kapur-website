@@ -24,6 +24,8 @@ type LeadData = {
   buyer_budget_min?: number;
   buyer_budget_max?: number;
   buyer_timeline?: string;
+  has_realtor?: boolean;
+  realtor_name?: string;
 };
 
 /**
@@ -87,6 +89,7 @@ function backupToGoogleSheet(data: LeadData) {
   fetch(sheetUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
+    redirect: "follow",
     body: JSON.stringify({
       first_name: data.first_name,
       last_name: data.last_name,
@@ -96,9 +99,13 @@ function backupToGoogleSheet(data: LeadData) {
       lead_source: data.lead_source,
       tags: data.tags || [],
       notes: data.notes || "",
+      has_realtor: data.has_realtor ?? "",
+      realtor_name: data.realtor_name || "",
     }),
   })
-    .then(() => console.log("[Sheet Backup] Lead sent to Google Sheet"))
+    .then((res) => {
+      console.log(`[Sheet Backup] Response: ${res.status} ${res.url}`);
+    })
     .catch((err) => console.error("[Sheet Backup] Error:", err));
 }
 
