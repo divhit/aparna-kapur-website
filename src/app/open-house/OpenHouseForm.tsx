@@ -19,7 +19,7 @@ export default function OpenHouseForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !phone.trim()) return;
+    if (!name.trim() || !phone.trim() || !email.trim()) return;
 
     setLoading(true);
     setError("");
@@ -108,11 +108,12 @@ export default function OpenHouseForm({
         />
       </div>
 
-      {/* Email (optional) */}
+      {/* Email */}
       <div>
         <input
           type="email"
-          placeholder="Email (optional)"
+          placeholder="Email *"
+          required
           autoComplete="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -167,7 +168,7 @@ export default function OpenHouseForm({
       {/* Submit */}
       <button
         type="submit"
-        disabled={loading || !name.trim() || !phone.trim()}
+        disabled={loading || !name.trim() || !phone.trim() || !email.trim()}
         className="w-full bg-teal-700 text-white py-3.5 rounded-lg font-medium text-sm hover:bg-teal-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2"
       >
         {loading ? "Signing in..." : "Sign In"}

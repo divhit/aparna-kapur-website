@@ -224,8 +224,8 @@ type OpenHouseData = {
 export async function submitOpenHouseSignIn(data: OpenHouseData) {
   const { name, email, phone, hasRealtor, realtorName, propertyAddress } = data;
 
-  if (!name || !phone) {
-    return { success: false, error: "Name and phone number are required." };
+  if (!name || !phone || !email) {
+    return { success: false, error: "Name, email, and phone number are required." };
   }
 
   // Push to CRM
