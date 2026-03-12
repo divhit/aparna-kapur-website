@@ -71,12 +71,12 @@ export default function OpenHouseForm({
   }
 
   const inputClasses =
-    "w-full px-4 py-3.5 rounded-xl border border-warm-200 text-warm-900 placeholder-warm-400 text-base bg-warm-50/50 focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-colors";
+    "w-full px-4 py-3.5 rounded-lg border border-warm-200 text-warm-900 placeholder-warm-400 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-500/20 focus:border-teal-500 transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {error && (
-        <div className="bg-red-50 text-red-700 text-sm px-4 py-3 rounded-xl border border-red-200">
+        <div className="bg-red-50 text-red-700 text-sm px-4 py-3 rounded-lg border border-red-200">
           {error}
         </div>
       )}
@@ -129,7 +129,7 @@ export default function OpenHouseForm({
           <button
             type="button"
             onClick={() => setHasRealtor(false)}
-            className={`flex-1 py-3 rounded-xl text-sm font-medium border transition-colors ${
+            className={`flex-1 py-3 rounded-lg text-sm font-medium border transition-colors ${
               hasRealtor === false
                 ? "bg-teal-700 text-white border-teal-700"
                 : "bg-white text-warm-700 border-warm-200 hover:border-warm-300"
@@ -140,7 +140,7 @@ export default function OpenHouseForm({
           <button
             type="button"
             onClick={() => setHasRealtor(true)}
-            className={`flex-1 py-3 rounded-xl text-sm font-medium border transition-colors ${
+            className={`flex-1 py-3 rounded-lg text-sm font-medium border transition-colors ${
               hasRealtor === true
                 ? "bg-teal-700 text-white border-teal-700"
                 : "bg-white text-warm-700 border-warm-200 hover:border-warm-300"
@@ -168,7 +168,7 @@ export default function OpenHouseForm({
       <button
         type="submit"
         disabled={loading || !name.trim() || !phone.trim()}
-        className="w-full bg-teal-700 text-white py-4 rounded-xl font-medium text-base hover:bg-teal-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2"
+        className="w-full bg-teal-700 text-white py-3.5 rounded-lg font-medium text-sm hover:bg-teal-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed mt-2"
       >
         {loading ? "Signing in..." : "Sign In"}
       </button>
