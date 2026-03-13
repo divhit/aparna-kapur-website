@@ -35,7 +35,7 @@ type LeadData = {
  */
 export async function pushLeadToCrm(data: LeadData): Promise<boolean> {
   // 1. Google Sheet backup (independent of CRM — always runs first)
-  backupToGoogleSheet(data);
+  await backupToGoogleSheet(data);
 
   try {
     const supabase = getCrmClient();
@@ -79,34 +79,35 @@ export async function pushLeadToCrm(data: LeadData): Promise<boolean> {
  * Completely independent of Supabase — runs even if CRM is down.
  * Fire-and-forget (no await blocking the main flow).
  */
-function backupToGoogleSheet(data: LeadData) {
+async function backupToGoogleSheet(data: LeadData): Promise<void> {
   const sheetUrl = process.env.GOOGLE_SHEET_WEBHOOK_URL;
   if (!sheetUrl) {
     console.log("[Sheet Backup] Skipped — GOOGLE_SHEET_WEBHOOK_URL not set");
     return;
   }
 
-  fetch(sheetUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    redirect: "follow",
-    body: JSON.stringify({
-      first_name: data.first_name,
-      last_name: data.last_name,
-      email: data.email || "",
-      phone: data.phone || "",
-      contact_type: data.contact_type || "other",
-      lead_source: data.lead_source,
-      tags: data.tags || [],
-      notes: data.notes || "",
-      has_realtor: data.has_realtor ?? "",
-      realtor_name: data.realtor_name || "",
-    }),
-  })
-    .then((res) => {
-      console.log(`[Sheet Backup] Response: ${res.status} ${res.url}`);
-    })
-    .catch((err) => console.error("[Sheet Backup] Error:", err));
+  try {
+    const res = await fetch(sheetUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      redirect: "follow",
+      body: JSON.stringify({
+        first_name: data.first_name,
+        last_name: data.last_name,
+        email: data.email || "",
+        phone: data.phone || "",
+        contact_type: data.contact_type || "other",
+        lead_source: data.lead_source,
+        tags: data.tags || [],
+        notes: data.notes || "",
+        has_realtor: data.has_realtor ?? "",
+        realtor_name: data.realtor_name || "",
+      }),
+    });
+    console.log(`[Sheet Backup] Response: ${res.status} ${res.url}`);
+  } catch (err) {
+    console.error("[Sheet Backup] Error:", err);
+  }
 }
 
 /** Split "John Smith" into { first_name: "John", last_name: "Smith" } */

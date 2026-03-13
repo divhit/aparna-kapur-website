@@ -19,10 +19,10 @@ export async function submitContactForm(data: ContactFormData) {
     return { success: false, error: "Name and email are required." };
   }
 
-  // Push to CRM (fire-and-forget, don't block on failure)
+  // Push to CRM + Google Sheet backup
   const { first_name, last_name } = splitName(name);
   const isOpenHouse = source?.toLowerCase().includes("open house");
-  pushLeadToCrm({
+  await pushLeadToCrm({
     first_name,
     last_name,
     email: email || undefined,
@@ -107,9 +107,9 @@ export async function submitChatLead(data: ChatLeadData) {
     return { success: false, error: "Name and a way to reach you are required." };
   }
 
-  // Push to CRM
+  // Push to CRM + Google Sheet backup
   const { first_name, last_name } = splitName(name);
-  pushLeadToCrm({
+  await pushLeadToCrm({
     first_name,
     last_name,
     email: email || undefined,
@@ -228,9 +228,9 @@ export async function submitOpenHouseSignIn(data: OpenHouseData) {
     return { success: false, error: "Name, email, and phone number are required." };
   }
 
-  // Push to CRM
+  // Push to CRM (await so serverless doesn't exit early)
   const { first_name, last_name } = splitName(name);
-  pushLeadToCrm({
+  await pushLeadToCrm({
     first_name,
     last_name,
     email: email || undefined,
@@ -268,7 +268,7 @@ export async function submitOpenHouseSignIn(data: OpenHouseData) {
       },
       body: JSON.stringify({
         from: "Website <leads@aparnakapur.com>",
-        to: ["aparna@aparnakapur.com"],
+        to: ["ak@aparnakapur.com"],
         subject: `Open House Sign-In: ${name} — ${propertyAddress}`,
         html: `
           <div style="font-family:sans-serif;max-width:600px;">
