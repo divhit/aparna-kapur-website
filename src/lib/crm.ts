@@ -35,7 +35,8 @@ type LeadData = {
  */
 export async function pushLeadToCrm(data: LeadData): Promise<boolean> {
   // 1. Google Sheet backup (independent of CRM — always runs first)
-  await backupToGoogleSheet(data);
+  // Fire-and-forget — don't block sign-in on sheet backup
+  backupToGoogleSheet(data);
 
   try {
     const supabase = getCrmClient();
