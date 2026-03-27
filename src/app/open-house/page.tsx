@@ -6,8 +6,8 @@ import OpenHouseForm from "./OpenHouseForm";
 // The QR code URL (/open-house) stays the same.
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
-  address: "864 East 16th Avenue, Vancouver",
-  neighbourhood: "Mount Pleasant",
+  address: "1-1322 E 13th Avenue, Vancouver, BC",
+  neighbourhood: "Grandview-Woodland",
 };
 
 export const metadata: Metadata = {
