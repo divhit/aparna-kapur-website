@@ -60,6 +60,8 @@ export async function pushLeadToCrm(data: LeadData): Promise<boolean> {
       buyer_budget_min: data.buyer_budget_min || null,
       buyer_budget_max: data.buyer_budget_max || null,
       buyer_timeline: data.buyer_timeline || null,
+      has_realtor: data.has_realtor ?? false,
+      realtor_name: data.realtor_name || null,
     });
 
     if (error) {
