@@ -398,6 +398,27 @@ export default async function MarpolePage() {
       <section id="related" className="py-16 bg-warm-50 border-t border-warm-100">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-serif text-3xl text-teal-950 mb-8 text-center">
+            Related Articles
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto mb-12">
+            {[
+              { title: "Best Neighbourhoods in Vancouver for Families (2026)", slug: "best-neighborhoods-vancouver-families-2026", category: "Neighbourhoods" },
+              { title: "Cambie Corridor Rezoning 2025: What Homeowners Need to Know", slug: "cambie-corridor-rezoning-2025-what-homeowners-need-to-know", category: "Market Analysis" },
+              { title: "First-Time Buyer Programs in BC (2026)", slug: "first-time-buyer-programs-bc-2026", category: "Buyer Resources" },
+            ].map((post) => (
+              <Link
+                key={post.slug}
+                href={`/resources/blog/${post.slug}`}
+                className="block bg-white rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:shadow-sm transition-all group"
+              >
+                <span className="text-xs uppercase tracking-widest text-teal-600 font-semibold">{post.category}</span>
+                <h3 className="font-serif text-sm text-teal-900 mt-1 group-hover:text-teal-700 transition-colors leading-snug">
+                  {post.title}
+                </h3>
+              </Link>
+            ))}
+          </div>
+          <h2 className="font-serif text-3xl text-teal-950 mb-8 text-center">
             Related Neighbourhoods
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">

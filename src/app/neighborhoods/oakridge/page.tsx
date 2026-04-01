@@ -532,6 +532,32 @@ export default async function OakridgePage() {
                 </div>
               </section>
 
+              {/* Related Articles */}
+              <section id="articles" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Read More About Oakridge
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { title: "Oakridge Park Spring 2026: Everything Opening This Year", slug: "oakridge-park-spring-2026-opening-guide", category: "Neighbourhoods" },
+                    { title: "Oakridge Park Redevelopment 2026: What Buyers Need to Know", slug: "oakridge-park-redevelopment-2026", category: "Market Analysis" },
+                    { title: "Oakridge vs. Kerrisdale: Vancouver Neighbourhood Comparison", slug: "oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison", category: "Neighbourhoods" },
+                    { title: "Is Oakridge Vancouver\u2019s New Downtown?", slug: "is-oakridge-vancouvers-new-downtown", category: "Market Analysis" },
+                  ].map((post) => (
+                    <Link
+                      key={post.slug}
+                      href={`/resources/blog/${post.slug}`}
+                      className="block bg-warm-50 rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors group"
+                    >
+                      <span className="text-xs uppercase tracking-widest text-teal-600 font-semibold">{post.category}</span>
+                      <h3 className="font-serif text-base text-teal-900 mt-1 group-hover:text-teal-700 transition-colors leading-snug">
+                        {post.title}
+                      </h3>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+
               {/* Related Neighbourhoods */}
               <section id="related" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

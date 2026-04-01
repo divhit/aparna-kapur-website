@@ -452,6 +452,32 @@ export default async function CambieCorridorPage() {
                 </Link>
               </div>
 
+              {/* Related Articles */}
+              <section id="articles" className="mb-16">
+                <h2 className="font-serif text-3xl text-teal-950 mb-6">
+                  Read More About Cambie Corridor
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { title: "Cambie Corridor Rezoning 2025: What Homeowners Need to Know", slug: "cambie-corridor-rezoning-2025-what-homeowners-need-to-know", category: "Market Analysis" },
+                    { title: "Oakridge Park Spring 2026: Everything Opening This Year", slug: "oakridge-park-spring-2026-opening-guide", category: "Neighbourhoods" },
+                    { title: "Oakridge Park Redevelopment 2026: What Buyers Need to Know", slug: "oakridge-park-redevelopment-2026", category: "Market Analysis" },
+                    { title: "Presale vs. Resale Condos in Vancouver (2026)", slug: "resale-vs-presale-vancouver-condos-2026", category: "Buyer Resources" },
+                  ].map((post) => (
+                    <Link
+                      key={post.slug}
+                      href={`/resources/blog/${post.slug}`}
+                      className="block bg-warm-50 rounded-xl p-5 border border-warm-100 hover:border-teal-200 hover:bg-teal-50/30 transition-colors group"
+                    >
+                      <span className="text-xs uppercase tracking-widest text-teal-600 font-semibold">{post.category}</span>
+                      <h3 className="font-serif text-base text-teal-900 mt-1 group-hover:text-teal-700 transition-colors leading-snug">
+                        {post.title}
+                      </h3>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+
               {/* Related Neighbourhoods */}
               <section id="related" className="mb-16">
                 <h2 className="font-serif text-3xl text-teal-950 mb-6">

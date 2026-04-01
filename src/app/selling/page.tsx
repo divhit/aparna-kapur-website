@@ -114,6 +114,53 @@ export default function SellingPage() {
           </div>
         </div>
       </section>
+
+      {/* Neighbourhood Market Insights for Sellers */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
+              Know Your Market
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-teal-950">
+              Neighbourhood Market Insights
+            </h2>
+            <p className="text-warm-600 mt-3 max-w-2xl mx-auto">
+              Pricing strategy starts with understanding your neighbourhood. Explore these guides for market data, recent trends, and what buyers are looking for in each area.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Oakridge", slug: "oakridge", price: "$1.49M", trend: "Strong demand from Oakridge Park redevelopment" },
+              { name: "Marpole", slug: "marpole", price: "$1.14M", trend: "Growing buyer interest, Marine Drive revitalization" },
+              { name: "South Cambie", slug: "south-cambie", price: "$1.44M", trend: "Cambie Corridor densification driving values" },
+              { name: "Kerrisdale", slug: "kerrisdale", price: "$1.90M", trend: "Established prestige, consistent high-end demand" },
+              { name: "Riley Park", slug: "riley-park", price: "$639K condos", trend: "Popular with first-time buyers, Main Street proximity" },
+              { name: "Kitsilano", slug: "kitsilano", price: "Premium west-side", trend: "Beach lifestyle, strong rental and resale demand" },
+            ].map((hood) => (
+              <Link
+                key={hood.slug}
+                href={`/neighborhoods/${hood.slug}`}
+                className="group block bg-white rounded-xl p-6 border border-warm-100 hover:border-teal-200 hover:shadow-md transition-all"
+              >
+                <h3 className="font-serif text-lg text-teal-950 group-hover:text-teal-700 transition-colors">
+                  {hood.name}
+                </h3>
+                <p className="text-sm font-medium text-teal-600 mt-1">{hood.price} benchmark</p>
+                <p className="text-sm text-warm-500 mt-2">{hood.trend}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/neighborhoods"
+              className="text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors underline underline-offset-2"
+            >
+              View all 24 Vancouver neighbourhoods
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

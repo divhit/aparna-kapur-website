@@ -98,6 +98,72 @@ export default function BlogPage() {
         </div>
       </section>
 
+      {/* Explore Neighbourhoods & Resources */}
+      <section className="py-16 bg-warm-50 border-y border-warm-100">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="font-serif text-2xl text-teal-950 mb-6">
+                Explore Neighbourhoods
+              </h2>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { name: "Oakridge", slug: "oakridge" },
+                  { name: "Kerrisdale", slug: "kerrisdale" },
+                  { name: "South Cambie", slug: "south-cambie" },
+                  { name: "Cambie Corridor", slug: "cambie-corridor" },
+                  { name: "Marpole", slug: "marpole" },
+                  { name: "Riley Park", slug: "riley-park" },
+                ].map((hood) => (
+                  <Link
+                    key={hood.slug}
+                    href={`/neighborhoods/${hood.slug}`}
+                    className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-warm-200 text-sm font-medium text-teal-900 hover:border-teal-300 hover:shadow-sm transition-all"
+                  >
+                    {hood.name}
+                    <svg className="w-3.5 h-3.5 text-teal-600 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+              <Link
+                href="/neighborhoods"
+                className="inline-block mt-4 text-sm text-teal-700 hover:text-teal-900 underline underline-offset-2 transition-colors"
+              >
+                View all 24 neighbourhoods
+              </Link>
+            </div>
+            <div>
+              <h2 className="font-serif text-2xl text-teal-950 mb-6">
+                Buyer &amp; Seller Resources
+              </h2>
+              <div className="space-y-3">
+                {[
+                  { label: "Buyer\u2019s Guide: 6 Steps to Buying", href: "/buying" },
+                  { label: "Seller\u2019s Guide: 6 Steps to Selling", href: "/selling" },
+                  { label: "Mortgage Calculator", href: "/resources/mortgage-calculator" },
+                  { label: "First-Time Buyer Programs (BC)", href: "/resources/first-time-buyers-bc" },
+                  { label: "Property Transfer Tax Guide", href: "/resources/property-transfer-tax" },
+                  { label: "Free Home Valuation", href: "/selling/home-valuation" },
+                ].map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="flex items-center gap-2 px-4 py-3 bg-white rounded-lg border border-warm-200 text-sm font-medium text-teal-900 hover:border-teal-300 hover:shadow-sm transition-all"
+                  >
+                    {link.label}
+                    <svg className="w-3.5 h-3.5 text-teal-600 ml-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <GetInTouch />
     </>
   );

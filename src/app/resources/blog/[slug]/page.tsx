@@ -196,6 +196,77 @@ export default async function BlogPostPage({ params }: Props) {
             })}
           </div>
 
+          {/* Explore Related Neighbourhoods */}
+          {(() => {
+            const neighbourhoodMap: Record<string, { name: string; slug: string }[]> = {
+              "oakridge-park-spring-2026-opening-guide": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "South Cambie", slug: "south-cambie" },
+                { name: "Kerrisdale", slug: "kerrisdale" },
+                { name: "Marpole", slug: "marpole" },
+              ],
+              "oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "Kerrisdale", slug: "kerrisdale" },
+              ],
+              "cambie-corridor-rezoning-2025-what-homeowners-need-to-know": [
+                { name: "Cambie Corridor", slug: "cambie-corridor" },
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "South Cambie", slug: "south-cambie" },
+                { name: "Marpole", slug: "marpole" },
+              ],
+              "resale-vs-presale-vancouver-condos-2026": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "Cambie Corridor", slug: "cambie-corridor" },
+                { name: "Downtown", slug: "downtown" },
+              ],
+              "is-oakridge-vancouvers-new-downtown": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "Downtown", slug: "downtown" },
+                { name: "South Cambie", slug: "south-cambie" },
+              ],
+              "oakridge-park-redevelopment-2026": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "South Cambie", slug: "south-cambie" },
+                { name: "Cambie Corridor", slug: "cambie-corridor" },
+              ],
+              "first-time-buyer-programs-bc-2026": [
+                { name: "Marpole", slug: "marpole" },
+                { name: "Riley Park", slug: "riley-park" },
+                { name: "Renfrew-Collingwood", slug: "renfrew-collingwood" },
+              ],
+              "best-neighborhoods-vancouver-families-2026": [
+                { name: "Oakridge", slug: "oakridge" },
+                { name: "Kerrisdale", slug: "kerrisdale" },
+                { name: "South Cambie", slug: "south-cambie" },
+                { name: "Kitsilano", slug: "kitsilano" },
+              ],
+            };
+            const hoods = neighbourhoodMap[slug];
+            if (!hoods) return null;
+            return (
+              <div className="mt-12 mb-4 p-6 bg-warm-50 rounded-2xl border border-warm-100">
+                <h3 className="font-serif text-lg text-teal-950 mb-4">
+                  Explore These Neighbourhoods
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {hoods.map((hood) => (
+                    <Link
+                      key={hood.slug}
+                      href={`/neighborhoods/${hood.slug}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 bg-white rounded-lg border border-warm-200 text-sm font-medium text-teal-900 hover:border-teal-300 hover:shadow-sm transition-all"
+                    >
+                      {hood.name}
+                      <svg className="w-3.5 h-3.5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
+
           {/* CTA Section */}
           <GetInTouch />
 

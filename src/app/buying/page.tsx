@@ -86,20 +86,6 @@ export default function BuyingPage() {
               </div>
             </Link>
             <Link
-              href="/neighborhoods/oakridge"
-              className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
-            >
-              <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
-                <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="font-medium text-teal-950">Explore Oakridge</h3>
-                <p className="text-sm text-warm-500">Detailed neighborhood guide</p>
-              </div>
-            </Link>
-            <Link
               href="/resources/mortgage-calculator"
               className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
             >
@@ -112,6 +98,64 @@ export default function BuyingPage() {
                 <h3 className="font-medium text-teal-950">Mortgage Calculator</h3>
                 <p className="text-sm text-warm-500">Estimate your payments</p>
               </div>
+            </Link>
+            <Link
+              href="/resources/first-time-buyers-bc"
+              className="flex items-center gap-4 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="w-12 h-12 rounded-xl bg-teal-50 flex items-center justify-center shrink-0">
+                <svg className="w-6 h-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-medium text-teal-950">First-Time Buyers</h3>
+                <p className="text-sm text-warm-500">BC programs &amp; grants</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Neighbourhoods for Buyers */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs uppercase tracking-[0.2em] text-teal-600 font-semibold mb-3">
+              Explore by Area
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl text-teal-950">
+              Popular Neighbourhoods for Buyers
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Oakridge", slug: "oakridge", price: "$1.49M", desc: "Oakridge Park redevelopment, Canada Line, top schools" },
+              { name: "Marpole", slug: "marpole", price: "$1.14M", desc: "Affordable west-side entry point with river views" },
+              { name: "South Cambie", slug: "south-cambie", price: "$1.44M", desc: "Queen Elizabeth Park, Cambie Corridor transit" },
+              { name: "Riley Park", slug: "riley-park", price: "$639K condos", desc: "Nat Bailey Stadium, Main Street shops, great value" },
+              { name: "Kerrisdale", slug: "kerrisdale", price: "$1.90M", desc: "Village charm, boutique shopping, established families" },
+              { name: "Cambie Corridor", slug: "cambie-corridor", price: "$1.46M", desc: "Transit-oriented growth along the Canada Line" },
+            ].map((hood) => (
+              <Link
+                key={hood.slug}
+                href={`/neighborhoods/${hood.slug}`}
+                className="group block bg-white rounded-xl p-6 border border-warm-100 hover:border-teal-200 hover:shadow-md transition-all"
+              >
+                <h3 className="font-serif text-lg text-teal-950 group-hover:text-teal-700 transition-colors">
+                  {hood.name}
+                </h3>
+                <p className="text-sm font-medium text-teal-600 mt-1">{hood.price} benchmark</p>
+                <p className="text-sm text-warm-500 mt-2">{hood.desc}</p>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/neighborhoods"
+              className="text-sm font-medium text-teal-700 hover:text-teal-900 transition-colors underline underline-offset-2"
+            >
+              View all 24 Vancouver neighbourhoods
             </Link>
           </div>
         </div>
