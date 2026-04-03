@@ -259,7 +259,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Composite benchmark: $1.46M (January 2026, -6.1% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
+                  Composite benchmark: $1.46M (March 2026, -19.8% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

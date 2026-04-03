@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the average home price in Riley Park, Vancouver?",
     answer:
-      "As of January 2026, the Vancouver East detached benchmark is $1.70M. Condos start around $639K and townhomes around $1.04M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
+      "As of March 2026, the Vancouver East detached benchmark is $1.66M. Condos start around $632K and townhomes around $1.02M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
   },
   {
     question: "Is Riley Park a good neighbourhood to buy in?",
@@ -225,9 +225,9 @@ export default async function RileyParkPage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Character Homes", range: "$1.4M - $2.5M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Van East detached benchmark: $1.70M." },
-                    { type: "Duplexes & Townhomes", range: "$850K - $1.4M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. Van East townhome benchmark: $1.04M." },
-                    { type: "Condos & Apartments", range: "$450K - $800K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Van East condo benchmark: $639K." },
+                    { type: "Character Homes", range: "$1.4M - $2.5M+", desc: "Original Craftsman bungalows, Vancouver Specials, and heritage homes on established lots. Van East detached benchmark: $1.66M." },
+                    { type: "Duplexes & Townhomes", range: "$850K - $1.4M", desc: "Side-by-side and stacked duplexes, plus newer townhome developments. Van East townhome benchmark: $1.02M." },
+                    { type: "Condos & Apartments", range: "$450K - $800K", desc: "Low-rise and mid-rise buildings, many along or near Main Street. Van East condo benchmark: $632K." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex items-baseline gap-3 mb-1">
@@ -239,7 +239,7 @@ export default async function RileyParkPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Vancouver East detached benchmark: $1.70M (January 2026, -8.1% YoY). Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
+                  Vancouver East detached benchmark: $1.70M (March 2026, -9.4% YoY). Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

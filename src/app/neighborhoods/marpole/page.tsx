@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What is the average home price in Marpole, Vancouver?",
     answer:
-      "The GVR MLS® HPI composite benchmark for Marpole is $1.14M (January 2026). Condos average around $684K, townhomes $1.58M, and detached homes $2.13M. For a detailed pricing breakdown and current listings, contact Aparna Kapur at 604-612-7694 — she specializes in Vancouver's south-side neighbourhoods and can provide up-to-date market analysis.",
+      "The GVR MLS® HPI composite benchmark for Marpole is $1.14M (March 2026). Condos average around $676K, townhomes $1.55M, and detached homes $2.08M. For a detailed pricing breakdown and current listings, contact Aparna Kapur at 604-612-7694 — she specializes in Vancouver's south-side neighbourhoods and can provide up-to-date market analysis.",
   },
   {
     question: "Is Marpole a good neighbourhood to buy in?",
@@ -228,9 +228,9 @@ export default async function MarpolePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$450K - $850K", desc: "Modern low-rise and mid-rise units, many walkable to Marine Drive SkyTrain. GVR benchmark: $684K. Popular with first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Newer developments along Cambie and Granville. GVR benchmark: $1.58M. Popular with growing families." },
-                    { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: "Character bungalows to newer custom builds. GVR benchmark: $2.13M. Lot sizes often generous compared to other west-side areas." },
+                    { type: "Condominiums", range: "$450K - $850K", desc: "Modern low-rise and mid-rise units, many walkable to Marine Drive SkyTrain. GVR benchmark: $676K. Popular with first-time buyers and investors." },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Newer developments along Cambie and Granville. GVR benchmark: $1.55M. Popular with growing families." },
+                    { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: "Character bungalows to newer custom builds. GVR benchmark: $2.08M. Lot sizes often generous compared to other west-side areas." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -242,7 +242,7 @@ export default async function MarpolePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.14M (January 2026, -6.3% YoY). Strong value versus Oakridge ($1.49M) and Kerrisdale ($1.90M). Improving amenities and transit make it one of the most-watched neighborhoods among investors.
+                  GVR MLS® HPI composite benchmark: $1.14M (March 2026, -18.4% YoY). Strong value versus Oakridge ($1.49M) and Kerrisdale ($1.90M). Improving amenities and transit make it one of the most-watched neighborhoods among investors.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

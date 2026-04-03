@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What is the average home price in South Cambie, Vancouver?",
     answer:
-      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.44M (January 2026). Condos average around $1.02M, townhomes $1.56M, and detached homes $4.16M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
+      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.44M (March 2026). Condos average around $1.00M, townhomes $1.53M, and detached homes $4.09M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
   },
   {
     question: "Is South Cambie a good neighbourhood to buy in?",
@@ -238,7 +238,7 @@ export default async function SouthCambiePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.44M (January 2026, -9.5% YoY). Detached benchmark: $4.16M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
+                  GVR MLS® HPI composite benchmark: $1.44M (March 2026, -15.5% YoY). Detached benchmark: $4.03M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

@@ -35,7 +35,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vancouver's Most Exciting Transformation",
     avgPrice: "$1.49M",
-    priceChange: "-2.8% YoY",
+    priceChange: "-11.1% YoY",
     walkScore: 78,
     transitScore: 85,
     highlights: [
@@ -58,7 +58,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Historic Charm Meets Modern Living",
     avgPrice: "$1.14M",
-    priceChange: "-6.3% YoY",
+    priceChange: "-18.4% YoY",
     walkScore: 72,
     transitScore: 78,
     highlights: [
@@ -81,7 +81,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Where Families Put Down Roots",
     avgPrice: "$1.44M",
-    priceChange: "-9.5% YoY",
+    priceChange: "-15.5% YoY",
     walkScore: 80,
     transitScore: 82,
     highlights: [
@@ -104,7 +104,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Creative Energy & Community Spirit",
     avgPrice: "$1.70M",
-    priceChange: "-8.1% YoY",
+    priceChange: "-9.4% YoY",
     walkScore: 82,
     transitScore: 75,
     highlights: [
@@ -127,7 +127,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Upscale Village Living",
     avgPrice: "$1.90M",
-    priceChange: "-19.2% YoY",
+    priceChange: "-15.1% YoY",
     walkScore: 85,
     transitScore: 72,
     highlights: [
@@ -150,7 +150,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 13,
     tagline: "Transit-Oriented Growth",
     avgPrice: "$1.46M",
-    priceChange: "-6.1% YoY",
+    priceChange: "-19.8% YoY",
     walkScore: 81,
     transitScore: 88,
     highlights: [
@@ -173,7 +173,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Beach Living & Urban Energy",
     avgPrice: "$1.25M",
-    priceChange: "-5.8% YoY",
+    priceChange: "-8.0% YoY",
     walkScore: 88,
     transitScore: 80,
     highlights: [
@@ -196,7 +196,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "World-Class Campus & Community",
     avgPrice: "$1.35M",
-    priceChange: "-4.2% YoY",
+    priceChange: "-18.9% YoY",
     walkScore: 70,
     transitScore: 65,
     highlights: [
@@ -219,7 +219,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Upscale Living on the Greenway",
     avgPrice: "$2.20M",
-    priceChange: "-3.5% YoY",
+    priceChange: "-7.9% YoY",
     walkScore: 93,
     transitScore: 70,
     highlights: [
@@ -242,7 +242,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Family Living Near UBC & Pacific Spirit",
     avgPrice: "$2.50M",
-    priceChange: "-4.1% YoY",
+    priceChange: "-17.4% YoY",
     walkScore: 72,
     transitScore: 60,
     highlights: [
@@ -265,7 +265,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vancouver's Most Prestigious Address",
     avgPrice: "$3.50M",
-    priceChange: "-2.1% YoY",
+    priceChange: "-18.5% YoY",
     walkScore: 65,
     transitScore: 60,
     highlights: [
@@ -288,7 +288,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Beaches, Views & Campus Living",
     avgPrice: "$2.30M",
-    priceChange: "-3.8% YoY",
+    priceChange: "-7.7% YoY",
     walkScore: 78,
     transitScore: 68,
     highlights: [
@@ -311,7 +311,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Eclectic Culture on The Drive",
     avgPrice: "$1.10M",
-    priceChange: "-3.2% YoY",
+    priceChange: "-9.2% YoY",
     walkScore: 90,
     transitScore: 92,
     highlights: [
@@ -334,7 +334,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Diverse Community with Heritage Roots",
     avgPrice: "$1.20M",
-    priceChange: "-2.5% YoY",
+    priceChange: "-6.9% YoY",
     walkScore: 85,
     transitScore: 78,
     highlights: [
@@ -357,7 +357,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Diverse Family Living at Trout Lake",
     avgPrice: "$1.15M",
-    priceChange: "-3.0% YoY",
+    priceChange: "-6.8% YoY",
     walkScore: 80,
     transitScore: 75,
     highlights: [
@@ -380,7 +380,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vancouver's Urban Core",
     avgPrice: "$750K",
-    priceChange: "-3.5% YoY",
+    priceChange: "-7.2% YoY",
     walkScore: 98,
     transitScore: 100,
     highlights: [
@@ -403,7 +403,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Central Living on the Broadway Corridor",
     avgPrice: "$900K",
-    priceChange: "-4.1% YoY",
+    priceChange: "+0.6% YoY",
     walkScore: 95,
     transitScore: 90,
     highlights: [
@@ -426,7 +426,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vibrant Urban Beach Living",
     avgPrice: "$680K",
-    priceChange: "-2.9% YoY",
+    priceChange: "-9.1% YoY",
     walkScore: 97,
     transitScore: 88,
     highlights: [
@@ -449,7 +449,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Creative Culture & Craft Breweries",
     avgPrice: "$850K",
-    priceChange: "-5.2% YoY",
+    priceChange: "+1.3% YoY",
     walkScore: 92,
     transitScore: 82,
     highlights: [
@@ -472,7 +472,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Family-Friendly Southeast Vancouver",
     avgPrice: "$1.10M",
-    priceChange: "-3.2% YoY",
+    priceChange: "-8.8% YoY",
     walkScore: 78,
     transitScore: 72,
     highlights: [
@@ -495,7 +495,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vancouver's Most Diverse Community",
     avgPrice: "$1.05M",
-    priceChange: "-4.1% YoY",
+    priceChange: "-10.5% YoY",
     walkScore: 82,
     transitScore: 80,
     highlights: [
@@ -518,7 +518,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Multicultural Heart of South Vancouver",
     avgPrice: "$1.30M",
-    priceChange: "-3.5% YoY",
+    priceChange: "-8.7% YoY",
     walkScore: 75,
     transitScore: 68,
     highlights: [
@@ -541,7 +541,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "River Views & Established Living",
     avgPrice: "$1.20M",
-    priceChange: "-3.8% YoY",
+    priceChange: "-6.5% YoY",
     walkScore: 72,
     transitScore: 65,
     highlights: [
@@ -564,7 +564,7 @@ export const NEIGHBOURHOODS: Record<string, NeighbourhoodData> = {
     zoom: 14,
     tagline: "Vancouver's Oldest Residential Neighbourhood",
     avgPrice: "$950K",
-    priceChange: "-2.8% YoY",
+    priceChange: "-0.4% YoY",
     walkScore: 91,
     transitScore: 88,
     highlights: [
