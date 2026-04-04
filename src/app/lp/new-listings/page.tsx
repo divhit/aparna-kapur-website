@@ -13,13 +13,12 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function NewListingsLandingPage() {
-  const { listings, totalCount } = await fetchLandingListings({
+  const { listings } = await fetchLandingListings({
     top: 6,
     orderby: "OriginalEntryTimestamp desc",
   });
 
   const teaserListings = listings.slice(0, 3);
-  const count = totalCount ?? listings.length;
 
   return (
     <>
@@ -40,14 +39,10 @@ export default async function NewListingsLandingPage() {
             within days. Get early access to new listings matched to your
             criteria &mdash; before they go viral on Realtor.ca.
           </p>
-          {count > 0 && (
-            <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">
-                {count} active listings right now
-              </span>
-            </div>
-          )}
+          <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">Updated Hourly</span>
+          </div>
         </div>
       </section>
 
@@ -68,9 +63,11 @@ export default async function NewListingsLandingPage() {
                 <TeaserListingCard key={listing.listingKey} listing={listing} />
               ))}
             </div>
-            <p className="text-center text-warm-400 text-sm mt-6">
-              + {Math.max(count - 3, 0)} more listings available
-            </p>
+            {listings.length > 3 && (
+              <p className="text-center text-warm-400 text-sm mt-6">
+                + more available &mdash; get the full list below
+              </p>
+            )}
           </div>
         </section>
       )}

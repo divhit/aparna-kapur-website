@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function DuplexesUnder17mPage() {
-  const { listings, totalCount } = await fetchLandingListings({
+  const { listings } = await fetchLandingListings({
     maxPrice: 1700000,
     propertySubType: "Duplex",
     top: 6,
@@ -21,7 +21,6 @@ export default async function DuplexesUnder17mPage() {
   });
 
   const teaserListings = listings.slice(0, 3);
-  const count = totalCount ?? listings.length;
 
   return (
     <>
@@ -42,14 +41,10 @@ export default async function DuplexesUnder17mPage() {
             Vancouver&apos;s smartest real estate plays &mdash; build equity
             while your tenant helps cover the mortgage.
           </p>
-          {count > 0 && (
-            <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">
-                {count} duplexes available under $1.7M
-              </span>
-            </div>
-          )}
+          <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">Updated Daily</span>
+          </div>
         </div>
       </section>
 
@@ -69,9 +64,9 @@ export default async function DuplexesUnder17mPage() {
                 <TeaserListingCard key={listing.listingKey} listing={listing} />
               ))}
             </div>
-            {count > 3 && (
+            {listings.length > 3 && (
               <p className="text-center text-warm-400 text-sm mt-6">
-                + {count - 3} more duplexes available
+                + more available &mdash; get the full list below
               </p>
             )}
           </div>

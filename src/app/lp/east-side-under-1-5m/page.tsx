@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function EastSideUnder15mPage() {
-  const { listings, totalCount } = await fetchLandingListings({
+  const { listings } = await fetchLandingListings({
     maxPrice: 1500000,
     bounds: EAST_VANCOUVER_BOUNDS,
     top: 6,
@@ -21,7 +21,6 @@ export default async function EastSideUnder15mPage() {
   });
 
   const teaserListings = listings.slice(0, 3);
-  const count = totalCount ?? listings.length;
 
   const hoodCounts: Record<string, number> = {};
   listings.forEach((l) => {
@@ -48,14 +47,10 @@ export default async function EastSideUnder15mPage() {
             and townhouses. Great schools, growing communities, and room for
             your family to thrive.
           </p>
-          {count > 0 && (
-            <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">
-                {count} properties available under $1.5M
-              </span>
-            </div>
-          )}
+          <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">Updated Daily</span>
+          </div>
         </div>
       </section>
 
@@ -75,9 +70,9 @@ export default async function EastSideUnder15mPage() {
                 <TeaserListingCard key={listing.listingKey} listing={listing} />
               ))}
             </div>
-            {count > 3 && (
+            {listings.length > 3 && (
               <p className="text-center text-warm-400 text-sm mt-6">
-                + {count - 3} more properties available
+                + more available &mdash; get the full list below
               </p>
             )}
           </div>

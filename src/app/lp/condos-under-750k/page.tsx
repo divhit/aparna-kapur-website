@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function CondosUnder750kPage() {
-  const { listings, totalCount } = await fetchLandingListings({
+  const { listings } = await fetchLandingListings({
     maxPrice: 750000,
     propertySubType: "Apartment/Condo",
     top: 6,
@@ -21,7 +21,6 @@ export default async function CondosUnder750kPage() {
   });
 
   const teaserListings = listings.slice(0, 3);
-  const count = totalCount ?? listings.length;
 
   // Build neighbourhood distribution
   const hoodCounts: Record<string, number> = {};
@@ -49,14 +48,10 @@ export default async function CondosUnder750kPage() {
             These units move fast &mdash; get the full list before they&apos;re
             gone.
           </p>
-          {count > 0 && (
-            <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-              <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">
-                {count} condos available under $750K
-              </span>
-            </div>
-          )}
+          <div className="mt-8 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
+            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
+            <span className="text-sm font-medium">Updated Daily</span>
+          </div>
         </div>
       </section>
 
@@ -76,9 +71,9 @@ export default async function CondosUnder750kPage() {
                 <TeaserListingCard key={listing.listingKey} listing={listing} />
               ))}
             </div>
-            {count > 3 && (
+            {listings.length > 3 && (
               <p className="text-center text-warm-400 text-sm mt-6">
-                + {count - 3} more condos available
+                + more available &mdash; get the full list below
               </p>
             )}
           </div>

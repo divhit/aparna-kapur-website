@@ -15,24 +15,12 @@ export const dynamic = "force-dynamic";
 
 export default async function InvestmentLandingPage() {
   // Longest-on-market = most motivated sellers, most negotiation room
-  const { listings: allListings, totalCount } = await fetchLandingListings({
+  const { listings: allListings } = await fetchLandingListings({
     top: 12,
     orderby: "OriginalEntryTimestamp asc",
   });
 
   const teaserListings = allListings.slice(0, 3);
-  const count = totalCount ?? allListings.length;
-
-  // Calculate average days on market
-  const daysOnMarket = allListings
-    .filter((l) => l.daysOnMarket != null)
-    .map((l) => l.daysOnMarket!);
-  const avgDays =
-    daysOnMarket.length > 0
-      ? Math.round(
-          daysOnMarket.reduce((a, b) => a + b, 0) / daysOnMarket.length,
-        )
-      : null;
 
   // Count opportunity types from descriptions
   const hasEstateSale = allListings.some((l) =>
@@ -66,23 +54,6 @@ export default async function InvestmentLandingPage() {
             These properties are priced to move &mdash; and smart investors know
             that&apos;s where the deals are.
           </p>
-          {count > 0 && (
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                <span className="text-sm font-medium">
-                  {count} opportunities right now
-                </span>
-              </span>
-              {avgDays && (
-                <span className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2.5">
-                  <span className="text-sm font-medium">
-                    Avg {avgDays} days on market
-                  </span>
-                </span>
-              )}
-            </div>
-          )}
         </div>
       </section>
 
@@ -153,9 +124,9 @@ export default async function InvestmentLandingPage() {
                 <TeaserListingCard key={listing.listingKey} listing={listing} />
               ))}
             </div>
-            {count > 3 && (
+            {allListings.length > 3 && (
               <p className="text-center text-warm-400 text-sm mt-6">
-                + {count - 3} more opportunities available
+                + more available &mdash; get the full list below
               </p>
             )}
           </div>
