@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fetchOpportunityListings } from "@/lib/ddf";
 import TeaserListingCard from "@/components/landing/TeaserListingCard";
 import LandingLeadForm from "@/components/landing/LandingLeadForm";
+import AgentTrustStrip from "@/components/landing/AgentTrustStrip";
 
 export const metadata: Metadata = {
   title:
@@ -50,7 +51,10 @@ export default async function InvestmentLandingPage() {
           <p className="text-teal-300 text-sm font-semibold uppercase tracking-widest mb-4">
             Below-Market Opportunities
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl italic font-bold leading-tight mb-6">
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl italic font-bold leading-tight mb-6"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
             Vancouver Investment Properties
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -157,7 +161,8 @@ export default async function InvestmentLandingPage() {
       {/* Lead capture */}
       <section className="py-16">
         <div className="max-w-xl mx-auto px-6">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-warm-100">
+          <AgentTrustStrip context="I track every motivated seller, estate sale, and court-ordered listing in Vancouver. When opportunity knocks, my investors hear about it first." />
+          <div className="mt-8 bg-white rounded-2xl shadow-lg p-8 border border-warm-100">
             <h3 className="font-serif text-xl text-teal-950 font-bold italic mb-2 text-center">
               Get the Full Opportunity List
             </h3>

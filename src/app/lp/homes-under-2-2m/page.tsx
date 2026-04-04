@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { fetchLandingListings } from "@/lib/ddf";
 import TeaserListingCard from "@/components/landing/TeaserListingCard";
 import LandingLeadForm from "@/components/landing/LandingLeadForm";
+import AgentTrustStrip from "@/components/landing/AgentTrustStrip";
 
 export const metadata: Metadata = {
   title: "Homes Under $2.2M in Vancouver | Current Listings",
@@ -35,7 +36,10 @@ export default async function HomesUnder22mPage() {
           <p className="text-teal-300 text-sm font-semibold uppercase tracking-widest mb-4">
             All Property Types
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl italic font-bold leading-tight mb-6">
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl italic font-bold leading-tight mb-6"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
             Vancouver Homes Under $2.2M
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -106,7 +110,8 @@ export default async function HomesUnder22mPage() {
       {/* Lead capture */}
       <section className="py-16">
         <div className="max-w-xl mx-auto px-6">
-          <div className="bg-white rounded-2xl shadow-lg p-8 border border-warm-100">
+          <AgentTrustStrip context="Whether it's your first home or your forever home, I'll find the right property at the right price across all of Vancouver." />
+          <div className="mt-8 bg-white rounded-2xl shadow-lg p-8 border border-warm-100">
             <h3 className="font-serif text-xl text-teal-950 font-bold italic mb-2 text-center">
               Get the Full List
             </h3>
