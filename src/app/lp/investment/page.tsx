@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { fetchOpportunityListings } from "@/lib/ddf";
+import { fetchLandingListings } from "@/lib/ddf";
 import TeaserListingCard from "@/components/landing/TeaserListingCard";
 import LandingLeadForm from "@/components/landing/LandingLeadForm";
 import AgentTrustStrip from "@/components/landing/AgentTrustStrip";
@@ -14,13 +14,17 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function InvestmentLandingPage() {
-  const listings = await fetchOpportunityListings();
+  // Longest-on-market = most motivated sellers, most negotiation room
+  const { listings: allListings, totalCount } = await fetchLandingListings({
+    top: 12,
+    orderby: "OriginalEntryTimestamp asc",
+  });
 
-  const teaserListings = listings.slice(0, 3);
-  const count = listings.length;
+  const teaserListings = allListings.slice(0, 3);
+  const count = totalCount ?? allListings.length;
 
   // Calculate average days on market
-  const daysOnMarket = listings
+  const daysOnMarket = allListings
     .filter((l) => l.daysOnMarket != null)
     .map((l) => l.daysOnMarket!);
   const avgDays =
@@ -31,15 +35,15 @@ export default async function InvestmentLandingPage() {
       : null;
 
   // Count opportunity types from descriptions
-  const hasEstateSale = listings.some((l) =>
+  const hasEstateSale = allListings.some((l) =>
     l.description?.toLowerCase().includes("estate sale"),
   );
-  const hasPriceReduced = listings.some(
+  const hasPriceReduced = allListings.some(
     (l) =>
       l.description?.toLowerCase().includes("price reduced") ||
       l.description?.toLowerCase().includes("motivated"),
   );
-  const hasCourtOrder = listings.some((l) =>
+  const hasCourtOrder = allListings.some((l) =>
     l.description?.toLowerCase().includes("court order"),
   );
 
