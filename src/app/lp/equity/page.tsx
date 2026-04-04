@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import LandingLeadForm from "@/components/landing/LandingLeadForm";
+import AgentTrustStrip from "@/components/landing/AgentTrustStrip";
 
 export const metadata: Metadata = {
   title: "How Much Equity Have You Built? | Vancouver Home Equity Check",
@@ -24,7 +26,10 @@ export default function EquityLandingPage() {
           <p className="text-teal-300 text-sm font-semibold uppercase tracking-widest mb-4">
             Free Equity Analysis
           </p>
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl italic font-bold leading-tight mb-6">
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
             How Much Equity Have You Built?
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
@@ -104,6 +109,13 @@ export default function EquityLandingPage() {
               successMessage="Aparna will prepare a personalized equity analysis for your specific property and reach out within 24 hours."
             />
           </div>
+        </div>
+      </section>
+
+      {/* Agent trust strip */}
+      <section className="py-12">
+        <div className="max-w-4xl mx-auto px-6">
+          <AgentTrustStrip context="With 24 neighbourhoods of expertise across Vancouver, I'll tell you exactly how much equity you've built — and whether now is the right time to leverage it." />
         </div>
       </section>
 
