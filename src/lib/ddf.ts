@@ -160,17 +160,20 @@ function mapDDFProperty(raw: Record<string, unknown>): DDFProperty {
     photos,
     neighbourhood: resolveNeighbourhood(
       raw.Latitude as number,
-      raw.Longitude as number
+      raw.Longitude as number,
     ),
     realtorUrl: listingUrl
-      ? (listingUrl.startsWith("http") ? listingUrl : `https://${listingUrl}`)
+      ? listingUrl.startsWith("http")
+        ? listingUrl
+        : `https://${listingUrl}`
       : `https://www.realtor.ca/real-estate/${raw.ListingKey as string}`,
     yearBuilt: raw.YearBuilt as number | undefined,
     parking: raw.ParkingTotal as number | undefined,
     daysOnMarket: raw.OriginalEntryTimestamp
       ? Math.floor(
-          (Date.now() - new Date(raw.OriginalEntryTimestamp as string).getTime()) /
-            (1000 * 60 * 60 * 24)
+          (Date.now() -
+            new Date(raw.OriginalEntryTimestamp as string).getTime()) /
+            (1000 * 60 * 60 * 24),
         )
       : undefined,
     listedAt: raw.OriginalEntryTimestamp as string | undefined,
@@ -184,9 +187,24 @@ function mapDDFProperty(raw: Record<string, unknown>): DDFProperty {
 
 const ALL_NEIGHBOURHOODS_BOUNDS: BoundingBox = {
   north: 49.26,
-  south: 49.20,
+  south: 49.2,
   east: -123.085,
   west: -123.172,
+};
+
+// Wider bounds for landing page funnels (not used by main site)
+export const VANCOUVER_WIDE_BOUNDS: BoundingBox = {
+  north: 49.3,
+  south: 49.2,
+  east: -123.02,
+  west: -123.22,
+};
+
+export const EAST_VANCOUVER_BOUNDS: BoundingBox = {
+  north: 49.29,
+  south: 49.24,
+  east: -123.02,
+  west: -123.1,
 };
 
 // ---------------------------------------------------------------------------
@@ -195,7 +213,7 @@ const ALL_NEIGHBOURHOODS_BOUNDS: BoundingBox = {
 
 async function fetchPropertiesInBounds(
   bounds: BoundingBox,
-  options?: ListingQueryOptions
+  options?: ListingQueryOptions,
 ): Promise<{ listings: DDFProperty[]; totalCount?: number }> {
   try {
     const token = await getAccessToken();
@@ -270,9 +288,9 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
     const token = await getAccessToken();
     const bounds = ALL_NEIGHBOURHOODS_BOUNDS;
 
-    const keywordFilter = OPPORTUNITY_KEYWORDS
-      .map((kw) => `contains(PublicRemarks,'${kw}')`)
-      .join(" or ");
+    const keywordFilter = OPPORTUNITY_KEYWORDS.map(
+      (kw) => `contains(PublicRemarks,'${kw}')`,
+    ).join(" or ");
 
     const filters: string[] = [
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
@@ -324,10 +342,13 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
   } catch (error) {
     console.error("DDF opportunity fetch error:", error);
     // Fallback to longest-on-market
-    const { listings } = await fetchPropertiesInBounds(ALL_NEIGHBOURHOODS_BOUNDS, {
-      top: 24,
-      orderby: "OriginalEntryTimestamp asc",
-    });
+    const { listings } = await fetchPropertiesInBounds(
+      ALL_NEIGHBOURHOODS_BOUNDS,
+      {
+        top: 24,
+        orderby: "OriginalEntryTimestamp asc",
+      },
+    );
     return listings;
   }
 }
@@ -335,17 +356,43 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
 export async function fetchFeaturedListings(): Promise<DDFProperty[]> {
   // Show longest-on-market listings first — these are the most motivated
   // sellers and most likely to have reduced prices or accept offers below asking
-  const { listings } = await fetchPropertiesInBounds(ALL_NEIGHBOURHOODS_BOUNDS, {
-    top: 12,
-    orderby: "OriginalEntryTimestamp asc",
-  });
+  const { listings } = await fetchPropertiesInBounds(
+    ALL_NEIGHBOURHOODS_BOUNDS,
+    {
+      top: 12,
+      orderby: "OriginalEntryTimestamp asc",
+    },
+  );
   return listings;
 }
 
 export async function fetchListings(
-  options?: ListingQueryOptions
+  options?: ListingQueryOptions,
 ): Promise<{ listings: DDFProperty[]; totalCount?: number }> {
   let bounds = ALL_NEIGHBOURHOODS_BOUNDS;
+
+  if (options?.neighbourhood) {
+    const hood = NEIGHBOURHOODS[options.neighbourhood];
+    if (hood?.bounds) {
+      bounds = hood.bounds;
+    }
+  }
+
+  return fetchPropertiesInBounds(bounds, options);
+}
+
+// ---------------------------------------------------------------------------
+// Landing page fetcher — uses wider bounds, supports custom bounds override
+// ---------------------------------------------------------------------------
+
+export type LandingListingOptions = ListingQueryOptions & {
+  bounds?: BoundingBox;
+};
+
+export async function fetchLandingListings(
+  options?: LandingListingOptions,
+): Promise<{ listings: DDFProperty[]; totalCount?: number }> {
+  let bounds = options?.bounds ?? VANCOUVER_WIDE_BOUNDS;
 
   if (options?.neighbourhood) {
     const hood = NEIGHBOURHOODS[options.neighbourhood];

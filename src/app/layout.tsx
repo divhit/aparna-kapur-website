@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import { Raleway, Cormorant_Garamond, Playfair_Display } from "next/font/google";
+import {
+  Raleway,
+  Cormorant_Garamond,
+  Playfair_Display,
+} from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -69,7 +73,7 @@ export const metadata: Metadata = {
     "geo.region": "CA-BC",
     "geo.placename": "Vancouver",
     "geo.position": "49.2488;-123.1275",
-    "ICBM": "49.2488, -123.1275",
+    ICBM: "49.2488, -123.1275",
   },
   verification: {
     google: "92v2XTbnirJ_PGqJk6MoYNA3_7Da5XqY-nELvtykEao",
@@ -82,16 +86,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-CA" className={`${raleway.variable} ${cormorant.variable} ${playfair.variable}`}>
+    <html
+      lang="en-CA"
+      className={`${raleway.variable} ${cormorant.variable} ${playfair.variable}`}
+    >
       <body className="font-sans antialiased">
         <GoogleAnalytics />
         <RealEstateAgentSchema />
         <WebsiteSchema />
-        <Header />
+        <div data-site-chrome="header">
+          <Header />
+        </div>
         <main>{children}</main>
-        <Footer />
-        <ChatWidget />
-        <ExitIntentPopup />
+        <div data-site-chrome="footer">
+          <Footer />
+        </div>
+        <div data-site-chrome="chat">
+          <ChatWidget />
+        </div>
+        <div data-site-chrome="popup">
+          <ExitIntentPopup />
+        </div>
       </body>
     </html>
   );
