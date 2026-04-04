@@ -7,7 +7,7 @@ import OpenHouseForm from "./OpenHouseForm";
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
   address: "1-6461 E Prince Edward Street, Vancouver, BC V5W 2Y3",
-  neighbourhood: "South Vancouver",
+  neighbourhood: "Main",
 };
 
 export const metadata: Metadata = {
