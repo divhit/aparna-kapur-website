@@ -286,7 +286,7 @@ const OPPORTUNITY_KEYWORDS = [
 export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
   try {
     const token = await getAccessToken();
-    const bounds = ALL_NEIGHBOURHOODS_BOUNDS;
+    const bounds = VANCOUVER_WIDE_BOUNDS;
 
     const keywordFilter = OPPORTUNITY_KEYWORDS.map(
       (kw) => `contains(PublicRemarks,'${kw}')`,
@@ -296,7 +296,7 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
       `StandardStatus eq 'Active'`,
-      `ListPrice gt 0`,
+      `ListPrice ge 100000`,
       `PhotosCount gt 0`,
       `(${keywordFilter})`,
     ];
@@ -323,14 +323,18 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
       console.error("DDF opportunity API error:", res.status, await res.text());
     }
 
+    // Post-filter: residential only
+    listings = filterResidentialOnly(listings);
+
     // If keyword search returns too few (or failed), backfill with longest-on-market
     if (listings.length < 6) {
       const { listings: fallback } = await fetchPropertiesInBounds(bounds, {
         top: 24,
+        minPrice: 100000,
         orderby: "OriginalEntryTimestamp asc",
       });
       const existingKeys = new Set(listings.map((l) => l.listingKey));
-      for (const l of fallback) {
+      for (const l of filterResidentialOnly(fallback)) {
         if (!existingKeys.has(l.listingKey)) {
           listings.push(l);
           if (listings.length >= 24) break;
@@ -341,16 +345,36 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
     return listings;
   } catch (error) {
     console.error("DDF opportunity fetch error:", error);
-    // Fallback to longest-on-market
-    const { listings } = await fetchPropertiesInBounds(
-      ALL_NEIGHBOURHOODS_BOUNDS,
-      {
-        top: 24,
-        orderby: "OriginalEntryTimestamp asc",
-      },
-    );
-    return listings;
+    const { listings } = await fetchPropertiesInBounds(VANCOUVER_WIDE_BOUNDS, {
+      top: 24,
+      minPrice: 100000,
+      orderby: "OriginalEntryTimestamp asc",
+    });
+    return filterResidentialOnly(listings);
   }
+}
+
+/** Remove parking, storage, commercial, and other non-residential listings */
+function filterResidentialOnly(listings: DDFProperty[]): DDFProperty[] {
+  return listings.filter((l) => {
+    const sub = l.propertySubType?.toLowerCase() ?? "";
+    const struct = l.structureType?.toLowerCase() ?? "";
+    if (
+      sub.includes("parking") ||
+      sub.includes("locker") ||
+      sub.includes("storage")
+    )
+      return false;
+    if (
+      sub.includes("commercial") ||
+      sub.includes("industrial") ||
+      sub.includes("retail")
+    )
+      return false;
+    if (struct.includes("commercial") || struct.includes("industrial"))
+      return false;
+    return true;
+  });
 }
 
 export async function fetchFeaturedListings(): Promise<DDFProperty[]> {
@@ -401,5 +425,13 @@ export async function fetchLandingListings(
     }
   }
 
-  return fetchPropertiesInBounds(bounds, options);
+  const residentialOptions = {
+    ...options,
+    minPrice: Math.max(options?.minPrice ?? 0, 100000),
+  };
+
+  const result = await fetchPropertiesInBounds(bounds, residentialOptions);
+  result.listings = filterResidentialOnly(result.listings);
+
+  return result;
 }
