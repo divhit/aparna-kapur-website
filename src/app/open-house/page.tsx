@@ -6,14 +6,13 @@ import OpenHouseForm from "./OpenHouseForm";
 // The QR code URL (/open-house) stays the same.
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
-  address: "1-1322 E 13th Avenue, Vancouver, BC",
-  neighbourhood: "Grandview-Woodland",
+  address: "1-6461 E Prince Edward Street, Vancouver, BC V5W 2Y3",
+  neighbourhood: "South Vancouver",
 };
 
 export const metadata: Metadata = {
   title: "Open House Sign-In — Aparna Kapur",
-  description:
-    "Sign in for the open house with Aparna Kapur, Oakwyn Realty.",
+  description: "Sign in for the open house with Aparna Kapur, Oakwyn Realty.",
   robots: { index: false, follow: false },
 };
 
