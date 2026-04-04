@@ -17,6 +17,7 @@
     "@supabase/supabase-js": "^2.99.1",
     "@vis.gl/react-google-maps": "^1.7.1",
     "ai": "^6.0.86",
+    "googleapis": "^171.4.0",
     "next": "16.1.6",
     "next-sitemap": "^4.2.3",
     "react": "19.2.3",
