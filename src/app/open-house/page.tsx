@@ -6,8 +6,8 @@ import OpenHouseForm from "./OpenHouseForm";
 // The QR code URL (/open-house) stays the same.
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
-  address: "1-6461 E Prince Edward Street, Vancouver, BC V5W 2Y3",
-  neighbourhood: "Main",
+  address: "888 Pacific Street, Vancouver, BC",
+  neighbourhood: "Yaletown",
 };
 
 export const metadata: Metadata = {
