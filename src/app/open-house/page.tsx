@@ -7,7 +7,7 @@ import OpenHouseForm from "./OpenHouseForm";
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
   address: "1042 W 48th Ave, Vancouver, BC",
-  neighbourhood: "South Cambie",
+  neighbourhood: "Oakridge",
 };
 
 export const metadata: Metadata = {
