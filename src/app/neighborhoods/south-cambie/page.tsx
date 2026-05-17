@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What is the average home price in South Cambie, Vancouver?",
     answer:
-      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.44M (March 2026). Condos average around $1.00M, townhomes $1.53M, and detached homes $4.09M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
+      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.45M (April 2026). Condos average around $1.02M, townhomes $1.47M, and detached homes $4.17M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
   },
   {
     question: "Is South Cambie a good neighbourhood to buy in?",
@@ -224,9 +224,9 @@ export default async function SouthCambiePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units near SkyTrain along the Cambie Corridor. GVR benchmark: $1.02M. Attractive to first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Well-designed complexes, many from the Cambie Corridor Plan. GVR benchmark: $1.56M. Popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage homes and newer builds on generous lots. GVR benchmark: $4.16M. Many offer renovation or laneway suite potential." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units near SkyTrain along the Cambie Corridor. GVR benchmark: $1.03M. Attractive to first-time buyers and investors." },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Well-designed complexes, many from the Cambie Corridor Plan. GVR benchmark: $1.50M. Popular with young families." },
+                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage homes and newer builds on generous lots. GVR benchmark: $4.24M. Many offer renovation or laneway suite potential." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -238,7 +238,7 @@ export default async function SouthCambiePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.44M (March 2026, -15.5% YoY). Detached benchmark: $4.03M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
+                  GVR MLS® HPI composite benchmark: $1.45M (April 2026, -14.1% YoY). Detached benchmark: $4.11M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

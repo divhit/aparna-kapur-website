@@ -85,7 +85,7 @@ export default function EquityLandingPage() {
             })}
           </div>
           <p className="text-[11px] text-warm-400 mt-4 text-center">
-            Source: GVR MLS HPI Benchmark, March 2026
+            Source: GVR MLS HPI Benchmark, April 2026
           </p>
         </div>
       </section>

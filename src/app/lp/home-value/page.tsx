@@ -130,7 +130,7 @@ export default function HomeValueLandingPage() {
                 ))}
               </div>
               <p className="text-[11px] text-warm-400 mt-4">
-                Source: GVR MLS HPI Benchmark, March 2026. Individual property
+                Source: GVR MLS HPI Benchmark, April 2026. Individual property
                 values vary based on size, condition, and specific location.
               </p>
             </div>

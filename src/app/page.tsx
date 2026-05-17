@@ -9,32 +9,38 @@ const neighborhoods = [
   {
     name: "South Cambie",
     slug: "south-cambie",
-    description: "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
+    description:
+      "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
     image: "/images/neighborhoods/south-cambie.jpg",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
-    description: "Vibrant arts scene, craft breweries, and strong community spirit",
+    description:
+      "Vibrant arts scene, craft breweries, and strong community spirit",
     image: "/images/neighborhoods/riley-park.jpg",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
-    description: "Upscale village living with boutique shopping and elegant heritage homes",
+    description:
+      "Upscale village living with boutique shopping and elegant heritage homes",
     image: "/images/neighborhoods/kerrisdale.jpg",
   },
   {
     name: "Cambie Corridor",
     slug: "cambie-corridor",
-    description: "Transit-oriented living along Vancouver's most dynamic growth corridor",
+    description:
+      "Transit-oriented living along Vancouver's most dynamic growth corridor",
     image: "/images/neighborhoods/cambie-corridor.webp",
   },
   {
     name: "Marpole",
     slug: "marpole",
-    description: "A family-friendly community with historic charm and easy airport access",
-    image: "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    description:
+      "A family-friendly community with historic charm and easy airport access",
+    image:
+      "https://images.pexels.com/photos/1417252/pexels-photo-1417252.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
   },
 ];
 
@@ -44,7 +50,10 @@ export default function HomePage() {
       {/* SECTION 1: Full-screen Hero with Slideshow */}
       <HeroSlideshow height="full">
         <div className="text-center px-6 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
+            style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
+          >
             Aparna Kapur
           </h1>
           <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-12 max-w-2xl mx-auto">
@@ -115,20 +124,23 @@ export default function HomePage() {
                 Hi, I&apos;m Aparna
               </h2>
               <p className="text-warm-600 leading-relaxed mb-4">
-                I live and work on Vancouver&apos;s south side. Oakridge, Marpole, South Cambie, Kerrisdale.
-                I walk these neighbourhoods every week. I know which streets flood with traffic at 5pm,
-                which blocks are getting rezoned, and which buildings have the best strata management.
-                That kind of knowledge only comes from being here.
+                I live and work on Vancouver&apos;s south side. Oakridge,
+                Marpole, South Cambie, Kerrisdale. I walk these neighbourhoods
+                every week. I know which streets flood with traffic at 5pm,
+                which blocks are getting rezoned, and which buildings have the
+                best strata management. That kind of knowledge only comes from
+                being here.
               </p>
               <p className="text-warm-600 leading-relaxed mb-4">
-                When you work with me, you get one person, not a team, not a junior associate.
-                I pick up the phone, I show up to every inspection, and I will tell you straight if a
-                property is not worth your money.
+                When you work with me, you get one person, not a team, not a
+                junior associate. I pick up the phone, I show up to every
+                inspection, and I will tell you straight if a property is not
+                worth your money.
               </p>
               <p className="text-warm-600 leading-relaxed mb-6">
-                I am with Oakwyn Realty because they are a top
-                brokerage in Vancouver, and that gives my clients access to market intelligence and a
-                network that makes a real difference.
+                I am with Oakwyn Realty because they are a top brokerage in
+                Vancouver, and that gives my clients access to market
+                intelligence and a network that makes a real difference.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/about/why-work-with-me" variant="primary">
@@ -140,58 +152,95 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3b: March 2026 Market Snapshot */}
+      {/* SECTION 3b: April 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
-            March 2026, Vancouver
+            April 2026, Vancouver
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Continuing to soften</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">$1.08M</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                Slow, steady erosion
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                $1.10M
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Composite<br />Benchmark Price
+                Composite
+                <br />
+                Benchmark Price
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Down 0.6% from February</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-0.6%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                Down 0.6% from March
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                -0.6%
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Composite Benchmark<br />Month-Over-Month
+                Composite Benchmark
+                <br />
+                Month-Over-Month
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Inventory climbing</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">13,520</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                37.9% above 10-yr avg
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                16,236
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Active<br />Listings
+                Active
+                <br />
+                Listings
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Significant jump YoY</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">+29.4%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                Flat versus last year
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                +0.2%
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Active Listings<br />Year-Over-Year
+                Active Listings
+                <br />
+                Year-Over-Year
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Slightly fewer than last year</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">-4.2%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                Slightly fewer than last year
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                -2.4%
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                New Listings vs.<br />March 2025
+                New Listings vs.
+                <br />
+                April 2025
               </p>
             </div>
             <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">Favouring buyers</p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">10.5%</p>
+              <p className="text-xs text-teal-600 italic font-medium mb-2">
+                Edging toward balanced
+              </p>
+              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                13.5%
+              </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Sales-to-Active<br />Ratio
+                Sales-to-Active
+                <br />
+                Ratio
               </p>
             </div>
           </div>
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
-            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull; March 2026
+            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull;
+            April 2026
           </p>
         </div>
       </section>
@@ -264,8 +313,18 @@ export default function HomePage() {
           </p>
           <span className="inline-flex items-center text-white text-sm font-medium uppercase tracking-wider group-hover:text-teal-300 transition-colors">
             Explore the Oakridge Guide
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </span>
         </div>
@@ -283,14 +342,17 @@ export default function HomePage() {
             Vancouver Real Estate Agent — Oakridge Specialist
           </h2>
           <p className="text-white/70 text-sm leading-relaxed mb-4">
-            Aparna Kapur is a licensed real estate agent in Vancouver, BC, with Oakwyn Realty Ltd.
-            She specializes in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.
-            Aparna lives on Vancouver&apos;s south side and provides personalized service for buyers and sellers,
-            handling every transaction personally from consultation to closing.
+            Aparna Kapur is a licensed real estate agent in Vancouver, BC, with
+            Oakwyn Realty Ltd. She specializes in Oakridge, Marpole, South
+            Cambie, Riley Park, Kerrisdale, and the Cambie Corridor. Aparna
+            lives on Vancouver&apos;s south side and provides personalized
+            service for buyers and sellers, handling every transaction
+            personally from consultation to closing.
           </p>
           <p className="text-white/70 text-sm leading-relaxed mb-6">
-            Oakwyn Realty is one of British Columbia&apos;s largest independent brokerages with over 900 agents
-            and $6.3 billion in annual sales. Aparna can be reached at 604-612-7694.
+            Oakwyn Realty is one of British Columbia&apos;s largest independent
+            brokerages with over 900 agents and $6.3 billion in annual sales.
+            Aparna can be reached at 604-612-7694.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

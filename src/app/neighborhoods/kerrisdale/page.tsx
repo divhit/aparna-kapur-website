@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What is the average home price in Kerrisdale, Vancouver?",
     answer:
-      "As of early 2026, GVR MLS\u00ae HPI benchmarks place Kerrisdale detached homes at approximately $2.98M, condos at $974K, and townhomes at $1.66M. Heritage estates on larger lots can exceed $5M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
+      "As of April 2026, GVR MLS\u00ae HPI benchmarks place Kerrisdale detached homes at approximately $3.04M, condos at $987K, and townhomes at $1.59M. Heritage estates on larger lots can exceed $5M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
   },
   {
     question: "Is Kerrisdale a good neighbourhood to buy in?",

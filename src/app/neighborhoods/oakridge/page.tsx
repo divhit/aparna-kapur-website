@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How much does a home cost in Oakridge Vancouver?",
     answer:
-      "GVR MLS\u00ae HPI benchmarks (March 2026): condos $988K, townhomes $1.61M, detached $3.29M. Composite benchmark: $1.49M. Prices vary by size, condition, and proximity to SkyTrain and Oakridge Park.",
+      "GVR MLS\u00ae HPI benchmarks (April 2026): condos $1.00M, townhomes $1.55M, detached $3.35M. Composite benchmark: $1.50M. Prices vary by size, condition, and proximity to SkyTrain and Oakridge Park.",
   },
   {
     question: "What is the Oakridge Park redevelopment?",
@@ -314,9 +314,9 @@ export default async function OakridgePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$600K - $1.2M", desc: "Modern units near SkyTrain and Oakridge Park. GVR benchmark: $988K. Popular with first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: "Multi-level homes with more space. GVR benchmark: $1.61M. Popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Established streets. GVR benchmark: $3.29M. Many mid-century homes with renovation potential or newer builds." },
+                    { type: "Condominiums", range: "$600K - $1.2M", desc: "Modern units near SkyTrain and Oakridge Park. GVR benchmark: $1.00M. Popular with first-time buyers and investors." },
+                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: "Multi-level homes with more space. GVR benchmark: $1.55M. Popular with young families." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Established streets. GVR benchmark: $3.35M. Many mid-century homes with renovation potential or newer builds." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
@@ -328,7 +328,7 @@ export default async function OakridgePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.49M (March 2026, -11.1% YoY). Long-term appreciation driven by transit investment, the Oakridge Park project, and central location.
+                  GVR MLS® HPI composite benchmark: $1.50M (April 2026, -9.7% YoY). Long-term appreciation driven by transit investment, the Oakridge Park project, and central location.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
@@ -486,7 +486,7 @@ export default async function OakridgePage() {
                       <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
                     </summary>
                     <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
-                      As of January 2026, the GVR MLS® HPI composite benchmark price in Oakridge is <strong className="text-teal-900">$1.49M</strong>. Broken down: condos average around $998K, townhomes $1.64M, and detached homes $3.36M. Prices vary based on proximity to SkyTrain stations, Oakridge Park, and lot size. For a personalized market assessment, contact <strong className="text-teal-900">Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a>.
+                      As of April 2026, the GVR MLS® HPI composite benchmark price in Oakridge is <strong className="text-teal-900">$1.50M</strong>. Broken down: condos average around $1.00M, townhomes $1.55M, and detached homes $3.35M. Prices vary based on proximity to SkyTrain stations, Oakridge Park, and lot size. For a personalized market assessment, contact <strong className="text-teal-900">Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a>.
                     </div>
                   </details>
 
@@ -612,7 +612,7 @@ export default async function OakridgePage() {
                 name: "What is the average home price in Oakridge, Vancouver?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "As of March 2026, the GVR MLS® HPI composite benchmark price in Oakridge is $1.49M. Condos average around $988K, townhomes $1.61M, and detached homes $3.29M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
+                  text: "As of April 2026, the GVR MLS® HPI composite benchmark price in Oakridge is $1.50M. Condos average around $1.00M, townhomes $1.55M, and detached homes $3.35M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
                 },
               },
               {

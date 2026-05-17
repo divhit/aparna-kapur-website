@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the average home price in Cambie Corridor, Vancouver?",
     answer:
-      "The composite benchmark price in Cambie Corridor is $1.46M (January 2026). Condos average around $1.01M, townhomes $1.75M, and detached homes $2.43M. Prices vary by proximity to SkyTrain stations and development nodes. Contact Aparna Kapur at 604-612-7694 for a current market evaluation tailored to your budget and goals.",
+      "The composite benchmark price in Cambie Corridor is $1.47M (April 2026). Condos average around $1.02M, townhomes $1.68M, and detached homes $2.48M. Prices vary by proximity to SkyTrain stations and development nodes. Contact Aparna Kapur at 604-612-7694 for a current market evaluation tailored to your budget and goals.",
   },
   {
     question: "What is the Cambie Corridor rezoning?",
@@ -259,7 +259,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Composite benchmark: $1.46M (March 2026, -19.8% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
+                  Composite benchmark: $1.47M (April 2026, -18.4% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
