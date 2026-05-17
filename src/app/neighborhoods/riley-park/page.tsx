@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the average home price in Riley Park, Vancouver?",
     answer:
-      "As of April 2026, the Vancouver East detached benchmark is $1.68M. Condos start around $665K and townhomes around $1.03M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
+      "As of April 2026, the GVR MLS\u00ae HPI Main sub-area (which covers Riley Park) composite benchmark is $1.62M. The Vancouver East detached benchmark is $1.68M, condos start around $665K, and townhomes around $1.03M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
   },
   {
     question: "Is Riley Park a good neighbourhood to buy in?",
@@ -239,7 +239,7 @@ export default async function RileyParkPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Vancouver East detached benchmark: $1.68M (April 2026, -10.9% YoY). Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
+                  Main sub-area composite benchmark: $1.62M (April 2026, -3.8% YoY). Vancouver East detached benchmark: $1.68M. Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
