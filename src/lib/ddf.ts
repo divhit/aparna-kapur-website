@@ -466,6 +466,41 @@ export async function fetchListings(
   return result;
 }
 
+/**
+ * Pull up to `targetCount` listings for the map by paginating in parallel.
+ * DDF rejects $top > ~100 on wide bounding boxes, so we issue several pages
+ * of 100 concurrently and merge.
+ */
+export async function fetchListingsForMap(
+  options: Omit<ListingQueryOptions, "top" | "skip"> & { targetCount?: number },
+): Promise<DDFProperty[]> {
+  const target = Math.min(options.targetCount ?? 300, 500);
+  const pageSize = 100;
+  const pages = Math.ceil(target / pageSize);
+
+  const requests = Array.from({ length: pages }, (_, i) =>
+    fetchListings({
+      ...options,
+      top: pageSize,
+      skip: i * pageSize,
+    }),
+  );
+
+  const results = await Promise.all(requests);
+  const merged: DDFProperty[] = [];
+  const seen = new Set<string>();
+  for (const r of results) {
+    for (const l of r.listings) {
+      if (!seen.has(l.listingKey)) {
+        seen.add(l.listingKey);
+        merged.push(l);
+        if (merged.length >= target) return merged;
+      }
+    }
+  }
+  return merged;
+}
+
 // ---------------------------------------------------------------------------
 // Landing page fetcher — uses wider bounds, supports custom bounds override
 // ---------------------------------------------------------------------------

@@ -5,7 +5,7 @@ import PageBanner from "@/components/hero/PageBanner";
 import ListingCard from "@/components/listings/ListingCard";
 import SearchFilters from "@/components/listings/SearchFilters";
 import ListingsMap from "@/components/listings/ListingsMap";
-import { fetchListings } from "@/lib/ddf";
+import { fetchListings, fetchListingsForMap } from "@/lib/ddf";
 
 export const metadata: Metadata = {
   title: "Search Homes | Vancouver MLS Listings",
@@ -51,19 +51,18 @@ export default async function SearchPage({
   };
 
   // Fetch paginated results and all map pins in parallel
-  const [{ listings, totalCount }, { listings: mapListings }] =
-    await Promise.all([
-      fetchListings({
-        ...sharedFilters,
-        orderby: params.sort || "ModificationTimestamp desc",
-        top: PER_PAGE,
-        skip: (page - 1) * PER_PAGE,
-      }),
-      fetchListings({
-        ...sharedFilters,
-        top: 250,
-      }),
-    ]);
+  const [{ listings, totalCount }, mapListings] = await Promise.all([
+    fetchListings({
+      ...sharedFilters,
+      orderby: params.sort || "ModificationTimestamp desc",
+      top: PER_PAGE,
+      skip: (page - 1) * PER_PAGE,
+    }),
+    fetchListingsForMap({
+      ...sharedFilters,
+      targetCount: 300,
+    }),
+  ]);
 
   const totalPages = totalCount ? Math.ceil(totalCount / PER_PAGE) : 1;
 
