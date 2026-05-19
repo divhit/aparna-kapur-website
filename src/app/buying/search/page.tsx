@@ -26,6 +26,7 @@ export default async function SearchPage({
     baths?: string;
     sort?: string;
     page?: string;
+    address?: string;
   }>;
 }) {
   const params = await searchParams;
@@ -43,7 +44,8 @@ export default async function SearchPage({
     neighbourhood: params.neighbourhood || undefined,
     minPrice,
     maxPrice,
-    propertySubType: params.type || undefined,
+    structureType: params.type || undefined,
+    addressContains: params.address?.trim() || undefined,
     minBedrooms: params.beds ? parseInt(params.beds, 10) : undefined,
     minBathrooms: params.baths ? parseInt(params.baths, 10) : undefined,
   };
@@ -70,6 +72,7 @@ export default async function SearchPage({
     if (params.neighbourhood) sp.set("neighbourhood", params.neighbourhood);
     if (params.price) sp.set("price", params.price);
     if (params.type) sp.set("type", params.type);
+    if (params.address) sp.set("address", params.address);
     if (params.beds) sp.set("beds", params.beds);
     if (params.baths) sp.set("baths", params.baths);
     if (params.sort) sp.set("sort", params.sort);
@@ -110,8 +113,7 @@ export default async function SearchPage({
           {/* Results count */}
           {totalCount != null && (
             <p className="text-sm text-warm-500 mb-6">
-              {totalCount} active{" "}
-              {totalCount === 1 ? "listing" : "listings"}
+              {totalCount} active {totalCount === 1 ? "listing" : "listings"}
               {params.neighbourhood
                 ? ` in ${params.neighbourhood.replace(/-/g, " ")}`
                 : ""}

@@ -53,11 +53,22 @@ export type ListingQueryOptions = {
   minPrice?: number;
   maxPrice?: number;
   propertySubType?: string;
+  structureType?: string;
+  addressContains?: string;
   neighbourhood?: string;
   minBedrooms?: number;
   minBathrooms?: number;
   orderby?: string;
 };
+
+const NON_RESIDENTIAL_SUBTYPES = [
+  "Business",
+  "Industrial",
+  "Retail",
+  "Office",
+  "Vacant Land",
+  "Recreational",
+];
 
 // ---------------------------------------------------------------------------
 // Token management (module-level cache, server-only)
@@ -231,12 +242,27 @@ async function fetchPropertiesInBounds(
     if (options?.propertySubType) {
       filters.push(`PropertySubType eq '${options.propertySubType}'`);
     }
+    if (options?.structureType) {
+      filters.push(
+        `StructureType/any(s: s eq '${options.structureType.replace(/'/g, "''")}')`,
+      );
+    }
+    if (options?.addressContains) {
+      const escaped = options.addressContains.replace(/'/g, "''");
+      filters.push(`contains(UnparsedAddress,'${escaped}')`);
+    }
     if (options?.minBedrooms) {
       filters.push(`BedroomsTotal ge ${options.minBedrooms}`);
     }
     if (options?.minBathrooms) {
       filters.push(`BathroomsTotalInteger ge ${options.minBathrooms}`);
     }
+
+    // Residential only — exclude business/retail/industrial/office/land/recreational
+    const excludeClauses = NON_RESIDENTIAL_SUBTYPES.map(
+      (s) => `PropertySubType ne '${s}'`,
+    ).join(" and ");
+    filters.push(`(${excludeClauses})`);
 
     const params = new URLSearchParams({
       $filter: filters.join(" and "),
@@ -368,7 +394,11 @@ function filterResidentialOnly(listings: DDFProperty[]): DDFProperty[] {
     if (
       sub.includes("commercial") ||
       sub.includes("industrial") ||
-      sub.includes("retail")
+      sub.includes("retail") ||
+      sub.includes("business") ||
+      sub.includes("office") ||
+      sub.includes("vacant land") ||
+      sub.includes("recreational")
     )
       return false;
     if (struct.includes("commercial") || struct.includes("industrial"))
@@ -402,7 +432,9 @@ export async function fetchListings(
     }
   }
 
-  return fetchPropertiesInBounds(bounds, options);
+  const result = await fetchPropertiesInBounds(bounds, options);
+  result.listings = filterResidentialOnly(result.listings);
+  return result;
 }
 
 // ---------------------------------------------------------------------------
