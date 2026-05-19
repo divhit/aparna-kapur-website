@@ -299,6 +299,35 @@ async function fetchPropertiesInBounds(
 // Public API
 // ---------------------------------------------------------------------------
 
+export async function fetchListingByKey(
+  listingKey: string,
+): Promise<DDFProperty | null> {
+  if (!listingKey) return null;
+  try {
+    const token = await getAccessToken();
+    const escaped = listingKey.replace(/'/g, "''");
+    const params = new URLSearchParams({
+      $filter: `ListingKey eq '${escaped}'`,
+      $top: "1",
+    });
+    const url = `https://ddfapi.realtor.ca/odata/v1/Property?${params}`;
+    const res = await fetch(url, {
+      headers: { Authorization: `Bearer ${token}` },
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      console.error("DDF byKey error:", res.status, await res.text());
+      return null;
+    }
+    const data = await res.json();
+    const first = data.value?.[0];
+    return first ? mapDDFProperty(first) : null;
+  } catch (error) {
+    console.error("DDF byKey fetch error:", error);
+    return null;
+  }
+}
+
 const OPPORTUNITY_KEYWORDS = [
   "court order",
   "estate sale",

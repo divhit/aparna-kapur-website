@@ -14,9 +14,7 @@ export default function ListingCard({ listing }: { listing: DDFProperty }) {
 
   return (
     <a
-      href={listing.realtorUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+      href={`/property/${listing.listingKey}`}
       className="group bg-white rounded-xl overflow-hidden border border-warm-100 hover:shadow-lg hover:border-teal-200 transition-all"
     >
       {/* Image */}
@@ -69,10 +67,10 @@ export default function ListingCard({ listing }: { listing: DDFProperty }) {
         )}
       </div>
 
-      {/* REALTOR.ca link */}
+      {/* View details */}
       <div className="px-5 pb-4">
         <span className="text-[10px] text-teal-600 uppercase tracking-wider group-hover:text-teal-700 transition-colors flex items-center gap-1">
-          View on REALTOR.ca
+          View details
           <svg
             className="w-3 h-3 group-hover:translate-x-0.5 transition-transform"
             fill="none"
@@ -83,7 +81,7 @@ export default function ListingCard({ listing }: { listing: DDFProperty }) {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              d="M9 5l7 7-7 7"
             />
           </svg>
         </span>

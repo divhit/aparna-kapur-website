@@ -224,9 +224,7 @@ export default function SearchFilters() {
                 {suggestions.map((s) => (
                   <li key={s.listingKey}>
                     <a
-                      href={s.realtorUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={`/property/${s.listingKey}`}
                       className="flex items-center gap-3 px-3 py-2.5 hover:bg-teal-50 transition-colors"
                     >
                       {s.photo ? (

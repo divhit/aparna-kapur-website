@@ -1,6 +1,11 @@
 "use client";
 
-import { APIProvider, Map, AdvancedMarker, InfoWindow } from "@vis.gl/react-google-maps";
+import {
+  APIProvider,
+  Map,
+  AdvancedMarker,
+  InfoWindow,
+} from "@vis.gl/react-google-maps";
 import { useState } from "react";
 import type { DDFProperty } from "@/lib/ddf";
 
@@ -58,15 +63,14 @@ export default function ListingsMap({ listings }: { listings: DDFProperty[] }) {
                 <div className="text-xs text-gray-500">
                   {selected.bedrooms != null && `${selected.bedrooms} Bed `}
                   {selected.bathrooms != null && `${selected.bathrooms} Bath `}
-                  {selected.sqft != null && `${selected.sqft.toLocaleString()} sqft`}
+                  {selected.sqft != null &&
+                    `${selected.sqft.toLocaleString()} sqft`}
                 </div>
                 <a
-                  href={selected.realtorUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={`/property/${selected.listingKey}`}
                   className="text-xs text-teal-600 hover:underline mt-1 inline-block"
                 >
-                  View on REALTOR.ca
+                  View details
                 </a>
               </div>
             </InfoWindow>
