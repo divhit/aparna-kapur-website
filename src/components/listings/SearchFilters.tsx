@@ -2,15 +2,13 @@
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { NEIGHBOURHOODS as NEIGHBOURHOOD_LIB } from "@/lib/neighborhoods";
 
 const NEIGHBOURHOODS = [
-  { label: "All Neighbourhoods", value: "" },
-  { label: "Oakridge", value: "oakridge" },
-  { label: "Marpole", value: "marpole" },
-  { label: "South Cambie", value: "south-cambie" },
-  { label: "Riley Park", value: "riley-park" },
-  { label: "Kerrisdale", value: "kerrisdale" },
-  { label: "Cambie Corridor", value: "cambie-corridor" },
+  { label: "All Vancouver", value: "" },
+  ...Object.values(NEIGHBOURHOOD_LIB)
+    .map((n) => ({ label: n.name, value: n.slug }))
+    .sort((a, b) => a.label.localeCompare(b.label)),
 ];
 
 const PRICE_RANGES = [

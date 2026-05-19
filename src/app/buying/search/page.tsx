@@ -8,9 +8,9 @@ import ListingsMap from "@/components/listings/ListingsMap";
 import { fetchListings } from "@/lib/ddf";
 
 export const metadata: Metadata = {
-  title: "Search Homes | Vancouver South Side Listings",
+  title: "Search Homes | Vancouver MLS Listings",
   description:
-    "Search active MLS listings across Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and Cambie Corridor. Filter by price, type, and neighbourhood.",
+    "Search active MLS listings across every Vancouver neighbourhood — from Kitsilano and Downtown to Oakridge, Kerrisdale, and East Van. Filter by price, type, beds, baths, or address.",
 };
 
 const PER_PAGE = 12;
@@ -61,7 +61,7 @@ export default async function SearchPage({
       }),
       fetchListings({
         ...sharedFilters,
-        top: 100,
+        top: 250,
       }),
     ]);
 
@@ -92,7 +92,7 @@ export default async function SearchPage({
               Search Homes
             </h1>
             <p className="text-warm-600 mt-2">
-              Browse active listings across Vancouver&apos;s south side
+              Browse active listings across every Vancouver neighbourhood
             </p>
           </div>
 

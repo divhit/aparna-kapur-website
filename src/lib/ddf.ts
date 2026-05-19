@@ -452,7 +452,7 @@ export async function fetchFeaturedListings(): Promise<DDFProperty[]> {
 export async function fetchListings(
   options?: ListingQueryOptions,
 ): Promise<{ listings: DDFProperty[]; totalCount?: number }> {
-  let bounds = ALL_NEIGHBOURHOODS_BOUNDS;
+  let bounds = VANCOUVER_WIDE_BOUNDS;
 
   if (options?.neighbourhood) {
     const hood = NEIGHBOURHOODS[options.neighbourhood];
