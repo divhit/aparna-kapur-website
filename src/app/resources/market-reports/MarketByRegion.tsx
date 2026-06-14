@@ -605,6 +605,1158 @@ const monthlyData: MonthEntry[] = [
       },
     ],
   },
+  {
+    month: "May",
+    year: "2025",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.47M",
+        townhome: "$1.61M",
+        condo: "$1.11M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.23M",
+        townhome: "$1.54M",
+        condo: "$772K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.38M",
+        townhome: "$1.52M",
+        condo: "$1.13M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.10M",
+        townhome: "$1.19M",
+        condo: "$1.02M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.50M",
+        townhome: "$1.63M",
+        condo: "$1.08M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.89M",
+        townhome: "$1.71M",
+        condo: "$1.12M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "April",
+    year: "2025",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.66M",
+        townhome: "$1.61M",
+        condo: "$1.13M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.34M",
+        townhome: "$1.54M",
+        condo: "$780K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.56M",
+        townhome: "$1.48M",
+        condo: "$1.14M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.14M",
+        townhome: "$1.21M",
+        condo: "$1.02M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.57M",
+        townhome: "$1.63M",
+        condo: "$1.10M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.88M",
+        townhome: "$1.71M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "March",
+    year: "2025",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.68M",
+        townhome: "$1.70M",
+        condo: "$1.13M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.36M",
+        townhome: "$1.61M",
+        condo: "$776K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.77M",
+        townhome: "$1.57M",
+        condo: "$1.14M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.23M",
+        townhome: "$1.27M",
+        condo: "$1.04M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.58M",
+        townhome: "$1.72M",
+        condo: "$1.10M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.06M",
+        townhome: "$1.80M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "February",
+    year: "2025",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.62M",
+        townhome: "$1.67M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.40M",
+        townhome: "$1.62M",
+        condo: "$780K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.69M",
+        townhome: "$1.59M",
+        condo: "$1.15M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.21M",
+        townhome: "$1.28M",
+        condo: "$969K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.54M",
+        townhome: "$1.70M",
+        condo: "$1.13M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.13M",
+        townhome: "$1.79M",
+        condo: "$1.12M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "January",
+    year: "2025",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.48M",
+        townhome: "$1.64M",
+        condo: "$1.08M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.28M",
+        townhome: "$1.59M",
+        condo: "$752K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.51M",
+        townhome: "$1.55M",
+        condo: "$1.11M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.08M",
+        townhome: "$1.23M",
+        condo: "$942K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.63M",
+        townhome: "$1.66M",
+        condo: "$1.16M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.78M",
+        townhome: "$1.77M",
+        condo: "$1.09M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "December",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.60M",
+        townhome: "$1.73M",
+        condo: "$1.09M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.27M",
+        townhome: "$1.69M",
+        condo: "$762K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.62M",
+        townhome: "$1.64M",
+        condo: "$1.13M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.15M",
+        townhome: "$1.30M",
+        condo: "$989K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.57M",
+        townhome: "$1.78M",
+        condo: "$1.12M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.88M",
+        townhome: "$1.86M",
+        condo: "$1.11M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "November",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.50M",
+        townhome: "$1.72M",
+        condo: "$1.09M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.31M",
+        townhome: "$1.69M",
+        condo: "$766K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.44M",
+        townhome: "$1.65M",
+        condo: "$1.12M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.07M",
+        townhome: "$1.31M",
+        condo: "$952K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.73M",
+        townhome: "$1.76M",
+        condo: "$1.15M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.72M",
+        townhome: "$1.85M",
+        condo: "$1.10M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "October",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.61M",
+        townhome: "$1.66M",
+        condo: "$1.11M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.43M",
+        townhome: "$1.62M",
+        condo: "$770K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.69M",
+        townhome: "$1.57M",
+        condo: "$1.13M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.15M",
+        townhome: "$1.26M",
+        condo: "$980K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.38M",
+        townhome: "$1.69M",
+        condo: "$1.07M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.71M",
+        townhome: "$1.81M",
+        condo: "$1.12M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "September",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.48M",
+        townhome: "$1.60M",
+        condo: "$1.10M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.41M",
+        townhome: "$1.58M",
+        condo: "$769K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.35M",
+        townhome: "$1.52M",
+        condo: "$1.13M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.03M",
+        townhome: "$1.22M",
+        condo: "$1.00M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.71M",
+        townhome: "$1.64M",
+        condo: "$1.08M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.92M",
+        townhome: "$1.74M",
+        condo: "$1.11M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "August",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.59M",
+        townhome: "$1.65M",
+        condo: "$1.13M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.43M",
+        townhome: "$1.63M",
+        condo: "$790K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.52M",
+        townhome: "$1.58M",
+        condo: "$1.17M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.10M",
+        townhome: "$1.26M",
+        condo: "$1.01M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.71M",
+        townhome: "$1.70M",
+        condo: "$1.07M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.83M",
+        townhome: "$1.78M",
+        condo: "$1.14M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "July",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.48M",
+        townhome: "$1.64M",
+        condo: "$1.14M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.45M",
+        townhome: "$1.62M",
+        condo: "$786K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.30M",
+        townhome: "$1.53M",
+        condo: "$1.17M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.04M",
+        townhome: "$1.25M",
+        condo: "$1.03M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.70M",
+        townhome: "$1.67M",
+        condo: "$1.06M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.95M",
+        townhome: "$1.77M",
+        condo: "$1.15M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "June",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.55M",
+        townhome: "$1.67M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.49M",
+        townhome: "$1.65M",
+        condo: "$786K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.46M",
+        townhome: "$1.55M",
+        condo: "$1.16M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.12M",
+        townhome: "$1.25M",
+        condo: "$1.05M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.74M",
+        townhome: "$1.71M",
+        condo: "$1.09M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.17M",
+        townhome: "$1.79M",
+        condo: "$1.14M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "May",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.42M",
+        townhome: "$1.68M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.49M",
+        townhome: "$1.65M",
+        condo: "$768K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.47M",
+        townhome: "$1.59M",
+        condo: "$1.15M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.09M",
+        townhome: "$1.28M",
+        condo: "$1.04M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.77M",
+        townhome: "$1.71M",
+        condo: "$1.06M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.11M",
+        townhome: "$1.80M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "April",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.50M",
+        townhome: "$1.67M",
+        condo: "$1.11M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.52M",
+        townhome: "$1.66M",
+        condo: "$778K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.47M",
+        townhome: "$1.56M",
+        condo: "$1.14M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.12M",
+        townhome: "$1.24M",
+        condo: "$1.03M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.62M",
+        townhome: "$1.72M",
+        condo: "$1.07M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.01M",
+        townhome: "$1.80M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "March",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.50M",
+        townhome: "$1.68M",
+        condo: "$1.11M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.45M",
+        townhome: "$1.65M",
+        condo: "$782K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.28M",
+        townhome: "$1.55M",
+        condo: "$1.15M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.07M",
+        townhome: "$1.26M",
+        condo: "$1.02M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.56M",
+        townhome: "$1.73M",
+        condo: "$1.09M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.96M",
+        townhome: "$1.81M",
+        condo: "$1.14M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "February",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.34M",
+        townhome: "$1.62M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.41M",
+        townhome: "$1.62M",
+        condo: "$783K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.32M",
+        townhome: "$1.53M",
+        condo: "$1.14M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$1.97M",
+        townhome: "$1.22M",
+        condo: "$994K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.53M",
+        townhome: "$1.66M",
+        condo: "$1.12M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.82M",
+        townhome: "$1.76M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "January",
+    year: "2024",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.38M",
+        townhome: "$1.61M",
+        condo: "$1.10M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.30M",
+        townhome: "$1.58M",
+        condo: "$773K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.44M",
+        townhome: "$1.48M",
+        condo: "$1.12M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.00M",
+        townhome: "$1.17M",
+        condo: "$988K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.36M",
+        townhome: "$1.64M",
+        condo: "$1.08M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.00M",
+        townhome: "$1.70M",
+        condo: "$1.10M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "December",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.57M",
+        townhome: "$1.60M",
+        condo: "$1.11M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.38M",
+        townhome: "$1.56M",
+        condo: "$774K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.38M",
+        townhome: "$1.50M",
+        condo: "$1.12M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.07M",
+        townhome: "$1.18M",
+        condo: "$974K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.50M",
+        townhome: "$1.64M",
+        condo: "$1.09M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.09M",
+        townhome: "$1.72M",
+        condo: "$1.12M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "November",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.59M",
+        townhome: "$1.68M",
+        condo: "$1.10M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.42M",
+        townhome: "$1.64M",
+        condo: "$762K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.75M",
+        townhome: "$1.57M",
+        condo: "$1.10M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.08M",
+        townhome: "$1.23M",
+        condo: "$976K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.48M",
+        townhome: "$1.73M",
+        condo: "$1.04M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.91M",
+        townhome: "$1.77M",
+        condo: "$1.10M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "October",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.53M",
+        townhome: "$1.70M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.28M",
+        townhome: "$1.68M",
+        condo: "$780K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.59M",
+        townhome: "$1.57M",
+        condo: "$1.13M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.05M",
+        townhome: "$1.25M",
+        condo: "$986K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.49M",
+        townhome: "$1.75M",
+        condo: "$1.08M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.88M",
+        townhome: "$1.82M",
+        condo: "$1.12M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "September",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.77M",
+        townhome: "$1.68M",
+        condo: "$1.12M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.32M",
+        townhome: "$1.64M",
+        condo: "$783K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.76M",
+        townhome: "$1.55M",
+        condo: "$1.15M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.15M",
+        townhome: "$1.21M",
+        condo: "$1.02M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.58M",
+        townhome: "$1.72M",
+        condo: "$1.10M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.10M",
+        townhome: "$1.78M",
+        condo: "$1.13M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "August",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.73M",
+        townhome: "$1.66M",
+        condo: "$1.14M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.33M",
+        townhome: "$1.63M",
+        condo: "$790K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.72M",
+        townhome: "$1.56M",
+        condo: "$1.18M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.17M",
+        townhome: "$1.21M",
+        condo: "$1.07M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.69M",
+        townhome: "$1.70M",
+        condo: "$1.05M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.18M",
+        townhome: "$1.76M",
+        condo: "$1.15M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "July",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.78M",
+        townhome: "$1.70M",
+        condo: "$1.16M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.30M",
+        townhome: "$1.67M",
+        condo: "$810K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.69M",
+        townhome: "$1.56M",
+        condo: "$1.19M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.13M",
+        townhome: "$1.23M",
+        condo: "$1.01M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.56M",
+        townhome: "$1.74M",
+        condo: "$1.02M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$3.05M",
+        townhome: "$1.80M",
+        condo: "$1.17M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
+    month: "June",
+    year: "2023",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.73M",
+        townhome: "$1.66M",
+        condo: "$1.15M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$2.34M",
+        townhome: "$1.63M",
+        condo: "$789K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.68M",
+        townhome: "$1.57M",
+        condo: "$1.18M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$2.12M",
+        townhome: "$1.22M",
+        condo: "$1.01M",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.63M",
+        townhome: "$1.71M",
+        condo: "$1.02M",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.83M",
+        townhome: "$1.80M",
+        condo: "$1.16M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
 ];
 
 /* ── helpers ── */
@@ -804,7 +1956,7 @@ export default function MarketByRegion() {
                 {activeRegion.name}
               </h3>
               <p className="text-sm text-warm-500">
-                Benchmark prices, Jun 2025 &ndash; May 2026
+                Benchmark prices, Jun 2023 &ndash; May 2026
               </p>
             </div>
             <button
@@ -841,9 +1993,11 @@ export default function MarketByRegion() {
                 />
                 <XAxis
                   dataKey="month"
-                  tick={{ fontSize: 12, fill: "#8a8070" }}
+                  tick={{ fontSize: 11, fill: "#8a8070" }}
                   axisLine={{ stroke: "#e8e4df" }}
                   tickLine={false}
+                  interval="preserveStartEnd"
+                  minTickGap={28}
                 />
                 <YAxis
                   tickFormatter={formatPriceShort}
@@ -864,7 +2018,7 @@ export default function MarketByRegion() {
                   name="Detached"
                   stroke="#0f766e"
                   strokeWidth={2.5}
-                  dot={{ r: 3.5, fill: "#0f766e" }}
+                  dot={false}
                   activeDot={{ r: 5 }}
                 />
                 <Line
@@ -873,7 +2027,7 @@ export default function MarketByRegion() {
                   name="Townhome"
                   stroke="#5eead4"
                   strokeWidth={2.5}
-                  dot={{ r: 3.5, fill: "#5eead4" }}
+                  dot={false}
                   activeDot={{ r: 5 }}
                 />
                 <Line
@@ -882,7 +2036,7 @@ export default function MarketByRegion() {
                   name="Condo"
                   stroke="#c2956a"
                   strokeWidth={2.5}
-                  dot={{ r: 3.5, fill: "#c2956a" }}
+                  dot={false}
                   activeDot={{ r: 5 }}
                 />
               </LineChart>
