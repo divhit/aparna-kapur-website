@@ -6,8 +6,8 @@ import OpenHouseForm from "./OpenHouseForm";
 // The QR code URL (/open-house) stays the same.
 // ──────────────────────────────────────────────
 const CURRENT_LISTING = {
-  address: "203 - 2287 W 3rd Ave, Vancouver, BC",
-  neighbourhood: "Kitsilano",
+  address: "1042 W 48th Ave, Vancouver, BC",
+  neighbourhood: "Oakridge",
 };
 
 export const metadata: Metadata = {
