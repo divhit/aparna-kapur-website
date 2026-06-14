@@ -152,16 +152,16 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3b: April 2026 Market Snapshot */}
+      {/* SECTION 3b: May 2026 Market Snapshot */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
-            April 2026, Vancouver
+            May 2026, Vancouver
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Slow, steady erosion
+                Down 6.2% year-over-year
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
                 $1.10M
@@ -174,10 +174,10 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Down 0.6% from March
+                Up 0.2% from April
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                -0.6%
+                +0.2%
               </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Composite Benchmark
@@ -187,10 +187,10 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                37.9% above 10-yr avg
+                34.6% above 10-yr avg
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                16,236
+                16,917
               </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Active
@@ -200,10 +200,10 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Flat versus last year
+                Roughly flat vs last year
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                +0.2%
+                -1.0%
               </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Active Listings
@@ -213,23 +213,23 @@ export default function HomePage() {
             </div>
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Slightly fewer than last year
+                Fewer than last year
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                -2.4%
+                -7.6%
               </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 New Listings vs.
                 <br />
-                April 2025
+                May 2025
               </p>
             </div>
             <div>
               <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Edging toward balanced
+                Balanced territory
               </p>
               <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                13.5%
+                13.1%
               </p>
               <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
                 Sales-to-Active
@@ -240,7 +240,7 @@ export default function HomePage() {
           </div>
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
             Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull;
-            April 2026
+            May 2026
           </p>
         </div>
       </section>
