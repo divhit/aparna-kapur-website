@@ -1,0 +1,1603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Seller's Guide — Aparna Kapur | Oakwyn Realty</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --teal-950: #0a2e2a;
+        --teal-900: #0f3d38;
+        --teal-800: #165550;
+        --teal-700: #1a6b63;
+        --teal-600: #1f8278;
+        --teal-500: #2a9d8f;
+        --teal-100: #d8efeb;
+        --teal-50: #edf7f5;
+        --gold-700: #a67c14;
+        --gold-600: #c49a1a;
+        --gold-500: #d4a828;
+        --gold-100: #f9f0d3;
+        --gold-50: #fdf8eb;
+        --warm-50: #faf8f5;
+        --warm-100: #f5f0ea;
+        --warm-200: #ebe3d8;
+        --warm-300: #d9cebf;
+        --warm-400: #bfae98;
+        --warm-500: #a69278;
+        --warm-600: #8a7660;
+        --warm-700: #6e5d4c;
+        --warm-900: #3d352e;
+        --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+        --sans: "Raleway", system-ui, -apple-system, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      body {
+        font-family: var(--sans);
+        color: var(--warm-900);
+        background: var(--warm-200);
+        line-height: 1.7;
+        font-weight: 400;
+        font-size: 15px;
+      }
+      .page {
+        width: 8.5in;
+        min-height: 11in;
+        margin: 0 auto;
+        background: #fff;
+        position: relative;
+        padding: 0.9in 0.95in;
+        overflow: hidden;
+      }
+      .page + .page {
+        margin-top: 24px;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--serif);
+        color: var(--teal-950);
+        font-weight: 600;
+        line-height: 1.15;
+      }
+      .serif {
+        font-family: var(--serif);
+      }
+      .eyebrow {
+        font-family: var(--sans);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--teal-600);
+      }
+      .gold-rule {
+        width: 48px;
+        height: 3px;
+        background: var(--gold-500);
+        border-radius: 2px;
+        margin: 14px 0 22px;
+      }
+      p {
+        margin-bottom: 12px;
+        color: var(--warm-700);
+      }
+      strong {
+        color: var(--warm-900);
+        font-weight: 600;
+      }
+      a {
+        color: var(--teal-700);
+        text-decoration: none;
+      }
+      ul,
+      ol {
+        margin: 0 0 14px 1.1em;
+        color: var(--warm-700);
+      }
+      li {
+        margin-bottom: 7px;
+      }
+
+      /* ---------- COVER ---------- */
+      .cover {
+        background: linear-gradient(
+          160deg,
+          var(--teal-950) 0%,
+          var(--teal-900) 55%,
+          var(--teal-800) 100%
+        );
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1.1in 1in;
+      }
+      .cover h1,
+      .cover h2,
+      .cover h3 {
+        color: #fff;
+      }
+      .cover-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .brand-mark {
+        font-family: var(--serif);
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .brand-mark small {
+        display: block;
+        font-family: var(--sans);
+        font-size: 10px;
+        letter-spacing: 0.28em;
+        font-weight: 600;
+        color: var(--teal-300, #7ec8be);
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+      .cover-eyebrow {
+        color: var(--gold-300, #ebd37a);
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .cover-title {
+        font-size: 78px;
+        line-height: 0.98;
+        font-weight: 600;
+        margin: 18px 0 10px;
+      }
+      .cover-title em {
+        color: var(--gold-300, #ebd37a);
+        font-style: italic;
+      }
+      .cover-sub {
+        font-family: var(--serif);
+        font-size: 25px;
+        font-style: italic;
+        color: #cfe6e1;
+        font-weight: 400;
+        max-width: 6.2in;
+      }
+      .cover-foot {
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 13px;
+        color: #bcd8d2;
+      }
+      .cover-foot .name {
+        font-family: var(--serif);
+        font-size: 21px;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      /* ---------- SHARED ---------- */
+      .section-head {
+        margin-bottom: 22px;
+      }
+      .section-head h2 {
+        font-size: 40px;
+        font-style: italic;
+      }
+      .lead {
+        font-size: 17px;
+        color: var(--warm-700);
+        font-family: var(--serif);
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+      }
+      .card {
+        background: var(--warm-50);
+        border: 1px solid var(--warm-200);
+        border-radius: 14px;
+        padding: 22px 24px;
+      }
+      .card.teal {
+        background: var(--teal-50);
+        border-color: var(--teal-100);
+      }
+      .card.gold {
+        background: var(--gold-50);
+        border-color: var(--gold-100);
+      }
+      .card h3 {
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+      .card h4 {
+        font-size: 13px;
+        font-family: var(--sans);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--teal-700);
+        margin-bottom: 6px;
+      }
+      .card p {
+        font-size: 13.5px;
+        margin-bottom: 0;
+      }
+
+      .value-row {
+        display: flex;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--warm-100);
+      }
+      .value-row:last-child {
+        border-bottom: none;
+      }
+      .value-num {
+        flex: none;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--teal-950);
+        color: var(--gold-300, #ebd37a);
+        font-family: var(--serif);
+        font-size: 17px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .value-row h3 {
+        font-size: 18px;
+        margin-bottom: 3px;
+      }
+      .value-row p {
+        font-size: 13.5px;
+        margin-bottom: 0;
+      }
+
+      .step {
+        display: flex;
+        gap: 18px;
+        margin-bottom: 20px;
+        break-inside: avoid;
+      }
+      .step-badge {
+        flex: none;
+        width: 54px;
+      }
+      .step-badge .n {
+        font-family: var(--serif);
+        font-size: 46px;
+        color: var(--gold-500);
+        font-weight: 600;
+        line-height: 1;
+      }
+      .step-badge .lbl {
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--warm-400);
+        font-weight: 700;
+      }
+      .step-body h3 {
+        font-size: 21px;
+        margin-bottom: 5px;
+      }
+      .step-body p {
+        font-size: 13.5px;
+        margin-bottom: 6px;
+      }
+      .step-insight {
+        font-style: italic;
+        font-family: var(--serif);
+        font-size: 15px;
+        color: var(--teal-800);
+        border-left: 2px solid var(--gold-400, #e0be4d);
+        padding-left: 12px;
+        margin-top: 6px;
+      }
+
+      .pill {
+        display: inline-block;
+        background: var(--teal-50);
+        color: var(--teal-700);
+        border: 1px solid var(--teal-100);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        margin: 0 6px 8px 0;
+      }
+
+      .checklist li {
+        list-style: none;
+        position: relative;
+        padding-left: 30px;
+        margin-bottom: 11px;
+        font-size: 14px;
+      }
+      .checklist {
+        margin-left: 0;
+      }
+      .checklist li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 17px;
+        height: 17px;
+        border: 1.5px solid var(--teal-500);
+        border-radius: 4px;
+        background: #fff;
+      }
+      .checklist li strong {
+        color: var(--teal-900);
+      }
+
+      .worksheet-line {
+        border-bottom: 1.5px dotted var(--warm-300);
+        height: 30px;
+        margin-bottom: 6px;
+      }
+      .ws-num {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+      .ws-num span {
+        font-family: var(--serif);
+        font-size: 22px;
+        color: var(--teal-600);
+        font-weight: 600;
+        flex: none;
+        width: 30px;
+      }
+      .ws-num .line {
+        flex: 1;
+        border-bottom: 1.5px dotted var(--warm-300);
+        height: 26px;
+      }
+
+      .quote-box {
+        background: var(--teal-950);
+        color: #fff;
+        border-radius: 16px;
+        padding: 30px 34px;
+        margin: 8px 0;
+      }
+      .quote-box p {
+        color: #dcebe8;
+        font-family: var(--serif);
+        font-size: 21px;
+        font-style: italic;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+      .quote-box .by {
+        font-family: var(--sans);
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--gold-300, #ebd37a);
+        font-weight: 600;
+      }
+
+      .testimonial {
+        background: var(--warm-50);
+        border: 1px solid var(--warm-200);
+        border-left: 3px solid var(--gold-500);
+        border-radius: 0 12px 12px 0;
+        padding: 18px 22px;
+        margin-bottom: 16px;
+      }
+      .testimonial p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 16px;
+        color: var(--warm-800, #564a3d);
+        margin-bottom: 8px;
+      }
+      .testimonial .src {
+        font-size: 12px;
+        color: var(--warm-500);
+        font-weight: 600;
+        letter-spacing: 0.03em;
+      }
+
+      .footer-tag {
+        position: absolute;
+        bottom: 0.5in;
+        left: 0.95in;
+        right: 0.95in;
+        display: flex;
+        justify-content: space-between;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--warm-400);
+        border-top: 1px solid var(--warm-100);
+        padding-top: 8px;
+      }
+
+      .contact-final {
+        background: linear-gradient(160deg, var(--teal-950), var(--teal-800));
+        color: #fff;
+        border-radius: 18px;
+        padding: 40px 44px;
+      }
+      .contact-final h2 {
+        color: #fff;
+        font-size: 36px;
+        font-style: italic;
+      }
+      .contact-final p {
+        color: #cfe6e1;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px 28px;
+        margin-top: 20px;
+      }
+      .contact-grid .k {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--gold-300, #ebd37a);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+      .contact-grid .v {
+        font-size: 16px;
+        color: #fff;
+        font-family: var(--serif);
+      }
+
+      .attach-note {
+        border: 1.5px dashed var(--gold-500);
+        background: var(--gold-50);
+        border-radius: 12px;
+        padding: 18px 22px;
+        margin-top: 18px;
+      }
+      .attach-note h4 {
+        font-family: var(--sans);
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gold-700);
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .attach-note p {
+        font-size: 13.5px;
+        color: var(--warm-700);
+        margin-bottom: 0;
+      }
+
+      .toc li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px dotted var(--warm-300);
+        padding: 9px 0;
+        font-size: 15px;
+        list-style: none;
+      }
+      .toc {
+        margin-left: 0;
+      }
+      .toc .t {
+        font-family: var(--serif);
+        font-size: 18px;
+        color: var(--teal-950);
+      }
+      .toc .t small {
+        font-family: var(--sans);
+        font-size: 11px;
+        color: var(--warm-500);
+        letter-spacing: 0.05em;
+        display: block;
+      }
+      .toc .p {
+        font-family: var(--serif);
+        color: var(--gold-600);
+        font-weight: 600;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        .page {
+          margin: 0;
+          box-shadow: none;
+          page-break-after: always;
+          width: 100%;
+          min-height: auto;
+          padding: 0.7in 0.75in;
+        }
+        .page:last-child {
+          page-break-after: auto;
+        }
+        .no-print {
+          display: none;
+        }
+      }
+      @page {
+        size: letter;
+        margin: 0;
+      }
+
+      .print-bar {
+        position: fixed;
+        top: 14px;
+        right: 14px;
+        z-index: 50;
+      }
+      .print-bar button {
+        font-family: var(--sans);
+        font-weight: 600;
+        font-size: 13px;
+        background: var(--teal-700);
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="print-bar no-print">
+      <button onclick="window.print()">⤓ Save as PDF / Print</button>
+    </div>
+
+    <!-- ============ 1. COVER ============ -->
+    <section class="page cover">
+      <div class="cover-top">
+        <div class="brand-mark">
+          Aparna Kapur<small>Oakwyn Realty Ltd.</small>
+        </div>
+        <div class="cover-eyebrow">Vancouver · South Side</div>
+      </div>
+      <div>
+        <div class="cover-eyebrow">The Complete</div>
+        <div class="cover-title">Seller's<br /><em>Guide</em></div>
+        <p class="cover-sub">
+          Everything you need to sell your Vancouver home with clarity,
+          confidence, and the best possible result.
+        </p>
+      </div>
+      <div class="cover-foot">
+        <div>
+          <div class="name">Aparna Kapur</div>
+          <div>Real Estate Agent · Oakwyn Realty Ltd.</div>
+        </div>
+        <div style="text-align: right">
+          604-612-7694<br />
+          aparna@aparnakapur.com<br />
+          www.aparnakapur.com
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. WELCOME / BIOGRAPHY ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">A Note From Aparna</div>
+        <div class="gold-rule"></div>
+        <h2>Welcome</h2>
+      </div>
+
+      <p class="lead">
+        Selling a home is rarely just about a transaction. It is about a chapter
+        ending and a new one beginning — and you deserve someone in your corner
+        who understands that.
+      </p>
+
+      <p>
+        I got into real estate because I saw too many people getting poor advice
+        on the biggest financial decision of their lives. A home is not a
+        commodity. It is where your family lives, where your kids grow up, where
+        years of memory and equity are built. The agent you choose should
+        understand that — and should treat the sale of it with the care it
+        deserves.
+      </p>
+
+      <p>
+        I focus on Oakridge and Vancouver's south side because this is where I
+        live and work. The Oakridge Park redevelopment, the rezoning along
+        Cambie, the new transit connections — I track all of it, because my
+        clients need to know exactly how these changes affect their property
+        values and their daily lives.
+      </p>
+
+      <p>
+        I work with Oakwyn Realty because they are the top brokerage in
+        Vancouver — $6.3 billion in annual sales and 900+ agents across BC. That
+        gives me access to market data, off-market listings, and a professional
+        network that directly benefits you.
+        <strong>But you will only ever deal with me.</strong> No hand-offs to
+        junior associates. No getting lost in a mega-team. From our first
+        conversation to the day the sale closes — and well beyond — you work
+        directly with me.
+      </p>
+
+      <p>
+        This guide walks you through exactly how I work: my philosophy, my
+        process, my marketing, and what I will need from you. Read it at your
+        own pace. Then let's talk about your property.
+      </p>
+
+      <div class="quote-box" style="margin-top: 24px">
+        <p>
+          "You deserve straight answers, not someone telling you what you want
+          to hear. If a listing strategy is wrong, I will say so."
+        </p>
+        <div class="by">— Aparna Kapur</div>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>Aparna Kapur · Oakwyn Realty</span>
+      </div>
+    </section>
+
+    <!-- ============ 3. CONTENTS ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">Inside This Guide</div>
+        <div class="gold-rule"></div>
+        <h2>What's Inside</h2>
+      </div>
+      <ul class="toc">
+        <li>
+          <span class="t"
+            >My Mission, Vision &amp; Values<small
+              >What drives the way I work</small
+            ></span
+          ><span class="p">04</span>
+        </li>
+        <li>
+          <span class="t"
+            >Your Team<small
+              >The full bench of professionals behind your sale</small
+            ></span
+          ><span class="p">05</span>
+        </li>
+        <li>
+          <span class="t"
+            >Why Work With Me<small
+              >My value proposition, in six points</small
+            ></span
+          ><span class="p">06</span>
+        </li>
+        <li>
+          <span class="t"
+            >How I Market Your Home<small
+              >Services, features &amp; the benefit to you</small
+            ></span
+          ><span class="p">07</span>
+        </li>
+        <li>
+          <span class="t"
+            >How I Find Your Buyer<small
+              >The strategy that puts your home in front of the right
+              people</small
+            ></span
+          ><span class="p">08</span>
+        </li>
+        <li>
+          <span class="t"
+            >The Selling Process<small
+              >Six clear steps from decision to keys</small
+            ></span
+          ><span class="p">09–10</span>
+        </li>
+        <li>
+          <span class="t">Testimonials<small>What my clients say</small></span
+          ><span class="p">11</span>
+        </li>
+        <li>
+          <span class="t"
+            >What I'll Need From You<small
+              >To make our first visit count</small
+            ></span
+          ><span class="p">12</span>
+        </li>
+        <li>
+          <span class="t"
+            >The "10 Best Things" Worksheet<small
+              >Help me sell what only you know</small
+            ></span
+          ><span class="p">13</span>
+        </li>
+        <li>
+          <span class="t"
+            >Let's Begin + Your Custom CMA<small
+              >Next steps and your property analysis</small
+            ></span
+          ><span class="p">14</span>
+        </li>
+      </ul>
+
+      <div class="card teal" style="margin-top: 26px">
+        <h4>How to use this guide</h4>
+        <p>
+          This is my generic playbook — the way I work with every seller. The
+          final section is where your sale becomes specific: I'll attach a
+          <strong>Comparative Market Analysis (CMA)</strong> prepared just for
+          your property, with pricing, comparable sales, and a recommended
+          strategy.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>Aparna Kapur · Oakwyn Realty</span>
+      </div>
+    </section>
+
+    <!-- ============ 4. MISSION / VISION / VALUES ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">What Drives Me</div>
+        <div class="gold-rule"></div>
+        <h2>Mission, Vision &amp; Values</h2>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 22px">
+        <div class="card teal">
+          <h4>My Mission</h4>
+          <p>
+            To make sure no one in my community ever has to navigate the biggest
+            financial decision of their life with poor advice. I exist to
+            protect my clients' interests, maximize their outcome, and bring
+            clarity to a process that too often feels overwhelming.
+          </p>
+        </div>
+        <div class="card gold">
+          <h4>My Vision</h4>
+          <p>
+            To be the trusted realtor-for-life on Vancouver's south side — the
+            first call my clients make not just when they sell, but for every
+            real estate decision that follows, for them and for everyone they
+            refer to me.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 22px">
+        <h4>My Purpose</h4>
+        <p>
+          Day to day, my job is simple: price your home right, present it at its
+          best, get it in front of the right buyers, and negotiate hard to
+          protect what you walk away with — all while keeping you informed and
+          unsurprised at every stage.
+        </p>
+      </div>
+
+      <h3 style="font-size: 24px; font-style: italic; margin-bottom: 6px">
+        My Core Values
+      </h3>
+      <div class="value-row">
+        <div class="value-num">1</div>
+        <div>
+          <h3>Honesty over comfort</h3>
+          <p>
+            I will tell you the truth — about your price, your timing, and your
+            strategy — even when it is not what you hoped to hear. Straight
+            answers are how good decisions get made.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">2</div>
+        <div>
+          <h3>Data over guesswork</h3>
+          <p>
+            Every pricing recommendation and offer strategy is backed by
+            comparable sales and current market analysis. I don't guess. I
+            analyze.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">3</div>
+        <div>
+          <h3>One client, full attention</h3>
+          <p>
+            You work directly with me from start to finish. No hand-offs, no
+            junior associates, no getting lost in a team.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">4</div>
+        <div>
+          <h3>Responsiveness</h3>
+          <p>
+            I answer my phone. Text or call, and I get back to you the same day.
+            That is how deals get done in this market.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">5</div>
+        <div>
+          <h3>Relationships, not transactions</h3>
+          <p>
+            My goal is to be your realtor for life. The sale is the beginning of
+            the relationship, not the end of it.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>04</span>
+      </div>
+    </section>
+
+    <!-- ============ 5. TEAM ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">More Than One Person</div>
+        <div class="gold-rule"></div>
+        <h2>Your Team</h2>
+      </div>
+      <p class="lead">
+        When you hire me, you are not hiring one agent. You are hiring a vetted
+        bench of professionals I have built relationships with over years in
+        this market.
+      </p>
+      <p>
+        You will only ever deal with me directly — but behind your sale is a
+        full team I coordinate on your behalf, so every part of the process is
+        handled by someone who is genuinely good at it.
+      </p>
+
+      <div class="grid-2" style="margin-top: 18px">
+        <div class="card">
+          <h4>Oakwyn Realty Ltd.</h4>
+          <p>
+            My brokerage and one of BC's largest independent firms — 900+ agents
+            and $6.3B in annual sales. This is the market reach, data, and
+            off-market network behind your listing.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Professional Photographer &amp; Media</h4>
+          <p>
+            Magazine-quality photography, virtual tours, and video. Your listing
+            photos are your first showing — we do not cut corners here.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Mortgage Professionals</h4>
+          <p>
+            Trusted brokers across Greater Vancouver to help your buyers move
+            quickly — and to help you plan your own next purchase.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Home Inspectors</h4>
+          <p>
+            For an optional pre-listing inspection that removes surprises and
+            strengthens your negotiating position.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Stagers &amp; Trades</h4>
+          <p>
+            Staging, paint, cleaning, and handyman trades — a prioritized,
+            ROI-focused list of who to call and what is actually worth doing.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Notaries, Lawyers &amp; Insurance</h4>
+          <p>
+            Experienced closing professionals to handle title, contracts, and
+            the legal transfer cleanly and on schedule.
+          </p>
+        </div>
+      </div>
+
+      <div class="card teal" style="margin-top: 22px">
+        <h4>The point</h4>
+        <p>
+          You should feel like you have hired a full team, because you have. My
+          role is to assemble it, coordinate it, and make sure every piece works
+          in your favour — while you only ever have one point of contact: me.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>05</span>
+      </div>
+    </section>
+
+    <!-- ============ 6. VALUE PROPOSITION ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">My Value Proposition</div>
+        <div class="gold-rule"></div>
+        <h2>Why Work With Me</h2>
+      </div>
+      <p class="lead">
+        There are thousands of agents in Vancouver. Here is what makes working
+        with me different.
+      </p>
+
+      <div class="value-row">
+        <div class="value-num">1</div>
+        <div>
+          <h3>True local expertise</h3>
+          <p>
+            I live and breathe Oakridge and Vancouver's south side — every
+            street, every development timeline, every school catchment. Ask me
+            about a neighbourhood and you get real answers, not generic
+            marketing.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">2</div>
+        <div>
+          <h3>One agent, start to finish</h3>
+          <p>
+            No hand-offs to junior associates. From first conversation to
+            closing day and beyond, you work directly with me.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">3</div>
+        <div>
+          <h3>I will tell you the truth</h3>
+          <p>
+            If a property is overpriced or a listing strategy is wrong, I will
+            say so. You deserve straight answers.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">4</div>
+        <div>
+          <h3>Data-driven decisions</h3>
+          <p>
+            Every pricing recommendation, offer strategy, and market opinion is
+            backed by current data, comparable sales, and strategic analysis.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">5</div>
+        <div>
+          <h3>Technology-forward marketing</h3>
+          <p>
+            Professional photography, virtual tours, digital marketing, and
+            real-time market alerts — the latest tools to give your listing an
+            edge.
+          </p>
+        </div>
+      </div>
+      <div class="value-row">
+        <div class="value-num">6</div>
+        <div>
+          <h3>I answer my phone</h3>
+          <p>
+            Text me, call me — I get back to you the same day. That
+            responsiveness is how deals get done in this market.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>06</span>
+      </div>
+    </section>
+
+    <!-- ============ 7. MARKETING SERVICES (Feature–Benefit) ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">Feature &amp; Benefit</div>
+        <div class="gold-rule"></div>
+        <h2>How I Market Your Home</h2>
+      </div>
+      <p class="lead">
+        Marketing is not a brochure and a sign on the lawn. Here is what I do —
+        and exactly why it puts more money in your pocket.
+      </p>
+
+      <div class="grid-2" style="margin-top: 6px">
+        <div class="card">
+          <h4>Professional Photography</h4>
+          <p>
+            <strong>Benefit:</strong> Your listing photos are your first
+            showing. Proper lighting and angles mean more clicks, more showings,
+            and a stronger first impression — before a buyer ever walks in.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Virtual Tour &amp; Video</h4>
+          <p>
+            <strong>Benefit:</strong> Serious buyers — including those
+            relocating — can explore your home remotely, so the people who show
+            up in person are genuinely qualified.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Compelling Listing Copy</h4>
+          <p>
+            <strong>Benefit:</strong> A description that highlights what makes
+            your home stand out frames its value and justifies your price to
+            buyers.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Full MLS &amp; Syndication</h4>
+          <p>
+            <strong>Benefit:</strong> Your home is pushed across every major
+            real estate platform — maximum exposure to the widest possible buyer
+            pool.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Targeted Digital Marketing</h4>
+          <p>
+            <strong>Benefit:</strong> I reach qualified buyers where they are
+            already looking, instead of hoping the right person stumbles across
+            your listing.
+          </p>
+        </div>
+        <div class="card">
+          <h4>Oakwyn Network &amp; Off-Market Reach</h4>
+          <p>
+            <strong>Benefit:</strong> 900+ agents and an off-market network mean
+            your home reaches buyers who never even hit the public search.
+          </p>
+        </div>
+      </div>
+
+      <div class="card gold" style="margin-top: 20px">
+        <h4>My promise on marketing</h4>
+        <p>
+          I do not cut corners on marketing. Your home deserves to be seen in
+          its best light, by the right audience, from the very first day it hits
+          the market — because the first two weeks are when a listing has the
+          most attention and the most leverage.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>07</span>
+      </div>
+    </section>
+
+    <!-- ============ 8. HOW I FIND BUYERS ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">Demand, Engineered</div>
+        <div class="gold-rule"></div>
+        <h2>How I Find Your Buyer</h2>
+      </div>
+      <p class="lead">
+        A great price means nothing if the right buyers never see your home.
+        Finding them is a deliberate strategy, not luck.
+      </p>
+
+      <ul class="checklist" style="margin-top: 8px">
+        <li>
+          <strong>My active buyer database.</strong> I keep an ongoing list of
+          qualified buyers searching Vancouver's south side. Many of my listings
+          get in front of real buyers before they are ever public.
+        </li>
+        <li>
+          <strong>The Oakwyn agent network.</strong> 900+ agents across BC, many
+          with buyers actively looking in your neighbourhood right now.
+        </li>
+        <li>
+          <strong>Real-time property alerts.</strong> Buyers registered on my
+          site get instant notification the moment your home matches their
+          criteria.
+        </li>
+        <li>
+          <strong>Targeted neighbourhood marketing.</strong> "Just listed"
+          outreach to the people most likely to want into your specific street
+          and pocket of the city.
+        </li>
+        <li>
+          <strong>Strategic open houses.</strong> Well-promoted, well-timed open
+          houses that create urgency and let your home shine.
+        </li>
+        <li>
+          <strong>Relationship marketing.</strong> Past clients, referrals, and
+          community connections — the warmest, highest-intent buyers of all.
+        </li>
+      </ul>
+
+      <div class="quote-box">
+        <p>
+          "My job is to create competition for your home — to make sure the
+          right buyers not only find it, but feel they have to act."
+        </p>
+        <div class="by">— Aparna Kapur</div>
+      </div>
+
+      <p style="margin-top: 16px">
+        The result of doing this well is the thing every seller wants:
+        <strong
+          >more qualified buyers, more interest in the critical first weeks, and
+          the leverage that comes from genuine demand.</strong
+        >
+      </p>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>08</span>
+      </div>
+    </section>
+
+    <!-- ============ 9. SELLING PROCESS (1-3) ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">From Decision to Keys</div>
+        <div class="gold-rule"></div>
+        <h2>The Selling Process</h2>
+      </div>
+      <p class="lead">
+        Six clear steps. You always know where we are and what is coming next.
+      </p>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">1</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>The Decision to Sell</h3>
+          <p>
+            Before strategy, we talk about <em>why</em>. Upsizing, downsizing,
+            relocating, unlocking equity — your reason shapes every decision
+            that follows. I'll also give you a clear financial picture up front:
+            capital gains, mortgage penalties, selling costs, and a detailed net
+            sheet so you know exactly what you'll walk away with.
+          </p>
+          <p class="step-insight">
+            "The most common question I get is whether to buy or sell first. In
+            most cases I recommend selling first — it gives you negotiating
+            power and removes the pressure of carrying two properties."
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">2</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>Pricing Strategically</h3>
+          <p>
+            Pricing is a craft, not a guess. I prepare a thorough Comparative
+            Market Analysis — recent comparable sales, your active competition,
+            expired listings and what went wrong with them, days-on-market
+            trends, and your home's unique features — then recommend the right
+            strategy for your goals and the current market.
+          </p>
+          <p class="step-insight">
+            "Overpricing is the most common mistake sellers make. A home that
+            sits develops a stigma. I'd rather price it right from day one,
+            create urgency, and let the market compete for your property."
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">3</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>Preparing Your Home</h3>
+          <p>
+            Buyers decide fast — often within seconds. I'll walk your home and
+            give you a prioritized, ROI-focused plan: what's high-impact
+            (declutter, neutral paint, clean fixtures, tidy landscaping), what's
+            worth considering, and what is usually <em>not</em> worth doing
+            before a sale. Then professional photography and full marketing
+            bring it to market at its best.
+          </p>
+          <p class="step-insight">
+            "A weekend of decluttering and a few hundred dollars in touch-up
+            paint can translate into tens of thousands at the offer table. I'll
+            give you a specific plan for your property — not generic advice."
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>09</span>
+      </div>
+    </section>
+
+    <!-- ============ 10. SELLING PROCESS (4-6) ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">From Decision to Keys</div>
+        <div class="gold-rule"></div>
+        <h2>
+          The Selling Process
+          <span
+            style="font-size: 22px; color: var(--warm-400); font-style: italic"
+            >continued</span
+          >
+        </h2>
+      </div>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">4</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>Offers &amp; Negotiation</h3>
+          <p>
+            Every offer is more than a number — price, deposit, subjects,
+            completion and possession dates, inclusions. I analyze each as a
+            complete package and manage multiple-offer situations with a clear,
+            fair, structured process. This is where the right agent makes a
+            measurable difference.
+          </p>
+          <p class="step-insight">
+            "The highest offer is not always the best offer. I once steered a
+            client to a subject-free offer that was lower but clean — it saved
+            them weeks of uncertainty and real risk."
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">5</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>Inspections &amp; Subject Removal</h3>
+          <p>
+            Once you accept an offer with subjects, the buyer has 5–10 business
+            days for due diligence. I prepare you in advance — walking the home
+            to identify anything an inspector is likely to flag — so we address
+            what we can proactively and have responses ready for the rest. An
+            optional pre-listing inspection can remove surprises entirely.
+          </p>
+          <p class="step-insight">
+            "No surprises means smoother negotiations. Informed sellers are much
+            harder to push around."
+          </p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-badge">
+          <div class="n">6</div>
+          <div class="lbl">Step</div>
+        </div>
+        <div class="step-body">
+          <h3>Closing &amp; Moving Forward</h3>
+          <p>
+            When subjects are removed, you have a firm deal. I coordinate with
+            both lawyers, your move, and every last detail through completion
+            and possession. And my job doesn't end at the keys — many of my
+            clients work with me on both sides of a move, and I stay your
+            realtor for life.
+          </p>
+          <p class="step-insight">
+            "By the time you get the keys, the hard work should be behind you.
+            My job ends when you're settled and confident in what comes next."
+          </p>
+        </div>
+      </div>
+
+      <div class="card teal" style="margin-top: 8px">
+        <h4>A note for buyers, too</h4>
+        <p>
+          Many sellers are buying as well. I guide clients through a parallel
+          six-step buying process — from clarifying your reasons and financial
+          preparation, to finding the right home, due diligence, and closing
+          day. If you're moving up, down, or across town, we can plan both sides
+          together. Just ask.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>10</span>
+      </div>
+    </section>
+
+    <!-- ============ 11. TESTIMONIALS ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">In Their Words</div>
+        <div class="gold-rule"></div>
+        <h2>What My Clients Say</h2>
+      </div>
+      <p class="lead">
+        The clearest measure of how I work is what the people I've worked for
+        have to say about it.
+      </p>
+
+      <div class="testimonial">
+        <p>
+          "[ Client testimonial — replace with a real quote. e.g. 'Aparna priced
+          our Oakridge home perfectly and we had competing offers within the
+          first week. She told us the truth at every step.' ]"
+        </p>
+        <div class="src">— Client Name, Neighbourhood</div>
+      </div>
+      <div class="testimonial">
+        <p>
+          "[ Client testimonial — replace with a real quote about
+          responsiveness, negotiation, or local knowledge. ]"
+        </p>
+        <div class="src">— Client Name, Neighbourhood</div>
+      </div>
+      <div class="testimonial">
+        <p>
+          "[ Client testimonial — replace with a real quote about the marketing
+          or the overall experience. ]"
+        </p>
+        <div class="src">— Client Name, Neighbourhood</div>
+      </div>
+
+      <div class="card gold" style="margin-top: 18px">
+        <h4>For Aparna — before sharing</h4>
+        <p>
+          Drop in three real client quotes (and photos where you have
+          permission). A short, specific quote — "sold $40K over ask in 6 days"
+          — outperforms a long generic one. I've left placeholders so the layout
+          is ready the moment you have them.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>11</span>
+      </div>
+    </section>
+
+    <!-- ============ 12. WHAT I'LL NEED FROM YOU ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">To Make Our First Visit Count</div>
+        <div class="gold-rule"></div>
+        <h2>What I'll Need From You</h2>
+      </div>
+      <p class="lead">
+        A little preparation before our first meeting lets us move faster and
+        price more accurately. If you can gather these, our time together goes
+        much further.
+      </p>
+
+      <ul class="checklist" style="margin-top: 10px">
+        <li>
+          <strong>A spare key</strong> (and any garage remotes / fobs) for
+          showings and access.
+        </li>
+        <li>
+          <strong>Recent utility bills</strong> — hydro, gas, water — so buyers
+          can understand running costs.
+        </li>
+        <li>
+          <strong>Receipts &amp; records for home improvements</strong> —
+          renovations, new roof, windows, furnace, hot water tank. These add
+          real, provable value.
+        </li>
+        <li>
+          <strong>Property documents</strong> — title, recent property tax
+          assessment, and any survey or plans you have.
+        </li>
+        <li>
+          <strong>Strata documents</strong> (if applicable) — recent minutes,
+          depreciation report, Form B, bylaws.
+        </li>
+        <li>
+          <strong>Warranties &amp; manuals</strong> for appliances and major
+          systems.
+        </li>
+        <li>
+          <strong>"Summer" photos if we're listing in winter</strong> — garden,
+          patio, and exterior shots taken in better weather help buyers see the
+          home at its best year-round.
+        </li>
+        <li>
+          <strong>Your "10 Best Things" list</strong> — the worksheet on the
+          next page. The things only you know about living here.
+        </li>
+      </ul>
+
+      <div class="card teal" style="margin-top: 18px">
+        <h4>And from me, in advance</h4>
+        <p>
+          Before we meet, I'll send over copies of the key paperwork and sample
+          documents so you can review everything at your own pace — no pressure,
+          no surprises. Bring your questions; that's what the first visit is
+          for.
+        </p>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>12</span>
+      </div>
+    </section>
+
+    <!-- ============ 13. 10 BEST THINGS WORKSHEET ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">A Worksheet For You</div>
+        <div class="gold-rule"></div>
+        <h2>The 10 Best Things About Your Home</h2>
+      </div>
+      <p class="lead">
+        You have lived here. You know things no listing sheet or inspector ever
+        will — the warm morning light, the quiet street, the neighbour who
+        became a friend.
+      </p>
+      <p>
+        List the ten things you most want a buyer to know and love about your
+        home. I'll weave these into how we market and show it — they're often
+        what turns a viewing into an offer.
+      </p>
+
+      <div style="margin-top: 18px">
+        <div class="ws-num">
+          <span>1</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>2</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>3</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>4</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>5</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>6</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>7</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>8</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>9</span>
+          <div class="line"></div>
+        </div>
+        <div class="ws-num">
+          <span>10</span>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>13</span>
+      </div>
+    </section>
+
+    <!-- ============ 14. CONTACT / CMA ============ -->
+    <section class="page">
+      <div class="section-head">
+        <div class="eyebrow">Let's Begin</div>
+        <div class="gold-rule"></div>
+        <h2>Your Next Step</h2>
+      </div>
+      <p class="lead">
+        Everything to this point is how I work with every seller. Now let's make
+        it about <em>your</em> home.
+      </p>
+      <p>
+        The single most valuable thing I can give you is an honest, data-driven
+        answer to the question every seller asks first:
+        <strong
+          >what is my home actually worth, and how do we get the most for
+          it?</strong
+        >
+        That's the Comparative Market Analysis — and it's where this guide
+        becomes specific to you.
+      </p>
+
+      <div class="attach-note">
+        <h4>↓ Attached for you: Your Comparative Market Analysis</h4>
+        <p>
+          Following this page you'll find a CMA prepared specifically for your
+          property — recent comparable sales, your current competition, a
+          recommended pricing strategy, and an estimated net-proceeds picture.
+          If you're reading the generic version, that means your custom CMA is
+          on its way; let's set up a time to walk through it together.
+        </p>
+      </div>
+
+      <div class="contact-final" style="margin-top: 24px">
+        <div class="eyebrow" style="color: var(--gold-300, #ebd37a)">
+          Aparna Kapur · Oakwyn Realty Ltd.
+        </div>
+        <h2 style="margin-top: 6px">Let's talk about your home.</h2>
+        <p>Text or call — I get back to you the same day.</p>
+        <div class="contact-grid">
+          <div>
+            <div class="k">Phone</div>
+            <div class="v">604-612-7694</div>
+          </div>
+          <div>
+            <div class="k">Email</div>
+            <div class="v">aparna@aparnakapur.com</div>
+          </div>
+          <div>
+            <div class="k">Website</div>
+            <div class="v">www.aparnakapur.com</div>
+          </div>
+          <div>
+            <div class="k">Office</div>
+            <div class="v">3195 Oak Street, Vancouver, BC</div>
+          </div>
+        </div>
+      </div>
+
+      <p
+        style="
+          margin-top: 18px;
+          font-size: 12px;
+          color: var(--warm-500);
+          text-align: center;
+        "
+      >
+        Aparna Kapur · Real Estate Agent · Oakwyn Realty Ltd. · Serving
+        Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale &amp; the Cambie
+        Corridor. This guide is general information and not legal, tax, or
+        financial advice.
+      </p>
+
+      <div class="footer-tag">
+        <span>The Seller's Guide</span><span>14</span>
+      </div>
+    </section>
+  </body>
+</html>
