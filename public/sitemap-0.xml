@@ -13,6 +13,8 @@
 <url><loc>https://www.aparnakapur.com/buying/opportunities</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying</loc><changefreq>weekly</changefreq><priority>1</priority></url>
 <url><loc>https://www.aparnakapur.com/contact</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://www.aparnakapur.com/llms-full.txt</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aparnakapur.com/llms.txt</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/lp/equity</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/lp/home-value</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/neighborhoods/arbutus-ridge</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -45,11 +47,13 @@
 <url><loc>https://www.aparnakapur.com/resources/blog/best-neighborhoods-vancouver-families-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/first-time-buyer-programs-bc-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aparnakapur.com/resources/blog/how-to-choose-a-realtor-in-vancouver</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/is-oakridge-vancouvers-new-downtown</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/oakridge-park-redevelopment-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/oakridge-park-spring-2026-opening-guide</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/resale-vs-presale-vancouver-condos-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://www.aparnakapur.com/resources/blog/what-does-a-realtor-cost-in-bc-commissions-explained</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/first-time-buyers-bc</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/market-reports</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

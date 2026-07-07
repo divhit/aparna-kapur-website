@@ -904,6 +904,142 @@ Every family is different, and the "best" neighbourhood depends entirely on your
 
 Contact me for a personalised neighbourhood tour. I will show you the parks, schools, shops, and hidden gems that make each area special.`,
   },
+  {
+    slug: "how-to-choose-a-realtor-in-vancouver",
+    title: "How to Choose a Realtor in Vancouver: A Local Agent's Honest Guide",
+    excerpt:
+      "How do you actually pick a realtor in Vancouver? A working agent's honest guide: licence checks, the questions worth asking, the red flags I see, and why neighbourhood-level expertise matters more than a big brand.",
+    date: "July 2026",
+    datePublished: "2026-07-06",
+    dateModified: "2026-07-06",
+    category: "Advice",
+    readTime: "8 min read",
+    image: "/images/blog/how-to-choose-a-realtor-in-vancouver.jpg",
+    content: `## Yes, I'm a Realtor Writing About How to Choose a Realtor
+
+I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and I'll acknowledge the obvious up front: I have a horse in this race. But I've also sat across the table from enough buyers and sellers who chose badly the first time — and paid for it in stress, money, or both — that I think an honest guide is worth writing. Everything below is what I'd tell a close friend, even if it meant they hired someone else.
+
+There are more than 15,000 licensed real estate professionals in Greater Vancouver. Most are competent. Some are exceptional. A few should be avoided. Here's how to tell the difference.
+
+## Step 1: Verify the Licence (Two Minutes, Non-Negotiable)
+
+Every real estate agent in British Columbia must be licensed by the **British Columbia Financial Services Authority (BCFSA)**. BCFSA maintains a free public licensee search on its website where you can confirm that an agent is currently licensed, see which brokerage they work under, and check whether they've been subject to discipline.
+
+It takes two minutes. If someone marketing themselves as an agent doesn't appear in that search, walk away.
+
+## Step 2: Understand Who Your Agent Actually Works For
+
+This is something many buyers and sellers don't know: **BC effectively banned dual agency in 2018**. With narrow exceptions in remote, under-served areas, one agent cannot represent both the buyer and the seller in the same transaction. Your agent owes their loyalty to you and only you.
+
+Before providing services, an agent must also review a BCFSA disclosure form (the Disclosure of Representation in Trading Services) that explains whether they're representing you as a client or treating you as an unrepresented party. If an agent glosses over this conversation, that tells you something about how they'll handle the rest of the transaction.
+
+## Step 3: Prioritize Neighbourhood-Level Expertise
+
+Vancouver is not one market. It's dozens of micro-markets that behave differently — sometimes on opposite sides of the same street. A $1.5M budget means something completely different in [Marpole](/neighborhoods/marpole) than it does in [Kitsilano](/neighborhoods/kitsilano), and the zoning story in the [Cambie Corridor](/neighborhoods/cambie-corridor) has no parallel on the east side.
+
+When you interview an agent, ask about the specific neighbourhoods you're targeting:
+
+- **What has sold on these blocks in the last 90 days, and for how much relative to asking?**
+- **What's the zoning situation, and is anything changing?** (In my own patch, the Oakridge Park redevelopment and R1-1 zoning changes are reshaping values block by block.)
+- **Which school catchments matter here, and where are the boundaries?**
+- **What do strata issues look like in the buildings we'd be shortlisting?**
+
+A strong local agent answers from memory and then backs it up with data. A weak one changes the subject to how big their brand is.
+
+## Step 4: Ask Who You'll Actually Be Working With
+
+Big teams can be excellent, but ask the question directly: **"If I sign with you, who shows me homes? Who writes my offers? Who answers when I call?"** On some large teams, the person you interviewed hands you to a junior associate the moment the agreement is signed.
+
+There's no universally right answer — but you should know what you're buying before you commit. I run my practice solo precisely because I want the person who knows your file to be the person on the phone, but the honest advice is simply: get clarity up front.
+
+## Step 5: Interview More Than One Agent
+
+Interview two or three. Any professional worth hiring will respect that you're doing diligence. Useful questions:
+
+1. **How many transactions did you complete in the last 12 months, and where?** Volume isn't everything, but an agent doing two deals a year in your target area is guessing.
+2. **Walk me through your pricing strategy.** For sellers: how do they build a comparative market analysis? For buyers: how do they decide what a home is actually worth versus its list price?
+3. **How will you communicate, and how fast do you respond?** Get specific — same-day? Text or email? In a competitive market, hours matter.
+4. **For sellers: what exactly is your marketing plan?** Professional photography, floor plans, staging advice, digital campaigns — ask what's included and what costs extra.
+5. **Can I speak to two recent clients?** References from the last year, not from 2019.
+6. **What happens if I want out?** Understand the term of any listing agreement or buyer agency agreement and how it can be ended before you sign it.
+
+## The Red Flags I See Most Often
+
+- **"Buying the listing."** An agent quotes you a wildly optimistic price to win your listing, then walks the price down with reductions over the following months. Ask every agent to justify their number with comparable sales, and be most suspicious of the highest one.
+- **Guarantees.** Nobody can guarantee a sale price or that you'll win a competing offer. Confidence backed by data is good; promises are a sales tactic.
+- **Pressure to skip protections.** An agent who pushes you to waive an inspection or rush a decision without laying out the risks is optimizing for their commission, not your outcome. (Remember that BC's Home Buyer Rescission Period exists precisely because rushed decisions were hurting buyers.)
+- **No data, all vibes.** If every answer is anecdote and adjectives, keep interviewing.
+- **Slow responses during the courtship.** If an agent takes two days to return your call while trying to win your business, imagine the service after you've signed.
+
+## Choosing a Realtor in Vancouver: The Bottom Line
+
+Verify the licence with BCFSA. Insist on genuine, provable expertise in your specific neighbourhoods. Know exactly who you'll be working with and how they communicate. Interview more than one agent, ask for data behind every claim, and read what you sign.
+
+If your search touches Vancouver — [Oakridge](/neighborhoods/oakridge), Kerrisdale, Marpole, South Cambie, Riley Park, the Cambie Corridor, or anywhere else in the city — I'd welcome the chance to be one of your interviews. I'm Aparna Kapur with Oakwyn Realty: 604-612-7694, or reach me through [aparnakapur.com/contact](/contact). Bring the hard questions above. I'll bring the data.`,
+  },
+  {
+    slug: "what-does-a-realtor-cost-in-bc-commissions-explained",
+    title: "What Does a Realtor Cost in BC? Vancouver Commissions Explained",
+    excerpt:
+      "Who pays real estate commission in BC, how the typical Vancouver structure works, what it looks like in dollars on a real sale, and the other costs — GST, property transfer tax, legal fees — you should budget for.",
+    date: "July 2026",
+    datePublished: "2026-07-06",
+    dateModified: "2026-07-06",
+    category: "Advice",
+    readTime: "7 min read",
+    image: "/images/blog/what-does-a-realtor-cost-in-bc-commissions-explained.jpg",
+    content: `## The Question Everyone Asks Me at Open Houses
+
+I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and the most common question I get from first-time sellers — usually asked a little sheepishly — is "so what does this actually cost?" It's a fair question, and the answer is more transparent than most people expect. Here's how real estate commissions work in British Columbia, with real numbers.
+
+## First Things First: There Is No "Standard" Commission
+
+Real estate commissions in Canada are **negotiable by law**. There is no set rate, no regulated fee schedule, and no rate fixed by any real estate board — anyone who tells you a commission is "standard" or "required" is wrong. What follows describes structures commonly seen in Greater Vancouver, but every listing agreement is its own negotiation.
+
+## Who Pays the Commission?
+
+In a typical BC transaction, **the seller pays the full commission** out of the sale proceeds. That total is then split between the listing brokerage and the buyer's brokerage, in shares set out in the listing agreement and disclosed on the MLS.
+
+This means buyers usually don't pay their agent directly — the buyer's agent is compensated from the commission the seller has already agreed to. One caveat worth knowing: when you sign a buyer's agency agreement, it can specify your agent's remuneration, and if a particular listing offers less than that amount, the agreement governs how the difference is handled. A good agent walks you through this before you ever write an offer, not after.
+
+## The Structure You'll See Most Often in Vancouver
+
+A commonly seen commission structure in Greater Vancouver is a **percentage split by price tier**: a higher rate on the first $100,000 of the sale price and a lower rate on the balance. For example, a total commission of 7% on the first $100,000 and 2.5% on the remainder, with a portion of that — often around 3.255% on the first $100,000 and 1.1625% on the balance — offered to the buyer's brokerage.
+
+Why the two-tier structure? It's a historical artifact from an era when Vancouver homes cost a fraction of what they do now, but it persists because it keeps commissions from scaling linearly with today's prices.
+
+## What That Looks Like in Real Dollars
+
+Take a $1,500,000 sale — roughly the price of a benchmark home in [Oakridge](/neighborhoods/oakridge) — under the example structure above:
+
+- **7% on the first $100,000** = $7,000
+- **2.5% on the remaining $1,400,000** = $35,000
+- **Total commission: $42,000**
+- **Plus 5% GST: $2,100 — so $44,100 all-in**
+
+Of that $42,000, the buyer's brokerage would receive roughly $19,530 under the example split, and the listing brokerage roughly $22,470 — from which each brokerage takes its share before the individual agents are paid, and out of which the listing side typically funds photography, floor plans, staging consultations, and marketing.
+
+On a $1.5M sale, $44,100 is just under 3% of the sale price, all-in. Whether that's worth it comes down to what your agent actually does for it — which is exactly the question you should ask. My view, laid out in my guide on [how to choose a realtor in Vancouver](/resources/blog/how-to-choose-a-realtor-in-vancouver), is that pricing strategy and negotiation routinely swing outcomes by more than the entire commission, in either direction.
+
+## Don't Forget These Other Costs
+
+Commission is the biggest transaction cost for sellers, but it's not the only line item — and buyers have their own list:
+
+- **Property Transfer Tax (buyers):** BC's PTT is 1% on the first $200,000, 2% up to $2,000,000, and higher tiers above that. On a $1.5M purchase that's $28,000. First-time buyers and buyers of new homes may qualify for exemptions — see my [property transfer tax guide](/resources/property-transfer-tax).
+- **GST (buyers of new homes):** 5% on new construction, with partial rebates at certain price points.
+- **Legal/notary fees:** Typically $1,200-$2,500 per side for conveyancing.
+- **The Home Buyer Rescission Period:** Since January 2023, BC buyers can walk away from an accepted offer on most residential properties within three business days — but it costs 0.25% of the purchase price ($3,750 on a $1.5M home). It's a safety valve, not a free option.
+
+## Can You Pay Less? Discount Brokerages and Mere Postings
+
+Yes — flat-fee and discount brokerages exist across Metro Vancouver, and "mere postings" let you list on the MLS while handling the sale yourself. For some sellers, in some markets, with some properties, that trade works.
+
+What you're giving up is pricing strategy, negotiation, exposure, and someone whose job is to manage risk in what is probably the largest transaction of your life. The honest framing isn't "full-service good, discount bad" — it's that you should understand exactly which services you're cutting and decide whether they matter for your property and your market. When a well-priced, well-marketed home draws three offers instead of one, the difference usually exceeds the commission saved.
+
+## Ask Me the Uncomfortable Question
+
+Commission should never be a mystery, and you should never feel awkward asking about it. If you're thinking about selling in Vancouver, I'll show you exactly what I charge, exactly what's included, and exactly what your net proceeds would look like at different price points — before you sign anything. A [free home valuation](/selling/home-valuation) is the easiest place to start, or call me directly: Aparna Kapur, Oakwyn Realty, 604-612-7694.`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
