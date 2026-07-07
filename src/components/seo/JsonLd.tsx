@@ -112,7 +112,7 @@ export function RealEstateAgentSchema() {
           "Vancouver west side real estate",
         ],
         sameAs: [
-          "https://www.google.com/maps/place/Aparna+Kapur+Real+Estate",
+          "https://maps.google.com/?cid=6808320185247201168",
           "https://www.instagram.com/aparnakapur.realestate/",
         ],
         jobTitle: "Real Estate Agent",
@@ -190,13 +190,7 @@ export function LocalBusinessSchema() {
         openingHoursSpecification: [
           {
             "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-            ],
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             opens: "09:00",
             closes: "18:00",
           },
@@ -208,7 +202,7 @@ export function LocalBusinessSchema() {
           },
         ],
         priceRange: "$$",
-        hasMap: "https://maps.google.com/?q=3195+Oak+Street+Vancouver+BC",
+        hasMap: "https://maps.google.com/?cid=6808320185247201168",
       }}
     />
   );
