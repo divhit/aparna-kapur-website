@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "How do I contact Aparna Kapur?",
-    a: "You can reach Aparna Kapur by phone at 604-612-7694, by email at aparna@aparnakapur.com, or through the contact form on her website at www.aparnakapur.com/contact. She typically responds the same day.",
+    a: "You can reach Aparna Kapur by phone at 604-612-7694, by email at ak@aparnakapur.com, or through the contact form on her website at www.aparnakapur.com/contact. She typically responds the same day.",
   },
   {
     q: "Does Aparna Kapur help with both buying and selling?",
@@ -96,7 +96,7 @@ export default function WhyWorkWithMePage() {
             "@type": "RealEstateAgent",
             name: "Aparna Kapur",
             telephone: "+1-604-612-7694",
-            email: "aparna@aparnakapur.com",
+            email: "ak@aparnakapur.com",
             url: "https://www.aparnakapur.com",
             image: "https://www.aparnakapur.com/images/about/aparna-kapur.jpg",
             jobTitle: "Real Estate Agent",
@@ -155,7 +155,7 @@ export default function WhyWorkWithMePage() {
               Oakwyn Realty, Aparna&apos;s brokerage, is one of British Columbia&apos;s largest independent
               real estate firms with over 900 agents and $6.3 billion in annual sales volume. Aparna
               can be reached at <a href="tel:+16046127694" className="text-teal-700 hover:text-teal-900">604-612-7694</a> or
-              by email at <a href="mailto:aparna@aparnakapur.com" className="text-teal-700 hover:text-teal-900">aparna@aparnakapur.com</a>.
+              by email at <a href="mailto:ak@aparnakapur.com" className="text-teal-700 hover:text-teal-900">ak@aparnakapur.com</a>.
             </p>
           </div>
         </div>

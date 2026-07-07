@@ -3,6 +3,8 @@ export type BlogPost = {
   title: string;
   excerpt: string;
   date: string;
+  datePublished: string;
+  dateModified: string;
   category: string;
   readTime: string;
   image: string;
@@ -16,10 +18,11 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "From luxury retail to Time Out Market to a 9-acre rooftop park, here is your complete guide to everything opening at Oakridge Park in 2026 and what it means for Vancouver real estate.",
     date: "March 2026",
+    datePublished: "2026-03-18",
+    dateModified: "2026-03-18",
     category: "Neighbourhoods",
     readTime: "9 min read",
-    image:
-      "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/oakridge-park-spring-2026-opening-guide.jpg",
     content: `## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty based in Oakridge, Vancouver, and I've been watching this site evolve since the original rezoning. Last week, walking along Cambie Street toward the Canada Line station, I could finally see it: the storefronts being fitted out, the park taking shape on the rooftop, families peering through the hoarding trying to get a look inside. After nearly seven years of construction, Oakridge Park — the $6 billion, 28-acre development at 41st and Cambie — is actually opening in 2026.
@@ -151,10 +154,11 @@ If you want to understand what this means for your specific real estate plans �
     excerpt:
       "Two of Vancouver's most desirable west side neighbourhoods compared head-to-head: schools, transit, pricing, lifestyle, and future growth potential.",
     date: "March 2026",
+    datePublished: "2026-03-05",
+    dateModified: "2026-03-05",
     category: "Neighbourhoods",
     readTime: "8 min read",
-    image:
-      "https://images.pexels.com/photos/2079234/pexels-photo-2079234.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison.jpg",
     content: `## I Walk Both of These Neighbourhoods Every Week
 
 Oakridge and Kerrisdale sit side by side on Vancouver's west side, separated by a few blocks along 41st Avenue. I'm Aparna Kapur with Oakwyn Realty, and I spend a lot of time in both — showing homes, grabbing coffee on the Kerrisdale village strip, watching the cranes at Oakridge Park. I genuinely love both neighbourhoods, which is why this is one of my favourite conversations to have with buyers.
@@ -322,10 +326,11 @@ If you're weighing these two areas — or comparing them to South Cambie, Riley 
     excerpt:
       "The Cambie Corridor Plan update approved in October 2025 has pre-zoned over 4,300 properties. Here is what it means for homeowners, buyers, and investors along the Canada Line corridor.",
     date: "March 2026",
+    datePublished: "2026-03-10",
+    dateModified: "2026-03-10",
     category: "Market Analysis",
     readTime: "7 min read",
-    image:
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know.jpg",
     content: `## In October 2025, Vancouver Quietly Rezoned Over 4,300 Properties Along the Canada Line
 
 If you own a home along Cambie Street between Marine Drive and King Edward — in Oakridge, South Cambie, Langara, or Marpole — your property's zoning may have changed. You might not have even noticed.
@@ -465,10 +470,11 @@ I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor mark
     excerpt:
       "Until recently, choosing between a presale and a resale condo was a genuinely difficult decision. In 2026, the calculus has shifted, but not entirely in one direction.",
     date: "February 2026",
+    datePublished: "2026-02-20",
+    dateModified: "2026-02-20",
     category: "Buying",
     readTime: "7 min read",
-    image:
-      "https://images.pexels.com/photos/1642125/pexels-photo-1642125.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/resale-vs-presale-vancouver-condos-2026.jpg",
     content: `## The Decision Has Changed
 
 Until recently, choosing between a presale and a resale condo in Vancouver was a genuinely difficult decision. Both options had strong arguments in their favour, and the right choice depended heavily on timing and personal circumstances.
@@ -524,10 +530,11 @@ It comes down to running the numbers on your specific situation. That is what I 
     excerpt:
       "In 2011, Oakridge was officially designated a municipal town centre, the first of its kind in Metro Vancouver. With Oakridge Park opening in 2026, that vision is finally becoming reality.",
     date: "February 2026",
+    datePublished: "2026-02-12",
+    dateModified: "2026-02-12",
     category: "Neighbourhoods",
     readTime: "6 min read",
-    image:
-      "https://images.pexels.com/photos/2096578/pexels-photo-2096578.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/is-oakridge-vancouvers-new-downtown.jpg",
     content: `## A Municipal Town Centre Is Born
 
 In July 2011, the Oakridge commercial area, home to the Oakridge Centre mall since 1959, was officially designated as a **municipal town centre** by the City of Vancouver. The first of its kind in Metro Vancouver, placing it in a category similar to Brentwood Town Centre in Burnaby or City Centre in Surrey.
@@ -591,10 +598,11 @@ I live and work in this area. I watch the construction progress every week. If y
     excerpt:
       "The $6 billion Oakridge Park project is transforming Vancouver's landscape. Here's what buyers, sellers, and investors need to know about timelines, pricing, and impact on the neighborhood.",
     date: "February 2026",
+    datePublished: "2026-02-05",
+    dateModified: "2026-02-05",
     category: "Neighbourhoods",
     readTime: "8 min read",
-    image:
-      "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/oakridge-park-redevelopment-2026.jpg",
     content: `## The Biggest Development in Vancouver's History
 
 The Oakridge Park redevelopment is unlike anything Vancouver has seen before. What was once a conventional shopping mall at 41st and Cambie is being transformed into a 28-acre mixed-use community that will fundamentally reshape this corner of the city.
@@ -675,10 +683,11 @@ Whether you're looking to buy near Oakridge Park or wondering what your current 
     excerpt:
       "From the FHSA to the PTT exemption, here's every program available to help you buy your first home in British Columbia, and how to maximize your benefits.",
     date: "January 2026",
+    datePublished: "2026-01-22",
+    dateModified: "2026-01-22",
     category: "Buying",
     readTime: "10 min read",
-    image:
-      "https://images.pexels.com/photos/6349262/pexels-photo-6349262.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/first-time-buyer-programs-bc-2026.jpg",
     content: `## Buying Your First Home in BC: Every Program That Can Help
 
 Purchasing your first home in British Columbia is a significant milestone, and an expensive one. The good news? There are more programs than ever to help first-time buyers get into the market. Here's a comprehensive guide to every program available in 2026.
@@ -797,10 +806,11 @@ Ready to start your home-buying journey? Let's talk about your situation and cre
     excerpt:
       "From school catchments to park access to community feel, here are the top Vancouver neighbourhoods for families, based on data and local knowledge.",
     date: "January 2026",
+    datePublished: "2026-01-15",
+    dateModified: "2026-01-15",
     category: "Neighbourhoods",
     readTime: "7 min read",
-    image:
-      "https://images.pexels.com/photos/1471295/pexels-photo-1471295.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+    image: "/images/blog/best-neighborhoods-vancouver-families-2026.jpg",
     content: `## Finding Your Family's Perfect Vancouver Neighbourhood
 
 Choosing where to raise your family in Vancouver is one of the most important decisions you'll make. Beyond just the home itself, the neighbourhood shapes your daily life: school quality, park access, community feel, safety, and convenience all matter.

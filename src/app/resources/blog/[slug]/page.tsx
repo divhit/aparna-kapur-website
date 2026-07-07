@@ -23,11 +23,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
-    keywords: [post.category, "Vancouver real estate", "Aparna Kapur", post.title.split(":")[0]],
+    keywords: [
+      post.category,
+      "Vancouver real estate",
+      "Aparna Kapur",
+      post.title.split(":")[0],
+    ],
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      publishedTime: post.datePublished,
+      modifiedTime: post.dateModified,
+      authors: ["Aparna Kapur"],
       images: [{ url: post.image }],
     },
   };
@@ -60,8 +68,8 @@ export default async function BlogPostPage({ params }: Props) {
           headline: post.title,
           description: post.excerpt,
           image: post.image,
-          datePublished: post.date,
-          dateModified: post.date,
+          datePublished: post.datePublished,
+          dateModified: post.dateModified,
           keywords: post.category,
           articleSection: post.category,
           author: {
@@ -118,7 +126,9 @@ export default async function BlogPostPage({ params }: Props) {
                 );
               }
               if (block.startsWith("- ")) {
-                const items = block.split("\n").filter((l) => l.startsWith("- "));
+                const items = block
+                  .split("\n")
+                  .filter((l) => l.startsWith("- "));
                 return (
                   <ul key={i} className="space-y-2 my-4">
                     {items.map((item, j) => (
@@ -137,8 +147,13 @@ export default async function BlogPostPage({ params }: Props) {
                 );
               }
               if (block.startsWith("| ")) {
-                const rows = block.split("\n").filter((r) => !r.startsWith("|---"));
-                const header = rows[0]?.split("|").filter(Boolean).map((c) => c.trim());
+                const rows = block
+                  .split("\n")
+                  .filter((r) => !r.startsWith("|---"));
+                const header = rows[0]
+                  ?.split("|")
+                  .filter(Boolean)
+                  .map((c) => c.trim());
                 const body = rows.slice(1);
                 return (
                   <div key={i} className="overflow-x-auto my-6">
@@ -157,7 +172,10 @@ export default async function BlogPostPage({ params }: Props) {
                       </thead>
                       <tbody>
                         {body.map((row, j) => {
-                          const cells = row.split("|").filter(Boolean).map((c) => c.trim());
+                          const cells = row
+                            .split("|")
+                            .filter(Boolean)
+                            .map((c) => c.trim());
                           return (
                             <tr key={j} className="even:bg-warm-50">
                               {cells.map((cell, k) => (
@@ -167,7 +185,7 @@ export default async function BlogPostPage({ params }: Props) {
                                   dangerouslySetInnerHTML={{
                                     __html: cell.replace(
                                       /\*\*(.*?)\*\*/g,
-                                      "<strong>$1</strong>"
+                                      "<strong>$1</strong>",
                                     ),
                                   }}
                                 />
@@ -188,7 +206,7 @@ export default async function BlogPostPage({ params }: Props) {
                   dangerouslySetInnerHTML={{
                     __html: block.replace(
                       /\*\*(.*?)\*\*/g,
-                      "<strong>$1</strong>"
+                      "<strong>$1</strong>",
                     ),
                   }}
                 />
@@ -198,7 +216,10 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Explore Related Neighbourhoods */}
           {(() => {
-            const neighbourhoodMap: Record<string, { name: string; slug: string }[]> = {
+            const neighbourhoodMap: Record<
+              string,
+              { name: string; slug: string }[]
+            > = {
               "oakridge-park-spring-2026-opening-guide": [
                 { name: "Oakridge", slug: "oakridge" },
                 { name: "South Cambie", slug: "south-cambie" },
@@ -257,8 +278,18 @@ export default async function BlogPostPage({ params }: Props) {
                       className="inline-flex items-center gap-1.5 px-4 py-2 bg-white rounded-lg border border-warm-200 text-sm font-medium text-teal-900 hover:border-teal-300 hover:shadow-sm transition-all"
                     >
                       {hood.name}
-                      <svg className="w-3.5 h-3.5 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        className="w-3.5 h-3.5 text-teal-600"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </Link>
                   ))}

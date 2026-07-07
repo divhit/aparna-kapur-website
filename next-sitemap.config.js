@@ -5,16 +5,29 @@ module.exports = {
   sitemapSize: 7000,
   changefreq: "weekly",
   priority: 0.7,
+  // Build-stamped lastmod teaches crawlers the dates are meaningless — omit it.
+  autoLastmod: false,
   robotsTxtOptions: {
     policies: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
+      { userAgent: "*", allow: "/" },
+      // Explicitly welcome AI/LLM crawlers so a future default-deny at the
+      // CDN or a robots parser quirk never locks them out.
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      { userAgent: "Claude-Web", allow: "/" },
+      { userAgent: "anthropic-ai", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "Perplexity-User", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
+      { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "cohere-ai", allow: "/" },
+      { userAgent: "CCBot", allow: "/" },
+      { userAgent: "meta-externalagent", allow: "/" },
     ],
-    additionalSitemaps: [
-      "https://www.aparnakapur.com/sitemap.xml",
-    ],
+    transformRobotsTxt: async (_, robotsTxt) =>
+      `${robotsTxt}\n# LLM-readable site summary\n# https://www.aparnakapur.com/llms.txt\n# https://www.aparnakapur.com/llms-full.txt\n`,
   },
   transform: async (config, path) => {
     // Higher priority for key pages
@@ -56,7 +69,6 @@ module.exports = {
       loc: path,
       changefreq,
       priority,
-      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
     };
   },
 };

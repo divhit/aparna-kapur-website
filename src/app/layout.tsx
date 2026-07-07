@@ -33,6 +33,9 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aparnakapur.com"),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
     template: "%s | Aparna Kapur",
