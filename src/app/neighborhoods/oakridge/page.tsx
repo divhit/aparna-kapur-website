@@ -48,19 +48,19 @@ const faqs = [
       "Two Canada Line stations: Oakridge-41st Avenue and Langara-49th Avenue. Downtown in 15 minutes, YVR in 20. Multiple bus routes serve the area, and cycling infrastructure continues to improve.",
   },
   {
-    question: "When does Oakridge Park mall open in 2026?",
+    question: "When did Oakridge Park mall open?",
     answer:
-      "The Oakridge Park retail centre is scheduled to begin its phased opening in Spring 2026. The first phase includes over 500,000 square feet of retail space featuring luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, along with Time Out Market Vancouver — an 18-kitchen food hall that will be only the second Time Out Market in Canada. The 9-acre rooftop public park and civic amenities including a new community centre, library branch, and childcare facilities are expected to follow in Summer 2026.",
+      "Oakridge Park officially opened on May 28, 2026, with more than 100 stores across 650,000+ square feet of retail, including Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, along with Time Out Market Vancouver — an 18-kitchen food hall that is only the second Time Out Market in Canada. Much of the 9-acre rooftop public park is also open, while civic amenities including the new community centre, library branch, and childcare facilities continue to come online.",
   },
   {
-    question: "What luxury brands are coming to Oakridge Park Vancouver?",
+    question: "What luxury brands are at Oakridge Park Vancouver?",
     answer:
-      "Oakridge Park will feature an unprecedented luxury retail lineup for Vancouver, including Louis Vuitton, Prada, Bvlgari, Tiffany & Co., Rolex, Valentino, Loewe, Dolce & Gabbana, Loro Piana, Thom Browne, Acne Studios, Brunello Cucinelli, Moncler, and Alexander Wang. The development will also house a Giorgio Armani Cafe — only the third location in North America. This positions Oakridge as Vancouver's premier luxury shopping destination.",
+      "Oakridge Park features an unprecedented luxury retail lineup for Vancouver, including Louis Vuitton, Prada, Bvlgari, Tiffany & Co., Rolex, Valentino, Loewe, Dolce & Gabbana, Loro Piana, Thom Browne, Acne Studios, Brunello Cucinelli, Moncler, and Alexander Wang. The development also houses a Giorgio Armani Caffe — only the third location in North America. This positions Oakridge as Vancouver's premier luxury shopping destination.",
   },
   {
     question: "Is Oakridge Vancouver good for families?",
     answer:
-      "Oakridge is one of the best neighbourhoods in Vancouver for families. It offers highly rated schools including Dr. Annie B. Jamieson Elementary (ranked 61st out of 932 schools in BC by the Fraser Institute) and Sir Winston Churchill Secondary with its International Baccalaureate programme. The neighbourhood has excellent parks including Queen Elizabeth Park and the upcoming 9-acre Oakridge Park, two Canada Line SkyTrain stations, a new community centre with pool and ice rink coming in 2026, and a strong multicultural community. About 75% of households are married couples, with 47% being families with children.",
+      "Oakridge is one of the best neighbourhoods in Vancouver for families. It offers highly rated schools including Dr. Annie B. Jamieson Elementary (ranked 61st out of 932 schools in BC by the Fraser Institute) and Sir Winston Churchill Secondary with its International Baccalaureate programme. The neighbourhood has excellent parks including Queen Elizabeth Park and the new 9-acre rooftop park at Oakridge Park (opened 2026), two Canada Line SkyTrain stations, a new community centre with pool and ice rink arriving as part of the Oakridge Park build-out, and a strong multicultural community. About 75% of households are married couples, with 47% being families with children.",
   },
   {
     question: "How far is Oakridge from downtown Vancouver?",
@@ -496,7 +496,7 @@ export default async function OakridgePage() {
                       <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
                     </summary>
                     <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
-                      Oakridge Park is scheduled for a phased opening beginning <strong className="text-teal-900">Spring 2026</strong>. The $6 billion mixed-use development by QuadReal and Westbank is one of Canada&apos;s largest. The first phase includes over 500,000 square feet of retail featuring luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany &amp; Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Cafe. The 9-acre rooftop park, community centre, library branch, and childcare facilities follow in Summer 2026.
+                      Oakridge Park officially opened on <strong className="text-teal-900">May 28, 2026</strong>. The $6 billion mixed-use development by QuadReal and Westbank is one of Canada&apos;s largest, opening with 100+ stores across 650,000+ square feet of retail featuring luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany &amp; Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Caffe. Much of the 9-acre rooftop park is now open, with the community centre, library branch, and childcare facilities continuing to come online.
                     </div>
                   </details>
 
@@ -620,7 +620,7 @@ export default async function OakridgePage() {
                 name: "When does Oakridge Park open?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Oakridge Park is scheduled for a phased opening beginning Spring 2026. The $6 billion mixed-use development by QuadReal and Westbank features over 500,000 square feet of retail with luxury brands like Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Cafe.",
+                  text: "Oakridge Park officially opened on May 28, 2026. The $6 billion mixed-use development by QuadReal and Westbank opened with 100+ stores across 650,000+ square feet of retail, including Louis Vuitton, Prada, Bvlgari, Tiffany & Co., and Valentino, plus Time Out Market Vancouver and the Giorgio Armani Caffe.",
                 },
               },
               {

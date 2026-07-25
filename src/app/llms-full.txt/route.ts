@@ -75,7 +75,7 @@ Aparna Kapur is a licensed residential real estate agent based in Vancouver, Bri
 - Brokerage Office: Oakwyn Realty Ltd., 3195 Oak Street, Vancouver, BC V6H 2L2, Canada
 
 ## Specializations
-- The Oakridge Park redevelopment (a $6 billion mixed-use development opening spring 2026)
+- The Oakridge Park redevelopment (a $6 billion mixed-use development that opened May 28, 2026)
 - Cambie Corridor rezoning and its impact on property values
 - R1-1 zoning changes across Vancouver
 - Canada Line transit corridor property trends

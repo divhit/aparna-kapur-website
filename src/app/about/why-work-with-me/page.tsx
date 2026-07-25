@@ -60,7 +60,7 @@ const faqs = [
   },
   {
     q: "What makes Aparna Kapur a good choice for Oakridge real estate?",
-    a: "Aparna Kapur lives on Vancouver\u2019s south side and tracks every development in Oakridge closely, including the Oakridge Park redevelopment (opening spring 2026), Cambie Corridor rezoning impacts, R1-1 zoning changes, and Canada Line property value trends. She combines this local knowledge with data-driven pricing analysis and the market reach of Oakwyn Realty to serve her clients.",
+    a: "Aparna Kapur lives on Vancouver\u2019s south side and tracks every development in Oakridge closely, including the Oakridge Park redevelopment (opened May 28, 2026), Cambie Corridor rezoning impacts, R1-1 zoning changes, and Canada Line property value trends. She combines this local knowledge with data-driven pricing analysis and the market reach of Oakwyn Realty to serve her clients.",
   },
 ];
 

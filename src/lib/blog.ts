@@ -19,11 +19,13 @@ export const blogPosts: BlogPost[] = [
       "From luxury retail to Time Out Market to a 9-acre rooftop park, here is your complete guide to everything opening at Oakridge Park in 2026 and what it means for Vancouver real estate.",
     date: "March 2026",
     datePublished: "2026-03-18",
-    dateModified: "2026-03-18",
+    dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "9 min read",
     image: "/images/blog/oakridge-park-spring-2026-opening-guide.jpg",
-    content: `## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
+    content: `> **Update (July 2026):** Oakridge Park officially opened on May 28, 2026 — including Time Out Market Vancouver and much of the rooftop park — with remaining civic amenities continuing to come online. This guide was written ahead of the opening; the details below describe what has now arrived.
+
+## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty based in Oakridge, Vancouver, and I've been watching this site evolve since the original rezoning. Last week, walking along Cambie Street toward the Canada Line station, I could finally see it: the storefronts being fitted out, the park taking shape on the rooftop, families peering through the hoarding trying to get a look inside. After nearly seven years of construction, Oakridge Park — the $6 billion, 28-acre development at 41st and Cambie — is actually opening in 2026.
 
@@ -528,10 +530,10 @@ It comes down to running the numbers on your specific situation. That is what I 
     slug: "is-oakridge-vancouvers-new-downtown",
     title: "Is Oakridge Vancouver's New Downtown?",
     excerpt:
-      "In 2011, Oakridge was officially designated a municipal town centre, the first of its kind in Metro Vancouver. With Oakridge Park opening in 2026, that vision is finally becoming reality.",
+      "In 2011, Oakridge was officially designated a municipal town centre, the first of its kind in Metro Vancouver. With Oakridge Park now open as of May 2026, that vision has become reality.",
     date: "February 2026",
     datePublished: "2026-02-12",
-    dateModified: "2026-02-12",
+    dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "6 min read",
     image: "/images/blog/is-oakridge-vancouvers-new-downtown.jpg",
@@ -599,7 +601,7 @@ I live and work in this area. I watch the construction progress every week. If y
       "The $6 billion Oakridge Park project is transforming Vancouver's landscape. Here's what buyers, sellers, and investors need to know about timelines, pricing, and impact on the neighborhood.",
     date: "February 2026",
     datePublished: "2026-02-05",
-    dateModified: "2026-02-05",
+    dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "8 min read",
     image: "/images/blog/oakridge-park-redevelopment-2026.jpg",
@@ -625,11 +627,11 @@ The design preserves key view corridors to the North Shore mountains while creat
 
 ## Timeline: Where Are We Now?
 
-Construction has been underway since 2019, and here's the current status as of early 2026:
+Construction has been underway since 2019, and here's the status as of mid-2026:
 
 - **Phase 1 residential towers**: Substantially complete, first occupancies beginning
-- **Retail podium**: Interior finishing underway, partial opening expected mid-2026
-- **Rooftop park**: Landscaping and amenity installation in progress
+- **Retail podium**: Officially opened May 28, 2026, with 100+ stores, Time Out Market Vancouver, and the Giorgio Armani Caffe
+- **Rooftop park**: Much of the 9-acre public park is now open, with remaining sections completing
 - **Community centre**: Construction advancing, expected completion 2027
 - **Remaining residential phases**: Continuing through 2028
 
@@ -1039,6 +1041,78 @@ What you're giving up is pricing strategy, negotiation, exposure, and someone wh
 ## Ask Me the Uncomfortable Question
 
 Commission should never be a mystery, and you should never feel awkward asking about it. If you're thinking about selling in Vancouver, I'll show you exactly what I charge, exactly what's included, and exactly what your net proceeds would look like at different price points — before you sign anything. A [free home valuation](/selling/home-valuation) is the easiest place to start, or call me directly: Aparna Kapur, Oakwyn Realty, 604-612-7694.`,
+  },
+  {
+    slug: "vancouver-market-update-june-2026",
+    title: "Vancouver Real Estate Market Update: The June 2026 Numbers",
+    excerpt:
+      "Sales jumped nearly 10% year-over-year in June while prices held flat — a possible early sign of a market shift. Here are the June 2026 GVR numbers for Metro Vancouver, the west side, and the east side, and what they mean for buyers and sellers.",
+    date: "July 2026",
+    datePublished: "2026-07-24",
+    dateModified: "2026-07-24",
+    category: "Market Analysis",
+    readTime: "7 min read",
+    image: "/images/blog/vancouver-market-update-june-2026.jpg",
+    content: `## The Most Interesting Month of Data in a While
+
+I'm Aparna Kapur with Oakwyn Realty, and every month I go through the Greater Vancouver REALTORS (GVR) statistics package so my clients don't have to. June 2026 is the most interesting month of data we've had in some time — not because prices moved, but because demand did.
+
+All figures below are from the GVR June 2026 MLS statistics, released July 3, 2026.
+
+## The Headline Numbers for Metro Vancouver
+
+- **Sales: 2,390** — up 9.6% from June 2025, though still 12.4% below the 10-year seasonal average
+- **New listings: 5,938** — down 6% from June 2025
+- **Total active listings: 17,017** — down 3.1% year-over-year, but still 30.2% above the 10-year average
+- **Composite benchmark price: $1,099,100** — down 6.0% from June 2025 and essentially flat (-0.1%) from May
+
+By property type across the region:
+
+- **Detached: $1,842,900** (down 7.1% year-over-year)
+- **Townhouse: $1,046,200** (down 5.0%)
+- **Condo/apartment: $695,200** (down 7.1%)
+
+## Why June Was Different
+
+For the past couple of years, Vancouver's sales data has been mixed — condos up while detached lagged, or vice versa. That's the signature of a sideways market. In June, **every home type posted year-over-year sales gains**: detached up 13.7%, townhouses up 11.4%, apartments up 6.1%. GVR's chief economist called it a possible "early sign of a shift in the market," with demand returning more broadly.
+
+Just as important: new listings are slowing. With fewer homes coming to market and more selling, standing inventory has stopped climbing. Inventory is still historically high — which is why prices haven't moved — but if this pattern holds, the buyer-friendly conditions we've enjoyed since 2025 won't last indefinitely.
+
+The sales-to-active-listings ratio for June sits at **14.6%** overall (12% detached, 17.8% attached, 15.5% apartments). Analysts consider below 12% a buyer's market and above 20% a seller's market — so we're in balanced territory, with detached homes right on the buyer's-market boundary.
+
+## Vancouver West Side: Signs of a Floor
+
+For my clients in [Oakridge](/neighborhoods/oakridge), [Kerrisdale](/neighborhoods/kerrisdale), [South Cambie](/neighborhoods/south-cambie), and the [Cambie Corridor](/neighborhoods/cambie-corridor), the Vancouver West numbers matter most:
+
+- **Composite benchmark: $1,240,200** — down 5.7% year-over-year, but **up 0.4% from May**
+- **Detached: $3,042,100** — down 9.2% year-over-year, up 0.6% month-over-month
+- **Townhouse: $1,351,600** — down 5.4% year-over-year, **up 1.5% month-over-month**
+- **Condo: $779,200** — down 5.6% year-over-year, down 0.5% month-over-month
+
+Read that again: while the region was flat, the west side's composite, detached, and townhome benchmarks all **ticked up month-over-month**. One month isn't a trend, but after the declines of the past year, it's the first hint of a floor forming — and I don't think it's a coincidence that it coincides with [Oakridge Park's grand opening on May 28](/resources/blog/oakridge-park-spring-2026-opening-guide). Buyer interest in the surrounding neighbourhoods has been noticeably stronger since the doors opened.
+
+## Vancouver East Side
+
+- **Composite benchmark: $1,136,400** — down 6.3% year-over-year, up 0.3% from May
+- **Detached: $1,659,400** — down 9.6% year-over-year
+- **Townhouse: $1,054,900** — down 3.5% year-over-year
+- **Condo: $637,300** — down 7.2% year-over-year
+
+The east side tells a similar story: year-over-year declines, month-over-month stabilization. Townhomes remain the most resilient segment on both sides of Main Street.
+
+## What This Means If You're Buying
+
+Prices are 5-7% below last year, inventory is still 30% above normal, and mortgage-qualifying conditions are better than they've been in years. That's genuine selection and genuine negotiating room — **but the demand data suggests the clock is ticking**. If sales keep rising while new listings slow, the leverage you have today shrinks. The buyers I work with are shifting from "wait and see" to "find the right one and negotiate hard."
+
+## What This Means If You're Selling
+
+Flat prices with rising demand is a better sales environment than falling prices with weak demand — but with 17,000 active listings, buyers still have plenty of alternatives. Pricing accurately against current comparables (not 2025 hopes) and presenting well remain everything. Well-priced homes near amenities — and on the west side, near the newly opened Oakridge Park — are the ones drawing multiple offers. If you want to know what your home would realistically fetch in this market, start with a [free home valuation](/selling/home-valuation).
+
+## The Bottom Line
+
+June 2026: demand up broadly for the first time in years, supply tightening, prices flat, west side showing the first month-over-month gains in a while. A balanced market that may be starting to lean.
+
+I'll break down the July numbers when GVR releases them in early August. If you want to talk about what these numbers mean for your specific situation — buying, selling, or just planning — call or text me at 604-612-7694, or reach me through [aparnakapur.com/contact](/contact).`,
   },
 ];
 
