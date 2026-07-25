@@ -30,6 +30,54 @@ type MonthEntry = {
 
 const monthlyData: MonthEntry[] = [
   {
+    month: "June",
+    year: "2026",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.30M",
+        townhome: "$1.55M",
+        condo: "$1.00M",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$1.95M",
+        townhome: "$1.48M",
+        condo: "$698K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.02M",
+        townhome: "$1.47M",
+        condo: "$1.04M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$1.98M",
+        townhome: "$1.15M",
+        condo: "$953K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$3.03M",
+        townhome: "$1.59M",
+        condo: "$993K",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.71M",
+        townhome: "$1.65M",
+        condo: "$1.04M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
     month: "May",
     year: "2026",
     neighbourhoods: [
@@ -1956,7 +2004,7 @@ export default function MarketByRegion() {
                 {activeRegion.name}
               </h3>
               <p className="text-sm text-warm-500">
-                Benchmark prices, Jun 2023 &ndash; May 2026
+                Benchmark prices, Jul 2023 &ndash; Jun 2026
               </p>
             </div>
             <button
