@@ -7,6 +7,8 @@ module.exports = {
   priority: 0.7,
   // Build-stamped lastmod teaches crawlers the dates are meaningless — omit it.
   autoLastmod: false,
+  // These paths 307-redirect to their first child page; redirects don't belong in a sitemap.
+  exclude: ["/about", "/buying/guide", "/selling/guide"],
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },

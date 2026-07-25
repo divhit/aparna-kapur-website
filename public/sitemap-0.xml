@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url><loc>https://www.aparnakapur.com/about/oakwyn-realty</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aparnakapur.com/about</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/about/why-work-with-me</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying/guide/choosing-your-agent</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying/guide/closing-day</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
@@ -9,7 +8,6 @@
 <url><loc>https://www.aparnakapur.com/buying/guide/financial-preparation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying/guide/finding-your-home</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying/guide/the-big-decision</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aparnakapur.com/buying/guide</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying/opportunities</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/buying</loc><changefreq>weekly</changefreq><priority>1</priority></url>
 <url><loc>https://www.aparnakapur.com/contact</loc><changefreq>weekly</changefreq><priority>1</priority></url>
@@ -68,7 +66,6 @@
 <url><loc>https://www.aparnakapur.com/selling/guide/offers-and-negotiation</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/selling/guide/preparing-your-home</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/selling/guide/pricing-strategy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://www.aparnakapur.com/selling/guide</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/selling/home-valuation</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/selling</loc><changefreq>weekly</changefreq><priority>1</priority></url>
 <url><loc>https://www.aparnakapur.com/selling/staging-tips</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
