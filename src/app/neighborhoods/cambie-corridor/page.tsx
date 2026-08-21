@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the average home price in Cambie Corridor, Vancouver?",
     answer:
-      "The composite benchmark price in Cambie Corridor is $1.50M (April 2026). Condos average around $1.05M, townhomes $1.66M, and detached homes $2.58M. Prices vary by proximity to SkyTrain stations and development nodes. Contact Aparna Kapur at 604-612-7694 for a current market evaluation tailored to your budget and goals.",
+      "The composite benchmark price in Cambie Corridor is $1.50M (July 2026). Condos average around $1.02M, townhomes $1.60M, and detached homes $2.62M. Prices vary by proximity to SkyTrain stations and development nodes. Contact Aparna Kapur at 604-612-7694 for a current market evaluation tailored to your budget and goals.",
   },
   {
     question: "What is the Cambie Corridor rezoning?",
@@ -92,7 +92,7 @@ export default async function CambieCorridorPage() {
         <div className="max-w-7xl mx-auto px-6 py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.46M</p>
+              <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["cambie-corridor"].avgPrice}</p>
               <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>
@@ -259,7 +259,7 @@ export default async function CambieCorridorPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Composite benchmark: $1.50M (April 2026, -6.8% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
+                  Composite benchmark: $1.50M (July 2026, -6.6% YoY). The northern end near Broadway commands premium prices. The southern end near Marine Drive and Langara offers more affordable entry.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

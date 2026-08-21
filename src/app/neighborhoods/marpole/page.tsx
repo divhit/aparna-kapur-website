@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What is the average home price in Marpole, Vancouver?",
     answer:
-      "The GVR MLS® HPI composite benchmark for Marpole is $1.11M (April 2026). Condos average around $709K. Townhouse and detached benchmarks vary widely with limited HPI coverage at the neighbourhood level. For a detailed pricing breakdown and current listings, contact Aparna Kapur at 604-612-7694 — she specializes in Vancouver's south-side neighbourhoods and can provide up-to-date market analysis.",
+      "The GVR MLS® HPI composite benchmark for Marpole is $1.11M (July 2026). Condos average around $683K. Townhouse and detached benchmarks vary widely with limited HPI coverage at the neighbourhood level. For a detailed pricing breakdown and current listings, contact Aparna Kapur at 604-612-7694 — she specializes in Vancouver's south-side neighbourhoods and can provide up-to-date market analysis.",
   },
   {
     question: "Is Marpole a good neighbourhood to buy in?",
@@ -94,7 +94,7 @@ export default async function MarpolePage() {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-3 gap-6 max-w-2xl">
                 <div>
-                  <p className="font-serif text-2xl text-teal-700">$1.14M</p>
+                  <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["marpole"].avgPrice}</p>
                   <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
                 </div>
                 <div>
@@ -242,7 +242,7 @@ export default async function MarpolePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.11M (April 2026, -9.5% YoY). Strong value versus Oakridge ($1.47M) and Kerrisdale ($2.01M). Improving amenities and transit make it one of the most-watched neighborhoods among investors.
+                  GVR MLS® HPI composite benchmark: $1.11M (July 2026, -10.4% YoY). Strong value versus Oakridge ($1.43M) and Kerrisdale ($1.96M). Improving amenities and transit make it one of the most-watched neighborhoods among investors.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

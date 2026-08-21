@@ -53,6 +53,7 @@ export default function GetInTouch() {
         {/* Animated heading */}
         <div className="overflow-hidden mb-3">
           <h2
+            id="lets-talk"
             className={`font-serif text-3xl md:text-4xl text-white italic font-bold transition-all duration-700 ease-out ${
               visible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"
             }`}

@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "How much does a home cost in Oakridge Vancouver?",
     answer:
-      "GVR MLS\u00ae HPI benchmarks (June 2026): condos $1.00M, townhomes $1.55M, detached $3.30M. Composite benchmark: $1.44M. Prices vary by size, condition, and proximity to SkyTrain and Oakridge Park.",
+      "GVR MLS\u00ae HPI benchmarks (July 2026): condos $993K, townhomes $1.50M, detached $3.41M. Composite benchmark: $1.43M. Prices vary by size, condition, and proximity to SkyTrain and Oakridge Park.",
   },
   {
     question: "What is the Oakridge Park redevelopment?",
@@ -143,7 +143,7 @@ export default async function OakridgePage() {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-3 gap-6 max-w-2xl">
                 <div>
-                  <p className="font-serif text-2xl text-teal-700">$1.49M</p>
+                  <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["oakridge"].avgPrice}</p>
                   <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
                 </div>
                 <div>
@@ -328,7 +328,7 @@ export default async function OakridgePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.44M (June 2026, -9.3% YoY). Long-term appreciation driven by transit investment, the Oakridge Park project, and central location.
+                  GVR MLS® HPI composite benchmark: $1.43M (July 2026, -8.6% YoY). Long-term appreciation driven by transit investment, the Oakridge Park project, and central location.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>
@@ -486,7 +486,7 @@ export default async function OakridgePage() {
                       <svg className="w-5 h-5 text-teal-600 shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 9l-7 7-7-7" /></svg>
                     </summary>
                     <div className="px-6 pb-5 text-sm text-warm-600 leading-relaxed border-t border-warm-200 pt-4">
-                      As of June 2026, the GVR MLS® HPI composite benchmark price in Oakridge is <strong className="text-teal-900">$1.44M</strong>. Broken down: condos average around $1.00M, townhomes $1.55M, and detached homes $3.30M. Prices vary based on proximity to SkyTrain stations, Oakridge Park, and lot size. For a personalized market assessment, contact <strong className="text-teal-900">Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a>.
+                      As of July 2026, the GVR MLS® HPI composite benchmark price in Oakridge is <strong className="text-teal-900">$1.43M</strong>. Broken down: condos average around $993K, townhomes $1.50M, and detached homes $3.41M. Prices vary based on proximity to SkyTrain stations, Oakridge Park, and lot size. For a personalized market assessment, contact <strong className="text-teal-900">Aparna Kapur</strong> at <a href="tel:6046127694" className="text-teal-700 underline underline-offset-2 hover:text-teal-900">604-612-7694</a>.
                     </div>
                   </details>
 
@@ -612,7 +612,7 @@ export default async function OakridgePage() {
                 name: "What is the average home price in Oakridge, Vancouver?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "As of June 2026, the GVR MLS® HPI composite benchmark price in Oakridge is $1.44M. Condos average around $1.00M, townhomes $1.55M, and detached homes $3.30M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
+                  text: "As of July 2026, the GVR MLS® HPI composite benchmark price in Oakridge is $1.43M. Condos average around $993K, townhomes $1.50M, and detached homes $3.41M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
                 },
               },
               {

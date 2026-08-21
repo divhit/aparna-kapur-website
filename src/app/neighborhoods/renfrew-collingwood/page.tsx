@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -93,7 +94,7 @@ export default function RenfrewCollingwoodPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Composite benchmark: around <strong>$1.05M</strong>, well below
+            Composite benchmark: around <strong>{NEIGHBOURHOODS["renfrew-collingwood"].avgPrice}</strong>, well below
             the Vancouver average. Condos run{" "}
             <strong>$400K to $700K</strong> near Joyce Station, where rental
             demand stays strong. Townhomes go for{" "}
@@ -131,7 +132,7 @@ export default function RenfrewCollingwoodPage() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.05M</p>
+              <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["renfrew-collingwood"].avgPrice}</p>
               <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>

@@ -181,45 +181,65 @@ export const FAQS: { q: string; a: string }[] = [
  * Update this when the Greater Vancouver REALTORS monthly release lands.
  */
 export const MARKET_SNAPSHOT = {
-  label: "May 2026",
-  heading: "May 2026, Vancouver",
-  source: "Greater Vancouver REALTORS® • MLS® HPI • May 2026",
+  label: "July 2026",
+  heading: "July 2026, Vancouver",
+  source: "Greater Vancouver REALTORS® • MLS® HPI • July 2026",
   metrics: [
     {
       context: "Down 6.2% year-over-year",
-      value: "$1.10M",
+      value: "$1.09M",
       label: "Composite Benchmark Price",
       labelLines: ["Composite", "Benchmark Price"],
     },
     {
-      context: "Up 0.2% from April",
-      value: "+0.2%",
+      context: "Down 0.9% from June",
+      value: "-0.9%",
       label: "Composite Benchmark Month-Over-Month",
       labelLines: ["Composite Benchmark", "Month-Over-Month"],
     },
     {
-      context: "34.6% above 10-yr avg",
-      value: "16,917",
+      context: "26.8% above 10-yr avg",
+      value: "16,476",
       label: "Active Listings",
       labelLines: ["Active", "Listings"],
     },
     {
-      context: "Roughly flat vs last year",
-      value: "-1.0%",
+      context: "Fewer than last year",
+      value: "-4.0%",
       label: "Active Listings Year-Over-Year",
       labelLines: ["Active Listings", "Year-Over-Year"],
     },
     {
       context: "Fewer than last year",
-      value: "-7.6%",
-      label: "New Listings vs. May 2025",
-      labelLines: ["New Listings vs.", "May 2025"],
+      value: "-11.5%",
+      label: "New Listings vs. July 2025",
+      labelLines: ["New Listings vs.", "July 2025"],
     },
     {
       context: "Balanced territory",
-      value: "13.1%",
+      value: "13.0%",
       label: "Sales-to-Active Ratio",
       labelLines: ["Sales-to-Active", "Ratio"],
     },
   ],
 } as const;
+
+/**
+ * Region-wide MLS HPI benchmarks by property type, from the same GVR release
+ * as MARKET_SNAPSHOT. Used by the machine-readable representations so an agent
+ * asking "what is a Vancouver townhouse worth" gets a figure with a date on it.
+ */
+export const BENCHMARKS_BY_TYPE = [
+  { type: "Composite", price: "$1,088,800", yoy: "-6.2%", mom: "-0.9%" },
+  { type: "Detached", price: "$1,822,900", yoy: "-7.0%", mom: "-1.1%" },
+  { type: "Townhouse", price: "$1,030,400", yoy: "-6.0%", mom: "-1.5%" },
+  { type: "Apartment", price: "$688,000", yoy: "-7.5%", mom: "-1.0%" },
+] as const;
+
+/**
+ * The GVR release the per-neighbourhood benchmarks in `lib/neighborhoods.ts`
+ * come from, taken from the sub-area composite rows of the GVR HPI Benchmark
+ * Summary. Stated separately from MARKET_SNAPSHOT so a month where sub-area
+ * data lags the region-wide release is visible rather than implied away.
+ */
+export const NEIGHBOURHOOD_DATA_VINTAGE = "July 2026";

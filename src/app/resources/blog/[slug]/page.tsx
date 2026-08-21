@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPost, getAllBlogSlugs, blogPosts } from "@/lib/blog";
-import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, ORGANIZATION_ID, PERSON_ID, WEBSITE_ID } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 import GetInTouch from "@/components/sections/GetInTouch";
 import PageBanner from "@/components/hero/PageBanner";
@@ -72,16 +72,12 @@ export default async function BlogPostPage({ params }: Props) {
           dateModified: post.dateModified,
           keywords: post.category,
           articleSection: post.category,
-          author: {
-            "@type": "Person",
-            name: "Aparna Kapur",
-            url: "https://www.aparnakapur.com/about",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Aparna Kapur Real Estate",
-            url: "https://www.aparnakapur.com",
-          },
+          // Reference the identity graph in the root layout rather than
+          // restating a thinner copy of the same author and publisher.
+          author: { "@id": PERSON_ID },
+          publisher: { "@id": ORGANIZATION_ID },
+          isPartOf: { "@id": WEBSITE_ID },
+          mainEntityOfPage: `https://www.aparnakapur.com/resources/blog/${slug}`,
         }}
       />
 

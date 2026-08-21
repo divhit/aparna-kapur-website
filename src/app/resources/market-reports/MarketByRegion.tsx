@@ -30,6 +30,54 @@ type MonthEntry = {
 
 const monthlyData: MonthEntry[] = [
   {
+    month: "July",
+    year: "2026",
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.41M",
+        townhome: "$1.50M",
+        condo: "$993K",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$1.89M",
+        townhome: "$1.44M",
+        condo: "$683K",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.05M",
+        townhome: "$1.41M",
+        condo: "$1.03M",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$1.99M",
+        townhome: "$1.09M",
+        condo: "$948K",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$2.96M",
+        townhome: "$1.52M",
+        condo: "$979K",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.62M",
+        townhome: "$1.60M",
+        condo: "$1.02M",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
     month: "June",
     year: "2026",
     neighbourhoods: [

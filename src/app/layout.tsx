@@ -7,7 +7,7 @@ import {
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { RealEstateAgentSchema, WebsiteSchema } from "@/components/seo/JsonLd";
+import { SiteIdentitySchema } from "@/components/seo/JsonLd";
 import ChatWidget from "@/components/chat/ChatWidget";
 import ExitIntentPopup from "@/components/lead-capture/ExitIntentPopup";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
@@ -95,8 +95,7 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         <GoogleAnalytics />
-        <RealEstateAgentSchema />
-        <WebsiteSchema />
+        <SiteIdentitySchema />
         <div data-site-chrome="header">
           <Header />
         </div>

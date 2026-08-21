@@ -25,7 +25,7 @@ const faqs = [
   {
     question: "What is the average home price in South Cambie, Vancouver?",
     answer:
-      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.45M (April 2026). Condos average around $1.06M, townhomes $1.46M, and detached homes $4.06M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
+      "The GVR MLS\u00ae HPI composite benchmark for South Cambie is $1.45M (July 2026). Condos average around $1.03M, townhomes $1.41M, and detached homes $4.05M. Prices vary by property type, lot size, and proximity to SkyTrain. Contact Aparna Kapur at 604-612-7694 for a current market analysis tailored to your property or purchase goals.",
   },
   {
     question: "Is South Cambie a good neighbourhood to buy in?",
@@ -93,7 +93,7 @@ export default async function SouthCambiePage() {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-3 gap-6 max-w-2xl">
                 <div>
-                  <p className="font-serif text-2xl text-teal-700">$1.44M</p>
+                  <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["south-cambie"].avgPrice}</p>
                   <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
                 </div>
                 <div>
@@ -238,7 +238,7 @@ export default async function SouthCambiePage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  GVR MLS® HPI composite benchmark: $1.45M (April 2026, -8.3% YoY). Detached benchmark: $4.06M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
+                  GVR MLS® HPI composite benchmark: $1.45M (July 2026, -7.6% YoY). Detached benchmark: $4.05M. Long-term appreciation driven by the Canada Line, controlled densification, and Queen Elizabeth Park.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

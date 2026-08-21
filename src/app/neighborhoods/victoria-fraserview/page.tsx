@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -94,7 +95,7 @@ export default function VictoriaFraserviewPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Composite benchmark: around <strong>$1.2M</strong>, with far
+            Composite benchmark: around <strong>{NEIGHBOURHOODS["victoria-fraserview"].avgPrice}</strong>, with far
             more space per dollar than the west side. Detached homes run{" "}
             <strong>$1.3M to $1.8M</strong> depending on lot size and
             river-view positioning; south-facing higher-ground properties
@@ -133,7 +134,7 @@ export default function VictoriaFraserviewPage() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.2M</p>
+              <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["victoria-fraserview"].avgPrice}</p>
               <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>

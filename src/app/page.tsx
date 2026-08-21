@@ -55,6 +55,14 @@ const neighborhoods = [
   },
 ];
 
+/** Stable, deep-linkable id for a question heading. */
+function faqHeadingId(question: string): string {
+  return `faq-${question
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")}`;
+}
+
 export default function HomePage() {
   return (
     <>
@@ -64,6 +72,7 @@ export default function HomePage() {
       <HeroSlideshow height="full">
         <div className="text-center px-6 max-w-4xl mx-auto">
           <h1
+            id="aparna-kapur"
             className="text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
             style={{ fontFamily: "var(--font-playfair), Georgia, serif" }}
           >
@@ -98,10 +107,17 @@ export default function HomePage() {
       </HeroSlideshow>
 
       {/* SECTION 2: AI Chat Assistant */}
-      <section className="py-16 bg-teal-950">
+      <section
+        id="ask-anything"
+        aria-labelledby="ask-anything-heading"
+        className="py-16 bg-teal-950"
+      >
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-8">
-            <h2 className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold">
+            <h2
+              id="ask-anything-heading"
+              className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold"
+            >
               My Comprehensive Guide.
             </h2>
             <p className="font-serif text-3xl md:text-4xl text-white/80 italic font-bold">
@@ -113,7 +129,11 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 3: About Preview */}
-      <section className="py-20">
+      <section
+        id="about-aparna"
+        aria-labelledby="about-aparna-heading"
+        className="py-20"
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -133,7 +153,10 @@ export default function HomePage() {
               </div>
             </div>
             <div>
-              <h2 className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6 italic font-bold">
+              <h2
+                id="about-aparna-heading"
+                className="font-serif text-3xl md:text-4xl text-teal-950 leading-tight mb-6 italic font-bold"
+              >
                 Hi, I&apos;m Aparna
               </h2>
               <p className="text-warm-600 leading-relaxed mb-4">
@@ -167,9 +190,16 @@ export default function HomePage() {
 
       {/* SECTION 3b: Market Snapshot — driven by MARKET_SNAPSHOT so the
           homepage and the markdown/llms.txt representations cannot disagree */}
-      <section className="py-20 bg-warm-50">
+      <section
+        id="market-snapshot"
+        aria-labelledby="market-snapshot-heading"
+        className="py-20 bg-warm-50"
+      >
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
+          <h2
+            id="market-snapshot-heading"
+            className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16"
+          >
             {MARKET_SNAPSHOT.heading}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
@@ -196,9 +226,16 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 4: Featured Neighborhoods */}
-      <section className="bg-warm-50">
+      <section
+        id="neighbourhoods"
+        aria-labelledby="neighbourhoods-heading"
+        className="bg-warm-50"
+      >
         <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight">
+          <h2
+            id="neighbourhoods-heading"
+            className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight"
+          >
             Neighbourhoods I Know Street by Street
           </h2>
           <p className="text-warm-600 leading-relaxed mt-4 max-w-2xl mx-auto">
@@ -263,7 +300,10 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-950/60 to-transparent" />
         <div className="relative h-full flex flex-col justify-end max-w-7xl mx-auto px-6 pb-16">
-          <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-6">
+          <h2
+            id="oakridge-spotlight"
+            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white leading-[0.9] mb-6"
+          >
             Oakridge
           </h2>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl mb-8">
@@ -291,14 +331,34 @@ export default function HomePage() {
       </Link>
 
       {/* SECTION 5b: Interactive Neighbourhood Map — full width */}
-      <section>
+      <section id="neighbourhood-map" aria-labelledby="neighbourhood-map-heading">
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 text-center">
+          <h2
+            id="neighbourhood-map-heading"
+            className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight"
+          >
+            Every Neighbourhood on One Map
+          </h2>
+          <p className="text-warm-600 leading-relaxed mt-4 max-w-2xl mx-auto">
+            {NEIGHBOURHOOD_COUNT} Vancouver neighbourhoods, each linked to a
+            guide with benchmark pricing, transit and school context, and the
+            development plans shaping the area.
+          </p>
+        </div>
         <AllNeighbourhoodsMap fullWidth />
       </section>
 
       {/* SECTION 5c: GEO-optimized entity summary — structured for LLM extraction */}
-      <section className="py-16 bg-teal-950">
+      <section
+        id="vancouver-real-estate-agent"
+        aria-labelledby="vancouver-real-estate-agent-heading"
+        className="py-16 bg-teal-950"
+      >
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-serif text-2xl md:text-3xl text-white/90 italic font-bold mb-6">
+          <h2
+            id="vancouver-real-estate-agent-heading"
+            className="font-serif text-2xl md:text-3xl text-white/90 italic font-bold mb-6"
+          >
             Vancouver Real Estate Agent — Oakridge Specialist
           </h2>
           <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -378,25 +438,36 @@ export default function HomePage() {
 
       {/* SECTION 5d: Homepage FAQ — the same answers served by /llms.txt,
           /agents.md, and the markdown twin, so every representation agrees */}
-      <section className="py-20 bg-warm-50">
+      <section
+        id="common-questions"
+        aria-labelledby="common-questions-heading"
+        className="py-20 bg-warm-50"
+      >
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-10 text-center">
+          <h2
+            id="common-questions-heading"
+            className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-10 text-center"
+          >
             Common Questions
           </h2>
-          <dl className="space-y-8">
+          <div className="space-y-8">
             {FAQS.map((faq) => (
-              <div key={faq.q}>
-                <dt>
-                  <h3 className="font-serif text-xl text-teal-900 mb-2">
-                    {faq.q}
-                  </h3>
-                </dt>
-                <dd className="text-warm-600 leading-relaxed">
+              <section
+                key={faq.q}
+                aria-labelledby={faqHeadingId(faq.q)}
+              >
+                <h3
+                  id={faqHeadingId(faq.q)}
+                  className="font-serif text-xl text-teal-900 mb-2"
+                >
+                  {faq.q}
+                </h3>
+                <p className="text-warm-600 leading-relaxed">
                   {protectEmails(faq.a)}
-                </dd>
-              </div>
+                </p>
+              </section>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 

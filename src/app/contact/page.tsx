@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import EmailLink from "@/components/contact/EmailLink";
 import { NAP } from "@/lib/agent/site";
 import ContactForm from "@/components/forms/ContactForm";
-import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <LocalBusinessSchema />
       <BreadcrumbSchema
         items={[
           { name: "Home", href: "/" },

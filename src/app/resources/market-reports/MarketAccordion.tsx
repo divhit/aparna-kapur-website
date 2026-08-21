@@ -27,6 +27,70 @@ type MonthData = {
 
 const monthlyData: MonthData[] = [
   {
+    month: "July",
+    year: "2026",
+    stats: [
+      { label: "Composite Benchmark", value: "$1.09M", change: "-0.9% MoM" },
+      { label: "Active Listings", value: "16,476", change: "-4.0% YoY" },
+      { label: "New Listings", value: "4,991", change: "-11.5% YoY" },
+      {
+        label: "Sales-to-Active Ratio",
+        value: "13.0%",
+        change: "Balanced Market",
+      },
+    ],
+    neighbourhoods: [
+      {
+        name: "Oakridge",
+        detached: "$3.41M (benchmark)",
+        townhome: "$1.50M (benchmark)",
+        condo: "$993K (benchmark)",
+        trend: "Stable",
+        href: "/neighborhoods/oakridge",
+      },
+      {
+        name: "Marpole",
+        detached: "$1.89M (benchmark)",
+        townhome: "$1.44M (benchmark)",
+        condo: "$683K (benchmark)",
+        trend: "Softening",
+        href: "/neighborhoods/marpole",
+      },
+      {
+        name: "South Cambie",
+        detached: "$4.05M (benchmark)",
+        townhome: "$1.41M (benchmark)",
+        condo: "$1.03M (benchmark)",
+        trend: "Stable",
+        href: "/neighborhoods/south-cambie",
+      },
+      {
+        name: "Riley Park",
+        detached: "$1.99M (benchmark)",
+        townhome: "$1.09M (benchmark)",
+        condo: "$948K (benchmark)",
+        trend: "Stable",
+        href: "/neighborhoods/riley-park",
+      },
+      {
+        name: "Kerrisdale",
+        detached: "$2.96M (benchmark)",
+        townhome: "$1.52M (benchmark)",
+        condo: "$979K (benchmark)",
+        trend: "Softening",
+        href: "/neighborhoods/kerrisdale",
+      },
+      {
+        name: "Cambie Corridor",
+        detached: "$2.62M (benchmark)",
+        townhome: "$1.60M (benchmark)",
+        condo: "$1.02M (benchmark)",
+        trend: "Softening",
+        href: "/neighborhoods/cambie-corridor",
+      },
+    ],
+  },
+  {
     month: "June",
     year: "2026",
     stats: [

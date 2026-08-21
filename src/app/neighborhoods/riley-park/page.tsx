@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "What is the average home price in Riley Park, Vancouver?",
     answer:
-      "As of April 2026, the GVR MLS\u00ae HPI Main sub-area (which covers Riley Park) composite benchmark is $1.62M. The Vancouver East detached benchmark is $1.68M, condos start around $665K, and townhomes around $1.03M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
+      "As of July 2026, the GVR MLS\u00ae HPI Main sub-area (which covers Riley Park) composite benchmark is $1.58M. The Vancouver East detached benchmark is $1.64M, condos start around $629K, and townhomes around $1.01M. Heritage character homes near Main Street can exceed $2.5M. For a personalized Riley Park market analysis, contact Aparna Kapur at 604-612-7694.",
   },
   {
     question: "Is Riley Park a good neighbourhood to buy in?",
@@ -95,7 +95,7 @@ export default async function RileyParkPage() {
             <div className="lg:col-span-3">
               <div className="grid grid-cols-3 gap-6 max-w-2xl">
                 <div>
-                  <p className="font-serif text-2xl text-teal-700">$1.70M</p>
+                  <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["riley-park"].avgPrice}</p>
                   <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
                 </div>
                 <div>
@@ -239,7 +239,7 @@ export default async function RileyParkPage() {
                   ))}
                 </div>
                 <p className="text-warm-600 leading-relaxed mb-4">
-                  Main sub-area composite benchmark: $1.62M (April 2026, -3.8% YoY). Vancouver East detached benchmark: $1.68M. Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
+                  Main sub-area composite benchmark: $1.62M (July 2026, -3.6% YoY). Vancouver East detached benchmark: $1.64M. Character homes in prime locations can exceed $2.5M. Demand outpaces supply, especially for well-maintained heritage homes. Main Street proximity commands a premium.
                 </p>
                 <div className="bg-teal-50 rounded-2xl p-6 border border-teal-100">
                   <p className="text-sm font-semibold text-teal-900 mb-2">Investment Outlook</p>

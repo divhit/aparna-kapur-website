@@ -7,8 +7,10 @@ import {
   BRAND,
   endSentence,
   FAQS,
+  BENCHMARKS_BY_TYPE,
   MARKET_SNAPSHOT,
   NEIGHBOURHOOD_COUNT,
+  NEIGHBOURHOOD_DATA_VINTAGE,
   NAP,
   NAP_ONE_LINE,
   SITE_URL,
@@ -90,6 +92,14 @@ function homeDocument(): MarkdownDocument {
     "",
     `Source: ${MARKET_SNAPSHOT.source}.`,
     "",
+    `### Benchmark price by property type (${MARKET_SNAPSHOT.label})`,
+    "",
+    "| Property type | Benchmark | Year over year | Month over month |",
+    "| --- | --- | --- | --- |",
+    ...BENCHMARKS_BY_TYPE.map(
+      (row) => `| ${row.type} | ${row.price} | ${row.yoy} | ${row.mom} |`,
+    ),
+    "",
     "## Neighbourhood specialties",
     "",
     ...SPECIALTY_NEIGHBOURHOODS.map((name) => {
@@ -138,7 +148,7 @@ function neighbourhoodDocument(slug: string): MarkdownDocument | null {
     `| Walk Score | ${hood.walkScore} |`,
     `| Transit Score | ${hood.transitScore} |`,
     "",
-    `Benchmark prices are Greater Vancouver REALTORS MLS HPI composite figures for the neighbourhood, not an appraisal of any single property. For a valuation of a specific home, request a comparative market analysis at ${link("/selling/home-valuation")}.`,
+    `Benchmark prices are Greater Vancouver REALTORS MLS HPI composite figures for the neighbourhood, from the ${NEIGHBOURHOOD_DATA_VINTAGE} release. They are not an appraisal of any single property. For a valuation of a specific home, request a comparative market analysis at ${link("/selling/home-valuation")}.`,
     "",
     "## Highlights",
     "",
@@ -185,7 +195,7 @@ function neighbourhoodDocument(slug: string): MarkdownDocument | null {
 function neighbourhoodIndexDocument(): MarkdownDocument {
   const hoods = Object.values(NEIGHBOURHOODS);
   const body = [
-    `Detailed real estate guides for ${hoods.length} Vancouver neighbourhoods. Benchmark prices are Greater Vancouver REALTORS MLS HPI composite figures.`,
+    `Detailed real estate guides for ${hoods.length} Vancouver neighbourhoods. Benchmark prices are Greater Vancouver REALTORS MLS HPI composite figures from the ${NEIGHBOURHOOD_DATA_VINTAGE} release; region-wide figures on the homepage are from ${MARKET_SNAPSHOT.label}.`,
     "",
     "| Neighbourhood | Benchmark | Year over year | Walk | Transit | Guide |",
     "| --- | --- | --- | --- | --- | --- |",

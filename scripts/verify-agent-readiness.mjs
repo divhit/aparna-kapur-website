@@ -421,24 +421,19 @@ async function verifyNoBrokenLinks() {
 const EMAIL = "ak@aparnakapur.com";
 
 /**
- * Every rendered occurrence of the address must sit inside Cloudflare's
- * `email_off` markers. Cloudflare is not in front of a local build, so this
- * checks the markers rather than the outcome; run it against production to
- * check the outcome itself.
+ * Cloudflare consumes the opening `<!--email_off-->` marker once it has acted
+ * on it, so the markers are only observable on an origin that is not behind
+ * Cloudflare. Assert the outcome instead, which holds on both: the address is
+ * present, no obfuscated placeholder replaced it, and no rewritten
+ * `/cdn-cgi/l/email-protection` href was left behind.
  */
-function unprotectedEmailCount(html) {
+function emailObfuscationArtifacts(html) {
   const body = html.replace(/<script\b[\s\S]*?<\/script>/gi, "");
-  let unprotected = 0;
-  let cursor = 0;
-  for (;;) {
-    const at = body.indexOf(EMAIL, cursor);
-    if (at === -1) break;
-    const before = body.lastIndexOf("<!--email_off-->", at);
-    const closed = before === -1 ? -1 : body.indexOf("<!--email_on-->", before);
-    if (before === -1 || (closed !== -1 && closed < at)) unprotected += 1;
-    cursor = at + EMAIL.length;
-  }
-  return unprotected;
+  return {
+    placeholders: (body.match(/__cf_email__|\[email(&#160;|&nbsp;|\s)*protected\]/gi) ?? []).length,
+    rewrittenHrefs: (body.match(/cdn-cgi\/l\/email-protection/gi) ?? []).length,
+    addresses: (body.match(new RegExp(EMAIL, "g")) ?? []).length,
+  };
 }
 
 /** The contact address must be readable without running JavaScript. */
@@ -448,13 +443,21 @@ async function verifyContactDetailsAreReadable() {
   const pages = ["/", "/contact", "/about/why-work-with-me", "/privacy", "/terms"];
   for (const path of pages) {
     const { body } = await get(path, BROWSER_ACCEPT);
-    const text = visibleText(body);
-    check(text.includes(EMAIL), `${path} shows the email address in rendered text`);
-    check(!text.includes("[email"), `${path} has no obfuscated email placeholder`);
+    const artifacts = emailObfuscationArtifacts(body);
     check(
-      unprotectedEmailCount(body) === 0,
-      `${path} wraps every rendered address in Cloudflare email_off markers`,
-      `${unprotectedEmailCount(body)} unprotected`,
+      artifacts.addresses > 0,
+      `${path} shows the email address in rendered text`,
+      `${artifacts.addresses} occurrences`,
+    );
+    check(
+      artifacts.placeholders === 0,
+      `${path} has no obfuscated email placeholder`,
+      `${artifacts.placeholders} found`,
+    );
+    check(
+      artifacts.rewrittenHrefs === 0,
+      `${path} has no rewritten email-protection href`,
+      `${artifacts.rewrittenHrefs} found`,
     );
   }
 
@@ -492,6 +495,151 @@ async function verifyLegalPages() {
   );
 }
 
+function jsonLdNodes(html) {
+  const nodes = [];
+  for (const match of html.matchAll(
+    /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,
+  )) {
+    let parsed;
+    try {
+      parsed = JSON.parse(match[1]);
+    } catch {
+      nodes.push({ __unparseable: true });
+      continue;
+    }
+    nodes.push(...(parsed["@graph"] ?? [parsed]));
+  }
+  return nodes;
+}
+
+const typesOf = (node) =>
+  [node["@type"]].flat().filter((value) => typeof value === "string");
+
+async function verifyStructuredData() {
+  group("JSON-LD identity graph");
+  const { body } = await get("/", BROWSER_ACCEPT);
+  const nodes = jsonLdNodes(body);
+
+  check(
+    nodes.length > 0 && !nodes.some((node) => node.__unparseable),
+    "every JSON-LD block parses",
+    `${nodes.length} nodes`,
+  );
+
+  const organizations = nodes.filter((node) => typesOf(node).includes("Organization"));
+  check(organizations.length > 0, "an Organization node is present");
+
+  // The audit reads whichever Organization it finds, so all of them have to
+  // stand on their own rather than only the primary one being complete.
+  for (const field of ["name", "description", "url", "address", "contactPoint", "logo"]) {
+    const missing = organizations
+      .filter((node) => !node[field])
+      .map((node) => node["@id"] ?? node.name ?? "(anonymous)");
+    check(
+      missing.length === 0,
+      `every Organization node has ${field}`,
+      missing.join(", "),
+    );
+  }
+
+  const primary = organizations.find((node) =>
+    String(node["@id"] ?? "").endsWith("#organization"),
+  );
+  check(Boolean(primary), "the primary Organization node is addressable by @id");
+  check(
+    Array.isArray(primary?.sameAs) && primary.sameAs.length > 0,
+    "the primary Organization lists sameAs profiles",
+  );
+  check(
+    primary?.address?.streetAddress && primary?.address?.postalCode,
+    "the Organization address is a complete PostalAddress",
+  );
+  check(
+    [primary?.contactPoint].flat().every((point) => point?.telephone && point?.contactType),
+    "every contactPoint has a telephone and a contactType",
+  );
+
+  check(
+    nodes.some((node) => typesOf(node).includes("Person")),
+    "a Person node identifies the licensed agent",
+  );
+  check(
+    nodes.some((node) => typesOf(node).includes("WebSite")),
+    "a WebSite node is present",
+  );
+
+  // Thin duplicates of the business are what made the audit report an
+  // incomplete Organization in the first place.
+  const anonymousOrgs = organizations.filter((node) => !node["@id"]);
+  check(
+    anonymousOrgs.length === 0,
+    "no anonymous duplicate Organization nodes",
+    anonymousOrgs.map((node) => node.name).join(", "),
+  );
+}
+
+async function verifyHeadingStructure() {
+  group("Document structure");
+  const { body } = await get("/", BROWSER_ACCEPT);
+  const main = mainContent(body);
+  const hs = headings(main);
+
+  check(hs.filter((h) => h.level === 1).length === 1, "exactly one H1 in <main>");
+  check(
+    hs.some((h) => h.level === 2) && hs.some((h) => h.level === 3),
+    "the outline nests H2 and H3 under the H1",
+  );
+
+  let previous = 1;
+  const skips = [];
+  for (const heading of hs) {
+    if (heading.level > previous + 1) skips.push(heading.text);
+    previous = heading.level;
+  }
+  check(skips.length === 0, "no heading level is skipped", skips.join(", "));
+
+  // Deep-linkable structure: an agent should be able to cite a section.
+  const h2s = [...main.matchAll(/<h2\b([^>]*)>/gi)].map((m) => m[1]);
+  const withoutId = h2s.filter((attrs) => !/\sid="/.test(attrs)).length;
+  check(withoutId === 0, "every H2 has an id to link to", `${withoutId} without`);
+
+  const sections = [...main.matchAll(/<section\b([^>]*)>/gi)].map((m) => m[1]);
+  const labelled = sections.filter((attrs) => /aria-labelledby="/.test(attrs)).length;
+  check(
+    labelled >= 6,
+    "sections are tied to their headings with aria-labelledby",
+    `${labelled} of ${sections.length}`,
+  );
+}
+
+async function verifyCanonicalHost() {
+  group("Canonical host");
+  const target = new URL(BASE);
+  if (target.hostname !== "www.aparnakapur.com") {
+    console.log("  skip canonical-host checks (not running against production)");
+    return;
+  }
+
+  const apex = await fetch("https://aparnakapur.com/", { redirect: "manual" });
+  check(
+    [301, 308].includes(apex.status),
+    "the apex domain redirects permanently to www",
+    `got ${apex.status} — a 307 does not consolidate ranking signals`,
+  );
+  check(
+    apex.headers.get("location") === "https://www.aparnakapur.com/",
+    "the apex redirect points straight at the canonical host",
+    apex.headers.get("location") ?? "(none)",
+  );
+
+  const { body } = await get("/", BROWSER_ACCEPT);
+  check(
+    body.includes('rel="canonical" href="https://www.aparnakapur.com/"') ||
+      body.includes('<link rel="canonical" href="https://www.aparnakapur.com"'),
+    "the homepage declares its canonical URL",
+  );
+}
+
 async function main() {
   console.log(`Verifying agent readiness against ${BASE}`);
   await verifyHomepageWithoutJavaScript();
@@ -500,6 +648,9 @@ async function main() {
   await verifyAgentInstructions();
   await verifySitemapLinks();
   await verifyMarkdownCoverage();
+  await verifyStructuredData();
+  await verifyHeadingStructure();
+  await verifyCanonicalHost();
   await verifyLegalPages();
   await verifyContactDetailsAreReadable();
   await verifyNoBrokenLinks();

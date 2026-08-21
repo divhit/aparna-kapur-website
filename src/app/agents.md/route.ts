@@ -5,8 +5,10 @@ import { MARKDOWN_MEDIA_TYPE, markdownUrlFor } from "@/lib/agent/negotiation";
 import {
   AGENT_ENDPOINTS,
   BRAND,
+  BENCHMARKS_BY_TYPE,
   MARKET_SNAPSHOT,
   NAP,
+  NEIGHBOURHOOD_DATA_VINTAGE,
   NAP_ONE_LINE,
   SAME_AS,
   SITE_URL,
@@ -89,7 +91,13 @@ ${getSiteSections()
 
 ## Data provenance
 
-- Neighbourhood benchmark prices and the homepage market snapshot are Greater Vancouver REALTORS MLS® Home Price Index figures. Source line: ${MARKET_SNAPSHOT.source}. They describe a neighbourhood, not a specific property.
+- Region-wide figures (the homepage snapshot and the table below) are Greater Vancouver REALTORS MLS® Home Price Index numbers from the ${MARKET_SNAPSHOT.label} release. Source line: ${MARKET_SNAPSHOT.source}.
+- Per-neighbourhood benchmarks are GVR sub-area HPI figures from the ${NEIGHBOURHOOD_DATA_VINTAGE} release. Sub-area HPI lags the region-wide release, so the two dates differ on purpose. Both describe an area and a property type, never a specific property.
+
+| Property type | Benchmark (${MARKET_SNAPSHOT.label}) | Year over year | Month over month |
+| --- | --- | --- | --- |
+${BENCHMARKS_BY_TYPE.map((row) => `| ${row.type} | ${row.price} | ${row.yoy} | ${row.mom} |`).join("\n")}
+
 - Walk Score and Transit Score are third-party scores reproduced for orientation only.
 - Listing data on \`/buying/search\`, \`/buying/featured-listings\`, and \`/property/*\` comes from the CREA Data Distribution Facility and is live at request time.
 - Tax and program figures (Property Transfer Tax, GST, first-time buyer programs) reflect British Columbia rules as of the last content update above. Confirm current rules before relying on them for a transaction.

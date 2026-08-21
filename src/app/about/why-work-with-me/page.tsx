@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import EmailLink, { protectEmails } from "@/components/contact/EmailLink";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
-import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, ORGANIZATION_ID, PERSON_ID } from "@/components/seo/JsonLd";
 import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
@@ -93,36 +93,8 @@ export default function WhyWorkWithMePage() {
         data={{
           "@context": "https://schema.org",
           "@type": "ProfilePage",
-          mainEntity: {
-            "@type": "RealEstateAgent",
-            name: "Aparna Kapur",
-            telephone: "+1-604-612-7694",
-            email: "ak@aparnakapur.com",
-            url: "https://www.aparnakapur.com",
-            image: "https://www.aparnakapur.com/images/about/aparna-kapur.jpg",
-            jobTitle: "Real Estate Agent",
-            worksFor: {
-              "@type": "Organization",
-              name: "Oakwyn Realty Ltd.",
-              url: "https://oakwyn.com",
-            },
-            areaServed: [
-              "Oakridge, Vancouver",
-              "Marpole, Vancouver",
-              "South Cambie, Vancouver",
-              "Riley Park, Vancouver",
-              "Kerrisdale, Vancouver",
-              "Cambie Corridor, Vancouver",
-            ],
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "3195 Oak Street",
-              addressLocality: "Vancouver",
-              addressRegion: "BC",
-              postalCode: "V6H 2L2",
-              addressCountry: "CA",
-            },
-          },
+          mainEntity: { "@id": PERSON_ID },
+          about: { "@id": ORGANIZATION_ID },
         }}
       />
 

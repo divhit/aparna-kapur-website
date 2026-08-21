@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -95,7 +96,7 @@ export default function StrathconaPage() {
           </blockquote>
 
           <p className="text-warm-700 leading-relaxed mb-6">
-            Composite benchmark: around <strong>$950K</strong>. Restored
+            Composite benchmark: around <strong>{NEIGHBOURHOODS["strathcona"].avgPrice}</strong>. Restored
             Victorians and Edwardians run from{" "}
             <strong>$1.0M to $1.5M</strong>, many heritage-designated
             (character protected, renovation rules apply). Warehouse lofts
@@ -131,7 +132,7 @@ export default function StrathconaPage() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$950K</p>
+              <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["strathcona"].avgPrice}</p>
               <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>

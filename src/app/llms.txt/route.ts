@@ -8,6 +8,7 @@ import {
   MARKET_SNAPSHOT,
   NAP,
   NAP_ONE_LINE,
+  NEIGHBOURHOOD_DATA_VINTAGE,
   SITE_URL,
   SPECIALTY_SENTENCE,
   WHEN_NOT_TO_USE,
@@ -52,7 +53,8 @@ ${WHEN_NOT_TO_USE.map((limit) => `- ${limit}`).join("\n")}
 - Email: ${NAP.email}
 - Website: ${SITE_URL}
 - Office: ${NAP_ONE_LINE}
-- Market data current to: ${MARKET_SNAPSHOT.label} (${MARKET_SNAPSHOT.source})
+- Region-wide market data current to: ${MARKET_SNAPSHOT.label} (${MARKET_SNAPSHOT.source})
+- Per-neighbourhood benchmarks current to: ${NEIGHBOURHOOD_DATA_VINTAGE} (GVR sub-area MLS® HPI)
 
 ## Services
 - Residential buying (houses, condos, townhomes)

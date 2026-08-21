@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -91,7 +92,7 @@ export default function UBCPage() {
           <p className="text-warm-700 leading-relaxed mb-6">
             Every property sits on a 99-year prepaid lease from UBC. For
             financing and resale it functions almost identically to freehold.
-            Composite benchmark: around <strong>$1.35M</strong>. Condos at{" "}
+            Composite benchmark: around <strong>{NEIGHBOURHOODS["ubc"].avgPrice}</strong>. Condos at{" "}
             <strong>$550K to $1.2M</strong> in Wesbrook Village and Hawthorn
             Place with mountain or forest views. Townhomes at{" "}
             <strong>$1.3M to $2M</strong>, the sweet spot for families.
@@ -125,7 +126,7 @@ export default function UBCPage() {
         <div className="max-w-4xl mx-auto px-6 py-10">
           <div className="grid grid-cols-3 gap-6 text-center">
             <div>
-              <p className="font-serif text-2xl text-teal-700">$1.35M</p>
+              <p className="font-serif text-2xl text-teal-700">{NEIGHBOURHOODS["ubc"].avgPrice}</p>
               <p className="text-xs text-warm-500 mt-1">Benchmark Price</p>
             </div>
             <div>

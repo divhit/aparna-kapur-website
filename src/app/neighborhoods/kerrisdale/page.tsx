@@ -26,7 +26,7 @@ const faqs = [
   {
     question: "What is the average home price in Kerrisdale, Vancouver?",
     answer:
-      "As of April 2026, GVR MLS\u00ae HPI benchmarks place Kerrisdale detached homes at approximately $3.17M, condos at $988K, and townhomes at $1.59M. Heritage estates on larger lots can exceed $5M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
+      "As of July 2026, GVR MLS\u00ae HPI benchmarks place Kerrisdale detached homes at approximately $2.96M, condos at $979K, and townhomes at $1.52M. Heritage estates on larger lots can exceed $5M. For a personalized market assessment, contact Aparna Kapur at 604-612-7694.",
   },
   {
     question: "Is Kerrisdale a good neighbourhood to buy in?",
@@ -225,9 +225,9 @@ export default async function KerrisdalePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Heritage and character homes on generous lots. Benchmark: $2.98M. Tudor, Georgian, and craftsman styles." },
-                    { type: "Condominiums", range: "$600K - $1.3M", desc: "Concentrated along 41st Avenue and West Boulevard. Benchmark: $974K. Popular with retirees and professionals." },
-                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common but increasingly sought after. Benchmark: $1.66M." },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Heritage and character homes on generous lots. Benchmark: $2.96M. Tudor, Georgian, and craftsman styles." },
+                    { type: "Condominiums", range: "$600K - $1.3M", desc: "Concentrated along 41st Avenue and West Boulevard. Benchmark: $979K. Popular with retirees and professionals." },
+                    { type: "Townhomes", range: "$1.3M - $2.0M", desc: "Less common but increasingly sought after. Benchmark: $1.52M." },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
