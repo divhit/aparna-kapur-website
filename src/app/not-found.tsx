@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import EmailLink from "@/components/contact/EmailLink";
 import {
   AGENT_ENDPOINTS,
   BRAND,
@@ -94,12 +95,7 @@ export default function NotFound() {
             {NAP.telephone}
           </a>{" "}
           ·{" "}
-          <a
-            href={`mailto:${NAP.email}`}
-            className="text-teal-700 hover:text-teal-900 transition-colors"
-          >
-            {NAP.email}
-          </a>
+          <EmailLink className="text-teal-700 hover:text-teal-900 transition-colors" />
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

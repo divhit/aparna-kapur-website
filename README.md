@@ -47,6 +47,7 @@ render, so the HTML and the machine-readable representations cannot disagree.
 | `/llms-full.txt` | The whole site as one plain-text file, including the full text of every article. |
 | `/sitemap.xml`, `/sitemap-html` | Every indexable URL, XML and HTML. |
 | `/robots.txt` | Crawl policy. Every major AI crawler is allowed. |
+| `/privacy`, `/terms` | Legal pages, rendered from `src/lib/legal.ts` so the HTML and markdown twins cannot diverge. `/terms` also states the licence automated agents operate under. |
 
 ### Markdown content negotiation
 
@@ -87,5 +88,19 @@ npm run verify:agents -- --base=http://localhost:3000
 
 `verify:agents` drives a running server and checks the whole public surface:
 server-rendered homepage content, negotiation headers, the 404 contract, the
-agent instruction files, and that every page on the sitemap resolves and has a
-markdown twin. Point `--base` at production to check a deploy.
+agent instruction files, every page on the sitemap resolving and having a
+markdown twin, the legal pages, and a full crawl asserting no internal link
+404s. Point `--base` at production to check a deploy.
+
+### Cloudflare
+
+The domain is proxied through Cloudflare, whose Scrape Shield → **Email Address
+Obfuscation** rewrites every `mailto:` anchor into `/cdn-cgi/l/email-protection`
+and replaces the visible address with "[email protected]". JavaScript repairs
+it for browsers; AI crawlers reading raw HTML never see the address, and the
+rewritten href 404s.
+
+`src/components/contact/EmailLink.tsx` wraps every rendered address in
+Cloudflare's `<!--email_off-->` markers so it survives regardless of the zone
+setting. `verify:agents` fails if a rendered address is ever left unwrapped.
+Turning that Cloudflare setting off would make the component unnecessary.

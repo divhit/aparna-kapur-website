@@ -1,6 +1,7 @@
 import { blogPosts } from "@/lib/blog";
 import { buyingGuideSteps, sellingGuideSteps } from "@/lib/guide-data";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { LEGAL_DOCUMENTS } from "@/lib/legal";
 import { NEIGHBOURHOOD_COUNT } from "./site";
 export {
   NON_NEGOTIABLE_PATHS,
@@ -272,6 +273,15 @@ export function getSiteSections(): SiteSection[] {
       title: "About",
       summary: "The agent and the brokerage.",
       pages: ABOUT_PAGES,
+    },
+    {
+      title: "Legal",
+      summary: "How this site handles personal information, and the terms it is published under.",
+      pages: LEGAL_DOCUMENTS.map((doc) => ({
+        path: doc.path,
+        title: doc.title,
+        summary: doc.summary,
+      })),
     },
   ];
 }

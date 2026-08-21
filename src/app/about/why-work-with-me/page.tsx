@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import EmailLink, { protectEmails } from "@/components/contact/EmailLink";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -155,7 +156,7 @@ export default function WhyWorkWithMePage() {
               Oakwyn Realty, Aparna&apos;s brokerage, is one of British Columbia&apos;s largest independent
               real estate firms with over 900 agents and $6.3 billion in annual sales volume. Aparna
               can be reached at <a href="tel:+16046127694" className="text-teal-700 hover:text-teal-900">604-612-7694</a> or
-              by email at <a href="mailto:ak@aparnakapur.com" className="text-teal-700 hover:text-teal-900">ak@aparnakapur.com</a>.
+              by email at <EmailLink className="text-teal-700 hover:text-teal-900" />.
             </p>
           </div>
         </div>
@@ -240,7 +241,7 @@ export default function WhyWorkWithMePage() {
                   </svg>
                 </summary>
                 <div className="px-6 pb-6">
-                  <p className="text-sm text-warm-600 leading-relaxed">{faq.a}</p>
+                  <p className="text-sm text-warm-600 leading-relaxed">{protectEmails(faq.a)}</p>
                 </div>
               </details>
             ))}

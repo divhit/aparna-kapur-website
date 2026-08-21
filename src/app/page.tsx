@@ -5,6 +5,7 @@ import GetInTouch from "@/components/sections/GetInTouch";
 import HeroSlideshow from "@/components/hero/HeroSlideshow";
 import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
 import { FAQSchema } from "@/components/seo/JsonLd";
+import { EmailText, protectEmails } from "@/components/contact/EmailLink";
 import {
   BRAND,
   FAQS,
@@ -347,7 +348,9 @@ export default function HomePage() {
               </h3>
               <ul className="text-white/70 text-sm leading-relaxed space-y-1.5">
                 <li>Phone: {NAP.telephone}</li>
-                <li>Email: {NAP.email}</li>
+                <li>
+                  Email: <EmailText />
+                </li>
                 <li>{NAP_ONE_LINE}</li>
                 <li>
                   {BRAND.jobTitle} licensed in British Columbia (BCFSA)
@@ -388,7 +391,9 @@ export default function HomePage() {
                     {faq.q}
                   </h3>
                 </dt>
-                <dd className="text-warm-600 leading-relaxed">{faq.a}</dd>
+                <dd className="text-warm-600 leading-relaxed">
+                  {protectEmails(faq.a)}
+                </dd>
               </div>
             ))}
           </dl>

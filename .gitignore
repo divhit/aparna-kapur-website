@@ -43,3 +43,6 @@ next-env.d.ts
 # internal strategy & planning docs
 STRATEGY-*.md
 remaining-urls-to-index.md
+
+# playwright mcp scratch output
+.playwright-mcp/
