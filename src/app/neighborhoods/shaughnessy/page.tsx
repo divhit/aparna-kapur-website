@@ -33,7 +33,7 @@ export default function ShaughnessyPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/neighborhoods/shaughnessy.png')",
+              "url('/images/neighborhoods/shaughnessy.webp')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />

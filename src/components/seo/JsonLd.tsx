@@ -161,7 +161,7 @@ const personNode = {
   jobTitle: BRAND.jobTitle,
   description: `${BRAND.name} is a licensed real estate agent in Vancouver, British Columbia, working with ${NAP.brokerage}.`,
   url: `${SITE_URL}/about/why-work-with-me`,
-  image: `${SITE_URL}/images/about/aparna-kapur.jpg`,
+  image: `${SITE_URL}/images/about/aparna-kapur.webp`,
   telephone: NAP.telephoneE164,
   email: NAP.email,
   address: POSTAL_ADDRESS,

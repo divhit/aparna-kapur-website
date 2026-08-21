@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import HeroChat from "@/components/chat/HeroChat";
 import GetInTouch from "@/components/sections/GetInTouch";
@@ -22,21 +23,21 @@ const neighborhoods = [
     slug: "south-cambie",
     description:
       "Tree-lined streets, top schools, and Queen Elizabeth Park at your doorstep",
-    image: "/images/neighborhoods/south-cambie.jpg",
+    image: "/images/neighborhoods/south-cambie.webp",
   },
   {
     name: "Riley Park",
     slug: "riley-park",
     description:
       "Vibrant arts scene, craft breweries, and strong community spirit",
-    image: "/images/neighborhoods/riley-park.jpg",
+    image: "/images/neighborhoods/riley-park.webp",
   },
   {
     name: "Kerrisdale",
     slug: "kerrisdale",
     description:
       "Upscale village living with boutique shopping and elegant heritage homes",
-    image: "/images/neighborhoods/kerrisdale.jpg",
+    image: "/images/neighborhoods/kerrisdale.webp",
   },
   {
     name: "Cambie Corridor",
@@ -137,18 +138,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
-                <img
-                  src="/images/about/aparna-kapur.jpg"
+              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-warm-100">
+                <Image
+                  src="/images/about/aparna-kapur.webp"
                   alt="Aparna Kapur and Cooper - Vancouver Realtor"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover"
+                  priority
                 />
               </div>
               <div className="absolute bottom-4 left-4">
-                <img
+                <Image
                   src="/images/logos/oakwyn-realty.png"
                   alt="Oakwyn Realty"
-                  className="h-12 md:h-16 drop-shadow-lg"
+                  width={492}
+                  height={570}
+                  className="h-12 md:h-16 w-auto drop-shadow-lg"
                 />
               </div>
             </div>
@@ -250,10 +256,12 @@ export default function HomePage() {
             href="/neighborhoods/ubc"
             className="group relative h-80 sm:h-96 overflow-hidden transition-all duration-300"
           >
-            <img
+            <Image
               src="https://images.pexels.com/photos/113338/pexels-photo-113338.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
               alt="UBC Vancouver neighbourhood"
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300" />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
@@ -270,10 +278,12 @@ export default function HomePage() {
               href={`/neighborhoods/${hood.slug}`}
               className="group relative overflow-hidden h-80 sm:h-96 transition-all duration-300"
             >
-              <img
+              <Image
                 src={hood.image}
                 alt={`${hood.name} Vancouver neighborhood`}
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-all duration-300" />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300" />
@@ -292,10 +302,12 @@ export default function HomePage() {
         href="/neighborhoods/oakridge"
         className="group relative block h-[85vh] overflow-hidden cursor-pointer"
       >
-        <img
+        <Image
           src="https://images.pexels.com/photos/30294477/pexels-photo-30294477.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
           alt="Aerial view of Stanley Park Seawall with lush greenery and calm waters"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-950/60 to-transparent" />

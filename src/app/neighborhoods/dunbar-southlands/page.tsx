@@ -33,7 +33,7 @@ export default function DunbarSouthlandsPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/neighborhoods/dunbar-southlands.png')",
+              "url('/images/neighborhoods/dunbar-southlands.webp')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-teal-950/90 via-teal-950/75 to-teal-950/50" />

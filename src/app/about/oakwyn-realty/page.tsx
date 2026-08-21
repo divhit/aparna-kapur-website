@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Button from "@/components/ui/Button";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
@@ -19,16 +20,21 @@ export default function OakwynRealtyPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="lg:sticky lg:top-28">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
-                <img
-                  src="/images/about/aparna-kapur.jpg"
+                <Image
+                  src="/images/about/aparna-kapur.webp"
                   alt="Aparna Kapur - Vancouver Realtor with Oakwyn Realty"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  priority
+                  className="object-cover"
                 />
                 <div className="absolute bottom-4 left-4">
-                  <img
+                  <Image
                     src="/images/logos/oakwyn-realty.png"
                     alt="Oakwyn Realty"
-                    className="h-12 md:h-16 drop-shadow-lg"
+                    width={492}
+                    height={570}
+                    className="h-12 md:h-16 w-auto drop-shadow-lg"
                   />
                 </div>
               </div>

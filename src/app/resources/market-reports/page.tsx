@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import GetInTouch from "@/components/sections/GetInTouch";
 import PageBanner from "@/components/hero/PageBanner";
 import MarketByRegion from "./MarketByRegion";
+import MarketSummary from "./MarketSummary";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Market Reports | Oakridge & Surrounding Areas",
@@ -16,6 +17,9 @@ export default function MarketReportsPage() {
 
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
+          {/* Server-rendered so the data is in the HTML, not just the widget */}
+          <MarketSummary />
+
           {/* Monthly Market Snapshots */}
           <MarketByRegion />
 

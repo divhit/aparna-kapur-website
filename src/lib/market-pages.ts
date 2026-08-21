@@ -228,7 +228,7 @@ export function getMarketPage(
     cheaper: peers.length - rank,
     siblings,
     comparables,
-    title: `${hood.name} ${meta.plural} — Prices & Benchmarks (${HPI_RELEASE})`,
+    title: `${hood.name} ${meta.proseLabel} prices, ${HPI_RELEASE}`,
     description: `${meta.plural} in ${hood.name}, Vancouver benchmark at ${price} as of ${HPI_RELEASE} — ${signed(benchmark.yoy)} year over year. How that compares with Metro Vancouver and neighbouring areas.`,
     summary,
     faqs,

@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "9 min read",
-    image: "/images/blog/oakridge-park-spring-2026-opening-guide.jpg",
+    image: "/images/blog/oakridge-park-spring-2026-opening-guide.webp",
     content: `> **Update (July 2026):** Oakridge Park officially opened on May 28, 2026 — including Time Out Market Vancouver and much of the rooftop park — with remaining civic amenities continuing to come online. This guide was written ahead of the opening; the details below describe what has now arrived.
 
 ## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
@@ -160,7 +160,7 @@ If you want to understand what this means for your specific real estate plans �
     dateModified: "2026-03-05",
     category: "Neighbourhoods",
     readTime: "8 min read",
-    image: "/images/blog/oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison.jpg",
+    image: "/images/blog/oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison.webp",
     content: `## I Walk Both of These Neighbourhoods Every Week
 
 Oakridge and Kerrisdale sit side by side on Vancouver's west side, separated by a few blocks along 41st Avenue. I'm Aparna Kapur with Oakwyn Realty, and I spend a lot of time in both — showing homes, grabbing coffee on the Kerrisdale village strip, watching the cranes at Oakridge Park. I genuinely love both neighbourhoods, which is why this is one of my favourite conversations to have with buyers.
@@ -332,7 +332,7 @@ If you're weighing these two areas — or comparing them to South Cambie, Riley 
     dateModified: "2026-03-10",
     category: "Market Analysis",
     readTime: "7 min read",
-    image: "/images/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know.jpg",
+    image: "/images/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know.webp",
     content: `## In October 2025, Vancouver Quietly Rezoned Over 4,300 Properties Along the Canada Line
 
 If you own a home along Cambie Street between Marine Drive and King Edward — in Oakridge, South Cambie, Langara, or Marpole — your property's zoning may have changed. You might not have even noticed.
@@ -476,7 +476,7 @@ I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor mark
     dateModified: "2026-02-20",
     category: "Buying",
     readTime: "7 min read",
-    image: "/images/blog/resale-vs-presale-vancouver-condos-2026.jpg",
+    image: "/images/blog/resale-vs-presale-vancouver-condos-2026.webp",
     content: `## The Decision Has Changed
 
 Until recently, choosing between a presale and a resale condo in Vancouver was a genuinely difficult decision. Both options had strong arguments in their favour, and the right choice depended heavily on timing and personal circumstances.
@@ -536,7 +536,7 @@ It comes down to running the numbers on your specific situation. That is what I 
     dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "6 min read",
-    image: "/images/blog/is-oakridge-vancouvers-new-downtown.jpg",
+    image: "/images/blog/is-oakridge-vancouvers-new-downtown.webp",
     content: `## A Municipal Town Centre Is Born
 
 In July 2011, the Oakridge commercial area, home to the Oakridge Centre mall since 1959, was officially designated as a **municipal town centre** by the City of Vancouver. The first of its kind in Metro Vancouver, placing it in a category similar to Brentwood Town Centre in Burnaby or City Centre in Surrey.
@@ -604,7 +604,7 @@ I live and work in this area. I watch the construction progress every week. If y
     dateModified: "2026-07-24",
     category: "Neighbourhoods",
     readTime: "8 min read",
-    image: "/images/blog/oakridge-park-redevelopment-2026.jpg",
+    image: "/images/blog/oakridge-park-redevelopment-2026.webp",
     content: `## The Biggest Development in Vancouver's History
 
 The Oakridge Park redevelopment is unlike anything Vancouver has seen before. What was once a conventional shopping mall at 41st and Cambie is being transformed into a 28-acre mixed-use community that will fundamentally reshape this corner of the city.
@@ -689,7 +689,7 @@ Whether you're looking to buy near Oakridge Park or wondering what your current 
     dateModified: "2026-01-22",
     category: "Buying",
     readTime: "10 min read",
-    image: "/images/blog/first-time-buyer-programs-bc-2026.jpg",
+    image: "/images/blog/first-time-buyer-programs-bc-2026.webp",
     content: `## Buying Your First Home in BC: Every Program That Can Help
 
 Purchasing your first home in British Columbia is a significant milestone, and an expensive one. The good news? There are more programs than ever to help first-time buyers get into the market. Here's a comprehensive guide to every program available in 2026.
@@ -812,7 +812,7 @@ Ready to start your home-buying journey? Let's talk about your situation and cre
     dateModified: "2026-01-15",
     category: "Neighbourhoods",
     readTime: "7 min read",
-    image: "/images/blog/best-neighborhoods-vancouver-families-2026.jpg",
+    image: "/images/blog/best-neighborhoods-vancouver-families-2026.webp",
     content: `## Finding Your Family's Perfect Vancouver Neighbourhood
 
 Choosing where to raise your family in Vancouver is one of the most important decisions you'll make. Beyond just the home itself, the neighbourhood shapes your daily life: school quality, park access, community feel, safety, and convenience all matter.
@@ -916,7 +916,7 @@ Contact me for a personalised neighbourhood tour. I will show you the parks, sch
     dateModified: "2026-07-06",
     category: "Advice",
     readTime: "8 min read",
-    image: "/images/blog/how-to-choose-a-realtor-in-vancouver.jpg",
+    image: "/images/blog/how-to-choose-a-realtor-in-vancouver.webp",
     content: `## Yes, I'm a Realtor Writing About How to Choose a Realtor
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and I'll acknowledge the obvious up front: I have a horse in this race. But I've also sat across the table from enough buyers and sellers who chose badly the first time — and paid for it in stress, money, or both — that I think an honest guide is worth writing. Everything below is what I'd tell a close friend, even if it meant they hired someone else.
@@ -989,7 +989,7 @@ If your search touches Vancouver — [Oakridge](/neighborhoods/oakridge), Kerris
     dateModified: "2026-07-06",
     category: "Advice",
     readTime: "7 min read",
-    image: "/images/blog/what-does-a-realtor-cost-in-bc-commissions-explained.jpg",
+    image: "/images/blog/what-does-a-realtor-cost-in-bc-commissions-explained.webp",
     content: `## The Question Everyone Asks Me at Open Houses
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and the most common question I get from first-time sellers — usually asked a little sheepishly — is "so what does this actually cost?" It's a fair question, and the answer is more transparent than most people expect. Here's how real estate commissions work in British Columbia, with real numbers.
@@ -1052,7 +1052,7 @@ Commission should never be a mystery, and you should never feel awkward asking a
     dateModified: "2026-07-24",
     category: "Market Analysis",
     readTime: "7 min read",
-    image: "/images/blog/vancouver-market-update-june-2026.jpg",
+    image: "/images/blog/vancouver-market-update-june-2026.webp",
     content: `## The Most Interesting Month of Data in a While
 
 I'm Aparna Kapur with Oakwyn Realty, and every month I go through the Greater Vancouver REALTORS (GVR) statistics package so my clients don't have to. June 2026 is the most interesting month of data we've had in some time — not because prices moved, but because demand did.

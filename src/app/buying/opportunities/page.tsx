@@ -50,7 +50,7 @@ const VALUE_PROPS = [
 export default function OpportunitiesPage() {
   return (
     <>
-      <PageBanner
+      <PageBanner heading={false}
         eyebrow="Opportunities"
         title="Below-Market & Motivated Seller Listings"
         align="left"

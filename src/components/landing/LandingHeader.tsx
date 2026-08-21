@@ -7,7 +7,7 @@ export default function LandingHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/about/aparna-kapur.jpg"
+            src="/images/about/aparna-kapur.webp"
             alt="Aparna Kapur"
             width={40}
             height={40}

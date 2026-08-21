@@ -36,10 +36,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "./",
   },
-  title: {
-    default: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
-    template: "%s | Aparna Kapur",
-  },
+  // No "%s | Aparna Kapur" template: it added 15 characters to every title and
+  // pushed 97 of them past the ~60 characters Google displays. The site name is
+  // published separately in the WebSite schema, which is what search engines
+  // now use to label the source.
+  title: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
   description:
     "Your trusted Oakridge & Vancouver real estate expert. Aparna Kapur with Oakwyn Realty helps buyers and sellers navigate Vancouver's most exciting neighborhoods.",
   keywords: [

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import EmailLink, { protectEmails } from "@/components/contact/EmailLink";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
@@ -98,7 +99,7 @@ export default function WhyWorkWithMePage() {
         }}
       />
 
-      <PageBanner
+      <PageBanner heading={false}
         eyebrow="About Me"
         title="Why Work With Me"
         description="Vancouver realtor with Oakwyn Realty, specializing in Oakridge and the south side."
@@ -139,11 +140,14 @@ export default function WhyWorkWithMePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="lg:sticky lg:top-28">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
-                <img
-                  src="/images/about/aparna-kapur.jpg"
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-warm-100">
+                <Image
+                  src="/images/about/aparna-kapur.webp"
                   alt="Aparna Kapur - Vancouver Real Estate Agent with Oakwyn Realty, specializing in Oakridge and south side neighbourhoods"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  priority
+                  className="object-cover"
                 />
               </div>
             </div>

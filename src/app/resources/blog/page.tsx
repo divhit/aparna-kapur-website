@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
 import PageBanner from "@/components/hero/PageBanner";
@@ -35,7 +36,7 @@ export default function BlogPage() {
           },
         }}
       />
-      <PageBanner eyebrow="Blog" title="Vancouver Real Estate Insights" description="Tips, market analysis, and neighbourhood guides to help you navigate the Vancouver real estate market with confidence." />
+      <PageBanner heading={false} eyebrow="Blog" title="Vancouver Real Estate Insights" description="Tips, market analysis, and neighbourhood guides to help you navigate the Vancouver real estate market with confidence." />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -48,11 +49,13 @@ export default function BlogPage() {
                 className="group block"
               >
                 <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-warm-100 h-full">
-                  <div className="h-48 overflow-hidden">
-                    <img
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-6">

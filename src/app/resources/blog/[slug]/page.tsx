@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPost, getAllBlogSlugs, blogPosts } from "@/lib/blog";
@@ -81,7 +82,7 @@ export default async function BlogPostPage({ params }: Props) {
         }}
       />
 
-      <PageBanner title={post.title} />
+      <PageBanner heading={false} title={post.title} />
 
       {/* Article */}
       <article className="py-16">
@@ -310,11 +311,13 @@ export default async function BlogPostPage({ params }: Props) {
                     href={`/resources/blog/${p.slug}`}
                     className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-warm-100"
                   >
-                    <div className="h-36 overflow-hidden">
-                      <img
+                    <div className="relative h-36 overflow-hidden">
+                      <Image
                         src={p.image}
                         alt={p.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        sizes="(max-width: 640px) 50vw, 25vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-5">

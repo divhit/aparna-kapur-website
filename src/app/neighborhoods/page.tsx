@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
@@ -36,7 +37,7 @@ const neighborhoods = [
     tagline: "Where Families Put Down Roots",
     description: "Anchored by Queen Elizabeth Park and Langara College, South Cambie is a family-oriented neighborhood with excellent schools and the Cambie corridor running through its heart.",
     stats: { avgPrice: "$1.44M", transit: "Canada Line Access", newHomes: "Moderate" },
-    image: "/images/neighborhoods/south-cambie.jpg",
+    image: "/images/neighborhoods/south-cambie.webp",
     featured: false,
   },
   {
@@ -45,7 +46,7 @@ const neighborhoods = [
     tagline: "Creative Energy & Community Spirit",
     description: "A vibrant community known for its arts scene, craft breweries on Main Street, and strong neighborhood identity. Great for those who want urban energy with residential calm.",
     stats: { avgPrice: "$1.70M", transit: "Bus Routes", newHomes: "Moderate" },
-    image: "/images/neighborhoods/riley-park.jpg",
+    image: "/images/neighborhoods/riley-park.webp",
     featured: false,
   },
   {
@@ -54,7 +55,7 @@ const neighborhoods = [
     tagline: "Upscale Village Living",
     description: "An established, upscale neighborhood with boutique shopping, elegant heritage homes, and top private schools. Perfect for those seeking refined suburban living.",
     stats: { avgPrice: "$1.90M", transit: "Bus Routes", newHomes: "Limited" },
-    image: "/images/neighborhoods/kerrisdale.jpg",
+    image: "/images/neighborhoods/kerrisdale.webp",
     featured: false,
   },
   {
@@ -72,7 +73,7 @@ const neighborhoods = [
     tagline: "Beach Living & Urban Energy",
     description: "One of Vancouver's most desirable beach neighbourhoods, known for its outdoor lifestyle, vibrant West 4th Avenue dining scene, and proximity to both UBC and downtown.",
     stats: { avgPrice: "$1.25M", transit: "99 B-Line & Broadway", newHomes: "Moderate" },
-    image: "/images/neighborhoods/kitsilano.png",
+    image: "/images/neighborhoods/kitsilano.webp",
     featured: false,
   },
   {
@@ -81,7 +82,7 @@ const neighborhoods = [
     tagline: "World-Class Campus & Community",
     description: "A unique west-side community where world-class academics, stunning natural beauty, and modern village living come together on Vancouver's western tip.",
     stats: { avgPrice: "$1.35M", transit: "99 B-Line", newHomes: "Wesbrook Village" },
-    image: "/images/neighborhoods/ubc.png",
+    image: "/images/neighborhoods/ubc.webp",
     featured: false,
   },
   {
@@ -90,7 +91,7 @@ const neighborhoods = [
     tagline: "Upscale Living on the Greenway",
     description: "A refined residential area between Kerrisdale and Shaughnessy, featuring the Arbutus Greenway, heritage homes on generous lots, and the charming Arbutus Village.",
     stats: { avgPrice: "$2.20M", transit: "Arbutus Greenway", newHomes: "Limited" },
-    image: "/images/neighborhoods/arbutus-ridge.png",
+    image: "/images/neighborhoods/arbutus-ridge.webp",
     featured: false,
   },
   {
@@ -99,7 +100,7 @@ const neighborhoods = [
     tagline: "Family Living Near UBC & Pacific Spirit",
     description: "A family-oriented west-side neighbourhood with Dunbar Village shopping, spacious lots, and immediate access to Pacific Spirit Regional Park and UBC.",
     stats: { avgPrice: "$2.50M", transit: "Bus to UBC", newHomes: "Limited" },
-    image: "/images/neighborhoods/dunbar-southlands.png",
+    image: "/images/neighborhoods/dunbar-southlands.webp",
     featured: false,
   },
   {
@@ -108,7 +109,7 @@ const neighborhoods = [
     tagline: "Vancouver's Most Prestigious Address",
     description: "Vancouver's grandest heritage neighbourhood, home to stately mansions, tree-lined boulevards, VanDusen Botanical Garden, and the city's most exclusive residential streets.",
     stats: { avgPrice: "$3.50M", transit: "Near Canada Line", newHomes: "Heritage" },
-    image: "/images/neighborhoods/shaughnessy.png",
+    image: "/images/neighborhoods/shaughnessy.webp",
     featured: false,
   },
   {
@@ -144,7 +145,7 @@ const neighborhoods = [
     tagline: "Beach Life & Vibrant Community",
     description: "One of Canada's most vibrant urban neighbourhoods, offering English Bay beaches, Davie Village culture, Denman Street dining, and Stanley Park at your doorstep.",
     stats: { avgPrice: "$680K", transit: "Burrard Station", newHomes: "Moderate" },
-    image: "/images/neighborhoods/west-end.jpeg",
+    image: "/images/neighborhoods/west-end.webp",
     featured: false,
   },
   {
@@ -153,7 +154,7 @@ const neighborhoods = [
     tagline: "Creative Hub & Craft Culture",
     description: "Vancouver's creative epicentre with Main Street's independent shops and restaurants, craft breweries, vibrant public art, and a growing tech scene.",
     stats: { avgPrice: "$850K", transit: "2 SkyTrain Stations", newHomes: "Moderate" },
-    image: "/images/neighborhoods/mount-pleasant.jpeg",
+    image: "/images/neighborhoods/mount-pleasant.webp",
     featured: false,
   },
   {
@@ -162,7 +163,7 @@ const neighborhoods = [
     tagline: "The Drive & Diverse Community",
     description: "An eclectic and multicultural neighbourhood centred on Commercial Drive, with indie shops, Italian cafes, and the busiest SkyTrain station in the system.",
     stats: { avgPrice: "$1.10M", transit: "Commercial-Broadway", newHomes: "Moderate" },
-    image: "/images/neighborhoods/grandview-woodland.png",
+    image: "/images/neighborhoods/grandview-woodland.webp",
     featured: false,
   },
   {
@@ -171,7 +172,7 @@ const neighborhoods = [
     tagline: "PNE, Parks & East-Side Character",
     description: "A large, diverse east-side neighbourhood home to the PNE and Playland, affordable character homes, Hastings Park, and a growing food scene.",
     stats: { avgPrice: "$1.20M", transit: "Near SkyTrain", newHomes: "Moderate" },
-    image: "/images/neighborhoods/hastings-sunrise.png",
+    image: "/images/neighborhoods/hastings-sunrise.webp",
     featured: false,
   },
   {
@@ -180,7 +181,7 @@ const neighborhoods = [
     tagline: "Multicultural Heart of East Van",
     description: "One of Vancouver's largest neighbourhoods, known for Trout Lake, the Kingsway restaurant corridor, diverse communities, and excellent value for families.",
     stats: { avgPrice: "$1.15M", transit: "Near Joyce Station", newHomes: "Moderate" },
-    image: "/images/neighborhoods/kensington-cedar-cottage.png",
+    image: "/images/neighborhoods/kensington-cedar-cottage.webp",
     featured: false,
   },
   {
@@ -189,7 +190,7 @@ const neighborhoods = [
     tagline: "Historic Roots & Creative Spirit",
     description: "Vancouver's oldest residential neighbourhood with 1890s heritage homes, an active artist community, the Strathcona farmers market, and proximity to Chinatown.",
     stats: { avgPrice: "$950K", transit: "Main St Station", newHomes: "Limited" },
-    image: "/images/neighborhoods/strathcona.png",
+    image: "/images/neighborhoods/strathcona.webp",
     featured: false,
   },
   {
@@ -198,7 +199,7 @@ const neighborhoods = [
     tagline: "Family-Friendly & Community-Centred",
     description: "A welcoming southeast Vancouver neighbourhood with one of the city's best community centres, diverse cultures, affordable homes, and Everett Crowley Park.",
     stats: { avgPrice: "$1.10M", transit: "Bus Routes", newHomes: "Moderate" },
-    image: "/images/neighborhoods/killarney.png",
+    image: "/images/neighborhoods/killarney.webp",
     featured: false,
   },
   {
@@ -207,7 +208,7 @@ const neighborhoods = [
     tagline: "Vancouver's Most Diverse Neighbourhood",
     description: "Vancouver's most populous neighbourhood with three SkyTrain stations, incredible multicultural food along Kingsway, and some of the best value real estate in the city.",
     stats: { avgPrice: "$1.05M", transit: "3 SkyTrain Stations", newHomes: "Growing" },
-    image: "/images/neighborhoods/renfrew-collingwood.png",
+    image: "/images/neighborhoods/renfrew-collingwood.webp",
     featured: false,
   },
   {
@@ -239,7 +240,7 @@ export default function NeighborhoodsPage() {
           { name: "Neighbourhoods", href: "/neighborhoods" },
         ]}
       />
-      <PageBanner
+      <PageBanner heading={false}
         eyebrow="Neighbourhood Guides"
         title="Explore Vancouver's Best Neighbourhoods"
         description="Every neighbourhood has its own personality. Explore my detailed guides to find the one that fits your lifestyle, budget, and priorities."
@@ -268,11 +269,13 @@ export default function NeighborhoodsPage() {
                 href={`/neighborhoods/${hood.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-warm-100"
               >
-                <div className="h-48 overflow-hidden">
-                  <img
+                <div className="relative h-48 overflow-hidden">
+                  <Image
                     src={hood.image}
                     alt={`${hood.name} Vancouver`}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-6">

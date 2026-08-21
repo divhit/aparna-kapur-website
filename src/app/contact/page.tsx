@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import EmailLink from "@/components/contact/EmailLink";
+import EmailLink, { protectEmails } from "@/components/contact/EmailLink";
 import { NAP } from "@/lib/agent/site";
 import ContactForm from "@/components/forms/ContactForm";
-import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/JsonLd";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
@@ -11,9 +11,34 @@ export const metadata: Metadata = {
     "Get in touch with Aparna Kapur, your Oakridge & Vancouver real estate expert at Oakwyn Realty. Call, email, or send a message.",
 };
 
+/** Answers to what people actually ask before making contact. */
+const CONTACT_FAQS = [
+  {
+    q: "How quickly will I hear back?",
+    a: `Usually the same day, and always within one business day. Phone and text reach Aparna directly on ${NAP.telephone}; the form and ${NAP.email} come to the same inbox. There is no assistant or call centre in between — the person who replies is the person you would work with.`,
+  },
+  {
+    q: "Do I have to commit to anything to ask a question?",
+    a: "No. Reading, asking, and getting a valuation cost nothing and carry no obligation. In British Columbia an agency relationship only begins when you and the brokerage sign a written service agreement, after the required disclosures — until then you are simply asking a licensed agent a question.",
+  },
+  {
+    q: "I am already working with another REALTOR®. Can I still ask?",
+    a: "Ask, yes — but if you have signed an exclusive agreement with another agent, Aparna will not step between you and them. Tell her when you make contact and she will point you in the right direction, or answer a general market question without touching your existing relationship.",
+  },
+  {
+    q: "What should I have ready?",
+    a: "Nothing formal. It helps to know roughly where you want to be, roughly what you can spend, and when you would like to move — but if you are early enough that none of those are settled, that is exactly the conversation worth having first.",
+  },
+  {
+    q: "Do you work outside Vancouver?",
+    a: "Aparna is licensed across British Columbia and works throughout Metro Vancouver, with the deepest knowledge on Vancouver's south and west side — Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor. For a purchase well outside that area she will refer you to someone who knows it as well as she knows hers.",
+  },
+];
+
 export default function ContactPage() {
   return (
     <>
+      <FAQSchema faqs={CONTACT_FAQS} />
       <BreadcrumbSchema
         items={[
           { name: "Home", href: "/" },
@@ -21,7 +46,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <PageBanner
+      <PageBanner heading={false}
         eyebrow="Get in Touch"
         title="Let's Start a Conversation"
         description="Whether you're ready to buy, sell, or just have questions about the Vancouver real estate market, I'd love to hear from you."
@@ -90,6 +115,33 @@ export default function ContactPage() {
                 <ContactForm />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact-questions"
+        aria-labelledby="contact-questions-heading"
+        className="pb-20"
+      >
+        <div className="max-w-3xl mx-auto px-6">
+          <h2
+            id="contact-questions-heading"
+            className="font-serif text-2xl md:text-3xl text-teal-950 mb-8"
+          >
+            Before you get in touch
+          </h2>
+          <div className="space-y-7">
+            {CONTACT_FAQS.map((faq) => (
+              <div key={faq.q}>
+                <h3 className="font-serif text-lg text-teal-900 mb-2">
+                  {faq.q}
+                </h3>
+                <p className="text-warm-600 leading-relaxed">
+                  {protectEmails(faq.a)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
