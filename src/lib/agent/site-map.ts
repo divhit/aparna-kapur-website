@@ -2,6 +2,7 @@ import { blogPosts } from "@/lib/blog";
 import { buyingGuideSteps, sellingGuideSteps } from "@/lib/guide-data";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { LEGAL_DOCUMENTS } from "@/lib/legal";
+import { getAllMarketPages } from "@/lib/market-pages";
 import { NEIGHBOURHOOD_COUNT } from "./site";
 export {
   NON_NEGOTIABLE_PATHS,
@@ -273,6 +274,16 @@ export function getSiteSections(): SiteSection[] {
       title: "About",
       summary: "The agent and the brokerage.",
       pages: ABOUT_PAGES,
+    },
+    {
+      title: "Benchmark Prices",
+      summary:
+        "MLS® HPI benchmark price, year-over-year and month-over-month change for each neighbourhood and property type GVR publishes a figure for.",
+      pages: getAllMarketPages().map((page) => ({
+        path: page.path,
+        title: `${page.areaName} ${page.typeMeta.plural.toLowerCase()}`,
+        summary: page.description,
+      })),
     },
     {
       title: "Legal",

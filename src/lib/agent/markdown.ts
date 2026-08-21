@@ -2,6 +2,12 @@ import { blogPosts } from "@/lib/blog";
 import { buyingGuideSteps, sellingGuideSteps } from "@/lib/guide-data";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { findLegalDocument, legalDocumentToMarkdown } from "@/lib/legal";
+import { formatPrice } from "@/lib/market-data";
+import {
+  getMarketPage,
+  marketPagePath as marketPagePathOf,
+  propertyTypeFromSlug,
+} from "@/lib/market-pages";
 import {
   AGENT_ENDPOINTS,
   BRAND,
@@ -311,6 +317,58 @@ function guideStepDocument(
   };
 }
 
+function marketDocument(path: string): MarkdownDocument | null {
+  const match = path.match(/^\/market\/([^/]+)\/([^/]+)$/);
+  if (!match) return null;
+  const type = propertyTypeFromSlug(match[2]);
+  const page = type ? getMarketPage(match[1], type) : null;
+  if (!page) return null;
+
+  const body = [
+    page.summary,
+    "",
+    "## Benchmark",
+    "",
+    "| Benchmark | Price | 1 year | 1 month |",
+    "| --- | --- | --- | --- |",
+    `| ${page.areaName} ${page.typeMeta.plural.toLowerCase()} | ${formatPrice(page.benchmark.price)} | ${page.benchmark.yoy}% | ${page.benchmark.mom}% |`,
+    `| Metro Vancouver ${page.typeMeta.proseLabel} | ${formatPrice(page.region.price)} | ${page.region.yoy}% | ${page.region.mom}% |`,
+    "",
+    `Source: ${page.source}. GVR sub-area "${page.subArea}".`,
+    `Rank: ${page.rank} of ${page.rankOf} Vancouver neighbourhoods with a published ${page.typeMeta.proseLabel} benchmark.`,
+    "",
+    ...(page.comparables.length
+      ? [
+          "## Neighbourhoods at a similar price",
+          "",
+          ...page.comparables.map(
+            (c) =>
+              `- ${link(marketPagePathOf(c.slug, page.type), `${c.name} ${page.typeMeta.plural.toLowerCase()}`)} — ${formatPrice(c.price)} (${c.vs > 0 ? "+" : ""}${c.vs}% vs ${page.areaName})`,
+          ),
+          "",
+        ]
+      : []),
+    ...(page.siblings.length
+      ? [
+          `## Other property types in ${page.areaName}`,
+          "",
+          ...page.siblings.map(
+            (s) => `- ${link(s.slug, `${page.areaName} ${s.plural.toLowerCase()}`)} — ${formatPrice(s.price)}`,
+          ),
+          "",
+        ]
+      : []),
+    "## Questions people ask",
+    "",
+    ...page.faqs.flatMap((faq) => [`### ${faq.q}`, "", faq.a, ""]),
+    `Full neighbourhood guide: ${link(`/neighborhoods/${page.areaSlug}`)}`,
+    "",
+    CONTACT_BLOCK,
+  ].join("\n");
+
+  return { path: page.path, title: page.title, description: page.description, body };
+}
+
 function legalDocument(path: string): MarkdownDocument | null {
   const doc = findLegalDocument(path);
   if (!doc) return null;
@@ -370,6 +428,9 @@ export function getMarkdownDocument(pathname: string): MarkdownDocument | null {
 
   const post = path.match(/^\/resources\/blog\/([^/]+)$/);
   if (post) return blogPostDocument(post[1]);
+
+  const market = marketDocument(path);
+  if (market) return market;
 
   const legal = legalDocument(path);
   if (legal) return legal;
