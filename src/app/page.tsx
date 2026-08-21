@@ -4,6 +4,16 @@ import HeroChat from "@/components/chat/HeroChat";
 import GetInTouch from "@/components/sections/GetInTouch";
 import HeroSlideshow from "@/components/hero/HeroSlideshow";
 import AllNeighbourhoodsMap from "@/components/maps/AllNeighbourhoodsMap";
+import { FAQSchema } from "@/components/seo/JsonLd";
+import {
+  BRAND,
+  FAQS,
+  MARKET_SNAPSHOT,
+  NAP,
+  NAP_ONE_LINE,
+  NEIGHBOURHOOD_COUNT,
+  SPECIALTY_NEIGHBOURHOODS,
+} from "@/lib/agent/site";
 
 const neighborhoods = [
   {
@@ -47,6 +57,8 @@ const neighborhoods = [
 export default function HomePage() {
   return (
     <>
+      <FAQSchema faqs={FAQS} />
+
       {/* SECTION 1: Full-screen Hero with Slideshow */}
       <HeroSlideshow height="full">
         <div className="text-center px-6 max-w-4xl mx-auto">
@@ -152,101 +164,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 3b: May 2026 Market Snapshot */}
+      {/* SECTION 3b: Market Snapshot — driven by MARKET_SNAPSHOT so the
+          homepage and the markdown/llms.txt representations cannot disagree */}
       <section className="py-20 bg-warm-50">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-16">
-            May 2026, Vancouver
+            {MARKET_SNAPSHOT.heading}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-4">
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Down 6.2% year-over-year
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                $1.10M
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Composite
-                <br />
-                Benchmark Price
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Up 0.2% from April
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                +0.2%
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Composite Benchmark
-                <br />
-                Month-Over-Month
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                34.6% above 10-yr avg
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                16,917
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Active
-                <br />
-                Listings
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Roughly flat vs last year
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                -1.0%
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Active Listings
-                <br />
-                Year-Over-Year
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Fewer than last year
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                -7.6%
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                New Listings vs.
-                <br />
-                May 2025
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-teal-600 italic font-medium mb-2">
-                Balanced territory
-              </p>
-              <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
-                13.1%
-              </p>
-              <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
-                Sales-to-Active
-                <br />
-                Ratio
-              </p>
-            </div>
+            {MARKET_SNAPSHOT.metrics.map((metric) => (
+              <div key={metric.label}>
+                <p className="text-xs text-teal-600 italic font-medium mb-2">
+                  {metric.context}
+                </p>
+                <p className="font-serif text-3xl md:text-4xl text-teal-600 mb-2">
+                  {metric.value}
+                </p>
+                <p className="text-xs uppercase tracking-wider text-warm-600 leading-relaxed">
+                  {metric.labelLines[0]}
+                  <br />
+                  {metric.labelLines[1]}
+                </p>
+              </div>
+            ))}
           </div>
           <p className="text-[10px] text-warm-400 uppercase tracking-wider mt-10">
-            Source: Greater Vancouver REALTORS&reg; &bull; MLS&reg; HPI &bull;
-            May 2026
+            Source: {MARKET_SNAPSHOT.source}
           </p>
         </div>
       </section>
 
       {/* SECTION 4: Featured Neighborhoods */}
       <section className="bg-warm-50">
+        <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 text-center">
+          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight">
+            Neighbourhoods I Know Street by Street
+          </h2>
+          <p className="text-warm-600 leading-relaxed mt-4 max-w-2xl mx-auto">
+            Every guide below carries current MLS&reg; HPI benchmark pricing,
+            school and transit context, and the development plans that will
+            shape values over the next few years.
+          </p>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0">
           {/* UBC cell — links to UBC neighbourhood page */}
           <Link
@@ -349,11 +308,54 @@ export default function HomePage() {
             service for buyers and sellers, handling every transaction
             personally from consultation to closing.
           </p>
-          <p className="text-white/70 text-sm leading-relaxed mb-6">
+          <p className="text-white/70 text-sm leading-relaxed mb-10">
             Oakwyn Realty is one of British Columbia&apos;s largest independent
             brokerages with over 900 agents and $6.3 billion in annual sales.
-            Aparna can be reached at 604-612-7694.
+            Aparna can be reached at {NAP.telephone}.
           </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-left mb-10">
+            <div>
+              <h3 className="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-3">
+                What I help with
+              </h3>
+              <ul className="text-white/70 text-sm leading-relaxed space-y-1.5">
+                <li>Buying a house, condo, or townhome in Vancouver</li>
+                <li>Selling with pricing strategy and staging</li>
+                <li>Free comparative market analysis for owners</li>
+                <li>First-time buyer programs and BC closing costs</li>
+                <li>Neighbourhood and school catchment guidance</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-3">
+                Where I work
+              </h3>
+              <ul className="text-white/70 text-sm leading-relaxed space-y-1.5">
+                {SPECIALTY_NEIGHBOURHOODS.map((name) => (
+                  <li key={name}>{name}</li>
+                ))}
+                <li className="text-white/50">
+                  Plus {NEIGHBOURHOOD_COUNT - SPECIALTY_NEIGHBOURHOODS.length}{" "}
+                  more Vancouver neighbourhood guides
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-3">
+                How to reach me
+              </h3>
+              <ul className="text-white/70 text-sm leading-relaxed space-y-1.5">
+                <li>Phone: {NAP.telephone}</li>
+                <li>Email: {NAP.email}</li>
+                <li>{NAP_ONE_LINE}</li>
+                <li>
+                  {BRAND.jobTitle} licensed in British Columbia (BCFSA)
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/about/why-work-with-me"
@@ -368,6 +370,28 @@ export default function HomePage() {
               Get in Touch
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION 5d: Homepage FAQ — the same answers served by /llms.txt,
+          /agents.md, and the markdown twin, so every representation agrees */}
+      <section className="py-20 bg-warm-50">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-serif text-3xl md:text-4xl text-teal-950 italic font-bold leading-tight mb-10 text-center">
+            Common Questions
+          </h2>
+          <dl className="space-y-8">
+            {FAQS.map((faq) => (
+              <div key={faq.q}>
+                <dt>
+                  <h3 className="font-serif text-xl text-teal-900 mb-2">
+                    {faq.q}
+                  </h3>
+                </dt>
+                <dd className="text-warm-600 leading-relaxed">{faq.a}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
