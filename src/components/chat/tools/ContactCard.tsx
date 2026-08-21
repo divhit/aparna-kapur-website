@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { NAP } from "@/lib/agent/site";
 import { submitChatLead } from "@/app/actions/contact";
 
 type Props = {
@@ -159,7 +160,7 @@ export default function ContactCard({
           Call
         </a>
         <a
-          href="mailto:ak@aparnakapur.com"
+          href={`mailto:${NAP.email}`}
           className="flex-1 flex items-center justify-center gap-1.5 px-2 py-2 rounded-lg bg-warm-50 hover:bg-teal-50 transition-colors text-xs text-warm-700"
         >
           <svg

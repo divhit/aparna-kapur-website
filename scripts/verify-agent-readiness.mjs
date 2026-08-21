@@ -326,6 +326,172 @@ async function verifyMarkdownCoverage() {
   );
 }
 
+/**
+ * Crawl every page reachable from the homepage and assert nothing 404s.
+ * The audit-era site had five dead links that no per-page check would have
+ * caught: two mistyped neighbourhood slugs, the two legal pages, and the
+ * Cloudflare email-protection href.
+ */
+async function verifyNoBrokenLinks() {
+  group("No broken links anywhere on the site");
+
+  const status = new Map();
+  const linkedFrom = new Map();
+  const queue = ["/"];
+
+  const normalize = (href) => {
+    if (!href) return null;
+    let path = href;
+    if (/^https?:\/\//.test(href)) {
+      try {
+        const url = new URL(href);
+        if (url.origin !== new URL(BASE).origin) return null;
+        path = url.pathname;
+      } catch {
+        return null;
+      }
+    }
+    if (!path.startsWith("/")) return null;
+    if (path.startsWith("/_next/") || path.startsWith("/api/")) return null;
+    path = path.split("#")[0].split("?")[0];
+    return path.replace(/\/+$/, "") || "/";
+  };
+
+  while (queue.length) {
+    const path = queue.shift();
+    if (status.has(path)) continue;
+
+    let response;
+    let body = "";
+    try {
+      response = await fetch(`${BASE}${path}`, {
+        headers: { accept: BROWSER_ACCEPT },
+        redirect: "manual",
+      });
+      const type = response.headers.get("content-type") ?? "";
+      if (type.includes("text/html")) body = await response.text();
+      else await response.arrayBuffer();
+    } catch (error) {
+      status.set(path, `ERR ${error.message}`);
+      continue;
+    }
+
+    status.set(path, response.status);
+
+    if (response.status >= 300 && response.status < 400) {
+      const target = normalize(response.headers.get("location"));
+      if (target && !status.has(target)) queue.push(target);
+      continue;
+    }
+    if (response.status !== 200 || !body) continue;
+
+    for (const match of body.matchAll(/href="([^"]+)"/g)) {
+      const target = normalize(match[1]);
+      if (!target) continue;
+      if (!linkedFrom.has(target)) linkedFrom.set(target, new Set());
+      linkedFrom.get(target).add(path);
+      if (!status.has(target) && !queue.includes(target)) queue.push(target);
+    }
+  }
+
+  const broken = [...status.entries()].filter(
+    ([, value]) => typeof value !== "number" || value >= 400,
+  );
+
+  check(status.size > 60, "crawled the whole site", `${status.size} paths`);
+  check(
+    broken.length === 0,
+    "every internal link resolves",
+    broken
+      .map(
+        ([path, value]) =>
+          `${path} -> ${value} (linked from ${[...(linkedFrom.get(path) ?? [])].slice(0, 3).join(", ")})`,
+      )
+      .join("; "),
+  );
+
+  // Cloudflare's Email Address Obfuscation rewrites mailto links into this
+  // path and hides the address from anything that does not run JavaScript.
+  check(
+    !broken.some(([path]) => path.startsWith("/cdn-cgi/")),
+    "no Cloudflare email-protection placeholder links",
+  );
+}
+
+const EMAIL = "ak@aparnakapur.com";
+
+/**
+ * Every rendered occurrence of the address must sit inside Cloudflare's
+ * `email_off` markers. Cloudflare is not in front of a local build, so this
+ * checks the markers rather than the outcome; run it against production to
+ * check the outcome itself.
+ */
+function unprotectedEmailCount(html) {
+  const body = html.replace(/<script\b[\s\S]*?<\/script>/gi, "");
+  let unprotected = 0;
+  let cursor = 0;
+  for (;;) {
+    const at = body.indexOf(EMAIL, cursor);
+    if (at === -1) break;
+    const before = body.lastIndexOf("<!--email_off-->", at);
+    const closed = before === -1 ? -1 : body.indexOf("<!--email_on-->", before);
+    if (before === -1 || (closed !== -1 && closed < at)) unprotected += 1;
+    cursor = at + EMAIL.length;
+  }
+  return unprotected;
+}
+
+/** The contact address must be readable without running JavaScript. */
+async function verifyContactDetailsAreReadable() {
+  group("Contact details survive in the raw HTML");
+
+  const pages = ["/", "/contact", "/about/why-work-with-me", "/privacy", "/terms"];
+  for (const path of pages) {
+    const { body } = await get(path, BROWSER_ACCEPT);
+    const text = visibleText(body);
+    check(text.includes(EMAIL), `${path} shows the email address in rendered text`);
+    check(!text.includes("[email"), `${path} has no obfuscated email placeholder`);
+    check(
+      unprotectedEmailCount(body) === 0,
+      `${path} wraps every rendered address in Cloudflare email_off markers`,
+      `${unprotectedEmailCount(body)} unprotected`,
+    );
+  }
+
+  for (const path of ["/", "/contact"]) {
+    const { body } = await get(path, BROWSER_ACCEPT);
+    check(visibleText(body).includes("604-612-7694"), `${path} shows the phone number`);
+  }
+}
+
+async function verifyLegalPages() {
+  group("Legal pages");
+  for (const path of ["/privacy", "/terms"]) {
+    const { response, body } = await get(path, BROWSER_ACCEPT);
+    check(response.status === 200, `${path} returns 200`, String(response.status));
+    const text = visibleText(body);
+    check(text.length > 3000, `${path} has substantive content`, `${text.length} chars`);
+    check(
+      headings(body).some((heading) => heading.level === 1),
+      `${path} has an H1`,
+    );
+
+    const md = await get(path, "text/markdown");
+    check(
+      (md.response.headers.get("content-type") ?? "").startsWith("text/markdown"),
+      `${path} has a markdown twin`,
+    );
+    check(md.body.includes("## "), `${path} markdown carries the full section list`);
+  }
+
+  const { body } = await get("/terms", BROWSER_ACCEPT);
+  const text = visibleText(body);
+  check(
+    text.includes("agents.md") && text.includes("Accept: text/markdown"),
+    "/terms states the licence automated agents operate under",
+  );
+}
+
 async function main() {
   console.log(`Verifying agent readiness against ${BASE}`);
   await verifyHomepageWithoutJavaScript();
@@ -334,6 +500,9 @@ async function main() {
   await verifyAgentInstructions();
   await verifySitemapLinks();
   await verifyMarkdownCoverage();
+  await verifyLegalPages();
+  await verifyContactDetailsAreReadable();
+  await verifyNoBrokenLinks();
 
   console.log(
     `\n${checks - failures}/${checks} checks passed${failures ? ` — ${failures} FAILED` : ""}`,

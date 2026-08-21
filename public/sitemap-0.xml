@@ -42,6 +42,7 @@
 <url><loc>https://www.aparnakapur.com/neighborhoods/west-point-grey</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/open-house</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+<url><loc>https://www.aparnakapur.com/privacy</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/best-neighborhoods-vancouver-families-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/resources/blog/first-time-buyer-programs-bc-2026</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -71,4 +72,5 @@
 <url><loc>https://www.aparnakapur.com/selling</loc><changefreq>weekly</changefreq><priority>1</priority></url>
 <url><loc>https://www.aparnakapur.com/selling/staging-tips</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/sitemap-html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aparnakapur.com/terms</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>

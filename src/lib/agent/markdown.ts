@@ -1,6 +1,7 @@
 import { blogPosts } from "@/lib/blog";
 import { buyingGuideSteps, sellingGuideSteps } from "@/lib/guide-data";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { findLegalDocument, legalDocumentToMarkdown } from "@/lib/legal";
 import {
   AGENT_ENDPOINTS,
   BRAND,
@@ -300,6 +301,17 @@ function guideStepDocument(
   };
 }
 
+function legalDocument(path: string): MarkdownDocument | null {
+  const doc = findLegalDocument(path);
+  if (!doc) return null;
+  return {
+    path: doc.path,
+    title: doc.title,
+    description: doc.summary,
+    body: [legalDocumentToMarkdown(doc), "", "---", "", CONTACT_BLOCK].join("\n"),
+  };
+}
+
 /** Fallback for catalogued pages that have no richer generated representation. */
 function summaryDocument(path: string): MarkdownDocument | null {
   const page = findSitePage(path);
@@ -348,6 +360,9 @@ export function getMarkdownDocument(pathname: string): MarkdownDocument | null {
 
   const post = path.match(/^\/resources\/blog\/([^/]+)$/);
   if (post) return blogPostDocument(post[1]);
+
+  const legal = legalDocument(path);
+  if (legal) return legal;
 
   const guideStep = path.match(/^\/(buying|selling)\/guide\/([^/]+)$/);
   if (guideStep) {

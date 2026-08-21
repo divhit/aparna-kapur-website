@@ -1,4 +1,5 @@
 "use client";
+import MapErrorBoundary from "@/components/maps/MapErrorBoundary";
 
 import { useEffect, useRef } from "react";
 import { APIProvider } from "@vis.gl/react-google-maps";
@@ -29,7 +30,7 @@ function PlacesSearchInner({ query, neighbourhood, lat, lng }: Props) {
     const requestEl = document.createElement("gmp-place-text-search-request");
     requestEl.setAttribute(
       "text-query",
-      `${query} in ${neighbourhood} Vancouver BC`
+      `${query} in ${neighbourhood} Vancouver BC`,
     );
     requestEl.setAttribute("max-result-count", "5");
 
@@ -114,7 +115,7 @@ function PlacesSearchInner({ query, neighbourhood, lat, lng }: Props) {
   );
 }
 
-export default function PlacesSearchCard(props: Props) {
+function PlacesSearchCardInner(props: Props) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
   if (!apiKey) {
@@ -130,5 +131,13 @@ export default function PlacesSearchCard(props: Props) {
     <APIProvider apiKey={apiKey} libraries={["places"]} version="beta">
       <PlacesSearchInner {...props} />
     </APIProvider>
+  );
+}
+
+export default function PlacesSearchCard(props: Props) {
+  return (
+    <MapErrorBoundary fallback={null}>
+      <PlacesSearchCardInner {...props} />
+    </MapErrorBoundary>
   );
 }

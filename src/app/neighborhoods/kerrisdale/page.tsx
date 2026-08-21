@@ -150,10 +150,10 @@ export default async function KerrisdalePage() {
                   <ul className="space-y-2 text-sm">
                     {[
                       ["Oakridge", "oakridge"],
-                      ["Dunbar", "dunbar"],
+                      ["Dunbar-Southlands", "dunbar-southlands"],
                       ["Arbutus Ridge", "arbutus-ridge"],
                       ["Shaughnessy", "shaughnessy"],
-                      ["Point Grey", "point-grey"],
+                      ["West Point Grey", "west-point-grey"],
                     ].map(([name, slug]) => (
                       <li key={slug}>
                         <Link

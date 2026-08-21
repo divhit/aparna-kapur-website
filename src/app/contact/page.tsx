@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import EmailLink from "@/components/contact/EmailLink";
+import { NAP } from "@/lib/agent/site";
 import ContactForm from "@/components/forms/ContactForm";
 import { LocalBusinessSchema, BreadcrumbSchema } from "@/components/seo/JsonLd";
 import PageBanner from "@/components/hero/PageBanner";
@@ -58,20 +60,11 @@ export default function ContactPage() {
                   </div>
                 </a>
                 <div className="border-t border-warm-200" />
-                <a
-                  href="mailto:ak@aparnakapur.com"
+                <EmailLink
+                  wrapperClassName="block"
                   className="flex items-center gap-4 hover:text-teal-700 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">
-                    <svg className="w-5 h-5 text-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-warm-900">Email</p>
-                    <p className="text-sm text-warm-600">ak@aparnakapur.com</p>
-                  </div>
-                </a>
+                  innerHtml={`<div class="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0"><svg class="w-5 h-5 text-teal-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div><div><p class="text-sm font-semibold text-warm-900">Email</p><p class="text-sm text-warm-600">${NAP.email}</p></div>`}
+                />
                 <div className="border-t border-warm-200" />
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-teal-100 flex items-center justify-center shrink-0">

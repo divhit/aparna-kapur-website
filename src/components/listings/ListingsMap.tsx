@@ -7,6 +7,7 @@ import {
   InfoWindow,
 } from "@vis.gl/react-google-maps";
 import { useState } from "react";
+import MapErrorBoundary from "@/components/maps/MapErrorBoundary";
 import type { DDFProperty } from "@/lib/ddf";
 
 function formatPrice(price: number): string {
@@ -16,7 +17,7 @@ function formatPrice(price: number): string {
   return `$${(price / 1_000).toFixed(0)}K`;
 }
 
-export default function ListingsMap({ listings }: { listings: DDFProperty[] }) {
+function ListingsMapInner({ listings }: { listings: DDFProperty[] }) {
   const [selected, setSelected] = useState<DDFProperty | null>(null);
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
@@ -78,5 +79,13 @@ export default function ListingsMap({ listings }: { listings: DDFProperty[] }) {
         </Map>
       </APIProvider>
     </div>
+  );
+}
+
+export default function ListingsMap(props: { listings: DDFProperty[] }) {
+  return (
+    <MapErrorBoundary fallback={null}>
+      <ListingsMapInner {...props} />
+    </MapErrorBoundary>
   );
 }

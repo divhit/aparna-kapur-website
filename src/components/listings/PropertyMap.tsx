@@ -1,6 +1,7 @@
 "use client";
 
 import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
+import MapErrorBoundary from "@/components/maps/MapErrorBoundary";
 
 type Props = {
   lat: number;
@@ -8,7 +9,7 @@ type Props = {
   address: string;
 };
 
-export default function PropertyMap({ lat, lng, address }: Props) {
+function PropertyMapInner({ lat, lng, address }: Props) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
   if (!apiKey) return null;
 
@@ -27,5 +28,13 @@ export default function PropertyMap({ lat, lng, address }: Props) {
         </Map>
       </APIProvider>
     </div>
+  );
+}
+
+export default function PropertyMap(props: Props) {
+  return (
+    <MapErrorBoundary fallback={null}>
+      <PropertyMapInner {...props} />
+    </MapErrorBoundary>
   );
 }

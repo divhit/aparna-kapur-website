@@ -1,5 +1,7 @@
 "use client";
 
+import MapErrorBoundary from "./MapErrorBoundary";
+
 import { useState, useEffect } from "react";
 import {
   APIProvider,
@@ -67,14 +69,14 @@ function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
             {poi.type === "transit"
               ? "T"
               : poi.type === "school"
-              ? "S"
-              : poi.type === "park"
-              ? "P"
-              : poi.type === "shopping"
-              ? "$"
-              : poi.type === "restaurant"
-              ? "R"
-              : "L"}
+                ? "S"
+                : poi.type === "park"
+                  ? "P"
+                  : poi.type === "shopping"
+                    ? "$"
+                    : poi.type === "restaurant"
+                      ? "R"
+                      : "L"}
           </div>
         </AdvancedMarker>
       ))}
@@ -93,8 +95,18 @@ function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
                 className="shrink-0 w-5 h-5 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors"
                 aria-label="Close"
               >
-                <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <svg
+                  className="w-3 h-3"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2.5}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
@@ -116,7 +128,46 @@ function MapMarkers({ pois }: { pois: PointOfInterest[] }) {
   );
 }
 
-export default function NeighbourhoodMap({
+/** Stands in when the map cannot be shown: no API key, or the SDK threw. */
+function MapPlaceholder({
+  className = "",
+  height = "400px",
+}: {
+  className?: string;
+  height?: string;
+}) {
+  return (
+    <div
+      className={`bg-warm-100 rounded-xl flex items-center justify-center ${className}`}
+      style={{ height }}
+    >
+      <div className="text-center p-6">
+        <svg
+          className="w-12 h-12 text-warm-400 mx-auto mb-3"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+          />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+        <p className="text-sm text-warm-500">Interactive map coming soon</p>
+      </div>
+    </div>
+  );
+}
+
+function NeighbourhoodMapInner({
   center,
   zoom = 14,
   pois = [],
@@ -127,46 +178,17 @@ export default function NeighbourhoodMap({
 }: Props) {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-  if (!apiKey) {
-    return (
-      <div
-        className={`bg-warm-100 rounded-xl flex items-center justify-center ${className}`}
-        style={{ height }}
-      >
-        <div className="text-center p-6">
-          <svg
-            className="w-12 h-12 text-warm-400 mx-auto mb-3"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-            />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={1.5}
-              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
-          <p className="text-sm text-warm-500">
-            Interactive map coming soon
-          </p>
-        </div>
-      </div>
-    );
-  }
+  if (!apiKey) return <MapPlaceholder className={className} height={height} />;
 
   const uniqueTypes = [...new Set(pois.map((p) => p.type))];
 
   return (
     <div className={className}>
       <APIProvider apiKey={apiKey}>
-        <div className="rounded-xl overflow-hidden border border-warm-200 shadow-sm" style={{ height }}>
+        <div
+          className="rounded-xl overflow-hidden border border-warm-200 shadow-sm"
+          style={{ height }}
+        >
           <Map
             defaultCenter={center}
             defaultZoom={zoom}
@@ -178,7 +200,9 @@ export default function NeighbourhoodMap({
             streetViewControl={false}
             fullscreenControl
           >
-            {boundaryName && <NeighbourhoodBoundaries filterTo={boundaryName} />}
+            {boundaryName && (
+              <NeighbourhoodBoundaries filterTo={boundaryName} />
+            )}
             <MapMarkers pois={pois} />
           </Map>
         </div>
@@ -197,5 +221,17 @@ export default function NeighbourhoodMap({
         </div>
       )}
     </div>
+  );
+}
+
+export default function NeighbourhoodMap(props: Props) {
+  return (
+    <MapErrorBoundary
+      fallback={
+        <MapPlaceholder className={props.className} height={props.height} />
+      }
+    >
+      <NeighbourhoodMapInner {...props} />
+    </MapErrorBoundary>
   );
 }
