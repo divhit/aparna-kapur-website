@@ -1,9 +1,20 @@
 import { blogPosts } from "@/lib/blog";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { markdownUrlFor } from "@/lib/agent/negotiation";
+import {
+  AGENT_ENDPOINTS,
+  BRAND,
+  endSentence,
+  MARKET_SNAPSHOT,
+  NAP,
+  NAP_ONE_LINE,
+  SITE_URL,
+  SPECIALTY_SENTENCE,
+  WHEN_NOT_TO_USE,
+  WHEN_TO_USE,
+} from "@/lib/agent/site";
 
 export const dynamic = "force-static";
-
-const SITE = "https://www.aparnakapur.com";
 
 export function GET() {
   const posts = [...blogPosts].sort((a, b) =>
@@ -11,18 +22,37 @@ export function GET() {
   );
   const neighbourhoods = Object.values(NEIGHBOURHOODS);
 
-  const text = `# Aparna Kapur Real Estate — Vancouver, BC
+  const text = `# ${BRAND.name} Real Estate — Vancouver, BC
 
-> Aparna Kapur is a licensed real estate agent in Vancouver, British Columbia, with Oakwyn Realty Ltd. She specializes in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.
+> ${BRAND.name} is a licensed real estate agent in Vancouver, British Columbia, with ${endSentence(NAP.brokerage)} She specializes in ${SPECIALTY_SENTENCE}.
+
+## When to use this site
+Reach for ${SITE_URL} when you need one of these. Each line names the page that answers it.
+
+${WHEN_TO_USE.map(
+  (use) => `- ${use.job} — ${use.detail} Start at ${SITE_URL}${use.start}`,
+).join("\n")}
+
+Full agent instructions, including how to call this site and what it will not answer: ${SITE_URL}/agents.md
+
+## When not to use this site
+${WHEN_NOT_TO_USE.map((limit) => `- ${limit}`).join("\n")}
+
+## How to fetch this site
+- Every page has a markdown twin: send \`Accept: text/markdown\`, or append \`.md\` to the page URL (${SITE_URL}${markdownUrlFor("/neighborhoods/oakridge")}).
+- Markdown responses are \`text/markdown; charset=utf-8\` with \`Vary: Accept\`.
+- Prefer ${SITE_URL}/llms-full.txt over crawling: it carries the whole site, including the full text of all ${posts.length} articles, in one request.
+- Paths that do not exist return HTTP 404 with a short markdown recovery body, never a 200.
 
 ## About
-- Name: Aparna Kapur
-- Role: Real Estate Agent
-- Brokerage: Oakwyn Realty Ltd. (900+ agents, $6.3B annual sales)
-- Phone: 604-612-7694
-- Email: ak@aparnakapur.com
-- Website: ${SITE}
-- Office: 3195 Oak Street, Vancouver, BC V6H 2L2
+- Name: ${BRAND.name}
+- Role: ${BRAND.jobTitle}
+- Brokerage: ${NAP.brokerage} (900+ agents, $6.3B annual sales)
+- Phone: ${NAP.telephone}
+- Email: ${NAP.email}
+- Website: ${SITE_URL}
+- Office: ${NAP_ONE_LINE}
+- Market data current to: ${MARKET_SNAPSHOT.label} (${MARKET_SNAPSHOT.source})
 
 ## Services
 - Residential buying (houses, condos, townhomes)
@@ -31,31 +61,31 @@ export function GET() {
 - First-time buyer support
 
 ## Key Pages
-- About: ${SITE}/about/why-work-with-me
-- Buying Guide: ${SITE}/buying
-- Selling Guide: ${SITE}/selling
-- Search Listings: ${SITE}/buying/search
-- All Neighbourhoods: ${SITE}/neighborhoods
-- Blog: ${SITE}/resources/blog
-- Contact: ${SITE}/contact
-- Home Valuation: ${SITE}/selling/home-valuation
+- About: ${SITE_URL}/about/why-work-with-me
+- Buying Guide: ${SITE_URL}/buying
+- Selling Guide: ${SITE_URL}/selling
+- Search Listings: ${SITE_URL}/buying/search
+- All Neighbourhoods: ${SITE_URL}/neighborhoods
+- Blog: ${SITE_URL}/resources/blog
+- Contact: ${SITE_URL}/contact
+- Home Valuation: ${SITE_URL}/selling/home-valuation
 
 ## Blog Posts
 ${posts
   .map(
     (p) =>
-      `- ${p.title} (${p.datePublished}): ${SITE}/resources/blog/${p.slug}`,
+      `- ${p.title} (${p.datePublished}): ${SITE_URL}/resources/blog/${p.slug}`,
   )
   .join("\n")}
 
 ## Neighbourhood Guides (${neighbourhoods.length} total)
 Detailed real estate guides for Vancouver neighbourhoods with market data, schools, transit, parks, and lifestyle information.
 ${neighbourhoods
-  .map((n) => `- ${n.name}: ${SITE}/neighborhoods/${n.slug}`)
+  .map((n) => `- ${n.name}: ${SITE_URL}/neighborhoods/${n.slug}`)
   .join("\n")}
 
-## Full Content
-A complete, machine-readable version of this site's content is available at ${SITE}/llms-full.txt
+## Optional
+${AGENT_ENDPOINTS.map((endpoint) => `- ${SITE_URL}${endpoint.path}: ${endpoint.description}`).join("\n")}
 `;
 
   return new Response(text, {

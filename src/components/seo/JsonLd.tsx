@@ -1,3 +1,15 @@
+import {
+  BRAND,
+  NAP,
+  SAME_AS,
+  SITE_URL,
+  SPECIALTY_NEIGHBOURHOODS,
+} from "@/lib/agent/site";
+
+/** Stable node ids so every schema on the site points at one brand entity. */
+export const AGENT_ID = `${SITE_URL}/#agent`;
+export const WEBSITE_ID = `${SITE_URL}/#website`;
+
 type JsonLdProps = {
   data: Record<string, unknown>;
 };
@@ -17,25 +29,32 @@ export function RealEstateAgentSchema() {
       data={{
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
-        name: "Aparna Kapur",
-        url: "https://www.aparnakapur.com",
-        telephone: "+1-604-612-7694",
-        email: "ak@aparnakapur.com",
-        image: "https://www.aparnakapur.com/og-image.png",
+        "@id": AGENT_ID,
+        name: BRAND.name,
+        // Every way the brand is written elsewhere, so a search engine can
+        // resolve "Aparna Kapur Real Estate" to this domain.
+        alternateName: [...BRAND.alternateNames],
+        slogan: BRAND.slogan,
+        url: SITE_URL,
+        mainEntityOfPage: `${SITE_URL}/about/why-work-with-me`,
+        telephone: NAP.telephoneE164,
+        email: NAP.email,
+        image: `${SITE_URL}/og-image.png`,
+        logo: `${SITE_URL}/images/logos/oakwyn-realty.png`,
         description:
           "Aparna Kapur is a Vancouver real estate agent with Oakwyn Realty, specializing in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "3195 Oak Street",
-          addressLocality: "Vancouver",
-          addressRegion: "BC",
-          postalCode: "V6H 2L2",
-          addressCountry: "CA",
+          streetAddress: NAP.streetAddress,
+          addressLocality: NAP.addressLocality,
+          addressRegion: NAP.addressRegion,
+          postalCode: NAP.postalCode,
+          addressCountry: NAP.addressCountry,
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: 49.2488,
-          longitude: -123.1275,
+          latitude: NAP.latitude,
+          longitude: NAP.longitude,
         },
         areaServed: [
           {
@@ -43,54 +62,11 @@ export function RealEstateAgentSchema() {
             name: "Vancouver",
             sameAs: "https://en.wikipedia.org/wiki/Vancouver",
           },
-          {
+          ...SPECIALTY_NEIGHBOURHOODS.map((name) => ({
             "@type": "Neighborhood",
-            name: "Oakridge",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
-          {
-            "@type": "Neighborhood",
-            name: "Marpole",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
-          {
-            "@type": "Neighborhood",
-            name: "South Cambie",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
-          {
-            "@type": "Neighborhood",
-            name: "Riley Park",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
-          {
-            "@type": "Neighborhood",
-            name: "Kerrisdale",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
-          {
-            "@type": "Neighborhood",
-            name: "Cambie Corridor",
-            containedInPlace: {
-              "@type": "City",
-              name: "Vancouver",
-            },
-          },
+            name,
+            containedInPlace: { "@type": "City", name: "Vancouver" },
+          })),
         ],
         memberOf: {
           "@type": "Organization",
@@ -111,11 +87,8 @@ export function RealEstateAgentSchema() {
           "Canada Line property values",
           "Vancouver west side real estate",
         ],
-        sameAs: [
-          "https://maps.google.com/?cid=6808320185247201168",
-          "https://www.instagram.com/aparnakapur.realestate/",
-        ],
-        jobTitle: "Real Estate Agent",
+        sameAs: [...SAME_AS],
+        jobTitle: BRAND.jobTitle,
         hasCredential: {
           "@type": "EducationalOccupationalCredential",
           credentialCategory: "Real Estate License",
@@ -135,13 +108,22 @@ export function WebsiteSchema() {
       data={{
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": WEBSITE_ID,
         name: "Aparna Kapur Real Estate",
-        url: "https://www.aparnakapur.com",
+        alternateName: [BRAND.name, ...BRAND.alternateNames],
+        url: SITE_URL,
+        inLanguage: "en-CA",
         description:
           "Vancouver real estate services by Aparna Kapur with Oakwyn Realty. Expert guidance for buyers and sellers in Oakridge and surrounding neighborhoods.",
-        publisher: {
-          "@type": "RealEstateAgent",
-          name: "Aparna Kapur",
+        publisher: { "@id": AGENT_ID },
+        about: { "@id": AGENT_ID },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${SITE_URL}/buying/search?address={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
         },
       }}
     />
@@ -162,7 +144,7 @@ export function BreadcrumbSchema({
           "@type": "ListItem",
           position: index + 1,
           name: item.name,
-          item: `https://www.aparnakapur.com${item.href}`,
+          item: `${SITE_URL}${item.href}`,
         })),
       }}
     />
@@ -175,17 +157,19 @@ export function LocalBusinessSchema() {
       data={{
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
-        name: "Aparna Kapur - Oakwyn Realty",
-        url: "https://www.aparnakapur.com",
-        telephone: "+1-604-612-7694",
-        email: "ak@aparnakapur.com",
+        "@id": AGENT_ID,
+        name: NAP.name,
+        alternateName: [...BRAND.alternateNames],
+        url: SITE_URL,
+        telephone: NAP.telephoneE164,
+        email: NAP.email,
         address: {
           "@type": "PostalAddress",
-          streetAddress: "3195 Oak Street",
-          addressLocality: "Vancouver",
-          addressRegion: "BC",
-          postalCode: "V6H 2L2",
-          addressCountry: "CA",
+          streetAddress: NAP.streetAddress,
+          addressLocality: NAP.addressLocality,
+          addressRegion: NAP.addressRegion,
+          postalCode: NAP.postalCode,
+          addressCountry: NAP.addressCountry,
         },
         openingHoursSpecification: [
           {
@@ -202,7 +186,28 @@ export function LocalBusinessSchema() {
           },
         ],
         priceRange: "$$",
-        hasMap: "https://maps.google.com/?cid=6808320185247201168",
+        sameAs: [...SAME_AS],
+        hasMap: SAME_AS[0],
+      }}
+    />
+  );
+}
+
+/**
+ * FAQPage markup. Only pass questions whose answers are visible on the page —
+ * Google requires the markup to match the rendered content.
+ */
+export function FAQSchema({ faqs }: { faqs: { q: string; a: string }[] }) {
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: { "@type": "Answer", text: faq.a },
+        })),
       }}
     />
   );

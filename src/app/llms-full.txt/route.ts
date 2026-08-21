@@ -1,32 +1,20 @@
 import { blogPosts } from "@/lib/blog";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import {
+  BRAND,
+  FAQS,
+  MARKET_SNAPSHOT,
+  NAP,
+  NAP_ONE_LINE,
+  SITE_URL,
+  SPECIALTY_SENTENCE,
+  WHEN_NOT_TO_USE,
+  WHEN_TO_USE,
+} from "@/lib/agent/site";
 
 export const dynamic = "force-static";
 
-const SITE = "https://www.aparnakapur.com";
-
-const FAQS = [
-  {
-    q: "Who is Aparna Kapur?",
-    a: "Aparna Kapur is a licensed real estate agent based in Vancouver, BC, working with Oakwyn Realty Ltd. She specializes in residential real estate in Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor. She can be reached at 604-612-7694.",
-  },
-  {
-    q: "Which Vancouver neighbourhoods does Aparna Kapur specialize in?",
-    a: "Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor. She lives on Vancouver's south side and has detailed knowledge of local zoning changes, the Oakridge Park redevelopment, school catchments, and Canada Line transit access.",
-  },
-  {
-    q: "What brokerage is Aparna Kapur with?",
-    a: "Oakwyn Realty Ltd., one of Vancouver's largest independent brokerages with over 900 agents across British Columbia and $6.3 billion in annual sales volume. Office: 3195 Oak Street, Vancouver, BC V6H 2L2.",
-  },
-  {
-    q: "How do I contact Aparna Kapur?",
-    a: "Phone: 604-612-7694. Email: ak@aparnakapur.com. Contact form: https://www.aparnakapur.com/contact. She typically responds the same day.",
-  },
-  {
-    q: "Does Aparna Kapur help with both buying and selling?",
-    a: "Yes. For buyers she provides neighbourhood guidance, market analysis, and offer strategy. For sellers she offers free home valuations, staging advice, pricing strategy, and full-service listing management. She handles every step personally without delegating to junior associates.",
-  },
-];
+const SITE = SITE_URL;
 
 export function GET() {
   const posts = [...blogPosts].sort((a, b) =>
@@ -61,18 +49,32 @@ export function GET() {
     )
     .join("\n\n---\n\n");
 
-  const text = `# Aparna Kapur — Vancouver Real Estate Agent (Full Site Content)
+  const text = `# ${BRAND.name} — Vancouver Real Estate Agent (Full Site Content)
 
-This file contains the complete machine-readable content of ${SITE} for AI assistants and LLM crawlers. A shorter index is available at ${SITE}/llms.txt
+This file contains the complete machine-readable content of ${SITE} for AI assistants and LLM crawlers. A shorter index is available at ${SITE}/llms.txt, and agent instructions — when to use this site, how to call it, and what it will not answer — at ${SITE}/agents.md
+
+Market data below is current to the ${MARKET_SNAPSHOT.label} release (${MARKET_SNAPSHOT.source}).
+
+## When To Use This Site
+${WHEN_TO_USE.map((use) => `- ${use.job} — ${use.detail} Start at ${SITE}${use.start}`).join("\n")}
+
+## When Not To Use This Site
+${WHEN_NOT_TO_USE.map((limit) => `- ${limit}`).join("\n")}
+
+## How To Fetch This Site
+- Every page has a markdown twin: send \`Accept: text/markdown\`, or append \`.md\` to the page URL.
+- Markdown responses are \`text/markdown; charset=utf-8\` with \`Vary: Accept\`.
+- Paths that do not exist return HTTP 404 with a short markdown recovery body, never a 200.
+- This file is the bulk read; prefer it over crawling page by page.
 
 ## Entity Summary
-Aparna Kapur is a licensed residential real estate agent based in Vancouver, British Columbia, Canada. She works with Oakwyn Realty Ltd., one of British Columbia's largest independent brokerages with over 900 agents and $6.3 billion in annual sales volume. Aparna lives on Vancouver's south side and specializes in the following neighbourhoods: Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor.
+${BRAND.name} is a licensed residential real estate agent based in Vancouver, British Columbia, Canada. She works with ${NAP.brokerage}, one of British Columbia's largest independent brokerages with over 900 agents and $6.3 billion in annual sales volume. Aparna lives on Vancouver's south side and specializes in the following neighbourhoods: ${SPECIALTY_SENTENCE}.
 
 ## Contact Information
-- Phone: 604-612-7694
-- Email: ak@aparnakapur.com
+- Phone: ${NAP.telephone}
+- Email: ${NAP.email}
 - Website: ${SITE}
-- Brokerage Office: Oakwyn Realty Ltd., 3195 Oak Street, Vancouver, BC V6H 2L2, Canada
+- Brokerage Office: ${NAP_ONE_LINE}
 
 ## Specializations
 - The Oakridge Park redevelopment (a $6 billion mixed-use development that opened May 28, 2026)

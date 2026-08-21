@@ -7,8 +7,15 @@ module.exports = {
   priority: 0.7,
   // Build-stamped lastmod teaches crawlers the dates are meaningless — omit it.
   autoLastmod: false,
-  // These paths 307-redirect to their first child page; redirects don't belong in a sitemap.
-  exclude: ["/about", "/buying/guide", "/selling/guide"],
+  exclude: [
+    // These paths 307-redirect to their first child page; redirects don't belong in a sitemap.
+    "/about",
+    "/buying/guide",
+    "/selling/guide",
+    // Machine-readable files, not indexable pages. Discoverable via robots.txt,
+    // llms.txt, /sitemap-html, and the 404 body.
+    "/agents.md",
+  ],
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },
@@ -29,7 +36,19 @@ module.exports = {
       { userAgent: "meta-externalagent", allow: "/" },
     ],
     transformRobotsTxt: async (_, robotsTxt) =>
-      `${robotsTxt}\n# LLM-readable site summary\n# https://www.aparnakapur.com/llms.txt\n# https://www.aparnakapur.com/llms-full.txt\n`,
+      [
+        robotsTxt,
+        "# Agent instructions: when to use this site, how to call it, and what it will not answer",
+        "# https://www.aparnakapur.com/agents.md",
+        "",
+        "# LLM-readable site summary",
+        "# https://www.aparnakapur.com/llms.txt",
+        "# https://www.aparnakapur.com/llms-full.txt",
+        "",
+        "# Every page also answers to `Accept: text/markdown`, or to its URL with `.md` appended.",
+        "# Example: https://www.aparnakapur.com/neighborhoods/oakridge.md",
+        "",
+      ].join("\n"),
   },
   transform: async (config, path) => {
     // Higher priority for key pages

@@ -60,6 +60,12 @@ Host: https://www.aparnakapur.com
 # Sitemaps
 Sitemap: https://www.aparnakapur.com/sitemap.xml
 
+# Agent instructions: when to use this site, how to call it, and what it will not answer
+# https://www.aparnakapur.com/agents.md
+
 # LLM-readable site summary
 # https://www.aparnakapur.com/llms.txt
 # https://www.aparnakapur.com/llms-full.txt
+
+# Every page also answers to `Accept: text/markdown`, or to its URL with `.md` appended.
+# Example: https://www.aparnakapur.com/neighborhoods/oakridge.md
