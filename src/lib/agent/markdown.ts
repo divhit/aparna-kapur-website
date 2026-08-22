@@ -359,6 +359,10 @@ function marketDocument(path: string): MarkdownDocument | null {
   const body = [
     page.summary,
     "",
+    `## ${page.typeMeta.plural} within ${page.areaName}`,
+    "",
+    page.character,
+    "",
     "## Benchmark",
     "",
     "| Benchmark | Price | 1 year | 1 month |",

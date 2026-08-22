@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageBanner from "@/components/hero/PageBanner";
 import GetInTouch from "@/components/sections/GetInTouch";
+import SearchContext from "@/components/listings/SearchContext";
 
 export const metadata: Metadata = {
   title: "Below-Market Homes & Motivated Sellers | Vancouver South Side",
@@ -100,6 +101,7 @@ export default function OpportunitiesPage() {
       </section>
 
       <GetInTouch />
+      <SearchContext variant="opportunities" />
     </>
   );
 }

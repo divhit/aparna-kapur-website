@@ -12,10 +12,22 @@ module.exports = {
     "/about",
     "/buying/guide",
     "/selling/guide",
-    // Machine-readable files, not indexable pages. Discoverable via robots.txt,
-    // llms.txt, /sitemap-html, and the 404 body.
+    // Machine-readable files, not indexable HTML pages. A sitemap is for pages
+    // Google should index; plain-text files there muddy the coverage report.
+    // Still discoverable via robots.txt, /sitemap-html, and the 404 body.
     "/agents.md",
+    "/llms.txt",
+    "/llms-full.txt",
   ],
+  // Routes rendered on demand are not in the build's prerender manifest, so
+  // next-sitemap cannot discover them. They are real, indexable pages and
+  // belong in the sitemap.
+  additionalPaths: async (config) =>
+    Promise.all(
+      ["/buying/search", "/buying/featured-listings"].map((loc) =>
+        config.transform(config, loc),
+      ),
+    ),
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },

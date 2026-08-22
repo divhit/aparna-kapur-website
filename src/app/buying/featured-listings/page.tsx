@@ -4,6 +4,7 @@ import PageBanner from "@/components/hero/PageBanner";
 import ListingCard from "@/components/listings/ListingCard";
 import ListingsMap from "@/components/listings/ListingsMap";
 import { fetchFeaturedListings } from "@/lib/ddf";
+import SearchContext from "@/components/listings/SearchContext";
 
 export const dynamic = "force-dynamic";
 
@@ -75,6 +76,7 @@ export default async function FeaturedListingsPage() {
           </div>
         </div>
       </section>
+      <SearchContext variant="featured" />
     </>
   );
 }

@@ -6,6 +6,7 @@ import ListingCard from "@/components/listings/ListingCard";
 import SearchFilters from "@/components/listings/SearchFilters";
 import ListingsMap from "@/components/listings/ListingsMap";
 import { fetchListings, fetchListingsForMap } from "@/lib/ddf";
+import SearchContext from "@/components/listings/SearchContext";
 
 export const metadata: Metadata = {
   title: "Search Homes | Vancouver MLS Listings",
@@ -183,6 +184,7 @@ export default async function SearchPage({
           </div>
         </div>
       </section>
+      <SearchContext variant="search" />
     </>
   );
 }

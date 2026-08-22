@@ -160,6 +160,16 @@ export default async function MarketPricePage({
             </p>
           </div>
 
+          <section aria-labelledby="in-context" className="mb-12">
+            <h2
+              id="in-context"
+              className="font-serif text-xl md:text-2xl text-teal-900 mb-4 border-b border-warm-200 pb-2"
+            >
+              {page.typeMeta.plural} within {page.areaName}
+            </h2>
+            <p className="text-warm-600 leading-relaxed">{page.character}</p>
+          </section>
+
           <section aria-labelledby="how-it-compares" className="mb-12">
             <h2
               id="how-it-compares"

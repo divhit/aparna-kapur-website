@@ -160,3 +160,33 @@ describe("routing", () => {
     expect(new Set(paths).size).toBe(paths.length);
   });
 });
+
+describe("per-page character", () => {
+  const pages = getAllMarketPages();
+
+  it("says something on every page", () => {
+    for (const page of pages) {
+      expect(page.character.length, page.path).toBeGreaterThan(120);
+    }
+  });
+
+  // The point of this paragraph is that it differs. If pages share it, it is
+  // template filler and the scaled-content risk is back.
+  it("is not the same text across pages", () => {
+    const unique = new Set(pages.map((page) => page.character));
+    expect(unique.size / pages.length).toBeGreaterThan(0.9);
+  });
+
+  it("describes the real position within the area's own range", () => {
+    // Downtown publishes condos but no detached, so its condo page cannot
+    // claim to be the cheapest of three.
+    const downtown = getMarketPage("downtown", "apartment")!;
+    expect(downtown.character).not.toContain("detached");
+  });
+
+  it("never emits a placeholder", () => {
+    for (const page of pages) {
+      expect(page.character, page.path).not.toMatch(/NaN|undefined|\$0\b/);
+    }
+  });
+});

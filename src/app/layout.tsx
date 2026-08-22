@@ -43,14 +43,6 @@ export const metadata: Metadata = {
   title: "Aparna Kapur | Oakridge Vancouver Real Estate | Oakwyn Realty",
   description:
     "Your trusted Oakridge & Vancouver real estate expert. Aparna Kapur with Oakwyn Realty helps buyers and sellers navigate Vancouver's most exciting neighborhoods.",
-  keywords: [
-    "Oakridge Vancouver real estate",
-    "Vancouver realtor",
-    "Oakwyn Realty",
-    "Oakridge homes for sale",
-    "Vancouver real estate agent",
-    "Aparna Kapur",
-  ],
   authors: [{ name: "Aparna Kapur" }],
   openGraph: {
     type: "website",
@@ -72,12 +64,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  other: {
-    "geo.region": "CA-BC",
-    "geo.placename": "Vancouver",
-    "geo.position": "49.2488;-123.1275",
-    ICBM: "49.2488, -123.1275",
   },
   verification: {
     google: "92v2XTbnirJ_PGqJk6MoYNA3_7Da5XqY-nELvtykEao",

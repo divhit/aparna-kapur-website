@@ -86,6 +86,91 @@ function signed(value: number): string {
   return `${value > 0 ? "+" : ""}${value.toFixed(1)}%`;
 }
 
+/**
+ * A paragraph about how this property type sits inside its own area, derived
+ * from the spread between the area's own benchmarks and from how this type
+ * moved against the area's others. Every input differs by area, so the
+ * resulting sentences differ rather than restating the template with new
+ * numbers.
+ */
+function localCharacter(
+  areaSlug: string,
+  type: PropertyType,
+  hood: { name: string; walkScore: number; transitScore: number; highlights: string[] },
+): string {
+  const area = AREA_BENCHMARKS[areaSlug];
+  const own = area[type]!;
+  const meta = PROPERTY_TYPES[type];
+
+  const others = (Object.keys(PROPERTY_TYPES) as PropertyType[])
+    .filter((other) => other !== type && area[other])
+    .map((other) => ({ type: other, ...area[other]!, meta: PROPERTY_TYPES[other] }));
+
+  const parts: string[] = [];
+
+  if (others.length === 0) {
+    // GVR publishes only one type here, which is itself worth saying: it means
+    // the area's stock is concentrated enough that the others do not sell in
+    // volumes the index can model.
+    parts.push(
+      `${meta.plural} are the only property type Greater Vancouver REALTORS publishes a benchmark for in ${hood.name} — the other types do not sell here in the volumes the index needs, so ${hood.name}'s market is effectively a ${meta.proseLabel} market.`,
+    );
+  }
+
+  if (others.length > 0) {
+    const cheapest = [...others, { type, ...own, meta }].sort((a, b) => a.price - b.price)[0];
+    const dearest = [...others, { type, ...own, meta }].sort((a, b) => b.price - a.price)[0];
+    const spread = Math.round((dearest.price / cheapest.price - 1) * 100);
+
+    if (cheapest.type === type) {
+      parts.push(
+        `${meta.plural} are the least expensive way into ${hood.name}: the area's ${dearest.meta.proseLabel} benchmark is ${spread}% higher, so this is where a budget that cannot reach a ${dearest.meta.proseLabel} here still buys the address.`,
+      );
+    } else if (dearest.type === type) {
+      parts.push(
+        `${meta.plural} sit at the top of ${hood.name}'s range — ${spread}% above the area's ${cheapest.meta.proseLabel} benchmark, which is the widest gap a buyer here has to bridge.`,
+      );
+    } else {
+      parts.push(
+        `${meta.plural} sit in the middle of ${hood.name}'s range, between the area's ${cheapest.meta.proseLabel} benchmark at ${formatPrice(cheapest.price)} and its ${dearest.meta.proseLabel} benchmark at ${formatPrice(dearest.price)}.`,
+      );
+    }
+
+    // How this type moved against the area's own others — genuinely varies.
+    const betterThanOthers = others.filter((other) => own.yoy > other.yoy);
+    if (betterThanOthers.length === others.length && others.length > 0) {
+      parts.push(
+        `Over the past year ${meta.plural.toLowerCase()} held up better than every other property type in ${hood.name}.`,
+      );
+    } else if (betterThanOthers.length === 0 && others.length > 0) {
+      parts.push(
+        `Over the past year ${meta.plural.toLowerCase()} softened more than any other property type in ${hood.name}, so the area's headline composite understates what happened here.`,
+      );
+    }
+  }
+
+  // Transit and walkability read differently by property type.
+  if (type === "apartment" && hood.transitScore >= 75) {
+    parts.push(
+      `Transit Score ${hood.transitScore} matters more for a condo buyer than the headline price does: it is the difference between needing a car here and not.`,
+    );
+  } else if (type === "detached" && hood.walkScore >= 80) {
+    parts.push(
+      `A Walk Score of ${hood.walkScore} is unusual for detached stock — most areas trade walkability away as lots get bigger.`,
+    );
+  } else if (type === "townhouse") {
+    parts.push(
+      `Townhouse supply is thin across Vancouver, so the benchmark moves on fewer sales than the detached or condo figures and can jump between months.`,
+    );
+  }
+
+  if (hood.highlights.length > 0) {
+    parts.push(`What draws buyers to ${hood.name}: ${hood.highlights.slice(0, 3).join("; ").toLowerCase()}.`);
+  }
+
+  return parts.join(" ");
+}
+
 export type MarketPage = {
   path: string;
   areaSlug: string;
@@ -118,6 +203,8 @@ export type MarketPage = {
   description: string;
   /** Three to five sentences that still make sense quoted on their own. */
   summary: string;
+  /** How this type sits inside its own area. Differs page to page. */
+  character: string;
   faqs: { q: string; a: string }[];
 };
 
@@ -228,6 +315,7 @@ export function getMarketPage(
     cheaper: peers.length - rank,
     siblings,
     comparables,
+    character: localCharacter(areaSlug, type, hood),
     title: `${hood.name} ${meta.proseLabel} prices, ${HPI_RELEASE}`,
     description: `${meta.plural} in ${hood.name}, Vancouver benchmark at ${price} as of ${HPI_RELEASE} — ${signed(benchmark.yoy)} year over year. How that compares with Metro Vancouver and neighbouring areas.`,
     summary,
