@@ -1972,7 +1972,8 @@ function ChartTooltip({
 /* ── component ── */
 
 export default function MarketByRegion() {
-  const regions = useMemo(buildRegions, []);
+  // react-hooks needs the factory inline to verify the dependency list.
+  const regions = useMemo(() => buildRegions(), []);
   const [selected, setSelected] = useState<string | null>(null);
 
   const activeRegion = regions.find((r) => r.name === selected);

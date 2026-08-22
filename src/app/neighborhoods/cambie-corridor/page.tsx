@@ -6,6 +6,7 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 
 export const metadata: Metadata = {
   title: "Cambie Corridor | Real Estate Guide 2026",
@@ -529,6 +530,7 @@ export default async function CambieCorridorPage() {
           }),
         }}
       />
+      <MarketPriceLinks slug="cambie-corridor" />
     </>
   );
 }

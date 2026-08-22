@@ -77,6 +77,9 @@
 <url><loc>https://www.aparnakapur.com/market/west-point-grey/condo-prices</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/market/west-point-grey/house-prices</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/market/west-point-grey/townhouse-prices</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aparnakapur.com/market/holding-value</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aparnakapur.com/market/most-affordable</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.aparnakapur.com/market</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
 <url><loc>https://www.aparnakapur.com/neighborhoods/arbutus-ridge</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/neighborhoods/cambie-corridor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 <url><loc>https://www.aparnakapur.com/neighborhoods/downtown</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>

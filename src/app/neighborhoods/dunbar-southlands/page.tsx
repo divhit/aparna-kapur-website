@@ -3,6 +3,7 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 
 export const metadata: Metadata = {
   title: "Dunbar-Southlands | Real Estate Guide",
@@ -160,6 +161,7 @@ export default function DunbarSouthlandsPage() {
           }),
         }}
       />
+      <MarketPriceLinks slug="dunbar-southlands" />
     </>
   );
 }

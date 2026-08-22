@@ -6,6 +6,7 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 
 export const metadata: Metadata = {
   title: "Oakridge Vancouver | Real Estate Guide 2026",
@@ -651,6 +652,7 @@ export default async function OakridgePage() {
           }),
         }}
       />
+      <MarketPriceLinks slug="oakridge" />
     </>
   );
 }

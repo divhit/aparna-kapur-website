@@ -56,6 +56,7 @@ export const navRight: NavItem[] = [
     children: [
       { label: "Blog", href: "/resources/blog" },
       { label: "Market Reports", href: "/resources/market-reports" },
+      { label: "Benchmark Prices", href: "/market" },
       { label: "Real Estate Plan", href: "/resources/real-estate-plan" },
       { label: "Mortgage Calculator", href: "/resources/mortgage-calculator" },
     ],

@@ -6,6 +6,7 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
+import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 
 export const metadata: Metadata = {
   title: "Downtown Vancouver | Real Estate Guide",
@@ -418,6 +419,7 @@ export default async function DowntownPage() {
           }),
         }}
       />
+      <MarketPriceLinks slug="downtown" />
     </>
   );
 }

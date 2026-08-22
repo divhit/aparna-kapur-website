@@ -8,6 +8,7 @@ import {
   marketPagePath as marketPagePathOf,
   propertyTypeFromSlug,
 } from "@/lib/market-pages";
+import { getRanking } from "@/lib/market-rankings";
 import {
   AGENT_ENDPOINTS,
   BRAND,
@@ -317,6 +318,37 @@ function guideStepDocument(
   };
 }
 
+function rankingDocument(path: string): MarkdownDocument | null {
+  const match = path.match(/^\/market\/([^/]+)$/);
+  const ranking = match ? getRanking(match[1]) : null;
+  if (!ranking) return null;
+
+  const body = [
+    ranking.summary,
+    "",
+    `## All ${ranking.areas.length} neighbourhoods`,
+    "",
+    "| # | Neighbourhood | Composite | 1 year | vs region |",
+    "| --- | --- | --- | --- | --- |",
+    ...ranking.areas.map(
+      (area, index) =>
+        `| ${index + 1} | ${area.name} | ${formatPrice(area.price)} | ${area.yoy}% | ${area.vsRegion > 0 ? "+" : ""}${area.vsRegion}% |`,
+    ),
+    "",
+    "## Questions people ask",
+    "",
+    ...ranking.faqs.flatMap((faq) => [`### ${faq.q}`, "", faq.a, ""]),
+    CONTACT_BLOCK,
+  ].join("\n");
+
+  return {
+    path: ranking.path,
+    title: ranking.title,
+    description: ranking.description,
+    body,
+  };
+}
+
 function marketDocument(path: string): MarkdownDocument | null {
   const match = path.match(/^\/market\/([^/]+)\/([^/]+)$/);
   if (!match) return null;
@@ -428,6 +460,9 @@ export function getMarkdownDocument(pathname: string): MarkdownDocument | null {
 
   const post = path.match(/^\/resources\/blog\/([^/]+)$/);
   if (post) return blogPostDocument(post[1]);
+
+  const ranking = rankingDocument(path);
+  if (ranking) return ranking;
 
   const market = marketDocument(path);
   if (market) return market;
