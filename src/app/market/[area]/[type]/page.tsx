@@ -165,9 +165,18 @@ export default async function MarketPricePage({
               id="in-context"
               className="font-serif text-xl md:text-2xl text-teal-900 mb-4 border-b border-warm-200 pb-2"
             >
-              {page.typeMeta.plural} within {page.areaName}
+              What this means if you are looking here
             </h2>
-            <p className="text-warm-600 leading-relaxed">{page.character}</p>
+            <div className="space-y-4">
+              {page.commentary.map((paragraph) => (
+                <p key={paragraph} className="text-warm-600 leading-relaxed">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <p className="text-sm text-warm-500 mt-5 pt-4 border-t border-warm-100">
+              — {BRAND.name}, {BRAND.jobTitle} with {NAP.brokerage}
+            </p>
           </section>
 
           <section aria-labelledby="how-it-compares" className="mb-12">

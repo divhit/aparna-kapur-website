@@ -1,4 +1,5 @@
 import { NEIGHBOURHOODS } from "./neighborhoods";
+import { marketCommentary } from "./market-voice";
 import {
   AREA_BENCHMARKS,
   formatPrice,
@@ -203,8 +204,13 @@ export type MarketPage = {
   description: string;
   /** Three to five sentences that still make sense quoted on their own. */
   summary: string;
-  /** How this type sits inside its own area. Differs page to page. */
+  /**
+   * A compact factual read on where this type sits in its area. Kept for the
+   * meta description and structured data; the page itself shows `commentary`.
+   */
   character: string;
+  /** Aparna's read on the figures, in her voice. Four short paragraphs. */
+  commentary: string[];
   faqs: { q: string; a: string }[];
 };
 
@@ -316,6 +322,7 @@ export function getMarketPage(
     siblings,
     comparables,
     character: localCharacter(areaSlug, type, hood),
+    commentary: marketCommentary(areaSlug, type, hood),
     title: `${hood.name} ${meta.proseLabel} prices, ${HPI_RELEASE}`,
     description: `${meta.plural} in ${hood.name}, Vancouver benchmark at ${price} as of ${HPI_RELEASE} — ${signed(benchmark.yoy)} year over year. How that compares with Metro Vancouver and neighbouring areas.`,
     summary,

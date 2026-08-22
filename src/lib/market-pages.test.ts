@@ -190,3 +190,65 @@ describe("per-page character", () => {
     }
   });
 });
+
+describe("Aparna's commentary", () => {
+  const pages = getAllMarketPages();
+
+  it("gives every page four paragraphs of substance", () => {
+    for (const page of pages) {
+      // Four generated paragraphs, five where Aparna has added her own note.
+      expect(page.commentary.length, page.path).toBeGreaterThanOrEqual(4);
+      for (const paragraph of page.commentary) {
+        expect(paragraph.length, page.path).toBeGreaterThan(150);
+      }
+    }
+  });
+
+  it("reads as one voice across pages but not one text", () => {
+    const first = new Set(pages.map((page) => page.commentary[0]));
+    // The opening paragraph turns on where the type sits in its own area, so
+    // it must vary; if it collapses to a handful of strings it is boilerplate.
+    expect(first.size).toBeGreaterThan(pages.length * 0.55);
+  });
+
+  // Nothing here may claim a first-hand event that did not happen. Aparna can
+  // add real ones; generated copy must not invent them.
+  it("never fabricates a specific first-hand anecdote", () => {
+    // First-person claims about specific events. A bare "in the last month" is
+    // fine — that describes the index, not something Aparna did.
+    const invented =
+      /\b(a client of mine|one of my (buyers|clients|sellers)|I (sold|showed|listed|toured|visited|walked through)\b|I was (there|in) |recently helped|just last (week|month))/i;
+    for (const page of pages) {
+      for (const paragraph of page.commentary) {
+        expect(paragraph, page.path).not.toMatch(invented);
+      }
+    }
+  });
+
+  // A licensed agent putting a price forecast in writing is a regulatory
+  // problem as well as bad practice.
+  it("never forecasts prices", () => {
+    const forecast =
+      /\b(will (rise|fall|increase|drop|go up|go down)|guaranteed to|is going to (rise|fall)|expect prices to)\b/i;
+    for (const page of pages) {
+      for (const paragraph of page.commentary) {
+        expect(paragraph, page.path).not.toMatch(forecast);
+      }
+    }
+  });
+
+  it("states no impossible percentage", () => {
+    for (const page of pages) {
+      for (const paragraph of page.commentary) {
+        // Nothing can cost more than 100% less than something else.
+        expect(paragraph, page.path).not.toMatch(/\b(?:1\d\d|[2-9]\d\d)% less\b/);
+      }
+    }
+  });
+
+  it("closes by inviting a question rather than pressing for a sale", () => {
+    for (const page of pages) {
+      expect(page.commentary.at(-1), page.path).toMatch(/no obligation/i);
+    }
+  });
+});

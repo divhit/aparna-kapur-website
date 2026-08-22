@@ -359,9 +359,10 @@ function marketDocument(path: string): MarkdownDocument | null {
   const body = [
     page.summary,
     "",
-    `## ${page.typeMeta.plural} within ${page.areaName}`,
+    "## What this means if you are looking here",
     "",
-    page.character,
+    ...page.commentary.flatMap((paragraph) => [paragraph, ""]),
+    `— ${BRAND.name}, ${BRAND.jobTitle}, ${NAP.brokerage}`,
     "",
     "## Benchmark",
     "",
