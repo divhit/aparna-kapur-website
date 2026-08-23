@@ -22,9 +22,15 @@ describe("getMarkdownDocument", () => {
 
   it("has no document for a path whose HTML redirects", () => {
     // The markdown route answers these with the matching redirect instead.
-    expect(getMarkdownDocument("/about")).toBeNull();
+    // /about is not among them — it is a real page with its own content.
     expect(getMarkdownDocument("/buying/guide")).toBeNull();
     expect(getMarkdownDocument("/selling/guide")).toBeNull();
+  });
+
+  it("serves the about page, which used to be a redirect", () => {
+    const doc = getMarkdownDocument("/about");
+    expect(doc).not.toBeNull();
+    expect(doc!.title).toContain("About");
   });
 
   it("tolerates a trailing slash", () => {

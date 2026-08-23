@@ -68,9 +68,9 @@ const MAIN_PAGES: SitePage[] = [
 const ABOUT_PAGES: SitePage[] = [
   {
     path: "/about",
-    title: "About Aparna",
-    summary: "Entry point for the about section.",
-    redirectsTo: "/about/why-work-with-me",
+    title: "About Aparna Kapur",
+    summary:
+      "Who Aparna is, the licence and brokerage she works under, and how she runs a file.",
   },
   {
     path: "/about/why-work-with-me",

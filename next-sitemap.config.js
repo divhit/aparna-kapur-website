@@ -3,13 +3,11 @@ module.exports = {
   siteUrl: "https://www.aparnakapur.com",
   generateRobotsTxt: true,
   sitemapSize: 7000,
-  changefreq: "weekly",
-  priority: 0.7,
   // Build-stamped lastmod teaches crawlers the dates are meaningless — omit it.
   autoLastmod: false,
   exclude: [
-    // These paths 307-redirect to their first child page; redirects don't belong in a sitemap.
-    "/about",
+    // These paths 308-redirect to their first child; redirects don't belong in
+    // a sitemap. /about is no longer among them — it is a real page.
     "/buying/guide",
     "/selling/guide",
     // Machine-readable files, not indexable HTML pages. A sitemap is for pages
@@ -62,46 +60,8 @@ module.exports = {
         "",
       ].join("\n"),
   },
-  transform: async (config, path) => {
-    // Higher priority for key pages
-    const highPriority = [
-      "/",
-      "/neighborhoods/oakridge",
-      "/buying",
-      "/selling",
-      "/contact",
-    ];
-    const mediumPriority = [
-      "/neighborhoods",
-      "/about",
-      "/resources",
-      "/selling/home-valuation",
-    ];
-
-    let priority = config.priority;
-    let changefreq = config.changefreq;
-
-    if (highPriority.includes(path)) {
-      priority = 1.0;
-      changefreq = "weekly";
-    } else if (mediumPriority.includes(path)) {
-      priority = 0.8;
-      changefreq = "weekly";
-    } else if (path.startsWith("/neighborhoods/")) {
-      priority = 0.8;
-      changefreq = "monthly";
-    } else if (path.startsWith("/resources/blog/")) {
-      priority = 0.8;
-      changefreq = "weekly";
-    } else if (path.startsWith("/resources/")) {
-      priority = 0.6;
-      changefreq = "monthly";
-    }
-
-    return {
-      loc: path,
-      changefreq,
-      priority,
-    };
-  },
+  // Google ignores <changefreq> and <priority> and has said so for years, so
+  // the sitemap carries neither. A URL and a sitemap that stays accurate is
+  // the whole of what it can usefully say.
+  transform: async (_config, path) => ({ loc: path }),
 };
