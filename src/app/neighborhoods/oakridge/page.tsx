@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Oakridge Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Homes for sale in Oakridge, Vancouver, with the current MLS® HPI benchmark, price trends by property type, the Oakridge Park redevelopment, schools, and transit.",
+    "Oakridge homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.43M, -8.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Oakridge Vancouver real estate",
     "Oakridge homes for sale",

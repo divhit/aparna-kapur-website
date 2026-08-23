@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Fairview Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to Fairview, Vancouver. Broadway Plan development, South Granville shopping, Granville Island, transit, and what makes Fairview one of Vancouver's best-connected neighbourhoods.",
+    "Fairview homes for sale in Vancouver. MLS\u00ae HPI benchmark $892K, +0.1% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Fairview Vancouver",
     "Fairview real estate",

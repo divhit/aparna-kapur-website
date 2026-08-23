@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Kitsilano Vancouver | Real Estate Guide 2026",
   description:
-    "Kitsilano neighbourhood guide: beach lifestyle, real estate prices, West 4th Avenue, schools, transit, and market trends. By Aparna Kapur. 604-612-7694.",
+    "Kitsilano homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.30M, -3.3% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Kitsilano Vancouver",
     "Kitsilano real estate",

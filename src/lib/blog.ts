@@ -1,6 +1,12 @@
 export type BlogPost = {
   slug: string;
+  /** The editorial headline. Rendered as the page H1 in full. */
   title: string;
+  /**
+   * Shorter title for the <title> tag, where anything past ~60 characters is
+   * truncated in a search result. Falls back to `title` when omitted.
+   */
+  seoTitle?: string;
   excerpt: string;
   date: string;
   datePublished: string;
@@ -151,6 +157,7 @@ If you want to understand what this means for your specific real estate plans �
   },
   {
     slug: "oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison",
+    seoTitle: "Oakridge vs Kerrisdale: Which Suits You?",
     title:
       "Oakridge vs. Kerrisdale: Which Vancouver Neighbourhood Is Right for You?",
     excerpt:
@@ -323,6 +330,7 @@ If you're weighing these two areas — or comparing them to South Cambie, Riley 
   },
   {
     slug: "cambie-corridor-rezoning-2025-what-homeowners-need-to-know",
+    seoTitle: "Cambie Corridor Rezoning: What It Means for You",
     title:
       "Cambie Corridor Rezoning Explained: What the October 2025 Changes Mean for Your Property",
     excerpt:
@@ -596,6 +604,7 @@ I live and work in this area. I watch the construction progress every week. If y
   },
   {
     slug: "oakridge-park-redevelopment-2026",
+    seoTitle: "Oakridge Park Redevelopment: 2026 Guide",
     title: "Oakridge Park Redevelopment: Everything You Need to Know in 2026",
     excerpt:
       "The $6 billion Oakridge Park project is transforming Vancouver's landscape. Here's what buyers, sellers, and investors need to know about timelines, pricing, and impact on the neighborhood.",
@@ -681,6 +690,7 @@ Whether you're looking to buy near Oakridge Park or wondering what your current 
   },
   {
     slug: "first-time-buyer-programs-bc-2026",
+    seoTitle: "First-Time Buyer Programs in BC (2026)",
     title: "First-Time Home Buyer Programs in BC: Your Complete 2026 Guide",
     excerpt:
       "From the FHSA to the PTT exemption, here's every program available to help you buy your first home in British Columbia, and how to maximize your benefits.",
@@ -908,6 +918,7 @@ Contact me for a personalised neighbourhood tour. I will show you the parks, sch
   },
   {
     slug: "how-to-choose-a-realtor-in-vancouver",
+    seoTitle: "How to Choose a Realtor in Vancouver",
     title: "How to Choose a Realtor in Vancouver: A Local Agent's Honest Guide",
     excerpt:
       "How do you actually pick a realtor in Vancouver? A working agent's honest guide: licence checks, the questions worth asking, the red flags I see, and why neighbourhood-level expertise matters more than a big brand.",
@@ -981,6 +992,7 @@ If your search touches Vancouver — [Oakridge](/neighborhoods/oakridge), Kerris
   },
   {
     slug: "what-does-a-realtor-cost-in-bc-commissions-explained",
+    seoTitle: "What Does a Realtor Cost in BC?",
     title: "What Does a Realtor Cost in BC? Vancouver Commissions Explained",
     excerpt:
       "Who pays real estate commission in BC, how the typical Vancouver structure works, what it looks like in dollars on a real sale, and the other costs — GST, property transfer tax, legal fees — you should budget for.",

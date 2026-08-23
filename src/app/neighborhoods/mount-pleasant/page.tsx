@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Mount Pleasant | Real Estate Guide",
   description:
-    "Your quick guide to Mount Pleasant, Vancouver. Craft breweries, Main Street shopping, murals, tech hubs, and what makes Mount Pleasant one of Vancouver's most creative neighbourhoods.",
+    "Mount Pleasant homes for sale in Vancouver. MLS\u00ae HPI benchmark $808K, -10.7% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Mount Pleasant Vancouver",
     "Mount Pleasant real estate",

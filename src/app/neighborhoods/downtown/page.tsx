@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Downtown Vancouver | Real Estate Guide",
   description:
-    "The definitive guide to Downtown Vancouver. Explore condos, luxury penthouses, Robson Street shopping, Gastown, transit options, and urban lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "Downtown homes for sale in Vancouver. MLS\u00ae HPI benchmark $613K, -7.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Downtown Vancouver real estate",
     "Downtown Vancouver condos for sale",

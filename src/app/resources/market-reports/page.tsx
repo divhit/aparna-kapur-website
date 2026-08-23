@@ -5,7 +5,7 @@ import MarketByRegion from "./MarketByRegion";
 import MarketSummary from "./MarketSummary";
 
 export const metadata: Metadata = {
-  title: "Vancouver Real Estate Market Reports | Oakridge & Surrounding Areas",
+  title: "Vancouver Market Reports | Prices by Neighbourhood",
   description:
     "Stay informed with the latest Vancouver real estate market data. Monthly updates on prices, inventory, and trends for Oakridge, Marpole, South Cambie, and more.",
 };

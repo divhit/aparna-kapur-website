@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
-  title: "Home Staging Tips for Vancouver Sellers | Sell Faster & For More",
+  title: "Home Staging Tips for Vancouver Sellers",
   description:
     "Proven home staging strategies to help your Vancouver home sell faster and for top dollar. From decluttering to professional staging, learn what works in the Vancouver market.",
 };

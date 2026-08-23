@@ -14,7 +14,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "South Cambie Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Homes for sale in South Cambie, Vancouver, with the current MLS® HPI benchmark, price trends by property type, Canada Line access, schools, and neighbourhood detail.",
+    "South Cambie homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.41M, -7.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "South Cambie Vancouver real estate",
     "South Cambie homes for sale",

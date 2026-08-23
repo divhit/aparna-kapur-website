@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Hastings-Sunrise | Real Estate Guide",
   description:
-    "The definitive guide to Hastings-Sunrise, Vancouver. Explore PNE/Playland, real estate, schools, parks, transit, and community life. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "Hastings-Sunrise homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.35M, -10.3% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Hastings-Sunrise Vancouver real estate",
     "Hastings-Sunrise homes for sale",

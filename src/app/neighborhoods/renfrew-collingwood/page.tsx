@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Renfrew-Collingwood | Real Estate Guide",
   description:
-    "Your quick guide to Renfrew-Collingwood, Vancouver. Multicultural food on Kingsway, three SkyTrain stations, Collingwood Village, real estate prices, and what makes this Vancouver's most dynamic east-side neighbourhood.",
+    "Renfrew-Collingwood homes for sale in Vancouver. MLS\u00ae HPI benchmark $834K, -7.1% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Renfrew-Collingwood Vancouver",
     "Renfrew-Collingwood real estate",

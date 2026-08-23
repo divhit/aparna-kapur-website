@@ -19,7 +19,7 @@ export default async function FeaturedListingsPage() {
 
   return (
     <>
-      <PageBanner
+      <PageBanner heading={false}
         eyebrow="Featured"
         title="Featured Listings"
         align="left"

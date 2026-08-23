@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "West End Vancouver | Real Estate Guide",
   description:
-    "The definitive guide to the West End, Vancouver. Explore condos, English Bay beach living, Davie Village, Denman Street dining, Stanley Park access, and urban lifestyle. Your complete neighborhood resource by Aparna Kapur, Oakwyn Realty.",
+    "West End homes for sale in Vancouver. MLS\u00ae HPI benchmark $610K, -9.4% year over year, plus schools, transit, and local detail.",
   keywords: [
     "West End Vancouver real estate",
     "West End Vancouver condos for sale",

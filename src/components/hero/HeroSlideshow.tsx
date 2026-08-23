@@ -26,11 +26,29 @@ const INTERVAL = 10000;
 interface HeroSlideshowProps {
   height?: "full" | "banner";
   children?: ReactNode;
+  /**
+   * Render as a <header> landmark rather than a plain <div>. Set this where the
+   * slideshow carries the page's H1.
+   *
+   * It was an anonymous div while every other block on the page is a <section>,
+   * which left the H1 nested a level deeper than the H2s beneath it. Anything
+   * building a document outline by containment then sees no heading enclosing
+   * any other — a correct-looking H1/H2/H3 sequence that reads as flat.
+   */
+  as?: "div" | "header";
+  /**
+   * Classes for the content wrapper. Supplying them here rather than wrapping
+   * the children in another div of your own keeps the heading one level
+   * shallower, which is what lets the H1 enclose the sections that follow it.
+   */
+  contentClassName?: string;
 }
 
 export default function HeroSlideshow({
   height = "full",
   children,
+  as: Wrapper = "div",
+  contentClassName = "",
 }: HeroSlideshowProps) {
   const [current, setCurrent] = useState(0);
 
@@ -46,7 +64,7 @@ export default function HeroSlideshow({
   const heightClass = height === "full" ? "h-screen" : "min-h-[50vh] md:h-[40vh]";
 
   return (
-    <div className={`relative ${heightClass} overflow-hidden`}>
+    <Wrapper className={`relative ${heightClass} overflow-hidden`}>
       {/* Slideshow images */}
       {SLIDES.map((slide, i) => (
         <div
@@ -65,10 +83,12 @@ export default function HeroSlideshow({
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-teal-950/30 to-teal-950/70" />
       {/* Optional overlay content */}
       {children && (
-        <div className="relative z-10 h-full flex items-center justify-center">
+        <div
+          className={`relative z-10 h-full flex flex-col items-center justify-center ${contentClassName}`}
+        >
           {children}
         </div>
       )}
-    </div>
+    </Wrapper>
   );
 }

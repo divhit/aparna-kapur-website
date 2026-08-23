@@ -70,8 +70,12 @@ export default function HomePage() {
       <FAQSchema faqs={FAQS} />
 
       {/* SECTION 1: Full-screen Hero with Slideshow */}
-      <HeroSlideshow height="full">
-        <div className="text-center px-6 max-w-4xl mx-auto">
+      <HeroSlideshow
+        height="full"
+        as="header"
+        contentClassName="text-center px-6 max-w-4xl mx-auto"
+      >
+        <>
           <h1
             id="aparna-kapur"
             className="text-5xl md:text-6xl lg:text-7xl text-white leading-tight mb-6"
@@ -104,7 +108,7 @@ export default function HomePage() {
               VALUATION
             </Link>
           </div>
-        </div>
+        </>
       </HeroSlideshow>
 
       {/* SECTION 2: AI Chat Assistant */}

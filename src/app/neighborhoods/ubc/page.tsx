@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "UBC Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to UBC, Vancouver. Campus lifestyle, leasehold real estate, Pacific Spirit Park, Wesbrook Village, schools, transit, and what makes living at UBC unlike anywhere else in Metro Vancouver.",
+    "UBC homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.13M, -4.9% year over year, plus schools, transit, and local detail.",
   keywords: [
     "UBC Vancouver",
     "UBC real estate",

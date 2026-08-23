@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Cambie Corridor Homes for Sale | Vancouver Area Guide",
   description:
-    "Homes for sale along the Cambie Corridor, Vancouver, with the current MLS® HPI benchmark, price trends by property type, rezoning context, and Canada Line access.",
+    "Cambie Corridor homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.51M, -6.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Cambie Corridor Vancouver real estate",
     "Cambie Corridor condos for sale",

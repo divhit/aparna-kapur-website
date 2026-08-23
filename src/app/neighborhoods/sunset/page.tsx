@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Sunset Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to Sunset, Vancouver. Home of the Punjabi Market, spacious detached lots, Churchill Secondary, multicultural dining, and south Vancouver's best-kept residential streets.",
+    "Sunset homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.48M, -10.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Sunset Vancouver",
     "Sunset real estate",

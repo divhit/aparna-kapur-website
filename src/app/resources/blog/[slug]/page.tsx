@@ -7,6 +7,9 @@ import { BreadcrumbSchema, ORGANIZATION_ID, PERSON_ID, WEBSITE_ID } from "@/comp
 import JsonLd from "@/components/seo/JsonLd";
 import GetInTouch from "@/components/sections/GetInTouch";
 import PageBanner from "@/components/hero/PageBanner";
+import RelatedMarketData, {
+  neighbourhoodsMentioned,
+} from "@/components/blog/RelatedMarketData";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -16,14 +19,27 @@ export async function generateStaticParams() {
   return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
+/**
+ * A meta description that fits. Anything past ~160 characters is cut
+ * mid-sentence in a result, so trim at the last sentence that fits rather than
+ * mid-word.
+ */
+function metaDescription(excerpt: string, limit = 158): string {
+  if (excerpt.length <= limit) return excerpt;
+  const cut = excerpt.slice(0, limit);
+  const lastStop = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("? "), cut.lastIndexOf("! "));
+  if (lastStop > limit * 0.5) return cut.slice(0, lastStop + 1);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.seoTitle ?? post.title,
+    description: metaDescription(post.excerpt),
     keywords: [
       post.category,
       "Vancouver real estate",
@@ -32,7 +48,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ],
     openGraph: {
       title: post.title,
-      description: post.excerpt,
+      description: metaDescription(post.excerpt),
       type: "article",
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
@@ -67,7 +83,7 @@ export default async function BlogPostPage({ params }: Props) {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: post.title,
-          description: post.excerpt,
+          description: metaDescription(post.excerpt),
           image: post.image,
           datePublished: post.datePublished,
           dateModified: post.dateModified,
@@ -333,6 +349,8 @@ export default async function BlogPostPage({ params }: Props) {
               </div>
             </div>
           )}
+
+          <RelatedMarketData slugs={neighbourhoodsMentioned(post.content)} />
         </div>
       </article>
     </>

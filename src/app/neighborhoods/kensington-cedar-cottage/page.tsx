@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Kensington-Cedar Cottage | Real Estate",
   description:
-    "Your quick guide to Kensington-Cedar Cottage, Vancouver. Trout Lake, Kingsway dining, real estate prices, schools, and what makes KCC one of east Vancouver's best family neighbourhoods.",
+    "Kensington-Cedar Cottage homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.41M, -1.2% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Kensington-Cedar Cottage Vancouver",
     "Kensington-Cedar Cottage real estate",

@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Dunbar-Southlands | Real Estate Guide",
   description:
-    "Your quick guide to Dunbar-Southlands, Vancouver. Family homes, Pacific Spirit Park, Dunbar Village shopping, top schools, equestrian Southlands, and what makes this neighbourhood Vancouver's best-kept family secret.",
+    "Dunbar-Southlands homes for sale in Vancouver. MLS\u00ae HPI benchmark $2.64M, -5.7% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Dunbar-Southlands Vancouver",
     "Dunbar real estate",

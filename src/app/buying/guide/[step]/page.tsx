@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { buyingGuideSteps } from "@/lib/guide-data";
 import Button from "@/components/ui/Button";
 import PageBanner from "@/components/hero/PageBanner";
+import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 
 type Props = {
   params: Promise<{ step: string }>;
@@ -19,7 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const step = buyingGuideSteps.find((s) => s.slug === stepSlug);
   if (!step) return {};
   return {
-    title: `${step.title} | Vancouver Buyer's Guide`,
+    // Keep the suffix only where the result still fits in a search result.
+    title: (() => {
+      const full = `${step.title} | Buyer's Guide Step ${step.step}`;
+      return full.length <= 60 ? full : `${step.shortTitle} | Buyer's Guide Step ${step.step}`;
+    })(),
     description: step.description,
   };
 }
@@ -34,6 +39,13 @@ export default async function BuyingGuideStepPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Buying", href: "/buying" },
+          { name: `Step ${step.step}: ${step.title}`, href: `/buying/guide/${step.slug}` },
+        ]}
+      />
       <PageBanner title="Buyer's Guide" />
 
       <div className="bg-warm-50 border-b border-warm-100">

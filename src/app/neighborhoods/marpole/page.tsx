@@ -15,7 +15,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Marpole Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Homes for sale in Marpole, Vancouver, with the current MLS® HPI benchmark, price trends by property type, transit to YVR and downtown, schools, and local detail.",
+    "Marpole homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.08M, -10.4% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Marpole Vancouver real estate",
     "Marpole homes for sale",

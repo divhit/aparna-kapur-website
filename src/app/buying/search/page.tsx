@@ -83,7 +83,7 @@ export default async function SearchPage({
 
   return (
     <>
-      <PageBanner eyebrow="Search" title="Search Homes" align="left" />
+      <PageBanner heading={false} eyebrow="Search" title="Search Homes" align="left" />
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">

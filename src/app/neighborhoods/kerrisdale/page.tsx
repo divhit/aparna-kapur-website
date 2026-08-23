@@ -14,7 +14,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Kerrisdale Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Homes for sale in Kerrisdale, Vancouver, with the current MLS® HPI benchmark, price trends by property type, Kerrisdale Village, top schools, and neighbourhood detail.",
+    "Kerrisdale homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.96M, -6.2% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Kerrisdale Vancouver real estate",
     "Kerrisdale homes for sale",

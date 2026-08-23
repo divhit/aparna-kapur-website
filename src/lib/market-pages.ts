@@ -324,7 +324,9 @@ export function getMarketPage(
     character: localCharacter(areaSlug, type, hood),
     commentary: marketCommentary(areaSlug, type, hood),
     title: `${hood.name} ${meta.proseLabel} prices, ${HPI_RELEASE}`,
-    description: `${meta.plural} in ${hood.name}, Vancouver benchmark at ${price} as of ${HPI_RELEASE} — ${signed(benchmark.yoy)} year over year. How that compares with Metro Vancouver and neighbouring areas.`,
+    // Kept under ~160 characters; anything past that is cut mid-sentence in a
+    // search result.
+    description: `${hood.name} ${meta.proseLabel} prices: benchmark ${price} as of ${HPI_RELEASE}, ${signed(benchmark.yoy)} year over year, and how that compares with the rest of Vancouver.`,
     summary,
     faqs,
   };

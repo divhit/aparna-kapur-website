@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Shaughnessy Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to Shaughnessy, Vancouver. Heritage mansions, VanDusen Botanical Garden, tree-lined boulevards, top private schools, and what makes this Vancouver's most prestigious residential address.",
+    "Shaughnessy homes for sale in Vancouver. MLS\u00ae HPI benchmark $3.93M, -7.0% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Shaughnessy Vancouver",
     "Shaughnessy real estate",

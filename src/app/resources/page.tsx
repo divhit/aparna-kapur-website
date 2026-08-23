@@ -4,7 +4,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
-  title: "Vancouver Real Estate Resources | Guides, Tools & Market Reports",
+  title: "Vancouver Real Estate Resources & Tools",
   description:
     "Free real estate resources for Vancouver buyers and sellers. Mortgage calculator, market reports, first-time buyer guides, property transfer tax info, and more.",
 };

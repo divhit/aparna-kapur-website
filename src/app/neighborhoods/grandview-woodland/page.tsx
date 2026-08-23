@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Grandview-Woodland | Real Estate Guide",
   description:
-    "Your quick guide to Grandview-Woodland, Vancouver. Commercial Drive culture, Italian heritage, real estate prices, transit, and what makes The Drive one of Vancouver's most beloved streets.",
+    "Grandview-Woodland homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.31M, -6.7% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Grandview-Woodland Vancouver",
     "Grandview-Woodland real estate",

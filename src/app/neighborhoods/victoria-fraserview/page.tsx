@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Victoria-Fraserview | Real Estate Guide",
   description:
-    "Your quick guide to Victoria-Fraserview, Vancouver. Fraser River views, Fraserview Golf Course, Everett Crowley Park, spacious homes, and one of south Vancouver's most underrated residential neighbourhoods.",
+    "Victoria-Fraserview homes for sale in Vancouver. MLS\u00ae HPI benchmark $2.00M, -9.6% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Victoria-Fraserview Vancouver",
     "Victoria-Fraserview real estate",

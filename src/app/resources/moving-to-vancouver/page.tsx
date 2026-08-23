@@ -4,7 +4,7 @@ import ContactForm from "@/components/forms/ContactForm";
 import PageBanner from "@/components/hero/PageBanner";
 
 export const metadata: Metadata = {
-  title: "Moving to Vancouver Guide | Relocation Tips & Neighborhood Advice",
+  title: "Moving to Vancouver | Relocation Guide",
   description:
     "Planning a move to Vancouver? This comprehensive guide covers neighborhoods, cost of living, transportation, weather, schools, and everything you need to start your new life in Vancouver.",
 };

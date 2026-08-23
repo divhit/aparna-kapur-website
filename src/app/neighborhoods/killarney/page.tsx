@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Killarney Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to Killarney, Vancouver. Award-winning community centre, Everett Crowley Park, family-friendly real estate, multicultural dining, and southeast Vancouver's best neighbourhood for value-conscious buyers.",
+    "Killarney homes for sale in Vancouver. MLS\u00ae HPI benchmark $1.51M, -8.2% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Killarney Vancouver",
     "Killarney real estate",

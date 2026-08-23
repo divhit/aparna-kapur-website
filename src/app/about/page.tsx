@@ -27,7 +27,8 @@ import { NEIGHBOURHOOD_COUNT } from "@/lib/agent/site";
 
 export const metadata: Metadata = {
   title: "About Aparna Kapur | Vancouver REALTOR®, Oakwyn Realty",
-  description: `${BRAND.name} is a licensed British Columbia REALTOR® with ${NAP.brokerage}, working across ${SPECIALTY_SENTENCE}. Credentials, brokerage, and how she works.`,
+  description:
+    "Aparna Kapur is a licensed BC REALTOR® with Oakwyn Realty, working Vancouver's south side. Credentials, brokerage, and how she works.",
   alternates: { canonical: "/about" },
 };
 

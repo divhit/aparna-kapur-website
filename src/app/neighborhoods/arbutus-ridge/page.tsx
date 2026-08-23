@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Arbutus Ridge | Real Estate Guide",
   description:
-    "Your quick guide to Arbutus Ridge, Vancouver. The Arbutus Greenway, heritage homes, Quilchena Park, top schools, and what makes this quiet west-side neighbourhood a hidden gem between Kerrisdale and Shaughnessy.",
+    "Arbutus Ridge homes for sale in Vancouver. MLS\u00ae HPI benchmark $3.05M, -10.4% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Arbutus Ridge Vancouver",
     "Arbutus Ridge real estate",

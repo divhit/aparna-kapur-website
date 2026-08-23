@@ -12,7 +12,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: "Strathcona Vancouver | Real Estate Guide",
   description:
-    "Your quick guide to Strathcona, Vancouver. Heritage Victorian homes, artist lofts, Chinatown adjacency, transit, and what makes Strathcona Vancouver's most historically layered neighbourhood.",
+    "Strathcona homes for sale in Vancouver. MLS\u00ae HPI benchmark $795K, -10.4% year over year, plus schools, transit, and local detail.",
   keywords: [
     "Strathcona Vancouver",
     "Strathcona real estate",

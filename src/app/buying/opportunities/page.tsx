@@ -4,7 +4,7 @@ import GetInTouch from "@/components/sections/GetInTouch";
 import SearchContext from "@/components/listings/SearchContext";
 
 export const metadata: Metadata = {
-  title: "Below-Market Homes & Motivated Sellers | Vancouver South Side",
+  title: "Below-Market Homes in Vancouver | Motivated Sellers",
   description:
     "Find court-ordered sales, estate sales, and motivated seller listings in Oakridge, Marpole, Kerrisdale, and South Cambie. Properties priced below assessed value.",
 };

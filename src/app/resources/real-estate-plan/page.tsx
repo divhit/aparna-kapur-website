@@ -6,7 +6,7 @@ import RealEstatePlanAccordion from "./RealEstatePlanAccordion";
 export const metadata: Metadata = {
   title: "Real Estate Plan | Aparna Kapur, Vancouver Realtor",
   description:
-    "A clear, actionable roadmap that connects today\u2019s real estate decisions to your long-term financial picture. Investment strategy, portfolio health, senior transitions, legacy planning, and estate administration in BC.",
+    "A roadmap connecting today's Vancouver property decisions to your long-term financial picture — investment, transitions, and estate planning.",
 };
 
 const sections = [
