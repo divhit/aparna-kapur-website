@@ -7,6 +7,10 @@ import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "West End Vancouver | Real Estate Guide",
@@ -87,6 +91,8 @@ export default async function WestEndPage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="west-end" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">

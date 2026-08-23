@@ -4,6 +4,10 @@ import Link from "next/link";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Grandview-Woodland | Real Estate Guide",
@@ -126,6 +130,8 @@ export default function GrandviewWoodlandPage() {
           </div>
         </div>
       </article>
+
+      <NeighbourhoodListings slug="grandview-woodland" />
 
       {/* Quick Stats */}
       <section className="bg-warm-50 border-y border-warm-100">

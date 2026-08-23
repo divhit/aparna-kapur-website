@@ -59,6 +59,14 @@ export type ListingQueryOptions = {
   minBedrooms?: number;
   minBathrooms?: number;
   orderby?: string;
+  /**
+   * Seconds to cache this query for. Omit for `no-store`, which is right for
+   * interactive search where the user expects their filter to hit the feed.
+   * Set it where the page should prerender — a neighbourhood guide cannot be
+   * statically generated if its listing fetch is uncacheable, and would
+   * otherwise render its empty state at build time.
+   */
+  revalidate?: number;
 };
 
 const NON_RESIDENTIAL_SUBTYPES = [
@@ -232,7 +240,11 @@ async function fetchPropertiesInBounds(
     const filters: string[] = [
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
-      `StandardStatus eq 'Active'`,
+      // StandardStatus is returned by DDF but is not a filterable field —
+      // including it makes the API reject the whole query with a 400, which
+      // is what silently emptied every listing page on the site. The feed
+      // only serves Active listings, so the filter was redundant anyway;
+      // `mapDDFProperty` still reads the status through for display.
       `ListPrice gt 0`,
       `PhotosCount gt 0`,
     ];
@@ -276,7 +288,9 @@ async function fetchPropertiesInBounds(
     const url = `https://ddfapi.realtor.ca/odata/v1/Property?${params}`;
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${token}` },
-      cache: "no-store",
+      ...(options?.revalidate
+        ? { next: { revalidate: options.revalidate } }
+        : { cache: "no-store" as const }),
     });
 
     if (!res.ok) {
@@ -350,7 +364,11 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
     const filters: string[] = [
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
-      `StandardStatus eq 'Active'`,
+      // StandardStatus is returned by DDF but is not a filterable field —
+      // including it makes the API reject the whole query with a 400, which
+      // is what silently emptied every listing page on the site. The feed
+      // only serves Active listings, so the filter was redundant anyway;
+      // `mapDDFProperty` still reads the status through for display.
       `ListPrice ge 100000`,
       `PhotosCount gt 0`,
       `(${keywordFilter})`,

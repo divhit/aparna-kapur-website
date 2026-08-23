@@ -640,6 +640,44 @@ async function verifyCanonicalHost() {
   );
 }
 
+/**
+ * The MLS feed failing is invisible: every listing surface degrades to an
+ * empty state rather than an error, so the site looks fine while showing no
+ * properties at all. It sat broken in production because nothing checked.
+ */
+async function verifyListingsFeed() {
+  group("MLS listing feed");
+
+  const { body } = await get("/buying/search", BROWSER_ACCEPT);
+  const properties = new Set([...body.matchAll(/\/property\/([A-Za-z0-9]+)/g)].map((m) => m[1]));
+  check(
+    properties.size >= 6,
+    "/buying/search renders listings",
+    `${properties.size} distinct properties`,
+  );
+
+  const counted = visibleText(body).match(/([\d,]+) active listings/);
+  check(
+    counted !== null && Number(counted[1].replace(/,/g, "")) > 0,
+    "/buying/search reports a live listing count",
+    counted ? counted[0] : "no count rendered",
+  );
+
+  // A guide that renders its empty state for weeks is a soft 404 waiting to
+  // happen, so spot-check the neighbourhoods with the most search traffic.
+  const empty = [];
+  for (const slug of ["riley-park", "oakridge", "marpole", "south-cambie"]) {
+    const page = await get(`/neighborhoods/${slug}`, BROWSER_ACCEPT);
+    const text = visibleText(page.body);
+    if (!/\d+ active listings? on the MLS/.test(text)) empty.push(slug);
+  }
+  check(
+    empty.length === 0,
+    "neighbourhood guides show live listings",
+    empty.length ? `empty: ${empty.join(", ")}` : "",
+  );
+}
+
 async function main() {
   console.log(`Verifying agent readiness against ${BASE}`);
   await verifyHomepageWithoutJavaScript();
@@ -648,6 +686,7 @@ async function main() {
   await verifyAgentInstructions();
   await verifySitemapLinks();
   await verifyMarkdownCoverage();
+  await verifyListingsFeed();
   await verifyStructuredData();
   await verifyHeadingStructure();
   await verifyCanonicalHost();

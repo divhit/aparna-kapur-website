@@ -7,11 +7,15 @@ import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import NeighbourhoodReportSignup from "@/components/neighborhoods/NeighbourhoodReportSignup";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Cambie Corridor | Real Estate Guide 2026",
+  title: "Cambie Corridor Homes for Sale | Vancouver Area Guide",
   description:
-    "Cambie Corridor neighbourhood guide: condos, townhomes, Canada Line transit, Cambie Corridor Plan, and market trends. By Aparna Kapur. 604-612-7694.",
+    "Homes for sale along the Cambie Corridor, Vancouver, with the current MLS® HPI benchmark, price trends by property type, rezoning context, and Canada Line access.",
   keywords: [
     "Cambie Corridor Vancouver real estate",
     "Cambie Corridor condos for sale",
@@ -87,6 +91,8 @@ export default async function CambieCorridorPage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="cambie-corridor" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">

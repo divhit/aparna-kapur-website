@@ -8,11 +8,15 @@ import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Riley Park Vancouver | Real Estate Guide",
+  title: "Riley Park Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Riley Park neighbourhood guide: real estate prices, Main Street culture, schools, parks, and market trends. By Aparna Kapur, Oakwyn Realty. 604-612-7694.",
+    "Homes for sale in Riley Park, Vancouver, with the current MLS® HPI benchmark, price trends by property type, schools, transit, and what it is like to live here.",
   keywords: [
     "Riley Park Vancouver real estate",
     "Riley Park homes for sale",
@@ -87,6 +91,8 @@ export default async function RileyParkPage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="riley-park" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">

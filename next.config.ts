@@ -19,6 +19,19 @@ const nextConfig: NextConfig = {
         destination: "https://www.aparnakapur.com/:path*",
         permanent: true,
       },
+      // Short forms of neighbourhood slugs that Search Console reports as 404s.
+      // Google knows these URLs, so a redirect recovers whatever equity they
+      // carry instead of leaving a dead end.
+      {
+        source: "/neighborhoods/point-grey",
+        destination: "/neighborhoods/west-point-grey",
+        permanent: true,
+      },
+      {
+        source: "/neighborhoods/dunbar",
+        destination: "/neighborhoods/dunbar-southlands",
+        permanent: true,
+      },
     ];
   },
   images: {

@@ -6,11 +6,15 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Kerrisdale Vancouver | Real Estate Guide",
+  title: "Kerrisdale Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Kerrisdale neighbourhood guide: luxury real estate, heritage homes, top schools, Kerrisdale Village, and market trends. By Aparna Kapur. 604-612-7694.",
+    "Homes for sale in Kerrisdale, Vancouver, with the current MLS® HPI benchmark, price trends by property type, Kerrisdale Village, top schools, and neighbourhood detail.",
   keywords: [
     "Kerrisdale Vancouver real estate",
     "Kerrisdale homes for sale",
@@ -86,6 +90,8 @@ export default async function KerrisdalePage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="kerrisdale" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">

@@ -7,11 +7,15 @@ import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Oakridge Vancouver | Real Estate Guide 2026",
+  title: "Oakridge Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "Oakridge neighbourhood guide: Oakridge Park redevelopment, real estate prices, schools, Canada Line transit, and market trends. By Aparna Kapur, 604-612-7694.",
+    "Homes for sale in Oakridge, Vancouver, with the current MLS® HPI benchmark, price trends by property type, the Oakridge Park redevelopment, schools, and transit.",
   keywords: [
     "Oakridge Vancouver real estate",
     "Oakridge homes for sale",
@@ -135,6 +139,8 @@ export default async function OakridgePage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="oakridge" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">

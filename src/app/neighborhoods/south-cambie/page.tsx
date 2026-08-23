@@ -6,11 +6,15 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
+import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+
+/** Listings are live data; regenerate hourly rather than freezing at build. */
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "South Cambie Vancouver | Real Estate Guide",
+  title: "South Cambie Vancouver Homes for Sale | Prices & Area Guide",
   description:
-    "South Cambie neighbourhood guide: real estate prices, Queen Elizabeth Park, Canada Line, schools, and market trends. By Aparna Kapur. 604-612-7694.",
+    "Homes for sale in South Cambie, Vancouver, with the current MLS® HPI benchmark, price trends by property type, Canada Line access, schools, and neighbourhood detail.",
   keywords: [
     "South Cambie Vancouver real estate",
     "South Cambie homes for sale",
@@ -85,6 +89,8 @@ export default async function SouthCambiePage() {
           </h1>
         </div>
       </section>
+
+      <NeighbourhoodListings slug="south-cambie" />
 
       {/* Quick Stats */}
       <section className="bg-white border-b border-warm-100">
