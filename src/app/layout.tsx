@@ -11,6 +11,7 @@ import { SiteIdentitySchema } from "@/components/seo/JsonLd";
 import ChatWidget from "@/components/chat/ChatWidget";
 import ExitIntentPopup from "@/components/lead-capture/ExitIntentPopup";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import WebMcpTools from "@/components/agent/WebMcpTools";
 
 const raleway = Raleway({
   variable: "--font-sans",
@@ -96,6 +97,7 @@ export default function RootLayout({
         <div data-site-chrome="popup">
           <ExitIntentPopup />
         </div>
+        <WebMcpTools />
       </body>
     </html>
   );

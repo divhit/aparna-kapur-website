@@ -33,7 +33,7 @@ export const RESERVED_PATHS = new Set([
  * listings carry licensed board data, so neither gets a markdown twin.
  */
 export const NON_NEGOTIABLE_PREFIXES = ["/lp/", "/property/"];
-export const NON_NEGOTIABLE_PATHS = new Set(["/lp", "/open-house"]);
+export const NON_NEGOTIABLE_PATHS = new Set(["/lp", "/open-house", "/mcp"]);
 
 export type MediaRange = { type: string; subtype: string; q: number };
 
