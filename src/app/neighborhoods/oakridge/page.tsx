@@ -3,6 +3,7 @@ import Link from "next/link";
 import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { AREA_BENCHMARKS, formatPrice } from "@/lib/market-data";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -321,9 +322,9 @@ export default async function OakridgePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$600K - $1.2M", desc: "Modern units near SkyTrain and Oakridge Park. GVR benchmark: $1.04M. Popular with first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: "Multi-level homes with more space. GVR benchmark: $1.57M. Popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: "Established streets. GVR benchmark: $3.26M. Many mid-century homes with renovation potential or newer builds." },
+                    { type: "Condominiums", range: "$600K - $1.2M", desc: `Modern units near SkyTrain and Oakridge Park. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["oakridge"].apartment!.price)}. Popular with first-time buyers and investors.` },
+                    { type: "Townhomes", range: "$1.3M - $1.9M", desc: `Multi-level homes with more space. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["oakridge"].townhouse!.price)}. Popular with young families.` },
+                    { type: "Detached Homes", range: "$2.5M - $4.5M+", desc: `Established streets. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["oakridge"].detached!.price)}. Many mid-century homes with renovation potential or newer builds.` },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">

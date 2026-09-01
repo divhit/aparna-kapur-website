@@ -1126,6 +1126,95 @@ June 2026: demand up broadly for the first time in years, supply tightening, pri
 
 I'll break down the July numbers when GVR releases them in early August. If you want to talk about what these numbers mean for your specific situation — buying, selling, or just planning — call or text me at 604-612-7694, or reach me through [aparnakapur.com/contact](/contact).`,
   },
+  {
+    slug: "vancouver-market-update-july-2026",
+    title: "Vancouver Real Estate Market Update: The July 2026 Numbers",
+    excerpt:
+      "June looked like demand was coming back. July took it back \u2014 sales fell 9.8% year-over-year and every home type gave up ground. Here are the July 2026 GVR numbers for Metro Vancouver and for Vancouver's south side, and what they mean if you're buying or selling.",
+    date: "August 2026",
+    datePublished: "2026-08-31",
+    dateModified: "2026-08-31",
+    category: "Market Analysis",
+    readTime: "7 min read",
+    image: "/images/blog/vancouver-market-update-july-2026.webp",
+    content: `## Last Month's Optimism Did Not Hold
+
+I'm Aparna Kapur with Oakwyn Realty, and every month I go through the Greater Vancouver REALTORS (GVR) statistics package so my clients don't have to. When I wrote up [the June numbers](/resources/blog/vancouver-market-update-june-2026), sales were up nearly 10% year-over-year, GVR's chief economist was calling it a possible early sign of a shift, and I said one month isn't a trend.
+
+July settled that, and not in the direction I would have picked.
+
+All figures below come from the GVR July 2026 MLS statistics, released in early August 2026, and from the MLS Home Price Index Benchmark Summary for the same month.
+
+## The Headline Numbers for Metro Vancouver
+
+- **Sales: 2,061** \u2014 down 9.8% from the 2,286 sales in July 2025, and 18.6% below the 10-year seasonal average of 2,532
+- **New listings: 4,991** \u2014 down 11.5% from July 2025, landing almost exactly on the 10-year average of 4,992
+- **Total active listings: 16,476** \u2014 down 4.0% year-over-year, but still 26.8% above the 10-year average of 12,992
+- **Composite benchmark price: $1,088,800** \u2014 down 6.2% from July 2025 and down 0.9% from June
+
+By property type across the region:
+
+- **Detached: $1,822,900** (down 7.0% year-over-year, down 1.1% from June)
+- **Townhouse: $1,030,400** (down 6.0% year-over-year, down 1.5% from June)
+- **Condo/apartment: $688,000** (down 7.5% year-over-year, down 1.1% from June)
+
+## June Was One Month, Not a Turn
+
+In June, every home type posted year-over-year sales gains. In July, every home type gave them back:
+
+- **Detached: 639 sales**, down 3.2% from July 2025
+- **Attached: 454 sales**, down 1.1%
+- **Apartment: 952 sales**, down 17.8%
+
+Apartments did most of the damage. A 17.8% drop in the largest segment by volume is enough to pull the regional total down on its own. And where June's composite benchmark was essentially flat month-over-month at -0.1%, July's fell 0.9% \u2014 the price side finally following the demand side.
+
+I'm not going to dress that up. If you read my June write-up as a reason to hurry, July says the pressure is off.
+
+## The Supply Side Is Doing Something Different
+
+The one genuinely constructive number is inventory. New listings came in 11.5% below last July and, for the first time in a while, matched the 10-year seasonal average instead of exceeding it. Active listings are down 4.0% year-over-year. In aggregate, sellers are choosing not to list.
+
+That does not make this a tight market. At 16,476 active listings we're still 26.8% above the 10-year norm, and that overhang is exactly why the benchmark keeps drifting down. But the supply build-up that defined the last two years has stopped growing.
+
+The sales-to-active-listings ratio for July was **13.0%** overall \u2014 10.5% for detached, 15.8% for attached, and 14.0% for apartments. Below 12% is generally read as a buyer's market and above 20% as a seller's market. Detached is the segment closest to buyer's-market territory; attached and apartments sit in the lower half of balanced.
+
+## Vancouver's South Side, Neighbourhood by Neighbourhood
+
+A regional average is a blunt instrument. These are the July composite benchmarks for the neighbourhoods I work in most, from the GVR sub-area HPI:
+
+- **[Kerrisdale](/neighborhoods/kerrisdale): $1.96M** \u2014 down 6.2% year-over-year, down 1.9% from June
+- **[Riley Park](/neighborhoods/riley-park): $1.58M** \u2014 down 3.6% year-over-year, down 0.9% from June
+- **[Cambie Corridor](/neighborhoods/cambie-corridor): $1.51M** \u2014 down 6.6% year-over-year, down 1.8% from June
+- **[Oakridge](/neighborhoods/oakridge): $1.43M** \u2014 down 8.6% year-over-year, down 0.7% from June
+- **[South Cambie](/neighborhoods/south-cambie): $1.41M** \u2014 down 7.6% year-over-year, down 0.1% from June
+- **[Marpole](/neighborhoods/marpole): $1.08M** \u2014 down 10.4% year-over-year, down 2.7% from June
+
+Three things worth pulling out.
+
+**Riley Park held up best**, at -3.6% year-over-year against the region's -6.2%. It's the only one of the six that beat the regional composite by a clear margin.
+
+**Marpole is carrying the steepest decline** of the six, at -10.4% year-over-year, and its detached benchmark is down 17.1% \u2014 the largest year-over-year drop of any segment in these six neighbourhoods. If you're buying, that is where the negotiating room is. Marpole is already the most affordable neighbourhood on this list, and it has Canada Line access to both downtown and the airport.
+
+**Detached was the only type that rose anywhere.** Three detached benchmarks ticked up month-over-month: Oakridge at $3.41M (up 3.2%), South Cambie at $4.05M (up 0.6%), and Riley Park at $1.99M (up 0.2%). Detached benchmarks in small sub-areas move on thin sales counts, so I'd treat one month of gains as noise until a second month agrees. Townhouses went the other way in all six, down between 2.8% and 5.1% from June.
+
+## What This Means If You're Buying
+
+Prices are 6-7% below last year, inventory is still more than a quarter above normal, and July's sales figures say you have less competition than you did in June. The negotiating position buyers have had since 2025 is intact, and on this month's evidence it has not started closing.
+
+What I'd watch is the listings side rather than the price side. New listings at the 10-year average, rather than well above it, is the first condition that has to hold before selection starts to narrow. It has held for one month.
+
+## What This Means If You're Selling
+
+This is a harder month to sell into than June, and pretending otherwise doesn't help anyone. Sales are down across every type, the composite gave up 0.9% in a month, and buyers have 16,476 alternatives.
+
+What still works is what has worked all year: price against what is actually selling now, not against 2025, and present the home properly. The gap between a well-prepared, correctly priced listing and an optimistic one is wider in a market like this than in a hot one. If you want a straight answer on what your home would realistically fetch, start with a [free home valuation](/selling/home-valuation) \u2014 there's no cost and no obligation.
+
+## The Bottom Line
+
+July 2026: sales down 9.8% year-over-year with every home type declining, the composite benchmark down 0.9% in a month, and inventory flat rather than climbing. June's demand bump did not carry.
+
+I'll break down the August numbers when GVR releases them in early September. If you want to talk about what these figures mean for your specific situation \u2014 buying, selling, or just planning \u2014 call or text me at 604-612-7694, or reach me through [aparnakapur.com/contact](/contact).`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { AREA_BENCHMARKS, formatPrice } from "@/lib/market-data";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
@@ -231,9 +232,9 @@ export default async function SouthCambiePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$650K - $1.3M", desc: "Modern units near SkyTrain along the Cambie Corridor. GVR benchmark: $1.06M. Attractive to first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Well-designed complexes, many from the Cambie Corridor Plan. GVR benchmark: $1.46M. Popular with young families." },
-                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: "Heritage homes and newer builds on generous lots. GVR benchmark: $4.06M. Many offer renovation or laneway suite potential." },
+                    { type: "Condominiums", range: "$650K - $1.3M", desc: `Modern units near SkyTrain along the Cambie Corridor. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["south-cambie"].apartment!.price)}. Attractive to first-time buyers and investors.` },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: `Well-designed complexes, many from the Cambie Corridor Plan. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["south-cambie"].townhouse!.price)}. Popular with young families.` },
+                    { type: "Detached Homes", range: "$2.5M - $5.0M+", desc: `Heritage homes and newer builds on generous lots. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["south-cambie"].detached!.price)}. Many offer renovation or laneway suite potential.` },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">

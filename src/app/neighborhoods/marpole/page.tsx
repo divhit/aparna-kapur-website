@@ -3,6 +3,7 @@ import Link from "next/link";
 import GetInTouch from "@/components/sections/GetInTouch";
 import NeighbourhoodMap from "@/components/maps/NeighbourhoodMap";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { AREA_BENCHMARKS, formatPrice } from "@/lib/market-data";
 import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
@@ -235,9 +236,9 @@ export default async function MarpolePage() {
                 </p>
                 <div className="space-y-4 mb-6">
                   {[
-                    { type: "Condominiums", range: "$450K - $850K", desc: "Modern low-rise and mid-rise units, many walkable to Marine Drive SkyTrain. GVR benchmark: $709K. Popular with first-time buyers and investors." },
-                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: "Newer developments along Cambie and Granville. GVR benchmark: $1.49M. Popular with growing families." },
-                    { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: "Character bungalows to newer custom builds. GVR benchmark: $2.12M. Lot sizes often generous compared to other west-side areas." },
+                    { type: "Condominiums", range: "$450K - $850K", desc: `Modern low-rise and mid-rise units, many walkable to Marine Drive SkyTrain. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["marpole"].apartment!.price)}. Popular with first-time buyers and investors.` },
+                    { type: "Townhomes", range: "$1.2M - $1.8M", desc: `Newer developments along Cambie and Granville. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["marpole"].townhouse!.price)}. Popular with growing families.` },
+                    { type: "Detached Homes", range: "$1.8M - $3.0M+", desc: `Character bungalows to newer custom builds. GVR benchmark: ${formatPrice(AREA_BENCHMARKS["marpole"].detached!.price)}. Lot sizes often generous compared to other west-side areas.` },
                   ].map((item) => (
                     <div key={item.type} className="bg-warm-50 rounded-xl p-5 border-l-4 border-teal-500">
                       <div className="flex flex-wrap items-baseline gap-x-3 mb-1">
