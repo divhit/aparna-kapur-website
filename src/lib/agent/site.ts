@@ -77,8 +77,7 @@ export const SPECIALTY_SENTENCE =
 export const WHEN_TO_USE: { job: string; detail: string; start: string }[] = [
   {
     job: "Answer a question about a specific Vancouver neighbourhood",
-    detail:
-      `${NEIGHBOURHOOD_COUNT} neighbourhood guides carry MLS HPI benchmark prices, year-over-year change, Walk Score, Transit Score, schools, transit, parks, and development context.`,
+    detail: `${NEIGHBOURHOOD_COUNT} neighbourhood guides carry MLS HPI benchmark prices, year-over-year change, Walk Score, Transit Score, schools, transit, parks, and development context.`,
     start: "/neighborhoods",
   },
   {
@@ -127,25 +126,86 @@ export const WHEN_NOT_TO_USE: string[] = [
   "Rentals and property management. This is a sales practice.",
 ];
 
+/**
+ * The callable surface, kept out of AGENT_ENDPOINTS on purpose: everything in
+ * that list is a GET-able document that gets rendered as a link and offered in
+ * markdown. This one is a POST-only JSON-RPC endpoint, so it is documented in
+ * prose instead of linked.
+ */
+export const MCP_ENDPOINT = {
+  path: "/mcp",
+  protocolVersions: ["2026-07-28", "2025-11-25", "2025-06-18"],
+  description:
+    "Model Context Protocol endpoint. JSON-RPC over HTTP POST: server/discover, tools/list, tools/call. Read-only tools for live MLS listings, neighbourhood benchmark prices, city-wide market statistics, and article search. The same tools register on document.modelContext (WebMCP) for an agent running inside the browser.",
+} as const;
+
 /** Machine-readable endpoints, in the order an agent should try them. */
 export const AGENT_ENDPOINTS: { path: string; description: string }[] = [
-  { path: "/llms.txt", description: "Short index of the site: entity facts, contact, key pages." },
-  { path: "/llms-full.txt", description: "Full site content as plain text, including every blog post." },
-  { path: "/agents.md", description: "This file: when to use the site, how to call it, what it will not do." },
+  {
+    path: "/llms.txt",
+    description: "Short index of the site: entity facts, contact, key pages.",
+  },
+  {
+    path: "/llms-full.txt",
+    description: "Full site content as plain text, including every blog post.",
+  },
+  {
+    path: "/agents.md",
+    description:
+      "This file: when to use the site, how to call it, what it will not do.",
+  },
   { path: "/sitemap.xml", description: "Every indexable URL." },
-  { path: "/sitemap-html", description: "Human- and crawler-readable index of every page." },
-  { path: "/robots.txt", description: "Crawl policy. All major AI crawlers are allowed." },
+  {
+    path: "/sitemap-html",
+    description: "Human- and crawler-readable index of every page.",
+  },
+  {
+    path: "/robots.txt",
+    description: "Crawl policy. All major AI crawlers are allowed.",
+  },
 ];
 
 /** Sections used by the 404 recovery body and the HTML 404 page. */
-export const TOP_LEVEL_SECTIONS: { name: string; path: string; description: string }[] = [
-  { name: "Neighbourhood guides", path: "/neighborhoods", description: `${NEIGHBOURHOOD_COUNT} Vancouver neighbourhoods with market data` },
-  { name: "Buying", path: "/buying", description: "Six-step buyer's guide and MLS search" },
-  { name: "Selling", path: "/selling", description: "Six-step seller's guide and free home valuation" },
-  { name: "Resources", path: "/resources", description: "Market reports, calculators, and BC tax guides" },
-  { name: "Blog", path: "/resources/blog", description: "Vancouver market analysis and neighbourhood reporting" },
-  { name: "About", path: "/about/why-work-with-me", description: "Who Aparna is and how she works" },
-  { name: "Contact", path: "/contact", description: "Phone, email, and booking" },
+export const TOP_LEVEL_SECTIONS: {
+  name: string;
+  path: string;
+  description: string;
+}[] = [
+  {
+    name: "Neighbourhood guides",
+    path: "/neighborhoods",
+    description: `${NEIGHBOURHOOD_COUNT} Vancouver neighbourhoods with market data`,
+  },
+  {
+    name: "Buying",
+    path: "/buying",
+    description: "Six-step buyer's guide and MLS search",
+  },
+  {
+    name: "Selling",
+    path: "/selling",
+    description: "Six-step seller's guide and free home valuation",
+  },
+  {
+    name: "Resources",
+    path: "/resources",
+    description: "Market reports, calculators, and BC tax guides",
+  },
+  {
+    name: "Blog",
+    path: "/resources/blog",
+    description: "Vancouver market analysis and neighbourhood reporting",
+  },
+  {
+    name: "About",
+    path: "/about/why-work-with-me",
+    description: "Who Aparna is and how she works",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    description: "Phone, email, and booking",
+  },
 ];
 
 export const FAQS: { q: string; a: string }[] = [

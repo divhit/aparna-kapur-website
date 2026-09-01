@@ -9,6 +9,7 @@ import {
   NAP,
   NAP_ONE_LINE,
   SAME_AS,
+  MCP_ENDPOINT,
   SITE_URL,
   SPECIALTY_SENTENCE,
   WHEN_NOT_TO_USE,
@@ -107,6 +108,20 @@ Anything that needs a licensed opinion — an offer, a valuation of a specific a
 - Email: ${NAP.email}
 - Contact form: ${SITE_URL}/contact
 - Free comparative market analysis: ${SITE_URL}/selling/home-valuation
+
+## Callable tools
+
+${SITE_URL}${MCP_ENDPOINT.path} — ${MCP_ENDPOINT.description}
+
+Protocol versions: ${MCP_ENDPOINT.protocolVersions.join(", ")}. POST only; a GET returns 405. Stateless — no session id, no SSE.
+
+\`\`\`
+curl -s -X POST ${SITE_URL}${MCP_ENDPOINT.path} \\
+  -H 'Content-Type: application/json' \\
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}'
+\`\`\`
+
+Every tool is read-only. None of them submits a form, sends a message, or books an appointment. To reach a human, use the contact routes above.
 
 ## Machine-readable index
 

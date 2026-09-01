@@ -232,7 +232,9 @@ async function fetchPropertiesInBounds(
     const filters: string[] = [
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
-      `StandardStatus eq 'Active'`,
+      // CREA stopped accepting StandardStatus in $filter — the query now 400s
+      // if it is included. The feed only distributes active listings, so the
+      // clause was redundant; `status` is still read off each record.
       `ListPrice gt 0`,
       `PhotosCount gt 0`,
     ];
@@ -350,7 +352,9 @@ export async function fetchOpportunityListings(): Promise<DDFProperty[]> {
     const filters: string[] = [
       `Latitude ge ${bounds.south} and Latitude le ${bounds.north}`,
       `Longitude ge ${bounds.west} and Longitude le ${bounds.east}`,
-      `StandardStatus eq 'Active'`,
+      // CREA stopped accepting StandardStatus in $filter — the query now 400s
+      // if it is included. The feed only distributes active listings, so the
+      // clause was redundant; `status` is still read off each record.
       `ListPrice ge 100000`,
       `PhotosCount gt 0`,
       `(${keywordFilter})`,

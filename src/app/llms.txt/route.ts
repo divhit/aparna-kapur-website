@@ -3,6 +3,7 @@ import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { markdownUrlFor } from "@/lib/agent/negotiation";
 import {
   AGENT_ENDPOINTS,
+  MCP_ENDPOINT,
   BRAND,
   endSentence,
   MARKET_SNAPSHOT,
@@ -85,6 +86,7 @@ ${neighbourhoods
   .join("\n")}
 
 ## Optional
+- ${SITE_URL}${MCP_ENDPOINT.path}: ${MCP_ENDPOINT.description} POST only.
 ${AGENT_ENDPOINTS.map((endpoint) => `- ${SITE_URL}${endpoint.path}: ${endpoint.description}`).join("\n")}
 `;
 

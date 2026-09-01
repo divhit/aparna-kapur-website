@@ -1,7 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { submitContactForm } from "@/app/actions/contact";
+import {
+  AGENT_ASSISTED_SOURCE,
+  LEAD_DRAFT_EVENT,
+  clearLeadDraft,
+  readLeadDraft,
+} from "@/lib/agent/lead-draft";
 
 type ContactFormProps = {
   compact?: boolean;
@@ -24,6 +30,34 @@ export default function ContactForm({
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [fromAgent, setFromAgent] = useState(false);
+
+  /**
+   * An AI assistant running in the visitor's browser can prepare a draft
+   * through the `prepare_contact_request` WebMCP tool. It cannot submit one —
+   * it only leaves the values in sessionStorage for this form to pick up. The
+   * banner below makes that visible, and the person still presses Send, so a
+   * confused or injected agent can fill this in and get no further.
+   */
+  useEffect(() => {
+    const applyDraft = () => {
+      const draft = readLeadDraft();
+      if (!draft) return;
+
+      setFormState({
+        name: draft.name,
+        email: draft.email,
+        phone: draft.phone,
+        interest: draft.interest,
+        message: draft.message,
+      });
+      setFromAgent(true);
+    };
+
+    applyDraft();
+    window.addEventListener(LEAD_DRAFT_EVENT, applyDraft);
+    return () => window.removeEventListener(LEAD_DRAFT_EVENT, applyDraft);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,12 +66,15 @@ export default function ContactForm({
 
     const result = await submitContactForm({
       ...formState,
-      source: source || "Contact Form",
+      // Record that an assistant drafted this, so the lead is legible in the
+      // CRM as agent-assisted rather than passing as hand-typed.
+      source: fromAgent ? AGENT_ASSISTED_SOURCE : source || "Contact Form",
     });
 
     setLoading(false);
 
     if (result.success) {
+      clearLeadDraft();
       setSubmitted(true);
     } else {
       setError(result.error || "Something went wrong. Please try again.");
@@ -63,9 +100,7 @@ export default function ContactForm({
           />
         </svg>
         <h3 className="font-serif text-xl mb-2">Thank You!</h3>
-        <p
-          className={`text-sm ${light ? "text-white/70" : "text-warm-600"}`}
-        >
+        <p className={`text-sm ${light ? "text-white/70" : "text-warm-600"}`}>
           I&apos;ll get back to you within 24 hours.
         </p>
       </div>
@@ -85,6 +120,35 @@ export default function ContactForm({
           {error}
         </div>
       )}
+      {fromAgent && (
+        <div
+          className="bg-amber-50 text-amber-900 text-sm px-4 py-3 rounded-lg border border-amber-200"
+          role="status"
+        >
+          <p className="font-medium">An AI assistant filled this in for you.</p>
+          <p className="mt-1 text-amber-800">
+            Nothing has been sent yet. Please check the details are right — edit
+            anything that isn&apos;t — then press send yourself.
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              clearLeadDraft();
+              setFormState({
+                name: "",
+                email: "",
+                phone: "",
+                interest: "",
+                message: "",
+              });
+              setFromAgent(false);
+            }}
+            className="mt-2 underline underline-offset-2 hover:text-amber-950"
+          >
+            Clear it and start over
+          </button>
+        </div>
+      )}
       <div
         className={
           compact ? "space-y-4" : "grid grid-cols-1 md:grid-cols-2 gap-4"
@@ -95,9 +159,7 @@ export default function ContactForm({
           placeholder="Your Name"
           required
           value={formState.name}
-          onChange={(e) =>
-            setFormState({ ...formState, name: e.target.value })
-          }
+          onChange={(e) => setFormState({ ...formState, name: e.target.value })}
           className={inputClasses}
         />
         <input
