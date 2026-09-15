@@ -32,10 +32,22 @@ function metaDescription(excerpt: string, limit = 158): string {
   return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
 }
 
+
+/** Inline markdown used in blog bodies: links then bold. Relative hrefs stay relative. */
+function formatInlineMarkdown(text: string): string {
+  return text
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return { title: "Post Not Found" };
+
+  const imageUrl = post.image.startsWith("/")
+    ? `https://www.aparnakapur.com${post.image}`
+    : post.image;
 
   return {
     title: post.seoTitle ?? post.title,
@@ -53,7 +65,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.datePublished,
       modifiedTime: post.dateModified,
       authors: ["Aparna Kapur"],
-      images: [{ url: post.image }],
+      images: [{ url: imageUrl }],
     },
   };
 }
@@ -84,7 +96,9 @@ export default async function BlogPostPage({ params }: Props) {
           "@type": "BlogPosting",
           headline: post.title,
           description: metaDescription(post.excerpt),
-          image: post.image,
+          image: post.image.startsWith("/")
+            ? `https://www.aparnakapur.com${post.image}`
+            : post.image,
           datePublished: post.datePublished,
           dateModified: post.dateModified,
           keywords: post.category,
@@ -149,9 +163,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <span className="text-teal-500 mt-1">&#8226;</span>
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: item
-                              .replace("- ", "")
-                              .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
+                            __html: formatInlineMarkdown(item.replace("- ", "")),
                           }}
                         />
                       </li>
@@ -196,10 +208,7 @@ export default async function BlogPostPage({ params }: Props) {
                                   key={k}
                                   className="border border-warm-200 px-4 py-2"
                                   dangerouslySetInnerHTML={{
-                                    __html: cell.replace(
-                                      /\*\*(.*?)\*\*/g,
-                                      "<strong>$1</strong>",
-                                    ),
+                                    __html: formatInlineMarkdown(cell),
                                   }}
                                 />
                               ))}
@@ -217,10 +226,7 @@ export default async function BlogPostPage({ params }: Props) {
                   key={i}
                   className="my-4"
                   dangerouslySetInnerHTML={{
-                    __html: block.replace(
-                      /\*\*(.*?)\*\*/g,
-                      "<strong>$1</strong>",
-                    ),
+                    __html: formatInlineMarkdown(block),
                   }}
                 />
               );
