@@ -19,6 +19,66 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "metro-vancouver-unsold-condos-oakridge-cambie-2026",
+    title: "Metro's $4.4B Unsold Condo Stock: What It Means on the Cambie Corridor",
+    seoTitle: "Unsold Metro Condos: Oakridge & Cambie Buyer Math",
+    excerpt:
+      "Metro has ~$4.4B in finished-unsold condos, often larger and near transit. What that inventory means for Oakridge and Cambie buyers and sellers.",
+    date: "September 2026",
+    datePublished: "2026-09-15",
+    dateModified: "2026-09-15",
+    category: "Market Analysis",
+    readTime: "5 min read",
+    image: "/images/blog/metro-vancouver-unsold-condos-oakridge-cambie-2026.webp",
+    content: `If you are comparing a new tower to a resale condo near Oakridge-41st or along the [Cambie Corridor](/neighborhoods/cambie-corridor), the wider Metro story this week is inventory you can walk into, and that developers still hold.
+
+According to reporting in the *Vancouver Sun* (Sept. 15, 2026), real estate analytics firm Real Property Data puts finished-but-vacant condo stock across Metro Vancouver at about **$4.4 billion**, valued against similar units sold in 2026. Separately, Zonda Urban counted just over **5,300 finished-but-unsold condos and townhomes** Metro-wide as of this week, including **958 in the City of Vancouver**, with larger counts in Burnaby (1,200), Richmond (816), Surrey (559), and Coquitlam / Port Moody (543).
+
+That is not only investor-sized studios. The same coverage notes that larger, higher-priced homes make up a significant share of what is still sitting.
+
+## What the numbers actually say
+
+Real Property Data's breakdown, as reported by the *Sun*:
+
+- Condos **1,500 sq. ft. or larger**: unsold rate **41.6%**
+- Condos **under 500 sq. ft.**: unsold rate **12.2%**
+- By bedrooms (common unit types): **three-bedroom 27.3%**, **two-bedroom 22.5%**, **one-bedroom 13.7%**
+
+Andy Yan (SFU City Program), cited in the same piece, has found that **more than 80% of the unsold units are priced over $1 million**. More than **1,300** of the empty homes are in buildings completed **at least two years ago**.
+
+Darcy Rai of Real Property Data put the pattern plainly: for years, [presales](/resources/blog/resale-vs-presale-vancouver-condos-2026) cleared from the bottom of the price sheet up (smaller homes first), so what is left standing today is the larger, higher-priced end of each project. In his view, premium-priced units are more often the ones finished but unsold as buyers look for more space at a lower price in other neighbourhoods.
+
+Zonda's Jon Bennest agreed the unsold stock skews larger and more expensive, and pointed to a large share in **highrise towers near transit-oriented corridors**: Burnaby and Coquitlam / Port Moody nodes such as Brentwood, Lougheed, Metrotown, Edmonds, and Burquitlam, plus Richmond projects near the Canada Line and Capstan Station. He also noted that concrete highrises cost more to build, which pushed premium pricing; units in some Burnaby towers that went for about **$1,400 per square foot** in the early-2022 presale peak might see an end-user closer to **$1,000 to $1,100 per square foot** in that location today, per his comments in the article. Some developers have used selective or limited-time price cuts; others have converted projects to rental (not usually their first choice).
+
+*My read (opinion, not a forecast):* standing new stock at that scale, especially two- and three-bedroom inventory near SkyTrain, is leverage for buyers and competition for anyone listing a similar resale.
+
+## Why Oakridge and Cambie Corridor buyers should care
+
+[Oakridge](/neighborhoods/oakridge) and the Cambie Corridor are not the same as Brentwood or Capstan, but they sit in the same product category buyers shop when they want transit, elevators, and two-plus bedrooms. When Metro has thousands of finished units still empty, many of them larger and priced over $1 million, a buyer comparing a **new** unit in a recently completed or completing tower versus a **resale** condo a few blocks off Cambie or near Oakridge Station is not shopping in a vacuum. The empty towers elsewhere in Metro are part of the negotiation math: ask, incentives, parking, storage, completion timing, and how firm a developer (or a private seller) really is.
+
+That does **not** mean every Oakridge or [South Cambie](/neighborhoods/south-cambie) listing is automatically overpriced. It means you should price-check new standing inventory and recent solds in the same size band before you write an offer, and treat "list price" on a finished tower as a starting point, not a fact of nature. For the monthly MLS picture, see the [market reports](/resources/market-reports) hub. For the broader [Oakridge Park](/resources/blog/oakridge-park-redevelopment-2026) context, that project is reshaping what buyers expect from this corner.
+
+## What it means if you are selling a condo here
+
+If you own a two- or three-bedroom condo on the south side, your competition is not only the next resale on MLS. It is also finished new product Metro-wide that never found a buyer at the original ask, including towers that have sat for years.
+
+In practice, that usually means:
+
+- Buyers will ask how your building, strata fees, and layout compare to a new tower with unused inventory.
+- They may use developer promotions (even selective ones) as a reference point.
+- Pricing that ignores standing new stock risks longer days on market.
+
+Westbank, responding to inventory figures for one downtown project in the *Sun* piece, described conditions as a "buyer's market" and said purchasers are taking their time. Whether every submarket feels that way is a local question, but the Metro inventory numbers are hard to ignore when your buyer is shopping both new and resale.
+
+## Bottom line for the south side
+
+Metro Vancouver is carrying billions in finished condo and townhome inventory, with unsold rates highest on larger and more expensive units, and a meaningful share in transit-oriented highrises. For buyers weighing Oakridge or Cambie new versus resale, that stock is leverage. For condo sellers, it is competition you have to price against, not a press release to skim and forget.
+
+If you want a side-by-side on a specific building versus current standing inventory in your size and budget band, I am happy to walk through the numbers with you. Call or text Aparna Kapur, Oakwyn Realty, at 604-612-7694, or reach me through [aparnakapur.com/contact](/contact).
+
+**Source:** Joanne Lee-Young & Sarah Grochowski, Vancouver Sun, Sept. 15, 2026 (Real Property Data / Zonda Urban / Andy Yan as reported).`,
+  },
+  {
     slug: "oakridge-park-spring-2026-opening-guide",
     title: "Oakridge Park Spring 2026: Everything Opening This Year",
     excerpt:
