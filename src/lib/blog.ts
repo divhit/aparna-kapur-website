@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     category: "Market Analysis",
     readTime: "5 min read",
     image: "/images/blog/metro-vancouver-unsold-condos-oakridge-cambie-2026.webp",
-    content: `I'm Aparna Kapur with Oakwyn Realty. Metro Vancouver is carrying about **$4.4 billion** in finished-but-unsold condos — Real Property Data via the *Vancouver Sun* (Sept. 15, 2026) — and Zonda Urban counted just over **5,300 finished-but-unsold condos and townhomes** Metro-wide this week: inventory buyers can walk into near Oakridge-41st and along the [Cambie Corridor](/neighborhoods/cambie-corridor), and that developers still hold.
+    content: `I'm Aparna Kapur with Oakwyn Realty. Metro Vancouver is carrying about **$4.4 billion** in finished-but-unsold condos (Real Property Data via the *Vancouver Sun*, Sept. 15, 2026), and Zonda Urban counted just over **5,300 finished-but-unsold condos and townhomes** Metro-wide this week: inventory buyers can walk into near Oakridge-41st and along the [Cambie Corridor](/neighborhoods/cambie-corridor), and that developers still hold.
 
 According to the same *Sun* coverage, the $4.4B figure is valued against similar units sold in 2026. Zonda's Metro count includes **958 in the City of Vancouver**, with larger counts in Burnaby (1,200), Richmond (816), Surrey (559), and Coquitlam / Port Moody (543).
 
@@ -70,7 +70,7 @@ In practice, that usually means:
 
 ## Is this a buyer's market for south-side condos?
 
-In my opinion — hedged, not a forecast — larger south-side condos that compete with finished new stock currently favour patient buyers more than they did at the early-2022 presale peak. Westbank, responding to inventory figures for one downtown project in the *Sun* piece, described conditions as a "buyer's market" and said purchasers are taking their time. Whether every pocket near Oakridge, Cambie, Marpole, or Kerrisdale feels that way is a local question, but Metro's finished inventory is hard to ignore when your buyer is shopping both new and resale.
+In my opinion (hedged, not a forecast), larger south-side condos that compete with finished new stock currently favour patient buyers more than they did at the early-2022 presale peak. Westbank, responding to inventory figures for one downtown project in the *Sun* piece, described conditions as a "buyer's market" and said purchasers are taking their time. Whether every pocket near Oakridge, Cambie, Marpole, or Kerrisdale feels that way is a local question, but Metro's finished inventory is hard to ignore when your buyer is shopping both new and resale.
 
 ## Bottom line for the south side
 
