@@ -19,6 +19,64 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "5680-oak-street-rezoning-oakridge-2026",
+    title: "Another Tower at Oak and 41st: What the 5680 Oak Rezoning Means for Oakridge",
+    seoTitle: "5680 Oak St Rezoning: 26-Storey Near Oakridge Park",
+    excerpt:
+      "A 26-storey condo is proposed for the Petro-Canada site at Oak and 41st. What the City filing means for Oakridge and Cambie Corridor buyers and sellers.",
+    date: "September 2026",
+    datePublished: "2026-09-16",
+    dateModified: "2026-09-16",
+    category: "Neighbourhoods",
+    readTime: "5 min read",
+    image: "/images/blog/5680-oak-street-rezoning-oakridge-2026.webp",
+    content: `I'm Aparna Kapur with Oakwyn Realty. The City of Vancouver has a live rezoning file for **5680 Oak Street**, the Petro-Canada / 7-Eleven corner at Oak Street and West 41st Avenue. The proposal is a **26-storey mixed-use tower** with **193 strata homes** and ground-floor commercial space, next to Grosvenor's Mayfair West site (the former Oakridge Transit Centre) and about two blocks from [Oakridge Park](/resources/blog/oakridge-park-redevelopment-2026).
+
+This is not a rumour. It is an as-submitted City application on [Shape Your City: 5680 Oak St](https://www.shapeyourcity.ca/5680-oak-st). [Storeys](https://storeys.com/5680-oak-street-proposal-vancouver/) covered the published application on September 4, 2026.
+
+## What is proposed at 5680 Oak Street?
+
+From the City application summary (as submitted):
+
+- Rezone from **C-1 (Commercial)** to **CD-1**
+- Amend the Vancouver Official Development Plan land-use designation from **Mixed-Use Mid-Rise** to **Mixed-Use High-Rise 1**
+- Considered under the **[Cambie Corridor](/neighborhoods/cambie-corridor) Plan** and the city-wide ODP
+- **26-storey** mixed-use building at roughly **85.19 m (279 ft)**
+- **Floor space ratio (FSR) 10.92**
+- **193** strata residential units
+- **284.4 sq m (3,061 sq ft)** of ground-floor commercial
+- Unit mix reported in Storeys coverage: **1 studio, 93 one-bedroom, 48 two-bedroom, 51 three-bedroom**
+- Parking reported in the same coverage: **143 vehicle stalls** and **407 bike stalls**, with **five levels** of underground parking
+
+Application received **August 5, 2026**. A public **Q&A is scheduled December 2-15, 2026**, so there is time before that comment window opens, but the direction of travel is clear.
+
+Storeys coverage also cited about **281 ft** of height and roughly **4,070 sq ft** of retail, while the Shape Your City summary lists **279 ft** and **3,061 sq ft**. For as-submitted stats, defer to the City page. Storeys also noted a proposed floor plate of about **7,000 sq ft** against a guideline of **6,500 sq ft**; that is reporting context, not a City approval.
+
+## Why does Oak and 41st matter?
+
+[Oakridge](/neighborhoods/oakridge) is no longer a mall neighbourhood waiting to change. [Oakridge Park is open](/resources/blog/oakridge-park-spring-2026-opening-guide). The Canada Line is here. The Cambie Corridor plan has already pushed taller forms toward the municipal town centre. This site sits in that same pocket: arterial frontage on 41st, next to a large master-planned redevelopment, and a short walk to SkyTrain and the new retail and park node.
+
+If you live on the blocks west of Cambie between roughly 37th and 49th, including edges toward [South Cambie](/neighborhoods/south-cambie), this is another data point that the high-rise fabric around Oakridge Town Centre is still filling in, not winding down.
+
+## What does this mean if you own nearby?
+
+**Sellers and owners:** More density next door can cut two ways. Over time, a completed town-centre amenity set and more housing usually support demand. In the near term, you may still live with construction noise, traffic, and sales centres if neighbouring projects proceed. If you are thinking about selling in the next 12-24 months, get a real land-and-resale read for *your* block. Assembly potential near 41st and Oak is different from a quiet mid-block house a few streets over.
+
+**Buyers:** Expect more condo supply in this sub-area over the next several years if this and neighbouring projects proceed. That can mean more choice (and more negotiation room) in resale and pre-sale product. It also means checking construction timelines, views, and rental competition carefully. A proposal is not a building; Q&A is in December, and approvals take time. For the monthly MLS picture, see the [market reports](/resources/market-reports) hub.
+
+**Investors:** Transit-oriented strata near Oakridge Park remains a long-horizon thesis. Treat this filing as confirmation of policy direction, not as a price target. Underwriting should assume soft Metro Vancouver conditions until sales data say otherwise.
+
+## Is this approved?
+
+No. It is not approved, and it is not under construction. Storeys reporting tied ownership of the gas-station site to Suncor via the Land Owner Transparency Registry. Whether the owner builds, sells entitled land, or revises the plan is still an open question. Watch the [Shape Your City page](https://www.shapeyourcity.ca/5680-oak-st) for staff reports and the December Q&A.
+
+## Bottom line for Oakridge
+
+Oakridge's town-centre story did not end when the mall opened. 5680 Oak is another concrete signal: a gas station corner asking to become a high-rise under Cambie Corridor rules. If you own, buy, or rent around Oak and 41st, this file is worth tracking.
+
+I work this pocket every week. If you want a straight read on how this (or Mayfair West next door) touches your specific property or search, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).`,
+  },
+  {
     slug: "metro-vancouver-unsold-condos-oakridge-cambie-2026",
     title: "Metro's $4.4B Unsold Condo Stock: What It Means on the Cambie Corridor",
     seoTitle: "Vancouver Unsold Condos: Oakridge & Cambie Math",
