@@ -20,7 +20,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: "west-vancouver-bylaw-5446-four-to-six-units-september-2026",
-    title: "West Vancouver's four-to-six unit vote is Monday: what Bylaw 5446 means for owners and buyers",
+    title: "West Vancouver Bylaw 5446: Four to Six Units on Most Lots (What Council Decides September 21)",
     seoTitle: "West Vancouver Bylaw 5446: 4-6 Units Vote Sept 21",
     excerpt:
       "West Vancouver council considers Bylaw 5446 on Sept 21: four units on most lots, six near Marine Drive transit. What owners and buyers need to know.",
@@ -30,53 +30,59 @@ export const blogPosts: BlogPost[] = [
     category: "Neighbourhoods",
     readTime: "6 min read",
     image: "/images/blog/west-vancouver-bylaw-5446-four-to-six-units-september-2026.webp",
-    content: `I'm Aparna Kapur with Oakwyn Realty. On **Monday, September 21, 2026 at 6 p.m.**, West Vancouver District Council is scheduled to give Zoning Amendment Bylaw No. 5446, 2026 its first, second, and third readings at Municipal Hall (Council Chamber), with WebEx access as well. If adopted later, the bylaw is how West Vancouver would bring most single-family and duplex lots into **Bill 25** small-scale multi-unit housing (**SSMUH**) rules: roughly **four units** on most eligible lots, and up to **six** in a new **RG-4** zone near frequent transit along **Marine Drive**.
+    content: `I'm Aparna Kapur with Oakwyn Realty. On **Monday, September 21, 2026 at 6 p.m.**, West Vancouver District Council is scheduled to give **Zoning Amendment Bylaw No. 5446, 2026** its first, second, and third readings at Municipal Hall (Council Chamber), with WebEx access too. This is a **proposed** Bill 25 SSMUH package. It is **not adopted** yet.
 
-I work Oakridge and Vancouver's south side day to day, and I also help North Shore buyers. This vote matters if you own in West Vancouver, if you are shopping there, or if you are comparing the District to the City of North Vancouver and the District of North Vancouver.
+If it proceeds, most eligible single-family and duplex lots would allow **four units**. A smaller Marine Drive transit band would allow up to **six** under a new **RG-4** zone. I work Oakridge and Vancouver's south side, and I help North Shore buyers. Here is what owners and buyers should know before Monday.
 
-## What would Bylaw 5446 change?
+## What is Bylaw 5446, in plain terms?
 
-Per the District's SSMUH materials and the July 20, 2026 council report:
+Bylaw 5446 is West Vancouver's zoning amendment to comply with provincial **small-scale multi-unit housing (SSMUH)** under **Bill 25**. Staff numbers from the July 20, 2026 council report:
 
-- About **9,199 parcels** would allow **four units** (zones such as RS2, RS3, RS4, RS5, RS10, and RD1/RD2 outside the frequent-transit buffer).
-- About **1,133 parcels** would move into a new **RG-4** six-unit framework near frequent transit (roughly a **400 m** buffer, broadly along Marine Drive toward about **25th**).
-- About **641 parcels** would stay **exempt** (heritage, oversize lots, no municipal water or sewer, and similar cases listed by staff).
+- About **9,199 parcels**: four units (RS2, RS3, RS4, RS5, RS10, and RD1/RD2 more than about **400 m** from frequent transit).
+- About **1,133 parcels**: new **RG-4** six-unit rules near frequent transit (roughly **400 m**, broadly the **Marine Drive** corridor toward about **25th**).
+- About **641 parcels**: exempt (heritage, oversize, no municipal water or sewer, and similar cases).
 
-**Four-unit lots (as proposed):** all-inclusive floor area ratio (**FAR**) around **0.65**, with about **0.45 FAR** capped on a single principal dwelling. Coach houses and multiplex ownership forms are enabled in the package staff put forward.
+Staff also cite a theoretical ceiling of about **13,168** new zoned units. That is a capacity number, **not** a build forecast. Most lots will not redevelop overnight.
 
-**RG-4 six-unit lots (as proposed):** up to **six units**, **no parking minimum** (provincial SSMUH direction), FAR around **0.8**, affordable rental requirements when a site goes to six units, and roughly **1.2 FAR** if two lots are assembled.
+## What would change on a four-unit lot?
 
-That is the land-use change on the table. It is not a building permit, and it is not a guarantee every lot will be rebuilt.
+As proposed in the staff package:
 
-## Why is this happening now?
+- Height about **8.0 m** (was **7.62 m**), typically **two storeys plus basement**.
+- All-inclusive **FAR about 0.65**.
+- Cap of about **0.45 FAR** on a single principal dwelling.
+- Ownership forms for coach houses, duplex, triplex, and fourplex as proposed.
+- Secondary suites still **cannot be stratified**.
+- Setbacks largely unchanged.
 
-**Bill 25** requires local governments to allow SSMUH on most restricted residential lots. West Vancouver missed the province's **June 30** compliance deadline. A Minister letter around **June 18** and a Council direction on **June 23** pushed staff work forward; on **July 20** Council set **September 21** for the three readings of Bylaw 5446.
+## What is different in RG-4 near Marine Drive?
 
-Under the Local Government Act rules that apply here, **no public hearing is allowed** on this SSMUH zoning package. Readings are the formal council steps, not a town-hall rewrite of the bylaw.
+- Up to **six units**.
+- **FAR about 0.8**.
+- **No parking minimum** (provincial SSMUH direction).
+- Affordable rental requirements when a site goes to **six units**.
+- **Three storeys plus basement** when there are **three or more** units.
+- Townhouse-style assembly: minimum **two lots**, about **1.2 FAR**, **50%** coverage, with underground parking excluded from FAR.
 
-## Do readings mean the bylaw is adopted?
+Wildfire and environmental development permits, the tree bylaw, slope rules, Step Code, and Lower Caulfeild heritage controls still apply. Zoning text is not a free pass on site constraints.
 
-**No.** First, second, and third readings are not the same as adoption. After first reading, **Ministry of Transportation and Transit (MoTT)** approval is still required before Council can adopt. Treat Monday as a major procedural night, not the final signature on every lot map.
+## Why now, and what happens Monday?
 
-## What does this mean if you own in West Vancouver?
+**Bill 25** (November 27, 2025) set a **June 30, 2026** SSMUH compliance deadline. West Vancouver missed it. A Minister letter around **June 18**, Council direction on **June 23**, and the **July 20** meeting set **September 21** for the three readings.
 
-**If your lot is in the four-unit pool:** the proposed rules expand what can sit on the parcel (multiplex / coach-house style forms within the FAR caps). That can change how buyers, builders, and neighbours underwrite the land. It does not force you to build.
+**Readings are not adoption.** After first reading, **Ministry of Transportation and Transit (MoTT)** approval is still required before Council can adopt. Under the Local Government Act rules that apply here, **no public hearing** is allowed on this package.
 
-**If your lot is near Marine Drive in the RG-4 buffer:** six units, higher FAR, and no parking minimum are a bigger shift than the four-unit baseline. Assembly math (two lots, higher FAR) is something to price carefully with a planner or architect, not from a blog post alone.
+## How does this sit on the North Shore?
 
-**If staff list you as exempt:** confirm the reason on your specific folio before you assume four- or six-unit rights apply.
+The **City of North Vancouver** already adopted its SSMUH package. The **District of North Vancouver** voted against in **April 2026**. "North Shore density" is not one rulebook. Compare the municipality and the exact zone, not just the listing photo.
 
-Either way, get the address-level read before you list, hold, or renovate. Zoning text and site constraints (slopes, trees, services, covenants) still decide what pencils.
-
-## What does this mean if you are buying on the North Shore?
-
-West Vancouver is catching up on a provincial mandate. Context next door: the **City of North Vancouver** already adopted its SSMUH package; the **District of North Vancouver** voted against in **April 2026**. So "North Shore density" is not one rulebook. Compare the municipality, the block, and the exact zone, not just the listing photo.
-
-For buyers, SSMUH can mean more future multiplex competition on nearby streets, and more optionality if you are buying a lot for land value rather than the house as-is. For owners thinking about a move to Oakridge or the Cambie Corridor later, the same habit applies: read the bylaw and the comps, not the headline. Monthly MLS colour for my south-side focus sits on the [market reports](/resources/market-reports) hub.
+If you are weighing West Vancouver against a south-side move later, the same habit applies: read the bylaw and the comps. Monthly MLS colour for my Oakridge focus sits on the [market reports](/resources/market-reports) hub. When you are ready to [buy](/buying) or [sell](/selling), we can map what the zone change does (and does not) do to your address.
 
 ## Bottom line
 
-Monday's readings are West Vancouver's formal step to put **four-unit** rights on most eligible lots and **six-unit RG-4** rights near Marine Drive transit, under **Bill 25 / SSMUH**. Readings are not adoption, and MoTT still sits in the path. If you own or are buying in West Vancouver and want a straight read on how Bylaw 5446 touches your address or search, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+Monday's readings put a **proposed** four-unit baseline and Marine Drive **RG-4** six-unit option on the formal agenda. Status stays clear until adoption and MoTT clearance: **proposed, not adopted**. For District questions on the bylaw itself, staff list **SSMUH@westvancouver.ca** and **604-925-7040**.
+
+If you own or are buying in West Vancouver and want a straight read on how Bylaw 5446 touches your search or your lot, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
 
 ---
 
