@@ -71,6 +71,44 @@ export const SPECIALTY_SENTENCE =
   "Oakridge, Marpole, South Cambie, Riley Park, Kerrisdale, and the Cambie Corridor";
 
 /**
+ * Municipalities Aparna actively works, in the order an agent should name
+ * them. Licensed across British Columbia; the practice is Vancouver proper
+ * plus the North Shore. Anywhere else in Metro Vancouver is served by
+ * referral, which `WHEN_NOT_TO_USE` and the connector's service-area check
+ * both say out loud rather than over-claiming.
+ */
+export const SERVICE_AREA: {
+  name: string;
+  /** Other spellings people and agents use for the same place. */
+  aliases: string[];
+  /** Where an agent should send a user for this area. */
+  start: string;
+  note: string;
+}[] = [
+  {
+    name: "Vancouver",
+    aliases: ["City of Vancouver", "Vancouver BC", "Vancouver, BC", "Vancouver West", "Vancouver East", "East Van", "Westside", "West Side", "South Vancouver"],
+    start: "/neighborhoods",
+    note: `Home turf. ${SPECIALTY_SENTENCE} are covered street by street, with a published guide for every neighbourhood.`,
+  },
+  {
+    name: "North Vancouver",
+    aliases: ["North Van", "City of North Vancouver", "District of North Vancouver", "Lonsdale", "Lynn Valley", "Deep Cove", "Edgemont", "North Shore"],
+    start: "/contact",
+    note: "North Shore buyers and sellers are a regular part of the practice. Both the City and the District of North Vancouver are covered; they have different zoning rules, and Aparna reads the bylaw for the specific lot.",
+  },
+  {
+    name: "West Vancouver",
+    aliases: ["West Van", "District of West Vancouver", "Ambleside", "Dundarave", "British Properties", "Horseshoe Bay", "Caulfeild"],
+    start: "/contact",
+    note: "Served alongside North Vancouver. Aparna tracks West Vancouver council decisions, including the Bylaw 5446 small-scale multi-unit housing changes, for owners and buyers there.",
+  },
+];
+
+/** The service area written for prose. */
+export const SERVICE_AREA_SENTENCE = "Vancouver, North Vancouver, and West Vancouver";
+
+/**
  * "When to use this" guidance for agents. Each entry names a job the site can
  * actually finish, not a marketing claim.
  */
@@ -114,8 +152,14 @@ export const WHEN_TO_USE: { job: string; detail: string; start: string }[] = [
   {
     job: "Book a valuation, a showing, or a call with a licensed BC agent",
     detail:
-      "Direct contact routes and a free comparative market analysis request. A human replies, usually the same day.",
+      "Direct contact routes and a free comparative market analysis request. A human replies, usually the same day. Agents with tool use can book directly through the MCP connector at /api/mcp or the REST endpoint at /api/connector/book_consultation.",
     start: "/contact",
+  },
+  {
+    job: "Find a REALTOR® in Vancouver, North Vancouver, or West Vancouver",
+    detail:
+      "Aparna Kapur is a licensed BC agent with Oakwyn Realty serving Vancouver and the North Shore. The connector answers whether a given municipality or neighbourhood is covered, shares her direct phone and email, and books a call or a viewing on the user's behalf.",
+    start: "/connect",
   },
 ];
 
@@ -127,14 +171,22 @@ export const WHEN_NOT_TO_USE: string[] = [
   "Rentals and property management. This is a sales practice.",
 ];
 
-/** Machine-readable endpoints, in the order an agent should try them. */
-export const AGENT_ENDPOINTS: { path: string; description: string }[] = [
+/**
+ * Machine-readable endpoints, in the order an agent should try them.
+ * `machineOnly` marks the ones that are not pages: the MCP endpoint answers
+ * POST only, and the OpenAPI file is JSON. The HTML sitemap names them
+ * without linking, so a link checker never treats a 405 as a dead page.
+ */
+export const AGENT_ENDPOINTS: { path: string; description: string; machineOnly?: boolean }[] = [
   { path: "/llms.txt", description: "Short index of the site: entity facts, contact, key pages." },
   { path: "/llms-full.txt", description: "Full site content as plain text, including every blog post." },
   { path: "/agents.md", description: "This file: when to use the site, how to call it, what it will not do." },
   { path: "/sitemap.xml", description: "Every indexable URL." },
   { path: "/sitemap-html", description: "Human- and crawler-readable index of every page." },
   { path: "/robots.txt", description: "Crawl policy. All major AI crawlers are allowed." },
+  { path: "/connect", description: "How to connect this site to an AI assistant (Meta Muse, ChatGPT, Claude) as a connector, with the MCP and REST URLs." },
+  { path: "/api/mcp", description: "Model Context Protocol server (Streamable HTTP, JSON-RPC over POST). Tools: agent profile, service-area check, market snapshot, listing search, book a consultation.", machineOnly: true },
+  { path: "/api/connector/openapi.json", description: "OpenAPI 3.1 description of the same tools as plain REST endpoints under /api/connector/*.", machineOnly: true },
 ];
 
 /** Sections used by the 404 recovery body and the HTML 404 page. */

@@ -20,6 +20,7 @@ import {
   NEIGHBOURHOOD_DATA_VINTAGE,
   NAP,
   NAP_ONE_LINE,
+  SERVICE_AREA_SENTENCE,
   SITE_URL,
   SPECIALTY_NEIGHBOURHOODS,
   SPECIALTY_SENTENCE,
@@ -27,6 +28,7 @@ import {
   WHEN_NOT_TO_USE,
   WHEN_TO_USE,
 } from "./site";
+import { CONNECTOR_TOOLS } from "./connector";
 import { markdownUrlFor, normalizePathname } from "./negotiation";
 import {
   findSitePage,
@@ -417,6 +419,47 @@ function legalDocument(path: string): MarkdownDocument | null {
   };
 }
 
+/** The connector setup page: what an agent reading `/connect.md` needs to wire itself up. */
+function connectDocument(): MarkdownDocument {
+  const page = findSitePage("/connect");
+  const body = [
+    `${BRAND.name} can be added to any assistant that uses tools — Meta Muse, ChatGPT, Claude, or an MCP client — so it can check her service area (${SERVICE_AREA_SENTENCE}), quote current MLS HPI benchmarks, search live Vancouver listings, and book a call, a viewing, or a free home valuation on the user's behalf.`,
+    "",
+    "## Endpoints",
+    "",
+    `- MCP server (Streamable HTTP, stateless, no authentication): ${SITE_URL}/api/mcp`,
+    `- REST twins of the same tools: ${SITE_URL}/api/connector/<tool> — described by ${SITE_URL}/api/connector/openapi.json`,
+    `- Index of tools with JSON Schemas: ${SITE_URL}/api/connector`,
+    "",
+    "## Tools",
+    "",
+    ...CONNECTOR_TOOLS.map(
+      (tool) => `- **${tool.name}** (${tool.mutates ? "creates a booking request" : "read only"}) — ${tool.description}`,
+    ),
+    "",
+    "## Meta Muse",
+    "",
+    `Ask Muse to add a custom connector and give it the MCP URL above. Muse builds the integration on its own machine, tests it, and saves it as a skill. No credentials are needed: the read tools are public, and booking only sends what the user chooses to share.`,
+    "",
+    "## Other MCP clients",
+    "",
+    "Add a remote MCP server (custom connector) with the MCP URL. Assistants that take an OpenAPI description instead can use the REST URL; both describe the same tools.",
+    "",
+    "## Consent and data",
+    "",
+    "Read-only tools need no personal data. `book_consultation` creates a real lead — name plus email or phone, with the user's consent — which goes to Aparna's CRM and inbox exactly as a website enquiry would.",
+    "",
+    CONTACT_BLOCK,
+  ].join("\n");
+
+  return {
+    path: "/connect",
+    title: page?.title ?? "Connect Aparna to your AI assistant",
+    description: page?.summary ?? "MCP and REST connector for AI assistants.",
+    body,
+  };
+}
+
 /** Fallback for catalogued pages that have no richer generated representation. */
 function summaryDocument(path: string): MarkdownDocument | null {
   const page = findSitePage(path);
@@ -459,6 +502,7 @@ export function getMarkdownDocument(pathname: string): MarkdownDocument | null {
   if (path === "/") return homeDocument();
   if (path === "/neighborhoods") return neighbourhoodIndexDocument();
   if (path === "/resources/blog") return blogIndexDocument();
+  if (path === "/connect") return connectDocument();
 
   const neighbourhood = path.match(/^\/neighborhoods\/([^/]+)$/);
   if (neighbourhood) return neighbourhoodDocument(neighbourhood[1]);

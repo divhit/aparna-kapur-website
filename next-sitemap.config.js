@@ -58,6 +58,11 @@ module.exports = {
         "# Every page also answers to `Accept: text/markdown`, or to its URL with `.md` appended.",
         "# Example: https://www.aparnakapur.com/neighborhoods/oakridge.md",
         "",
+        "# Connector for assistants that use tools (Meta Muse, ChatGPT, Claude): MCP + REST",
+        "# https://www.aparnakapur.com/api/mcp",
+        "# https://www.aparnakapur.com/api/connector/openapi.json",
+        "# https://www.aparnakapur.com/connect",
+        "",
       ].join("\n"),
   },
   // Google ignores <changefreq> and <priority> and has said so for years, so
