@@ -16,6 +16,9 @@ module.exports = {
     "/agents.md",
     "/llms.txt",
     "/llms-full.txt",
+    // The connector's JSON endpoints (index, OpenAPI). Linked from agents.md,
+    // llms.txt, robots.txt, and /connect; not pages for Google to index.
+    "/api/*",
   ],
   // Routes rendered on demand are not in the build's prerender manifest, so
   // next-sitemap cannot discover them. They are real, indexable pages and
