@@ -67,12 +67,18 @@ export default function SitemapPage() {
               <ul className="space-y-2">
                 {AGENT_ENDPOINTS.map((endpoint) => (
                   <li key={endpoint.path}>
-                    <a
-                      href={endpoint.path}
-                      className="text-sm text-warm-600 hover:text-teal-700 transition-colors"
-                    >
-                      {endpoint.path}
-                    </a>
+                    {endpoint.machineOnly ? (
+                      <span className="text-sm text-warm-600" title={endpoint.description}>
+                        <code>{endpoint.path}</code> — {endpoint.description}
+                      </span>
+                    ) : (
+                      <a
+                        href={endpoint.path}
+                        className="text-sm text-warm-600 hover:text-teal-700 transition-colors"
+                      >
+                        {endpoint.path}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

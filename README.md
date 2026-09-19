@@ -48,6 +48,9 @@ render, so the HTML and the machine-readable representations cannot disagree.
 | `/sitemap.xml`, `/sitemap-html` | Every indexable URL, XML and HTML. |
 | `/robots.txt` | Crawl policy. Every major AI crawler is allowed. |
 | `/privacy`, `/terms` | Legal pages, rendered from `src/lib/legal.ts` so the HTML and markdown twins cannot diverge. `/terms` also states the licence automated agents operate under. |
+| `/api/mcp` | Model Context Protocol server (Streamable HTTP, stateless). Five tools: agent profile, service-area check, market snapshot, listing search, book a consultation. |
+| `/api/connector/*`, `/api/connector/openapi.json` | REST twins of the same tools and their OpenAPI 3.1 description, for assistants that take API docs instead of an MCP URL. |
+| `/connect` | Human setup page for Meta Muse, ChatGPT, and Claude, with a markdown twin. See `MUSE-CONNECTOR.md`. |
 
 ### Markdown content negotiation
 
@@ -76,6 +79,9 @@ Where the code lives:
 - `src/lib/agent/negotiation.ts` — Accept parsing and the path helpers.
 - `src/lib/agent/markdown.ts` — the markdown documents and the 404 body.
 - `src/proxy.ts` — the negotiation itself (Next.js 16's `proxy` convention).
+- `src/lib/agent/connector.ts` — the tool catalogue (name, description, zod schema, handler) behind the MCP server, the REST routes, and the OpenAPI document.
+- `src/lib/agent/mcp.ts` — the JSON-RPC / Streamable HTTP handling, transport-free so it is unit-tested directly.
+- `src/lib/agent/leads.ts` — lead intake for automated clients: same CRM, sheet, and email as the contact form, tagged with the calling assistant.
 - `src/app/md/[[...path]]/route.ts` — renders the markdown representation.
 
 ### Tests

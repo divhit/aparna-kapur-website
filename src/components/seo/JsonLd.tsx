@@ -3,6 +3,7 @@ import {
   NAP,
   NAP_ONE_LINE,
   SAME_AS,
+  SERVICE_AREA,
   SITE_URL,
   SPECIALTY_NEIGHBOURHOODS,
 } from "@/lib/agent/site";
@@ -46,12 +47,18 @@ const POSTAL_ADDRESS = {
   addressCountry: NAP.addressCountry,
 } as const;
 
+const CITY_SAME_AS: Record<string, string> = {
+  Vancouver: "https://en.wikipedia.org/wiki/Vancouver",
+  "North Vancouver": "https://en.wikipedia.org/wiki/North_Vancouver_(city)",
+  "West Vancouver": "https://en.wikipedia.org/wiki/West_Vancouver",
+};
+
 const AREA_SERVED = [
-  {
+  ...SERVICE_AREA.map((area) => ({
     "@type": "City",
-    name: "Vancouver",
-    sameAs: "https://en.wikipedia.org/wiki/Vancouver",
-  },
+    name: area.name,
+    ...(CITY_SAME_AS[area.name] ? { sameAs: CITY_SAME_AS[area.name] } : {}),
+  })),
   ...SPECIALTY_NEIGHBOURHOODS.map((name) => ({
     "@type": "Neighborhood",
     name,
@@ -72,6 +79,9 @@ const KNOWS_ABOUT = [
   "Vancouver R1-1 zoning",
   "Canada Line property values",
   "Vancouver west side real estate",
+  "North Vancouver real estate",
+  "West Vancouver real estate",
+  "North Shore real estate",
 ];
 
 const OPENING_HOURS = [

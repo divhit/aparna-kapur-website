@@ -16,6 +16,9 @@ module.exports = {
     "/agents.md",
     "/llms.txt",
     "/llms-full.txt",
+    // The connector's JSON endpoints (index, OpenAPI). Linked from agents.md,
+    // llms.txt, robots.txt, and /connect; not pages for Google to index.
+    "/api/*",
   ],
   // Routes rendered on demand are not in the build's prerender manifest, so
   // next-sitemap cannot discover them. They are real, indexable pages and
@@ -57,6 +60,11 @@ module.exports = {
         "",
         "# Every page also answers to `Accept: text/markdown`, or to its URL with `.md` appended.",
         "# Example: https://www.aparnakapur.com/neighborhoods/oakridge.md",
+        "",
+        "# Connector for assistants that use tools (Meta Muse, ChatGPT, Claude): MCP + REST",
+        "# https://www.aparnakapur.com/api/mcp",
+        "# https://www.aparnakapur.com/api/connector/openapi.json",
+        "# https://www.aparnakapur.com/connect",
         "",
       ].join("\n"),
   },

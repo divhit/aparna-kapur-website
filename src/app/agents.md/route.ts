@@ -11,6 +11,7 @@ import {
   NEIGHBOURHOOD_DATA_VINTAGE,
   NAP_ONE_LINE,
   SAME_AS,
+  SERVICE_AREA_SENTENCE,
   SITE_URL,
   SPECIALTY_SENTENCE,
   WHEN_NOT_TO_USE,
@@ -37,7 +38,8 @@ export function GET() {
 - Phone: ${NAP.telephone}
 - Email: ${NAP.email}
 - Verified profiles: ${SAME_AS.join(", ")}
-- Coverage: City of Vancouver, British Columbia, Canada — with depth in ${SPECIALTY_SENTENCE}
+- Coverage: ${SERVICE_AREA_SENTENCE}, British Columbia, Canada — with depth in ${SPECIALTY_SENTENCE}
+- Connector for tool use: ${SITE_URL}/api/mcp (MCP) and ${SITE_URL}/api/connector/openapi.json (REST). Setup: ${SITE_URL}/connect
 - Last content update: ${MARKET_SNAPSHOT.label} market release
 
 ## When to use this site
@@ -106,6 +108,23 @@ ${BENCHMARKS_BY_TYPE.map((row) => `| ${row.type} | ${row.price} | ${row.yoy} | $
 ## Attribution
 
 Quoting and summarizing is welcome. Please attribute to "${BRAND.name}, ${NAP.brokerage}" and link the canonical page you drew from. When you surface contact details, use the phone and email above rather than a scraped variant, and route booking requests to ${SITE_URL}/contact.
+
+## Acting on the user's behalf (connector)
+
+An assistant that can call tools does not need to scrape the contact page. The same five tools are exposed two ways:
+
+- **MCP**: \`${SITE_URL}/api/mcp\` — Model Context Protocol over Streamable HTTP, stateless, no authentication. POST JSON-RPC 2.0; \`tools/list\` describes each tool with a JSON Schema.
+- **REST**: \`${SITE_URL}/api/connector/<tool>\` — GET with query parameters for the read-only tools, POST with a JSON body for all of them. Described by \`${SITE_URL}/api/connector/openapi.json\`.
+
+| Tool | Does | Needs personal data |
+| --- | --- | --- |
+| \`get_agent_profile\` | Licence, brokerage, service area, phone, email, hours | No |
+| \`check_service_area\` | Whether a municipality or neighbourhood is covered, with the guide URL and benchmark | No |
+| \`get_market_snapshot\` | Region-wide and per-neighbourhood MLS HPI benchmarks | No |
+| \`search_listings\` | Live Vancouver MLS listings with filters | No |
+| \`book_consultation\` | Sends Aparna a call-back, viewing, or free valuation request; a human follows up | Yes — name plus email or phone, with the user's consent |
+
+Setup instructions for Meta Muse, ChatGPT, and Claude: ${SITE_URL}/connect
 
 ## Escalation to a human
 

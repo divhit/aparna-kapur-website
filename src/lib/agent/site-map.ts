@@ -59,6 +59,12 @@ const MAIN_PAGES: SitePage[] = [
       "Phone, email, and message form. Direct line to a licensed BC agent, usually answered the same day.",
   },
   {
+    path: "/connect",
+    title: "Connect Aparna to your AI assistant",
+    summary:
+      "How to add Aparna as a connector in Meta Muse, ChatGPT, Claude, or any MCP client: the MCP server URL, the OpenAPI description, and what the five tools do.",
+  },
+  {
     path: "/sitemap-html",
     title: "Sitemap",
     summary: "Every page on aparnakapur.com, grouped by section.",
