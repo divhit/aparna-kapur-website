@@ -12,8 +12,9 @@ virtual machine in Meta's cloud. It ships with first-party connectors (Gmail,
 Google Calendar, OpenTable, Spotify, ...) and supports **custom connectors**:
 a user tells Muse about a service, hands it either an **MCP server URL** or
 **API docs**, and Muse builds the integration itself, tests it, and saves it as
-a skill. Meta does not review custom connectors. At launch Muse is available
-in the US only, on iOS, Android, the web, and inside WhatsApp.
+a skill. Meta does not review custom connectors. Muse launched in the US on
+September 8 and in Canada on September 18, 2026, on iOS, Android, macOS, the
+web, and inside WhatsApp, so a Vancouver buyer or seller can use it today.
 
 ## What "plugging the website in" actually means
 
@@ -92,9 +93,9 @@ backup, and in ak@aparnakapur.com with the subject "New Lead via Meta Muse".
   strengthens them (North Shore coverage stated everywhere, action endpoints
   advertised in every agent-facing file). Keep the `rank:check` and
   `verify:agents` scripts in the loop.
-- **Muse is US-only at launch.** A Vancouver buyer cannot use it yet; a US
-  relocation buyer can. The connector also works today in Claude and ChatGPT
-  custom connectors, which are available in Canada.
+- **Muse is live in Canada (September 18, 2026).** Local buyers and sellers
+  can add the connector now. The same endpoints also work in Claude and
+  ChatGPT custom connectors, so the setup page covers all three.
 - **No public connector directory exists yet.** If Meta opens one, the MCP
   URL and the OpenAPI document are what a listing would need, and both are
   already stable. Watch muse.ai/platform for a submission form.
