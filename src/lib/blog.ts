@@ -19,6 +19,68 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "jwest-breaks-ground-oak-41st-oakridge-2026",
+    title: "Oak & 41st just broke ground: what JWest means for Oakridge owners and buyers",
+    seoTitle: "JWest Breaks Ground at Oak & 41st | What It Means for Oakridge",
+    excerpt:
+      "JWest broke ground Sep 14, 2026 at Oak & 41st. Here is what the Diamond JCC, King David expansion, and later rental towers mean for Oakridge and Cambie Corridor buyers and owners.",
+    date: "September 2026",
+    datePublished: "2026-09-18",
+    dateModified: "2026-09-18",
+    category: "Neighbourhoods",
+    readTime: "6 min read",
+    image: "/images/blog/jwest-breaks-ground-oak-41st-oakridge-2026.webp",
+    content: `I'm Aparna Kapur with Oakwyn Realty. On September 14, 2026, the corner of Oak Street and West 41st Avenue shifted from drawings and rezoning votes to a ceremonial dig. The Canadian Jewish News reported the next day that Vancouver's Jewish community, donors, and elected officials gathered for the groundbreaking of **JWest**, a multi-phase rebuild of the long-standing Jewish Community Centre site in [Oakridge](/neighborhoods/oakridge).
+
+If you live or are looking near [Oakridge Park](/resources/blog/oakridge-park-redevelopment-2026), [South Cambie](/neighborhoods/south-cambie), or the [Cambie Corridor](/neighborhoods/cambie-corridor), this is not abstract civic news. It is a multi-year construction and amenity story on one of the south side's busiest corners, next to rapid transit, bus routes, and a neighbourhood already mid-transformation.
+
+## What broke ground, and what comes later
+
+According to The CJN, the first major investment is about **$234 million** for a new community centre and an expanded high school, with rental housing planned for later phases.
+
+**Phase 1 focus: the Diamond JCC.** Officials describe a six-storey, roughly **200,000-square-foot** community centre, about twice the size of the existing JCC, as the heart of the campus. Planned uses reported at groundbreaking include an eight-lane, 25-metre pool; two gyms, fitness, theatre, art gallery, music centre, and library; expanded childcare and seniors' services; a renewed Vancouver Holocaust Education Centre; and space for more than 20 community organizations. Leaders framed it as a public-facing hub beyond the Jewish community.
+
+**Next: King David High School.** A new, larger King David High School is planned to follow, about one-third larger, with room for roughly **400 students**, its own gym and playing field, and access to the campus pool, theatre, and Holocaust Education Centre.
+
+**Later: two rental towers.** City Council unanimously approved a July 2026 rezoning for **more than 600 secured rental homes** (about **630** in towers at **37 and 39 storeys**, including below-market). No firm public timetable for housing construction; community buildings come first.
+
+The site is about **3.3 acres** at Oak and 41st (commonly 950 West 41st). Partners include the Jewish Federation of BC, JCC of Greater Vancouver, and King David High School.
+
+## Why this matters if you already own nearby
+
+**Amenities get denser, not just towers.** A larger pool, childcare, theatre, and seniors programming adds everyday uses near Oakridge Park and the Canada Line.
+
+**School capacity and campus life.** An expanded King David on the same campus is a specific signal for families already oriented to that school.
+
+**Rental supply is real, but not tomorrow.** About 630 secured rentals matter when they land. Groundbreaking does **not** mean those towers are under construction now.
+
+**Expect years of construction adjacency.** CJN timeline: community centre over roughly the **next three years**, then about **two years** for the high school; housing after that. Plan for trucks, noise, and lane/sidewalk changes if you are close to Oak and 41st.
+
+## Why this matters if you are buying in Oakridge or South Cambie
+
+**Context, not a price call.** JWest confirms Oak and 41st as a long-horizon civic and amenity node. It does not by itself say what a specific home will sell for.
+
+**Buy for the street you will live on during the build.** Walk the corner at rush hour and on a weekend if you are within a few blocks of the dig.
+
+**Watch the housing phase for rental comps** when tower construction starts. Do not underwrite on "630 new rentals arriving soon."
+
+**Separate this site from other Oak / 41st headlines.** JWest is the JCC campus rebuild, not every Oak and 41st application. For the separate Petro-Canada corner proposal two blocks away, see [5680 Oak Street rezoning](/resources/blog/5680-oak-street-rezoning-oakridge-2026).
+
+## A practical south-side takeaway
+
+1. **Near term:** multi-year Diamond JCC build and construction impacts.
+2. **Medium term:** larger public amenities plus bigger King David on campus.
+3. **Longer term:** hundreds of secured rentals; timing still market-dependent.
+
+For the monthly MLS picture across this pocket, see the [market reports](/resources/market-reports) hub. If you want a straight read on how JWest touches your block or search, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge and Vancouver's south side. This post is for general neighbourhood context only and is not investment, legal, or construction advice. Project details can change; confirm with City of Vancouver materials and JWest updates before deciding.*
+
+**Sources:** Canadian Jewish News, Sep 15, 2026; Daily Hive, Nov 6, 2025; GlobeNewswire, Jul 21, 2026; [jwestnow.com](https://jwestnow.com); CTV Vancouver, Sep 15, 2026.`,
+  },
+  {
     slug: "5680-oak-street-rezoning-oakridge-2026",
     title: "Another Tower at Oak and 41st: What the 5680 Oak Rezoning Means for Oakridge",
     seoTitle: "5680 Oak St Rezoning: 26-Storey Near Oakridge Park",
