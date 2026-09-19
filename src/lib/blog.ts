@@ -19,6 +19,72 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "west-vancouver-bylaw-5446-four-to-six-units-september-2026",
+    title: "West Vancouver's four-to-six unit vote is Monday: what Bylaw 5446 means for owners and buyers",
+    seoTitle: "West Vancouver Bylaw 5446: 4-6 Units Vote Sept 21",
+    excerpt:
+      "West Vancouver council considers Bylaw 5446 on Sept 21: four units on most lots, six near Marine Drive transit. What owners and buyers need to know.",
+    date: "September 2026",
+    datePublished: "2026-09-19",
+    dateModified: "2026-09-19",
+    category: "Neighbourhoods",
+    readTime: "6 min read",
+    image: "/images/blog/west-vancouver-bylaw-5446-four-to-six-units-september-2026.webp",
+    content: `I'm Aparna Kapur with Oakwyn Realty. On **Monday, September 21, 2026 at 6 p.m.**, West Vancouver District Council is scheduled to give Zoning Amendment Bylaw No. 5446, 2026 its first, second, and third readings at Municipal Hall (Council Chamber), with WebEx access as well. If adopted later, the bylaw is how West Vancouver would bring most single-family and duplex lots into **Bill 25** small-scale multi-unit housing (**SSMUH**) rules: roughly **four units** on most eligible lots, and up to **six** in a new **RG-4** zone near frequent transit along **Marine Drive**.
+
+I work Oakridge and Vancouver's south side day to day, and I also help North Shore buyers. This vote matters if you own in West Vancouver, if you are shopping there, or if you are comparing the District to the City of North Vancouver and the District of North Vancouver.
+
+## What would Bylaw 5446 change?
+
+Per the District's SSMUH materials and the July 20, 2026 council report:
+
+- About **9,199 parcels** would allow **four units** (zones such as RS2, RS3, RS4, RS5, RS10, and RD1/RD2 outside the frequent-transit buffer).
+- About **1,133 parcels** would move into a new **RG-4** six-unit framework near frequent transit (roughly a **400 m** buffer, broadly along Marine Drive toward about **25th**).
+- About **641 parcels** would stay **exempt** (heritage, oversize lots, no municipal water or sewer, and similar cases listed by staff).
+
+**Four-unit lots (as proposed):** all-inclusive floor area ratio (**FAR**) around **0.65**, with about **0.45 FAR** capped on a single principal dwelling. Coach houses and multiplex ownership forms are enabled in the package staff put forward.
+
+**RG-4 six-unit lots (as proposed):** up to **six units**, **no parking minimum** (provincial SSMUH direction), FAR around **0.8**, affordable rental requirements when a site goes to six units, and roughly **1.2 FAR** if two lots are assembled.
+
+That is the land-use change on the table. It is not a building permit, and it is not a guarantee every lot will be rebuilt.
+
+## Why is this happening now?
+
+**Bill 25** requires local governments to allow SSMUH on most restricted residential lots. West Vancouver missed the province's **June 30** compliance deadline. A Minister letter around **June 18** and a Council direction on **June 23** pushed staff work forward; on **July 20** Council set **September 21** for the three readings of Bylaw 5446.
+
+Under the Local Government Act rules that apply here, **no public hearing is allowed** on this SSMUH zoning package. Readings are the formal council steps, not a town-hall rewrite of the bylaw.
+
+## Do readings mean the bylaw is adopted?
+
+**No.** First, second, and third readings are not the same as adoption. After first reading, **Ministry of Transportation and Transit (MoTT)** approval is still required before Council can adopt. Treat Monday as a major procedural night, not the final signature on every lot map.
+
+## What does this mean if you own in West Vancouver?
+
+**If your lot is in the four-unit pool:** the proposed rules expand what can sit on the parcel (multiplex / coach-house style forms within the FAR caps). That can change how buyers, builders, and neighbours underwrite the land. It does not force you to build.
+
+**If your lot is near Marine Drive in the RG-4 buffer:** six units, higher FAR, and no parking minimum are a bigger shift than the four-unit baseline. Assembly math (two lots, higher FAR) is something to price carefully with a planner or architect, not from a blog post alone.
+
+**If staff list you as exempt:** confirm the reason on your specific folio before you assume four- or six-unit rights apply.
+
+Either way, get the address-level read before you list, hold, or renovate. Zoning text and site constraints (slopes, trees, services, covenants) still decide what pencils.
+
+## What does this mean if you are buying on the North Shore?
+
+West Vancouver is catching up on a provincial mandate. Context next door: the **City of North Vancouver** already adopted its SSMUH package; the **District of North Vancouver** voted against in **April 2026**. So "North Shore density" is not one rulebook. Compare the municipality, the block, and the exact zone, not just the listing photo.
+
+For buyers, SSMUH can mean more future multiplex competition on nearby streets, and more optionality if you are buying a lot for land value rather than the house as-is. For owners thinking about a move to Oakridge or the Cambie Corridor later, the same habit applies: read the bylaw and the comps, not the headline. Monthly MLS colour for my south-side focus sits on the [market reports](/resources/market-reports) hub.
+
+## Bottom line
+
+Monday's readings are West Vancouver's formal step to put **four-unit** rights on most eligible lots and **six-unit RG-4** rights near Marine Drive transit, under **Bill 25 / SSMUH**. Readings are not adoption, and MoTT still sits in the path. If you own or are buying in West Vancouver and want a straight read on how Bylaw 5446 touches your address or search, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and North Shore buyers. This post is general neighbourhood context only and is not legal, planning, or investment advice. Confirm parcel status with District of West Vancouver materials before you decide.*
+
+**Sources:** [District of West Vancouver SSMUH page](https://www.westvancouver.ca/business-development/housing/small-scale-multi-unit-housing); [July 20, 2026 council report (PDF)](https://www.westvancouver.ca/sites/default/files/media/documents/26jul20-5.pdf).`,
+  },
+  {
     slug: "jwest-breaks-ground-oak-41st-oakridge-2026",
     title: "Oak & 41st just broke ground: what JWest means for Oakridge owners and buyers",
     seoTitle: "JWest Breaks Ground at Oak & 41st | What It Means for Oakridge",
