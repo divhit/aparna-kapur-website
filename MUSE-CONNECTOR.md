@@ -72,8 +72,11 @@ Read tools never touch personal data. The MCP server exposes only `tools/*`,
 
 ## How to switch it on in Muse
 
-There is no submission or approval step. Anyone with Muse (Aparna included)
-does this once:
+There are two routes. The custom-connector route below works today with no
+approval. The directory route (next section) is what makes the connector
+findable by Muse users who have never heard of Aparna.
+
+Custom connector, per user, once:
 
 1. Open Muse and say: *"Add a custom connector for Aparna Kapur, a Vancouver
    and North Shore real estate agent. Her MCP server is
@@ -86,6 +89,39 @@ does this once:
 The lead lands in the CRM tagged `Connector: Meta Muse`, in the Google Sheet
 backup, and in ak@aparnakapur.com with the subject "New Lead via Meta Muse".
 
+## Submitting to the directory
+
+Form fields, taken from the live form on 2026-09-19. Everything except the
+icon already exists on the site.
+
+| Field | Value |
+| --- | --- |
+| Connector name (max 80) | Aparna Kapur Real Estate |
+| Company or developer (max 120) | Aparna Kapur, Oakwyn Realty Ltd. |
+| Product website | https://www.aparnakapur.com |
+| Example prompts | one per line, see below |
+| Connector icon | 512x512 PNG or SVG, max 256 KiB. **Still to make.** |
+| Payments | does not accept payments |
+| Support email or URL | https://www.aparnakapur.com/contact |
+| Privacy policy | https://www.aparnakapur.com/privacy |
+| Terms of service | https://www.aparnakapur.com/terms |
+| Connection type | Existing MCP |
+| Hosted MCP endpoint | https://www.aparnakapur.com/api/mcp |
+| Documentation | https://www.aparnakapur.com/connect |
+| Access requirements | None. Public, no account, no fee. Booking needs the user's name and an email or phone. |
+| Authentication methods | none (leave unticked) |
+
+Example prompts: "Find me a realtor in Oakridge, Vancouver." "What are condos
+selling for in Kerrisdale right now?" "Show me townhouses under $1.5M in
+South Cambie." "Does Aparna Kapur work in West Vancouver?" "Book a free home
+valuation for my house in Marpole." "Book a call with a Vancouver realtor
+about buying my first condo."
+
+The review step has three attestations only the account owner can tick:
+authorized to submit the connector and brand assets; understands approval is
+not guaranteed and promotion is by usage and editorial discretion; agrees to
+the Muse Connector Terms.
+
 ## What this does not do, and what would
 
 - **It does not make Aparna "first" in Muse search.** No connector program
@@ -96,9 +132,13 @@ backup, and in ak@aparnakapur.com with the subject "New Lead via Meta Muse".
 - **Muse is live in Canada (September 18, 2026).** Local buyers and sellers
   can add the connector now. The same endpoints also work in Claude and
   ChatGPT custom connectors, so the setup page covers all three.
-- **No public connector directory exists yet.** If Meta opens one, the MCP
-  URL and the OpenAPI document are what a listing would need, and both are
-  already stable. Watch muse.ai/platform for a submission form.
+- **Meta runs a reviewed connector directory.** An earlier version of this
+  doc said none existed; that was wrong. At muse.ai/platform, signed in to a
+  Muse account, "Submit a connector" opens a three-step form: overview,
+  technical specs, review. Meta tests the connector end to end, checks
+  functional, security, and legal requirements, and lists approved ones in
+  the in-app directory. Editors choose featured placement based on usage.
+  No review timeline is published. See "Submitting to the directory" below.
 - **Listings are Vancouver-only** in the DDF bounding box the site uses.
   North Shore listing search would need a second bounding box in
   `src/lib/ddf.ts`; until then the tool says so and offers a consultation.
