@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { formatInlineMarkdown } from "@/lib/blog-markdown";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogPost, getAllBlogSlugs, blogPosts } from "@/lib/blog";
@@ -34,11 +35,6 @@ function metaDescription(excerpt: string, limit = 158): string {
 
 
 /** Inline markdown used in blog bodies: links then bold. Relative hrefs stay relative. */
-function formatInlineMarkdown(text: string): string {
-  return text
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
-    .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -136,6 +132,45 @@ export default async function BlogPostPage({ params }: Props) {
               {post.title}
             </h1>
           </div>
+          <figure className="mb-10">
+            <div className="relative aspect-[1200/630] overflow-hidden rounded-2xl bg-warm-100">
+              <Image
+                src={post.image}
+                alt={post.imageAlt ?? post.title}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-cover"
+              />
+            </div>
+            {post.imageCredit && (
+              <figcaption className="mt-2 text-xs text-warm-400">
+                Photo:{" "}
+                <a
+                  href={post.imageCredit.source}
+                  rel="noopener noreferrer nofollow"
+                  target="_blank"
+                  className="underline hover:text-teal-700"
+                >
+                  {post.imageCredit.author}
+                </a>
+                {", "}
+                {post.imageCredit.licenseUrl ? (
+                  <a
+                    href={post.imageCredit.licenseUrl}
+                    rel="noopener noreferrer nofollow license"
+                    target="_blank"
+                    className="underline hover:text-teal-700"
+                  >
+                    {post.imageCredit.license}
+                  </a>
+                ) : (
+                  post.imageCredit.license
+                )}
+                , via Wikimedia Commons. Cropped.
+              </figcaption>
+            )}
+          </figure>
           <div className="prose prose-lg max-w-none prose-headings:font-serif prose-headings:text-teal-950 prose-p:text-warm-700 prose-p:leading-relaxed prose-a:text-teal-700 prose-strong:text-warm-900 prose-li:text-warm-700 prose-table:text-sm">
             {post.content.split("\n\n").map((block, i) => {
               if (block.startsWith("## ")) {
@@ -336,7 +371,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="relative h-36 overflow-hidden">
                       <Image
                         src={p.image}
-                        alt={p.title}
+                        alt={p.imageAlt ?? p.title}
                         fill
                         sizes="(max-width: 640px) 50vw, 25vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
