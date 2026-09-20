@@ -14,6 +14,7 @@ vi.mock("@/lib/ddf", () => ({ fetchListings }));
 import { callTool, CONNECTOR_TOOLS, matchPlace, toolInputSchema } from "./connector";
 import { NAP, SERVICE_AREA, SITE_URL } from "./site";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
+import { resetRateLimits } from "./rate-limit";
 
 describe("tool catalogue", () => {
   it("names every tool in snake_case with a description an agent can act on", () => {
@@ -76,6 +77,7 @@ describe("matchPlace", () => {
 describe("callTool", () => {
   beforeEach(() => {
     pushLeadToCrm.mockClear();
+    resetRateLimits();
     fetchListings.mockReset();
     delete process.env.RESEND_API_KEY;
   });
@@ -149,32 +151,22 @@ describe("callTool", () => {
     }
   });
 
-  it("search_listings maps arguments onto the DDF query and links each result", async () => {
+  it("search_listings returns a count and a filtered link, never listing content", async () => {
     fetchListings.mockResolvedValue({
-      totalCount: 1,
+      totalCount: 46,
       listings: [
         {
           listingKey: "abc123",
-          listingId: "R1",
           listPrice: 1250000,
           address: "123 W 41st Ave",
-          city: "Vancouver",
-          bedrooms: 3,
-          bathrooms: 2,
-          sqft: 1400,
-          structureType: "Row / Townhouse",
-          status: "Active",
-          latitude: 0,
-          longitude: 0,
           photos: ["https://example.test/p.jpg"],
           realtorUrl: "https://www.realtor.ca/x",
-          modifiedAt: "2026-09-01",
         },
       ],
     });
     const outcome = await callTool(
       "search_listings",
-      { area: "Oakridge", propertyType: "townhouse", maxPrice: 1500000, minBedrooms: 3, limit: 5 },
+      { area: "Oakridge", propertyType: "townhouse", maxPrice: 1500000, minBedrooms: 3 },
       {},
     );
     expect(fetchListings).toHaveBeenCalledWith(
@@ -183,14 +175,32 @@ describe("callTool", () => {
         structureType: "Row / Townhouse",
         maxPrice: 1500000,
         minBedrooms: 3,
-        top: 5,
+        top: 1,
       }),
     );
     expect(outcome.ok).toBe(true);
     if (outcome.ok) {
-      expect(outcome.result.text).toContain("123 W 41st Ave");
-      expect(outcome.result.text).toContain(`${SITE_URL}/property/abc123`);
-      expect(outcome.result.data.count).toBe(1);
+      expect(outcome.result.data.matchingListings).toBe(46);
+      expect(outcome.result.data.searchUrl).toBe(
+        `${SITE_URL}/buying/search?neighbourhood=oakridge&price=-1500000&type=Row+%2F+Townhouse&beds=3`,
+      );
+      // CREA DDF content may only be displayed on the member website.
+      const everything = JSON.stringify(outcome.result);
+      expect(everything).not.toContain("123 W 41st Ave");
+      expect(everything).not.toContain("example.test");
+      expect(everything).not.toContain("realtor.ca");
+      expect(everything).not.toContain("/property/");
+      expect(outcome.result.data.listings).toBeUndefined();
+    }
+  });
+
+  it("search_listings reports a missing count as feed trouble, not as zero homes", async () => {
+    fetchListings.mockResolvedValue({ listings: [] });
+    const outcome = await callTool("search_listings", {}, {});
+    expect(outcome.ok).toBe(true);
+    if (outcome.ok) {
+      expect(outcome.result.isError).toBe(true);
+      expect(outcome.result.text).toContain("temporarily unavailable");
     }
   });
 
@@ -237,6 +247,16 @@ describe("callTool", () => {
       expect(outcome.result.text).toMatch(/email address or a phone number/);
     }
     expect(pushLeadToCrm).not.toHaveBeenCalled();
+  });
+
+  it("book_consultation does not turn an agent's retry into a second lead", async () => {
+    const args = { name: "Sam Lee", email: "Sam@Example.com", intent: "call" as const };
+    const first = await callTool("book_consultation", args, {});
+    const retry = await callTool("book_consultation", { ...args, email: "sam@example.com " }, {});
+    expect(pushLeadToCrm).toHaveBeenCalledTimes(1);
+    expect(first.ok && first.result.data.reference).toMatch(/^AK-/);
+    expect(retry.ok && retry.result.data.reference).toBe("already-received");
+    expect(retry.ok && retry.result.isError).toBeFalsy();
   });
 
   it("book_consultation honours the rate limiter and read tools ignore it", async () => {

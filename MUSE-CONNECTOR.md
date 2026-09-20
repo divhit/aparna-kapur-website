@@ -56,7 +56,7 @@ Tools:
 | `get_agent_profile` | Licence, brokerage, service area, phone, email, hours, verified profiles | No |
 | `check_service_area` | Whether a municipality or neighbourhood is covered (Vancouver, North Vancouver, West Vancouver, and all published neighbourhoods); says no honestly for Burnaby, Surrey, etc. | No |
 | `get_market_snapshot` | Region and per-neighbourhood MLS HPI benchmarks from the current GVR release | No |
-| `search_listings` | Live Vancouver MLS listings via the DDF feed, with filters | No |
+| `search_listings` | How many active Vancouver MLS listings match a search, plus a link to the filtered results on the site. Never returns listing content: CREA's DDF rules allow it to be displayed only on the member's own website | No |
 | `book_consultation` | Creates a lead (CRM + sheet + Resend email) and returns a reference like `AK-XXXXXXXX` | Yes, with consent |
 
 Discovery updates so agents learn the connector exists: `/agents.md` (new
@@ -147,6 +147,11 @@ the Muse Connector Terms.
   functional, security, and legal requirements, and lists approved ones in
   the in-app directory. Editors choose featured placement based on usage.
   No review timeline is published. See "Submitting to the directory" below.
+- **It never hands listing content to an assistant.** CREA's DDF Policy and
+  Rules permit listing content only on a member website, and this site's own
+  terms forbid redistributing MLS data. The first version of `search_listings`
+  returned addresses, prices, and photos; it now returns a count and a link.
+  A test asserts no address, photo, or listing URL appears in the output.
 - **Listings are Vancouver-only** in the DDF bounding box the site uses.
   North Shore listing search would need a second bounding box in
   `src/lib/ddf.ts`; until then the tool says so and offers a consultation.

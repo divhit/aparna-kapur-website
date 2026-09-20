@@ -18,6 +18,8 @@ export const dynamic = "force-dynamic";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
+  // Tool results can carry booking details; never cache them.
+  "Cache-Control": "no-store",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
   "Access-Control-Allow-Headers":
     "Content-Type, Accept, Authorization, Mcp-Session-Id, MCP-Protocol-Version, X-Client-Name",

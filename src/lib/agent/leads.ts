@@ -1,4 +1,5 @@
 import { pushLeadToCrm, splitName } from "@/lib/crm";
+import { isDuplicateLead } from "./rate-limit";
 import { NAP, SITE_URL } from "./site";
 
 /**
@@ -92,9 +93,25 @@ function nextStepFor(lead: AgentLead): string {
   }
 }
 
-export async function submitAgentLead(lead: AgentLead): Promise<LeadResult> {
+export async function submitAgentLead(input: AgentLead): Promise<LeadResult> {
+  // Assistants pass along whatever the user typed; stray whitespace around an
+  // address must not fail validation or defeat the duplicate check.
+  const lead: AgentLead = {
+    ...input,
+    name: input.name?.trim(),
+    email: input.email?.trim() || undefined,
+    phone: input.phone?.trim() || undefined,
+  };
   const problem = validateLead(lead);
   if (problem) return { ok: false, error: problem };
+
+  if (isDuplicateLead(lead.email || lead.phone || "")) {
+    return {
+      ok: true,
+      reference: "already-received",
+      nextStep: `Aparna already has a request from this contact from the last few minutes, so a second one was not created. She will reply to the first, usually the same day. For anything urgent, call ${NAP.telephone}.`,
+    };
+  }
 
   const client = lead.client?.trim() || "AI assistant";
   const source = `Connector: ${client}`;

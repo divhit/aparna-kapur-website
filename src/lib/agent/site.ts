@@ -185,7 +185,7 @@ export const AGENT_ENDPOINTS: { path: string; description: string; machineOnly?:
   { path: "/sitemap-html", description: "Human- and crawler-readable index of every page." },
   { path: "/robots.txt", description: "Crawl policy. All major AI crawlers are allowed." },
   { path: "/connect", description: "How to connect this site to an AI assistant (Meta Muse, ChatGPT, Claude) as a connector, with the MCP and REST URLs." },
-  { path: "/api/mcp", description: "Model Context Protocol server (Streamable HTTP, JSON-RPC over POST). Tools: agent profile, service-area check, market snapshot, listing search, book a consultation.", machineOnly: true },
+  { path: "/api/mcp", description: "Model Context Protocol server (Streamable HTTP, JSON-RPC over POST). Tools: agent profile, service-area check, market snapshot, listing count and link, book a consultation.", machineOnly: true },
   { path: "/api/connector/openapi.json", description: "OpenAPI 3.1 description of the same tools as plain REST endpoints under /api/connector/*.", machineOnly: true },
 ];
 

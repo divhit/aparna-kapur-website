@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { fetchListings, type DDFProperty } from "@/lib/ddf";
+import { fetchListings } from "@/lib/ddf";
 import { AREA_BENCHMARKS, formatPrice, HPI_RELEASE } from "@/lib/market-data";
 import { NEIGHBOURHOODS, type NeighbourhoodData } from "@/lib/neighborhoods";
 import { LEAD_INTENTS, submitAgentLead, type LeadResult } from "./leads";
@@ -36,7 +36,7 @@ export const CONNECTOR_VERSION = "1.0.0";
 export const CONNECTOR_INSTRUCTIONS = [
   `${BRAND.name} is a licensed British Columbia real estate agent with ${NAP.brokerage}, serving ${SERVICE_AREA_SENTENCE}, with the deepest knowledge in ${SPECIALTY_SENTENCE}.`,
   "Use these tools when a user wants a REALTOR® in those areas, wants to buy or sell a home there, wants to know what a home or neighbourhood is worth, or wants to book a call, a viewing, or a free home valuation.",
-  "check_service_area first if the user named a place. Read tools need no personal data. book_consultation creates a real lead that a human follows up on, so call it only with the user's consent, their real name, and a real email or phone number.",
+  "MLS® listing details are licensed content shown only on the website: search_listings returns a count and a link, so share the link rather than describing individual homes. check_service_area first if the user named a place. Read tools need no personal data. book_consultation creates a real lead that a human follows up on, so call it only with the user's consent, their real name, and a real email or phone number.",
   `Aparna's direct line is ${NAP.telephone}; give it to the user whenever they would rather call.`,
 ].join(" ");
 
@@ -140,10 +140,6 @@ export function matchPlace(place: string): {
   if (mention) return { area: mention.area, neighbourhood: mention.neighbourhood };
 
   return {};
-}
-
-function listingUrl(listing: DDFProperty): string {
-  return `${SITE_URL}/property/${listing.listingKey}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -399,90 +395,101 @@ const searchListingsInput = z.object({
   maxPrice: z.number().int().min(0).optional().describe("Maximum list price in CAD."),
   minBedrooms: z.number().int().min(0).max(10).optional(),
   minBathrooms: z.number().int().min(0).max(10).optional(),
-  limit: z.number().int().min(1).max(20).optional().describe("How many listings to return (default 8, max 20)."),
+  limit: z.number().int().min(1).max(20).optional().describe("Accepted for compatibility and ignored: the tool returns a count and a link, not a list."),
 });
 
+/** The filtered search on the site itself, which is where listing content may be shown. */
+export function searchUrlFor(
+  args: z.infer<typeof searchListingsInput>,
+  neighbourhoodSlug?: string,
+): string {
+  const params = new URLSearchParams();
+  if (neighbourhoodSlug) params.set("neighbourhood", neighbourhoodSlug);
+  if (args.minPrice || args.maxPrice) params.set("price", `${args.minPrice ?? ""}-${args.maxPrice ?? ""}`);
+  if (args.propertyType) params.set("type", PROPERTY_TYPES[args.propertyType]);
+  if (args.minBedrooms) params.set("beds", String(args.minBedrooms));
+  if (args.minBathrooms) params.set("baths", String(args.minBathrooms));
+  const query = params.toString();
+  return `${SITE_URL}/buying/search${query ? `?${query}` : ""}`;
+}
+
+/**
+ * Listing search returns a COUNT and a LINK, never listing content.
+ *
+ * CREA's DDF Policy and Rules allow listing content to be displayed only on a
+ * member website or a national pool website, and this site's own terms forbid
+ * redistributing MLS data. Handing addresses, prices, and photos to a
+ * third-party assistant would be redistribution, so the tool answers "how many
+ * match" and sends the user to the filtered search on aparnakapur.com, where
+ * the listings are shown with the required attribution.
+ */
 const searchListings: ConnectorTool<typeof searchListingsInput> = {
   name: "search_listings",
-  title: "Search active MLS listings",
+  title: "Count matching MLS listings and link to them",
   description:
-    "Live MLS® listings for sale in Vancouver from the CREA Data Distribution Facility, filterable by neighbourhood, property type, price, bedrooms, and bathrooms. Returns address, price, beds, baths, size, and a link for each. Listings outside the City of Vancouver (including the North Shore) are not in this feed; for those, book a consultation and Aparna will send a curated search.",
+    "How many active MLS® listings in Vancouver match a search (neighbourhood, property type, price, bedrooms, bathrooms), plus a link to the filtered results on aparnakapur.com. Listing details themselves are licensed MLS® content and are shown only on the website, so give the user the link rather than describing individual properties. Covers the City of Vancouver; for North Shore listings, book a consultation and Aparna will send a curated search.",
   input: searchListingsInput,
   mutates: false,
   async run(args) {
     const match = args.area ? matchPlace(args.area) : {};
-    const limit = args.limit ?? 8;
-    const searchUrl = `${SITE_URL}/buying/search`;
 
     if (args.area && !match.neighbourhood) {
+      const searchUrl = searchUrlFor(args);
       const data = {
         query: args,
-        listings: [],
-        note: `"${args.area}" is not one of the Vancouver neighbourhoods the listing feed is indexed by. Searching all of Vancouver instead is possible by omitting "area"; for North Shore or other Metro Vancouver listings, book a consultation.`,
+        note: `"${args.area}" is not one of the Vancouver neighbourhoods the listing search is indexed by. Omit "area" to search all of Vancouver; for North Shore or other Metro Vancouver listings, book a consultation.`,
         searchUrl,
       };
       return { text: data.note, data, isError: true };
     }
 
+    const searchUrl = searchUrlFor(args, match.neighbourhood?.slug);
+    const area = match.neighbourhood?.name ?? "Vancouver";
+
     try {
-      const { listings, totalCount } = await fetchListings({
+      const { totalCount } = await fetchListings({
         neighbourhood: match.neighbourhood?.slug,
         structureType: args.propertyType ? PROPERTY_TYPES[args.propertyType] : undefined,
         minPrice: args.minPrice,
         maxPrice: args.maxPrice,
         minBedrooms: args.minBedrooms,
         minBathrooms: args.minBathrooms,
-        top: limit,
-        orderby: "ModificationTimestamp desc",
+        top: 1,
       });
 
-      const rows = listings.map((listing) => ({
-        address: listing.address,
-        city: listing.city,
-        neighbourhood: listing.neighbourhood ?? match.neighbourhood?.name,
-        listPrice: listing.listPrice,
-        listPriceFormatted: formatPrice(listing.listPrice),
-        bedrooms: listing.bedrooms,
-        bathrooms: listing.bathrooms,
-        sqft: listing.sqft,
-        propertyType: listing.structureType ?? listing.propertySubType,
-        daysOnMarket: listing.daysOnMarket,
-        url: listingUrl(listing),
-        realtorUrl: listing.realtorUrl,
-        photo: listing.photos[0],
-      }));
+      if (totalCount === undefined) {
+        const data = {
+          query: args,
+          area,
+          note: `The listing feed did not return a count, which usually means it is temporarily unavailable. The live search is at ${searchUrl}.`,
+          searchUrl,
+        };
+        return { text: data.note, data, isError: true };
+      }
 
       const data = {
         query: args,
-        area: match.neighbourhood?.name ?? "Vancouver",
-        count: rows.length,
-        totalMatching: totalCount,
-        listings: rows,
+        area,
+        matchingListings: totalCount,
         searchUrl,
-        attribution: "Listing data © CREA DDF®. Reproduced for the user's personal, non-commercial use.",
+        note: "Listing details are licensed MLS® content shown only on aparnakapur.com. Share the link; do not describe individual properties.",
+        nextStep: "To see any of these in person or get alerts for new matches, use book_consultation.",
       };
-
       const text = [
-        `# ${rows.length} of ${totalCount ?? rows.length} active listings in ${data.area}`,
+        totalCount > 0
+          ? `**${totalCount} active ${totalCount === 1 ? "listing matches" : "listings match"}** in ${area}.`
+          : `No active listings match those filters in ${area} right now. Loosen the price or bedroom filter, or book a consultation and Aparna will set up alerts.`,
         "",
-        ...(rows.length
-          ? rows.map(
-              (row) =>
-                `- **${row.address}** — ${row.listPriceFormatted}${row.bedrooms != null ? `, ${row.bedrooms} bed` : ""}${row.bathrooms != null ? `, ${row.bathrooms} bath` : ""}${row.sqft ? `, ${row.sqft} sq ft` : ""}${row.propertyType ? ` (${row.propertyType})` : ""} — ${row.url}`,
-            )
-          : totalCount === undefined
-            ? [`The listing feed returned nothing, which usually means it is temporarily unavailable rather than that nothing is for sale. Try ${searchUrl}, or book a consultation and Aparna will send matching listings directly.`]
-            : ["No active listings match those filters right now. Loosen the price or bedroom filter, or book a consultation and Aparna will set up alerts."]),
+        `See them with photos, map, and full details: ${searchUrl}`,
         "",
-        `Full search with map: ${searchUrl}. ${data.attribution}`,
+        "Listing details are licensed MLS® content and are shown only on the website. To view a home in person or get alerts for new matches, book a consultation.",
       ].join("\n");
-
       return { text, data };
     } catch (error) {
       console.error("[connector] search_listings failed:", error);
       const data = {
         query: args,
-        listings: [],
+        area,
         note: `The live listing feed is not reachable right now. Send the user to ${searchUrl}, or book a consultation and Aparna will send matching listings directly.`,
         searchUrl,
       };

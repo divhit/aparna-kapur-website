@@ -9,7 +9,7 @@ import { BRAND, NAP, SERVICE_AREA_SENTENCE, SITE_URL } from "@/lib/agent/site";
 export const metadata: Metadata = {
   title: "Connect Aparna Kapur to Meta Muse, ChatGPT or Claude",
   description:
-    "Add Aparna Kapur, Vancouver and North Shore REALTOR®, to your AI assistant. Ask it to check her service area, pull market data, search listings, or book a call — through MCP or a plain REST API.",
+    "Add Aparna Kapur, Vancouver and North Shore REALTOR®, to your AI assistant. Ask it to check her service area, pull market data, find matching listings, or book a call — through MCP or a plain REST API.",
   alternates: { canonical: "/connect" },
 };
 
@@ -19,7 +19,7 @@ const OPENAPI_URL = `${SITE_URL}/api/connector/openapi.json`;
 const FAQS = [
   {
     q: "What can my assistant do once it is connected?",
-    a: `Confirm whether Aparna serves a place (${SERVICE_AREA_SENTENCE} and every Vancouver neighbourhood), give you her direct phone and email, quote current MLS® HPI benchmark prices, search live Vancouver listings, and book a call, a viewing, or a free home valuation on your behalf.`,
+    a: `Confirm whether Aparna serves a place (${SERVICE_AREA_SENTENCE} and every Vancouver neighbourhood), give you her direct phone and email, quote current MLS® HPI benchmark prices, count matching Vancouver listings and link to them, and book a call, a viewing, or a free home valuation on your behalf.`,
   },
   {
     q: "Does booking through an assistant commit me to anything?",
@@ -63,7 +63,7 @@ export default function ConnectPage() {
             <p className="text-warm-600 leading-relaxed">
               If you ask an assistant to find a REALTOR® in {SERVICE_AREA_SENTENCE}, it
               can talk to this site the same way you would: confirm Aparna covers the
-              area, read the current benchmark prices, look at what is for sale, and
+              area, read the current benchmark prices, see how many homes match, and
               send her a booking request with your details. She replies personally,
               usually the same day.
             </p>
