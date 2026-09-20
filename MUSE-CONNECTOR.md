@@ -91,6 +91,14 @@ backup, and in ak@aparnakapur.com with the subject "New Lead via Meta Muse".
 
 ## Submitting to the directory
 
+> **Status:** Submitted for review on 2026-09-19 from a Canadian Muse account,
+> as "Aparna Kapur Real Estate", connection type Existing MCP, no
+> authentication, does not accept payments. Contact on file:
+> ak@aparnakapur.com. Not yet approved or listed. Meta publishes no review
+> timeline. Its reviewers test end to end, so expect test bookings in the CRM
+> tagged `Connector: ...`; treat unfamiliar ones from Meta as review traffic.
+> Icon used: `public/images/brand/connector-icon-512.png`.
+
 Form fields, taken from the live form on 2026-09-19. Everything except the
 icon already exists on the site.
 
