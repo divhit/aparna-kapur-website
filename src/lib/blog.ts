@@ -14,6 +14,20 @@ export type BlogPost = {
   category: string;
   readTime: string;
   image: string;
+  /** Describes what the photo shows. Falls back to the title when omitted. */
+  imageAlt?: string;
+  /**
+   * Attribution for a licensed photo. Every Creative Commons image needs this
+   * rendered next to it; `blog.test.ts` fails if a Commons-sourced image loses
+   * its credit.
+   */
+  imageCredit?: {
+    author: string;
+    license: string;
+    licenseUrl?: string;
+    /** The file's page on Wikimedia Commons (or other source). */
+    source: string;
+  };
   content: string;
 };
 
@@ -30,6 +44,13 @@ export const blogPosts: BlogPost[] = [
     category: "Neighbourhoods",
     readTime: "6 min read",
     image: "/images/blog/west-vancouver-bylaw-5446-four-to-six-units-september-2026.webp",
+    imageAlt: "Apartment towers along the Dundarave and Ambleside waterfront in West Vancouver, seen across the water",
+    imageCredit: {
+      author: "Andrea Schaffer",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:Dundarave,_West_Vancouver_(349799835).jpg",
+    },
     content: `I'm Aparna Kapur with Oakwyn Realty. On **Monday, September 21, 2026 at 6 p.m.**, West Vancouver District Council is scheduled to give **Zoning Amendment Bylaw No. 5446, 2026** its first, second, and third readings at Municipal Hall (Council Chamber), with WebEx access too. This is a **proposed** Bill 25 SSMUH package. It is **not adopted** yet.
 
 If it proceeds, most eligible single-family and duplex lots would allow **four units**. A smaller Marine Drive transit band would allow up to **six** under a new **RG-4** zone. I work Oakridge and Vancouver's south side, and I help North Shore buyers. Here is what owners and buyers should know before Monday.
@@ -102,6 +123,13 @@ If you own or are buying in West Vancouver and want a straight read on how Bylaw
     category: "Neighbourhoods",
     readTime: "6 min read",
     image: "/images/blog/jwest-breaks-ground-oak-41st-oakridge-2026.webp",
+    imageAlt: "Oakridge Centre on West 41st Avenue in 2018, before redevelopment, a few blocks east of the JWest site at Oak and 41st",
+    imageCredit: {
+      author: "Wpcpey",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Oakridge_Centre_2018.jpg",
+    },
     content: `I'm Aparna Kapur with Oakwyn Realty. On September 14, 2026, the corner of Oak Street and West 41st Avenue shifted from drawings and rezoning votes to a ceremonial dig. The Canadian Jewish News reported the next day that Vancouver's Jewish community, donors, and elected officials gathered for the groundbreaking of **JWest**, a multi-phase rebuild of the long-standing Jewish Community Centre site in [Oakridge](/neighborhoods/oakridge).
 
 If you live or are looking near [Oakridge Park](/resources/blog/oakridge-park-redevelopment-2026), [South Cambie](/neighborhoods/south-cambie), or the [Cambie Corridor](/neighborhoods/cambie-corridor), this is not abstract civic news. It is a multi-year construction and amenity story on one of the south side's busiest corners, next to rapid transit, bus routes, and a neighbourhood already mid-transformation.
@@ -164,6 +192,13 @@ For the monthly MLS picture across this pocket, see the [market reports](/resour
     category: "Neighbourhoods",
     readTime: "5 min read",
     image: "/images/blog/5680-oak-street-rezoning-oakridge-2026.webp",
+    imageAlt: "Townhomes lining Oak Street in Vancouver's Oakridge neighbourhood",
+    imageCredit: {
+      author: "Wpcpey",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Oak_Street_Vancouver_2018.jpg",
+    },
     content: `I'm Aparna Kapur with Oakwyn Realty. The City of Vancouver has a live rezoning file for **5680 Oak Street**, the Petro-Canada / 7-Eleven corner at Oak Street and West 41st Avenue. The proposal is a **26-storey mixed-use tower** with **193 strata homes** and ground-floor commercial space, next to Grosvenor's Mayfair West site (the former Oakridge Transit Centre) and about two blocks from [Oakridge Park](/resources/blog/oakridge-park-redevelopment-2026).
 
 This is not a rumour. It is an as-submitted City application on [Shape Your City: 5680 Oak St](https://www.shapeyourcity.ca/5680-oak-st). [Storeys](https://storeys.com/5680-oak-street-proposal-vancouver/) covered the published application on September 4, 2026.
@@ -222,6 +257,13 @@ I work this pocket every week. If you want a straight read on how this (or Mayfa
     category: "Market Analysis",
     readTime: "5 min read",
     image: "/images/blog/metro-vancouver-unsold-condos-oakridge-cambie-2026.webp",
+    imageAlt: "Concrete condo towers in Vancouver under an overcast sky",
+    imageCredit: {
+      author: "Larry Syverson",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:Vancouver_Condos_(52350843176).jpg",
+    },
     content: `I'm Aparna Kapur with Oakwyn Realty. Metro Vancouver is carrying about **$4.4 billion** in finished-but-unsold condos (Real Property Data via the *Vancouver Sun*, Sept. 15, 2026), and Zonda Urban counted just over **5,300 finished-but-unsold condos and townhomes** Metro-wide this week: inventory buyers can walk into near Oakridge-41st and along the [Cambie Corridor](/neighborhoods/cambie-corridor), and that developers still hold.
 
 According to the same *Sun* coverage, the $4.4B figure is valued against similar units sold in 2026. Zonda's Metro count includes **958 in the City of Vancouver**, with larger counts in Burnaby (1,200), Richmond (816), Surrey (559), and Coquitlam / Port Moody (543).
@@ -283,6 +325,13 @@ If you want a side-by-side on a specific building versus current standing invent
     category: "Neighbourhoods",
     readTime: "9 min read",
     image: "/images/blog/oakridge-park-spring-2026-opening-guide.webp",
+    imageAlt: "The north atrium at Oakridge Park in 2026, with circular timber seating terraces under a glass roof",
+    imageCredit: {
+      author: "Canmenwalker",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Oakridge_Park_North_Atrium_2026.JPG",
+    },
     content: `> **Update (July 2026):** Oakridge Park officially opened on May 28, 2026 — including Time Out Market Vancouver and much of the rooftop park — with remaining civic amenities continuing to come online. This guide was written ahead of the opening; the details below describe what has now arrived.
 
 ## I Walked Past 41st and Cambie Last Tuesday — It Barely Looks Like the Same Place
@@ -422,6 +471,13 @@ If you want to understand what this means for your specific real estate plans �
     category: "Neighbourhoods",
     readTime: "8 min read",
     image: "/images/blog/oakridge-vs-kerrisdale-vancouver-neighbourhood-comparison.webp",
+    imageAlt: "A row of cherry trees in blossom on Vancouver's west side, near Kerrisdale and Arbutus Ridge",
+    imageCredit: {
+      author: "popejon2",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:Cherry_Blossoms,_Arbutus_Ridge_Kerrisdale_Mackenzie_Heights_Vancouver_(4411972597).jpg",
+    },
     content: `## I Walk Both of These Neighbourhoods Every Week
 
 Oakridge and Kerrisdale sit side by side on Vancouver's west side, separated by a few blocks along 41st Avenue. I'm Aparna Kapur with Oakwyn Realty, and I spend a lot of time in both — showing homes, grabbing coffee on the Kerrisdale village strip, watching the cranes at Oakridge Park. I genuinely love both neighbourhoods, which is why this is one of my favourite conversations to have with buyers.
@@ -595,6 +651,13 @@ If you're weighing these two areas — or comparing them to South Cambie, Riley 
     category: "Market Analysis",
     readTime: "7 min read",
     image: "/images/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know.webp",
+    imageAlt: "Looking north over the Cambie Corridor to downtown Vancouver from Queen Elizabeth Park",
+    imageCredit: {
+      author: "Xicotencatl",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Vancouver_from_Queen_Elizabeth_Park.jpg",
+    },
     content: `## In October 2025, Vancouver Quietly Rezoned Over 4,300 Properties Along the Canada Line
 
 If you own a home along Cambie Street between Marine Drive and King Edward — in Oakridge, South Cambie, Langara, or Marpole — your property's zoning may have changed. You might not have even noticed.
@@ -739,6 +802,13 @@ I specialize in the Oakridge, South Cambie, Riley Park, and Cambie Corridor mark
     category: "Buying",
     readTime: "7 min read",
     image: "/images/blog/resale-vs-presale-vancouver-condos-2026.webp",
+    imageAlt: "Condo buildings under construction with tower cranes in Southeast False Creek, Vancouver",
+    imageCredit: {
+      author: "Payton Chung",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:Southeast_False_Creek_district,_under_construction.jpg",
+    },
     content: `## The Decision Has Changed
 
 Until recently, choosing between a presale and a resale condo in Vancouver was a genuinely difficult decision. Both options had strong arguments in their favour, and the right choice depended heavily on timing and personal circumstances.
@@ -799,6 +869,13 @@ It comes down to running the numbers on your specific situation. That is what I 
     category: "Neighbourhoods",
     readTime: "6 min read",
     image: "/images/blog/is-oakridge-vancouvers-new-downtown.webp",
+    imageAlt: "Aerial view of Oakridge, Vancouver in 2018, with Oakridge Centre and Cambie Street running through low-rise housing",
+    imageCredit: {
+      author: "Wpcpey",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Oakridge_aerial_view_2018.jpg",
+    },
     content: `## A Municipal Town Centre Is Born
 
 In July 2011, the Oakridge commercial area, home to the Oakridge Centre mall since 1959, was officially designated as a **municipal town centre** by the City of Vancouver. The first of its kind in Metro Vancouver, placing it in a category similar to Brentwood Town Centre in Burnaby or City Centre in Surrey.
@@ -868,6 +945,13 @@ I live and work in this area. I watch the construction progress every week. If y
     category: "Neighbourhoods",
     readTime: "8 min read",
     image: "/images/blog/oakridge-park-redevelopment-2026.webp",
+    imageAlt: "The east galleria at Oakridge Park in 2026, with shoppers, storefronts, and an indoor tree",
+    imageCredit: {
+      author: "Canmenwalker",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Oakridge_Park_East_Galleria_2026.JPG",
+    },
     content: `## The Biggest Development in Vancouver's History
 
 The Oakridge Park redevelopment is unlike anything Vancouver has seen before. What was once a conventional shopping mall at 41st and Cambie is being transformed into a 28-acre mixed-use community that will fundamentally reshape this corner of the city.
@@ -954,6 +1038,13 @@ Whether you're looking to buy near Oakridge Park or wondering what your current 
     category: "Buying",
     readTime: "10 min read",
     image: "/images/blog/first-time-buyer-programs-bc-2026.webp",
+    imageAlt: "A row of modern wood-clad townhomes in Kitsilano, Vancouver",
+    imageCredit: {
+      author: "pnwra",
+      license: "CC BY 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:The_Point_at_Kits_(463378255).jpg",
+    },
     content: `## Buying Your First Home in BC: Every Program That Can Help
 
 Purchasing your first home in British Columbia is a significant milestone, and an expensive one. The good news? There are more programs than ever to help first-time buyers get into the market. Here's a comprehensive guide to every program available in 2026.
@@ -1077,6 +1168,13 @@ Ready to start your home-buying journey? Let's talk about your situation and cre
     category: "Neighbourhoods",
     readTime: "7 min read",
     image: "/images/blog/best-neighborhoods-vancouver-families-2026.webp",
+    imageAlt: "Autumn colour reflected in Trout Lake at John Hendry Park in East Vancouver, with the North Shore mountains behind",
+    imageCredit: {
+      author: "David Zhang",
+      license: "CC BY-SA 2.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+      source: "https://commons.wikimedia.org/wiki/File:Autumn_at_Trout_Lake,_Vancouver_(54210905867).jpg",
+    },
     content: `## Finding Your Family's Perfect Vancouver Neighbourhood
 
 Choosing where to raise your family in Vancouver is one of the most important decisions you'll make. Beyond just the home itself, the neighbourhood shapes your daily life: school quality, park access, community feel, safety, and convenience all matter.
@@ -1182,6 +1280,13 @@ Contact me for a personalised neighbourhood tour. I will show you the parks, sch
     category: "Advice",
     readTime: "8 min read",
     image: "/images/blog/how-to-choose-a-realtor-in-vancouver.webp",
+    imageAlt: "A Craftsman house with a white picket fence on West 5th Avenue in Kitsilano, Vancouver",
+    imageCredit: {
+      author: "Joltex",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:3171_West_5th_Avenue,_Vancouver_BC.jpg",
+    },
     content: `## Yes, I'm a Realtor Writing About How to Choose a Realtor
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and I'll acknowledge the obvious up front: I have a horse in this race. But I've also sat across the table from enough buyers and sellers who chose badly the first time — and paid for it in stress, money, or both — that I think an honest guide is worth writing. Everything below is what I'd tell a close friend, even if it meant they hired someone else.
@@ -1256,6 +1361,7 @@ If your search touches Vancouver — [Oakridge](/neighborhoods/oakridge), Kerris
     category: "Advice",
     readTime: "7 min read",
     image: "/images/blog/what-does-a-realtor-cost-in-bc-commissions-explained.webp",
+    imageAlt: "A calculator, a pen, and a printed rate table on a wooden desk",
     content: `## The Question Everyone Asks Me at Open Houses
 
 I'm Aparna Kapur, a realtor with Oakwyn Realty in Vancouver, and the most common question I get from first-time sellers — usually asked a little sheepishly — is "so what does this actually cost?" It's a fair question, and the answer is more transparent than most people expect. Here's how real estate commissions work in British Columbia, with real numbers.
@@ -1319,6 +1425,13 @@ Commission should never be a mystery, and you should never feel awkward asking a
     category: "Market Analysis",
     readTime: "7 min read",
     image: "/images/blog/vancouver-market-update-june-2026.webp",
+    imageAlt: "Downtown Vancouver skyline, BC Place, and False Creek with a Canadian flag in the foreground",
+    imageCredit: {
+      author: "Quintin Soloviev",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Skyline_of_Vancouver,_BC.jpg",
+    },
     content: `## The Most Interesting Month of Data in a While
 
 I'm Aparna Kapur with Oakwyn Realty, and every month I go through the Greater Vancouver REALTORS (GVR) statistics package so my clients don't have to. June 2026 is the most interesting month of data we've had in some time — not because prices moved, but because demand did.
