@@ -423,7 +423,7 @@ function legalDocument(path: string): MarkdownDocument | null {
 function connectDocument(): MarkdownDocument {
   const page = findSitePage("/connect");
   const body = [
-    `${BRAND.name} can be added to any assistant that uses tools — Meta Muse, ChatGPT, Claude, or an MCP client — so it can check her service area (${SERVICE_AREA_SENTENCE}), quote current MLS HPI benchmarks, search live Vancouver listings, and book a call, a viewing, or a free home valuation on the user's behalf.`,
+    `${BRAND.name} can be added to any assistant that uses tools — Meta Muse, ChatGPT, Claude, or an MCP client — so it can check her service area (${SERVICE_AREA_SENTENCE}), quote current MLS HPI benchmarks, count matching Vancouver listings and link to them on the site, and book a call, a viewing, or a free home valuation on the user's behalf.`,
     "",
     "## Endpoints",
     "",

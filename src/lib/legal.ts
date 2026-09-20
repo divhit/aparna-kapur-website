@@ -29,7 +29,7 @@ export type LegalDocument = {
   sections: LegalSection[];
 };
 
-const LAST_UPDATED = "2026-08-21";
+const LAST_UPDATED = "2026-09-19";
 
 export const PRIVACY_POLICY: LegalDocument = {
   path: "/privacy",
@@ -64,6 +64,7 @@ export const PRIVACY_POLICY: LegalDocument = {
         },
         "Information collected automatically. If Google Analytics is enabled on the site, it records which pages you visit, the site or search that referred you, an approximate location derived from your IP address, and basic device and browser details. Standard server logs record request details for security and troubleshooting.",
         "The site assistant. Messages you type into the chat assistant are sent to Google's Gemini API to generate a reply. The conversation is kept in your browser's local storage so it survives a page reload; it is not stored on a server tied to your identity. Please do not type financial details, government identifiers, or anything else sensitive into the assistant — use the phone number or email above instead.",
+        "Requests sent through an AI assistant. This site offers a connector that lets an AI assistant you use, such as Meta Muse, ChatGPT, or Claude, act for you. Looking up market figures, checking the service area, or counting matching listings sends no personal information. If you ask the assistant to book a call, a viewing, or a home valuation, it sends the details you gave it: your name, an email address or phone number, and anything you chose to add, such as an address, a budget, or a preferred time. We receive exactly what the assistant sends and treat it the same way as a contact form, with a note of which assistant it came from. The assistant's own provider handles your conversation under its privacy policy, not this one.",
         "This site does not ask for your Social Insurance Number, banking details, or government identification. If a page ever appears to, it is not one of ours.",
       ],
     },

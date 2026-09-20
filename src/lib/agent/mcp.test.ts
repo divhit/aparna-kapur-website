@@ -121,7 +121,7 @@ describe("MCP tools", () => {
     await handleMcpBody(
       request("tools/call", {
         name: "book_consultation",
-        arguments: { name: "Sam Lee", email: "sam@example.com", intent: "call" },
+        arguments: { name: "Sam Lee", email: "meta-client@example.com", intent: "call" },
         _meta: { client: "Meta Muse" },
       }),
       { client: "curl" },

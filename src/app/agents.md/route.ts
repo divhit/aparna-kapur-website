@@ -121,7 +121,7 @@ An assistant that can call tools does not need to scrape the contact page. The s
 | \`get_agent_profile\` | Licence, brokerage, service area, phone, email, hours | No |
 | \`check_service_area\` | Whether a municipality or neighbourhood is covered, with the guide URL and benchmark | No |
 | \`get_market_snapshot\` | Region-wide and per-neighbourhood MLS HPI benchmarks | No |
-| \`search_listings\` | Live Vancouver MLS listings with filters | No |
+| \`search_listings\` | How many active Vancouver MLS listings match a search, with a link to the filtered results on this site. Listing details are licensed content and stay on the site | No |
 | \`book_consultation\` | Sends Aparna a call-back, viewing, or free valuation request; a human follows up | Yes — name plus email or phone, with the user's consent |
 
 Setup instructions for Meta Muse, ChatGPT, and Claude: ${SITE_URL}/connect
