@@ -33,6 +33,86 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vancouver-north-west-van-rents-september-2026",
+    title: "Vancouver Rents Rose While the Region Softened. West Van and North Van Still Top Canada",
+    seoTitle: "Vancouver, North & West Van Rents | Sept 2026",
+    excerpt:
+      "West Van, North Van, and Vancouver are Canada's three priciest rental cities this month. Vancouver proper rose 3.3% YoY while Metro asking rents eased.",
+    date: "September 2026",
+    datePublished: "2026-09-21",
+    dateModified: "2026-09-21",
+    category: "Market Analysis",
+    readTime: "6 min read",
+    image: "/images/blog/vancouver-north-west-van-rents-september-2026.webp",
+    content: `I'm Aparna Kapur with Oakwyn Realty. Vancouver rents rose while the Metro average softened. West Vancouver and North Vancouver still sit at the top of Canada's asking-rent list.
+
+If you are watching asking rents across the City of Vancouver, North Vancouver, and West Vancouver, September's liv.rent Metro Vancouver report is worth a careful read. The regional average eased. These three municipalities did not move as one story.
+
+## What are the headline numbers?
+
+Across Metro Vancouver, the average asking rent for a newly listed unfurnished one-bedroom was **$2,085** in September 2026, down **0.64%** from August and **3.95%** ($86) from September 2025.
+
+Inside our three cities:
+
+| Municipality | Unfurnished 1BR (Sep 2026) | Notes |
+|---|---|---|
+| **West Vancouver** | **$2,465** | Canada's most expensive city to rent this month; down from $2,533 in August (-2.69% MoM), still -2.19% YoY |
+| **North Vancouver** | **$2,446** | Second nationally; up from $2,384 in August (+$62 MoM) |
+| **City of Vancouver** | **$2,328** | Third nationally; up from $2,289 in August; **+3.32% YoY** |
+
+liv.rent's Canada ranking puts West Vancouver first, North Vancouver second, and Vancouver third. That is the entire City of Vancouver / North Van / West Van stack at the top of the national list.
+
+## Why does Vancouver proper stand out?
+
+Eight of nine Metro municipalities posted lower unfurnished one-bedroom asking rents than a year ago. Vancouver moved the other way. liv.rent notes Vancouver was the only Metro city with a year-over-year increase, up 3.32% to $2,328.
+
+That matters if you are comparing "Metro softens" headlines with what tenants and landlords actually see on listings inside Vancouver city limits. Asking rents (current listings) are not the same as in-place rents in older buildings. liv.rent's methodology uses current asking prices and excludes luxury listings over $5,000, rooms, and shared accommodation.
+
+## How do neighbourhoods split inside Vancouver?
+
+Among City of Vancouver neighbourhoods with available data this month:
+
+- **Most expensive unfurnished 1BR:** West Point Grey / UBC at **$2,626**
+- **Most affordable:** Sunset-Victoria-Fraserview at **$1,745**
+
+Four of the five most expensive neighbourhoods region-wide sat in Vancouver (West End, Downtown, West Point Grey/UBC, Kitsilano among the names called out in local coverage).
+
+For buyers and sellers on the west side, that gap between Point Grey/UBC and the Fraserview-Sunset belt is a reminder that "Vancouver rent" is not one number. Catchment, transit, and building stock still carve the city into very different rental submarkets.
+
+## What is the North Shore nuance?
+
+West Vancouver's unfurnished and furnished one-bedroom markets moved in opposite directions: furnished rose **2.93%** while unfurnished fell **2.69%** month over month. North Vancouver saw unfurnished one-bedrooms climb month over month alongside Vancouver.
+
+Larger homes tell a different story. West Vancouver two- and three-bedroom asking rents moved higher (to about **$3,509** and **$5,131** in local coverage of the same report). North Vancouver remained among the priciest markets for those sizes as well.
+
+If you own a larger North Shore rental, or you are shopping for a family-sized lease, do not lean only on the one-bedroom headline.
+
+## What is the policy backdrop?
+
+As of September 2, 2026, the Bank of Canada held the policy rate at **2.25%** (seventh consecutive hold; next announcement October 28). B.C.'s annual allowable rent increase for 2026 remains capped at **2.3%**. Rate holds and the provincial cap shape landlord math, but they do not erase listing-level differences between Vancouver proper and the softer Metro average.
+
+## What does this mean if you are deciding?
+
+- **Renters in Vancouver proper:** Do not expect the same year-over-year relief showing up in most other Metro cities. Compare neighbourhoods (Point Grey/UBC vs south-east pockets) and treat asking rent as the negotiation floor, not a guarantee.
+- **North Shore renters:** You are in Canada's top two municipal markets by asking rent. Month-over-month moves can differ sharply between furnished and unfurnished stock.
+- **Investors and homeowners with suites:** City of Vancouver's YoY uptick in asking one-bedrooms is the local exception inside a softer region. Underwrite to asking comps on your block, not the Metro average.
+- **Buyers weighing carry costs:** If rent needs to cover mortgage, taxes, and strata, run the numbers with West Van / North Van / Vancouver asking rents, not a blended Metro figure. Monthly MLS colour for the broader market sits on the [market reports](/resources/market-reports) hub.
+
+This is asking-rent data from liv.rent's September 2026 Metro Vancouver report and contemporary local coverage. It is not CMHC in-place rent, and it is not a sales-market forecast. For a property-level read in Vancouver, North Vancouver, or West Vancouver, get current comps before you renew, list, or underwrite.
+
+If you want a straight read on how these asking rents touch a specific building, suite, or purchase you are weighing, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact). When you are ready to [buy](/buying) or [sell](/selling), we can map carry costs against the current comps.
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and North Shore buyers. This post is general market context only and is not legal, rental, or investment advice. Confirm current listings and municipal rules before you decide.*
+
+**Sources:**
+1. [liv.rent, September 2026 Metro Vancouver rent report](https://liv.rent/blog/rent-reports/september-2026-metro-vancouver-rent-report/)
+2. [Daily Hive Urbanized, Vancouver rent September coverage (Sep 20, 2026)](https://dailyhive.com/vancouver/vancouver-rent-expensive-september)
+3. [Vancouver Is Awesome, September rent coverage](https://www.vancouverisawesome.com/local-news/vancouver-rent-report-housing-sept-2026-12765420)
+4. [Bank of Canada policy rate hold, Sep 2, 2026](https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/)`,
+  },
+  {
     slug: "west-vancouver-bylaw-5446-four-to-six-units-september-2026",
     title: "West Vancouver Bylaw 5446: Four to Six Units on Most Lots (What Council Decides September 21)",
     seoTitle: "West Vancouver Bylaw 5446: 4-6 Units Vote Sept 21",
