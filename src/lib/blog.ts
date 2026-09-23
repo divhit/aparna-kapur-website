@@ -33,6 +33,86 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "seaside-olympic-village-schools-downtown-vancouver-2026",
+    title: "Buying Near False Creek or Coal Harbour? School Catchments Just Changed in a Big Way",
+    seoTitle: "Seaside & Olympic Village Schools | Downtown Vancouver 2026",
+    excerpt:
+      "Seaside Elementary opened September 2026 in Coal Harbour. Olympic Village school early works started the same month. What that means for downtown and SEFC buyers.",
+    date: "September 2026",
+    datePublished: "2026-09-22",
+    dateModified: "2026-09-22",
+    category: "Neighbourhoods",
+    readTime: "~7 min read",
+    image: "/images/blog/seaside-olympic-village-schools-downtown-vancouver-2026.webp",
+    imageAlt: "Yaletown Seawall and marina with downtown Vancouver residential towers along False Creek at night",
+    content: `I'm Aparna Kapur with Oakwyn Realty. For years, families shopping downtown Vancouver and Southeast False Creek have asked the same question before they ever ask about price per square foot: where will the kids go to school? This September finally gave a clearer answer on two fronts. Seaside Elementary opened in Coal Harbour for the 2026-27 year, and the Vancouver School Board started early construction on the long-promised Olympic Village elementary school.
+
+If you are buying or selling a condo near the seawall, Rogers Arena, or the Olympic Village Canada Line stop, school capacity is no longer a vague future promise. It is moving on the ground right now.
+
+## Seaside Elementary is open in Coal Harbour
+
+On September 8, 2026, the Vancouver School Board welcomed about 275 kindergarten to Grade 7 students into the permanent building at 482 Broughton Street. The school's full name is cəw̓as Ch'elxwá7elch Skwuláw̓txw Seaside Elementary, with names gifted by Musqueam, Tsleil-Waututh, and Squamish Nations.
+
+The school sits in an 11-storey mixed-use building next to Coal Harbour Community Centre. Per City and VSB project materials reported locally:
+
+- Roughly 43,000 sq. ft. of school space on the first three levels
+- Designed capacity of about 317 students
+- A gymnasium and library
+- Childcare on level four for about 64 children
+- About 60 social housing units in the upper floors
+
+This is downtown's first new public elementary school since Crosstown opened in 2017. Lord Roberts Annex is closing so BC Hydro can build a substation under Nelson Park, with Annex students shifting temporarily to Seaside. A rebuilt Lord Roberts at Nelson Park is still years out (VSB has pointed to around 2032). Until then, Seaside is carrying real load for Coal Harbour and the northern West End.
+
+Catchment boundaries were redrawn to take effect with the September 2026 school year. Coal Harbour and the northernmost West End now sit under Seaside, with a small slice formerly in Crosstown's northwest corner also moving over. If you are underwriting a purchase with kids in mind, pull the current VSB catchment map before you assume the old Lord Roberts / Crosstown lines still apply.
+
+## Olympic Village: early construction started this month
+
+On September 1, 2026, VSB posted that Kinetic Construction Ltd. would begin early works in September, ahead of the main building phase planned for spring 2027. A community postcard went out September 2.
+
+The current VSB timeline:
+
+- September 2026 to spring 2027: fencing, tree protection, tree removal (with replacement), soil removal, and piling
+- Spring 2027: main school building construction
+- End of 2029: construction expected complete, then furniture and equipment
+- 2030: school expected to open
+
+The site is the City-owned grassy area at Hinge Park near the northern foot of Columbia Street (now also addressed as 1601 Columbia Street in permit work). It has been reserved for a school in the Southeast False Creek Official Development Plan for decades. Vancouver City Council approved the height text amendment on February 26, 2026, lifting the limit from 13.5 m to 18.8 m so the building can reach four storeys and the designed enrolment.
+
+What is planned:
+
+- Capacity for about 630 students (kindergarten to Grade 7)
+- About 60 before- and after-school care spaces
+- Rooftop outdoor play
+- About $150 million in provincial funding tied to this site, capacity, and timeline
+
+VSB and City materials around the public hearing described serious local pressure: the four closest schools were short by roughly 800 elementary seats relative to demand, and in 2025 more than 250 kindergarten students were placed outside their home catchments. Roughly three-quarters of Olympic Village enrolment is expected from the local area, with the rest helping relieve adjacent over-capacity catchments such as Fraser, False Creek, and Crosstown. Confirm exact future catchment lines with VSB as opening nears. They are not locked the way a rezoning height is.
+
+## Why this matters if you are buying or selling
+
+Condo marketing in downtown and Olympic Village has long sold lifestyle and transit. Families still buy the school story. Two practical takeaways:
+
+1. **Coal Harbour and the northern West End now have a named neighbourhood school that is open.** That changes walkability math for K-7 households comparing Coal Harbour to Yaletown or Crosstown.
+2. **Olympic Village / SEFC buyers are buying into a construction period, not an open school.** Early works through 2027, main build after that, opening targeted for 2030. Price that timeline honestly if school access is a year-one need. For a buyer with toddlers, the path is clearer than it was two years ago. For a buyer with a Grade 3 student who needs a seat next September, Seaside and current catchment schools still matter more than Olympic Village renderings.
+
+Density without school seats is how you get long bus routes and frustrated parents. Density with funded schools under construction is how a waterfront neighbourhood finishes becoming a complete community. Southeast False Creek was planned that way before the 2010 Games. Seaside and Olympic Village are the catch-up chapter.
+
+I focus on Oakridge and Vancouver's south side, and I help downtown and North Shore buyers map catchments against listings. School boundaries, development permits, and timelines change. Confirm with VSB and the City before you decide.
+
+If you want a straight read on how Seaside's new catchment or the Olympic Village build timeline touches a specific building or search, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general neighbourhood context only and is not legal, planning, or investment advice. Confirm school catchments and project status with the Vancouver School Board and City of Vancouver before you decide.*
+
+**Sources:**
+- [VSB welcome 2026-27](https://vsb.bc.ca/welcome-to-the-2026-2027-school-year.91661)
+- [VSB Seaside About Us](https://www.vsb.bc.ca/seaside/about-us)
+- [VSB Project Updates](https://www.vsb.bc.ca/project-updates)
+- [VSB: City approves rezoning for Olympic Village school](https://www.vsb.bc.ca/city-approves-rezoning-to-advance-new-olympic-village-school.87626)
+- [Shape Your City: 215 W 1 Ave](https://www.shapeyourcity.ca/215-w-1-ave)
+- Daily Hive / Kenneth Chan coverage (Feb-Apr 2026; Dec 2025 catchment context)`,
+  },
+  {
     slug: "vancouver-north-west-van-rents-september-2026",
     title: "Vancouver Rents Rose While the Region Softened. West Van and North Van Still Top Canada",
     seoTitle: "Vancouver, North & West Van Rents | Sept 2026",
