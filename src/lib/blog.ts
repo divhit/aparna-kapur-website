@@ -33,6 +33,75 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "cloverley-elementary-north-vancouver-catchment-2026",
+    title: "North Vancouver’s First New Elementary in 35 Years Is Open. Here’s the Catchment.",
+    seoTitle: "Cloverley Elementary Opens: North Van Catchment Guide 2026",
+    excerpt:
+      "Cloverley Elementary opened September 2026 in North Vancouver, the first new public elementary in 35 years. Catchment, capacity, child care, buyer checks.",
+    date: "September 2026",
+    datePublished: "2026-09-24",
+    dateModified: "2026-09-24",
+    category: "Neighbourhoods",
+    readTime: "~7 min read",
+    image: "/images/blog/cloverley-elementary-north-vancouver-catchment-2026.webp",
+    imageAlt: "Modern elementary school building with athletic courtyard and playground, no people in frame",
+    content: `> North Vancouver’s first new public elementary school in 35 years opened in September 2026. Catchment lines, capacity, child care, and what still needs funding for Lower Lonsdale.
+
+I’m Aparna Kapur with Oakwyn Realty. Families shopping the City of North Vancouver ask about school seats almost as often as they ask about strata fees. This September finally added a real answer on the east side of Lonsdale: Cloverley Elementary is open.
+
+The school welcomed its first kindergarten to Grade 5 students after Labour Day. The official opening assembly was September 11, 2026. It is the first new public elementary to open in North Vancouver in 35 years.
+
+## What opened
+
+Per the Province, the North Vancouver School District, and North Shore News reporting:
+
+- About 585 student seats at full build-out
+- 24 classrooms in a mass-timber building with open-concept learning pods
+- About 370 students in the inaugural kindergarten to Grade 5 cohort
+- Grades 6 and 7 phased in over the next two years (capacity then around 580)
+- A gymnasium and modern breakout rooms
+- Ground broken in late 2024; project cost reported around $64 million, with about $61 million in provincial funding
+
+The City of North Vancouver put up about $3.5 million toward a dedicated child care wing. North Shore Neighbourhood House will operate it. Provincial materials describe about 92 licensed child care spaces: spaces for infants, toddlers, and preschoolers, plus before- and after-school care for school-age kids on the same site.
+
+Ridgeway Elementary had been running at roughly double its intended capacity. Brooksbank, Queen Mary, and Queensbury were also under pressure. Cloverley exists to pull that load down and give east-of-Lonsdale families a neighbourhood school again.
+
+## The catchment (confirm before you buy)
+
+The district set the new catchment as:
+
+- East to west: Lonsdale Avenue to Lynn Creek
+- South to north: the waterfront to the south side of Keith Road
+
+Students who would have gone to Ridgeway, Brooksbank, Queensbury, or Queen Mary may now sit in Cloverley’s priority area, depending on the exact address. Lynnmour’s catchment was not changed for this opening.
+
+Boundaries look clean on a PDF and messy on a listing. If school priority is part of your underwriting, pull the current NVSD catchment map and ask the district to confirm the address before you waive subjects. Do not rely on an older MLS blurb or a neighbour’s memory of where kids went last year.
+
+## Why buyers and sellers should care
+
+1. **Complete-community math.** A modern elementary with on-site child care changes how family buyers score blocks east of Lonsdale and toward the waterfront. Walkability and "drive to five" safe-route planning are part of the story, not extras.
+2. **Relief is real, not promised.** Unlike a school that is still in early works, Cloverley is open for the 2026-27 year. That is a different conversation from downtown buyers still waiting on Olympic Village’s 2030 target.
+3. **Lower Lonsdale is still short.** District capital plans still seek a large site acquisition for a new Lower Lonsdale elementary (land and construction both still in the tens of millions in public planning numbers), plus seismic and expansion work at schools such as Lynnmour and Carson Graham. Cloverley fixes one overcrowding pocket. It does not finish the North Shore school map.
+
+Traffic and drop-off were already a neighbourhood concern before opening day. The City and district have been rolling out safe-routes work and encouraging families to park a few blocks away and walk the last stretch. If you are comparing two otherwise similar houses, visit at morning drop-off once. The street experience matters as much as the floor plan.
+
+## How this fits the North Shore buyer brief
+
+I help buyers across Vancouver’s south side and the North Shore map catchments against listings. For City of North Vancouver searches this fall:
+
+- Treat Cloverley’s open seats and child care as a current amenity, not a future rendering
+- Confirm catchment for the specific folio, especially near Lonsdale, Keith Road, and the Lynn Creek edge
+- If you need a Lower Lonsdale kindergarten seat next year, ask what is actually available now versus what is still a capital-plan wish
+
+School boundaries, child care licences, and capital timelines change. Confirm with the North Vancouver School District and the City of North Vancouver before you decide.
+
+If you want a straight read on how Cloverley’s catchment touches a specific street or strata, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver’s south side, and buyers across downtown and the North Shore. This post is general neighbourhood context only and is not legal, planning, or investment advice. Confirm school catchments and project status with the North Vancouver School District and City of North Vancouver before you decide.*`,
+  },
+  {
     slug: "seaside-olympic-village-schools-downtown-vancouver-2026",
     title: "Buying Near False Creek or Coal Harbour? School Catchments Just Changed in a Big Way",
     seoTitle: "Seaside & Olympic Village Schools | Downtown Vancouver 2026",
