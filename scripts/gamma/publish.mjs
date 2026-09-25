@@ -79,6 +79,11 @@ function buildPayload({ meta, body }) {
     title: meta.title,
     ...(args.theme ? { themeId: args.theme } : {}),
     textOptions: { language: "en" },
+    // "preserve" keeps the body text but Gamma still invents card labels and
+    // taglines for its layouts (e.g. "TOA Specialist"). Forbid that so nothing
+    // on the page is a claim we did not write.
+    additionalInstructions:
+      "Use only the words in the input text. Do not add, invent, summarize or paraphrase any text, including card titles, labels, callouts, badges, taglines or descriptions of the author. If a layout needs a label that is not in the input, choose a plainer layout instead.",
     imageOptions: { source: "noImages" },
     cardOptions: {
       headerFooter: {
