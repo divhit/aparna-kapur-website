@@ -8,6 +8,7 @@ import FAQAccordion from "./FAQAccordion";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+import HomeownerGuides from "@/components/HomeownerGuides";
 
 /** Listings are live data; regenerate hourly rather than freezing at build. */
 export const revalidate = 3600;
@@ -400,6 +401,9 @@ export default async function MarpolePage() {
           </div>
         </div>
       </section>
+
+      {/* Homeowner guides (off-site) */}
+      <HomeownerGuides neighbourhood="marpole" className="mb-16" />
 
       {/* Related Neighbourhoods */}
       <section id="related" className="py-16 bg-warm-50 border-t border-warm-100">

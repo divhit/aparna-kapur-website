@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import PageBanner from "@/components/hero/PageBanner";
+import { HOMEOWNER_GUIDES } from "@/lib/homeownerGuides";
 
 export const metadata: Metadata = {
   title: "Vancouver Real Estate Resources & Tools",
@@ -88,6 +89,13 @@ const guides = [
     href: "/neighborhoods/oakridge",
     tag: "Neighborhoods",
   },
+  // Off-site homeowner guides (gamma.app). Absolute hrefs render as plain <a>.
+  ...HOMEOWNER_GUIDES.map((g) => ({
+    title: g.title,
+    description: g.blurb,
+    href: g.url,
+    tag: "Homeowners",
+  })),
 ];
 
 export default function ResourcesPage() {

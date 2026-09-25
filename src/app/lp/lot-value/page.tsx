@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import LandingLeadForm from "@/components/landing/LandingLeadForm";
 import AgentTrustStrip from "@/components/landing/AgentTrustStrip";
+import HomeownerGuides from "@/components/HomeownerGuides";
 import { NEIGHBOURHOODS } from "@/lib/neighborhoods";
 import { NAP } from "@/lib/agent/site";
 
@@ -243,6 +244,13 @@ export default async function LotValueLandingPage({ searchParams }: Props) {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Guides */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <HomeownerGuides heading="Read the Guides First" />
         </div>
       </section>
 

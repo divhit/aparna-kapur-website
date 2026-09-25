@@ -7,6 +7,7 @@ import { fetchNeighbourhoodPOIs } from "@/lib/places";
 import { BreadcrumbSchema } from "@/components/seo/JsonLd";
 import MarketPriceLinks from "@/components/market/MarketPriceLinks";
 import NeighbourhoodListings from "@/components/neighborhoods/NeighbourhoodListings";
+import HomeownerGuides from "@/components/HomeownerGuides";
 
 /** Listings are live data; regenerate hourly rather than freezing at build. */
 export const revalidate = 3600;
@@ -473,6 +474,9 @@ export default async function KerrisdalePage() {
                   ))}
                 </div>
               </section>
+
+              {/* Homeowner guides (off-site) */}
+              <HomeownerGuides neighbourhood="kerrisdale" className="mb-16" />
 
               {/* Related Neighbourhoods */}
               <section id="related" className="mb-16">
