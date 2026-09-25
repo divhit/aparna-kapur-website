@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "verify:agents": "node scripts/verify-agent-readiness.mjs",
-    "rank:check": "node scripts/rank-check.mjs"
+    "rank:check": "node scripts/rank-check.mjs",
+    "gamma:publish": "node scripts/gamma/publish.mjs"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.29",

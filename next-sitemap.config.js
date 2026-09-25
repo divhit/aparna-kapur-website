@@ -25,7 +25,13 @@ module.exports = {
   // belong in the sitemap.
   additionalPaths: async (config) =>
     Promise.all(
-      ["/buying/search", "/buying/featured-listings"].map((loc) =>
+      [
+        "/buying/search",
+        "/buying/featured-listings",
+        // Indexable funnel page under /lp (the rest of /lp is noindex); it reads
+        // searchParams so it renders on demand and is invisible to the manifest.
+        "/lp/lot-value",
+      ].map((loc) =>
         config.transform(config, loc),
       ),
     ),
