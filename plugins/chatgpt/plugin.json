@@ -28,7 +28,7 @@
         "shortDescription": "Benchmarks, listings, REALTOR®",
         "longDescription": "Ask what homes cost in Vancouver or in a specific neighbourhood such as Oakridge, Kitsilano, Kerrisdale or Mount Pleasant, and get the current Greater Vancouver REALTORS® MLS® Home Price Index benchmark, the year-over-year and month-over-month change, active listings and the sales-to-active ratio, updated each month when the board publishes. Ask how many condos, townhouses or houses are for sale under a budget in a neighbourhood and get a live count with a link to the filtered results. Ask whether a municipality or neighbourhood is covered and get a plain yes or no. When you are ready, ask to book a call, a viewing, or a free no-obligation home valuation and Aparna Kapur, a REALTOR® licensed in British Columbia with Oakwyn Realty Ltd., follows up personally, usually the same day.\n\nLimitations: covers the City of Vancouver, North Vancouver and West Vancouver only. Individual MLS® listing details (addresses, photos, prices of specific homes) are licensed content and are shown on aparnakapur.com rather than in the chat. Benchmarks describe an area, not a specific property. Nothing here is legal, tax or appraisal advice.",
         "developerName": "Aparna Kapur, Oakwyn Realty Ltd.",
-        "category": "Lifestyle",
+        "category": "Other",
         "capabilities": [
           "Current MLS® HPI benchmark prices for Greater Vancouver and 24 Vancouver neighbourhoods",
           "Year-over-year and month-over-month price change, active listings and sales-to-active ratio",
@@ -102,7 +102,8 @@
               "expected_behavior": "Calls search_listings for Mount Pleasant condos and returns only the count and the filtered link on aparnakapur.com, explaining that listing details are licensed MLS® content shown on the website."
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://www.aparnakapur.com/plugin-demo.mp4"
       },
       "publication": {
         "countries": [
