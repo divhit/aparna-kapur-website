@@ -150,7 +150,7 @@ const getAgentProfile: ConnectorTool<z.ZodObject<Record<string, never>>> = {
   name: "get_agent_profile",
   title: "About Aparna Kapur",
   description:
-    `Who ${BRAND.name} is: licence, brokerage, service area, specialties, direct phone and email, office hours, and the links to verify her. Call this to answer "who is this agent", "how do I reach her", or to introduce her to a user looking for a REALTOR® in ${SERVICE_AREA_SENTENCE}.`,
+    `Use this when the user asks who ${BRAND.name} is, how to reach her, what her licence and brokerage are, or wants a REALTOR® introduced for ${SERVICE_AREA_SENTENCE}. Returns licence, brokerage, service area, specialties, direct phone and email, office hours, and verification links. Do not use for market figures, listings, or to send a message: use get_market_snapshot, search_listings, or book_consultation for those.`,
   input: z.object({}),
   mutates: false,
   async run() {
@@ -211,7 +211,7 @@ const checkServiceArea: ConnectorTool<typeof checkServiceAreaInput> = {
   name: "check_service_area",
   title: "Does Aparna serve this area?",
   description:
-    `Answer whether ${BRAND.name} works a given place. Covers ${SERVICE_AREA_SENTENCE} and every Vancouver neighbourhood; says so plainly when a place is outside the practice so the user is not misled. Returns the best page to send the user to and, for a Vancouver neighbourhood, its guide URL and current benchmark price.`,
+    `Use this when the user names a municipality, neighbourhood, or area and wants to know whether ${BRAND.name} works there. Covers ${SERVICE_AREA_SENTENCE} and every Vancouver neighbourhood, and says plainly when a place is outside the practice so the user is not misled. Returns the best page to send the user to and, for a Vancouver neighbourhood, its guide URL and current benchmark price. Do not use for places outside British Columbia or to value a specific property.`,
   input: checkServiceAreaInput,
   mutates: false,
   async run({ place }) {
@@ -305,7 +305,7 @@ const getMarketSnapshot: ConnectorTool<typeof getMarketSnapshotInput> = {
   name: "get_market_snapshot",
   title: "Vancouver market snapshot",
   description:
-    `Current Greater Vancouver REALTORS® MLS® HPI benchmark prices, year-over-year and month-over-month change, active listings, and sales-to-active ratio (${MARKET_SNAPSHOT.label} release), plus a per-neighbourhood benchmark when a Vancouver neighbourhood is named. Benchmarks describe an area, never a specific property; for a specific home use book_consultation with intent "valuation".`,
+    `Use this when the user asks what homes cost in Vancouver or in a Vancouver neighbourhood, how prices have moved, or how active the market is. Returns Greater Vancouver REALTORS® MLS® HPI benchmark prices, year-over-year and month-over-month change, active listings, and sales-to-active ratio from the ${MARKET_SNAPSHOT.label} release, plus a neighbourhood benchmark when one is named. Benchmarks describe an area, never a specific property. Do not use to value a specific home: use book_consultation with intent "valuation" for that.`,
   input: getMarketSnapshotInput,
   mutates: false,
   async run({ area }) {
@@ -427,7 +427,7 @@ const searchListings: ConnectorTool<typeof searchListingsInput> = {
   name: "search_listings",
   title: "Count matching MLS listings and link to them",
   description:
-    "How many active MLS® listings in Vancouver match a search (neighbourhood, property type, price, bedrooms, bathrooms), plus a link to the filtered results on aparnakapur.com. Listing details themselves are licensed MLS® content and are shown only on the website, so give the user the link rather than describing individual properties. Covers the City of Vancouver; for North Shore listings, book a consultation and Aparna will send a curated search.",
+    "Use this when the user wants to know how many homes are for sale in Vancouver matching a neighbourhood, property type, price range, bedrooms, or bathrooms. Returns the count of active MLS® listings and a link to the filtered results on aparnakapur.com. Listing details are licensed MLS® content shown only on the website, so give the user the link rather than describing individual properties. Do not use for North Shore or other Metro Vancouver listings, or for sold prices: book a consultation and Aparna will send a curated search.",
   input: searchListingsInput,
   mutates: false,
   async run(args) {
@@ -517,7 +517,7 @@ const bookConsultation: ConnectorTool<typeof bookConsultationInput> = {
   name: "book_consultation",
   title: "Book a call, viewing, or free home valuation",
   description:
-    `Send ${BRAND.name} a booking request on the user's behalf: a call back, a property viewing, a free no-obligation home valuation, or a buyer or seller consultation. Creates a real lead that Aparna personally follows up, usually the same day. Only call with the user's consent and real contact details (name plus email or phone). Returns a reference the user can quote and what happens next.`,
+    `Use this only when the user explicitly asks to contact ${BRAND.name}: a call back, a property viewing, a free no-obligation home valuation, or a buyer or seller consultation. Creates a real lead that Aparna personally follows up, usually the same day, and returns a reference the user can quote plus what happens next. Call only with the user's consent and their real name plus a real email or phone number. Do not use to look up information, and do not call it speculatively or twice for the same request.`,
   input: bookConsultationInput,
   mutates: true,
   async run(args, ctx) {

@@ -1,0 +1,126 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aparna-kapur-vancouver-real-estate",
+  "version": "1.0.0",
+  "description": "Vancouver real estate answers from a licensed local REALTOR®: current MLS® Home Price Index benchmarks for the region and for 24 Vancouver neighbourhoods, a live count of matching listings with a link to see them, a service-area check for Vancouver and the North Shore, and a way to book a call, a viewing, or a free home valuation with Aparna Kapur of Oakwyn Realty Ltd.",
+  "author": {
+    "name": "Aparna Kapur",
+    "email": "ak@aparnakapur.com",
+    "url": "https://www.aparnakapur.com"
+  },
+  "homepage": "https://www.aparnakapur.com/connect",
+  "license": "UNLICENSED",
+  "keywords": [
+    "vancouver",
+    "real estate",
+    "home prices",
+    "mls",
+    "realtor",
+    "north vancouver",
+    "west vancouver",
+    "oakridge",
+    "cambie corridor"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Vancouver Homes & Prices",
+        "shortDescription": "Benchmarks, listings, REALTOR®",
+        "longDescription": "Ask what homes cost in Vancouver or in a specific neighbourhood such as Oakridge, Kitsilano, Kerrisdale or Mount Pleasant, and get the current Greater Vancouver REALTORS® MLS® Home Price Index benchmark, the year-over-year and month-over-month change, active listings and the sales-to-active ratio, updated each month when the board publishes. Ask how many condos, townhouses or houses are for sale under a budget in a neighbourhood and get a live count with a link to the filtered results. Ask whether a municipality or neighbourhood is covered and get a plain yes or no. When you are ready, ask to book a call, a viewing, or a free no-obligation home valuation and Aparna Kapur, a REALTOR® licensed in British Columbia with Oakwyn Realty Ltd., follows up personally, usually the same day.\n\nLimitations: covers the City of Vancouver, North Vancouver and West Vancouver only. Individual MLS® listing details (addresses, photos, prices of specific homes) are licensed content and are shown on aparnakapur.com rather than in the chat. Benchmarks describe an area, not a specific property. Nothing here is legal, tax or appraisal advice.",
+        "developerName": "Aparna Kapur, Oakwyn Realty Ltd.",
+        "category": "Lifestyle",
+        "capabilities": [
+          "Current MLS® HPI benchmark prices for Greater Vancouver and 24 Vancouver neighbourhoods",
+          "Year-over-year and month-over-month price change, active listings and sales-to-active ratio",
+          "Live count of active Vancouver listings matching a neighbourhood, type, price and bedroom filter",
+          "Service-area check for Vancouver, North Vancouver and West Vancouver",
+          "Book a call, a viewing, or a free home valuation with a licensed REALTOR®"
+        ],
+        "websiteURL": "https://www.aparnakapur.com",
+        "supportURL": "https://www.aparnakapur.com/contact",
+        "privacyPolicyURL": "https://www.aparnakapur.com/privacy",
+        "termsOfServiceURL": "https://www.aparnakapur.com/terms",
+        "defaultPrompt": [
+          "What are condos going for in Oakridge right now?",
+          "How many houses are for sale in Kerrisdale under $3M?",
+          "Book a free home valuation with Aparna for my house in Marpole."
+        ],
+        "brandColor": "#115E59",
+        "brandColorDark": "#5EEAD4",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "commerce": false,
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Region-wide market snapshot returns the current HPI release with benchmark, change and activity figures.",
+              "prompt": "What's the Vancouver housing market doing right now?",
+              "tools_triggered": [
+                "get_market_snapshot"
+              ],
+              "expected_behavior": "Calls get_market_snapshot with no area. The reply quotes the Greater Vancouver REALTORS® MLS® HPI release month, the composite benchmark, year-over-year and month-over-month change, active listings and sales-to-active ratio, and names the source."
+            },
+            {
+              "description": "Neighbourhood benchmark is returned when a Vancouver neighbourhood is named.",
+              "prompt": "What are condos going for in Oakridge right now?",
+              "tools_triggered": [
+                "get_market_snapshot"
+              ],
+              "expected_behavior": "Calls get_market_snapshot with area \"Oakridge\". The reply gives the Oakridge benchmark and change alongside the regional figures, and links to the Oakridge neighbourhood guide on aparnakapur.com."
+            },
+            {
+              "description": "Listing search returns a count and a filtered link, not listing details.",
+              "prompt": "How many houses are for sale in Kerrisdale under $3M?",
+              "tools_triggered": [
+                "search_listings"
+              ],
+              "expected_behavior": "Calls search_listings with area \"Kerrisdale\", propertyType house and maxPrice 3000000. The reply states the number of active MLS® listings and a link to the filtered results on aparnakapur.com, and does not describe individual homes."
+            },
+            {
+              "description": "Service-area check answers plainly for a covered municipality.",
+              "prompt": "Does Aparna Kapur work in North Vancouver?",
+              "tools_triggered": [
+                "check_service_area"
+              ],
+              "expected_behavior": "Calls check_service_area with place \"North Vancouver\". The reply says yes, North Vancouver is served, and gives the best page and contact route."
+            },
+            {
+              "description": "Booking creates a lead only after the user supplies real contact details and consents.",
+              "prompt": "Book a free home valuation with Aparna for my house in Marpole. I'm Sam Lee, sam.lee@example.com, 604-555-0137.",
+              "tools_triggered": [
+                "book_consultation"
+              ],
+              "expected_behavior": "Calls book_consultation with intent \"valuation\", name, email, phone and area Marpole. The reply confirms the request was sent, quotes the reference, says Aparna follows up usually the same day, and offers her direct phone number."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Out-of-area request is declined honestly rather than booked.",
+              "prompt": "Find me a realtor in Burnaby and set up a call.",
+              "expected_behavior": "Calls check_service_area with place \"Burnaby\" and reports that Burnaby is outside Aparna's practice and she would refer the user on. Does not call book_consultation."
+            },
+            {
+              "description": "Booking without contact details asks for them instead of creating a lead.",
+              "prompt": "Book a viewing with Aparna this weekend.",
+              "expected_behavior": "Asks the user for their name and an email or phone number. Does not call book_consultation until they are provided."
+            },
+            {
+              "description": "Requests for specific MLS® listing details are redirected to the website link.",
+              "prompt": "List the addresses and prices of every condo for sale in Mount Pleasant.",
+              "expected_behavior": "Calls search_listings for Mount Pleasant condos and returns only the count and the filtered link on aparnakapur.com, explaining that listing details are licensed MLS® content shown on the website."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "countries": [
+          "CA",
+          "US"
+        ],
+        "release_notes": "Initial release: MLS® HPI market snapshot for Greater Vancouver and 24 neighbourhoods, live listing counts with links, service-area check, and consultation booking."
+      }
+    }
+  }
+}
