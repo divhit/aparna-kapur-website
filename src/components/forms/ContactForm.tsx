@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { submitContactForm } from "@/app/actions/contact";
+
+const noSubscription = () => () => {};
 
 type ContactFormProps = {
   compact?: boolean;
@@ -21,6 +23,30 @@ export default function ContactForm({
     interest: "",
     message: "",
   });
+  // Visitors sent over from a partner tool arrive with ?utm_source=…, and
+  // sometimes ?about=<address>. The source tags the lead in the CRM so it can
+  // be traced back; the address starts the message so they need not retype it.
+  const search = useSyncExternalStore(
+    noSubscription,
+    () => window.location.search,
+    () => "",
+  );
+  const params = new URLSearchParams(search);
+  const from = (params.get("utm_source") ?? "")
+    .toLowerCase()
+    .replace(/[^a-z0-9-]/g, "")
+    .slice(0, 40);
+  const referral = from ? `Referral: ${from}` : "";
+  const about = (params.get("about") ?? "")
+    .replace(/[^\p{L}\p{N} .,#'-]/gu, "")
+    .trim()
+    .slice(0, 120);
+  const [messageTouched, setMessageTouched] = useState(false);
+  // Until the visitor types, the message is the address they came about.
+  const message =
+    messageTouched || !about || compact
+      ? formState.message
+      : `I'd like to talk about ${about}.`;
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -32,7 +58,8 @@ export default function ContactForm({
 
     const result = await submitContactForm({
       ...formState,
-      source: source || "Contact Form",
+      message,
+      source: source || referral || "Contact Form",
     });
 
     setLoading(false);
@@ -138,10 +165,11 @@ export default function ContactForm({
         <textarea
           placeholder="Tell me a bit about what you're looking for..."
           rows={4}
-          value={formState.message}
-          onChange={(e) =>
-            setFormState({ ...formState, message: e.target.value })
-          }
+          value={message}
+          onChange={(e) => {
+            setMessageTouched(true);
+            setFormState({ ...formState, message: e.target.value });
+          }}
           className={inputClasses}
         />
       )}
