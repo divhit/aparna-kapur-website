@@ -193,6 +193,7 @@ If you want a straight read on how Seaside's new catchment or the Olympic Villag
     category: "Market Analysis",
     readTime: "6 min read",
     image: "/images/blog/vancouver-north-west-van-rents-september-2026.webp",
+    imageAlt: "Vancouver residential apartment towers silhouetted against an orange and blue sky at dusk, with a few windows lit",
     content: `I'm Aparna Kapur with Oakwyn Realty. Vancouver rents rose while the Metro average softened. West Vancouver and North Vancouver still sit at the top of Canada's asking-rent list.
 
 If you are watching asking rents across the City of Vancouver, North Vancouver, and West Vancouver, September's liv.rent Metro Vancouver report is worth a careful read. The regional average eased. These three municipalities did not move as one story.
