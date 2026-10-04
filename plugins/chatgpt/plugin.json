@@ -57,41 +57,31 @@
             {
               "description": "Region-wide market snapshot returns the current HPI release with benchmark, change and activity figures.",
               "prompt": "What's the Vancouver housing market doing right now?",
-              "tools_triggered": [
-                "get_market_snapshot"
-              ],
+              "tools_triggered": "get_market_snapshot",
               "expected_behavior": "Calls get_market_snapshot with no area. The reply quotes the Greater Vancouver REALTORS® MLS® HPI release month, the composite benchmark, year-over-year and month-over-month change, active listings and sales-to-active ratio, and names the source."
             },
             {
               "description": "Neighbourhood benchmark is returned when a Vancouver neighbourhood is named.",
               "prompt": "What are condos going for in Oakridge right now?",
-              "tools_triggered": [
-                "get_market_snapshot"
-              ],
+              "tools_triggered": "get_market_snapshot",
               "expected_behavior": "Calls get_market_snapshot with area \"Oakridge\". The reply gives the Oakridge benchmark and change alongside the regional figures, and links to the Oakridge neighbourhood guide on aparnakapur.com."
             },
             {
               "description": "Listing search returns a count and a filtered link, not listing details.",
               "prompt": "How many houses are for sale in Kerrisdale under $3M?",
-              "tools_triggered": [
-                "search_listings"
-              ],
+              "tools_triggered": "search_listings",
               "expected_behavior": "Calls search_listings with area \"Kerrisdale\", propertyType house and maxPrice 3000000. The reply states the number of active MLS® listings and a link to the filtered results on aparnakapur.com, and does not describe individual homes."
             },
             {
               "description": "Service-area check answers plainly for a covered municipality.",
               "prompt": "Does Aparna Kapur work in North Vancouver?",
-              "tools_triggered": [
-                "check_service_area"
-              ],
+              "tools_triggered": "check_service_area",
               "expected_behavior": "Calls check_service_area with place \"North Vancouver\". The reply says yes, North Vancouver is served, and gives the best page and contact route."
             },
             {
               "description": "Booking creates a lead only after the user supplies real contact details and consents.",
               "prompt": "Book a free home valuation with Aparna for my house in Marpole. I'm Sam Lee, sam.lee@example.com, 604-555-0137.",
-              "tools_triggered": [
-                "book_consultation"
-              ],
+              "tools_triggered": "book_consultation",
               "expected_behavior": "Calls book_consultation with intent \"valuation\", name, email, phone and area Marpole. The reply confirms the request was sent, quotes the reference, says Aparna follows up usually the same day, and offers her direct phone number."
             }
           ],

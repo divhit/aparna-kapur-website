@@ -163,7 +163,7 @@ try {
   const names = (body.result?.tools ?? []).map((t) => t.name);
   if (names.length === 0)
     fail(`live MCP server returned no tools (${res.status})`);
-  const referenced = new Set(pos.flatMap((t) => t.tools_triggered));
+  const referenced = new Set(pos.flatMap((t) => String(t.tools_triggered).split(/\s*,\s*/)));
   for (const n of referenced)
     if (!names.includes(n)) fail(`test case references unknown tool: ${n}`);
   console.log(`live MCP tools: ${names.join(", ")}`);
