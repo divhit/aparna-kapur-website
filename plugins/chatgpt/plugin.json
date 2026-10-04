@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "aparna-kapur-vancouver-real-estate",
   "version": "1.0.0",
-  "description": "Vancouver real estate answers from a licensed local REALTOR®: current MLS® Home Price Index benchmarks for the region and for 24 Vancouver neighbourhoods, a live count of matching listings with a link to see them, a service-area check for Vancouver and the North Shore, and a way to book a call, a viewing, or a free home valuation with Aparna Kapur of Oakwyn Realty Ltd.",
+  "description": "Vancouver housing market data from a licensed local REALTOR®: monthly MLS® Home Price Index benchmarks for Greater Vancouver and 24 neighbourhoods, live counts of matching homes for sale with a link to see them, a service-area check for Vancouver and the North Shore, and booking for a call, a viewing, or a free home valuation with Aparna Kapur of Oakwyn Realty Ltd.",
   "author": {
     "name": "Aparna Kapur",
     "email": "ak@aparnakapur.com",
@@ -26,9 +26,9 @@
       "interface": {
         "displayName": "Vancouver Homes & Prices",
         "shortDescription": "Benchmarks, listings, REALTOR®",
-        "longDescription": "Ask what homes cost in Vancouver or in a specific neighbourhood such as Oakridge, Kitsilano, Kerrisdale or Mount Pleasant, and get the current Greater Vancouver REALTORS® MLS® Home Price Index benchmark, the year-over-year and month-over-month change, active listings and the sales-to-active ratio, updated each month when the board publishes. Ask how many condos, townhouses or houses are for sale under a budget in a neighbourhood and get a live count with a link to the filtered results. Ask whether a municipality or neighbourhood is covered and get a plain yes or no. When you are ready, ask to book a call, a viewing, or a free no-obligation home valuation and Aparna Kapur, a REALTOR® licensed in British Columbia with Oakwyn Realty Ltd., follows up personally, usually the same day.\n\nLimitations: covers the City of Vancouver, North Vancouver and West Vancouver only. Individual MLS® listing details (addresses, photos, prices of specific homes) are licensed content and are shown on aparnakapur.com rather than in the chat. Benchmarks describe an area, not a specific property. Nothing here is legal, tax or appraisal advice.",
+        "longDescription": "Vancouver housing market data from a licensed local REALTOR®: monthly MLS® Home Price Index benchmarks for Greater Vancouver and 24 Vancouver neighbourhoods, live counts of homes for sale, a service-area check, and a way to book a call or a free home valuation with Aparna Kapur of Oakwyn Realty Ltd.\n\nAsk what homes cost in Vancouver or in a specific neighbourhood such as Oakridge, Kitsilano, Kerrisdale or Mount Pleasant, and get the current Greater Vancouver REALTORS® MLS® Home Price Index benchmark, the year-over-year and month-over-month change, active listings and the sales-to-active ratio, updated each month when the board publishes. Ask how many condos, townhouses or houses are for sale under a budget in a neighbourhood and get a live count with a link to the filtered results. Ask whether a municipality or neighbourhood is covered and get a plain yes or no. When you are ready, ask to book a call, a viewing, or a free no-obligation home valuation and Aparna Kapur, a REALTOR® licensed in British Columbia with Oakwyn Realty Ltd., follows up personally, usually the same day.\n\nLimitations: covers the City of Vancouver, North Vancouver and West Vancouver only. Individual MLS® listing details (addresses, photos, prices of specific homes) are licensed content and are shown on aparnakapur.com rather than in the chat. Benchmarks describe an area, not a specific property. Nothing here is legal, tax or appraisal advice.",
         "developerName": "Aparna Kapur, Oakwyn Realty Ltd.",
-        "category": "Other",
+        "category": "Data & Analytics",
         "capabilities": [
           "Current MLS® HPI benchmark prices for Greater Vancouver and 24 Vancouver neighbourhoods",
           "Year-over-year and month-over-month price change, active listings and sales-to-active ratio",
