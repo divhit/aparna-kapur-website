@@ -33,6 +33,92 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vancouver-apartment-regulations-family-unit-mix-october-27-2026",
+    title: "Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.",
+    seoTitle: "Vancouver Apartment Rules Change Oct 27: Family Unit Mix",
+    excerpt:
+      "From Oct 27, 2026, new Vancouver apartments over 8 units need 35% two-or-more bedrooms (5% three-or-more), plus balcony, storage, and layout updates.",
+    date: "October 2026",
+    datePublished: "2026-10-05",
+    dateModified: "2026-10-05",
+    category: "Buying",
+    readTime: "~6 min read",
+    image: "/images/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026.webp",
+    imageAlt: "Modern multi-story apartment building with glass-enclosed balconies under a clear blue sky",
+    content: `> On October 27, 2026, Vancouver's updated apartment regulations take effect for new residential and mixed-use buildings with more than eight dwelling units. The citywide unit-mix rule is a minimum of 35% two-or-more-bedroom units, including at least 5% three-or-more-bedroom units, across rental and strata and across both rezoning and development permit paths. Bedrooms that count toward that mix must have an exterior-wall window. The same package removes maximum floor-area exclusion caps for balconies and common amenities, allows more flexible inboard rooms (with limits), and sets a minimum 2.3 m² (25 sq. ft.) of residential storage per unit with a simplified up-to-6% residential FSR exclusion. Exceptions cover certain heritage and False Creek districts, seniors and supportive social housing, areas with their own Official Development Plan unit-mix rules, existing buildings, and some constrained mid-block mixed-use sites at the Director of Planning's discretion. In-stream projects can often opt in or stay on the old rules until building-permit stage 2.
+
+I'm Aparna Kapur with Oakwyn Realty. After this week's market tape and the False Creek viaduct story, the clearest Sunday peg is a calendar one: Vancouver's apartment design rules change on **October 27, 2026**.
+
+Council approved the package on July 28 under the report "Updating Apartment Regulations" (RTS 18516). The by-law comes into force that October date. If you are buying, selling, or tracking new condo and purpose-built rental product in the City of Vancouver, this is the rule set that will shape what gets filed next.
+
+## What actually changes
+
+The amendments apply to new infill multiple dwellings, multiple dwellings, and mixed-use residential buildings that contain **more than eight dwelling units**. Multiplexes and other low-density forms with eight or fewer units are outside this package.
+
+## 1. One citywide family unit mix
+
+| Rule | Detail |
+|---|---|
+| Two-or-more bedrooms | At least **35%** of dwelling units |
+| Three-or-more bedrooms | At least **5%** of dwelling units (nested inside the 35%) |
+| Tenure | Same baseline for market, below-market rental, and strata |
+| Process | Same rule for rezoning and development permit |
+
+Where a building includes below-market rental, the 35% / 5% split applies separately to the below-market stack and to the other units.
+
+That replaces a patchwork. Under the old "Family Room" rezoning policy, strata projects typically needed 35% two-or-more bedrooms **including 10%** three-or-more, while many rental rezonings required 35% two-or-more with **no** three-bedroom floor. Broadway Plan projects often carried a 10% three-bedroom ask for both tenures. The new baseline raises three-bedroom expectations for most rental while easing the three-bedroom share for some strata paths from 10% to 5%. Staff framed that trade-off as balancing family supply against construction cost and lease-up reality.
+
+**Exceptions:** FC-1 and HA-1 / HA-1A / HA-2 districts; 100% social housing that is seniors-restricted or supportive; areas whose Official Development Plan already sets unit mix; buildings existing as of enactment; and Director of Planning discretion to reduce the percentages for certain low-rise mixed-use projects on constrained mid-block sites (height of 27.5 m or less, not a wide corner, adjoining another commercial/industrial/CD-1 site without a lane).
+
+## 2. Windows for the bedrooms that count
+
+Every bedroom used to meet the 35% / 5% unit-mix rule, and every living room, must have at least one window on an exterior wall. The city is also allowing a broader set of **inboard** rooms for flex uses (home office, nursery, enclosed sleeping areas in some studios). Those inboard spaces **cannot** be used to satisfy the two- and three-bedroom quotas.
+
+## 3. Bigger balconies and amenities, on paper
+
+Maximum floor-area exclusion caps for balconies and residential common amenities are removed, and computation-of-floor-area rules are consolidated into Section 10 of the Zoning and Development By-law. Staff said prior caps (often 8-16% for balconies and about 10% for amenities, depending on district) sometimes produced awkward designs when projects hit the ceiling. Removing the caps does not invent free floor space by itself. It removes a zoning choke point so larger outdoor and amenity areas are easier to exclude from FSR.
+
+## 4. Storage becomes a hard minimum
+
+New buildings in scope need at least **2.3 m² (25 sq. ft.)** of residential storage per dwelling unit, in-suite or out-of-suite. A standardized floor-area exclusion of up to **6%** of residential floor area replaces the old per-unit storage exclusion model. Lock-offs, micro dwellings, Single Room Accommodation rooms, and buildings already existing at enactment are carved out of the storage minimum.
+
+## What this means if you are buying
+
+**Family buyers:** New filings after October 27 should show a clearer, citywide share of two- and three-bedroom product in buildings with more than eight units. That matters in neighbourhoods where the last decade of tower stock skewed heavily studio and one-bedroom. Three-bedrooms will still be expensive. Staff cited CMHC October 2025 figures putting average rent for a newer three-bedroom around **$4,068** per month, and Zonda/rennie pre-sale averages around **$1.76 million**. Scarcity is the long-term story: purpose-built rental three-bedrooms were only about **1,200** units citywide (~2% of that stock) even after a decade of growth.
+
+**Condo investors:** Expect floor plans to shift toward more family layouts in the pipeline, with more flexible inboard flex rooms in deeper low-rise and podium floorplates. One-bedroom-heavy marketing suites will still exist, but the legal mix floor rises for projects that must hit 35% / 5%.
+
+**Resale sellers of older apartments:** Existing buildings are largely grandfathered on unit mix and the new 6% FSR exclusion. Renovations can sometimes use the looser balcony, amenity, and inboard-light rules. Your competition from new product after late 2026 will look more family-oriented over time, not overnight.
+
+**In-stream projects:** As of late May 2026, staff counted 106 in-stream rezoning files (approved or enacted) and 131 development-permit files not yet at building-permit stage 2. Many can elect the new rules or stay on the old ones. Early staff advice for individual projects was scheduled to start **September 22, 2026**. If you are under contract on a pre-sale or assignment, ask the developer which rule set their application will use after October 27.
+
+## Calendar note for election week
+
+October 27 is also the first regular City Council meeting after the **October 17** civic election. The apartment package was already approved in July. A new Council does not need to re-pass it for the by-law to take effect that day. Treat the date as a zoning clock, not a campaign promise.
+
+## Bottom line
+
+Vancouver is standardizing what "family-capable" means in new apartments with more than eight units: **35% two-or-more bedrooms, including 5% three-or-more**, with real windows on the bedrooms that count, required storage, and fewer artificial caps on balconies and amenities. For buyers shopping Mount Pleasant, Kitsilano, the Broadway Plan area, Cambie Corridor mid-rises, east-side rental corridors, and downtown podiums, the practical move is simple. Ask every listing agent and developer which regulation set applies to the building you are considering, and whether the unit mix on the brochure matches the October 27 rules.
+
+If you want help reading a specific project's unit schedule against this package, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general neighbourhood and policy context only and is not legal, planning, or investment advice. Confirm unit-mix rules and project status with the City of Vancouver before you decide.*
+
+**Sources:**
+- [City of Vancouver Council Report RTS 18516, Updating Apartment Regulations](https://council.vancouver.ca/20260728/documents/r1.pdf)
+- [UDI: City of Vancouver Updating Apartment Regulations](https://udi.org/advocacy/updates/city-of-vancouver-updating-apartment-regulations)
+- [City of Vancouver: diversifying housing options](https://vancouver.ca/people-programs/diversifying-housing-options.aspx)
+- [CityHallWatch Council roundup (July 28, 2026)](https://cityhallwatch.wordpress.com/2026/07/31/council-roundup-critical-moment-endgame2026/)
+
+**Related reading:**
+- [Resale vs. Presale: The 2026 Vancouver Condo Market](/resources/blog/resale-vs-presale-vancouver-condos-2026)
+- [Best Neighbourhoods in Vancouver for Families (2026 Edition)](/resources/blog/best-neighborhoods-vancouver-families-2026)
+- [Seaside / Olympic Village school catchments](/resources/blog/seaside-olympic-village-schools-downtown-vancouver-2026)
+- [Cambie Corridor rezoning explainer](/resources/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know)`,
+  },
+  {
     slug: "cloverley-elementary-north-vancouver-catchment-2026",
     title: "North Vancouver’s First New Elementary in 35 Years Is Open. Here’s the Catchment.",
     seoTitle: "Cloverley Elementary Opens: North Van Catchment Guide 2026",
