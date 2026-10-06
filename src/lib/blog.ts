@@ -33,6 +33,84 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026",
+    title: "Townhouses in First Shaughnessy? A Second Heritage Rezoning Lands on Douglas Crescent",
+    seoTitle: "First Shaughnessy Townhouse Rezoning: Douglas Crescent",
+    excerpt:
+      "Intracorp filed a second First Shaughnessy rezoning: 27 townhouses plus a 1912 heritage triplex on Douglas Crescent. What it means for owners and buyers.",
+    date: "October 2026",
+    datePublished: "2026-10-05",
+    dateModified: "2026-10-05",
+    category: "Neighbourhoods",
+    readTime: "~5 min read",
+    image: "/images/blog/first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026.webp",
+    imageAlt: "Edwardian-era Vancouver heritage house painted purple with white trim, tall Ionic columns, and a covered front porch on an overcast day",
+    content: `> Intracorp Homes has filed a second rezoning application in Vancouver's First Shaughnessy, this time for 1053-1069 Douglas Crescent near Oak Street. The proposal adds 27 townhouses on a roughly 45,209 sq. ft. two-lot site and converts the 1912 McMillan Residence, an Edwardian Foursquare house, into a triplex. It follows Intracorp's earlier application at 3738 Granville Street and 1499 Balfour Avenue for 27 three-storey strata townhouses (FSR 1.03, 10.8 m height) plus a triplex conversion of the protected 1911 Capenhurst Residence. Both seek to rezone from FSD (First Shaughnessy District) to CD-1, neither has a public hearing date, the City's online Q&A period opens November 25, 2026, and both will be decided by the Council elected on October 17.
+
+I'm Aparna Kapur with Oakwyn Realty. First Shaughnessy is the most protected residential district in Vancouver, and this week it got its second townhouse proposal in about five weeks.
+
+According to reporting by Mike Howell published October 5, Intracorp Homes has applied to rezone **1053-1069 Douglas Crescent** for **27 townhouses** and the conversion of a heritage house on the property into a **triplex**. The site is two adjacent lots fronting Douglas Crescent, about **45,209 sq. ft.** in total, in a district that is almost entirely large single-family homes.
+
+## Two applications, one model
+
+| | 3738 Granville St / 1499 Balfour Ave | 1053-1069 Douglas Cres. |
+|---|---|---|
+| Townhouses | 27 strata, three storeys, individual garages | 27 |
+| Heritage house | 1911 Capenhurst Residence, converted to triplex and relocated to the Granville frontage | 1912 McMillan Residence (Edwardian Foursquare), converted to triplex |
+| Zoning ask | FSD to CD-1 | FSD to CD-1 (per developer booklet) |
+| Density / height | FSR 1.03, 10.8 m (36 ft.) | Not yet posted by the City |
+| Status | Received May 6, 2026; Q&A Nov 25 to Dec 8 | Q&A begins Nov 25 |
+| Decision | New Council after Oct 17 election | New Council after Oct 17 election |
+
+The pitch is the same in both: keep the heritage house, put more homes around it. Intracorp's booklet says the Douglas Crescent project "secures permanent heritage protection and investment in a significant historic asset" and "introduces a meaningful supply of family-oriented, ground-oriented housing in a historically low-density area."
+
+The City notes the Granville application "includes elements that are not consistent with" the First Shaughnessy Heritage Conservation Area Official Development Plan. That is why these go through a full rezoning rather than a permit.
+
+## Why First Shaughnessy is different
+
+First Shaughnessy has been a heritage conservation area since 2015, with its own district schedule (FSD) and design guidelines. Historically, extra units were mostly limited to protected heritage properties through conversions, infill, and coach houses.
+
+Provincial small-scale multi-unit housing rules changed the baseline. In May 2024 the City amended FSD so every lot can have at least four units, after staff found every FSD lot was over 280 m² and **94%** were within 400 m of a frequent-service bus stop. What those rules did not do is allow 27-unit townhouse sites. Intracorp's applications are testing how far a heritage-retention trade can stretch.
+
+Intracorp says an average of about **30** character-house retention projects have been filed with the city each year since 2018, including **25** in 2024, and argues that retaining and converting pre-1940 homes is complex enough that few builders try.
+
+## What this means for you
+
+**If you own a large First Shaughnessy estate:** A heritage house on a big lot has always been a constraint. These applications test whether it can become the anchor for a much bigger rezoning. If either is approved, expect land buyers to look harder at large heritage-protected sites. Your estate's value may increasingly depend on its land and redevelopment story, not just the house.
+
+**If you are buying a detached home in Shaughnessy:** Check what is filed nearby. A 27-unit townhouse site next door changes traffic, sightlines, and construction timelines, even with a restored heritage house at the front. The City's Shape Your City pages and the rezoning map are the first places to look.
+
+**If you want a westside ground-oriented home below detached prices:** These would be among the very few new strata townhouses inside First Shaughnessy. Pricing has not been announced. Nothing can be sold before rezoning, so it is a 2027-plus story at the earliest.
+
+**If you are a heritage advocate or neighbour:** The online Q&A period opens **November 25**. Feedback through the City's process is where design and density changes usually get made, before a public hearing date is set.
+
+## The election angle
+
+Both applications land on the desk of the Council elected **October 17**, with inauguration in the first week of November. Whoever wins will set the tone for heritage-plus-density deals in Vancouver's lowest-density district. Treat this pair as an early signal of how the next Council handles gentle density on the westside.
+
+## Bottom line
+
+Intracorp now has two First Shaughnessy sites, 54 proposed townhouses, and two Edwardian heritage houses it says it will restore as triplexes. Neither has a hearing date, and the City has flagged the first one as inconsistent with the heritage plan. For owners and buyers in Shaughnessy, the question isn't whether the neighbourhood changes. It's whether these heritage trades become the template.
+
+If you want help reading what's filed around a Shaughnessy property you own or are considering, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general neighbourhood and policy context only and is not legal, planning, or investment advice. Confirm rezoning details and application status with the City of Vancouver before you decide.*
+
+**Sources:**
+- [Mike Howell, "Intracorp Homes seeks second townhouse project in Shaughnessy" (Oct 5, 2026)](https://www.timescolonist.com/real-estate/intracorp-homes-seeks-second-townhouse-project-in-shaughnessy-12836841)
+- [City of Vancouver, Shape Your City: 3738 Granville St and 1499 Balfour Ave rezoning application](https://www.shapeyourcity.ca/3738-granville-1499-balfour)
+- [Mike Howell, Business in Vancouver, "Townhouse development considered for Shaughnessy" (Aug 28, 2026)](https://www.biv.com/news/economy-law-politics/townhouse-development-considered-for-single-family-neighbourhood-in-shaughnessy-12720195)
+- [City of Vancouver Council report on FSD and HCA ODP amendments for Bill 44 SSMUH (May 28, 2024)](https://council.vancouver.ca/20240528/documents/rr2.pdf)
+- [City of Vancouver, First Shaughnessy Heritage Conservation Area Official Development Plan](https://bylaws.vancouver.ca/ODP/odp-heritage-conservation-area.pdf)
+
+**Related reading:**
+- [Best Neighbourhoods in Vancouver for Families (2026 Edition)](/resources/blog/best-neighborhoods-vancouver-families-2026)
+- [Cambie Corridor rezoning explainer](/resources/blog/cambie-corridor-rezoning-2025-what-homeowners-need-to-know)
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)`,
+  },
+  {
     slug: "vancouver-apartment-regulations-family-unit-mix-october-27-2026",
     title: "Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.",
     seoTitle: "Vancouver Apartment Rules Change Oct 27: Family Unit Mix",
