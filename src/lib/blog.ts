@@ -33,6 +33,87 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "district-north-vancouver-housing-reserve-fund-runs-dry-five-years",
+    title: "North Vancouver's Affordable Housing Fund Could Run Dry Within Five Years: What It Means for Buyers and Renters",
+    seoTitle: "DNV Housing Reserve Fund Could Run Dry Within Five Years",
+    excerpt:
+      "The District of North Vancouver's Housing Reserve Fund could be fully allocated within five years. Here is what the staff report says and why it matters.",
+    date: "October 2026",
+    datePublished: "2026-10-09",
+    dateModified: "2026-10-09",
+    category: "Neighbourhoods",
+    readTime: "~4 min read",
+    image: "/images/blog/district-north-vancouver-housing-reserve-fund-runs-dry-five-years.webp",
+    imageAlt: "Snow-capped North Shore mountains above the North Vancouver waterfront skyline, with a loaded container ship crossing Burrard Inlet in the foreground",
+    content: `> A September 24 staff report to District of North Vancouver council says the Housing Reserve Fund, about $27.4 million at the end of 2025, is projected to be fully allocated within the next five years, and that the District's current way of supporting affordable housing is not financially sustainable over the long term. The report was on council's October 5 agenda as an information report. It does not ask council to approve a new funding model.
+
+I'm Aparna Kapur with Oakwyn Realty. If you own, buy or rent in the District of North Vancouver, this report is worth a few minutes, because it speaks to where future below-market homes will come from and what new density may cost builders.
+
+## The numbers
+
+| Item | What the staff report says |
+|---|---|
+| Total District support since the 2011 OCP | About **$279.8 million** as of July 2026 |
+| Direct support | **$157.2 million** (foregone amenity contributions, waived development cost charges and permit fees, District-funded works and servicing) |
+| Indirect support | **$122.6 million** (District land leased at nominal rent, reduced municipal tax revenue) |
+| New affordable units supported | **1,691** across **28** projects (counts include care beds) |
+| Units preserved | **94** in two existing buildings |
+| Housing Reserve Fund balance | About **$27.4 million** on December 31, 2025 |
+| Annual top-up | **$595,000** a year, adjusted for inflation, including about **$200,000** from the District's share of short-term accommodation tax |
+
+That $279.8 million is a broad estimate of financial support and opportunity cost, not a tally of cash spent. A lot of it is money the District chose not to collect so that affordable units could get built.
+
+Since the previous update in 2024, the District has secured **184** more affordable units in its four growth centres, including **72** at Seylynn Centre, **48** at Maplewood Gardens and **32** at Lynn Valley Mall.
+
+## Why the money is getting tighter
+
+The report points to the province's shift from negotiated community amenity contributions to the amenity cost charge framework. Some affordable projects are exempt from those charges, which helps builders, but the District still has to fund parks, recreation and services for the people who move in.
+
+Staff say they will look at new ways to capture value from added density, citing Port Moody's approach of applying cash-in-lieu rates to density above provincial baseline requirements as a possible benchmark.
+
+## What it means if you own, buy or rent on the North Shore
+
+**Owners near growth centres:** If the District moves toward density-based cash-in-lieu, redevelopment math on larger lots near Lynn Valley, Lynn Creek, Maplewood and Lions Gate could shift. If you are thinking about selling to a builder or assembling with neighbours, stress-test land value assumptions against higher per-square-foot charges.
+
+**Buyers:** Fewer District-subsidized below-market projects could mean the pipeline leans further toward market rental and strata, keeping pressure on entry-level prices.
+
+**Renters:** New below-market supply will lean harder on senior government and non-profit partners, so timelines may stretch.
+
+## What to watch
+
+- Any staff report bringing a density cash-in-lieu policy to council.
+- How the District's ongoing zoning bylaw rewrite (new R1 and R2 detached zones adopted July 20, 2026) interacts with funding.
+- Council direction after the October 17 municipal election.
+
+## FAQ
+
+**Is the District cutting affordable housing?** No decision has been made. The report went to council for information only.
+
+**When could the reserve run out?** Staff project it will be fully allocated within the next five years.
+
+**Does this affect the City of North Vancouver?** No. The City and the District are separate municipalities, and this report covers the District only.
+
+## Bottom line
+
+The District has leaned on its own reserve and on foregone charges to get affordable homes built, and staff are now saying plainly that the model can't last as is. For North Shore owners near the growth centres, the next policy step could change what your land is worth to a builder. For buyers and renters, it is one more reason not to count on a quick wave of new below-market supply.
+
+If you want to talk through what this could mean for a specific property or search in the District of North Vancouver, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general neighbourhood and policy context only and is not legal, planning, or investment advice. Confirm policy details and project status with the District of North Vancouver before you decide.*
+
+**Sources:**
+- [District of North Vancouver, "Affordable Housing Program Contributions (2011-2026)," information report to council dated September 24, 2026 (Attachment 19, October 5, 2026 council agenda package)](https://docs.dnv.org/documents/meeting-agenda-package-20261005.pdf#page=321)
+- [Gagandeep Ghuman, The North Shore Local, "DNV housing reserve projected to be fully allocated within five years" (Oct 4, 2026)](https://www.thenorthshorelocal.com/dnv-affordable-housing-reserve-five-years/)
+- [District of North Vancouver, Zoning Bylaw Rewrite](https://www.dnv.org/business-development/zoning-bylaw-rewrite)
+
+**Related reading:**
+- [North Vancouver's First New Elementary in 35 Years Is Open. Here's the Catchment.](/resources/blog/cloverley-elementary-north-vancouver-catchment-2026)
+- [Vancouver Rents Rose While the Region Softened. West Van and North Van Still Top Canada](/resources/blog/vancouver-north-west-van-rents-september-2026)
+- [First-time buyer programs in BC (2026)](/resources/blog/first-time-buyer-programs-bc-2026)`,
+  },
+  {
     slug: "first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026",
     title: "Townhouses in First Shaughnessy? A Second Heritage Rezoning Lands on Douglas Crescent",
     seoTitle: "First Shaughnessy Townhouse Rezoning: Douglas Crescent",
