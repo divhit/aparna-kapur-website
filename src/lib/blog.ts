@@ -33,6 +33,113 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vancouver-election-2026-housing-platforms-compared",
+    title: "Vancouver Votes Oct. 17: How Every Major Party Would Change Housing, Zoning and Rentals",
+    seoTitle: "Vancouver Election 2026: Housing Platforms Compared",
+    excerpt:
+      "Vancouver votes Oct. 17. A neutral side-by-side of seven parties' housing platforms on permits, city land, renters and the ODP, plus how and when to vote.",
+    date: "October 2026",
+    datePublished: "2026-10-11",
+    dateModified: "2026-10-11",
+    category: "Market Analysis",
+    readTime: "~8 min read",
+    image: "/images/blog/vancouver-election-2026-housing-platforms-compared.webp",
+    imageAlt: "Downtown Vancouver skyline and the Vancouver Convention Centre seen across Coal Harbour from a rocky Stanley Park shoreline under a clear blue sky",
+    content: `> Vancouver votes on Saturday, October 17, 2026, from 8 am to 8 pm at any of 85 voting places. As of October 11, one advance voting day is left: Tuesday, October 13, 8 am to 8 pm, at any of 59 advance voting places. Housing is central to all seven mainstream civic parties' platforms. They differ most on permitting, the use of city land, renter protections, the pause on net new supportive housing, and whether to keep the city's new Official Development Plan (ODP). Below is a side-by-side summary of what each party says it would do, in alphabetical order.
+
+I'm Aparna Kapur with Oakwyn Realty. Clients keep asking me what this election could mean for their property, their rent, or the home they hope to buy. I can't tell you how to vote, and I won't. What I can do is lay out what each party has said about housing, in the same format for each one, so you can compare them yourself.
+
+*This post is informational only. It is not an endorsement of any party or candidate, and parties appear in alphabetical order.*
+
+## How and when to vote
+
+These details come from the City of Vancouver's election pages ([vancouver.ca/vote](https://vancouver.ca/your-government/2026-municipal-election.aspx)) as of October 11, 2026:
+
+| Item | What the City says |
+|---|---|
+| Election Day | Saturday, October 17, 8 am to 8 pm, at any of 85 voting places |
+| Remaining advance voting | Tuesday, October 13, 8 am to 8 pm, at any of 59 advance voting places (the October 3, 7 and 10 advance days have passed) |
+| Where | You can vote at any voting place in the city. Use the City's [where to vote map](https://vancouver.ca/election/2026/where-to-vote.aspx) |
+| Vote by mail | The deadline to have a package mailed out has passed. You can still request a package for pickup at the Election Office (305 West 8th Ave.) until **October 13 at noon**. Completed ballots must be **received by 8 pm on October 17**, and the City suggests using a drop box if you pick up late |
+| What to bring | Your Voter Information Card if you have one. If you are not registered, you can register at the voting place with two pieces of ID that together show your name (on both), your address (on at least one) and your signature (on at least one) |
+| What's on the ballot | 1 mayor, 10 councillors, 7 Park Board commissioners, 9 school trustees, 3 Capital Plan borrowing questions and 2 plebiscite questions |
+
+To vote you must be 18 or older on October 17, a Canadian citizen, and have lived in B.C. for at least six months. You must also have lived in Vancouver, or owned property registered in your name in Vancouver, for at least 30 days before you register. Voters living in UBC or the University Endowment Lands vote only for school trustees and have their own voting places. Questions go to 3-1-1 or the Election Office at 604-829-2010.
+
+## The quick answer
+
+Using Business in Vancouver's October 6 summary of the seven mainstream parties' housing platforms:
+
+- **Faster approvals** appear in nearly every platform, through different tools: pre-approved designs, merging departments, replacing the Vancouver Building Bylaw, fee deferrals, or simpler zoning.
+- **City-owned land or city-owned housing for affordable homes** is proposed in some form by ABC Vancouver, COPE, the Green Party (through a public housing bond), OneCity, the Vancouver Liberals and Vote Vancouver.
+- **A renters' office** is proposed by COPE, OneCity, TEAM for a Livable Vancouver and the Vancouver Liberals.
+- **The pause on net new supportive housing** would continue under ABC Vancouver until the province sets binding municipal targets. OneCity and the Vancouver Liberals say they would reverse it.
+- **The ODP** would be replaced under TEAM for a Livable Vancouver's platform, which also proposes repealing the Broadway, Jericho, Rupert and Renfrew, and Villages plans. It is the only party in the summary proposing to replace the ODP.
+
+Daily Hive counted 130 names on the ballot, including independents and smaller parties. The City's "Who is running" page on vancouver.ca has the full list.
+
+## Side by side
+
+Positions below are the parties' own claims as compiled by Business in Vancouver from news conferences, press releases and party websites. A dash means that topic was not highlighted in that party's summary. It does not mean the party has no position.
+
+| Party | Building and permits | Affordable homes and city land | Renters | Supportive housing |
+|---|---|---|---|---|
+| ABC Vancouver | Keep speeding up permits; make townhouses, rowhouses, multiplexes and family-sized apartments easier to build; explore a temporary "Start Building Vancouver" fee reduction or deferral | Stronger mandate for the Vancouver Housing Development Office to find underused city land; essential-worker housing partnerships | Seek BC Housing funding to replace aging SRO buildings while protecting current residents | Continue the pause on net new supportive housing until the province sets binding municipal targets |
+| COPE | - | More than 20,000 affordable units of many types; buy apartments for public housing and co-ops; citywide public land trust; fund housing through a mansion tax, a tripled empty homes tax and a tax on non-resident investors | Bring back the renters' office; citywide anti-displacement policy; allow pets in all rentals | Supportive housing included in its 20,000-unit target |
+| Green Party of Vancouver | Pre-approved designs including prefab; partner with Build Canada Homes; streamline permits for low-rise apartments, rowhouses and townhouses; keep the Vancouver Building Bylaw | An "affordable housing czar"; a Vancouver Public Housing Bond; require large developments to provide affordable homes on site or contribute land, units or cash | A Rental Housing Acquisition and Preservation program for at-risk rental buildings | The housing czar would focus on non-market and supportive housing |
+| OneCity Vancouver | Legalize 25-foot lots and single-stair buildings; allow four storeys with corner stores everywhere and six storeys near centres | 4,000 affordable homes on city land, with revenue recycled; a Community Land Trust Support Strategy | Bring back the renters' office; expand tenant relocation protections and cut the qualifying period to six months; end the pet ban in city-owned housing | Lift the freeze on net new supportive housing |
+| TEAM for a Livable Vancouver | Simplify zoning and permits; reinstate minimum parking requirements; replace the ODP with a "Respect for Neighbourhoods Plan"; repeal the Broadway, Jericho, Rupert and Renfrew, and Villages plans | Mixed housing within neighbourhood scale; retain and build co-ops, especially larger family units | Establish a renters' office; protect older rental buildings from demolition | - |
+| Vancouver Liberals | Replace the Vancouver Building Bylaw with the B.C. Building Code; merge the 12 departments that approve housing into one; let faith groups, co-ops and non-profits build without rezoning | A community land trust for city land; extend co-op and non-profit leases on city land with automatic renewals | Restore the renters' office; protect tenants from renovictions during city-led redevelopment | Reverse the pause; require 24-hour public bathrooms and showers at new supportive projects |
+| Vote Vancouver | Simplify and speed up the development process; help faith-based landowners redevelop sites | Permanently affordable middle-income homes on public land with non-profit child care; pair the Affordable Housing Endowment Fund with city land; co-op and community housing with land trusts | - | Housing linked to mental health and addiction services; replace unsafe SROs with supportive housing |
+
+Mayoral candidates named in Daily Hive's platform roundup include Ken Sim (ABC Vancouver), Pete Fry (Green Party), Colleen Hardwick (TEAM), Kareem Allam (Vancouver Liberals) and Rebecca Bligh (Vote Vancouver). The City's candidate list covers every race.
+
+## Why this matters for owners and buyers
+
+Vancouver's first ODP was approved in March 2026. The City says the ODP does not rezone any property by itself. But under the Vancouver Charter changes in provincial Bill 18 (2024), rezonings that are consistent with the ODP and at least 50% residential cannot hold a public hearing. That makes the ODP, and what the next council does with it, a real factor in redevelopment potential. The City says the ODP will be reviewed in 2030 and every five years after that.
+
+In July, council voted against the Villages plan, which would have upzoned about 13,260 parcels for up to four, six and, near transit, eight storeys. Business in Vancouver notes that the Villages are still part of the ODP.
+
+Some rules take effect no matter who wins. Vancouver's [new apartment rules start October 27](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026), including a citywide minimum of 35% two-or-more-bedroom units in new buildings with more than eight units.
+
+The next council will also decide pending rezonings. Both of Intracorp's [First Shaughnessy heritage townhouse proposals](/resources/blog/first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026) will go to the new council, which is sworn in during the first week of November.
+
+If you own a detached home, compare each platform's zoning, permitting and plan items against your own lot and street. If you rent, the renters' office and tenant-protection items are the ones to read closely. If you are buying, check whether a property sits inside an area plan that a party has proposed to keep, change or repeal.
+
+## FAQ
+
+**When is the Vancouver election?** Saturday, October 17, 2026, 8 am to 8 pm.
+
+**Is there still advance voting?** Yes. The last advance voting day is Tuesday, October 13, 8 am to 8 pm, at any of 59 advance voting places.
+
+**Can I still vote by mail?** Only by picking up a package at the Election Office (305 West 8th Ave.) by noon on October 13. Your ballot must be received by 8 pm on October 17.
+
+**Will the new council decide pending rezonings?** Yes. Intracorp's two Shaughnessy applications, for example, will be decided by the new council.
+
+**Can a new council change the ODP?** Council can amend it, and the City has scheduled a formal review for 2030. TEAM for a Livable Vancouver is the party that has pledged to replace it.
+
+If you want to talk through how any of these proposals could affect a specific property, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information about the 2026 Vancouver election and is not an endorsement of any party or candidate. It is not legal, planning, or investment advice. Party positions are the parties' own statements as reported by the sources below. Confirm voting details with the City of Vancouver and platform details with each party before you decide.*
+
+**Sources:**
+- [City of Vancouver, 2026 election (key dates, ballot, vote by mail)](https://vancouver.ca/your-government/2026-municipal-election.aspx)
+- [City of Vancouver, Where to vote (voting places and hours)](https://vancouver.ca/election/2026/where-to-vote.aspx)
+- [City of Vancouver, "Advance voting opens Saturday for Vancouver Election" (Oct 1, 2026: eligibility, ID, vote by mail)](https://vancouver.ca/news-calendar/advance-voting-opens-saturday-for-vancouver-election-oct-2026.aspx)
+- [Mike Howell, Business in Vancouver, "Vancouver civic election 2026: What the parties say about housing" (Oct 6, 2026)](https://www.biv.com/news/economy-law-politics/vancouver-civic-election-2026-what-the-parties-say-about-housing-12863809)
+- [Hanna Hett, Daily Hive, "What are Vancouver municipal parties' major campaign promises?" (Sept 25, 2026)](https://dailyhive.com/vancouver/vancouver-municipal-parties-campaign-promises)
+- [City of Vancouver, "City Council approves first Vancouver Official Development Plan" (Mar 12, 2026)](https://vancouver.ca/news-calendar/council-approves-vancouver-odp-mar-2026.aspx)
+- [CityHallWatch, "Vancouver Villages plan rejected" (July 28, 2026)](https://cityhallwatch.wordpress.com/2026/07/28/vancouver-villages-plan-rejected-analysis-nuances-bigger-story/)
+- [Mike Howell, "Intracorp Homes seeks second townhouse project in Shaughnessy" (Oct 5, 2026)](https://www.squamishchief.com/real-estate/intracorp-homes-seeks-second-townhouse-project-in-shaughnessy-12836841)
+
+**Related reading:**
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)
+- [Townhouses in First Shaughnessy? A Second Heritage Rezoning Lands on Douglas Crescent](/resources/blog/first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026)
+- [North Vancouver's Affordable Housing Fund Could Run Dry Within Five Years: What It Means for Buyers and Renters](/resources/blog/district-north-vancouver-housing-reserve-fund-runs-dry-five-years)`,
+  },
+  {
     slug: "district-north-vancouver-housing-reserve-fund-runs-dry-five-years",
     title: "North Vancouver's Affordable Housing Fund Could Run Dry Within Five Years: What It Means for Buyers and Renters",
     seoTitle: "DNV Housing Reserve Fund Could Run Dry Within Five Years",
