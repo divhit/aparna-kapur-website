@@ -33,6 +33,102 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "king-edward-station-rental-rezoning-court-challenge-dismissed-2026",
+    title: "Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely",
+    seoTitle: "Court Upholds West 29th and Ash Rentals Near King Edward",
+    excerpt:
+      "A B.C. court upheld Vancouver's approval of 229 rentals at West 29th and Ash near King Edward station. What judges review in a rezoning challenge.",
+    date: "October 2026",
+    datePublished: "2026-10-12",
+    dateModified: "2026-10-12",
+    category: "Neighbourhoods",
+    readTime: "~7 min read",
+    image: "/images/blog/king-edward-station-rental-rezoning-court-challenge-dismissed-2026.webp",
+    imageAlt: "Tree-lined Vancouver street with brick and stone mid-rise buildings on both sides under a clear sky in early autumn",
+    content: `> A B.C. Supreme Court judge has upheld Vancouver council's July 2025 approval of about 230 secured market rental homes at West 29th Avenue and Ash Street, near King Edward station. In *Cambie Corridor Neighbourhood Association v. Vancouver (City)*, 2026 BCSC 1744 (September 15, 2026), the court found the public hearing was fair even though the developer's confidential financial documents were not released, and found council's decision reasonable even though no below-market rental units were required. The petition was dismissed, with costs payable to the City and the developer. The short version for owners: a judicial review checks how council decided, not whether the project is a good idea.
+
+I'm Aparna Kapur with Oakwyn Realty. I work with a lot of buyers and owners on Vancouver's south side, and this file sits a short walk from Queen Elizabeth Park and the Oakridge area I cover every day. The ruling also lands days before Vancouver elects the council that will decide the next round of rezonings, so it is worth understanding what a court will and won't look at.
+
+*This post is general information about a court decision. It is not legal advice.*
+
+## The site and how it got here
+
+The land assembly at 520 to 590 West 29th Avenue and 4510 to 4550 Ash Street is about 500 metres (roughly a 10-minute walk) from King Edward station on the Canada Line, half a block west of Queen Elizabeth Park and a block east of BC Children's Hospital. This part of the Cambie Corridor has been shifting from detached houses to townhouses.
+
+| When | What happened |
+|---|---|
+| 2018 | The City rezoned the properties to RM-8A, allowing townhouses up to three storeys and 1.2 FSR |
+| September 2022 | Sightline Properties obtained development and building permits for 46 strata townhouses, expected to sell for about $2 million to $2.3 million each, and paid a $1.2 million density bonus contribution. It demolished the houses and began construction, but the townhouse market softened and it had no presales |
+| June 2024 | After the Province's transit-oriented area (TOA) law, Sightline applied to rezone for two six-storey rental buildings and two townhouse blocks, 230 secured rental homes in total, raising density from 1.2 to 3.0 FSR |
+| July 8, 2025 | After a public hearing, council approved the rezoning unanimously |
+| August to December 2025 | The development permit was approved in August with 229 units, the rezoning bylaw was enacted in November, and the permit was issued December 18 |
+| August 2025 | The Cambie Corridor Neighbourhood Association filed its petition for judicial review |
+| September 15, 2026 | Justice Morellato dismissed the petition |
+
+**The central issue was below-market rent.** The City's TOA rezoning policy normally asks rental projects in this tier to provide at least 20% of residential floor area as below-market rental, at rents at least 10% under CMHC's citywide average. Sightline initially proposed that. City staff later recommended approving the project as 100% market rental, after their own pro forma review concluded the rezoning would not create enough land value lift to support below-market units, partly because the existing RM-8A zoning already allowed more than most nearby RA-1 lots. No community amenity contribution was required. The staff report listed about $5.76 million in development cost levies and about $297,000 for public art as other public benefits, along with the 230 rentals secured for 60 years or the life of the building, whichever is longer.
+
+## What the residents raised
+
+At the July 2025 hearing, 12 speakers opposed the application and one neighbour spoke in favour. Concerns included parking and traffic, setbacks and massing, school capacity, the waiver of the below-market rental and amenity requirements, and how the below-market component came to be removed. Several speakers said they could not properly assess that change without seeing the developer's pro forma or the City's detailed analysis. Some later formed the association, which says its purpose is to advocate for transparent, fair and lawful planning in the Cambie Corridor. Its members told the court they do not oppose development or more rental housing, provided the public gets enough information to assess the public interest.
+
+In court, the association made two main arguments: that the hearing was procedurally unfair because the financial documents behind the staff recommendation were never disclosed, and that council's decision was unreasonable because council did not explain why it departed from the TOA policy's below-market rental expectation. The developer argued the association should not have standing to bring the case at all. The judge granted standing, finding the association raised serious issues and that its members, as owners and residents, have a genuine interest in the fairness and transparency of council's process.
+
+## What the court decided
+
+- **Disclosure.** The City generally meets its duty by disclosing everything council itself considers. Here, council and the public saw the same material, including the staff referral report, which was released about seven weeks before the hearing and explained why no below-market units were proposed. Council never saw the pro forma either. The judge accepted City evidence that releasing developer cost and revenue figures could hurt competitive tendering and the City's own future negotiations.
+- **Policy is guidance.** The association accepted that the TOA rezoning policy does not legally bind council. The judge found the record showed council understood the below-market and amenity issue and approved the project for stated reasons: 230 secured rentals in a low-vacancy city, plus levies and the public art contribution.
+- **Relying on staff.** Councillors were entitled to rely on the staff report and the public's submissions without redoing the financial analysis themselves. The transcript showed councillors questioned staff on the points speakers raised.
+- **Result.** The petition was dismissed in its entirety, with costs payable by the association to the City and Sightline.
+
+## What a court will and won't review
+
+In plain terms, a judicial review is not an appeal on the planning merits. The court does not decide whether six storeys is right for the block or whether below-market units should have been required. It asks two narrower questions:
+
+1. **Was the process fair?** For example, did the public get the material council relied on in time to respond?
+2. **Was the decision reasonable?** Is there a rational, transparent explanation in the record, within what the law allows council to do?
+
+Courts give elected councils a lot of room on planning judgment. That does not make a challenge meaningless. Courts have set aside municipal decisions where documents council relied on were not disclosed in time. But a petition that is really about whether a project is a good idea will usually be answered at the council table, not in court. Anyone weighing a challenge should get advice from a lawyer, including on cost exposure.
+
+## Why it matters for owners, buyers and sellers
+
+**If you own near a SkyTrain or Canada Line station:** Provincial TOA rules limit how far council can restrict height and density near stations. On these Tier 3 lands, council cannot use zoning to prohibit up to eight storeys and 3.0 FSR, though staff told council it could still refuse an application on other planning grounds. This ruling adds that a court will usually defer once council has approved. A legal challenge is better read as a possible delay than a likely reversal.
+
+**If you are buying a detached home or townhouse near a station:** A rental or mid-rise neighbour is a realistic outcome. For some lots that is assembly upside. For others it changes the outlook and street traffic. Check the City's TOA map and nearby rezoning files before you write an offer.
+
+**If you are watching new-build strata:** The original plan here was $2 million-plus townhouses that never found presale buyers, and the developer pivoted to rental. That says something about where new townhouse demand sat in this pocket.
+
+**For the election:** How strictly the below-market rental expectation is applied in TOA rezonings is a council policy choice. The council elected on October 17 can tighten it, loosen it, or keep the case-by-case approach this ruling reviewed. My [side-by-side of the parties' housing platforms](/resources/blog/vancouver-election-2026-housing-platforms-compared) covers what each party says about zoning and approvals.
+
+## FAQ
+
+**What was approved at West 29th and Ash?** Two six-storey secured market rental buildings and two townhouse blocks, approved as 230 homes and permitted at 229, near King Edward station.
+
+**Did the court say the City must publish developer financials?** No. It found the City met its duty by disclosing everything council considered, including staff's summary of their own pro forma analysis.
+
+**Does Vancouver require below-market rentals near transit?** Its TOA rezoning policy expects them in many rental rezonings, but the policy is not binding, and the court found council's decision to approve without them was reasonable on this record.
+
+**Can neighbours still challenge a rezoning?** Yes, through judicial review in the B.C. Supreme Court. The court reviews fairness and reasonableness, not the planning merits, and the unsuccessful side can be ordered to pay costs.
+
+**Who decides future rezonings?** The council elected on October 17, 2026.
+
+If you want to talk through what a nearby rezoning could mean for a home you own or are thinking of buying, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information about a published court decision. It is not legal, planning, or investment advice. If you are considering a legal challenge or are affected by a rezoning, speak with a lawyer. Confirm project and zoning details with the City of Vancouver before you decide.*
+
+**Sources:**
+- [Cambie Corridor Neighbourhood Association v. Vancouver (City), 2026 BCSC 1744 (Sept. 15, 2026), BC Courts](https://www.bccourts.ca/jdb-txt/sc/26/17/2026BCSC1744.htm)
+- [Kenneth Chan, Daily Hive, "B.C. court rejects challenge to rescind approval of 229 rental homes in Vancouver's Cambie Corridor" (Sept. 25, 2026)](https://dailyhive.com/vancouver/520-590-west-29th-avenue-4510-4550-ash-street-vancouver-rental-housing-sightline-cambie-corridor-legal-challenge)
+- [Dentons Commercial Litigation Blog, "BC Supreme Court finds public not entitled to developer's confidential financial information on municipal rezoning application" (Oct. 2026)](https://www.commerciallitigationblog.com/bc-supreme-court-finds-public-not-entitled-to-developers-confidential-financial-information-on-municipal-rezoning-application/)
+- [Stewart McDannold Stuart, "Cambie Corridor Neighbourhood Ass'n: Municipal Policy Does Not Typically Form Legal Entitlements" (Sept. 2026)](https://sms.bc.ca/2026/09/municipal-policy-does-not-typically-form-legal-entitlements/)
+
+**Related reading:**
+- [Vancouver Votes Oct. 17: How Every Major Party Would Change Housing, Zoning and Rentals](/resources/blog/vancouver-election-2026-housing-platforms-compared)
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)
+- [Townhouses in First Shaughnessy? A Second Heritage Rezoning Lands on Douglas Crescent](/resources/blog/first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026)`,
+  },
+  {
     slug: "vancouver-election-2026-housing-platforms-compared",
     title: "Vancouver Votes Oct. 17: How Every Major Party Would Change Housing, Zoning and Rentals",
     seoTitle: "Vancouver Election 2026: Housing Platforms Compared",
