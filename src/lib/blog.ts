@@ -33,6 +33,105 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vancouver-luxury-home-sales-2026-west-side-west-vancouver",
+    title: '$3M+ Home Sales Fell 17% in Greater Vancouver. Is This the Move-Up Window for West Side and West Van Families?',
+    seoTitle: '$3M+ Home Sales Fell 17% in Greater Vancouver',
+    excerpt:
+      'Greater Vancouver $3M+ home sales fell 17% in Jan to Sept 2026, per REMAX. What it means for move-up buyers and sellers on the West Side and in West Van.',
+    date: "November 2026",
+    datePublished: "2026-11-13",
+    dateModified: "2026-11-13",
+    category: "Market Analysis",
+    readTime: "~7 min read",
+    image: "/images/blog/vancouver-luxury-home-sales-2026-west-side-west-vancouver.webp",
+    imageAlt: "Aerial view of tree-lined Shaughnessy homes on Vancouver's West Side, looking north to Burrard Inlet and the North Shore mountains under a clear sky",
+    imageCredit: {
+      author: "Wpcpey",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Shaughnessy_2018.jpg",
+    },
+    content: `> According to REMAX Canada's Fall/Winter 2026 Spotlight on Luxury Report, 594 detached homes sold for $3 million or more in Greater Vancouver from January 1 to September 30, 2026, down 17% from 716 in the same period of 2025. Detached sales above $5 million fell much less (REMAX cites a decline of about 8%), and luxury townhome and condo sales each fell about 22%. REMAX names Vancouver's West Side and West Vancouver as the areas where affluent detached buyers keep concentrating, and says softer prices are narrowing the gap between what a family's current home sells for and what the next home costs, which is drawing some move-up buyers back.
+
+I'm Aparna Kapur with Oakwyn Realty. I work with buyers and owners on Vancouver's south side, and I also help people buying on the West Side and the North Shore. A 17% drop in $3 million-plus detached sales sounds like a stall. For a family trying to move up, it may be something else: a narrower gap between the home they have and the home they want.
+
+## The numbers
+
+| What REMAX measured | January 1 to September 30, 2026 vs. 2025 |
+|---|---|
+| Detached sales at $3 million and up (Greater Vancouver) | 594 vs. 716, down 17.0% |
+| Same measure in January to April | Down about 19.8%, so the year-to-date gap has narrowed a little |
+| Detached sales above $5 million | Eased about 8% |
+| Luxury townhome and condo sales | Each fell about 22% |
+| Ultra-prime condo sales above $5 million | Held steady with last year |
+
+REMAX sets each market's luxury threshold at twice its average sale price, which puts Greater Vancouver at $3 million. The standout sale of the year was a $28 million double-lot estate on Point Grey Road with water views.
+
+For context, Greater Vancouver had the steepest luxury decline of the 13 Canadian markets REMAX tracked, ahead of Oakville (down 16.7%) and the GTA (down 9.4%). Burlington, Calgary, St. John's, Edmonton and Saskatoon all posted double-digit gains.
+
+## Why buyers are hesitating
+
+REMAX points to three things weighing on the top of the Vancouver market: economic and trade uncertainty, Vancouver's "multiple layers of ownership and transaction taxes," and the Bank of Canada's October 28 rate increase to 2.5%, which came after the report's study period. The report describes the buyer mood as "paralysis by analysis," with many people who can afford to buy choosing to wait.
+
+## Who is still buying
+
+REMAX describes three groups that are active right now:
+
+1. **Move-up buyers** who see a smaller dollar gap between selling their current home and buying a bigger one, and who have enough equity that mortgage rates matter less.
+2. **Right-sizers** trading large detached houses for luxury condos or townhomes.
+3. **Multi-generational families** using family support to buy homes that can house more than one generation, a trend REMAX links to changing local zoning.
+
+Most active buyers, it says, are established local families, business owners, professionals and Canadians returning from abroad.
+
+## What it means on the West Side and in West Vancouver
+
+**Move-up buyers.** If you own a condo, townhome or starter house and want a detached home on the West Side or in West Van, the math may be better now than it has been in years. Your home likely sells for less than it would have in 2022, but the home you want has usually come down more in dollar terms. The number that matters is the net gap after both deals, including property transfer tax, legal fees, commissions, moving costs and any mortgage penalty, not just the discount on the house you want.
+
+**Sellers.** REMAX's message is that buyers have more choice and more leverage, but "not a blank cheque." Homes that are priced to the market are selling; ambitious asking prices are sitting. Rarity still commands a premium: waterfront, protected views and turnkey homes on the best streets remain in short supply even in a slow year.
+
+**Condo right-sizers.** Coal Harbour, Yaletown and False Creek are still where REMAX sees luxury condo demand. With luxury condo sales down about 22%, downsizers have room to negotiate.
+
+**Multi-generational buyers.** City of Vancouver zoning changes that allow more homes on a single lot, and a similar proposed change in West Vancouver, are part of why REMAX sees more families shopping for homes that can hold grandparents, adult children or a suite. In West Vancouver, the District's proposed bylaw allowing up to four units on most single-family lots (six near frequent transit) has passed third reading and is awaiting Ministry of Transportation and Transit approval before council can adopt it.
+
+## The policy wildcards
+
+- **Foreign buyers:** Budget 2026 (Nov 5) proposes extending the federal ban on foreign purchases of existing homes to January 1, 2029, while exempting new homes. That would not open up resale West Side or West Van detached houses to non-Canadian buyers. B.C.'s separate 20% additional property transfer tax on foreign buyers in Metro Vancouver also still applies, and the incoming B.C. Conservative government has said only that it is reviewing the federal changes (Vancouver Sun, Nov 12).
+- **Provincial housing taxes:** Industry groups including the B.C. Real Estate Association and the Urban Development Institute are asking the new provincial government to revisit the Speculation and Vacancy Tax, the Step Code and a planned PST expansion (Business in Vancouver, Nov 12). REMAX says a change in provincial leadership "has raised hopes" that taxation and permitting will be revisited. Nothing has changed yet.
+- **Rates:** The Bank of Canada raised its policy rate to 2.5% on October 28, after the report's study period, and said there could be a need to increase it further. Buyers relying on a fixed-rate pre-approval should check when their rate hold expires.
+
+## FAQ
+
+**How much did luxury home sales fall in Vancouver in 2026?** REMAX counts 594 detached sales at $3 million or more in Greater Vancouver from January to September 2026, down 17% from 716 a year earlier.
+
+**What counts as a luxury home in Vancouver?** REMAX uses $3 million, which is twice Greater Vancouver's average sale price.
+
+**Which Vancouver neighbourhoods are luxury buyers still targeting?** REMAX names Vancouver's West Side and West Vancouver for detached homes, and Coal Harbour, Yaletown and False Creek for luxury condos.
+
+**Is now a good time to move up to a detached home?** It depends on your net gap and your financing. Softer prices have narrowed the gap between starter homes and move-up homes, but closing costs and higher borrowing costs still add up. Run the numbers on both sides of the trade before you list.
+
+**Can foreign buyers purchase West Vancouver houses in 2027?** Under the federal proposal in Budget 2026, no: the ban on buying existing homes would be extended to January 1, 2029, with only new homes exempted. The proposal still needs legislation.
+
+If you want a free net trade-up gap estimate for a West Side or West Vancouver move, call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general market information based on the sources below. It is not legal, tax, or investment advice. Confirm current listings, tax rules and financing details before you decide.*
+
+**Sources:**
+- [REMAX Canada, Fall/Winter 2026 Spotlight on Luxury Report (Nov 9, 2026)](https://blog.remax.ca/luxury-real-estate-report/)
+- [REMAX Canada news release via Newswire, "Luxury Home Sales Rise in Seven of 13 Canadian Markets..." (Nov 9, 2026)](https://www.newswire.ca/news-releases/luxury-home-sales-rise-in-seven-of-13-canadian-markets-as-regional-strength-drives-demand-says-remax-canada-885590677.html)
+- [Money.ca via Yahoo Finance, "Luxury home sales dropped 17% in Vancouver and 9.4% in the GTA..." (Nov 12, 2026)](https://ca.finance.yahoo.com/news/luxury-home-sales-dropped-17-123000733.html)
+- [Nathan Griffiths and Stephanie Ip, Vancouver Sun, "Why a foreign buyer exemption on new homes likely won't do much for Vancouver, experts say" (Nov 12, 2026)](https://vancouversun.com/business/real-estate/foreign-buyer-exemption-wont-do-much-for-vancouver-experts-say)
+- [Daisy Xiong, Business in Vancouver, "Industry leaders urge new B.C. government to revisit housing policies" (Nov 12, 2026)](https://www.biv.com/news/real-estate/industry-leaders-urge-new-bc-government-to-revisit-housing-policies-12998747)
+- [District of West Vancouver, Small-Scale Multi-Unit Housing (Bylaw 5446 status)](https://www.westvancouver.ca/business-development/housing/small-scale-multi-unit-housing)
+- [Bank of Canada, "Bank of Canada raises the policy rate by 25 basis points to 2.5%" (Oct 28, 2026)](https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/)
+
+**Related reading:**
+- [West Vancouver Bylaw 5446: Four to Six Units on Most Lots (What Council Decides September 21)](/resources/blog/west-vancouver-bylaw-5446-four-to-six-units-september-2026)
+- [Townhouses in First Shaughnessy? A Second Heritage Rezoning Lands on Douglas Crescent](/resources/blog/first-shaughnessy-intracorp-heritage-townhouses-douglas-crescent-2026)
+- [Vancouver Real Estate Market Update: The June 2026 Numbers](/resources/blog/vancouver-market-update-june-2026)`,
+  },
+  {
     slug: "king-edward-station-rental-rezoning-court-challenge-dismissed-2026",
     title: "Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely",
     seoTitle: "Court Upholds West 29th and Ash Rentals Near King Edward",
