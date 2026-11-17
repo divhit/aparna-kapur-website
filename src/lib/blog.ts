@@ -33,6 +33,108 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "fairview-south-granville-broadway-plan-rentals-final-vote-nov-17",
+    title: "About 1,000 Broadway Plan Rentals in Fairview and South Granville Head to a Final Vote on Nov 17",
+    seoTitle: "Fairview and South Granville Rentals Face Final Vote Nov 17",
+    excerpt:
+      "Vancouver council's Nov 17 agenda includes final bylaws for about 1,000 Fairview and South Granville rentals. What it means for owners, buyers and renters.",
+    date: "November 2026",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+    category: "Neighbourhoods",
+    readTime: "~7 min read",
+    image: "/images/blog/fairview-south-granville-broadway-plan-rentals-final-vote-nov-17.webp",
+    imageAlt: "Aerial view of Fairview in Vancouver on a sunny day, with Granville Island and False Creek marinas on the left, low-rise condos and trees in the foreground, and downtown towers in the distance",
+    imageCredit: {
+      author: "Canmenwalker",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Fairview_Aerial_view_2025.jpg",
+    },
+    content: `> On Tuesday, November 17, 2026, Vancouver City Council is set to consider 16 bylaws at its first regular meeting since the October election, many of them the final step for rezonings council already approved at public hearings. Three are Broadway Plan rental projects in Fairview and South Granville: two 21-storey buildings with 507 rental homes for Vancouver General Hospital and Vancouver Coastal Health staff at 816-860 West 13th Avenue and 2915-2925 Willow Street; a 38-storey, 337-unit rental tower at 1470-1476 West Broadway beside South Granville station; and a 21-storey, 162-unit rental building at 1125 West 10th Avenue. Together that is about 1,006 rental homes. A 12-storey, 147-room hotel at 901 West Broadway, approved in 2022, is also on the list. Enactment is the last council step before a project can move on to development and building permits.
+
+I'm Aparna Kapur with Oakwyn Realty. Most of my work is on Vancouver's south side, but plenty of my clients own, rent or shop for condos in Fairview and South Granville, a short trip up Cambie or Oak. Tuesday's meeting is mostly procedural, but it is the moment these three projects stop being "approved in principle" and become actual zoning. Here is what is on the list and what it could mean if you live nearby.
+
+## What is on the Nov 17 agenda for Fairview and South Granville
+
+| Address | What the City approved | Rental homes | Below-market | Public hearing |
+|---|---|---|---|---|
+| 816-860 W 13th Ave and 2915-2925 Willow St (across from VGH) | Two 21-storey mixed-use buildings, FSR 7.40, 66.6 m, 49-space childcare | 507 | 100% of units at rents no higher than the City's Class B DCL waiver averages | Feb 19, 2026 |
+| 1470-1476 W Broadway (South Granville) | 38 storeys, 123 m, FSR 16.16, job space on the 2nd floor, secondary South Granville station entrance | 337 | 20% of floor area, starting at 10% below city-wide average rents (CMHC) | Feb 19, 2026 |
+| 1125 W 10th Ave | 21 storeys, FSR 9.1, 69 m, ground-floor commercial space | 162 | 20% of residential floor area (33 units, per the City's staff presentation) | Jan 22, 2026 |
+| 901 W Broadway | 12-storey hotel, 147 rooms, restaurant at grade, FSR 7.95 | 0 (hotel) | n/a | Jul 12, 2022 |
+
+Figures are the City's approved numbers from its public hearing documents and Shape Your City project pages.
+
+## 1. 13th and Willow: hospital workforce housing across from VGH
+
+Council first approved this site in April 2025 for two 21-storey buildings with 354 rental homes. The developer, PC Urban, came back with a new application that council approved at a public hearing on February 19, 2026. It raises the count to 507 homes and changes the affordability terms from 20% of the floor area at below-market rents to 100% of units at rents no higher than the averages set for the City's Class B DCL waiver, with priority for VGH and VCH staff. The height, density and 49-space childcare stay as approved.
+
+According to a March 31, 2026 announcement from Harrison Street Asset Management and PC Urban, the plan is 78 studios, 351 one-bedrooms and 78 two-bedrooms, fully furnished with utilities and Wi-Fi included, plus an 11,000 sq ft extended-hours childcare. Staff would get priority access through a nomination agreement with VGH. That announcement projected a groundbreaking in August 2026 and delivery in June 2029, and PC Urban lists the project value at $260 million. I have not seen confirmation of a start date, and the CD-1 bylaw itself is only now up for enactment.
+
+## 2. 1470-1476 West Broadway: the tallest of the three
+
+Gracorp's tower at South Granville grew from the original June 2024 application (34 storeys, 300 rentals, FSR 13.0) to 38 storeys, 337 rentals and FSR 16.16 in a September 2025 revision. It keeps a secondary entrance to the Broadway Subway's South Granville station and puts job space on the second floor. Twenty percent of the floor area is set aside for below-market rentals, with starting rents 10% below CMHC's city-wide averages.
+
+## 3. 1125 West 10th Avenue: 162 rentals on a site with existing tenants
+
+Sightline Properties' 21-storey building would bring 162 rental homes, with 20% of the residential floor area below market. The City's Tenant Relocation and Protection Policy applies to this site, which means eligible renters there get relocation help and protections. A [voche.me summary of CityHallWatch's November 13 agenda preview](https://voche.me/news/vancouver-council-november-17-18-first-meeting-2026) says the project replaces a 25-unit building built in 1964; that detail comes from the news report, not from a City document I could find. City staff listed public benefits of $1.8 million in development cost levies and $0.2 million in public art.
+
+## Why a "final vote" matters
+
+A public hearing approval is approval "in principle." The City's own wording says it does not oblige council to enact the bylaw, and the developer has to meet conditions first. Enactment is the last council step before the developer can move ahead with development and building permits. Because this is a new council, the agenda lists which councillors need to review the earlier hearing proceedings before they are eligible to vote on each bylaw. For both 13th and Willow and 1470-1476 West Broadway, that includes Mayor Pete Fry and seven councillors.
+
+## What it means for you
+
+- **Condo owners in Fairview and South Granville:** If these bylaws are enacted, expect years of construction near VGH and on Broadway once permits are issued. Longer term, new rentals, a childcare and street-level shops add the kind of amenities buyers pay for near a subway station. If you plan to sell in the next two to three years, think about how construction views and noise will show up in your listing.
+- **Buyers:** Fairview resale condos near future stations may end up competing with brand-new, furnished rentals for the same young professional and healthcare-worker demand. That can soften rents nearby, which matters if you plan to rent your unit out.
+- **Investors:** About 1,000 purpose-built rentals within a few blocks is real new supply. Underwrite rents conservatively for small one-bedrooms and studios in this pocket.
+- **Renters, especially VGH and VCH staff:** The 13th and Willow project is designed for you. Watch for the nomination process through VGH closer to completion.
+- **Owners of older walk-ups and small lots nearby:** Each approval sets a reference point for what the Broadway Plan allows on nearby sites. Talk to a professional before assuming your lot has the same potential; every site is different.
+
+## How to follow it
+
+1. Read the agenda on the City's council site (Nov 17, 2026 regular council meeting, By-laws 1 to 16).
+2. Watch live at 9:30 am on Tuesday, Nov 17. These bylaws follow public hearings that have already closed, so council does not take new public input on them.
+3. Follow each project on Shape Your City for development permit updates.
+
+## FAQ
+
+**Is the 38-storey tower at South Granville approved?** Council approved the rezoning in principle at a public hearing on February 19, 2026. The bylaw on the November 17 agenda is the final enactment step, and council is set to consider it that morning.
+
+**Who can rent at 13th and Willow?** The project prioritizes VGH and VCH staff through a nomination agreement, with all units at rents no higher than the averages set for the City's Class B DCL waiver, according to the City and the developer.
+
+**How many rental homes are on the Nov 17 list in Fairview and South Granville?** About 1,006 across three projects: 507 at 13th and Willow, 337 at 1470-1476 West Broadway and 162 at 1125 West 10th Avenue.
+
+**When will they be built?** Only 13th and Willow has a published target: its developers projected delivery in June 2029. None of the three can get building permits until its rezoning bylaw is enacted.
+
+**Can I speak to council about these bylaws on November 17?** No. The public hearings for these projects have already happened, so council does not hear new speakers on the enactment bylaws.
+
+Thinking about buying or selling in Fairview or South Granville while the Broadway Plan reshapes the area? I can show you how nearby projects might affect a specific building and help you plan the timing. Call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information based on the sources below and the City's agenda as published before the meeting. It is not legal, tax, or investment advice. Confirm the outcome of the vote and current project details with the City before you decide.*
+
+**Sources:**
+- [City of Vancouver, Council agenda, November 17, 2026](https://council.vancouver.ca/20261117/regu20261117ag.htm)
+- [voche.me editors, "Vancouver council's first regular meeting on November 17 brings housing rezonings, Park Board motion and tenant rights debate" (Nov 15, 2026, citing CityHallWatch's Nov 13 preview)](https://voche.me/news/vancouver-council-november-17-18-first-meeting-2026)
+- [City of Vancouver, Public Hearing Summary and Recommendation, CD-1 Rezoning: 816-860 West 13th Avenue and 2915-2925 Willow Street (Feb 19, 2026)](https://council.vancouver.ca/20260219/documents/phea2sr.pdf)
+- [Shape Your City, 816-860 W 13th Ave and 2915-2925 Willow St rezoning application](https://www.shapeyourcity.ca/816-860-w-13-ave-and-2915-2925-willow-st-2)
+- [Harrison Street Asset Management, "Harrison Street and PC Urban to Build Vancouver Health Housing" (Mar 31, 2026)](https://harrisonst.com/harrison-street-asset-management-and-pc-urban-to-develop-507-unit-healthcare-workforce-housing-community-near-vancouver-general-hospital/)
+- [PC Urban, 13th and Willow project page](https://www.pcurban.ca/project/13th-willow/)
+- [Shape Your City, 1470-1476 W Broadway rezoning application](https://www.shapeyourcity.ca/1470-1476-w-broadway)
+- [City of Vancouver, Public Hearing Summary and Recommendation, CD-1 Rezoning: 1125 West 10th Avenue (Jan 22, 2026)](https://council.vancouver.ca/20260122/documents/phea3sr.pdf)
+- [City of Vancouver, Staff Presentation, CD-1 Rezoning: 1125 West 10th Avenue (Jan 22, 2026)](https://council.vancouver.ca/20260122/documents/phea3ppt.pdf)
+- [Shape Your City, 1125 W 10th Ave rezoning application](https://www.shapeyourcity.ca/1125-w-10-ave)
+- [Shape Your City, 901 W Broadway rezoning application (approved Jul 12, 2022)](https://www.shapeyourcity.ca/901-w-broadway)
+
+**Related reading:**
+- [Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely](/resources/blog/king-edward-station-rental-rezoning-court-challenge-dismissed-2026)
+- [Vancouver Votes Oct. 17: How Every Major Party Would Change Housing, Zoning and Rentals](/resources/blog/vancouver-election-2026-housing-platforms-compared)
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)`,
+  },
+  {
     slug: "vancouver-luxury-home-sales-2026-west-side-west-vancouver",
     title: '$3M+ Home Sales Fell 17% in Greater Vancouver. Is This the Move-Up Window for West Side and West Van Families?',
     seoTitle: '$3M+ Home Sales Fell 17% in Greater Vancouver',
