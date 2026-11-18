@@ -33,6 +33,110 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "vancouver-hotel-boom-43-projects-condo-owners",
+    title: "Vancouver Has 43 Hotel Projects in the Works. Here Is What That Means for Downtown Condo Owners",
+    seoTitle: "43 Vancouver Hotel Projects: What They Mean for Condo Owners",
+    excerpt:
+      "Vancouver has 43 hotel projects and about 8,330 rooms in the pipeline. What the hotel boom means for downtown condo owners, renters and buyers in 2026.",
+    date: "November 2026",
+    datePublished: "2026-11-18",
+    dateModified: "2026-11-18",
+    category: "Market Analysis",
+    readTime: "~7 min read",
+    image: "/images/blog/vancouver-hotel-boom-43-projects-condo-owners.webp",
+    imageAlt: "The Orpheum Theatre's brick and glass building at Smithe and Seymour streets in downtown Vancouver on a sunny day, with a glass condo tower rising behind it",
+    imageCredit: {
+      author: "SamGusway",
+      license: "CC BY-SA 3.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/3.0",
+      source: "https://commons.wikimedia.org/wiki/File:Orpheum_vancouver_smithe_n_seymour.JPG",
+    },
+    content: `> According to City of Vancouver data reported by Business in Vancouver on November 16, 2026, Vancouver has 43 hotel projects in its development pipeline, expected to add about 8,330 rooms. Twenty-eight are in rezoning or permitting, seven are under construction and eight were recently completed. The City says eight of the 43 started without any hotel use and pivoted to include one. Most are downtown, with five on Seymour Street and four on Granville Street. The surge follows a 2025 City hotel policy that set a target of 10,000 net new hotel rooms between 2022 and 2050. One downtown proposal, a 15-storey, 151-room hotel at 852-872 Seymour Street that City staff recommended refusing because it sat too close to a neighbouring residential tower, was withdrawn from the November 17 council agenda.
+
+I'm Aparna Kapur with Oakwyn Realty. Most of my work is on Vancouver's south side, but a lot of my buyers and sellers own or want a downtown condo, and a hotel going up next door is the kind of thing that changes how a building lives. So when the City's own numbers showed 43 hotel projects in the works, I wanted to look past the headline at what it actually means for people who live downtown or are thinking about buying there.
+
+## The numbers at a glance
+
+| Item | Figure | Source |
+|---|---|---|
+| Hotel projects in the City pipeline | 43 | City of Vancouver via BIV, Nov 16, 2026 |
+| Estimated new rooms | About 8,330 | City of Vancouver via BIV |
+| In rezoning or permitting | 28 | City of Vancouver via BIV |
+| Under construction | 7 | City of Vancouver via BIV |
+| Recently completed | 8 | City of Vancouver via BIV |
+| Projects that pivoted from non-hotel use | 8 | City of Vancouver via BIV |
+| City target for net new hotel rooms, 2022 to 2050 | 10,000 | City referral report, Nov 3, 2026 |
+
+The pipeline is growing quickly. A City staff report dated November 3 counted 38 projects and more than 7,470 rooms using development data as of September 2026. The figures the City gave BIV a few weeks later were 43 projects and about 8,330 rooms.
+
+## Why developers are switching to hotels
+
+Two things are going on. First, council approved a policy in 2025 to encourage hotel construction. BIV reports it was a response to occupancy above 90% in peak seasons and average room rates well above the national average. City staff say the City is on track for its 10,000-room target, with just over 1,500 rooms completed or under construction and more than 4,000 approved since 2022.
+
+Second, some other uses have become harder to make work. The team behind 852-872 Seymour Street dropped an earlier plan for a seven-storey office building in favour of the hotel, writing in its rezoning application that "office buildings are experiencing high vacancy rates."
+
+A few examples from the City's list, as reported by BIV:
+
+- **848 Seymour Street:** a 30-storey, 393-room hotel under construction on a former parking lot in the same block as the Orpheum. The development manager told council at a 2023 public hearing that it would open sometime in 2027.
+- **576 Seymour Street:** a seven-storey Arts and Crafts heritage building being converted to a 73-room hotel.
+- **Holborn Group's Seymour Street proposal:** two downtown blocks with 1,546 homes, a 920-room hotel and more than 70,000 sq ft of conference space.
+- **2158-2170 West 1st Avenue, Kitsilano:** the City's application page shows an approved 20-storey building with 185 rental units, now proposed as 26 storeys with 121 rental units (about 24 below market) and 99 hotel rooms. It is under review, not approved.
+- **Mount Pleasant:** in July, council allowed a developer to replace a 27-unit apartment building with a 21-storey hotel.
+- **948 Howe Street** (a 22-storey pod hotel) and a 250-room floating hotel near the Vancouver Convention Centre.
+
+## The Seymour hotel that came off the November 17 agenda
+
+The 852-872 Seymour Street application, from Arno Matis Architecture + Urbanism on behalf of Bene (Seymour) Development Ltd., asked to raise the site's density from 5.0 to 11.0 FSR for a 15-storey, 151-room hotel with ground-floor commercial space. It would keep the protected front facade of the 1926 Great War Veterans' Association Hall.
+
+Daily Hive called it a rare move: City staff recommended sending the application to a public hearing with a recommendation to refuse it. The staff report gives two main reasons:
+
+1. **Tower separation.** The site is narrow and the design builds right to the property line, so it does not meet the City's minimum 18.3 m (60 ft) tower separation from the residential building at 565 Smithe Street. Staff say that separation is meant to protect privacy, daylight, sky views and livability for the neighbouring homes.
+2. **The lightwell.** Seven rooms in the new hotel under construction next door at 848 Seymour face a small lightwell that staff say would not give them adequate daylight, outlook or solar access.
+
+The City's revised November 17 agenda lists the referral report as withdrawn, so council did not consider it at that meeting. Neither the agenda nor BIV says what comes next for the site.
+
+## What it means for you
+
+- **Downtown condo owners:** The Seymour report is a useful reminder that City staff still apply tower separation and livability guidelines to protect existing residents, even while the City is actively encouraging hotels. If a hotel or tower is proposed next to your building, the 18.3 m separation guideline and the rezoning comment period are where to focus.
+- **Buyers looking downtown:** More hotels usually bring more restaurants, foot traffic and street life, which many buyers like. They also bring years of construction, deliveries and later nights. Before you write an offer, check the City's rezoning and development applications for anything proposed on neighbouring lots. I'm happy to do that with you.
+- **Investors:** About 8,330 new hotel rooms is a lot of new short-stay supply. If your numbers depend on short-term rental income, start with the rules. In Vancouver, you can only run a short-term rental (under 90 consecutive days) in your own principal residence, and you need a City business licence, written strata approval (and landlord approval if you rent), and your licence number in every listing. You also have to register with the Province, which applies its own principal residence requirement in Vancouver and other larger communities. An investment condo you do not live in generally cannot be a short-term rental, and I would not count on hotel demand spilling over to condos.
+- **Renters:** Some projects are trading rental floors for hotel floors. In Kitsilano, the revised West 1st Avenue proposal would cut rental units from 185 to 121, according to the City. If rental supply in your neighbourhood matters to you, watch for City consultations on these pivots.
+
+## FAQ
+
+**How many hotels are being built in Vancouver?** According to City data reported by BIV on November 16, 2026, there are 43 hotel projects in the pipeline, totalling about 8,330 rooms: 7 under construction, 28 in rezoning or permitting and 8 recently completed.
+
+**Why is Vancouver building so many hotels?** Council adopted a policy in 2025 to encourage hotels after peak-season occupancy topped 90%, and the City set a target of 10,000 net new rooms between 2022 and 2050. Weak office demand has also pushed some developers to switch office or rental plans to hotels.
+
+**What happened to the 852 Seymour Street hotel?** City staff recommended that council send it to a public hearing with a recommendation to refuse it, mainly because the building would sit too close to the residential tower at 565 Smithe Street and would leave seven rooms in the neighbouring 848 Seymour hotel with poor daylight. The referral report was withdrawn from the November 17, 2026 council agenda.
+
+**Are hotels replacing rental housing in Vancouver?** In some cases. The City says 8 of the 43 projects pivoted from non-hotel uses. Examples include a Mount Pleasant site where council allowed a 27-unit apartment building to be replaced by a hotel, and a Kitsilano proposal that would go from 185 to 121 rental units to add 99 hotel rooms.
+
+**Can I rent out my downtown condo as a short-term rental?** Only if it is your principal residence. The City requires a short-term rental business licence, strata approval (and landlord approval if you are a tenant), and your licence number in all listings, and the Province requires you to register with its short-term rental registry. Check the current City and provincial pages before you buy with that plan.
+
+Own a downtown condo or thinking about buying one? I can look at what is proposed around a specific building, including hotel and tower applications, and talk through what it could mean for value and day-to-day living. Call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information based on the sources below. It is not legal, tax, or investment advice. Short-term rental rules change, so confirm current requirements with the City of Vancouver and the Province of B.C. before you decide.*
+
+**Sources:**
+- [Mike Howell, Business in Vancouver, "Vancouver has 43 hotel projects totalling 8,330 rooms in development pipeline" (Nov 16, 2026)](https://www.biv.com/news/economy-law-politics/vancouver-has-43-hotel-projects-totalling-8330-rooms-in-development-pipeline-12997564)
+- [City of Vancouver, Revised Council Agenda, November 17, 2026 (Referral Report 1: CD-1 Rezoning: 852-872 Seymour Street, Withdrawn)](https://council.vancouver.ca/20261117/documents/regu20261117ag_revised.pdf)
+- [City of Vancouver, Referral Report, CD-1 Rezoning: 852-872 Seymour Street (Nov 3, 2026)](https://council.vancouver.ca/20261117/documents/rr1.pdf)
+- [Kenneth Chan, Daily Hive Urbanized, "City of Vancouver staff urge rejection of 15-storey downtown hotel building proposal" (Nov 2026)](https://dailyhive.com/vancouver/852-872-seymour-street-vancouver-city-staff-hotel-proposal-rejection-recommendation)
+- [City of Vancouver, Shape Your City, 2158-2170 W 1st Ave rezoning application](https://www.shapeyourcity.ca/2158-2170-w-1-ave-3)
+- [City of Vancouver, Short-term rental business licence](https://vancouver.ca/doing-business/short-term-rentals.aspx)
+- [Province of B.C., Short-term rental principal residence requirement](https://www2.gov.bc.ca/gov/content/housing-tenancy/short-term-rentals/principal-residence-requirement)
+- [Province of B.C., Short-term rental registration](https://www2.gov.bc.ca/gov/content/housing-tenancy/short-term-rentals/registry)
+
+**Related reading:**
+- [About 1,000 Broadway Plan Rentals in Fairview and South Granville Head to a Final Vote on Nov 17](/resources/blog/fairview-south-granville-broadway-plan-rentals-final-vote-nov-17)
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)
+- [Vancouver Votes Oct. 17: How Every Major Party Would Change Housing, Zoning and Rentals](/resources/blog/vancouver-election-2026-housing-platforms-compared)
+- [Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely](/resources/blog/king-edward-station-rental-rezoning-court-challenge-dismissed-2026)`,
+  },
+  {
     slug: "fairview-south-granville-broadway-plan-rentals-final-vote-nov-17",
     title: "About 1,000 Broadway Plan Rentals in Fairview and South Granville Head to a Final Vote on Nov 17",
     seoTitle: "Fairview and South Granville Rentals Face Final Vote Nov 17",
