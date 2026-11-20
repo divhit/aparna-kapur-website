@@ -33,6 +33,109 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "3410-kingsway-safeway-rental-towers-renfrew-collingwood",
+    title: "Five Towers, 1,082 Rentals: What the Collingwood Safeway Redevelopment Means for Renfrew-Collingwood",
+    seoTitle: "Collingwood Safeway Towers: 1,082 Rentals at 3410 Kingsway",
+    excerpt:
+      "Crombie and Wesgroup propose five rental towers and 1,082 homes at the Kingsway Safeway. What it means for Renfrew-Collingwood owners, renters and buyers.",
+    date: "November 2026",
+    datePublished: "2026-11-19",
+    dateModified: "2026-11-19",
+    category: "Neighbourhoods",
+    readTime: "~8 min read",
+    image: "/images/blog/3410-kingsway-safeway-rental-towers-renfrew-collingwood.webp",
+    imageAlt: "Aerial view of Renfrew-Collingwood in East Vancouver on a sunny day, with low-rise streets in the foreground, a cluster of residential towers in the middle distance and the North Shore mountains behind",
+    imageCredit: {
+      author: "Canmenwalker",
+      license: "CC BY 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Renfrew%E2%80%93Collingwood_aerial_view_2026.jpg",
+    },
+    content: `> Crombie REIT and Wesgroup Properties have applied to rezone 3410-3436 Kingsway in Renfrew-Collingwood, the block now home to a Safeway and a BC Liquor store, from C-2A to CD-1. According to the City of Vancouver, the plan is five mixed-use buildings of 19 to 29 storeys with 1,082 purpose-built rental homes, a replacement grocery store, neighbourhood retail and a private childcare, at a maximum FSR of 5.82 and a maximum height of 88.4 m (290 ft). Because the proposed height does not fit the site's Mixed-Use Low-Rise designation, it also needs an amendment to the Vancouver Official Development Plan (ODP), to Mixed-Use High-Rise 2. On November 17, 2026, council did not vote on the project. It directed staff on who must be consulted on the ODP amendment before a future public hearing and, according to Business in Vancouver, added the Renfrew-Collingwood area council to that list. The City's online Q&A runs January 13 to 26, 2027.
+
+I'm Aparna Kapur with Oakwyn Realty. Most of my work is on Vancouver's south side, but the same story keeps showing up across the city: a big, low-slung grocery site near transit becomes a cluster of rental towers. The Collingwood Safeway is the latest, and at more than 1,000 homes it is one of the largest proposals the east side has seen in a while. Here is what is actually on the table, what council did and did not do this week, and what it could mean if you own, rent or are thinking of buying nearby.
+
+## The project at a glance
+
+| Item | Figure | Source |
+|---|---|---|
+| Address | 3410-3436 Kingsway (the block bounded by Kingsway, Tyne Street, School Avenue and Senlac Street) | City of Vancouver; Daily Hive |
+| Applicants | Crombie REIT and Wesgroup Properties | City of Vancouver; BIV |
+| Rezoning file | RZ-2026-00059, applied September 25, 2026 | City of Vancouver permits portal |
+| Buildings | 5, from 19 to 29 storeys | City of Vancouver |
+| Rental homes | 1,082 purpose-built rental | City of Vancouver |
+| Maximum FSR | 5.82 | City of Vancouver |
+| Maximum height | 88.4 m (290 ft) per the City; Daily Hive reports 100.5 m (329 ft) | City of Vancouver; Daily Hive |
+| ODP change | Mixed-Use Low-Rise to Mixed-Use High-Rise 2 | City of Vancouver |
+| Unit mix | 301 studios, 381 one-bedrooms, 290 two-bedrooms, 110 three-bedrooms (about 37% two bedrooms or more) | Daily Hive, citing the application |
+| Commercial space | About 80,000 sq ft, including a 47,000 sq ft grocery store and a 7,000 sq ft private childcare | Daily Hive |
+| Parking | 1,079 vehicle stalls and about 2,050 secured bike spaces | Daily Hive |
+| Site size | About 3.6 acres | Daily Hive |
+| Q&A period | January 13 to 26, 2027 | City of Vancouver |
+
+A note on height: the City's Shape Your City page lists a maximum building height of 88.4 m (290 ft). [Daily Hive](https://dailyhive.com/vancouver/3410-3436-kingsway-vancouver-safeway-redevelopment-proposal-crombie-wesgroup) reports the tallest tower, at the corner of Kingsway and Senlac Street, at up to 100.5 m (329 ft). I could not open the application booklet to reconcile the two, so I am using the City's figure. The City says final project statistics will be set out in the staff referral report.
+
+## What council did on November 17, and what it did not do
+
+Council was not deciding whether the towers get built. Because the project needs an ODP amendment, the Vancouver Charter requires council to decide who should be consulted on that amendment. A staff report on the November 17 agenda covered three such applications: 3410-3436 Kingsway, 5680 Oak Street and 8029-8225 Oak Street with 1012 West 64th Avenue. Staff recommended consulting the Musqueam Indian Band, Squamish Nation and Tsleil-Waututh Nation, plus the Vancouver School Board and the Conseil scolaire francophone, which the Charter requires. The report says the rezoning and the ODP amendment will go to a public hearing together, with a summary of the consultation feedback in the referral report.
+
+Vancouver-Renfrew MLA Adrian Dix spoke, telling council that "the neighbourhood wants to be engaged" and that "the existing Joyce plan, which really deals with a narrow part of the area, is insufficient planning for our neighbourhood." He told reporters afterward that he was not opposed to the project. Devon Harlos, a director of the Collingwood Recreation Society, asked that local groups be included and raised concerns about amenities, green space and the earlier loss of a City-secured childcare at 3360-3384 Vanness Avenue. According to BIV, council then added the Renfrew-Collingwood area council to the consultation list, and Coun. Mike Klassen said engagement should happen in the languages residents speak, naming Vietnamese, Chinese dialects and Tagalog.
+
+To be clear: no approval, no refusal. The project still needs staff review, a referral report and a public hearing before council decides.
+
+## Why this site, and why towers
+
+The site is inside the provincially legislated transit-oriented area (TOA) around Joyce-Collingwood SkyTrain station, on the outer edge of the radius, according to Daily Hive, which puts it about a 15-minute walk from the station. B.C.'s 2023 TOA legislation (Bill 47) set minimum heights and densities near rapid transit that cities cannot refuse on height or density grounds, and BIV reports Vancouver has 29 TOAs. This application asks for more height and density than the City's TOA rezoning policy sets out, according to the City, which is why it is not a simple TOA rezoning.
+
+## What it means for you
+
+- **Owners near Kingsway and Joyce:** A 1,000-plus home rental community brings more foot traffic, retail and transit riders. It also means years of phased construction. Daily Hive reports four phases, with the intention of keeping the existing Safeway open as long as possible, though shoppers would still face a years-long closure when the phase with the tallest tower, the third, goes ahead.
+- **Buyers:** BIV reported on October 30 that the Vancouver stretch of Kingsway is drawing more tower proposals. If you are weighing a condo or house nearby, check the City's rezoning and development applications for what is planned around you, and build construction timelines into your plans. I'm happy to pull that together for a specific address.
+- **Renters:** All 1,082 homes are proposed as secured rental. Daily Hive describes the split between market and below-market units as unspecified so far, so watch for the details in the staff referral report.
+- **Families:** About 400 two- and three-bedroom homes are proposed, according to Daily Hive. The Vancouver School Board is on the consultation list, and school capacity is a fair question to raise during the Q&A.
+- **Investors:** A large block of new purpose-built rentals near transit can compete with investor-owned condos for tenants once it opens. Given the phasing, that is likely several years out, but it belongs in your rent assumptions.
+
+## How to have your say
+
+1. Comment any time on the City's Shape Your City page for 3410-3436 Kingsway.
+2. Ask questions during the online Q&A, January 13 to 26, 2027. The comment form stays open afterward.
+3. Watch for the public hearing date once staff finish the referral report.
+
+## FAQ
+
+**What is being built at the Kingsway Safeway in Vancouver?** Nothing is approved yet. Crombie REIT and Wesgroup propose five mixed-use buildings of 19 to 29 storeys with 1,082 rental homes, a new grocery store, retail and a private childcare at 3410-3436 Kingsway, according to the City of Vancouver.
+
+**Did Vancouver council approve 3410 Kingsway?** No. On November 17, 2026, council directed staff on who to consult about the required ODP amendment before a future public hearing, and added the Renfrew-Collingwood area council to that list, according to BIV. Council did not vote on the project itself.
+
+**How tall is the tallest tower?** The City lists a maximum building height of 88.4 m (290 ft) for the 29-storey tower. Daily Hive reports up to 100.5 m (329 ft). The City's referral report will set out the final figures.
+
+**Will the Safeway close?** According to Daily Hive, the plan is to keep the existing store open as long as possible, but shoppers would face a years-long closure when the phase with the tallest tower proceeds, before the new 47,000 sq ft grocery store opens.
+
+**When can I ask questions?** The City's online Q&A runs from January 13 to 26, 2027. The comment form stays open after that.
+
+**Is 3410 Kingsway near SkyTrain?** Yes. Daily Hive puts it about a 15-minute walk from Joyce-Collingwood Station, inside that station's transit-oriented area.
+
+Own near Kingsway or thinking about a move to the Joyce-Collingwood area? I can walk you through how nearby rezonings like this one could affect your plans and your timing. Call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information based on the sources below and the application as submitted. It is not legal, tax, or investment advice. Project details can change through the City's review, so confirm current information with the City before you decide.*
+
+**Sources:**
+- [Mike Howell, Business in Vancouver, "Adrian Dix pushes Vancouver council to consult residents over proposed five-tower project" (Nov 17, 2026)](https://www.biv.com/news/economy-law-politics/adrian-dix-pushes-vancouver-council-to-consult-residents-over-proposed-five-tower-project-13029545)
+- [City of Vancouver, Shape Your City, 3410-3436 Kingsway ODP amendment and rezoning application](https://www.shapeyourcity.ca/3410-3436-kingsway)
+- [City of Vancouver, Council Report, Required Consultation for Rezoning Applications to Amend the Vancouver Official Development Plan (Oct 27, 2026, for the Nov 17 meeting)](https://council.vancouver.ca/20261117/documents/r6.pdf)
+- [City of Vancouver, Council agenda, November 17, 2026](https://council.vancouver.ca/20261117/regu20261117ag.htm)
+- [City of Vancouver permits portal, Rezoning Application RZ-2026-00059](https://plposweb.vancouver.ca/Public/Default.aspx?PosseObjectId=306282700&PossePresentation=Guest)
+- [Kenneth Chan, Daily Hive Urbanized, "Five towers with 1,000+ homes proposed for Safeway site on Kingsway in Vancouver" (Oct 21, 2026)](https://dailyhive.com/vancouver/3410-3436-kingsway-vancouver-safeway-redevelopment-proposal-crombie-wesgroup)
+
+**Related reading:**
+- [Another Tower at Oak and 41st: What the 5680 Oak Rezoning Means for Oakridge](/resources/blog/5680-oak-street-rezoning-oakridge-2026)
+- [About 1,000 Broadway Plan Rentals in Fairview and South Granville Head to a Final Vote on Nov 17](/resources/blog/fairview-south-granville-broadway-plan-rentals-final-vote-nov-17)
+- [Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely](/resources/blog/king-edward-station-rental-rezoning-court-challenge-dismissed-2026)
+- [Vancouver's New Apartment Rules Kick In October 27. Here's the Family Unit Mix.](/resources/blog/vancouver-apartment-regulations-family-unit-mix-october-27-2026)`,
+  },
+  {
     slug: "vancouver-hotel-boom-43-projects-condo-owners",
     title: "Vancouver Has 43 Hotel Projects in the Works. Here Is What That Means for Downtown Condo Owners",
     seoTitle: "43 Vancouver Hotel Projects: What They Mean for Condo Owners",
