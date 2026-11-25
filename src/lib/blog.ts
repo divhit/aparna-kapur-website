@@ -33,6 +33,121 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "kitsilano-beach-2158-west-1st-hotel-rental-tower",
+    title: "A 26-Storey Hotel and Rental Tower Near Kits Beach: What Changed at 2158 West 1st",
+    seoTitle: "Kits Beach Hotel and Rental Tower: 2158 West 1st Explained",
+    excerpt:
+      "Millennium wants a 26-storey tower near Kits Beach with 121 rentals, 99 hotel rooms, replacing an approved 185-rental plan. Here is what changed and when.",
+    date: "November 2026",
+    datePublished: "2026-11-25",
+    dateModified: "2026-11-25",
+    category: "Neighbourhoods",
+    readTime: "~7 min read",
+    image: "/images/blog/kitsilano-beach-2158-west-1st-hotel-rental-tower.webp",
+    imageAlt: "Kitsilano Beach in Vancouver on a sunny day, with people wading and sunbathing along the shore, willow trees and the beach house on the right, and West End towers and the North Shore mountains across the water",
+    imageCredit: {
+      author: "Xicotencatl",
+      license: "CC BY-SA 4.0",
+      licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0",
+      source: "https://commons.wikimedia.org/wiki/File:Kits-Beach.jpg",
+    },
+    content: `> Millennium Development is asking the City of Vancouver to amend the zoning at 2158-2170 West 1st Avenue, near Yew Street and Kitsilano Beach, for a 26-storey mixed-use tower with 121 rental homes (about 24 at below-market rents), 99 hotel rooms and ground-floor commercial space. The City lists the height as 92 m (301 ft), plus rooftop amenity and mechanical space. It would replace a 20-storey, 185-unit rental tower that council approved in June 2025 and whose zoning was enacted on June 2, 2026. The City's public Q&A runs November 18 to December 1, 2026, and the comment form stays open after that.
+
+I'm Aparna Kapur with Oakwyn Realty. Kits is one of the neighbourhoods my clients ask about most, and a tower a block from the beach is exactly the kind of change people want to understand before they buy, sell or sign a lease nearby. This one is unusual: it is not a new proposal so much as a rewrite of one that was already approved, trading rental homes for hotel rooms and extra height. Here is what changed, using the City's own numbers.
+
+## What is proposed
+
+According to the City's Shape Your City page, the new application would amend the site's existing CD-1 zoning to allow a 26-storey mixed-use building over five levels of underground parking, with:
+
+- 121 market rental units, with 20% of units (about 24) at below-market rates
+- 99 hotel rooms
+- Commercial space on the ground floor
+- A floor space ratio (FSR) of 8.73
+- A building height of 92 m (301 ft), with additional height for rooftop amenity and mechanical space
+
+The City says the application asks for height and density beyond existing Broadway Plan provisions and proposes a hotel use that is not contemplated under current policy. Application drawings and statistics are posted as submitted, and the City says final figures will be set out in the staff referral report.
+
+## What was already approved
+
+The earlier plan for the same site was a 20-storey mixed-use rental building on a four-storey podium:
+
+- 185 rental units, with 20% of the residential floor area for below-market rentals (Daily Hive reports 148 market and 37 below-market units)
+- An FSR of 6.8 and a height of 64.7 m (212 ft)
+- Ground-floor commercial space (Daily Hive reports about 6,300 sq ft of retail and restaurant space)
+
+Council approved that rezoning on June 24, 2025, following a public hearing on June 19, 2025, and the zoning bylaw was enacted on June 2, 2026. Daily Hive reports that a development permit for that design received conditional staff approval in December 2025.
+
+## The trade-off in numbers
+
+| | Approved (2025) | Proposed (2026) |
+|---|---|---|
+| Storeys | 20 | 26 |
+| Height (City figures) | 64.7 m (212 ft) | 92 m (301 ft) |
+| FSR | 6.8 | 8.73 |
+| Rental homes | 185 | 121 |
+| Below-market homes | About 37 | About 24 |
+| Hotel rooms | 0 | 99 |
+
+That works out to 64 fewer rental homes and about 13 fewer below-market homes in exchange for 99 hotel rooms and a taller building. The proposed unit mix, per Daily Hive, is 33 studios, 41 one-bedrooms, 31 two-bedrooms and 16 three-bedrooms.
+
+Millennium's application argues that "the proposal does not trade housing for hotel space," saying it still delivers secured market and below-market rentals while addressing the city's documented hotel shortage, as quoted by the Vancouver Sun.
+
+## Why it matters now
+
+**The hotel policy is under new scrutiny.** At council's November 18 meeting, COPE councillors Solomon Yi-Kieran and Chloe Leslie sought advice on removing a key part of the City's Hotel Development Policy and on whether a previously approved hotel rezoning could be reversed, according to Daily Hive. Staff agreed to address the questions in a future briefing. The policy, approved in April 2025 and last amended in May 2026, supports the City's goal of a net 10,000 new hotel rooms, and the City lists it among the policies that apply to this application. Any change could shape how council treats 2158 West 1st. I covered the wider pipeline in my post on [Vancouver's 43 hotel projects](/resources/blog/vancouver-hotel-boom-43-projects-condo-owners).
+
+**Kits Beach is not a typical tower location.** The site is near the southeast corner of Yew Street and West 1st Avenue, between the Yew Street shops and the beach. Daily Hive puts it about a 12-minute walk from the future Arbutus Station on the Broadway Subway, with frequent buses on Cornwall Avenue and West 4th Avenue. The Vancouver Sun reports the site now holds two older low-rise rental buildings, both undergoing asbestos abatement.
+
+**The developer has a local track record.** The Vancouver Sun notes Millennium is controlled by brothers Shahram and Peter Malek, who developed the Olympic Village.
+
+## What it means for Kitsilano owners and renters
+
+- **Condo owners nearby:** A 26-storey tower would change views and the skyline near the beach. A hotel also brings more foot traffic to Yew Street and West 1st, which can help nearby shops and restaurants. Neither guarantees a price effect in either direction.
+- **Renters:** The approved plan secured 185 rentals. Under the new plan, 64 of those would not be built, including about 13 below-market units.
+- **Buyers watching Kits:** The new application is under review, and approval is not assured. The enacted 20-storey rental zoning stays in place while the City reviews it.
+
+## How to weigh in
+
+1. Read the drawings and ask questions on the City's Shape Your City page for the 2158-2170 W 1st Ave rezoning application. The Q&A closes **December 1, 2026**.
+2. The comment form stays open after that, and you can contact the rezoning planner listed on the project page directly.
+3. Staff will review the application and feedback before writing a referral report. No public hearing date has been set.
+
+## FAQ
+
+**Where exactly is the site?** 2158-2170 West 1st Avenue, near the southeast corner of Yew Street and West 1st Avenue in Kitsilano, a short walk from Kits Beach.
+
+**How tall would the tower be?** The City lists 26 storeys and 92 m (301 ft), plus additional height for rooftop amenity and mechanical space.
+
+**Is the earlier rental tower still approved?** Yes. The 20-storey, 185-unit rezoning was approved in June 2025 and its bylaw was enacted on June 2, 2026. The new application asks to amend that zoning.
+
+**How many rental homes would be lost?** Compared with the approved plan, 64 fewer rental homes would be built (121 instead of 185), including about 13 fewer below-market units.
+
+**When is the public hearing?** Not yet scheduled. City staff first need to finish their review and write a referral report.
+
+**Does the Broadway Plan allow hotels here?** The City says the application proposes a hotel use not contemplated under current policy and asks for height and density beyond Broadway Plan provisions.
+
+Live in Kits or thinking about buying near the beach? I can show you what is proposed around a specific building and talk through what it could mean for views, value and day-to-day living. Call or text me at **604-612-7694**, or reach me through [aparnakapur.com/contact](/contact).
+
+---
+
+*Aparna Kapur is a licensed realtor with Oakwyn Realty (BCFSA licence RE611721), focused on Oakridge, Vancouver's south side, and buyers across downtown and the North Shore. This post is general information based on the sources below and the application as submitted. It is not legal, tax, or investment advice. Project details can change through the City's review, so confirm current information with the City before you decide.*
+
+**Sources:**
+- [City of Vancouver, Shape Your City, 2158-2170 W 1st Ave rezoning application (2026)](https://www.shapeyourcity.ca/2158-2170-w-1-ave-3)
+- [City of Vancouver, Shape Your City, previous 2158-2170 W 1st Ave rezoning application (approved June 24, 2025)](https://www.shapeyourcity.ca/2158-2170-w-1-ave)
+- [City of Vancouver, Public Hearing Summary and Recommendation, CD-1 Rezoning: 2158-2170 West 1st Avenue (June 19, 2025)](https://council.vancouver.ca/20250619/documents/phea5sr.pdf)
+- [David Carrigg, Vancouver Sun, "Developer wants 300-foot tower 'steps' from Kitsilano Beach" (Nov 25, 2026)](https://vancouversun.com/news/local-news/developer-wants-300-foot-tower-steps-from-kitsilano-beach)
+- [Kenneth Chan, Daily Hive Urbanized, "99-room hotel proposed near Kitsilano Beach in rental housing tower redesign" (Oct 30, 2026)](https://dailyhive.com/vancouver/2158-2170-west-1st-avenue-vancouver-rental-housing-hotel-tower)
+- [Daily Hive Urbanized, "Vancouver city councillors ponder reversing rezonings, repealing part of hotel policy" (Nov 19, 2026)](https://dailyhive.com/vancouver/vancouver-city-council-reverse-rezonings-hotel-policy-repeal-november-2026)
+- [Kitsilano.ca, "Have Your Say on Proposed 26-Storey Tower Near Kits Beach" (Nov 24, 2026)](https://www.kitsilano.ca/2026/11/24/have-your-say-on-proposed-26-storey-tower-near-kits-beach/)
+
+**Related reading:**
+- [Vancouver Has 43 Hotel Projects in the Works. Here Is What That Means for Downtown Condo Owners](/resources/blog/vancouver-hotel-boom-43-projects-condo-owners)
+- [Five Towers, 1,082 Rentals: What the Collingwood Safeway Redevelopment Means for Renfrew-Collingwood](/resources/blog/3410-kingsway-safeway-rental-towers-renfrew-collingwood)
+- [About 1,000 Broadway Plan Rentals in Fairview and South Granville Head to a Final Vote on Nov 17](/resources/blog/fairview-south-granville-broadway-plan-rentals-final-vote-nov-17)
+- [Can Neighbours Stop a Vancouver Rezoning in Court? The West 29th and Ash Ruling Says Rarely](/resources/blog/king-edward-station-rental-rezoning-court-challenge-dismissed-2026)`,
+  },
+  {
     slug: "3410-kingsway-safeway-rental-towers-renfrew-collingwood",
     title: "Five Towers, 1,082 Rentals: What the Collingwood Safeway Redevelopment Means for Renfrew-Collingwood",
     seoTitle: "Collingwood Safeway Towers: 1,082 Rentals at 3410 Kingsway",
